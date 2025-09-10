@@ -16,13 +16,16 @@ date: "2023-02-02"
 Node.js es un **entorno de ejecución de JavaScript** que se ejecuta **fuera del navegador**, construido sobre el motor V8 de Google Chrome.  
 Permite usar JavaScript en el **lado del servidor** para crear aplicaciones escalables y rápidas.
 
-#### Diferencias clave:
+### Diferencias clave:
 
-- **Asincronía y no bloqueo:** Usa un modelo basado en eventos y callbacks, ideal para manejar múltiples conexiones simultáneamente.
-
-- **Un solo lenguaje:** Permite usar JavaScript tanto en el front-end como en el back-end.
-- **Módulos integrados:** Viene con módulos como `http`, `fs` o `path` para construir servidores y trabajar con el sistema operativo sin dependencias externas.
-- **Comunidad y ecosistema:** Cuenta con NPM, uno de los gestores de paquetes más grandes del mundo.
+- **Asincronía y no bloqueo:**
+  - Usa un modelo basado en eventos y callbacks, ideal para manejar múltiples conexiones simultáneamente.
+- **Un solo lenguaje:**
+  - Permite usar JavaScript tanto en el front-end como en el back-end.
+- **Módulos integrados:**
+  - Viene con módulos como `http`, `fs` o `path` para construir servidores y trabajar con el sistema operativo sin dependencias externas.
+- **Comunidad y ecosistema:**
+  - Cuenta con NPM, uno de los gestores de paquetes más grandes del mundo.
 
 ## ¿Para qué se usa y en qué contextos?
 
@@ -40,13 +43,17 @@ Node.js se utiliza principalmente para **aplicaciones que necesitan alta concurr
 
 Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
-- **Backend de aplicaciones web:** REST API, GraphQL.
-
-- **Sistemas en tiempo real:** chat, juegos multijugador, notificaciones en vivo.
-- **Aplicaciones de streaming:** Netflix, Spotify, etc.
-- **Automatizaciones y scripts:** bots, web scraping, herramientas CLI.
-- **Microservicios y arquitecturas distribuidas.**
-- **Aplicaciones serverless:** con plataformas como AWS Lambda o Vercel.
+- Backend de aplicaciones web:
+  - REST API, GraphQL.
+- Sistemas en tiempo real:
+  - chat, juegos multijugador, notificaciones en vivo.
+- Aplicaciones de streaming:
+  - Netflix, Spotify, etc.
+- Automatizaciones y scripts:
+  - bots, web scraping, herramientas CLI.
+- Microservicios y arquitecturas distribuidas.
+- Aplicaciones serverless:
+  - con plataformas como AWS Lambda o Vercel.
 
 ## ¿Cuándo es más conveniente usarlo?
 
@@ -65,18 +72,24 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
 ## Buenas prácticas y patrones recomendados para Node.js
 
-- **Estructura modular:** separar el proyecto en controladores, rutas, servicios y utilidades.
-
-- **Uso de Promesas y `async/await`:** para escribir código más limpio y legible.
-- **Validar datos:** nunca confiar en la entrada del usuario. Usar librerías como `Joi` o `Zod`.
-- **Manejo de errores centralizado:** middleware para capturar y gestionar errores.
-- **Variables de entorno (`.env`):** no hardcodear credenciales ni configuraciones sensibles.
-- **Logging:** usar herramientas como `Winston` o `Pino` para depuración y monitoreo.
+- **Estructura modular:**
+  - separar el proyecto en controladores, rutas, servicios y utilidades.
+- **Uso de Promesas y `async/await`:**
+  - para escribir código más limpio y legible.
+- **Validar datos:**
+  - nunca confiar en la entrada del usuario. Usar librerías como `Joi` o `Zod`.
+- **Manejo de errores centralizado:**
+  - middleware para capturar y gestionar errores.
+- **Variables de entorno (`.env`):**
+  - no hardcodear credenciales ni configuraciones sensibles.
+- **Logging:**
+  - usar herramientas como `Winston` o `Pino` para depuración y monitoreo.
 - **Seguridad:**
   - Usar `helmet` para proteger cabeceras HTTP.
   - Sanitizar inputs para evitar inyecciones.
   - Mantener dependencias actualizadas.
-- **Tests automatizados:** Mocha, Jest o Vitest para asegurar calidad del código.
+- **Tests automatizados:**
+  - Mocha, Jest o Vitest para asegurar calidad del código.
 - **Patrones recomendados:**
   - MVC (Modelo-Vista-Controlador) para organizar el código.
   - Repository Pattern para manejo de datos.
@@ -112,25 +125,24 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
 # Conceptos relacionados
 
-### ¿Qué es un ORM?
+- **¿Qué es un ORM?**
 
-Object Relational Mapper: herramienta que permite interactuar con bases de datos usando objetos y métodos en lugar de SQL directo (ejemplo: Sequelize, TypeORM, Prisma).
+  - Object Relational Mapper: herramienta que permite interactuar con bases de datos usando objetos y métodos en lugar de SQL directo (ejemplo: Sequelize, TypeORM, Prisma).
 
-### ¿Qué es una API?
+- **¿Qué es una API?**
 
-Application Programming Interface: conjunto de reglas que permite que dos aplicaciones se comuniquen. En el contexto web suele ser un servicio que expone datos y funcionalidades.
+  - Application Programming Interface: conjunto de reglas que permite que dos aplicaciones se comuniquen. En el contexto web suele ser un servicio que expone datos y funcionalidades.
 
-### ¿Qué es el patrón REST?
+- **¿Qué es el patrón REST?**
 
-Estilo de arquitectura para construir APIs que utiliza `HTTP` y operaciones como `GET`, `POST`, `PUT`, `DELETE` siguiendo convenciones en las rutas y respuestas.
+  - Estilo de arquitectura para construir APIs que utiliza `HTTP` y operaciones como `GET`, `POST`, `PUT`, `DELETE` siguiendo convenciones en las rutas y respuestas.
 
-### ¿Qué es Serverless?
+- **¿Qué es Serverless?**
 
-Modelo en el que no administras servidores, sino que el proveedor (ej: AWS Lambda, Firebase Functions) ejecuta funciones bajo demanda y escala automáticamente.
+  - Modelo en el que no administras servidores, sino que el proveedor (ej: AWS Lambda, Firebase Functions) ejecuta funciones bajo demanda y escala automáticamente.
 
-### ¿Qué es arquitectura de Microservicios?
-
-Es un estilo donde una aplicación grande se divide en pequeños servicios independientes, cada uno con su propia lógica y base de datos, que se comunican entre sí (generalmente vía APIs).
+- **¿Qué es arquitectura de Microservicios?**
+  - Es un estilo donde una aplicación grande se divide en pequeños servicios independientes, cada uno con su propia lógica y base de datos, que se comunican entre sí (generalmente vía APIs).
 
 ---
 
@@ -253,85 +265,105 @@ Es un estilo donde una aplicación grande se divide en pequeños servicios indep
 
 ## Conceptos Básicos
 
-- **Entorno de Ejecución**: _( Ejecución de JavaScript en servidor )_
+- **Entorno de Ejecución**:
 
-Node.js proporciona un entorno de tiempo de ejecución para JavaScript fuera del navegador, lo que significa que puedes ejecutar JavaScript en el servidor.
+  - _Ejecución de JavaScript en servidor._
 
-- **Event-Driven y Non-Blocking I/O** _( Programación orientada a eventos, E/S no bloqueante )_
+  - Node.js proporciona un entorno de tiempo de ejecución para JavaScript fuera del navegador, lo que significa que puedes ejecutar JavaScript en el servidor.
 
-Node.js utiliza un modelo de programación orientado a eventos y operaciones de entrada/salida no bloqueante, lo que permite manejar múltiples solicitudes simultáneamente sin bloquear el hilo de ejecución.
+- **Event-Driven y Non-Blocking I/O**
 
-- **Módulos** _( División de la aplicación en módulos reutilizables )_
+  - _Programación orientada a eventos, E/S no bloqueante._
+  - Node.js utiliza un modelo de programación orientado a eventos y operaciones de entrada/salida no bloqueante, lo que permite manejar múltiples solicitudes simultáneamente sin bloquear el hilo de ejecución.
 
-Node.js utiliza un sistema de módulos que permite la modularidad en el código. Puedes dividir tu aplicación en archivos pequeños y reutilizables, y luego importarlos según sea necesario en otros archivos.
+- **Módulos**
 
-- **npm: Node Package Manager** _( Gestión de paquetes y dependencias con npm )_
+  - _División de la aplicación en módulos reutilizables._
+  - Node.js utiliza un sistema de módulos que permite la modularidad en el código. Puedes dividir tu aplicación en archivos pequeños y reutilizables, y luego importarlos según sea necesario en otros archivos.
 
-Es el sistema de gestión de paquetes de Node.js que te permite instalar, compartir y gestionar dependencias de proyectos fácilmente. npm es una de las mayores colecciones de paquetes de código abierto del mundo.
+- **npm: Node Package Manager**
 
-- **API de E/S Asíncrona** _( Operaciones de entrada/salida asíncronas )_
+  - _Gestión de paquetes y dependencias con npm._
+  - Es el sistema de gestión de paquetes de Node.js que te permite instalar, compartir y gestionar dependencias de proyectos fácilmente. npm es una de las mayores colecciones de paquetes de código abierto del mundo.
 
-Node.js proporciona una amplia gama de APIs para realizar operaciones de entrada/salida de manera asíncrona, lo que significa que las operaciones pueden continuar mientras otras operaciones están en curso, sin bloquear el hilo de ejecución.
+- **API de E/S Asíncrona**
 
-- **Single-Threaded pero Event-Loop** _( Modelo de event-loop para concurrencia eficiente )_
+  - _Operaciones de entrada/salida asíncronas._
+  - Node.js proporciona una amplia gama de APIs para realizar operaciones de entrada/salida de manera asíncrona, lo que significa que las operaciones pueden continuar mientras otras operaciones están en curso, sin bloquear el hilo de ejecución.
 
-Node.js opera en un solo hilo, pero utiliza un modelo de event-loop que permite manejar múltiples solicitudes simultáneamente. Esto hace que sea eficiente para aplicaciones de red en tiempo real.
+- **Single-Threaded pero Event-Loop**
 
-- **Escalabilidad** _( Altamente escalable para aplicaciones de red )_
+  - _Modelo de event-loop para concurrencia eficiente._
+  - Node.js opera en un solo hilo, pero utiliza un modelo de event-loop que permite manejar múltiples solicitudes simultáneamente. Esto hace que sea eficiente para aplicaciones de red en tiempo real.
 
-Gracias a su modelo de E/S no bloqueante y su capacidad para manejar muchas conexiones simultáneas, Node.js es altamente escalable y adecuado para aplicaciones que requieren un alto rendimiento y concurrencia.
+- **Escalabilidad**
 
-- **Desarrollo de API y Aplicaciones Web** _( Desarrollo de APIs, servidores web, aplicaciones en tiempo real )_
+  - _Altamente escalable para aplicaciones de red._
+  - Gracias a su modelo de E/S no bloqueante y su capacidad para manejar muchas conexiones simultáneas, Node.js es altamente escalable y adecuado para aplicaciones que requieren un alto rendimiento y concurrencia.
 
-Node.js es comúnmente utilizado para desarrollar APIs RESTful, servidores web y aplicaciones de una sola página (SPA), así como aplicaciones en tiempo real como chat en línea, juegos multijugador y aplicaciones de transmisión de datos.
+- **Desarrollo de API y Aplicaciones Web**
 
-- **Frameworks y Bibliotecas** _( Utilización de frameworks y bibliotecas populares )_
+  - _Desarrollo de APIs, servidores web, aplicaciones en tiempo real._
+  - Node.js es comúnmente utilizado para desarrollar APIs RESTful, servidores web y aplicaciones de una sola página (SPA), así como aplicaciones en tiempo real como chat en línea, juegos multijugador y aplicaciones de transmisión de datos.
 
-Existen muchos frameworks y bibliotecas populares construidos sobre Node.js, como Express.js, Socket.io, Hapi.js, Koa.js, entre otros, que simplifican el desarrollo web y la creación de APIs.
+- **Frameworks y Bibliotecas**
 
-- **Streaming de Datos** _( Eficiente para streaming de datos en tiempo real )_
+  - _Utilización de frameworks y bibliotecas populares._
+  - Existen muchos frameworks y bibliotecas populares construidos sobre Node.js, como Express.js, Socket.io, Hapi.js, Koa.js, entre otros, que simplifican el desarrollo web y la creación de APIs.
 
-Node.js es excelente para el manejo de datos en tiempo real, como el streaming de archivos o la transmisión de video, debido a su capacidad para manejar la E/S de manera eficiente.
+- **Streaming de Datos**
 
-- **Middleware** _( Funciones que manejan solicitudes HTTP intermedias )_
+  - _Eficiente para streaming de datos en tiempo real._
+  - Node.js es excelente para el manejo de datos en tiempo real, como el streaming de archivos o la transmisión de video, debido a su capacidad para manejar la E/S de manera eficiente.
 
-Son funciones intermedias que se ejecutan entre la recepción de una solicitud HTTP y el envío de una respuesta. En el contexto de Node.js y frameworks como Express.js, los middlewares pueden realizar tareas como el análisis del cuerpo de la solicitud, la autenticación, la gestión de sesiones, el registro de solicitudes, entre otros.
+- **Middleware**
 
-- **Callback** _( Funciones pasadas como argumentos a otras funciones )_
+  - _Funciones que manejan solicitudes HTTP intermedias._
+  - Son funciones intermedias que se ejecutan entre la recepción de una solicitud HTTP y el envío de una respuesta. En el contexto de Node.js y frameworks como Express.js, los middlewares pueden realizar tareas como el análisis del cuerpo de la solicitud, la autenticación, la gestión de sesiones, el registro de solicitudes, entre otros.
 
-En JavaScript, un callback es una función que se pasa como argumento a otra función y se ejecuta después de que la función principal ha terminado de ejecutarse. Son comunes en Node.js para manejar operaciones asíncronas como lectura de archivos, solicitudes de red o consultas a bases de datos.
+- **Callback**
 
-- **Promesa** _( Manejo asincrónico de operaciones, evita "callback hell" )_
+  - _Funciones pasadas como argumentos a otras funciones._
+  - En JavaScript, un callback es una función que se pasa como argumento a otra función y se ejecuta después de que la función principal ha terminado de ejecutarse. Son comunes en Node.js para manejar operaciones asíncronas como lectura de archivos, solicitudes de red o consultas a bases de datos.
 
-Son objetos que representan el éxito o el fracaso eventual de una operación asíncrona y su valor resultante. Las promesas en Node.js proporcionan una forma más limpia y estructurada de manejar operaciones asincrónicas, evitando el "callback hell" y permitiendo un mejor manejo de errores.
+- **Promesa**
 
-- **Async/Await** _( Sintaxis para trabajar con promesas de manera síncrona )_
+  - _Manejo asincrónico de operaciones, evita "callback hell"._
+  - Son objetos que representan el éxito o el fracaso eventual de una operación asíncrona y su valor resultante. Las promesas en Node.js proporcionan una forma más limpia y estructurada de manejar operaciones asincrónicas, evitando el "callback hell" y permitiendo un mejor manejo de errores.
 
-Es una sintaxis de JavaScript para trabajar con promesas de manera síncrona, haciéndolas parecer más como código síncrono. Las funciones marcadas con async devuelven automáticamente una promesa y la palabra clave await pausa la ejecución de la función hasta que la promesa se resuelve o se rechaza.
+- **Async/Await**
 
-- **EventEmitted** _( Clase para emitir y escuchar eventos )_
+  - _Sintaxis para trabajar con promesas de manera síncrona._
+  - Es una sintaxis de JavaScript para trabajar con promesas de manera síncrona, haciéndolas parecer más como código síncrono. Las funciones marcadas con async devuelven automáticamente una promesa y la palabra clave await pausa la ejecución de la función hasta que la promesa se resuelve o se rechaza.
 
-Es una clase en Node.js que permite la implementación de un patrón de diseño de publicación/suscripción para la gestión de eventos. Los objetos EventEmitter pueden emitir eventos y los oyentes pueden suscribirse a esos eventos para ejecutar código específico cuando se emiten.
+- **EventEmitted**
 
-- **Buffed** _( Almacén temporal de datos binarios en memoria )_
+  - _Clase para emitir y escuchar eventos._
+  - Es una clase en Node.js que permite la implementación de un patrón de diseño de publicación/suscripción para la gestión de eventos. Los objetos EventEmitter pueden emitir eventos y los oyentes pueden suscribirse a esos eventos para ejecutar código específico cuando se emiten.
 
-Es un área de memoria que se utiliza para almacenar datos binarios de longitud fija. Los buffers son comúnmente utilizados en Node.js para trabajar con datos binarios como archivos, imágenes o datos de red.
+- **Buffed**
 
-- **Stream** _( Flujo de datos que se procesa incrementalmente )_
+  - _Almacén temporal de datos binarios en memoria._
+  - Es un área de memoria que se utiliza para almacenar datos binarios de longitud fija. Los buffers son comúnmente utilizados en Node.js para trabajar con datos binarios como archivos, imágenes o datos de red.
 
-Es una abstracción en Node.js para leer o escribir datos de manera secuencial. Los streams permiten procesar grandes volúmenes de datos de manera eficiente, ya que no es necesario cargar todo el contenido en memoria de una vez.
+- **Stream**
 
-- **Cluste** _( Módulo para crear procesos hijos en paralelo )_
+  - _Flujo de datos que se procesa incrementalmente._
+  - Es una abstracción en Node.js para leer o escribir datos de manera secuencial. Los streams permiten procesar grandes volúmenes de datos de manera eficiente, ya que no es necesario cargar todo el contenido en memoria de una vez.
 
-El módulo Cluster en Node.js permite crear múltiples procesos hijos que comparten el mismo puerto del servidor. Esto mejora el rendimiento y la escalabilidad al permitir que un servidor Node.js utilice todos los núcleos de la CPU de manera eficiente.
+- **Cluste**
 
-- **N-AP** _( Interfaz de aplicación nativa para extensiones C++ )_
+  - _Módulo para crear procesos hijos en paralelo._
+  - El módulo Cluster en Node.js permite crear múltiples procesos hijos que comparten el mismo puerto del servidor. Esto mejora el rendimiento y la escalabilidad al permitir que un servidor Node.js utilice todos los núcleos de la CPU de manera eficiente.
 
-Es una interfaz de aplicación nativa en Node.js que proporciona una forma estable de escribir extensiones en C++ que sean compatibles con múltiples versiones de Node.js. Esto facilita la creación de módulos nativos para Node.js que no dependen de la versión específica de Node.js.
+- **N-AP**
 
-- **Debugged** _( Herramientas para depurar código Node.js )_
+  - _Interfaz de aplicación nativa para extensiones C++._
+  - Es una interfaz de aplicación nativa en Node.js que proporciona una forma estable de escribir extensiones en C++ que sean compatibles con múltiples versiones de Node.js. Esto facilita la creación de módulos nativos para Node.js que no dependen de la versión específica de Node.js.
 
-Debugger: Node.js ofrece herramientas integradas de depuración que permiten inspeccionar el estado de ejecución de una aplicación, establecer puntos de interrupción, rastrear variables y ejecutar el código paso a paso para identificar y corregir errores.
+- **Debugged**
+  - _Herramientas para depurar código Node.js._
+  - Debugger: Node.js ofrece herramientas integradas de depuración que permiten inspeccionar el estado de ejecución de una aplicación, establecer puntos de interrupción, rastrear variables y ejecutar el código paso a paso para identificar y corregir errores.
 
 # Comandos
 

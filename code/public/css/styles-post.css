@@ -111,8 +111,19 @@ P {
 }
 
 ul {
-  /* padding-left: 0; */
   padding-left: 1.5rem;
+}
+
+ul li ul li {
+  color: #b0b0b0;
+  &:first-child {
+    /* background-color: red; */
+    margin-top: 0.3rem;
+  }
+  &:last-child {
+    /* background-color: red; */
+    margin-bottom: 0.5rem;
+  }
 }
 
 strong {
