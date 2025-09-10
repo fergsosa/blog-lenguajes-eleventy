@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <meta name="description" content="Ideas principales de JavaScript">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <!-- 1. ¿Qué es JavaScript y para qué se utiliza principalmente?
+1. Explica la diferencia entre var, let y const. ¿Cuándo usarías cada una?
+1. ¿Qué es el hoisting en JavaScript? Explica cómo funciona con var, let y const.
+1. Describe la diferencia entre "igualdad estricta" (===) y "igualdad no estricta" (==).
+1. ¿Qué son las "promesas" (Promises) y por qué son útiles en la programación asíncrona?
+1. Explica la diferencia entre las funciones de flecha (arrow functions) y las funciones tradicionales.
+1. ¿Qué es el Event Loop en JavaScript? Describe brevemente su funcionamiento.
+1. ¿Qué es el DOM (Document Object Model) y cómo se manipula con JavaScript?
+1. Explica el concepto de "clausuras" (closures) en JavaScript.
+1. ¿Cuál es la diferencia entre null y undefined?
+1. ¿Qué es NaN en JavaScript y qué significa?
+1. ¿Qué es la inmutabilidad y por qué es importante en JavaScript?
+1. ¿Cómo funciona la herencia en JavaScript? Explica la diferencia entre herencia de prototipos y herencia basada en clases.
+1. ¿Qué es la delegación de eventos (event delegation) y por qué se utiliza?
+1. Explica qué es el spread operator (...) y cómo se puede usar. -->
+<h1 id="preguntas-de-entrevista-de-javascript">Preguntas de Entrevista de JavaScript</h1>
+<h2 id="1-que-es-javascript">1. ¿Qué es JavaScript?</h2>
+<p>JavaScript es un lenguaje de programación que se usa principalmente para hacer páginas web interactivas y dinámicas.</p>
+<hr>
+<h2 id="para-que-se-usa">¿Para qué se usa?</h2>
+<ul>
+<li>🌐 Interactividad en webs: Animaciones, menús, validación de formularios.</li>
+<li>🔄 Actualizar contenido sin recargar la página (ej.: redes sociales).</li>
+<li>⚙️ Desarrollo backend con Node.js (servidores, APIs).</li>
+<li>📱 Aplicaciones móviles (React Native) y de escritorio (Electron).</li>
+<li>🎮 Juegos web simples.</li>
+</ul>
+<p>Es esencial en el desarrollo web moderno.</p>
+<hr>
+<h2 id="2-diferencia-entre-var-let-y-const">2. Diferencia entre <code>var</code>, <code>let</code> y <code>const</code></h2>
+<ul>
+<li><strong><code>var</code></strong>: Tiene <strong>scope de función</strong>, se eleva (hoisting) y permite redeclaración.</li>
+<li><strong><code>let</code></strong>: Tiene <strong>scope de bloque</strong>, no permite redeclaración en el mismo bloque y evita problemas de hoisting.</li>
+<li><strong><code>const</code></strong>: Igual que <code>let</code> pero su valor no puede ser reasignado.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><code>let</code> para variables que cambian.</li>
+<li><code>const</code> para valores que no deben cambiar.</li>
+<li>Evitar <code>var</code> en código moderno.</li>
+</ul>
+<hr>
+<h2 id="3-que-es-el-hoisting-y-como-funciona-con-var-let-y-const">3. ¿Qué es el hoisting y cómo funciona con <code>var</code>, <code>let</code> y <code>const</code>?</h2>
+<p>El <strong>hoisting</strong> es el comportamiento de JavaScript de <strong>elevar declaraciones</strong> al inicio del scope antes de ejecutar el código.</p>
+<ul>
+<li><strong><code>var</code></strong>: Se eleva y se inicializa como <code>undefined</code>.</li>
+<li><strong><code>let</code> y <code>const</code></strong>: Se elevan, pero quedan en una <strong>&quot;zona muerta temporal&quot;</strong> hasta que se ejecuta su declaración, por lo que no se pueden usar antes de declararlas.</li>
+</ul>
+<hr>
+<h2 id="4-diferencia-entre-igualdad-estricta-y-no-estricta">4. Diferencia entre igualdad estricta (<code>===</code>) y no estricta (<code>==</code>)</h2>
+<ul>
+<li><strong><code>===</code> (estricta)</strong>: Compara <strong>valor y tipo</strong>, sin conversión.<pre><code class="language-js">2 === &quot;2&quot;; // false
+</code></pre>
+</li>
+<li><strong><code>==</code> (no estricta)</strong>: Compara <strong>valor</strong>, realizando conversión implícita.<pre><code class="language-js">2 == &quot;2&quot;; // true
+</code></pre>
+</li>
+</ul>
+<p><strong>Recomendación:</strong> usar <code>===</code> para evitar errores.</p>
+<hr>
+<h2 id="5-que-son-las-promises-y-por-que-son-utiles">5. ¿Qué son las Promises y por qué son útiles?</h2>
+<p>Una <strong>Promise</strong> es un objeto que representa un valor que <strong>estará disponible en el futuro</strong>, como el resultado de una operación asíncrona.<br>
+Evita el <strong>callback hell</strong> y permite manejar código asíncrono de forma más limpia.</p>
+<p><strong>Estados:</strong></p>
+<ul>
+<li><strong>Pending</strong> (pendiente)</li>
+<li><strong>Fulfilled</strong> (resuelta)</li>
+<li><strong>Rejected</strong> (rechazada)</li>
+</ul>
+<p>Se usan con <code>.then()</code>, <code>.catch()</code> y <code>async/await</code>.</p>
+<hr>
+<h2 id="6-diferencia-entre-funciones-de-flecha-y-tradicionales">6. Diferencia entre funciones de flecha y tradicionales</h2>
+<ul>
+<li>
+<p><strong>Arrow functions (<code>=&gt;</code>)</strong>:</p>
+<ul>
+<li>No tienen su propio <code>this</code> (heredan el de su contexto).</li>
+<li>Más cortas y limpias.</li>
+<li>No se pueden usar como constructores (<code>new</code>).</li>
+</ul>
+</li>
+<li>
+<p><strong>Funciones tradicionales</strong>:</p>
+<ul>
+<li>Tienen su propio <code>this</code>.</li>
+<li>Pueden usarse como constructores.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="7-que-es-el-event-loop">7. ¿Qué es el Event Loop?</h2>
+<p>El <strong>Event Loop</strong> es el mecanismo que permite a JavaScript manejar <strong>operaciones asíncronas</strong> a pesar de ser <strong>single-thread</strong>.<br>
+Funciona así:</p>
+<ol>
+<li>El <strong>call stack</strong> ejecuta tareas síncronas.</li>
+<li>Las tareas asíncronas van a la <strong>cola de tareas</strong>.</li>
+<li>El Event Loop mueve las tareas de la cola al call stack cuando está libre.</li>
+</ol>
+<hr>
+<h2 id="8-que-es-el-dom-y-como-se-manipula-con-js">8. ¿Qué es el DOM y cómo se manipula con JS?</h2>
+<p>El <strong>DOM (Document Object Model)</strong> es una representación en forma de árbol de la estructura HTML.<br>
+Con JavaScript se puede:</p>
+<ul>
+<li>Crear, modificar o eliminar elementos.</li>
+<li>Cambiar atributos y estilos.</li>
+<li>Escuchar y manejar eventos.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">document.querySelector(&quot;h1&quot;).textContent = &quot;Hola Mundo&quot;;
+</code></pre>
+<hr>
+<h2 id="9-explica-el-concepto-de-closures">9. Explica el concepto de closures</h2>
+<p>Un <strong>closure</strong> ocurre cuando una función <strong>recuerda el contexto</strong> (variables y entorno) en el que fue creada, incluso si se ejecuta fuera de ese contexto.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">function crearContador() {
+  let contador = 0;
+  return function () {
+    contador++;
+    return contador;
+  };
+}
+const contar = crearContador();
+contar(); // 1
+contar(); // 2
+</code></pre>
+<hr>
+<h2 id="10-diferencia-entre-null-y-undefined">10. Diferencia entre <code>null</code> y <code>undefined</code></h2>
+<ul>
+<li><strong><code>null</code></strong>: Valor <strong>intencionalmente vacío</strong> asignado por el programador.</li>
+<li><strong><code>undefined</code></strong>: Valor que indica que <strong>no se ha asignado</strong> nada o no existe.</li>
+</ul>
+<hr>
+<h2 id="11-que-es-nan-y-que-significa">11. ¿Qué es <code>NaN</code> y qué significa?</h2>
+<p><code>NaN</code> significa <strong>Not a Number</strong>.<br>
+Indica que una operación matemática falló o no tiene sentido.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">parseInt(&quot;Hola&quot;); // NaN
+</code></pre>
+<p><strong>Comprobar:</strong></p>
+<pre><code class="language-js">Number.isNaN(valor);
+</code></pre>
+<hr>
+<h2 id="12-que-es-la-inmutabilidad-y-por-que-es-importante">12. ¿Qué es la inmutabilidad y por qué es importante?</h2>
+<p>La <strong>inmutabilidad</strong> significa que los datos <strong>no se modifican directamente</strong>, sino que se crean <strong>nuevas copias</strong> con los cambios.<br>
+Esto:</p>
+<ul>
+<li>Evita efectos secundarios.</li>
+<li>Facilita el <strong>debugging</strong>.</li>
+<li>Es clave en <strong>programación funcional</strong> y frameworks como React.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">const arr = [1, 2, 3];
+const nuevoArr = [...arr, 4]; // arr no se modifica
+</code></pre>
+<hr>
+<h2 id="13-herencia-en-javascript">13. Herencia en JavaScript</h2>
+<ul>
+<li>
+<p><strong>Basada en prototipos:</strong><br>
+Cada objeto puede heredar propiedades de otro a través de su <code>prototype</code>.</p>
+</li>
+<li>
+<p><strong>Basada en clases (syntactic sugar):</strong><br>
+Introducida en ES6 para tener una sintaxis más clara, pero internamente sigue usando prototipos.</p>
+</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">class Persona {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+  saludar() {
+    console.log(`Hola ${this.nombre}`);
+  }
+}
+</code></pre>
+<hr>
+<h2 id="14-delegacion-de-eventos">14. Delegación de eventos</h2>
+<p>Es una técnica donde <strong>asignas un solo listener</strong> a un elemento padre para manejar eventos de sus hijos.<br>
+Ahorra memoria y mejora el rendimiento.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-js">document.getElementById(&quot;lista&quot;).addEventListener(&quot;click&quot;, (e) =&gt; {
+  if (e.target.tagName === &quot;LI&quot;) {
+    console.log(`Clic en ${e.target.textContent}`);
+  }
+});
+</code></pre>
+<hr>
+<h2 id="15-spread-operator">15. Spread operator (<code>...</code>)</h2>
+<p>Sirve para <strong>expandir elementos</strong> de un array u objeto en otro contexto.</p>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-js">// Copiar array
+const arr = [1, 2, 3];
+const copia = [...arr];
+
+// Combinar objetos
+const obj1 = { a: 1 };
+const obj2 = { b: 2 };
+const combinado = { ...obj1, ...obj2 };
+</code></pre>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTMLMd/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/NodeMd/">
+              Node.js
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/MarkdownMd/">
+              Markdown
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/GitMd/">
+              Git
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/ReactMd/">
+              React
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/EleventyMd/">
+              Eleventy
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_NodeMd/">
+              X-Node.js
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_HTMLMd/">
+              X-HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_MarkdownMd/">
+              X-Markdown
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_GitMd/">
+              X-Git
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_ReactMd/">
+              X-React
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/x_EleventyMd/">
+              X-Eleventy
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
