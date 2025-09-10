@@ -25,348 +25,374 @@
     <main>
       <h1 id="node-js">Node.js</h1>
 <p><img src="/blog-lenguajes-eleventy/img/portada/node.avif" alt="Node.js"></p>
-<p><em>  Es un entorno de ejecución de JavaScript en el lado del servidor que permite a los desarrolladores crear aplicaciones web y de red altamente escalables y eficientes. Aquí tienes algunos conceptos básicos</em></p>
+<blockquote>
+<p>Es un entorno de ejecución de JavaScript en el lado del servidor que permite a los desarrolladores crear aplicaciones web y de red altamente escalables y eficientes. Aquí tienes algunos conceptos básicos.</p>
+</blockquote>
+<h2 id="que-es-node">¿Qué es Node?</h2>
+<p>Es un entorno de ejecución de JavaScript del lado del servidor basado en el motor V8 de Google Chrome.</p>
+<h3 id="para-que-sirve-node">¿Para qué sirve Node?</h3>
+<p>Permite ejecutar JavaScript fuera del navegador, principalmente para crear servidores, APIs, aplicaciones en tiempo real y herramientas de línea de comandos.</p>
+<h3 id="diferencia-principal-entre-node-y-javascript">Diferencia principal entre Node y JavaScript</h3>
+<p>JavaScript: Lenguaje de programación.
+Node.js: Entorno que permite ejecutar JavaScript en el servidor, con módulos propios (fs, http, etc.) que no existen en el navegador.</p>
+<h3 id="que-se-puede-hacer-con-node-js">¿Qué se puede hacer con Node.js?</h3>
+<p>APIs REST y GraphQL
+Aplicaciones en tiempo real (chat, juegos, sockets)
+Microservicios
+Automatización de tareas
+Backend para aplicaciones web y móviles</p>
+<h3 id="buenas-practicas-en-node-js">Buenas prácticas en Node.js</h3>
+<p>Separar la lógica en controladores, rutas y servicios
+Manejo de errores centralizado
+Uso de middlewares
+Variables de entorno (dotenv)
+Validación de datos de entrada
+Logs y monitoreo
+Testeo automatizado</p>
+<hr>
+<h2 id="conceptos-relacionados">Conceptos relacionados</h2>
+<h3 id="que-es-un-orm">¿Qué es un ORM?</h3>
+<p>Object Relational Mapper: herramienta que permite interactuar con bases de datos usando objetos y métodos en lugar de SQL directo (ejemplo: Sequelize, TypeORM, Prisma).</p>
+<h3 id="que-es-una-api">¿Qué es una API?</h3>
+<p>Application Programming Interface: conjunto de reglas que permite que dos aplicaciones se comuniquen. En el contexto web suele ser un servicio que expone datos y funcionalidades.</p>
+<h3 id="diferencia-entre-libreria-y-framework">Diferencia entre librería y framework</h3>
+<p><strong>Librería</strong>: conjunto de funciones o utilidades que el programador decide cuándo y cómo usar (ej: Lodash).<br>
+<strong>Framework</strong>: establece una estructura y un flujo de trabajo donde tu código se adapta al framework (ej: Express, NestJS).</p>
+<h3 id="que-es-el-patron-rest">¿Qué es el patrón REST?</h3>
+<p>Estilo de arquitectura para construir APIs que utiliza HTTP y operaciones como GET, POST, PUT, DELETE, siguiendo convenciones en las rutas y respuestas.</p>
+<h3 id="que-es-serverless">¿Qué es Serverless?</h3>
+<p>Modelo en el que no administras servidores, sino que el proveedor (ej: AWS Lambda, Firebase Functions) ejecuta funciones bajo demanda y escala automáticamente.</p>
+<h3 id="que-es-arquitectura-de-microservicios">¿Qué es arquitectura de Microservicios?</h3>
+<p>Es un estilo donde una aplicación grande se divide en pequeños servicios independientes, cada uno con su propia lógica y base de datos, que se comunican entre sí (generalmente vía APIs).</p>
+<hr>
+<h2 id="herramientas-y-seguridad">Herramientas y Seguridad</h2>
+<h3 id="que-es-swagger-y-que-estandar-utiliza">¿Qué es Swagger y qué estándar utiliza?</h3>
+<p>Es una herramienta para documentar y probar APIs REST. Utiliza el estándar OpenAPI Specification (OAS).</p>
+<h3 id="para-que-sirve-cors-en-un-api-rest-cross-origin-resource-sharing">¿Para qué sirve CORS en un API REST? <em>( Cross-Origin Resource Sharing )</em></h3>
+<p>Mecanismo que controla qué dominios pueden consumir tu API, previniendo accesos no autorizados desde otros orígenes.</p>
+<h3 id="que-es-jwt-json-web-token">¿Qué es JWT? <em>( JSON Web Token )</em></h3>
+<p>Estándar para transmitir información segura entre cliente y servidor en forma de token firmado digitalmente (usado en autenticación).</p>
+<hr>
+<h2 id="control-de-versiones-y-sql">Control de versiones y SQL</h2>
+<h3 id="que-es-gitflow-y-como-se-utiliza">¿Qué es GitFlow y cómo se utiliza?</h3>
+<p>• Permite organizar equipos y releases de software.
+Estrategia de ramas en Git:
+main → código en producción
+develop → desarrollo estable
+feature → nuevas funcionalidades
+release → versiones previas a producción
+hotfix → correcciones urgentes</p>
+<h3 id="diferencia-entre-funcion-y-proceso-almacenado-en-sql">Diferencia entre función y proceso almacenado en SQL</h3>
+<p><strong>Función</strong>: retorna un valor y puede usarse en consultas (SELECT). Generalmente no modifica datos.<br>
+<strong>Procedimiento almacenado (Stored Procedure)</strong>: conjunto de sentencias SQL que pueden ejecutar operaciones más complejas (insertar, actualizar, borrar) y no necesariamente devuelven un valor.</p>
+<hr>
 <h2 id="conceptos-importantes">conceptos importantes</h2>
 <ul>
-<li>
-<h3 id="modelo-cliente-servidor">Modelo cliente / servidor</h3>
+<li><strong>Modelo cliente / servidor</strong>: solicitudes</li>
+<li><strong>Patrón de software</strong>: MVC (modelo vista controlador)</li>
+<li><strong>API REST</strong>: CRUD: GET / POST / PUT / DELETE</li>
+</ul>
+<h2 id="conceptos-basicos">Conceptos básicos</h2>
 <ul>
-<li>solicitudes</li>
+<li><strong>Entorno de Ejecución</strong>: <em>( Ejecución de JavaScript en servidor )</em></li>
 </ul>
-</li>
-<li>
-<h3 id="patron-de-software">Patrón de software</h3>
+<p>Node.js proporciona un entorno de tiempo de ejecución para JavaScript fuera del navegador, lo que significa que puedes ejecutar JavaScript en el servidor.</p>
 <ul>
-<li>MVC (modelo vista controlador)</li>
+<li><strong>Event-Driven y Non-Blocking I/O</strong> <em>( Programación orientada a eventos, E/S no bloqueante )</em></li>
 </ul>
-</li>
-<li>
-<h3 id="api-rest">API REST</h3>
-<ul>
-<li>CRUD: GET / POST / PUT / DELETE</li>
-</ul>
-</li>
-</ul>
-<h1 id="controlar-versiones-de-node">Controlar versiones de Node</h1>
-<ul>
-<li><code>nvm</code> 👉 controlador de version de Node.js</li>
-<li><code>nvm install &lt;v nroVersion&gt;</code> 👉 instala la version elegida</li>
-<li><code>nvm list </code>👉 muestra la versiones instaladas</li>
-<li><code>nvm use &lt;v nroVersion&gt; </code>👉 activa la version elegida</li>
-<li><code>nvm uninstall &lt;v nroVersion&gt; </code>👉 instala la version elegida</li>
-<li><code>nvm alias default node </code>👉 usa la ultima version instalada</li>
-</ul>
-<hr>
-<h2 id="http">HTTP</h2>
-<h3 id="estados">estados</h3>
-<ul>
-<li><strong>100:</strong> informativa</li>
-<li><strong>200:</strong> correctas</li>
-<li><strong>300:</strong> redirecciones</li>
-<li><strong>400:</strong> cliente</li>
-<li><strong>500:</strong> servidor</li>
-</ul>
-<hr>
-<h3 id="entorno-de-ejecucion">🔻<strong>Entorno de Ejecución</strong></h3>
-<h3 id="ejecucion-de-javascript-en-servidor"><em>Ejecución de JavaScript en servidor.</em></h3>
-<p><strong><em>Node.js</em></strong> proporciona un entorno de tiempo de ejecución para JavaScript fuera del navegador, lo que significa que puedes ejecutar JavaScript en el servidor.</p>
-<hr>
-<h3 id="event-driven-y-non-blocking-i-o">🔻<strong>Event-Driven y Non-Blocking I/O</strong></h3>
-<h3 id="programacion-orientada-a-eventos-e-s-no-bloqueante"><em>Programación orientada a eventos, E/S no bloqueante.</em></h3>
 <p>Node.js utiliza un modelo de programación orientado a eventos y operaciones de entrada/salida no bloqueante, lo que permite manejar múltiples solicitudes simultáneamente sin bloquear el hilo de ejecución.</p>
-<hr>
-<h3 id="modulos">🔻<strong>Módulos</strong></h3>
-<h3 id="division-de-la-aplicacion-en-modulos-reutilizables"><em>División de la aplicación en módulos reutilizables.</em></h3>
+<ul>
+<li><strong>Módulos</strong> <em>( División de la aplicación en módulos reutilizables )</em></li>
+</ul>
 <p>Node.js utiliza un sistema de módulos que permite la modularidad en el código. Puedes dividir tu aplicación en archivos pequeños y reutilizables, y luego importarlos según sea necesario en otros archivos.</p>
-<hr>
-<h3 id="npm-node-package-manager">🔻<strong>npm: Node Package Manager</strong></h3>
-<h3 id="gestion-de-paquetes-y-dependencias-con-npm"><em>Gestión de paquetes y dependencias con npm.</em></h3>
+<ul>
+<li><strong>npm: Node Package Manager</strong> <em>( Gestión de paquetes y dependencias con npm )</em></li>
+</ul>
 <p>Es el sistema de gestión de paquetes de Node.js que te permite instalar, compartir y gestionar dependencias de proyectos fácilmente. npm es una de las mayores colecciones de paquetes de código abierto del mundo.</p>
-<hr>
-<h3 id="api-de-e-s-asincrona">🔻<strong>API de E/S Asíncrona</strong></h3>
-<h3 id="operaciones-de-entrada-salida-asincronas"><em>Operaciones de entrada/salida asíncronas.</em></h3>
+<ul>
+<li><strong>API de E/S Asíncrona</strong> <em>( Operaciones de entrada/salida asíncronas )</em></li>
+</ul>
 <p>Node.js proporciona una amplia gama de APIs para realizar operaciones de entrada/salida de manera asíncrona, lo que significa que las operaciones pueden continuar mientras otras operaciones están en curso, sin bloquear el hilo de ejecución.</p>
-<hr>
-<h3 id="single-threaded-pero-event-loop">🔻<strong>Single-Threaded pero Event-Loop</strong></h3>
-<h3 id="modelo-de-event-loop-para-concurrencia-eficiente"><em>Modelo de event-loop para concurrencia eficiente.</em></h3>
+<ul>
+<li><strong>Single-Threaded pero Event-Loop</strong> <em>( Modelo de event-loop para concurrencia eficiente )</em></li>
+</ul>
 <p>Node.js opera en un solo hilo, pero utiliza un modelo de event-loop que permite manejar múltiples solicitudes simultáneamente. Esto hace que sea eficiente para aplicaciones de red en tiempo real.</p>
-<hr>
-<h3 id="escalabilidad">🔻<strong>Escalabilidad</strong></h3>
-<h3 id="altamente-escalable-para-aplicaciones-de-red"><em>Altamente escalable para aplicaciones de red.</em></h3>
+<ul>
+<li><strong>Escalabilidad</strong> <em>( Altamente escalable para aplicaciones de red )</em></li>
+</ul>
 <p>Gracias a su modelo de E/S no bloqueante y su capacidad para manejar muchas conexiones simultáneas, Node.js es altamente escalable y adecuado para aplicaciones que requieren un alto rendimiento y concurrencia.</p>
-<hr>
-<h3 id="desarrollo-de-api-y-aplicaciones-web">🔻<strong>Desarrollo de API y Aplicaciones Web</strong></h3>
-<h3 id="desarrollo-de-apis-servidores-web-aplicaciones-en-tiempo-real"><em>Desarrollo de APIs, servidores web, aplicaciones en tiempo real.</em></h3>
+<ul>
+<li><strong>Desarrollo de API y Aplicaciones Web</strong> <em>( Desarrollo de APIs, servidores web, aplicaciones en tiempo real )</em></li>
+</ul>
 <p>Node.js es comúnmente utilizado para desarrollar APIs RESTful, servidores web y aplicaciones de una sola página (SPA), así como aplicaciones en tiempo real como chat en línea, juegos multijugador y aplicaciones de transmisión de datos.</p>
-<hr>
-<h3 id="frameworks-y-bibliotecas">🔻<strong>Frameworks y Bibliotecas</strong></h3>
-<h3 id="utilizacion-de-frameworks-y-bibliotecas-populares"><em>Utilización de frameworks y bibliotecas populares.</em></h3>
+<ul>
+<li><strong>Frameworks y Bibliotecas</strong> <em>( Utilización de frameworks y bibliotecas populares )</em></li>
+</ul>
 <p>Existen muchos frameworks y bibliotecas populares construidos sobre Node.js, como Express.js, Socket.io, Hapi.js, Koa.js, entre otros, que simplifican el desarrollo web y la creación de APIs.</p>
-<hr>
-<h3 id="streaming-de-datos">🔻<strong>Streaming de Datos</strong></h3>
-<h3 id="eficiente-para-streaming-de-datos-en-tiempo-real"><em>Eficiente para streaming de datos en tiempo real.</em></h3>
+<ul>
+<li><strong>Streaming de Datos</strong> <em>( Eficiente para streaming de datos en tiempo real )</em></li>
+</ul>
 <p>Node.js es excelente para el manejo de datos en tiempo real, como el streaming de archivos o la transmisión de video, debido a su capacidad para manejar la E/S de manera eficiente.</p>
-<hr>
-<h3 id="middleware">🔻<strong>Middleware</strong></h3>
-<h3 id="funciones-que-manejan-solicitudes-http-intermedias"><em>Funciones que manejan solicitudes HTTP intermedias.</em></h3>
+<ul>
+<li><strong>Middleware</strong> <em>( Funciones que manejan solicitudes HTTP intermedias )</em></li>
+</ul>
 <p>Son funciones intermedias que se ejecutan entre la recepción de una solicitud HTTP y el envío de una respuesta. En el contexto de Node.js y frameworks como Express.js, los middlewares pueden realizar tareas como el análisis del cuerpo de la solicitud, la autenticación, la gestión de sesiones, el registro de solicitudes, entre otros.</p>
-<hr>
-<h3 id="callback">🔻<strong>Callback</strong></h3>
-<h3 id="funciones-pasadas-como-argumentos-a-otras-funciones"><em>Funciones pasadas como argumentos a otras funciones.</em></h3>
+<ul>
+<li><strong>Callback</strong> <em>( Funciones pasadas como argumentos a otras funciones )</em></li>
+</ul>
 <p>En JavaScript, un callback es una función que se pasa como argumento a otra función y se ejecuta después de que la función principal ha terminado de ejecutarse. Son comunes en Node.js para manejar operaciones asíncronas como lectura de archivos, solicitudes de red o consultas a bases de datos.</p>
-<hr>
-<h3 id="promesa">🔻<strong>Promesa</strong></h3>
-<h3 id="manejo-asincronico-de-operaciones-evita-callback-hell"><em>Manejo asincrónico de operaciones, evita &quot;callback hell&quot;.</em></h3>
-<p>on objetos que representan el éxito o el fracaso eventual de una operación asíncrona y su valor resultante. Las promesas en Node.js proporcionan una forma más limpia y estructurada de manejar operaciones asincrónicas, evitando el &quot;callback hell&quot; y permitiendo un mejor manejo de errores.</p>
-<hr>
-<h3 id="async-await">🔻<strong>Async/Await</strong></h3>
-<h3 id="sintaxis-para-trabajar-con-promesas-de-manera-sincrona"><em>Sintaxis para trabajar con promesas de manera síncrona.</em></h3>
+<ul>
+<li><strong>Promesa</strong> <em>( Manejo asincrónico de operaciones, evita &quot;callback hell&quot; )</em></li>
+</ul>
+<p>Son objetos que representan el éxito o el fracaso eventual de una operación asíncrona y su valor resultante. Las promesas en Node.js proporcionan una forma más limpia y estructurada de manejar operaciones asincrónicas, evitando el &quot;callback hell&quot; y permitiendo un mejor manejo de errores.</p>
+<ul>
+<li><strong>Async/Await</strong> <em>( Sintaxis para trabajar con promesas de manera síncrona )</em></li>
+</ul>
 <p>Es una sintaxis de JavaScript para trabajar con promesas de manera síncrona, haciéndolas parecer más como código síncrono. Las funciones marcadas con async devuelven automáticamente una promesa y la palabra clave await pausa la ejecución de la función hasta que la promesa se resuelve o se rechaza.</p>
-<hr>
-<h3 id="eventemitted">🔻<strong>EventEmitted</strong></h3>
-<h3 id="clase-para-emitir-y-escuchar-eventos"><em>Clase para emitir y escuchar eventos.</em></h3>
+<ul>
+<li><strong>EventEmitted</strong> <em>( Clase para emitir y escuchar eventos )</em></li>
+</ul>
 <p>Es una clase en Node.js que permite la implementación de un patrón de diseño de publicación/suscripción para la gestión de eventos. Los objetos EventEmitter pueden emitir eventos y los oyentes pueden suscribirse a esos eventos para ejecutar código específico cuando se emiten.</p>
-<hr>
-<h3 id="buffed">🔻<strong>Buffed</strong></h3>
-<h3 id="almacen-temporal-de-datos-binarios-en-memoria"><em>Almacén temporal de datos binarios en memoria.</em></h3>
+<ul>
+<li><strong>Buffed</strong> <em>( Almacén temporal de datos binarios en memoria )</em></li>
+</ul>
 <p>Es un área de memoria que se utiliza para almacenar datos binarios de longitud fija. Los buffers son comúnmente utilizados en Node.js para trabajar con datos binarios como archivos, imágenes o datos de red.</p>
-<hr>
-<h3 id="stream">🔻<strong>Stream</strong></h3>
-<h3 id="flujo-de-datos-que-se-procesa-incrementalmente"><em>Flujo de datos que se procesa incrementalmente.</em></h3>
+<ul>
+<li><strong>Stream</strong> <em>( Flujo de datos que se procesa incrementalmente )</em></li>
+</ul>
 <p>Es una abstracción en Node.js para leer o escribir datos de manera secuencial. Los streams permiten procesar grandes volúmenes de datos de manera eficiente, ya que no es necesario cargar todo el contenido en memoria de una vez.</p>
-<hr>
-<h3 id="cluste">🔻<strong>Cluste</strong></h3>
-<h3 id="modulo-para-crear-procesos-hijos-en-paralelo"><em>Módulo para crear procesos hijos en paralelo.</em></h3>
+<ul>
+<li><strong>Cluste</strong> <em>( Módulo para crear procesos hijos en paralelo )</em></li>
+</ul>
 <p>El módulo Cluster en Node.js permite crear múltiples procesos hijos que comparten el mismo puerto del servidor. Esto mejora el rendimiento y la escalabilidad al permitir que un servidor Node.js utilice todos los núcleos de la CPU de manera eficiente.</p>
-<hr>
-<h3 id="n-ap">🔻<strong>N-AP</strong></h3>
-<h3 id="interfaz-de-aplicacion-nativa-para-extensiones-c"><em>Interfaz de aplicación nativa para extensiones C++.</em></h3>
+<ul>
+<li><strong>N-AP</strong> <em>( Interfaz de aplicación nativa para extensiones C++ )</em></li>
+</ul>
 <p>Es una interfaz de aplicación nativa en Node.js que proporciona una forma estable de escribir extensiones en C++ que sean compatibles con múltiples versiones de Node.js. Esto facilita la creación de módulos nativos para Node.js que no dependen de la versión específica de Node.js.</p>
-<hr>
-<h3 id="debugged">🔻<strong>Debugged</strong></h3>
-<h3 id="herramientas-para-depurar-codigo-node-js"><em>Herramientas para depurar código Node.js.</em></h3>
+<ul>
+<li><strong>Debugged</strong> <em>( Herramientas para depurar código Node.js )</em></li>
+</ul>
 <p>Debugger: Node.js ofrece herramientas integradas de depuración que permiten inspeccionar el estado de ejecución de una aplicación, establecer puntos de interrupción, rastrear variables y ejecutar el código paso a paso para identificar y corregir errores.</p>
-<h2 id="comandos">COMANDOS</h2>
-<pre><code>`node nomArch`
+<h2 id="control-de-versiones-de-node">Control de versiones de Node</h2>
+<pre><code class="language-bash">
+nvm                           # controlador de version de Node.js
+nvm install &lt;v nroVersion&gt;    # instala la version elegida
+nvm list                      # muestra la versiones instaladas
+nvm use &lt;v nroVersion&gt;        # activa la version elegida
+nvm uninstall &lt;v nroVersion&gt;  # instala la version elegida
+nvm alias default node        # usa la ultima version instalada
+
 </code></pre>
-<ul>
-<li>Ejecuta archivos JavaScript con Node.js.</li>
-</ul>
-<pre><code>`node -V`
+<h2 id="comandos-basicos">Comandos Básicos</h2>
+<pre><code class="language-bash">
+node nomArch            # Ejecuta archivos JavaScript con Node.js.
+node -V                 # Muestra la versión actual de Node.js instalada.
+node --inspect nomArch  # Inicia la depuración de un archivo JavaScript.
+node .&lt;comando&gt;         # es la consola en Node.js
+comandos                # [ break, clear, editor, exit, help, load, sav ]
+
 </code></pre>
-<ul>
-<li>Muestra la versión actual de Node.js instalada.</li>
-</ul>
-<pre><code>`node --inspect nomArch`
-</code></pre>
-<ul>
-<li>Inicia la depuración de un archivo JavaScript.</li>
-</ul>
-<pre><code>`node .&lt;comando&gt; `👉 es la consola en Node.js
-</code></pre>
-<ul>
-<li>/.break/.clear/.editor/.exit/.help/.load/.sav</li>
-</ul>
 <h2 id="comandos-de-npm-node-package-manager">Comandos de NPM (Node Package Manager)</h2>
-<pre><code>`npm init`
+<pre><code>
+npm init                            # Crea un nuevo archivo package.json interactivo en el directorio actual.
+npm i/install                       # Instala todas las dependencias listadas en package.json.
+npm i/install &lt;package&gt;             # Instala un paquete específico y lo añade a package.json como DEPENDENCIA.
+npm i/install &lt;package&gt; --save-dev  # Instala un paquete específico y lo añade a package.json como dev-dependencies.
+npm un/uninstall &lt;package&gt;          # Desinstala un paquete específico y lo elimina de package.json.
+npm run &lt;script&gt;                    # Ejecuta un script definido en la sección scripts de package.json.
+npm ls/list                         # Muestra una lista de todos los paquetes instalados y sus dependencias.
+npm outdate                         # Muestra una lista de paquetes desactualizado.
+npm update &lt;package&gt;                # Actualiza todos los paquetes a sus versiones más recientes según las restricciones en package.json.
+                                    # Se tiene que actualizar manualmente las DEPENDENCIA en el package.json
+npm cache clean --forc              # Limpia la caché de npm.
+
 </code></pre>
-<ul>
-<li>Crea un nuevo archivo package.json interactivo en el directorio actual.</li>
-</ul>
-<pre><code>`npm i/install`
-</code></pre>
-<ul>
-<li>Instala todas las dependencias listadas en package.json.</li>
-</ul>
-<pre><code>`npm i/install &lt;package&gt;`
-</code></pre>
-<ul>
-<li>Instala un paquete específico y lo añade a package.json como DEPENDENCIA.</li>
-</ul>
-<pre><code>`npm i/install &lt;package&gt; --save-dev`
-</code></pre>
-<ul>
-<li>Instala un paquete específico y lo añade a package.json como dev-dependencies.</li>
-</ul>
-<pre><code>`npm un/uninstall &lt;package&gt;`
-</code></pre>
-<ul>
-<li>Desinstala un paquete específico y lo elimina de package.json.</li>
-</ul>
-<pre><code>`npm run &lt;script&gt;`
-</code></pre>
-<ul>
-<li>Ejecuta un script definido en la sección scripts de package.json.</li>
-</ul>
-<pre><code>`npm ls/list`
-</code></pre>
-<ul>
-<li>Muestra una lista de todos los paquetes instalados y sus dependencias.</li>
-</ul>
-<pre><code>`npm outdate`
-</code></pre>
-<ul>
-<li>Muestra una lista de paquetes desactualizado.</li>
-</ul>
-<pre><code>`npm update &lt;package&gt;`
-</code></pre>
-<ul>
-<li>
-<p>Actualiza todos los paquetes a sus versiones más recientes según las restricciones en package.json.</p>
-</li>
-<li>
-<p>Se tiene que actualizar manualmente las DEPENDENCIA en el package.json</p>
-</li>
-</ul>
-<pre><code>`npm cache clean --forc`
-</code></pre>
-<ul>
-<li>Limpia la caché de npm.</li>
-</ul>
 <h2 id="paquete-server">Paquete server</h2>
-<pre><code>`npm -i --g serve`
+<pre><code class="language-bash">npm -i --g serve   # Es como live-server para Node.js
 </code></pre>
-<ul>
-<li>
-<p>serve 👉 es como live-server para Node.js</p>
-<p>? Ejecuta comandos npm sin necesidad de instalarlos globalmente.</p>
-</li>
-</ul>
 <h2 id="comandos-de-npx">Comandos de NPX</h2>
-<pre><code>`npx &lt;command&gt;`
-</code></pre>
-<ul>
-<li>Ejecuta comandos npm sin necesidad de instalarlos globalmente.</li>
-</ul>
-<h2 id="11ty-eleventy">🔻11ty/eleventy</h2>
-<pre><code class="language-bash"> npx @11ty/eleventy
- npx run build
-    &quot;build&quot;: &quot;npx @11ty/eleventy&quot;,
- npx start
-    &quot;start&quot;: &quot;npx @11ty/eleventy --serve&quot;
+<pre><code class="language-bash">npx &lt;command&gt;   # Ejecuta comandos npm sin necesidad de instalarlos globalmente.
 </code></pre>
 <h2 id="comandos-de-control-de-versiones">Comandos de Control de Versiones</h2>
-<ul>
-<li>nvm (Node Version Manager):</li>
-<li>Gestiona diferentes versiones de Node.js.
-<ul>
-<li>nvm install 14.17.0 para instalar la versión 14.17.0 de Node.js.</li>
-<li>nvm use 14.17.0 para usar la versión 14.17.0 de Node.js.</li>
-</ul>
-</li>
-</ul>
-<h2 id="frameworks-exprexx">frameworks Exprexx</h2>
-<p><strong>Express</strong> es uno de los frameworks más populares para construir aplicaciones web con Node.js.</p>
-<p><strong>Métodos:</strong> Routing / Middleware / Aplicación / Respuesta</p>
+<pre><code class="language-bash">nvm install 14.17.0   # instalar la versión n°
+nvm use 14.17.0       # usar la versión n°
+</code></pre>
+<hr>
+<h1 id="frameworks-express">Frameworks Express</h1>
+<p><strong>Express</strong> es uno de los frameworks más populares para construir aplicaciones web con Node.js.<br>
+<strong>Métodos:</strong> Routing / Middleware / Aplicación / Respuesta</p>
 <h2 id="metodos-de-routing">Métodos de Routing</h2>
 <p>Estos métodos se utilizan para definir las rutas y manejar las solicitudes HTTP.</p>
-<p>🔻<code>app.get(path, callback)</code></p>
-<p>Maneja solicitudes HTTP <strong>GET</strong>. Se usa para <em><strong>OBTENER</strong></em> datos del servidor.</p>
-<pre><code class="language-js">app.get(&quot;/ruta&quot;, (req, res) =&gt; {
+<h3 id="maneja-solicitudes-http">Maneja solicitudes HTTP</h3>
+<h3 id="estados">estados</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">estados</th>
+<th>data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>100</strong></td>
+<td>informativa</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>200</strong></td>
+<td>correctas</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>300</strong></td>
+<td>redirecciones</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>400</strong></td>
+<td>cliente</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>500</strong></td>
+<td>servidor</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<ul>
+<li><strong>GET</strong>: Se usa para <em><strong>OBTENER</strong></em> datos del servidor.</li>
+</ul>
+<pre><code class="language-js">app.get(path, callback);
+
+app.get(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a una solicitud GET&quot;);
 });
 </code></pre>
-<p>🔻<code>app.post(path, callback)</code></p>
-<p>Maneja solicitudes HTTP <strong>POST</strong>. Se usa para <em><strong>ENVIAR</strong></em> datos al servidor.</p>
-<pre><code class="language-js">app.post(&quot;/ruta&quot;, (req, res) =&gt; {
+<ul>
+<li><strong>POST</strong>: Se usa para <em><strong>ENVIAR</strong></em> datos al servidor.</li>
+</ul>
+<pre><code class="language-js">app.post(path, callback);
+
+app.post(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a una solicitud POST&quot;);
 });
 </code></pre>
-<p>🔻<code>app.put(path, callback)</code></p>
-<p>Maneja solicitudes HTTP <strong>PUT</strong>. Se usa para <em><strong>ACTUALIZAR</strong></em> datos en el servidor.</p>
-<pre><code class="language-js">app.put(&quot;/ruta&quot;, (req, res) =&gt; {
+<ul>
+<li><strong>PUT</strong>: Se usa para <em><strong>ACTUALIZAR</strong></em> datos en el servidor.</li>
+</ul>
+<pre><code class="language-js">app.put(path, callback);
+
+app.put(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a una solicitud PUT&quot;);
 });
 </code></pre>
-<p>🔻<code>app.delete(path, callback)</code></p>
-<p>Maneja solicitudes HTTP <strong>DELETE</strong>. Se usa para <em><strong>ELIMINAR</strong></em> datos del servidor.</p>
-<pre><code class="language-js">app.delete(&quot;/ruta&quot;, (req, res) =&gt; {
+<ul>
+<li><strong>DELETE</strong>: Se usa para <em><strong>ELIMINAR</strong></em> datos del servidor.</li>
+</ul>
+<pre><code class="language-js">app.delete(path, callback);
+
+app.delete(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a una solicitud DELETE&quot;);
 });
 </code></pre>
-<p>🔻<code>app.patch(path, callback)</code></p>
-<p>Maneja solicitudes HTTP <strong>PATCH</strong>. Se usa para <em><strong>realizar</strong></em> ACTUALIZACIONES * PARCIALES de los datos.</p>
-<pre><code class="language-js">app.patch(&quot;/ruta&quot;, (req, res) =&gt; {
+<ul>
+<li><strong>PATCH</strong>: Se usa para <em><strong>realizar</strong></em> ACTUALIZACIONES * PARCIALES de los datos.</li>
+</ul>
+<pre><code class="language-js">app.patch(path, callback);
+
+app.patch(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a una solicitud PATCH&quot;);
 });
 </code></pre>
-<p>🔻<code>app.all(path, callback)</code></p>
-<p>Maneja todas las <strong>solicitudes</strong> HTTP para UNA ruta <em><strong>específica</strong></em>.</p>
-<pre><code class="language-js">app.all(&quot;/ruta&quot;, (req, res) =&gt; {
+<ul>
+<li><strong>All</strong>: Maneja todas las <strong>solicitudes</strong> HTTP para UNA ruta <em><strong>específica</strong></em>.</li>
+</ul>
+<pre><code class="language-js">app.all(path, callback);
+
+app.all(&quot;/ruta&quot;, (req, res) =&gt; {
   res.send(&quot;Respuesta a cualquier tipo de solicitud HTTP&quot;);
 });
 </code></pre>
 <h2 id="metodos-de-middleware">Métodos de Middleware</h2>
-<p>Estos métodos se usan para ejecutar código antes de llegar a la ruta específica.</p>
-<ul>
-<li><code>app.use</code>:
-es extremadamente útil para organizar y modularizar la lógica de la aplicación, permitiendo añadir funcionalidades comunes de manera eficiente y estructurada.</li>
-<li>🔻<code>app.use(path, middleware)</code>:
-Aplica middleware a todas las rutas que coinciden con el path especificado.</li>
-</ul>
-<pre><code class="language-js">app.use(&quot;/ruta&quot;, (req, res, next) =&gt; {
+<p>Estos métodos se usan para ejecutar código antes de llegar a la ruta específica.
+Es extremadamente útil para organizar y modularizar la lógica de la aplicación, permitiendo añadir funcionalidades comunes de manera eficiente y estructurada.
+Aplica middleware a todas las rutas que coinciden con el path especificado.</p>
+<pre><code class="language-js">
+app.use(middleware):    # Aplica middleware a todas las rutas de la aplicación.
+
+app.use(path, middleware);
+
+app.use(&quot;/ruta&quot;, (req, res, next) =&gt; {
   console.log(&quot;Middleware ejecutado&quot;);
   next();
 });
-</code></pre>
-<ul>
-<li>🔻<code>app.use(middleware)</code>:
-Aplica middleware a todas las rutas de la aplicación.</li>
-</ul>
-<pre><code class="language-js">app.use((req, res, next) =&gt; {
+
+app.use((req, res, next) =&gt; {
   console.log(&quot;Middleware ejecutado para todas las rutas&quot;);
   next();
 });
+
 </code></pre>
 <h2 id="metodos-de-aplicacion">Métodos de Aplicación</h2>
 <p>Estos métodos se usan para configurar y manejar la aplicación.</p>
 <ul>
-<li>🔻<code>app.listen(port, callback)</code>:
-Inicia el servidor en el puerto especificado.</li>
+<li><strong>Listen</strong>: Inicia el servidor en el puerto especificado.</li>
 </ul>
-<pre><code class="language-js">app.listen(3000, () =&gt; {
+<pre><code class="language-js">app.listen(port, callback):
+
+app.listen(3000, () =&gt; {
   console.log(&quot;Servidor escuchando en el puerto 3000&quot;);
 });
 </code></pre>
 <ul>
-<li>🔻<code>app.set(name, value)</code>:
-Establece una variable de configuración.</li>
+<li><strong>Set</strong>: Establece una variable de configuración.</li>
 </ul>
-<pre><code class="language-js">app.set(&quot;view engine&quot;, &quot;ejs&quot;);
+<pre><code class="language-js">app.set(name, value):
+
+app.set(&quot;view engine&quot;, &quot;ejs&quot;);
 </code></pre>
 <ul>
-<li>🔻<code>app.get(name)</code>:
-Obtiene una variable de configuración.</li>
+<li><strong>Get</strong>: Obtiene una variable de configuración.</li>
 </ul>
-<pre><code class="language-js">const engine = app.get(&quot;view engine&quot;);
+<pre><code class="language-js">app.get(name):
+
+const engine = app.get(&quot;view engine&quot;);
 </code></pre>
 <h2 id="metodos-de-respuesta">Métodos de Respuesta</h2>
 <p>Estos métodos se usan para enviar respuestas al cliente.</p>
-<p>🔻<code>res.send(data)</code></p>
-<p>Envía una respuesta de varios tipos al cliente.</p>
-<pre><code class="language-js">res.send(&quot;Hola, mundo&quot;);
+<ul>
+<li><strong>Send</strong>: Envía una respuesta de varios tipos al cliente.</li>
+</ul>
+<pre><code class="language-js">res.send(data);
+
+res.send(&quot;Hola, mundo&quot;);
 </code></pre>
-<p>🔻<code>res.json(data)?</code></p>
-<p>Envía una respuesta en formato JSON.</p>
-<pre><code class="language-js">res.json({ mensaje: &quot;Hola, mundo&quot; });
+<ul>
+<li><strong>Json</strong>: Envía una respuesta en formato JSON.</li>
+</ul>
+<pre><code class="language-js">res.json(data);
+
+res.json({ mensaje: &quot;Hola, mundo&quot; });
 </code></pre>
-<p>🔻<code>res.status(code)</code></p>
-<p>Establece el código de estado HTTP para la respuesta.</p>
-<pre><code class="language-js">res.status(404).send(&quot;No encontrado&quot;);
+<ul>
+<li><strong>Status</strong>: Establece el código de estado HTTP para la respuesta.</li>
+</ul>
+<pre><code class="language-js">res.status(code);
+
+res.status(404).send(&quot;No encontrado&quot;);
 </code></pre>
-<p>🔻<code>res.redirect(url)</code></p>
-<p>Redirige la solicitud a una URL diferente.</p>
-<pre><code class="language-js">res.redirect(&quot;/nueva-ruta&quot;);
+<ul>
+<li><strong>Redirect</strong>: Redirige la solicitud a una URL diferente.</li>
+</ul>
+<pre><code class="language-js">res.redirect(url);
+
+res.redirect(&quot;/nueva-ruta&quot;);
 </code></pre>
-<p>🔻<code>res.render(view, data)</code></p>
-<p>Renderiza una vista utilizando el motor de plantillas configurado.</p>
-<pre><code class="language-js">res.render(&quot;index&quot;, { titulo: &quot;Página de Inicio&quot; });
+<ul>
+<li><strong>Render</strong>: Renderiza una vista utilizando el motor de plantillas configurado.</li>
+</ul>
+<pre><code class="language-js">res.render(view, data);
+
+res.render(&quot;index&quot;, { titulo: &quot;Página de Inicio&quot; });
 </code></pre>
-<blockquote>
-<p>Estos métodos son fundamentales para trabajar con Express y permiten manejar y responder a las solicitudes HTTP de manera efectiva.</p>
-</blockquote>
-  <!--
--->
+<h4 id="estos-metodos-son-fundamentales-para-trabajar-con-express-y-permiten-manejar-y-responder-a-las-solicitudes-http-de-manera-efectiva">Estos métodos son fundamentales para trabajar con Express y permiten manejar y responder a las solicitudes HTTP de manera efectiva.</h4>
 
     </main>
     <hr>

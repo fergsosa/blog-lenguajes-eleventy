@@ -25,144 +25,622 @@
     <main>
       <h1 id="html">HTML</h1>
 <p><img src="/blog-lenguajes-eleventy/img/portada/html.avif" alt="HTML"></p>
-<h3 id="elemento-html">🔻Elemento HTML:</h3>
+<h1 id="que-es-html"><!--! Que es HTML --></h1>
+<h3 id="que-es-html-hypertext-markup-language">¿Qué es HTML? <em>(HyperText Markup Language)</em></h3>
+<p>HTML es el <strong>lenguaje estándar para estructurar y organizar contenido en la web</strong>.</p>
+ <!-- Permite definir elementos como títulos, párrafos, imágenes, enlaces, formularios y mucho más. -->
+<p>No es un lenguaje de programación, sino un <strong>lenguaje de marcado</strong> que describe la estructura y el significado del contenido.</p>
+<h3 id="para-que-sirve-html">¿Para qué sirve HTML?</h3>
+<p>HTML se utiliza principalmente para <strong>crear la base de una página web</strong>.<br><br></p>
+<p><strong>Con él puedes:</strong></p>
 <ul>
-<li>Unidad básica de construcción en HTML.</li>
-<li>Se define mediante etiquetas.</li>
+<li>Definir la <strong>estructura del contenido</strong> (títulos, párrafos, listas, tablas, etc.).</li>
+<li>Insertar <strong>enlaces, imágenes, videos y audios</strong>.</li>
+<li>Crear <strong>formularios</strong> para recopilar información de los usuarios.</li>
+<li>Integrar otros lenguajes como CSS y JavaScript.</li>
+<li>Mejorar la <strong>accesibilidad y el SEO</strong> (optimización en buscadores).</li>
 </ul>
-<h3 id="etiqueta-html">🔻Etiqueta HTML:</h3>
-<ul>
-<li>Marcas que rodean el contenido y proporcionan información sobre la estructura del documento.</li>
-</ul>
-<h3 id="atributo">🔻Atributo:</h3>
-<ul>
-<li>Proporciona información adicional sobre un elemento.</li>
-<li>Se define dentro de la etiqueta y tiene la forma <code>&quot;nombre=&quot;valor&quot;&quot;</code>.</li>
-</ul>
-<h3 id="documento-html">🔻Documento HTML:</h3>
-<ul>
-<li>Archivo que contiene el código HTML completo.</li>
-</ul>
-<h3 id="encabezado-html-head">🔻Encabezado HTML <code>&lt;head&gt;</code>:</h3>
-<ul>
-<li>Sección del documento que contiene información no visible para el usuario, como meta-etiquetas, enlaces a hojas de estilo y scripts.</li>
-</ul>
-<h3 id="cuerpo-html-body">🔻Cuerpo HTML <code>&lt;body&gt;</code>:</h3>
-<ul>
-<li>Sección del documento que contiene el contenido visible, como texto, imágenes, enlaces, etc.</li>
-</ul>
-<h3 id="titulo-title">🔻Título <code>&lt;title&gt;</code>:</h3>
-<ul>
-<li>Define el título del documento que se muestra en la barra de título del navegador.</li>
-</ul>
-<h3 id="parrafo-p">🔻Párrafo <code>&lt;p&gt;</code>:</h3>
-<ul>
-<li>Define un párrafo de texto.</li>
-</ul>
-<h3 id="encabezados-h1-h2-h6">🔻Encabezados <code>&lt;h1&gt;, &lt;h2&gt;, ..., &lt;h6&gt;</code>:</h3>
-<ul>
-<li>Definen encabezados de distintos niveles, donde <code>&lt;h1&gt;</code> es el más alto y <code>&lt;h6&gt;</code> el más bajo.</li>
-</ul>
-<h3 id="lista-ordenada-ol-y-lista-no-ordenada-ul">🔻Lista ordenada <code>&lt;ol&gt;</code> y lista no ordenada <code>&lt;ul&gt;</code>:</h3>
-<ul>
-<li><code>&lt;ol&gt;</code> para listas numeradas.</li>
-<li><code>&lt;ul&gt;</code> para listas sin números.</li>
-<li><code>&lt;li&gt;</code> para elementos de la lista.</li>
-</ul>
-<h3 id="enlace-a">🔻Enlace <code>&lt;a&gt;</code>:</h3>
-<ul>
-<li>Crea hipervínculos.</li>
-<li>Atributo href especifica la URL de destino.</li>
-</ul>
-<h3 id="imagen-img">🔻Imagen <code>&lt;img&gt;</code>:</h3>
-<ul>
-<li>Inserta imágenes.</li>
-<li>Atributo src especifica la ruta de la imagen.</li>
-</ul>
-<h3 id="formulario-form">🔻Formulario <code>&lt;form&gt;</code>:</h3>
-<ul>
-<li>Recopila datos del usuario.</li>
-<li>Contiene elementos como campos de texto, botones, etc.</li>
-</ul>
-<h3 id="campo-de-texto-input-type-text">🔻Campo de texto <code>&lt;input type=&quot;text&quot;&gt;</code>:</h3>
-<ul>
-<li>Permite al usuario ingresar texto.</li>
-</ul>
-<h3 id="boton-button">🔻Botón <code>&lt;button&gt;</code>:</h3>
-<ul>
-<li>Crea botones interactivos.</li>
-</ul>
-<h3 id="comentarios-comentario">🔻Comentarios <code>&lt;!-- comentario -- &gt;</code>:</h3>
-<ul>
-<li>Texto que no se muestra en la página, pero que puede ser útil para agregar notas o aclaraciones en el código.</li>
-</ul>
-<h3 id="enlace-de-correo-electronico">🔻Enlace de correo electrónico</h3>
-<ul>
+<blockquote>
+<p>Sin HTML, un sitio web no tendría forma ni contenido visible.</p>
+</blockquote>
+<h3 id="como-funciona-html">¿Cómo funciona HTML?</h3>
+<p>HTML funciona mediante <strong>etiquetas</strong> que el navegador interpreta para mostrar el contenido correctamente.<br>
+Cada etiqueta indica qué tipo de elemento se está creando.<br>
+Las etiquetas normalmente tienen una <strong>apertura</strong> <code>&lt;p&gt;</code> y un <strong>cierre</strong> <code>&lt;/p&gt;</code>:</p>
+<pre><code class="language-html">&lt;p&gt;Este es un párrafo&lt;/p&gt;
+</code></pre>
+<h3 id="por-que-usar-html">¿Por qué usar HTML?</h3>
+<ol>
 <li>
-<p><code>&lt;a  href=&quot;mailto:correo@ejemplo.com&quot;&gt;</code>:</p>
+<p><strong>Estándar universal:</strong> Todo navegador entiende HTML, lo que lo hace compatible en cualquier plataforma.</p>
 </li>
 <li>
-<p>Crea un enlace que permite a los usuarios enviar correos electrónicos al destinatario especificado.</p>
+<p><strong>Base de la web:</strong> Es el punto de partida para usar CSS y JavaScript.</p>
 </li>
-</ul>
-<h3 id="div-div">🔻Div <code>&lt;div&gt;</code>:</h3>
+<li>
+<p><strong>Simple y accesible:</strong> Su sintaxis es sencilla de aprender y muy legible.</p>
+</li>
+<li>
+<p><strong>Personalización:</strong> Permite crear páginas a medida con una gran variedad de elementos.</p>
+</li>
+<li>
+<p><strong>SEO y accesibilidad:</strong> Bien estructurado, mejora la visibilidad en buscadores y la experiencia de usuarios con discapacidades.</p>
+</li>
+</ol>
+<blockquote>
+<p>Sin HTML, simplemente no existiría la web como la conocemos.</p>
+</blockquote>
+<hr>
+<!--! # Sintaxis de HTML
+
+## Estructura básica d
+
+Todo documento HTML sigue una estructura básica que el navegador puede interpretar:
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi primera página</title>
+  </head>
+  <body>
+    <h1>¡Hola, mundo!</h1>
+    <p>Este es mi primer párrafo en HTML.</p>
+    <a href="https://www.ejemplo.com">Visitar página</a>
+  </body>
+</html>
+```
+
+### Explicación:
+
+- `<!DOCTYPE html>` → Indica que el documento está escrito en HTML5.
+- `<html lang="es">` → Etiqueta raíz, define el idioma del documento.
+- `<head>` → Contiene información **meta** (no visible directamente).
+- `<meta charset="UTF-8">` → Define la codificación de caracteres (incluye acentos y ñ).
+- `<meta name="viewport">` → Ajusta la visualización en dispositivos móviles.
+- `<title>` → Título que aparece en la pestaña del navegador.
+- `<body>` → Contenido visible de la página (texto, imágenes, enlaces, etc.).
+
+---
+
+---
+
+---
+
+## 🔻Elemento HTML:
+
+- Unidad básica de construcción en HTML.
+- Se define mediante etiquetas.
+
+## 🔻Etiqueta HTML:
+
+- Marcas que rodean el contenido y proporcionan información sobre la estructura del documento.
+
+## 🔻Atributo:
+
+- Proporciona información adicional sobre un elemento.
+- Se define dentro de la etiqueta y tiene la forma `"nombre="valor""`.
+
+## 🔻Documento HTML:
+
+- Archivo que contiene el código HTML completo.
+
+## 🔻Encabezado HTML `<head>`:
+
+- Sección del documento que contiene información no visible para el usuario, como meta-etiquetas, enlaces a hojas de estilo y scripts.
+
+## 🔻Cuerpo HTML `<body>`:
+
+- Sección del documento que contiene el contenido visible, como texto, imágenes, enlaces, etc.
+
+## 🔻Título `<title>`:
+
+- Define el título del documento que se muestra en la barra de título del navegador.
+
+## 🔻Párrafo `<p>`:
+
+- Define un párrafo de texto.
+
+## 🔻Encabezados `<h1>, <h2>, ..., <h6>`:
+
+- Definen encabezados de distintos niveles, donde `<h1>` es el más alto y `<h6>` el más bajo.
+
+## 🔻Lista ordenada `<ol>` y lista no ordenada `<ul>`:
+
+- `<ol>` para listas numeradas.
+- `<ul>` para listas sin números.
+- `<li>` para elementos de la lista.
+
+## 🔻Enlace `<a>`:
+
+- Crea hipervínculos.
+- Atributo href especifica la URL de destino.
+
+## 🔻Imagen `<img>`:
+
+- Inserta imágenes.
+- Atributo src especifica la ruta de la imagen.
+
+## 🔻Formulario `<form>`:
+
+- Recopila datos del usuario.
+- Contiene elementos como campos de texto, botones, etc.
+
+## 🔻Campo de texto `<input type="text">`:
+
+- Permite al usuario ingresar texto.
+
+## 🔻Botón `<button>`:
+
+- Crea botones interactivos.
+
+## 🔻Comentarios `<!-- comentario -- >`:
+
+- Texto que no se muestra en la página, pero que puede ser útil para agregar notas o aclaraciones en el código.
+
+## 🔻Enlace de correo electrónico
+
+- `<a  href="mailto:correo@ejemplo.com">`:
+
+- Crea un enlace que permite a los usuarios enviar correos electrónicos al destinatario especificado.
+
+## 🔻Div `<div>`:
+
+- Un contenedor genérico que se utiliza para agrupar y estructurar otros elementos HTML. Es útil para aplicar estilos o scripts a un conjunto de elementos relacionados.
+
+## 🔻Span `<span>`:
+
+- Similar a `<div>`, pero se utiliza para aplicar estilos o scripts a pequeñas secciones de texto o elementos dentro de un bloque.
+
+## 🔻Tabla `<table>`:
+
+- Define una tabla en HTML.
+- Contiene elementos como
+- `<tr>` (fila)
+- `<td>` (celda de datos)
+- `<th>` (celda de encabezado).
+
+## 🔻Encabezado de tabla `<thead>`
+
+## 🔻Cuerpo de tabla `<tbody>`
+
+## 🔻Pie de tabla `<tfoot>`:
+
+- Secciones que ayudan a organizar y estructurar una tabla.
+
+## 🔻Formulario
+
+## 🔻Casillas de verificación `<input type="checkbox">`
+
+## 🔻Botones de radio `<input type="radio">`:
+
+- Permiten al usuario seleccionar opciones en un formulario.
+
+## 🔻Campo de contraseña `<input type="password">`:
+
+- Similar al campo de texto, pero oculta los caracteres ingresados.
+
+## 🔻Desplegable `<select>`:
+
+- Crea un menú desplegable de opciones.
+- Contiene elementos `<option>` que representan las opciones seleccionables.
+
+## 🔻Etiqueta de línea `<br>`:
+
+- Inserta un salto de línea o un quiebre de línea dentro del texto.
+
+## 🔻Estilo `<style>`:
+
+- Sección en el encabezado donde se pueden definir reglas de estilo CSS para aplicar estilos a elementos HTML.
+
+## 🔻JavaScript `<script>`:
+
+- Sección en el encabezado o el cuerpo donde se puede incluir código JavaScript para agregar interactividad a la página.
+
+## 🔻Meta-etiquetas `<meta>`:
+
+- Proporcionan información sobre la configuración del documento, como la codificación de caracteres, la descripción y las palabras clave.
+
+## 🔻Atributo id y class:
+
+- **id** se utiliza para identificar de manera única un elemento.
+- **class** se utiliza para agrupar elementos y aplicar estilos o scripts a múltiples elementos. -->
+<h1 id="sintaxis">Sintaxis</h1>
+<h2 id="html-y-la-semantica-web">HTML y la semántica web</h2>
+<p>La semántica web implica usar <strong>etiquetas con significado</strong>, de modo que el contenido sea comprensible tanto para humanos como para máquinas (navegadores, buscadores, lectores de pantalla).</p>
+<hr>
+<h2 id="cabecera">Cabecera</h2>
+<p>La cabecera (<code>&lt;head&gt;</code>) contiene <strong>información sobre el documento</strong>, como título, metadatos y enlaces a recursos externos.</p>
+<h3 id="etiquetas-de-cabecera">Etiquetas de cabecera</h3>
+<h4 id="1-que-son-las-etiquetas-head">1. ¿Qué son las etiquetas <code>&lt;head&gt;</code>?</h4>
+<p>Son etiquetas que no se muestran en el cuerpo de la página, pero que configuran cómo se interpreta y procesa el sitio.</p>
+<p>Estructura básica:</p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;Mi sitio web&lt;/title&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+<h4 id="2-la-etiqueta-title">2. La etiqueta <code>&lt;title&gt;</code></h4>
+<p>Define el <strong>título de la página</strong>, visible en la pestaña del navegador.</p>
+<pre><code class="language-html">&lt;title&gt;Documentación de HTML5&lt;/title&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-base">3. La etiqueta <code>&lt;base&gt;</code></h4>
+<p>Establece una URL base para todas las rutas relativas del documento.</p>
+<pre><code class="language-html">&lt;base href=&quot;https://example.com/&quot; /&gt;
+</code></pre>
+<hr>
+<h3 id="metadatos">Metadatos</h3>
+<h4 id="1-la-etiqueta-meta">1. La etiqueta <code>&lt;meta&gt;</code></h4>
+<p>Se usa para definir <strong>información adicional</strong> como codificación, descripción y viewport.</p>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Curso completo de HTML5&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, tutorial, curso&quot; /&gt;
+</code></pre>
+<h4 id="2-etiquetas-para-redes-sociales">2. Etiquetas para redes sociales</h4>
+<p>Para mejorar la vista previa en redes sociales:</p>
+<pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;Mi sitio web&quot; /&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;imagen.jpg&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Descripción del sitio&quot; /&gt;
+</code></pre>
+<h4 id="3-etiquetas-para-seo-google">3. Etiquetas para SEO / Google</h4>
+<pre><code class="language-html">&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot; /&gt;
+</code></pre>
+<h4 id="4-etiqueta-para-diseno-responsive">4. Etiqueta para diseño responsive</h4>
+<p>Permite que la página se adapte a móviles.</p>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+</code></pre>
+<hr>
+<h3 id="recursos-externos">Recursos externos</h3>
+<h4 id="1-la-etiqueta-link">1. La etiqueta <code>&lt;link&gt;</code></h4>
+<p>Sirve para enlazar recursos como hojas de estilo o íconos.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+</code></pre>
+<h4 id="2-stylesheet-hojas-de-estilo-externas">2. Stylesheet: Hojas de estilo externas</h4>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/estilos.css&quot; /&gt;
+</code></pre>
+<h4 id="3-favicon-el-icono-de-las-pestanas">3. Favicon: El ícono de las pestañas</h4>
+<pre><code class="language-html">&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+</code></pre>
+<h4 id="4-etiquetas-html-de-precarga">4. Etiquetas HTML de precarga</h4>
+<p>Mejoran la performance cargando recursos antes de necesitarlos.</p>
+<pre><code class="language-html">&lt;link rel=&quot;preload&quot; href=&quot;video.mp4&quot; as=&quot;video&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="agrupacion">Agrupación</h2>
+<p>Se usan etiquetas para organizar contenido en bloques, como <code>&lt;div&gt;,</code> <code>&lt;section&gt;</code> o <code>&lt;article&gt;.</code> Facilitan la estructura y el estilo de la página.</p>
+<h3 id="etiquetas-de-agrupacion">Etiquetas de agrupación</h3>
+<h4 id="1-las-etiquetas-de-agrupacion">1. Las etiquetas de agrupación</h4>
+<p>Se usan para <strong>organizar contenido</strong> en bloques lógicos.</p>
+<h4 id="2-la-etiqueta-div">2. La etiqueta <code>&lt;div&gt;</code></h4>
+<p>Elemento genérico de bloque:</p>
+<pre><code class="language-html">&lt;div class=&quot;contenedor&quot;&gt;Contenido aquí&lt;/div&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-p">3. La etiqueta <code>&lt;p&gt;</code></h4>
+<p>Define un párrafo:</p>
+<pre><code class="language-html">&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+</code></pre>
+<h4 id="4-la-etiqueta-blockquote">4. La etiqueta <code>&lt;blockquote&gt;</code></h4>
+<p>Para citas extensas:</p>
+<pre><code class="language-html">&lt;blockquote&gt;&quot;El aprendizaje nunca se detiene.&quot;&lt;/blockquote&gt;
+</code></pre>
+<h4 id="5-la-etiqueta-pre">5. La etiqueta <code>&lt;pre&gt;</code></h4>
+<p>Muestra texto con formato preservado:</p>
+<pre><code class="language-html">&lt;pre&gt;
+Texto con
+espacios y saltos de línea
+tal como se escribe
+&lt;/pre&gt;
+</code></pre>
+<h4 id="6-la-etiqueta-dl">6. La etiqueta <code>&lt;dl&gt;</code></h4>
+<p>Listas descriptivas:</p>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje de marcado de hipertexto&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4 id="7-la-etiqueta-figure">7. La etiqueta <code>&lt;figure&gt;</code></h4>
+<p>Se usa para imágenes y contenido asociado:</p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;img src=&quot;foto.jpg&quot; alt=&quot;Paisaje&quot; /&gt;
+  &lt;figcaption&gt;Paisaje de montaña&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3 id="etiquetas-multimedia">Etiquetas multimedia</h3>
+<h4 id="1-la-etiqueta-img">1. La etiqueta <code>&lt;img&gt;</code></h4>
+<pre><code class="language-html">&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;
+</code></pre>
+<h4 id="2-la-etiqueta-picture">2. La etiqueta <code>&lt;picture&gt;</code></h4>
+<p>Permite imágenes adaptativas:</p>
+<pre><code class="language-html">&lt;picture&gt;
+  &lt;source srcset=&quot;imagen.webp&quot; type=&quot;image/webp&quot; /&gt;
+  &lt;img src=&quot;imagen.jpg&quot; alt=&quot;Imagen adaptable&quot; /&gt;
+&lt;/picture&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-video">3. La etiqueta <code>&lt;video&gt;</code></h4>
+<pre><code class="language-html">&lt;video controls&gt;
+  &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  Tu navegador no soporta video.
+&lt;/video&gt;
+</code></pre>
+<h4 id="4-formatos-multimedia-recomendados">4. Formatos multimedia recomendados</h4>
 <ul>
-<li>Un contenedor genérico que se utiliza para agrupar y estructurar otros elementos HTML. Es útil para aplicar estilos o scripts a un conjunto de elementos relacionados.</li>
+<li><strong>Imágenes</strong>: WebP, AVIF, JPG, PNG, SVG.</li>
+<li><strong>Videos</strong>: MP4 (H.264), WebM.</li>
+<li><strong>Audio</strong>: MP3, OGG.</li>
 </ul>
-<h3 id="span-span">🔻Span <code>&lt;span&gt;</code>:</h3>
+<h4 id="5-la-etiqueta-track">5. La etiqueta <code>&lt;track&gt;</code></h4>
+<p>Subtítulos para videos:</p>
+<pre><code class="language-html">&lt;track src=&quot;subtitulos.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;es&quot; label=&quot;Español&quot; /&gt;
+</code></pre>
+<h4 id="6-la-etiqueta-iframe">6. La etiqueta <code>&lt;iframe&gt;</code></h4>
+<p>Insertar contenido externo:</p>
+<pre><code class="language-html">&lt;iframe src=&quot;https://example.com&quot; title=&quot;Contenido externo&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<hr>
+<h2 id="texto-y-formato">Texto y formato</h2>
+<p>Incluye etiquetas para dar estilo y significado al texto, como <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code> o <code>&lt;a&gt;</code> para enlaces, y también para mostrar código o saltos de línea.</p>
+<h3 id="etiquetas-de-formato">Etiquetas de formato</h3>
+<h4 id="1-etiquetas-semanticas-de-texto">1. Etiquetas semánticas de texto</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;strong&gt;</code></td>
+<td>Texto importante.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;em&gt;</code></td>
+<td>Énfasis.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;mark&gt;</code></td>
+<td>Resaltado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;s&gt;</code></td>
+<td>Texto incorrecto o eliminado.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-la-etiqueta-span">2. La etiqueta <code>&lt;span&gt;</code></h4>
+<p>Para estilizar texto en línea:</p>
+<pre><code class="language-html">&lt;p&gt;Hola &lt;span class=&quot;resaltado&quot;&gt;mundo&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-br-y-wbr">3. La etiqueta <code>&lt;br&gt;</code> y <code>&lt;wbr&gt;</code></h4>
+<p>Salto de línea forzado:</p>
+<pre><code class="language-html">Hola&lt;br /&gt;Mundo
+</code></pre>
+<p>Salto condicional (<code>&lt;wbr&gt;</code>) en palabras largas:</p>
+<pre><code class="language-html">supercalifragilistico&lt;wbr /&gt;espialidoso
+</code></pre>
+<hr>
+<h3 id="etiquetas-de-enlaces">Etiquetas de enlaces</h3>
+<h4 id="1-enlaces-o-hipervinculos">1. Enlaces o hipervínculos</h4>
+<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot;&gt;Ir a ejemplo&lt;/a&gt;
+</code></pre>
+<h4 id="2-atributos-utiles">2. Atributos útiles</h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target=&quot;_blank&quot;</code></td>
+<td>Abre en nueva pestaña.</td>
+</tr>
+<tr>
+<td><code>rel=&quot;noopener noreferrer&quot;</code></td>
+<td>Seguridad en enlaces externos.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-tecnicas">Etiquetas técnicas</h3>
+<h4 id="1-kbd-y-samp">1. <code>&lt;kbd&gt;</code> y <code>&lt;samp&gt;</code></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;kbd&gt;</code></td>
+<td>Entrada de teclado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;samp&gt;</code></td>
+<td>Salida de un programa.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">Presiona &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+</code></pre>
+<h4 id="2-time-y-data">2. <code>&lt;time&gt;</code> y <code>&lt;data&gt;</code></h4>
+<pre><code class="language-html">&lt;time datetime=&quot;2025-09-09&quot;&gt;9 de septiembre de 2025&lt;/time&gt;
+&lt;data value=&quot;12345&quot;&gt;Producto 12345&lt;/data&gt;
+</code></pre>
+<h4 id="3-code">3. <code>&lt;code&gt;</code></h4>
+<pre><code class="language-html">&lt;code&gt;console.log(&quot;Hola mundo&quot;);&lt;/code&gt;
+</code></pre>
+<hr>
+<h2 id="semantica">Semántica</h2>
+<p>Son etiquetas que dan sentido al contenido, como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code> o <code>&lt;table&gt;</code>. Ayudan a la accesibilidad y al SEO.</p>
+<h3 id="etiquetas-semanticas">Etiquetas semánticas</h3>
+<h4 id="1-etiquetas-de-seccion">1. Etiquetas de sección</h4>
 <ul>
-<li>Similar a <code>&lt;div&gt;</code>, pero se utiliza para aplicar estilos o scripts a pequeñas secciones de texto o elementos dentro de un bloque.</li>
+<li><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+<li><code>&lt;main&gt;</code>, <code>&lt;section&gt;</code></li>
+<li><code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code></li>
 </ul>
-<h3 id="tabla-table">🔻Tabla <code>&lt;table&gt;</code>:</h3>
+<h4 id="2-ejemplo">2. Ejemplo:</h4>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h2&gt;Noticia&lt;/h2&gt;
+  &lt;p&gt;Contenido de la noticia...&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+<h4 id="3-jerarquia-de-titulos-h1-a-h6">3. Jerarquía de títulos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</h4>
+<p>Siempre debe existir un solo <code>&lt;h1&gt;</code> por página.</p>
+<hr>
+<h3 id="etiquetas-de-texto-semantico">Etiquetas de texto semántico</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;q&gt;</code></td>
+<td>Citas cortas.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;cite&gt;</code></td>
+<td>Referencias.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;small&gt;</code></td>
+<td>Texto de menor importancia.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;abbr&gt;</code></td>
+<td>Abreviaturas con significado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;ins&gt;</code> y <code>&lt;del&gt;</code></td>
+<td>Texto agregado o eliminado.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-de-tablas">Etiquetas de tablas</h3>
+<p>Estructura básica:</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<hr>
+<h2 id="formularios">Formularios</h2>
+<p>Permiten recoger información del usuario con <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code> y botones, incluyendo validaciones y tipos especiales.</p>
+<h3 id="etiquetas-principales">Etiquetas principales</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;form&gt;</code></td>
+<td>Contenedor de formulario.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;input&gt;</code></td>
+<td>Campo de entrada.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;textarea&gt;</code></td>
+<td>Texto largo.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></td>
+<td>Listas desplegables.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-especializadas">Etiquetas especializadas</h3>
+<p>Ejemplo <code>&lt;input&gt;</code> con tipos:</p>
+<pre><code class="language-html">&lt;input type=&quot;number&quot; placeholder=&quot;Edad&quot; /&gt;
+&lt;input type=&quot;date&quot; /&gt;
+&lt;input type=&quot;checkbox&quot; /&gt; Acepto términos
+&lt;input type=&quot;color&quot; /&gt;
+&lt;input type=&quot;file&quot; /&gt;
+</code></pre>
+<hr>
+<h3 id="envio-de-formularios">Envío de formularios</h3>
 <ul>
-<li>Define una tabla en HTML.</li>
-<li>Contiene elementos como</li>
-<li><code>&lt;tr&gt;</code> (fila)</li>
-<li><code>&lt;td&gt;</code> (celda de datos)</li>
-<li><code>&lt;th&gt;</code> (celda de encabezado).</li>
+<li>Botón tradicional:</li>
 </ul>
-<h3 id="encabezado-de-tabla-thead">🔻Encabezado de tabla <code>&lt;thead&gt;</code></h3>
-<h3 id="cuerpo-de-tabla-tbody">🔻Cuerpo de tabla <code>&lt;tbody&gt;</code></h3>
-<h3 id="pie-de-tabla-tfoot">🔻Pie de tabla <code>&lt;tfoot&gt;</code>:</h3>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; /&gt;
+</code></pre>
 <ul>
-<li>Secciones que ayudan a organizar y estructurar una tabla.</li>
+<li>Botón personalizado:</li>
 </ul>
-<h3 id="formulario">🔻Formulario</h3>
-<h3 id="casillas-de-verificacion-input-type-checkbox">🔻Casillas de verificación <code>&lt;input type=&quot;checkbox&quot;&gt;</code></h3>
-<h3 id="botones-de-radio-input-type-radio">🔻Botones de radio <code>&lt;input type=&quot;radio&quot;&gt;</code>:</h3>
+<pre><code class="language-html">&lt;button&gt;Enviar&lt;/button&gt;
+</code></pre>
+<hr>
+<h3 id="validaciones-basicas">Validaciones básicas</h3>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; required /&gt; &lt;input type=&quot;text&quot; pattern=&quot;[A-Za-z]{3,}&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="interactividad">Interactividad</h2>
+<p>Se usan para hacer la página dinámica, con <code>&lt;script&gt;</code> para JavaScript y etiquetas como <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code> o <code>&lt;template&gt;</code> para contenido interactivo.</p>
+<h3 id="etiquetas-de-scripting">Etiquetas de scripting</h3>
+<h4 id="1-script">1. <code>&lt;script&gt;</code></h4>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>defer</code></td>
+<td>Ejecuta después de cargar el DOM.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>async</code></td>
+<td>Ejecuta en paralelo.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-interactivas">Etiquetas interactivas</h3>
 <ul>
-<li>Permiten al usuario seleccionar opciones en un formulario.</li>
+<li><code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>:</li>
 </ul>
-<h3 id="campo-de-contrasena-input-type-password">🔻Campo de contraseña <code>&lt;input type=&quot;password&quot;&gt;</code>:</h3>
+<pre><code class="language-html">&lt;details&gt;
+  &lt;summary&gt;Más información&lt;/summary&gt;
+  &lt;p&gt;Texto oculto que se despliega al hacer clic.&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
 <ul>
-<li>Similar al campo de texto, pero oculta los caracteres ingresados.</li>
+<li><code>&lt;dialog&gt;</code>:</li>
 </ul>
-<h3 id="desplegable-select">🔻Desplegable <code>&lt;select&gt;</code>:</h3>
+<pre><code class="language-html">&lt;dialog open&gt;Este es un diálogo&lt;/dialog&gt;
+</code></pre>
 <ul>
-<li>Crea un menú desplegable de opciones.</li>
-<li>Contiene elementos <code>&lt;option&gt;</code> que representan las opciones seleccionables.</li>
+<li><code>&lt;template&gt;</code> para contenido dinámico:</li>
 </ul>
-<h3 id="etiqueta-de-linea-br">🔻Etiqueta de línea <code>&lt;br&gt;</code>:</h3>
-<ul>
-<li>Inserta un salto de línea o un quiebre de línea dentro del texto.</li>
-</ul>
-<h3 id="estilo-style">🔻Estilo <code>&lt;style&gt;</code>:</h3>
-<ul>
-<li>Sección en el encabezado donde se pueden definir reglas de estilo CSS para aplicar estilos a elementos HTML.</li>
-</ul>
-<h3 id="javascript-script">🔻JavaScript <code>&lt;script&gt;</code>:</h3>
-<ul>
-<li>Sección en el encabezado o el cuerpo donde se puede incluir código JavaScript para agregar interactividad a la página.</li>
-</ul>
-<h3 id="meta-etiquetas-meta">🔻Meta-etiquetas <code>&lt;meta&gt;</code>:</h3>
-<ul>
-<li>Proporcionan información sobre la configuración del documento, como la codificación de caracteres, la descripción y las palabras clave.</li>
-</ul>
-<h3 id="atributo-id-y-class">🔻Atributo id y class:</h3>
-<ul>
-<li><strong>id</strong> se utiliza para identificar de manera única un elemento.</li>
-<li><strong>class</strong> se utiliza para agrupar elementos y aplicar estilos o scripts a múltiples elementos.</li>
-</ul>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;p&gt;Contenido dinámico&lt;/p&gt;
+&lt;/template&gt;
+</code></pre>
 
     </main>
     <hr>

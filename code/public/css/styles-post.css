@@ -37,6 +37,43 @@ aside {
   }
 }
 
+table {
+  border-collapse: collapse;
+  min-width: 70%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  outline: 1px solid #3e3e3d;
+
+  thead {
+    border-bottom: 1px solid #3e3e3d;
+  }
+
+  tbody tr:hover {
+    /* background-color: #0f2138; */
+    opacity: 0.9;
+  }
+
+  tr {
+    color: #fff;
+
+    /* &:nth-child(odd) */
+    &:nth-child(even) {
+      background-color: #1d1d1d;
+    }
+  }
+
+  td,
+  th {
+    border: none;
+    border-left: 1px solid #3e3e3d;
+    padding: 5px 1rem;
+    &:first-child {
+      border-left: none;
+    }
+  }
+}
+
 /* ********** Site Styles ********** */
 
 body {
@@ -45,11 +82,13 @@ body {
 
 img {
   border-radius: 1.5rem;
+  /* outline: 1px solid #000; */
 }
 
 main {
   margin: 0 auto;
   max-width: 1080px;
+  max-width: 850px;
   padding: 1rem 2rem;
   border-radius: 1rem;
   border: 1px solid #444;
@@ -57,39 +96,63 @@ main {
   /* content-visibility: auto; */
 }
 
+hr {
+  border-color: #555;
+}
+
 h1 {
   text-align: center;
-  text-shadow: 0 0 10px #000;
 }
 
-h1,
-h2,
-h3 {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
+P {
+  /* color: #bdbdbd; */
+  color: #b0b0b0;
+  /* color: #989898; */
 }
 
-a {
-  color: var(--text-light);
+ul {
+  /* padding-left: 0; */
+  padding-left: 1.5rem;
 }
 
-hr {
-  margin: 2rem auto;
+strong {
+  /* font-weight: 500; */
+  color: #f8f8f8;
+  color: #f6f6f6;
 }
-
-p,
-li {
-  text-align: left;
-}
-
 pre {
-  background-color: #333;
-  padding: 0.5rem;
-  overflow: hidden;
+  /* width: fit-content; */
+  /* max-width: 700px; */
+  /* margin: 1rem auto; */
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 300;
+  background-color: #3d3d3d;
+  background-color: #272727;
+  padding: 0.5rem 1rem;
+  /* overflow: hidden; */
+  overflow-x: auto;
   color: #bbb;
+  color: #d1d1d1;
+  font-size: 14px;
+  border-radius: 0.375rem;
+}
+
+blockquote {
+  margin-left: 1.5rem;
+  margin-right: 0;
+  p {
+    /* color: red; */
+    font-size: 0.9rem;
+    /* font-size: var(--step-13); */
+  }
 }
 
 code {
-  overflow: hidden;
-  color: #999;
+  color: #f6f6f6;
+  font-size: 0.8rem;
+}
+
+form {
+  margin: 1rem;
 }

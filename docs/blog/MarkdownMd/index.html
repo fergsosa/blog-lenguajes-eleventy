@@ -25,127 +25,327 @@
     <main>
       <h1 id="markdown">Markdown</h1>
 <p><img src="/blog-lenguajes-eleventy/img/portada/markdown.avif" alt="Markdown"></p>
-<p>Nombrar archivo: README.md</p>
-<h2 id="aprendiendo-markdown">Aprendiendo <em>Markdown</em></h2>
-<p>Esto es un parrafo</p>
-<p>Los párrafos cortos son aquellos párrafos que tienen entre tres y seis líneas. Si bien existen párrafos más extensos, que pueden llegar hasta las veinte líneas, lo recomendable es que un párrafo no tenga más de cuatro o cinco oraciones.</p>
-<h2 id="tipos-de-letras">TIPOS DE LETRAS</h2>
-<p><em>cursiva</em> | <strong>negrita</strong> | <strong><em>cursiva y negrita</em></strong> |
-<ins>Subrayar</ins></p>
-<p>     4 espacios</p>
-<h1 id="encabezado-1">Encabezado 1</h1>
-<h2 id="encabezado-2">Encabezado 2</h2>
-<h3 id="encabezado-3">Encabezado 3</h3>
-<h4 id="encabezado-4">Encabezado 4</h4>
-<h5 id="encabezado-5">Encabezado 5</h5>
-<h6 id="encabezado-6">Encabezado 6</h6>
-<hr>
-<h3 id="links">links</h3>
-<p><em><a href="https://www.google.com.ar/">https://www.google.com.ar/</a></em></p>
-<p>I love supporting the <strong><a href="https://eff.org">EFF</a></strong>.</p>
-<p>Ve a la página Guía <em><a href="https://www.markdownguide.org">Markdown Guide</a></em>.</p>
-<p>Ve a la página <em><a href="https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#lists">Documentación Github</a></em>.</p>
-<p>🔺lleva a titulo - <a href="#aprendiendo-markdown">Aprendiendo <em>Markdown</em></a></p>
-<p>🔺lleva a titulo - <a href="#TIPOS-DE-LETRAS">TIPOS DE LETRAS</a></p>
-<p>🔺lleva a titulo - <a href="#tipos-de-letras">TIPOS DE LETRAS</a></p>
-<h3 id="imagines">Imagines</h3>
-<p><img src="js.svg" alt="JavaScript"></p>
-<p><img src="https://cdn.icon-icons.com/icons2/2107/PNG/128/file_type_js_official_icon_130509.png" alt="JavaScript"></p>
-<hr>
-<p>este es un parrafo</p>
-<hr>
-<ol>
-<li>Primavera</li>
-<li>Verano</li>
-<li>Otoño</li>
-<li>Invierno</li>
-</ol>
-<ul>
-<li>Primavera</li>
-<li>Verano</li>
-<li>Otoño</li>
-<li>Invierno</li>
-</ul>
-<ol>
-<li>
-<ul>
-<li>Primavera</li>
-<li>setiembre</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Verano</li>
-<li>diciembre</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Otoño</li>
-<li>abril</li>
-</ul>
-</li>
-<li>
-<ul>
-<li>Invierno</li>
-<li>Julio</li>
-</ul>
-</li>
-</ol>
-<hr>
-<!--* ">" -->
+<h1 id="que-es"><!-- Que es --></h1>
+<h2 id="que-es-2">¿Qué es?</h2>
+<p>Markdown es un <strong>lenguaje de marcado ligero</strong> que permite dar formato a texto de manera sencilla y legible.<br>
+Se basa en una sintaxis muy simple, utilizando caracteres comunes como <code>#</code>, <code>*</code> o <code>-</code>, lo que hace que el texto sea fácil de leer incluso sin ser procesado.</p>
 <blockquote>
-<p>SITAS</p>
-<blockquote>
-<p>Siempre tienes opción de no tener opinión. - Marcos Aurelio.
-Todo lo que escuchamos es una opinión, no un hecho.
-Todo lo que vemos es una perspectiva, no la verdad.</p>
-<blockquote>
-<p>Marcos Aurelio</p>
-</blockquote>
-</blockquote>
+<p><em>En otras palabras, un archivo <code>.md</code> se puede entender como texto plano, pero al renderizarlo se convierte en contenido con estilo como títulos, listas, enlaces o imágenes.</em></p>
 </blockquote>
 <hr>
+<h2 id="para-que-sirve">¿Para qué sirve?</h2>
+<p>Markdown se utiliza para <strong>crear documentos con formato</strong> sin necesidad de herramientas complejas.<br>
+Es ideal para:</p>
+<ul>
+<li>Documentación técnica y manuales.</li>
+<li>Archivos README.md en proyectos de software.</li>
+<li>Blogs y publicaciones en la web.</li>
+<li>Notas personales y apuntes.</li>
+<li>Creación de contenido para plataformas como GitHub, GitLab, Reddit o Stack Overflow.</li>
+</ul>
+<p>Es muy popular en el desarrollo de software por su simplicidad y compatibilidad con múltiples herramientas.</p>
+<hr>
+<h2 id="como-funciona">¿Cómo funciona?</h2>
+<p>Markdown funciona al <strong>traducir texto plano con sintaxis específica</strong> a HTML u otros formatos visuales.<br>
+Esto se logra porque los caracteres especiales (<code>#</code>, <code>**</code>, <code>&gt;</code>, etc.) indican al procesador cómo interpretar el texto.</p>
+<hr>
+<h2 id="por-que-usar">¿Por qué usar?</h2>
+<p>Algunas ventajas clave de Markdown:</p>
+<ul>
+<li>
+<p><strong>Simplicidad:</strong> Es fácil de aprender y usar, incluso para principiantes.</p>
+</li>
+<li>
+<p><strong>Legibilidad:</strong> El texto se entiende tanto en su forma original como procesado.</p>
+</li>
+<li>
+<p><strong>Portabilidad:</strong> Funciona en múltiples plataformas y herramientas, como GitHub, VSCode o Notion.</p>
+</li>
+<li>
+<p><strong>Versatilidad:</strong> Puede generar HTML, PDF y otros formatos.</p>
+</li>
+<li>
+<p><strong>Ligero y rápido:</strong> No necesita software pesado, solo un editor de texto.</p>
+</li>
+</ul>
+<blockquote>
+<p>En resumen, Markdown es ideal cuando quieres <strong>crear contenido estructurado y limpio</strong>, sin complicarte con herramientas avanzadas de edición.</p>
+</blockquote>
+<h1 id="sintaxis-basica">Sintaxis Básica</h1>
+<h2 id="enfasis-texto">Énfasis texto</h2>
+<p>El énfasis se utiliza para resaltar palabras o frases en el texto.</p>
 <table>
 <thead>
 <tr>
-<th>Nombre</th>
-<th>Edad</th>
-<th>Correo</th>
+<th>Markdown</th>
+<th>Resultado</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Fernando</td>
-<td>31</td>
-<td>fer@gmail.com</td>
+<td><code>_texto_</code></td>
+<td><em>cursiva</em></td>
 </tr>
 <tr>
-<td>Gabriel</td>
-<td>18</td>
-<td>gabi@gmail.com</td>
+<td><code>**texto**</code></td>
+<td><strong>negrita</strong></td>
 </tr>
 <tr>
-<td>Sosa</td>
-<td>25</td>
-<td>sosa@gmail.com</td>
+<td><code>**_texto_**</code></td>
+<td><strong><em>cursiva y negrita</em></strong></td>
+</tr>
+<tr>
+<td><code>~~texto~~</code></td>
+<td><s>Tachado</s></td>
+</tr>
+<tr>
+<td><code>&lt;ins&gt;texto&lt;/ins&gt;</code></td>
+<td><ins>Subrayar</ins></td>
+</tr>
+<tr>
+<td><code>&lt;sub&gt;texto&lt;/sub&gt;</code></td>
+<td><sub>subíndice</sub></td>
+</tr>
+<tr>
+<td><code>&amp;nbsp;&amp;nbsp;</code></td>
+<td>   2 espacios</td>
+</tr>
+</tbody>
+</table>
+<h2 id="encabezado">Encabezado</h2>
+<p>Los encabezados se crean usando <code>#</code>.<br>
+Cuantos más <code>#</code>, menor nivel de encabezado <em>(de 1 a 6)</em>.<br><br></p>
+<p><strong>Tip:</strong> Mantén un espacio entre el <code>#</code> y el texto.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">N°</th>
+<th style="text-align:right">Markdown</th>
+<th>Encabezado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:right">#</td>
+<td>Título principal</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:right">##</td>
+<td>Tema del documento</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:right">###</td>
+<td>Sección de un tema</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:right">####</td>
+<td>Apartado de la sección</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:right">#####</td>
+<td>Ejemplo del apartado</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:right">######</td>
+<td>Sub-Apartado del Ejemplo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="parrafos-y-saltos-de-linea">Párrafos y saltos de línea</h2>
+<p>Para generar un nuevo <strong>párrafo</strong> en Markdown simplemente separa el texto mediante una línea en blanco.<br>
+Los párrafos cortos son aquellos párrafos que tienen entre tres y seis líneas. Si bien existen párrafos más extensos, que pueden llegar hasta las veinte líneas, lo recomendable es que un párrafo no tenga más de cuatro o cinco oraciones.</p>
+<h2 id="citas">Citas</h2>
+<p>Las citas se crean con el carácter &gt; al inicio de la línea.<br>
+Para anidar citas, se agrega otro &gt;&gt; adicional.</p>
+<blockquote>
+<h5 id="citas-anidadas">&gt; CITAS ANIDADAS</h5>
+<blockquote>
+<p>&gt;&gt; Siempre tienes opción de no tener opinión. - Marcos Aurelio.<br>
+&gt;&gt; Todo lo que escuchamos es una opinión, no un hecho.<br>
+&gt;&gt; Todo lo que vemos es una perspectiva, no la verdad.</p>
+<blockquote>
+<p>&gt;&gt;&gt; <em>Marcos Aurelio</em></p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3 id="alertas">Alertas</h3>
+<blockquote>
+<p>&gt; [!NOTA] <em>Información útil que los usuarios deben conocer.</em></p>
+</blockquote>
+<blockquote>
+<p>&gt; [!IMPORTANT] <em>Información clave que los usuarios deben conocer.</em></p>
+</blockquote>
+<blockquote>
+<p>&gt; [!WARNING] <em>Información urgente que requiere la atención del usuario.</em></p>
+</blockquote>
+<blockquote>
+<p>&gt; [!PRECAUCIÓN] <em>Advierte sobre los riesgos.</em></p>
+</blockquote>
+<h2 id="listas">Listas</h2>
+<h3 id="listas-desordenadas">Listas desordenadas</h3>
+<p>Se crean usando <code>-</code>, <code>*</code> o <code>+</code> antes de cada elemento.</p>
+<ul>
+<li>Elemento de lista
+<ul>
+<li>Elemento de lista Anidada
+<ul>
+<li>Elemento de lista Anidada 2</li>
+<li>Elemento de lista Anidada 2</li>
+</ul>
+</li>
+<li>Elemento de lista Anidada</li>
+<li>Elemento de lista Anidada</li>
+</ul>
+</li>
+<li>Elemento de lista</li>
+</ul>
+<h3 id="listas-ordenadas">Listas ordenadas</h3>
+<p>Se crean con números seguidos de un punto <code>(1.)</code>.</p>
+<ol>
+<li>Elemento de lista 01</li>
+<li>Elemento de lista 02
+<ul>
+<li>Elemento de lista
+<ol>
+<li>Elemento de lista 01</li>
+<li>Elemento de lista 02</li>
+<li>Elemento de lista 02</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>Elemento de lista 01</li>
+</ol>
+</li>
+<li>Elemento de lista 03</li>
+</ol>
+<h3 id="listas-tareas">Listas tareas</h3>
+<ul>
+<li>[x] <code>#739</code></li>
+<li>[ ] https://github.com/octo-org/octo-repo/issues/740</li>
+<li>[ ] Add delight to the experience when all tasks are complete :tada:</li>
+</ul>
+<h2 id="reglas-horizontales">Reglas horizontales</h2>
+<p>Se crean con tres o más <code>* </code>,<code> -</code> o<code> _</code> en una línea para separar secciones de una manera visual.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><code>*3</code></th>
+<th style="text-align:center"><code>-3</code></th>
+<th style="text-align:center"><code>_3</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>***</code></td>
+<td style="text-align:center"><code>---</code></td>
+<td style="text-align:center"><code>___</code></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<p>Los párrafos cortos son aquellos párrafos que tienen entre tres y seis líneas. <code>let = código en linea</code> Si bien existen párrafos más extensos, que pueden llegar hasta las veinte líneas, lo recomendable es que un párrafo no tenga más de cuatro o cinco oraciones.</p>
-<hr>
-<!--* ```lenguaje  -->
-<pre><code class="language-js">function sumar(a, b) {
-  return a + b;
-}
+<h2 id="links">links</h2>
+<p>Los enlaces se crean con la siguiente sintaxis:<br>
+<code>[Texto visible](https://ejemplo.com &quot;título emergente&quot;)</code></p>
+<table>
+<thead>
+<tr>
+<th>Enlace Markdown</th>
+<th>Resultado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt; link_linea &gt;</code></td>
+<td><em><a href="https://www.markdownguide.org">https://www.markdownguide.org</a></em></td>
+</tr>
+<tr>
+<td><code>[ referencia ]( link )</code></td>
+<td><a href="https://www.markdownguide.org">Markdown Guide</a></td>
+</tr>
+<tr>
+<td><code>[ referencia ]( #titulo )</code></td>
+<td><a href="#Markdown">#Markdown</a></td>
+</tr>
+<tr>
+<td><code>[ referencia ]( #titulo &quot;hover&quot; )</code></td>
+<td><a href="#Markdown" title="hover">#Markdown</a></td>
+</tr>
+</tbody>
+</table>
+<p>Documentación Markdown: <em><a href="https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Documentación Github</a></em></p>
+<h2 id="codigos">Códigos</h2>
+<h3 id="en-linea">En línea</h3>
+<p>Úsalo para fragmentos cortos de código rodeando el texto con <strong>`</strong> (backtick).</p>
+<p>Aquí un ejemplo de <code>console.log(&quot;Hola mundo&quot;);</code></p>
+<h3 id="en-bloque">En bloque</h3>
+<p>Para bloques de código más extensos, utiliza tres backticks y opcionalmente especifica el lenguaje para resaltar la sintaxis.    <br>
+<code>```lenguaje</code></p>
+<pre><code>    Comenzar con cuatro espacios en blanco
 </code></pre>
-<hr>
+<pre><code>```js
+  function sumar(a, b) {
+    return a + b; }
+```
+</code></pre>
+<pre><code>&lt;pre&gt; Texto pre-formateado
+  &lt;pre&gt; Pre anidado &lt;/pre&gt;
+  &lt;pre&gt; Pre anidado &lt;/pre&gt;
+&lt;/pre&gt;
+</code></pre>
+<h2 id="imagines">Imagines</h2>
+<p>La sintaxis es similar a los enlaces, pero con un <code>!</code> al inicio y Imagen con título</p>
+<pre><code>![Referencia/Texto alternativo](Ruta/Link)
+![JavaScript](ruta/a/la/imagen.svg)
+![JavaScript](https://JavaScript-svg.com)
+</code></pre>
+<p><img src="https://cdn.icon-icons.com/icons2/2107/PNG/128/file_type_js_official_icon_130509.png" alt="JavaScript"></p>
+<h2 id="tablas">Tablas</h2>
+<p>Las tablas se crean utilizando <code>|</code> y <code>-</code>.<br><br>
+<strong>Tip:</strong> Alinea columnas con <code>:-</code> | <code>:-:</code> | <code>-:</code></p>
+<table>
+<thead>
+<tr>
+<th>Lenguaje</th>
+<th style="text-align:center">Uso principal</th>
+<th style="text-align:right">Dificultad</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HTML</td>
+<td style="text-align:center">Estructura web</td>
+<td style="text-align:right">Fácil</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td style="text-align:center">Estilos visuales</td>
+<td style="text-align:right">Fácil</td>
+</tr>
+<tr>
+<td>JS</td>
+<td style="text-align:center">Interactividad web</td>
+<td style="text-align:right">Medio</td>
+</tr>
+</tbody>
+</table>
+<h2 id="formulario">Formulario</h2>
+<p>Markdown estándar no incluye formularios nativos, pero puedes usar HTML dentro de Markdown.</p>
 <form>
-  <label for="q"> Buscar </label>
-  <input type="search" name="q" id="q">
+  <label for="nombre">Nombre:</label><br>
+  <input type="text" id="nombre" name="nombre"><br><br>
+<p><label for="email">Email:</label><br>
+<input type="email" id="email" name="email"><br><br></p>
+<p><input type="submit" value="Enviar"><br><br></p>
+<p><label for="q"> Buscar </label><br>
+<input type="search" name="q" id="q"></p>
 </form>
-<!-- Esto es un comentario -->
 
     </main>
     <hr>

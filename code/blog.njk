@@ -6,12 +6,14 @@ description: Meta descripción de la página de contacto
 
 <section class="blog c-visible">
   {% for post in collections.blog %}
-    <a href="{{ post.url }}" class="box-link" >
+    <a href="{{ post.url }}"  >
       <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
           loading="lazy" decoding="async"
           />     
-      <h3>{{ post.data.title }}</h3>
-      <p>{{ post.data.date }}</p>
+      <div class="text">
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.date }}</p>
+      </div>
     </a>
   {% endfor %}
 </section>

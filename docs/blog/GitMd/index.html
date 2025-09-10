@@ -38,32 +38,32 @@
 <li><a href="#creado-de-Local-a-git-hub">Creado de Local a GitHub</a></li>
 </ul>
 <h2 id="comandos-git">Comandos Git</h2>
-<pre><code class="language-bash">  mkdir 🔸 crear carpeta
-  rmdir 🔸 eliminar carpeta
-  ls 🔸 contenido de carpeta
-  git init 🔸 inicializar
-  git add 🔸 AGREGA a staged
-  git status 🔸 estado
-  git rm --cached 🔸 quita del area de staged
-  git commit -m 🔸 REGISTRA el cambio al repositorio Local
-  git 🔸 inicializar
+<pre><code class="language-bash">mkdir            # crear carpeta
+rmdir            # eliminar carpeta
+ls               # contenido de carpeta
+git init         # inicializar
+git add          # AGREGA a staged
+git status       # estado
+git rm --cached  # quita del area de staged
+git commit -m    # REGISTRA el cambio al repositorio Local
+git              # inicializar
 </code></pre>
 <h2 id="diff">diff</h2>
-<pre><code class="language-bash"> git show 🔸 muestra los ÚLTIMOS cambios
- git diff --staged 🔸 muestra las diferencias cuando esta en STAGED
- git diff id1 id2 🔸 muestra las diferencias ENTRE los archivos
- git diff --name-only id1 id2 🔸 muestra los ARCHIVOS que modificaron
- git diff --word-diff id1 id2 🔸 muestra las LINEAS modificadas
+<pre><code class="language-bash"> git show                      # muestra los ÚLTIMOS cambios
+ git diff --staged             # muestra las diferencias cuando esta en STAGED
+ git diff id1 id2              # muestra las diferencias ENTRE los archivos
+ git diff --name-only id1 id2  # muestra los ARCHIVOS que modificaron
+ git diff --word-diff id1 id2  # muestra las LINEAS modificadas
 </code></pre>
 <h2 id="modifico-commit">Modifico commit</h2>
-<pre><code class="language-bash"> git commit --amend  🔸 vuelvo al ultimo commit y lo puedo modificar el NOMBRE/DESCRIPCIÓN
- git rebase -i head~3  🔸 te muestra los ultimo commit a los que puedes volver / edit: para volver
+<pre><code class="language-bash"> git commit --amend     # vuelvo al ultimo commit y lo puedo modificar el NOMBRE/DESCRIPCIÓN
+ git rebase -i head~3   # te muestra los ultimo commit a los que puedes volver / edit: para volver
 </code></pre>
 <pre><code class="language-bash"> pick 8442d96 commit 03
- edit a6863b6 commit 04 🔸vuelve
+ edit a6863b6 commit 04 # vuelve
  pick f8284fe Ultimo commit
 </code></pre>
-<pre><code> git rebase --continue 🔸 inicializar
+<pre><code> git rebase --continue # inicializar
 </code></pre>
 <hr>
 <h2 id="estados">Estados</h2>
@@ -73,106 +73,105 @@
 <li>vació lugar &gt; commit HEAD</li>
 <li>?? archivo &gt; nvo a agregar / SIN add / modificado?</li>
 </ul>
-<hr>
 <table>
 <thead>
 <tr>
-<th>1er</th>
-<th>2do</th>
-<th>add</th>
+<th style="text-align:center">1er</th>
+<th style="text-align:center">2do</th>
+<th style="text-align:center">add</th>
 <th>commit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>A</td>
-<td>_</td>
-<td>✅</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">✅</td>
 <td>nvo a agregar</td>
 </tr>
 <tr>
-<td>A</td>
-<td>M</td>
-<td>✅</td>
+<td style="text-align:center">A</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">✅</td>
 <td>nvo a agregar / pos modificado</td>
 </tr>
 <tr>
-<td>_</td>
-<td>M</td>
-<td>⛔</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">⛔</td>
 <td>modificado</td>
 </tr>
 <tr>
-<td>M</td>
-<td>_</td>
-<td>✅</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">✅</td>
 <td>modificado</td>
 </tr>
 <tr>
-<td>M</td>
-<td>m</td>
-<td>✅</td>
+<td style="text-align:center">M</td>
+<td style="text-align:center">m</td>
+<td style="text-align:center">✅</td>
 <td>commit? / modificado // SIN add / pos modificado</td>
 </tr>
 <tr>
-<td>D</td>
-<td>_</td>
-<td>⛔</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">⛔</td>
 <td>eliminado</td>
 </tr>
 <tr>
-<td>_</td>
-<td>D</td>
-<td>✅</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">✅</td>
 <td>eliminado</td>
 </tr>
 <tr>
-<td>R</td>
-<td>_</td>
-<td>⛔</td>
+<td style="text-align:center">R</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">⛔</td>
 <td>cambio nombre</td>
 </tr>
 <tr>
-<td>_</td>
-<td>D</td>
-<td>✅</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">D</td>
+<td style="text-align:center">✅</td>
 <td>cambio nombre</td>
 </tr>
 <tr>
-<td>_</td>
-<td>_</td>
-<td>⛔</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">⛔</td>
 <td>vació lugar commit/HEAD</td>
 </tr>
 </tbody>
 </table>
 <h2 id="deshacer-commit">Deshacer commit</h2>
-<pre><code class="language-bash">git reset id 🔸 vuelve al commit del id
-git reset --soft id 🔸 staging / con add
-git reset --mixed id 🔸 pc / sin add
-git reset --hard id 🔸 commit sin modificar vació
+<pre><code class="language-bash">git reset id          # vuelve al commit del id
+git reset --soft id   # staging / con add
+git reset --mixed id  # pc / sin add
+git reset --hard id   # commit sin modificar vació
 </code></pre>
 <h2 id="reflog">Reflog</h2>
-<pre><code class="language-bash">git reset --hard idBorrar 🔸 vuelve al id
-git reset --hard idBorrado 🔸 con el id se puede volver al hard
-git reflog 🔸 muestra todos los lugares donde el HEAD apunto
-git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
+<pre><code class="language-bash">git reset --hard idBorrar   # vuelve al id
+git reset --hard idBorrado  # con el id se puede volver al hard
+git reset --hard idReflog   # recuperas el estado donde estaba el archivo
+git reflog                  # muestra todos los lugares donde el HEAD apunto
 </code></pre>
 <h2 id="ramas">Ramas</h2>
-<pre><code class="language-bash"> git branch 🔸 VER ramas
- git branch -d nomRama 🔸 BORRAR notas
- git branch -m nomNvo 🔸 RENOMBRAR rama / posicionado en la rama
- git branch -m nomViejo nomNvo 🔸 RENOMBRAR rama / posicionado en otras rama
+<pre><code class="language-bash"> git branch                     # VER ramas
+ git branch -d nomRama          # BORRAR notas
+ git branch -m nomNvo           # RENOMBRAR rama / posicionado en la rama
+ git branch -m nomViejo nomNvo  # RENOMBRAR rama / posicionado en otras rama
 
- git switch 🔸 MOVER de rama
- git switch -c nomb 🔸 crear y mover de rama
+ git switch                     # MOVER de rama
+ git switch -c nomb             # crear y mover de rama
 
- git merge nomRama 🔸 fusionar ramas / posicionado en la rama
+ git merge nomRama              # fusionar ramas / posicionado en la rama
 </code></pre>
 <h2 id="stash">Stash</h2>
-<pre><code class="language-bash"> git stash 🔸 Guardar temporalmente los cambios de la rama
- git stash list 🔸 Guardar temporalmente los cambios de la rama
- git stash pop 🔸 para volver al commit guardado
+<pre><code class="language-bash"> git stash       # Guardar temporalmente los cambios de la rama
+ git stash list  # Guardar temporalmente los cambios de la rama
+ git stash pop   # para volver al commit guardado
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
@@ -180,100 +179,96 @@ git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
 <table>
 <thead>
 <tr>
-<th>ramas</th>
+<th style="text-align:center">ramas</th>
 <th>componente</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>-main</td>
-<td>_v0.1 Rama principal</td>
+<td style="text-align:center">main</td>
+<td>v0.1 Rama principal</td>
 </tr>
 <tr>
-<td>--hotfix</td>
-<td>_v0.2 Corregir error rápidamente</td>
+<td style="text-align:center">hotfix</td>
+<td>v0.2 Corregir error rápidamente</td>
 </tr>
 <tr>
-<td>---release</td>
-<td>_v1.0 publicación</td>
+<td style="text-align:center">release</td>
+<td>v1.0 publicación</td>
 </tr>
 <tr>
-<td>-develop</td>
-<td>_integra todas las funcionalidades</td>
+<td style="text-align:center">develop</td>
+<td>integra todas las funcionalidades</td>
 </tr>
 <tr>
-<td>---feature</td>
-<td>_funcionalidades</td>
+<td style="text-align:center">feature</td>
+<td>funcionalidades</td>
 </tr>
 </tbody>
 </table>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
 <h1 id="comandos-para-la-terminal">Comandos para la terminal</h1>
-<pre><code> pwd 🔸 MUESTRA la carpeta actual
- pwd --help 🔸 MUESTRA los comandos existentes
+<pre><code> pwd               # MUESTRA la carpeta actual
+ pwd --help        # MUESTRA los comandos existentes
 
- clear 🔸 LIMPIAR los comandos
+ clear             # LIMPIAR los comandos
+ ls                # MUESTRA archivos de la carpeta
+ ls -l             # MUESTRA &quot;mas&quot; archivos de la carpeta
+ ls -a             # MUESTRA archivos &quot;ocultos&quot; de la carpeta
+ ls -la            # MUESTRA &quot;combinación&quot; de lo anterior
+ ls --help         # MUESTRA total de los comandos
+ cd                # cambiar de directorio
+ cd nombCarp       # CAMBIA de carpeta
+ cd mouse          # arrastra la capeta a la que CAMBIAS
+ cd ~              # cambiar a la carpeta INICIAL
+ cd .              # directorio ACTUAL
+ cd ..             # cambia a capeta ANTERIOR/PADRE
+ cd /              # cambia capeta RAÍZ (disco duro c)
+ cd c              # cambia disco duro C
+ cd -              # regresa a la carpeta ANTERIOR
+ cd &quot;nomb capeta&quot;  # si tiene espacios USAR &quot;&quot;
 
- ls 🔸 MUESTRA archivos de la carpeta
- ls -l 🔸 MUESTRA &quot;mas&quot; archivos de la carpeta
- ls -a 🔸 MUESTRA archivos &quot;ocultos&quot; de la carpeta
- ls -la 🔸 MUESTRA &quot;combinación&quot; de lo anterior
- ls --help 🔸 MUESTRA total de los comandos
+ touch nA          # CREA un archivo nuevo
+ mkdir nC          # CREA una carpeta
+ echo &quot;contenido   # nombArchivo - CREA un archivo con contenido
+ cat nombArch      # MUESTRA el contenido del archivo
 
- cd 🔸 cambiar de directorio
- cd nombCarp 🔸 CAMBIA de carpeta
- cd mouse 🔸 arrastra la capeta a la que CAMBIAS
- cd ~ 🔸 cambiar a la carpeta INICIAL
- cd . 🔸 directorio ACTUAL
- cd .. 🔸 cambia a capeta ANTERIOR/PADRE
- cd / 🔸 cambia capeta RAÍZ (disco duro c)
- cd c 🔸 cambia disco duro C
- cd - 🔸 regresa a la carpeta ANTERIOR
- cd &quot;nomb capeta&quot; 🔸 si tiene espacios USAR &quot;&quot;
+ rm                # ELIMINA archivos
+ rmdir             # ELIMINA una carpeta vacía
+ rm -r nombCarp    # ELIMINA carpeta con contenido
+ rm -rf nombCarp   # forzar la ELIMINA carpeta con contenido
 
- `touch nA 🔸 CREA un archivo nuevo
- mkdir nC 🔸 CREA una carpeta
- echo &quot;contenido 🔸 nombArchivo 🔸 CREA un archivo con contenido
- cat nombArch 🔸 MUESTRA el contenido del archivo
+ mv nombArch nombCarpeta  # MOVER archivo a carpeta
+ mv nombArch nvoNombArch  # RENOMBRAR archivo
 
- rm 🔸 ELIMINA archivos
- rmdir 🔸 ELIMINA una carpeta vacía
- rm -r nombCarp 🔸 ELIMINA carpeta con contenido
- rm -rf nombCarp 🔸 forzar la ELIMINA carpeta con contenido
+ cp nombArch nombCarpeta  # COPIAR archivo a carpeta
+ cp nombArch nombCarpeta/nvoNombArch  # COPIAR archivo a carpeta con nuevo nombre
+ cp -r nombCarp nombCarp  # COPIAR carpeta con contenido
 
- mv nombArch nombCarpeta 🔸 MOVER archivo a carpeta
- mv nombArch nvoNombArch 🔸 RENOMBRAR archivo
-
- cp nombArch nombCarpeta 🔸 COPIAR archivo a carpeta
- cp nombArch nombCarpeta/nvoNombArch 🔸 COPIAR archivo a carpeta con nuevo nombre
- cp -r nombCarp nombCarp 🔸 COPIAR carpeta con contenido
-
- find J\* 🔸 BUSCA todos los archivos que empiecen con j
+ find J\*                 # BUSCA todos los archivos que empiecen con j
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
 <h1 id="ps-procesos">ps &gt; procesos</h1>
-<pre><code class="language-bash"> kill nroProcesoId 🔸 ELIMINA el proceso
-
- code . 🔸 ABRE el archivo visual studio code
- code ubiArch 🔸 ABRE archivo en visual studio code
-
- alias 🔸 MUESTRA los alias existentes
- alias nombAlias=&quot;contenido&quot; 🔸 CREA un alias
- alias nombAlias=&quot;touch Hola.txt&quot; 🔸 CREA un alias
- unalias 🔸 ELIMINA el alias
+<pre><code class="language-bash"> kill nroProcesoId                 # ELIMINA el proceso
+ code .                            # ABRE el archivo visual studio code
+ code ubiArch                      # ABRE archivo en visual studio code
+ alias                             # MUESTRA los alias existentes
+ alias nombAlias=&quot;contenido&quot;       # CREA un alias
+ alias nombAlias=&quot;touch Hola.txt&quot;  # CREA un alias
+ unalias                           # ELIMINA el alias
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
 <h1 id="configuracion-global-inicial-de-git">configuración GLOBAL inicial de git</h1>
-<pre><code class="language-bash"> git config --global user.name &quot;FerSosa&quot; 🔸 NOMBRE de usuario
- git config --global user.email &quot;user@fer&quot; 🔸 EMAIL
- git config --global user.email &quot;fer.9cba2@gmail.com&quot; 🔸 EMAIL
- git config --global core.editor &quot;code --await&quot; 🔸 INDICA nuestro editor por defecto
- git config --global -e 🔸 MUESTRA las configuración global
- git config --global core autocrlf true/input 🔸 como TRATAR lo saltos de linea con windows/mac
- git config --global -h 🔸 LISTA de todas las configuraciones
+<pre><code class="language-bash"> git config --global user.name &quot;FerSosa&quot;              # NOMBRE de usuario
+ git config --global user.email &quot;user@fer&quot;            # EMAIL
+ git config --global user.email &quot;fer.9cba2@gmail.com&quot; # EMAIL
+ git config --global core.editor &quot;code --await&quot;       # INDICA nuestro editor por defecto
+ git config --global -e                               # MUESTRA las configuración global
+ git config --global core autocrlf true/input         # como TRATAR lo saltos de linea con windows/mac
+ git config --global -h                               # LISTA de todas las configuraciones
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
@@ -298,28 +293,29 @@ git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
 </tr>
 </tbody>
 </table>
-<pre><code class="language-bash"> git init 🔸️ INICIA un repositorio git en directorio
+<pre><code class="language-bash"> git init               # INICIA un repositorio git en directorio
+ git status             # VERIFICA el estado del repositorio
 
- git status 🔸️ VERIFICA el estado del repositorio
- git status -s 🔸️ RESUME de verificación el estado del reps
+ git status -s          # RESUME de verificación el estado del reps
+ git diff               # MUESTRA los cambios realizados
 
- git diff 🔸️ MUESTRA los cambios realizados
- git diff --staged 🔸️ MUESTRA los cambios realizados detallados
+ git diff --staged      # MUESTRA los cambios realizados detallados
+ git add nomAr          # AGREGA a staged
 
- git add nomAr 🔸️ AGREGA a staged
+ git rm nomAr           # ELIMINA el archivo sin tener que declarar
 
- git rm nomAr 🔸️ ELIMINA el archivo sin tener que declarar
- git rm --cachet &quot;nA&quot; 🔸️ VUELVE al directorio
+ git rm --cachet &quot;nA&quot;   # VUELVE al directorio
+ git mv nomAr nomAr-nvo # RENOMBRA archivo sin tener que declarar
 
- git mv nomAr nomAr-nvo 🔸️ RENOMBRA archivo sin tener que declarar
+ git log                # MUESTRA historial de commit hechos
 
- git log 🔸️ MUESTRA historial de commit hechos
- git log -- oneline 🔸️ MUESTRA historial de commit en una linea- `git log -p 🔸️ MUESTRA historial de commit y los cambios
+ git log --oneline      # MUESTRA historial de commit en una linea-
+ git log -p             # MUESTRA historial de commit y los cambios
 
- git commit 🔸️ REGISTRA el cambio
- git commit -m &quot;mensaje&quot; 🔸️ AGREGA al repositorio con msj
- git commit --amend -m &quot;nvo mensaje`🔸️ CAMBIA el msj de commit (hacer solo e repositorio local y el mas reciente)
- git commit --amend --no-edit 🔸️ GUARDA los cambios sin editar el ultimo msj de commit subir
+ git commit                           # REGISTRA el cambio
+ git commit -m &quot;mensaje&quot;              # AGREGA al repositorio con msj
+ git commit --amend -m &quot;nvo mensaje`  # CAMBIA el msj de commit (hacer solo e repositorio local y el mas reciente)
+ git commit --amend --no-edit         # GUARDA los cambios sin editar el ultimo msj de commit subir
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
@@ -327,101 +323,101 @@ git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
 <table>
 <thead>
 <tr>
-<th>Commits</th>
+<th style="text-align:center">Commits</th>
 <th>Características</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Feat</td>
+<td style="text-align:center">Feat</td>
 <td>Nueva característica</td>
 </tr>
 <tr>
-<td>Fix</td>
+<td style="text-align:center">Fix</td>
 <td>Corrección de errores</td>
 </tr>
 <tr>
-<td>Merge</td>
+<td style="text-align:center">Merge</td>
 <td>Combinación de ramas</td>
 </tr>
 <tr>
-<td>Delete</td>
+<td style="text-align:center">Delete</td>
 <td>Archivos borrados</td>
 </tr>
 <tr>
-<td>Docs</td>
+<td style="text-align:center">Docs</td>
 <td>Documentación</td>
 </tr>
 <tr>
-<td>Style</td>
+<td style="text-align:center">Style</td>
 <td>Cambios de estilo (formateo, comas, etc.)</td>
 </tr>
 <tr>
-<td>Refactor</td>
+<td style="text-align:center">Refactor</td>
 <td>Refactorización del código</td>
 </tr>
 <tr>
-<td>Test</td>
+<td style="text-align:center">Test</td>
 <td>Añadir o corregir tests</td>
 </tr>
 <tr>
-<td>Chore</td>
+<td style="text-align:center">Chore</td>
 <td>Tareas de mantenimiento</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<pre><code class="language-bash"> git reset --hard HEAD~1 🔸 DESHACER(elimina) el ultimo registro/commit
- git reset --soft HEAD~1 🔸 DESHACER(elimina) el ultimo registro/commit
- soft 🔸 MANTIENE los cambios de los archivos
- hard 🔸 MANTIENE los cambios de los archivos
- HEAD 🔸 ULTIMO realizado
- ~1 🔸 CANTIDAD de pasos en el historial
+<pre><code class="language-bash"> git reset --hard HEAD~1  # DESHACER(elimina) el ultimo registro/commit
+ git reset --soft HEAD~1  # DESHACER(elimina) el ultimo registro/commit
+ soft                     # MANTIENE los cambios de los archivos
+ hard                     # MANTIENE los cambios de los archivos
+ HEAD                     # ULTIMO realizado
+ ~1                       # CANTIDAD de pasos en el historial
 </code></pre>
 <hr>
-<pre><code class="language-bash"> git branch 🔸 MUESTRA ramas (nomR = nombreDeRama)
- git branch nomR 🔸 CREA una rama nueva
- git branch -d nomR 🔸 ELIMINA rama desde otra rama en (directorio)
- git branch -m nomR_nva 🔸 CAMBIA nombre de rama dentro de la rama
- git branch -m nomR nomR_nva 🔸 CAMBIA nombre por nombre nuevo
+<pre><code class="language-bash"> git branch                   # MUESTRA ramas (nomR = nombreDeRama)
+ git branch nomR              # CREA una rama nueva
+ git branch -d nomR           # ELIMINA rama desde otra rama en (directorio)
+ git branch -m nomR_nva       # CAMBIA nombre de rama dentro de la rama
+ git branch -m nomR nomR_nva  # CAMBIA nombre por nombre nuevo
 
- git checkout &quot;nomR&quot; 🔸 CAMBIA de rama
- git checkout main 🔸 CAMBIA de rama inicial
- git checkout -b &quot;nomR&quot; 🔸 CREA, NOMBRA y se COLOCA en la rama nueva
+ git checkout &quot;nomR&quot;          # CAMBIA de rama
+ git checkout main            # CAMBIA de rama inicial
+ git checkout -b &quot;nomR&quot;       # CREA, NOMBRA y se COLOCA en la rama nueva
 
- git switch &quot;nomR&quot; 🔸 CAMBIA de rama
- git switch nomR 🔸 CAMBIA de rama
+ git switch &quot;nomR&quot;            # CAMBIA de rama
+ git switch nomR              # CAMBIA de rama
 
- git marge nomR 🔸 COMBINA rama (a la rama donde se encuentra)
- git marge --continue 🔸 RESUELVE CONFLICTO una vez aceptado
+ git marge nomR               # COMBINA rama (a la rama donde se encuentra)
+ git marge --continue         # RESUELVE CONFLICTO una vez aceptado
 
- git clonar link 🔸 CLONAR el repositorio de GitHub
+ git clonar link              # CLONAR el repositorio de GitHub
 
- git remote 🔸 MUESTRA el nombre del repositorio remoto
- git remote -v 🔸 MUESTRA mas detalles del repositorio remoto
+ git remote                   # MUESTRA el nombre del repositorio remoto
+ git remote -v                # MUESTRA mas detalles del repositorio remoto
 
- git push origin main 🔸 ENVIAR cambios de repositorio local a GitHub
- git push -u origin nomR 🔸 ENVIAR cambios de repositorio local a GitHub
- git push origin nomR 🔸 ELIMINA rama de repositorio local a GitHub
+ git push origin main         # ENVIAR cambios de repositorio local a GitHub
+ git push -u origin nomR      # ENVIAR cambios de repositorio local a GitHub
+ git push origin nomR         # ELIMINA rama de repositorio local a GitHub
  git push origin --delete html
  origin = NOMBRE asignado al repositorio remoto clonado
  main = NOMBRE de rama modificada
 
- git pull 🔸 DESCARGAR cambios del contenido de GitHub
+ git pull                     # DESCARGAR cambios del contenido de GitHub
 
- git fetch origin 🔸 VERIFICAR cambios del contenido de GitHub
- git checkout origin/main 🔸 CAMBIAR de la rama loca a la rama del repositorio remoto
+ git fetch origin             # VERIFICAR cambios del contenido de GitHub
+ git checkout origin/main     # CAMBIAR de la rama loca a la rama del repositorio remoto
 
  bifurca/fork (un repositorio) crear una copiar del repositorio remoto de tu cuenta GitHub
 
- pull request 🔸 solicitud de combinar tus cambios con el repositorio original del proyecto
- git remote 🔸 MUESTRA los orígenes remotos del repositorio
+ pull request                 # solicitud de combinar tus cambios con el repositorio original del proyecto
+ git remote                   # MUESTRA los orígenes remotos del repositorio
 </code></pre>
 <hr>
-<pre><code class="language-bash"> git tag 🔸 MUESTRA las etiquetas
- git tag nroVersion 🔸 CREA las etiquetas
- git tag -d nroVersion 🔸 ELIMINA las etiquetas
- git show nroVersion 🔸 MUESTRA info de una etiquetas
+<pre><code class="language-bash"> git tag                # MUESTRA las etiquetas
+ git tag nroVersion     # CREA las etiquetas
+ git tag -d nroVersion  # ELIMINA las etiquetas
+ git show nroVersion    # MUESTRA info de una etiquetas
 
  git reflog
 </code></pre>
@@ -439,16 +435,16 @@ git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
 🔼 Regresar</a></p>
 <h1 id="github">GitHub</h1>
 <h2 id="creado-de-github-a-local">Creado de GitHub a Local</h2>
-<pre><code class="language-bash"> git clone https://github.com/fergsosa/clon-carpeta.git 🔸 clonar carpeta
- git push origin main 🔸 subir archivo a GitHub
- git pull 🔸 trae actualización/cambios del repositorio Remoto a Local
- 🔺🔺🔺  🔸 trae repositorio y fusiona (merge) a la rama actual
+<pre><code class="language-bash"> git clone https://github.com/fergsosa/clon-carpeta.git     # clonar carpeta
+ git push origin main                               # subir archivo a GitHub
+ git pull        # trae actualización/cambios del repositorio Remoto a Local
+ 🔺🔺🔺         # trae repositorio y fusiona (merge) a la rama actual
 
- git fetch 🔸 trae actualización/cambios del repositorio Remoto a Local
- 🔺🔺🔺   🔸 trae repositorio y fusiona (merge) a la rama actual
- git switch --detach origin/main 🔸 muestra las modificaciones antes del pull
+ git fetch       # trae actualización/cambios del repositorio Remoto a Local
+ 🔺🔺🔺         # trae repositorio y fusiona (merge) a la rama actual
+ git switch --detach origin/main  # muestra las modificaciones antes del pull
 
- git push origin --delete ramaBorrar 🔸 borrar rama de forma remota
+ git push origin --delete ramaBorrar            # borrar rama de forma remota
 </code></pre>
 <p><a href="#temas"><br>
 🔼 Regresar</a></p>
@@ -458,21 +454,21 @@ git reset --hard idReflog 🔸 recuperas el estado donde estaba el archivo
 </ul>
 <h3 id="comando-de-conecta-repositorio-local-con-github">🔻comando de conecta repositorio local con github</h3>
 <pre><code class="language-bash">git remote add origin https://github.com/fergsosa/repositorio-subido-local.git
-git branch -M main 🔸
-git push -u origin main 🔸 configura para usar solo &quot;git push&quot;
-git remote -v 🔸 muestra lo que se puede hacer con remote
+git branch -M main
+git push -u origin main  # configura para usar solo &quot;git push&quot;
+git remote -v            # muestra lo que se puede hacer con remote
 </code></pre>
 <h3 id="comando-de-cambie-repositorio-ya-configurado">🔻comando de cambie repositorio ya configurado</h3>
 <pre><code class="language-bash">git remote add origin https://github.com/fergsosa/repo-VIEJO.git`
 git remote set-url origin https://github.com/fergsosa/repo-NUEVO.git`
 
-git push -u origin main 🔸 configura para usar solo &quot;git push&quot;
-git push --set-upstream origin ramaMia 🔸 subir rama creada al GitHub que no tenia
+git push -u origin main                # configura para usar solo &quot;git push&quot;
+git push --set-upstream origin ramaMia # subir rama creada al GitHub que no tenia
 
-git 🔸 inicializar
+git   # inicializar
 </code></pre>
 <h2 id="proceso-pull-request">Proceso: Pull Request</h2>
-<pre><code class="language-bash">1. git clone` 🔸 Clonar el Repositorio
+<pre><code class="language-bash">1. git clone` # Clonar el Repositorio
 </code></pre>
 <ul>
 <li><strong>Objetivo:</strong> Obtener una copia local del repositorio remoto.</li>
@@ -544,8 +540,7 @@ git 🔸 inicializar
 <li><strong>Res:</strong> Conflictos resueltos y cambios preparados para ser fusionados.</li>
 </ul>
 <p>Estas características te ayudarán a entender cada paso del proceso y su importancia en la creación y envío de un pull request en GitHub.</p>
-<p><a href="#temas"><br>
-🔼 Regresar</a></p>
+<p><a href="#temas">🔼 Regresar</a></p>
 
     </main>
     <hr>
