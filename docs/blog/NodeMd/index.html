@@ -33,8 +33,8 @@
 <h3 id="para-que-sirve-node">¿Para qué sirve Node?</h3>
 <p>Permite ejecutar JavaScript fuera del navegador, principalmente para crear servidores, APIs, aplicaciones en tiempo real y herramientas de línea de comandos.</p>
 <h3 id="diferencia-principal-entre-node-y-javascript">Diferencia principal entre Node y JavaScript</h3>
-<p>JavaScript: Lenguaje de programación.
-Node.js: Entorno que permite ejecutar JavaScript en el servidor, con módulos propios (fs, http, etc.) que no existen en el navegador.</p>
+<p><strong>JavaScript:</strong> Lenguaje de programación.<br>
+<strong>Node.js:</strong> Entorno que permite ejecutar JavaScript en el servidor, con módulos propios (fs, http, etc.) que no existen en el navegador.</p>
 <h3 id="que-se-puede-hacer-con-node-js">¿Qué se puede hacer con Node.js?</h3>
 <p>APIs REST y GraphQL
 Aplicaciones en tiempo real (chat, juegos, sockets)
@@ -59,7 +59,7 @@ Testeo automatizado</p>
 <p><strong>Librería</strong>: conjunto de funciones o utilidades que el programador decide cuándo y cómo usar (ej: Lodash).<br>
 <strong>Framework</strong>: establece una estructura y un flujo de trabajo donde tu código se adapta al framework (ej: Express, NestJS).</p>
 <h3 id="que-es-el-patron-rest">¿Qué es el patrón REST?</h3>
-<p>Estilo de arquitectura para construir APIs que utiliza HTTP y operaciones como GET, POST, PUT, DELETE, siguiendo convenciones en las rutas y respuestas.</p>
+<p>Estilo de arquitectura para construir APIs que utiliza <code>HTTP</code> y operaciones como <code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code> siguiendo convenciones en las rutas y respuestas.</p>
 <h3 id="que-es-serverless">¿Qué es Serverless?</h3>
 <p>Modelo en el que no administras servidores, sino que el proveedor (ej: AWS Lambda, Firebase Functions) ejecuta funciones bajo demanda y escala automáticamente.</p>
 <h3 id="que-es-arquitectura-de-microservicios">¿Qué es arquitectura de Microservicios?</h3>
@@ -76,23 +76,48 @@ Testeo automatizado</p>
 <h2 id="control-de-versiones-y-sql">Control de versiones y SQL</h2>
 <h3 id="que-es-gitflow-y-como-se-utiliza">¿Qué es GitFlow y cómo se utiliza?</h3>
 <p>• Permite organizar equipos y releases de software.
-Estrategia de ramas en Git:
-main → código en producción
-develop → desarrollo estable
-feature → nuevas funcionalidades
-release → versiones previas a producción
-hotfix → correcciones urgentes</p>
+Estrategia de ramas en Git:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">ramas</th>
+<th>componente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">main</td>
+<td>Código en Producción</td>
+</tr>
+<tr>
+<td style="text-align:center">hotfix</td>
+<td>Correcciones Urgentes</td>
+</tr>
+<tr>
+<td style="text-align:center">release</td>
+<td>Versiones previas a producción</td>
+</tr>
+<tr>
+<td style="text-align:center">develop</td>
+<td>Integra todas las funcionalidades</td>
+</tr>
+<tr>
+<td style="text-align:center">feature</td>
+<td>Nuevas funcionalidades</td>
+</tr>
+</tbody>
+</table>
 <h3 id="diferencia-entre-funcion-y-proceso-almacenado-en-sql">Diferencia entre función y proceso almacenado en SQL</h3>
 <p><strong>Función</strong>: retorna un valor y puede usarse en consultas (SELECT). Generalmente no modifica datos.<br>
 <strong>Procedimiento almacenado (Stored Procedure)</strong>: conjunto de sentencias SQL que pueden ejecutar operaciones más complejas (insertar, actualizar, borrar) y no necesariamente devuelven un valor.</p>
 <hr>
-<h2 id="conceptos-importantes">conceptos importantes</h2>
+<h2 id="conceptos-importantes">Conceptos Importantes</h2>
 <ul>
 <li><strong>Modelo cliente / servidor</strong>: solicitudes</li>
 <li><strong>Patrón de software</strong>: MVC (modelo vista controlador)</li>
 <li><strong>API REST</strong>: CRUD: GET / POST / PUT / DELETE</li>
 </ul>
-<h2 id="conceptos-basicos">Conceptos básicos</h2>
+<h2 id="conceptos-basicos">Conceptos Básicos</h2>
 <ul>
 <li><strong>Entorno de Ejecución</strong>: <em>( Ejecución de JavaScript en servidor )</em></li>
 </ul>

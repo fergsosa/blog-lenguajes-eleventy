@@ -27,22 +27,10 @@
 <p><img src="/blog-lenguajes-eleventy/img/portada/html.avif" alt="HTML"></p>
 <h1 id="que-es-html"><!--! Que es HTML --></h1>
 <h3 id="que-es-html-hypertext-markup-language">¿Qué es HTML? <em>(HyperText Markup Language)</em></h3>
-<p>HTML es el <strong>lenguaje estándar para estructurar y organizar contenido en la web</strong>.</p>
- <!-- Permite definir elementos como títulos, párrafos, imágenes, enlaces, formularios y mucho más. -->
-<p>No es un lenguaje de programación, sino un <strong>lenguaje de marcado</strong> que describe la estructura y el significado del contenido.</p>
+<p>HTML (<em>HyperText Markup Language</em>) es el <em>lenguaje de marcado</em> estándar
+para estructurar y organizar contenido de las páginas web.</p>
 <h3 id="para-que-sirve-html">¿Para qué sirve HTML?</h3>
-<p>HTML se utiliza principalmente para <strong>crear la base de una página web</strong>.<br><br></p>
-<p><strong>Con él puedes:</strong></p>
-<ul>
-<li>Definir la <strong>estructura del contenido</strong> (títulos, párrafos, listas, tablas, etc.).</li>
-<li>Insertar <strong>enlaces, imágenes, videos y audios</strong>.</li>
-<li>Crear <strong>formularios</strong> para recopilar información de los usuarios.</li>
-<li>Integrar otros lenguajes como CSS y JavaScript.</li>
-<li>Mejorar la <strong>accesibilidad y el SEO</strong> (optimización en buscadores).</li>
-</ul>
-<blockquote>
-<p>Sin HTML, un sitio web no tendría forma ni contenido visible.</p>
-</blockquote>
+<p>Su propósito principal es estructurar el contenido de la web mediante etiquetas que definen elementos como texto, imágenes, enlaces,formularios, etc.</p>
 <h3 id="como-funciona-html">¿Cómo funciona HTML?</h3>
 <p>HTML funciona mediante <strong>etiquetas</strong> que el navegador interpreta para mostrar el contenido correctamente.<br>
 Cada etiqueta indica qué tipo de elemento se está creando.<br>
@@ -247,6 +235,213 @@ Todo documento HTML sigue una estructura básica que el navegador puede interpre
 
 - **id** se utiliza para identificar de manera única un elemento.
 - **class** se utiliza para agrupar elementos y aplicar estilos o scripts a múltiples elementos. -->
+<h1 id="conocimiento-general">Conocimiento General</h1>
+<h3 id="1-diferencia-entre-div-y-span">1. Diferencia entre <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code></h3>
+<p><strong><code>&lt;div&gt;</code></strong>: Es un elemento de <strong>bloque</strong>, ocupa todo el ancho
+disponible y comienza en una nueva línea.<br>
+<strong><code>&lt;span&gt;</code></strong>: Es un elemento <strong>en línea</strong>, solo ocupa el espacio de
+su contenido y no fuerza un salto de línea.</p>
+<hr>
+<h3 id="2-modelo-de-caja-box-model">2. Modelo de caja (Box Model)</h3>
+<p>Todo elemento en HTML se representa como una caja compuesta por:</p>
+<ol>
+<li><strong>Content</strong>: El contenido (texto, imagen, etc.).</li>
+<li><strong>Padding</strong>: Espacio entre el contenido y el borde.</li>
+<li><strong>Border</strong>: El borde alrededor del padding.</li>
+<li><strong>Margin</strong>: Espacio externo que separa el elemento de otros.</li>
+</ol>
+<hr>
+<h3 id="3-funcion-de-doctype-html">3. Función de <code>&lt;!DOCTYPE html&gt;</code></h3>
+<p>Indica al navegador qué <strong>versión de HTML</strong> se está utilizando.<br>
+En HTML5 se usa simplemente:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<p>Esto asegura que el navegador interprete el documento en <strong>modo
+estándar</strong>, evitando errores de compatibilidad.</p>
+<hr>
+<h3 id="4-semantica-en-html5">4. Semántica en HTML5</h3>
+<p>La <strong>semántica</strong> significa usar etiquetas que describan el significado
+del contenido.<br>
+Esto mejora la <strong>accesibilidad</strong>, <strong>SEO</strong> y la comprensión del código.</p>
+<p><strong>Ejemplos:</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>.</p>
+<hr>
+<h3 id="5-diferencia-entre-id-y-class">5. Diferencia entre <code>id</code> y <code>class</code></h3>
+<p><strong><code>id</code></strong>: es un identificador único, que no se repite.<br>
+<strong><code>class</code></strong>: Agrupa elementos con estilos o comportamientos compartidos.</p>
+<hr>
+<h3 id="6-insertar-una-imagen-con-img">6. Insertar una imagen con <code>&lt;img&gt;</code></h3>
+<p>Etiqueta básica:</p>
+<pre><code class="language-html">&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;
+</code></pre>
+<p><strong>Atributos obligatorios:</strong></p>
+<p><code>src</code>: Ruta de la imagen.<br>
+<code>alt</code>: Texto alternativo (importante para accesibilidad y SEO).</p>
+<hr>
+<h3 id="7-uso-de-meta-y-charset">7. Uso de <code>&lt;meta&gt;</code> y <code>charset</code></h3>
+<ul>
+<li><strong><code>&lt;meta&gt;</code></strong> define metadatos sobre el documento, como descripción,
+palabras clave o configuración.\</li>
+<li>El atributo <strong><code>charset</code></strong> indica la codificación de caracteres,
+normalmente UTF-8:</li>
+</ul>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>Esto evita problemas con caracteres especiales como tildes o eñes.</p>
+</blockquote>
+<hr>
+<h3 id="8-estructura-de-una-tabla-en-html">8. Estructura de una tabla en HTML</h3>
+<p>Principales etiquetas:</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Encabezado 1&lt;/th&gt;
+      &lt;th&gt;Encabezado 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dato 1&lt;/td&gt;
+      &lt;td&gt;Dato 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;table&gt;</code></td>
+<td>Tabla.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;thead&gt;</code></td>
+<td>Encabezado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tbody&gt;</code></td>
+<td>Cuerpo.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tfoot&gt;</code></td>
+<td>Pie de tabla.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tr&gt;</code></td>
+<td>Fila.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;th&gt;</code></td>
+<td>Celda de encabezado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;td&gt;</code></td>
+<td>Celda normal</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="9-proposito-de-script">9. Propósito de <code>&lt;script&gt;</code></h3>
+<p>Se utiliza para <strong>agregar JavaScript</strong> a la página.</p>
+<p><strong>Ubicaciones recomendadas:</strong></p>
+<blockquote>
+<p>Justo antes de <code>&lt;/body&gt;</code>. Mejor rendimiento porque carga el HTML primero.<br>
+En <code>&lt;head&gt;</code> con el atributo <code>defer</code>:</p>
+</blockquote>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<hr>
+<h3 id="10-diferencia-entre-b-y-strong-i-y-em">10. Diferencia entre <code>&lt;b&gt;</code> y <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code> y <code>&lt;em&gt;</code></h3>
+<p><code>&lt;b&gt;</code> y <code>&lt;i&gt;</code>: Solo efectos visuales (<strong>negrita</strong> y <em>cursiva</em>).<br>
+<code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code>: Dan <strong>énfasis semántico</strong>, usados por lectores de pantalla y SEO.</p>
+<pre><code class="language-html">&lt;b&gt;Texto importante visualmente&lt;/b&gt;
+&lt;strong&gt;Texto importante semánticamente&lt;/strong&gt;
+</code></pre>
+<hr>
+<h3 id="11-atributos-globales">11. Atributos globales</h3>
+<p>Pueden aplicarse a <strong>cualquier etiqueta HTML</strong>.</p>
+<p><strong>Ejemplos:</strong> - <code>id</code> - <code>class</code> - <code>style</code> - <code>title</code> - <code>hidden</code> - <code>lang</code></p>
+<hr>
+<h3 id="12-diferencia-entre-localstorage-y-sessionstorage">12. Diferencia entre <code>localStorage</code> y <code>sessionStorage</code></h3>
+<p>Ambos almacenan datos en el navegador.</p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duración</td>
+<td>Permanente (hasta borrar)</td>
+<td>Solo mientras dure la sesión</td>
+</tr>
+<tr>
+<td>Tamaño aprox.</td>
+<td>5-10 MB</td>
+<td>5-10 MB</td>
+</tr>
+<tr>
+<td>Uso común</td>
+<td>Guardar preferencias, tokens</td>
+<td>Datos temporales</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<hr>
+<h3 id="13-validacion-de-formularios-en-html5">13. Validación de formularios en HTML5</h3>
+<p>HTML5 incluye atributos que validan datos sin JavaScript:</p>
+<table>
+<thead>
+<tr>
+<th>atributo</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>required</code></td>
+<td>Campo obligatorio.</td>
+</tr>
+<tr>
+<td><code>pattern</code></td>
+<td>Validar con expresiones regulares.</td>
+</tr>
+<tr>
+<td><code>min</code>, <code>max</code></td>
+<td>Para números y fechas.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>email</code>, <code>number</code>, <code>url</code>, etc</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; required /&gt;
+</code></pre>
+<hr>
+<h3 id="14-iframe-y-riesgos">14. Iframe y riesgos</h3>
+<p>Un <strong>iframe</strong> inserta contenido externo dentro de una página.</p>
+<pre><code class="language-html">&lt;iframe src=&quot;https://example.com&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<p><strong>Usos:</strong> - Videos de YouTube. - Mapas interactivos.</p>
+<p><strong>Riesgos:</strong> - Vulnerable a ataques. Se recomienda usar atributos como: &quot; <code>sandbox</code>, <code>allowfullscreen</code> o <code>loading=&quot;lazy&quot;</code> &quot;</p>
 <h1 id="sintaxis">Sintaxis</h1>
 <h2 id="html-y-la-semantica-web">HTML y la semántica web</h2>
 <p>La semántica web implica usar <strong>etiquetas con significado</strong>, de modo que el contenido sea comprensible tanto para humanos como para máquinas (navegadores, buscadores, lectores de pantalla).</p>

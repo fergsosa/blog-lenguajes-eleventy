@@ -15,25 +15,12 @@ date: "2023-02-01"
 
 ### ¿Qué es HTML? _(HyperText Markup Language)_
 
-HTML es el **lenguaje estándar para estructurar y organizar contenido en la web**.
-
- <!-- Permite definir elementos como títulos, párrafos, imágenes, enlaces, formularios y mucho más. -->
-
-No es un lenguaje de programación, sino un **lenguaje de marcado** que describe la estructura y el significado del contenido.
+HTML (_HyperText Markup Language_) es el _lenguaje de marcado_ estándar
+para estructurar y organizar contenido de las páginas web.
 
 ### ¿Para qué sirve HTML?
 
-HTML se utiliza principalmente para **crear la base de una página web**.<br/><br/>
-
-**Con él puedes:**
-
-- Definir la **estructura del contenido** (títulos, párrafos, listas, tablas, etc.).
-- Insertar **enlaces, imágenes, videos y audios**.
-- Crear **formularios** para recopilar información de los usuarios.
-- Integrar otros lenguajes como CSS y JavaScript.
-- Mejorar la **accesibilidad y el SEO** (optimización en buscadores).
-
-> Sin HTML, un sitio web no tendría forma ni contenido visible.
+Su propósito principal es estructurar el contenido de la web mediante etiquetas que definen elementos como texto, imágenes, enlaces,formularios, etc.
 
 ### ¿Cómo funciona HTML?
 
@@ -237,6 +224,210 @@ Todo documento HTML sigue una estructura básica que el navegador puede interpre
 
 - **id** se utiliza para identificar de manera única un elemento.
 - **class** se utiliza para agrupar elementos y aplicar estilos o scripts a múltiples elementos. -->
+
+# Conocimiento General
+
+### 1. Diferencia entre `<div>` y `<span>`
+
+**`<div>`**: Es un elemento de **bloque**, ocupa todo el ancho
+disponible y comienza en una nueva línea.\
+**`<span>`**: Es un elemento **en línea**, solo ocupa el espacio de
+su contenido y no fuerza un salto de línea.
+
+---
+
+### 2. Modelo de caja (Box Model)
+
+Todo elemento en HTML se representa como una caja compuesta por:
+
+1. **Content**: El contenido (texto, imagen, etc.).
+2. **Padding**: Espacio entre el contenido y el borde.
+3. **Border**: El borde alrededor del padding.
+4. **Margin**: Espacio externo que separa el elemento de otros.
+
+---
+
+### 3. Función de `<!DOCTYPE html>`
+
+Indica al navegador qué **versión de HTML** se está utilizando.\
+En HTML5 se usa simplemente:
+
+```html
+<!DOCTYPE html>
+```
+
+Esto asegura que el navegador interprete el documento en **modo
+estándar**, evitando errores de compatibilidad.
+
+---
+
+### 4. Semántica en HTML5
+
+La **semántica** significa usar etiquetas que describan el significado
+del contenido.\
+Esto mejora la **accesibilidad**, **SEO** y la comprensión del código.
+
+**Ejemplos:** `<header>`, `<nav>`, `<article>`, `<section>`, `<footer>`, `<main>`, `<aside>`.
+
+---
+
+### 5. Diferencia entre `id` y `class`
+
+**`id`**: es un identificador único, que no se repite.\
+**`class`**: Agrupa elementos con estilos o comportamientos compartidos.
+
+---
+
+### 6. Insertar una imagen con `<img>`
+
+Etiqueta básica:
+
+```html
+<img src="imagen.jpg" alt="Descripción de la imagen" />
+```
+
+**Atributos obligatorios:**
+
+`src`: Ruta de la imagen.\
+`alt`: Texto alternativo (importante para accesibilidad y SEO).
+
+---
+
+### 7. Uso de `<meta>` y `charset`
+
+- **`<meta>`** define metadatos sobre el documento, como descripción,
+  palabras clave o configuración.\
+- El atributo **`charset`** indica la codificación de caracteres,
+  normalmente UTF-8:
+
+```html
+<meta charset="UTF-8" />
+```
+
+> Esto evita problemas con caracteres especiales como tildes o eñes.
+
+---
+
+### 8. Estructura de una tabla en HTML
+
+Principales etiquetas:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Encabezado 1</th>
+      <th>Encabezado 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dato 1</td>
+      <td>Dato 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>100</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
+| Etiqueta  | Descripción          |
+| :-------: | -------------------- |
+| `<table>` | Tabla.               |
+| `<thead>` | Encabezado.          |
+| `<tbody>` | Cuerpo.              |
+| `<tfoot>` | Pie de tabla.        |
+|  `<tr>`   | Fila.                |
+|  `<th>`   | Celda de encabezado. |
+|  `<td>`   | Celda normal         |
+
+---
+
+### 9. Propósito de `<script>`
+
+Se utiliza para **agregar JavaScript** a la página.
+
+**Ubicaciones recomendadas:**
+
+> Justo antes de `</body>`. Mejor rendimiento porque carga el HTML primero.\
+> En `<head>` con el atributo `defer`:
+
+```html
+<script src="app.js" defer></script>
+```
+
+---
+
+### 10. Diferencia entre `<b>` y `<strong>`, `<i>` y `<em>`
+
+`<b>` y `<i>`: Solo efectos visuales (**negrita** y _cursiva_).\
+ `<strong>` y `<em>`: Dan **énfasis semántico**, usados por lectores de pantalla y SEO.
+
+```html
+<b>Texto importante visualmente</b>
+<strong>Texto importante semánticamente</strong>
+```
+
+---
+
+### 11. Atributos globales
+
+Pueden aplicarse a **cualquier etiqueta HTML**.
+
+**Ejemplos:** - `id` - `class` - `style` - `title` - `hidden` - `lang`
+
+---
+
+### 12. Diferencia entre `localStorage` y `sessionStorage`
+
+Ambos almacenan datos en el navegador.
+
+---
+
+| Característica | localStorage                 | sessionStorage               |
+| -------------- | ---------------------------- | ---------------------------- |
+| Duración       | Permanente (hasta borrar)    | Solo mientras dure la sesión |
+| Tamaño aprox.  | 5-10 MB                      | 5-10 MB                      |
+| Uso común      | Guardar preferencias, tokens | Datos temporales             |
+
+---
+
+---
+
+### 13. Validación de formularios en HTML5
+
+HTML5 incluye atributos que validan datos sin JavaScript:
+
+| atributo     | descripción                        |
+| ------------ | ---------------------------------- |
+| `required`   | Campo obligatorio.                 |
+| `pattern`    | Validar con expresiones regulares. |
+| `min`, `max` | Para números y fechas.             |
+| `type`       | `email`, `number`, `url`, etc      |
+
+**Ejemplo:**
+
+```html
+<input type="email" required />
+```
+
+---
+
+### 14. Iframe y riesgos
+
+Un **iframe** inserta contenido externo dentro de una página.
+
+```html
+<iframe src="https://example.com"></iframe>
+```
+
+**Usos:** - Videos de YouTube. - Mapas interactivos.
+
+**Riesgos:** - Vulnerable a ataques. Se recomienda usar atributos como: " `sandbox`, `allowfullscreen` o `loading="lazy"` "
 
 # Sintaxis
 

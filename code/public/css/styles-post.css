@@ -150,7 +150,8 @@ blockquote {
 
 code {
   color: #f6f6f6;
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
+  font-size: 87%;
 }
 
 form {

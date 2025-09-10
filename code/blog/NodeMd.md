@@ -23,8 +23,8 @@ Permite ejecutar JavaScript fuera del navegador, principalmente para crear servi
 
 ### Diferencia principal entre Node y JavaScript
 
-JavaScript: Lenguaje de programación.
-Node.js: Entorno que permite ejecutar JavaScript en el servidor, con módulos propios (fs, http, etc.) que no existen en el navegador.
+**JavaScript:** Lenguaje de programación.\
+**Node.js:** Entorno que permite ejecutar JavaScript en el servidor, con módulos propios (fs, http, etc.) que no existen en el navegador.
 
 ### ¿Qué se puede hacer con Node.js?
 
@@ -63,7 +63,7 @@ Application Programming Interface: conjunto de reglas que permite que dos aplica
 
 ### ¿Qué es el patrón REST?
 
-Estilo de arquitectura para construir APIs que utiliza HTTP y operaciones como GET, POST, PUT, DELETE, siguiendo convenciones en las rutas y respuestas.
+Estilo de arquitectura para construir APIs que utiliza `HTTP` y operaciones como `GET`, `POST`, `PUT`, `DELETE` siguiendo convenciones en las rutas y respuestas.
 
 ### ¿Qué es Serverless?
 
@@ -97,11 +97,14 @@ Estándar para transmitir información segura entre cliente y servidor en forma 
 
 • Permite organizar equipos y releases de software.
 Estrategia de ramas en Git:
-main → código en producción
-develop → desarrollo estable
-feature → nuevas funcionalidades
-release → versiones previas a producción
-hotfix → correcciones urgentes
+
+|  ramas  | componente                        |
+| :-----: | --------------------------------- |
+|  main   | Código en Producción              |
+| hotfix  | Correcciones Urgentes             |
+| release | Versiones previas a producción    |
+| develop | Integra todas las funcionalidades |
+| feature | Nuevas funcionalidades            |
 
 ### Diferencia entre función y proceso almacenado en SQL
 
@@ -110,13 +113,13 @@ hotfix → correcciones urgentes
 
 ---
 
-## conceptos importantes
+## Conceptos Importantes
 
 - **Modelo cliente / servidor**: solicitudes
 - **Patrón de software**: MVC (modelo vista controlador)
 - **API REST**: CRUD: GET / POST / PUT / DELETE
 
-## Conceptos básicos
+## Conceptos Básicos
 
 - **Entorno de Ejecución**: _( Ejecución de JavaScript en servidor )_
 
