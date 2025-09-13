@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <meta name="description" content="Ideas principales de HTML">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="html">HTML</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/html.avif" alt="HTML"></p>
+<p><a href="#temas">temas</a></p>
+<h2 id="que-es-html">¿Qué es HTML?</h2>
+<p>HTML (<strong>HyperText Markup Language</strong>) es el <strong>lenguaje estándar para estructurar contenido web</strong>.<br>
+A diferencia de lenguajes de programación, <strong>no ejecuta lógica</strong> ni procesos, sino que define la <strong>estructura y semántica</strong> de una página.<br>
+Se complementa con <strong>CSS</strong> para el diseño visual y <strong>JavaScript</strong> para la interactividad.</p>
+<blockquote>
+<p><strong>Clave:</strong> HTML describe <strong>qué es</strong> cada elemento, no <strong>cómo luce</strong> ni <strong>cómo funciona</strong>.</p>
+</blockquote>
+<h3 id="para-que-se-usa">¿Para qué se usa?</h3>
+<p>Se utiliza principalmente para:</p>
+<ul>
+<li>Crear <strong>páginas web</strong> y aplicaciones basadas en navegador.</li>
+<li>Definir la <strong>estructura de documentos digitales</strong> (ej: artículos, blogs, manuales).</li>
+<li>Integrar <strong>contenido multimedia</strong> como imágenes, audio y video.</li>
+<li>Conectar la interfaz visual con datos o sistemas a través de <strong>APIs</strong>.</li>
+</ul>
+<p>Es ideal cuando necesitas <strong>accesibilidad, compatibilidad web y semántica clara</strong>.</p>
+<h3 id="que-puedo-construir-con-html">¿Qué puedo construir con HTML?</h3>
+<p>Con HTML puedes construir:</p>
+<ul>
+<li><strong>Sitios web</strong> (desde estáticos hasta dinámicos).</li>
+<li><strong>Aplicaciones web</strong> junto con CSS y JavaScript.</li>
+<li><strong>Prototipos</strong> para interfaces.</li>
+<li><strong>Documentación técnica</strong> o manuales digitales.</li>
+<li><strong>Plantillas de correo electrónico</strong>.</li>
+</ul>
+<p>Básicamente, cualquier contenido que deba mostrarse en un navegador.</p>
+<h3 id="cuando-es-mas-conveniente-usarlo">¿Cuándo es más conveniente usarlo?</h3>
+<p>Es mejor usar HTML cuando:</p>
+<ul>
+<li>El objetivo es <strong>mostrar contenido estructurado</strong> en la web.</li>
+<li>Necesitas <strong>compatibilidad universal</strong> con navegadores.</li>
+<li>Se requiere <strong>SEO</strong>, accesibilidad o semántica.</li>
+<li>Estás desarrollando interfaces que dependen de otros lenguajes (CSS, JS).</li>
+</ul>
+<p>No es recomendable usarlo <strong>solo</strong>, sin CSS ni JavaScript, si buscas algo altamente interactivo o visualmente complejo.</p>
+<h3 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h3>
+<ul>
+<li><strong>Usa etiquetas semánticas</strong> (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) para mejorar accesibilidad y SEO.</li>
+<li><strong>Estructura tu HTML como un árbol lógico</strong>, con títulos jerárquicos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>).</li>
+<li>Mantén el código <strong>ordenado e indentado</strong>.</li>
+<li><strong>Evita contenido repetitivo</strong>: usa plantillas o componentes reutilizables.</li>
+<li><strong>Optimiza recursos</strong>: imágenes comprimidas, scripts externos y carga diferida.</li>
+<li>Valida tu HTML con herramientas como <a href="https://validator.w3.org/">W3C Validator</a>.</li>
+</ul>
+<blockquote>
+<p><strong>Pro tip:</strong> Mantén siempre el enfoque en la <strong>semántica y accesibilidad</strong>.</p>
+</blockquote>
+<hr>
+<h3 id="sintesis-rapida-de-html">Síntesis rápida de HTML.</h3>
+<ul>
+<li>
+<p><strong>Fortalezas principales:</strong></p>
+<ul>
+<li>Lenguaje base de la web.</li>
+<li>Compatible con todos los navegadores.</li>
+<li>Estructura clara y semántica para SEO y accesibilidad.</li>
+</ul>
+</li>
+<li>
+<p><strong>Debilidades principales:</strong></p>
+<ul>
+<li>No maneja lógica por sí mismo.</li>
+<li>Necesita CSS y JS para diseño e interactividad.</li>
+<li>Limitado fuera del contexto web.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usarlo:</strong></p>
+<ul>
+<li>Para estructurar contenido web.</li>
+<li>En cualquier interfaz que requiera compatibilidad universal.</li>
+<li>Para SEO y accesibilidad.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo evitarlo:</strong></p>
+<ul>
+<li>Si buscas construir <strong>solo con HTML</strong> una aplicación compleja.</li>
+<li>Si necesitas lógica avanzada sin otros lenguajes.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#html">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Para trabajar con HTML de manera efectiva, es importante conocer algunos conceptos relacionados que te ayudarán a entender cómo se integra en el desarrollo web.</p>
+<h3 id="1-css-cascading-style-sheets">1. CSS (Cascading Style Sheets)</h3>
+<p>CSS se utiliza para <strong>dar estilo y diseño visual</strong> a las páginas creadas con HTML.<br>
+Mientras que HTML define la <strong>estructura</strong>, CSS se encarga de cómo se <strong>ve</strong> el contenido.</p>
+<blockquote>
+<p>Ejemplo: cambiar colores, fuentes, tamaños, distribución en pantalla, etc.</p>
+</blockquote>
+<hr>
+<h3 id="2-javascript">2. JavaScript</h3>
+<p>JavaScript es el lenguaje que agrega <strong>interactividad y lógica</strong> a la web.<br>
+Con HTML defines la estructura, con CSS el diseño, y con JS haces que la página <strong>reaccione a eventos</strong> como clics, formularios o animaciones.</p>
+<blockquote>
+<p>Ejemplo: validación de formularios, menús dinámicos, sliders.</p>
+</blockquote>
+<hr>
+<h3 id="3-dom-document-object-model">3. DOM (Document Object Model)</h3>
+<p>El <strong>DOM</strong> es la representación estructurada de tu documento HTML en memoria.<br>
+Permite que JavaScript <strong>acceda y modifique</strong> elementos HTML en tiempo real.</p>
+<blockquote>
+<p>Ejemplo: cambiar el texto de un <code>&lt;p&gt;</code> o mostrar un popup al presionar un botón.</p>
+</blockquote>
+<hr>
+<h3 id="4-seo-search-engine-optimization">4. SEO (Search Engine Optimization)</h3>
+<p>El SEO consiste en optimizar el contenido HTML para que <strong>motores de búsqueda</strong> como Google puedan indexarlo correctamente.<br>
+Esto incluye el uso de <strong>etiquetas semánticas</strong>, meta descripciones y títulos jerárquicos.</p>
+<blockquote>
+<p>Ejemplo: usar <code>&lt;article&gt;</code> para contenido principal, <code>&lt;h1&gt;</code> para el título principal y <code>&lt;meta&gt;</code> para información descriptiva.</p>
+</blockquote>
+<hr>
+<h3 id="5-accesibilidad-web-a11y">5. Accesibilidad Web (A11Y)</h3>
+<p>La accesibilidad busca que <strong>todas las personas</strong>, incluyendo quienes tienen discapacidades, puedan navegar e interactuar con tu contenido.</p>
+<p>Buenas prácticas:</p>
+<ul>
+<li>Uso correcto de etiquetas semánticas.</li>
+<li>Texto alternativo en imágenes (<code>alt</code>).</li>
+<li>Navegación con teclado.</li>
+<li>Contrastes adecuados de color.</li>
+</ul>
+<hr>
+<h3 id="6-etiquetas-semanticas">6. Etiquetas Semánticas</h3>
+<p>Son etiquetas que <strong>describen el significado</strong> de su contenido, mejorando la legibilidad y accesibilidad.</p>
+<p>Ejemplos:</p>
+<ul>
+<li><code>&lt;header&gt;</code> → Encabezado de la página o sección.</li>
+<li><code>&lt;main&gt;</code> → Contenido principal.</li>
+<li><code>&lt;article&gt;</code> → Contenido independiente.</li>
+<li><code>&lt;footer&gt;</code> → Pie de página.</li>
+</ul>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML de manera más eficiente:</p>
+<h3 id="1-editores-de-codigo"><strong>1. Editores de código</strong></h3>
+<ul>
+<li><strong>Visual Studio Code (VSCode):</strong> popular, extensible y con soporte para HTML, CSS y JS.</li>
+<li>Sublime Text: rápido y liviano, ideal para proyectos pequeños.</li>
+<li>Atom: flexible, aunque menos actualizado.</li>
+</ul>
+<blockquote>
+<p>Extensión recomendada en VSCode:</p>
+<ul>
+<li><em>HTML CSS Support</em> para autocompletado.</li>
+<li><em>Prettier</em> para formateo automático.</li>
+<li><em>Live Server</em> para ver cambios en tiempo real.</li>
+</ul>
+</blockquote>
+<hr>
+<h3 id="2-validadores-y-herramientas-de-calidad"><strong>2. Validadores y herramientas de calidad</strong></h3>
+<ul>
+<li><a href="https://validator.w3.org/">W3C Validator</a> → Validación de HTML según los estándares.</li>
+<li><a href="https://webaim.org/">WebAIM</a> → Análisis de accesibilidad.</li>
+<li><a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> → Auditoría de SEO, rendimiento y accesibilidad.</li>
+</ul>
+<hr>
+<h3 id="3-recursos-graficos-y-multimedia"><strong>3. Recursos gráficos y multimedia</strong></h3>
+<ul>
+<li><a href="https://unsplash.com/">Unsplash</a> → Imágenes libres de uso.</li>
+<li><a href="https://pexels.com/">Pexels</a> → Videos e imágenes gratuitas.</li>
+<li><a href="https://tinypng.com/">TinyPNG</a> → Compresión de imágenes sin perder calidad.</li>
+</ul>
+<hr>
+<h3 id="4-herramientas-para-prototipado"><strong>4. Herramientas para prototipado</strong></h3>
+<ul>
+<li><a href="https://figma.com/">Figma</a> → Diseño visual y prototipos de interfaces.</li>
+<li><a href="https://canva.com/">Canva</a> → Creación rápida de diseños simples.</li>
+</ul>
+<hr>
+<h3 id="5-herramientas-de-desarrollo-en-el-navegador"><strong>5. Herramientas de desarrollo en el navegador</strong></h3>
+<p>Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen <strong>DevTools</strong>, útiles para:</p>
+<ul>
+<li>Inspeccionar elementos HTML y CSS.</li>
+<li>Depurar errores en JavaScript.</li>
+<li>Medir rendimiento y accesibilidad.</li>
+</ul>
+<blockquote>
+<p>Atajo común en navegadores: <code>F12</code> o <code>Ctrl + Shift + I</code>.</p>
+</blockquote>
+<hr>
+<h3 id="6-frameworks-y-librerias-para-html"><strong>6. Frameworks y librerías para HTML</strong></h3>
+<p>Si quieres optimizar tu flujo de trabajo con HTML, puedes usar herramientas que te den componentes listos o plantillas:</p>
+<ul>
+<li><strong>Bootstrap</strong> → Para diseño rápido y responsive.</li>
+<li><strong>Tailwind CSS</strong> → Estilos utilitarios y personalizables.</li>
+<li><strong>Materialize</strong> → Basado en Material Design.</li>
+</ul>
+<blockquote>
+<p>Aunque no reemplazan el HTML, te permiten trabajar más rápido con interfaces modernas.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h3 id="1-diferencia-entre-div-y-span">1. Diferencia entre <code>&lt;div&gt;</code> y <code>&lt;span&gt;</code></h3>
+<ul>
+<li><strong><code>&lt;div&gt;</code></strong>: Es un elemento de <strong>bloque</strong>, ocupa todo el ancho disponible y comienza en una nueva línea.</li>
+<li><strong><code>&lt;span&gt;</code></strong>: Es un elemento <strong>en línea</strong>, solo ocupa el espacio de
+su contenido y no fuerza un salto de línea.</li>
+</ul>
+<h3 id="2-modelo-de-caja-box-model">2. Modelo de caja (Box Model)</h3>
+<p>Todo elemento en HTML se representa como una caja compuesta por:</p>
+<ul>
+<li><strong>Content</strong>: El contenido (texto, imagen, etc.).</li>
+<li><strong>Padding</strong>: Espacio entre el contenido y el borde.</li>
+<li><strong>Border</strong>: El borde alrededor del padding.</li>
+<li><strong>Margin</strong>: Espacio externo que separa el elemento de otros.</li>
+</ul>
+<h3 id="3-funcion-de-doctype-html">3. Función de <code>&lt;!DOCTYPE html&gt;</code></h3>
+<p>Indica al navegador qué <strong>versión de HTML</strong> se está utilizando.<br>
+En HTML5 se usa simplemente:</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+</code></pre>
+<p>Esto asegura que el navegador interprete el documento en <strong>modo
+estándar</strong>, evitando errores de compatibilidad.</p>
+<h3 id="4-semantica-en-html5">4. Semántica en HTML5</h3>
+<p>La <strong>semántica</strong> significa usar etiquetas que describan el significado
+del contenido.<br>
+Esto mejora la <strong>accesibilidad</strong>, <strong>SEO</strong> y la comprensión del código.</p>
+<blockquote>
+<p><strong>Ejemplos:</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;aside&gt;</code>.</p>
+</blockquote>
+<h3 id="5-diferencia-entre-id-y-class">5. Diferencia entre <code>id</code> y <code>class</code></h3>
+<ul>
+<li><strong><code>id</code></strong>: es un identificador único, que no se repite.</li>
+<li><strong><code>class</code></strong>: Agrupa elementos con estilos o comportamientos compartidos.</li>
+</ul>
+<h3 id="6-insertar-una-imagen-con-img">6. Insertar una imagen con <code>&lt;img&gt;</code></h3>
+<p>Etiqueta básica:</p>
+<pre><code class="language-html">&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;
+</code></pre>
+<p><strong>Atributos obligatorios:</strong></p>
+<ul>
+<li><strong><code>src:</code></strong> Ruta de la imagen.</li>
+<li><strong><code>alt:</code></strong> Texto alternativo (importante para accesibilidad y SEO).</li>
+</ul>
+<h3 id="7-uso-de-meta-y-charset">7. Uso de <code>&lt;meta&gt;</code> y <code>charset</code></h3>
+<ul>
+<li><strong><code>&lt;meta&gt;</code></strong> define metadatos sobre el documento, como descripción,
+palabras clave o configuración.\</li>
+<li>El atributo <strong><code>charset</code></strong> indica la codificación de caracteres,
+normalmente UTF-8:</li>
+</ul>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot; /&gt;
+</code></pre>
+<blockquote>
+<p>Esto evita problemas con caracteres especiales como tildes o eñes.</p>
+</blockquote>
+<h3 id="8-estructura-de-una-tabla-en-html">8. Estructura de una tabla en HTML</h3>
+<p><strong>Principales etiquetas:</strong></p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Encabezado 1&lt;/th&gt;
+      &lt;th&gt;Encabezado 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Dato 1&lt;/td&gt;
+      &lt;td&gt;Dato 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Total&lt;/td&gt;
+      &lt;td&gt;100&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;table&gt;</code></td>
+<td>Tabla.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;thead&gt;</code></td>
+<td>Encabezado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tbody&gt;</code></td>
+<td>Cuerpo.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tfoot&gt;</code></td>
+<td>Pie de tabla.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;tr&gt;</code></td>
+<td>Fila.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;th&gt;</code></td>
+<td>Celda de encabezado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;td&gt;</code></td>
+<td>Celda normal</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-proposito-de-script">9. Propósito de <code>&lt;script&gt;</code></h3>
+<p>Se utiliza para <strong>agregar JavaScript</strong> a la página.</p>
+<ul>
+<li><strong>Ubicaciones recomendadas:</strong>
+<ul>
+<li>Justo antes de <code>&lt;/body&gt;</code>. Mejor rendimiento porque carga el HTML primero.</li>
+<li>En <code>&lt;head&gt;</code> con el atributo <code>defer</code>:</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<h3 id="10-diferencia-entre-b-y-strong-i-y-em">10. Diferencia entre <code>&lt;b&gt;</code> y <code>&lt;strong&gt;</code>, <code>&lt;i&gt;</code> y <code>&lt;em&gt;</code></h3>
+<ul>
+<li><strong><code>&lt;b&gt;</code> y <code>&lt;i&gt;</code>:</strong>
+<ul>
+<li>Solo efectos visuales (<strong>negrita</strong> y <em>cursiva</em>).</li>
+</ul>
+</li>
+<li><strong><code>&lt;strong&gt;</code> y <code>&lt;em&gt;</code>:</strong>
+<ul>
+<li>Dan <strong>énfasis semántico</strong>, usados por lectores de pantalla y SEO.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-html">&lt;b&gt;Texto importante visualmente&lt;/b&gt;
+&lt;strong&gt;Texto importante semánticamente&lt;/strong&gt;
+</code></pre>
+<h3 id="11-atributos-globales">11. Atributos globales</h3>
+<p>Pueden aplicarse a <strong>cualquier etiqueta HTML</strong>.</p>
+<blockquote>
+<p><strong>Ejemplos:</strong> - <code>id</code> - <code>class</code> - <code>style</code> - <code>title</code> - <code>hidden</code> - <code>lang</code></p>
+</blockquote>
+<h3 id="12-diferencia-entre-localstorage-y-sessionstorage">12. Diferencia entre <code>localStorage</code> y <code>sessionStorage</code></h3>
+<p>Ambos almacenan datos en el navegador.</p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th>localStorage</th>
+<th>sessionStorage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duración</td>
+<td>Permanente (hasta borrar)</td>
+<td>Solo mientras dure la sesión</td>
+</tr>
+<tr>
+<td>Tamaño aprox.</td>
+<td>5-10 MB</td>
+<td>5-10 MB</td>
+</tr>
+<tr>
+<td>Uso común</td>
+<td>Guardar preferencias, tokens</td>
+<td>Datos temporales</td>
+</tr>
+</tbody>
+</table>
+<h3 id="13-validacion-de-formularios-en-html5">13. Validación de formularios en HTML5</h3>
+<p>HTML5 incluye atributos que validan datos sin JavaScript:</p>
+<blockquote>
+<p><strong>Ejemplo:</strong></p>
+</blockquote>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; required /&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>atributo</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>required</code></td>
+<td>Campo obligatorio.</td>
+</tr>
+<tr>
+<td><code>pattern</code></td>
+<td>Validar con expresiones regulares.</td>
+</tr>
+<tr>
+<td><code>min</code>, <code>max</code></td>
+<td>Para números y fechas.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>email</code>, <code>number</code>, <code>url</code>, etc</td>
+</tr>
+</tbody>
+</table>
+<h3 id="14-iframe-y-riesgos">14. Iframe y riesgos</h3>
+<p>Un <strong>iframe</strong> inserta contenido externo dentro de una página.</p>
+<pre><code class="language-html">&lt;iframe src=&quot;https://example.com&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<ul>
+<li><strong>Usos:</strong>
+<ul>
+<li>Videos de YouTube.</li>
+<li>Mapas interactivos.</li>
+</ul>
+</li>
+<li><strong>Riesgos:</strong>
+<ul>
+<li>Vulnerable a ataques.</li>
+<li>Se recomienda usar atributos como: &quot; <code>sandbox</code>, <code>allowfullscreen</code> o <code>loading=&quot;lazy&quot;</code> &quot;</li>
+</ul>
+</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="sintaxis">Sintaxis</h1>
+<h2 id="html-y-la-semantica-web">HTML y la semántica web</h2>
+<p>La semántica web implica usar <strong>etiquetas con significado</strong>, de modo que el contenido sea comprensible tanto para humanos como para máquinas (navegadores, buscadores, lectores de pantalla).</p>
+<hr>
+<h2 id="cabecera">Cabecera</h2>
+<p>La cabecera (<code>&lt;head&gt;</code>) contiene <strong>información sobre el documento</strong>, como título, metadatos y enlaces a recursos externos.</p>
+<h3 id="etiquetas-de-cabecera">Etiquetas de cabecera</h3>
+<h4 id="1-que-son-las-etiquetas-head">1. ¿Qué son las etiquetas <code>&lt;head&gt;</code>?</h4>
+<p>Son etiquetas que no se muestran en el cuerpo de la página, pero que configuran cómo se interpreta y procesa el sitio.</p>
+<p>Estructura básica:</p>
+<pre><code class="language-html">&lt;head&gt;
+  &lt;title&gt;Mi sitio web&lt;/title&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;/head&gt;
+</code></pre>
+<h4 id="2-la-etiqueta-title">2. La etiqueta <code>&lt;title&gt;</code></h4>
+<p>Define el <strong>título de la página</strong>, visible en la pestaña del navegador.</p>
+<pre><code class="language-html">&lt;title&gt;Documentación de HTML5&lt;/title&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-base">3. La etiqueta <code>&lt;base&gt;</code></h4>
+<p>Establece una URL base para todas las rutas relativas del documento.</p>
+<pre><code class="language-html">&lt;base href=&quot;https://example.com/&quot; /&gt;
+</code></pre>
+<h3 id="metadatos">Metadatos</h3>
+<h4 id="1-la-etiqueta-meta">1. La etiqueta <code>&lt;meta&gt;</code></h4>
+<p>Se usa para definir <strong>información adicional</strong> como codificación, descripción y viewport.</p>
+<pre><code class="language-html">&lt;meta charset=&quot;UTF-8&quot; /&gt;
+&lt;meta name=&quot;description&quot; content=&quot;Curso completo de HTML5&quot; /&gt;
+&lt;meta name=&quot;keywords&quot; content=&quot;HTML, tutorial, curso&quot; /&gt;
+</code></pre>
+<h4 id="2-etiquetas-para-redes-sociales">2. Etiquetas para redes sociales</h4>
+<p>Para mejorar la vista previa en redes sociales:</p>
+<pre><code class="language-html">&lt;meta property=&quot;og:title&quot; content=&quot;Mi sitio web&quot; /&gt;
+&lt;meta property=&quot;og:image&quot; content=&quot;imagen.jpg&quot; /&gt;
+&lt;meta property=&quot;og:description&quot; content=&quot;Descripción del sitio&quot; /&gt;
+</code></pre>
+<h4 id="3-etiquetas-para-seo-google">3. Etiquetas para SEO / Google</h4>
+<pre><code class="language-html">&lt;meta name=&quot;robots&quot; content=&quot;index, follow&quot; /&gt;
+</code></pre>
+<h4 id="4-etiqueta-para-diseno-responsive">4. Etiqueta para diseño responsive</h4>
+<p>Permite que la página se adapte a móviles.</p>
+<pre><code class="language-html">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+</code></pre>
+<h3 id="recursos-externos">Recursos externos</h3>
+<h4 id="1-la-etiqueta-link">1. La etiqueta <code>&lt;link&gt;</code></h4>
+<p>Sirve para enlazar recursos como hojas de estilo o íconos.</p>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot; /&gt;
+</code></pre>
+<h4 id="2-stylesheet-hojas-de-estilo-externas">2. Stylesheet: Hojas de estilo externas</h4>
+<pre><code class="language-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/estilos.css&quot; /&gt;
+</code></pre>
+<h4 id="3-favicon-el-icono-de-las-pestanas">3. Favicon: El ícono de las pestañas</h4>
+<pre><code class="language-html">&lt;link rel=&quot;icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot; /&gt;
+</code></pre>
+<h4 id="4-etiquetas-html-de-precarga">4. Etiquetas HTML de precarga</h4>
+<p>Mejoran la performance cargando recursos antes de necesitarlos.</p>
+<pre><code class="language-html">&lt;link rel=&quot;preload&quot; href=&quot;video.mp4&quot; as=&quot;video&quot; /&gt;
+</code></pre>
+<hr>
+<h2 id="agrupacion">Agrupación</h2>
+<p>Se usan etiquetas para organizar contenido en bloques, como <code>&lt;div&gt;,</code> <code>&lt;section&gt;</code> o <code>&lt;article&gt;.</code> Facilitan la estructura y el estilo de la página.</p>
+<h3 id="etiquetas-de-agrupacion">Etiquetas de agrupación</h3>
+<h4 id="1-las-etiquetas-de-agrupacion">1. Las etiquetas de agrupación</h4>
+<p>Se usan para <strong>organizar contenido</strong> en bloques lógicos.</p>
+<h4 id="2-la-etiqueta-div">2. La etiqueta <code>&lt;div&gt;</code></h4>
+<p>Elemento genérico de bloque:</p>
+<pre><code class="language-html">&lt;div class=&quot;contenedor&quot;&gt;Contenido aquí&lt;/div&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-p">3. La etiqueta <code>&lt;p&gt;</code></h4>
+<p>Define un párrafo:</p>
+<pre><code class="language-html">&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;
+</code></pre>
+<h4 id="4-la-etiqueta-blockquote">4. La etiqueta <code>&lt;blockquote&gt;</code></h4>
+<p>Para citas extensas:</p>
+<pre><code class="language-html">&lt;blockquote&gt;&quot;El aprendizaje nunca se detiene.&quot;&lt;/blockquote&gt;
+</code></pre>
+<h4 id="5-la-etiqueta-pre">5. La etiqueta <code>&lt;pre&gt;</code></h4>
+<p>Muestra texto con formato preservado:</p>
+<pre><code class="language-html">&lt;pre&gt;
+Texto con
+espacios y saltos de línea
+tal como se escribe
+&lt;/pre&gt;
+</code></pre>
+<h4 id="6-la-etiqueta-dl">6. La etiqueta <code>&lt;dl&gt;</code></h4>
+<p>Listas descriptivas:</p>
+<pre><code class="language-html">&lt;dl&gt;
+  &lt;dt&gt;HTML&lt;/dt&gt;
+  &lt;dd&gt;Lenguaje de marcado de hipertexto&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
+<h4 id="7-la-etiqueta-figure">7. La etiqueta <code>&lt;figure&gt;</code></h4>
+<p>Se usa para imágenes y contenido asociado:</p>
+<pre><code class="language-html">&lt;figure&gt;
+  &lt;img src=&quot;foto.jpg&quot; alt=&quot;Paisaje&quot; /&gt;
+  &lt;figcaption&gt;Paisaje de montaña&lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre>
+<hr>
+<h3 id="etiquetas-multimedia">Etiquetas multimedia</h3>
+<h4 id="1-la-etiqueta-img">1. La etiqueta <code>&lt;img&gt;</code></h4>
+<pre><code class="language-html">&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;
+</code></pre>
+<h4 id="2-la-etiqueta-picture">2. La etiqueta <code>&lt;picture&gt;</code></h4>
+<p>Permite imágenes adaptativas:</p>
+<pre><code class="language-html">&lt;picture&gt;
+  &lt;source srcset=&quot;imagen.webp&quot; type=&quot;image/webp&quot; /&gt;
+  &lt;img src=&quot;imagen.jpg&quot; alt=&quot;Imagen adaptable&quot; /&gt;
+&lt;/picture&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-video">3. La etiqueta <code>&lt;video&gt;</code></h4>
+<pre><code class="language-html">&lt;video controls&gt;
+  &lt;source src=&quot;video.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+  Tu navegador no soporta video.
+&lt;/video&gt;
+</code></pre>
+<h4 id="4-formatos-multimedia-recomendados">4. Formatos multimedia recomendados</h4>
+<ul>
+<li><strong>Imágenes</strong>: WebP, AVIF, JPG, PNG, SVG.</li>
+<li><strong>Videos</strong>: MP4 (H.264), WebM.</li>
+<li><strong>Audio</strong>: MP3, OGG.</li>
+</ul>
+<h4 id="5-la-etiqueta-track">5. La etiqueta <code>&lt;track&gt;</code></h4>
+<p>Subtítulos para videos:</p>
+<pre><code class="language-html">&lt;track src=&quot;subtitulos.vtt&quot; kind=&quot;subtitles&quot; srclang=&quot;es&quot; label=&quot;Español&quot; /&gt;
+</code></pre>
+<h4 id="6-la-etiqueta-iframe">6. La etiqueta <code>&lt;iframe&gt;</code></h4>
+<p>Insertar contenido externo:</p>
+<pre><code class="language-html">&lt;iframe src=&quot;https://example.com&quot; title=&quot;Contenido externo&quot;&gt;&lt;/iframe&gt;
+</code></pre>
+<hr>
+<h2 id="texto-y-formato">Texto y formato</h2>
+<p>Incluye etiquetas para dar estilo y significado al texto, como <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code> o <code>&lt;a&gt;</code> para enlaces, y también para mostrar código o saltos de línea.</p>
+<h3 id="etiquetas-de-formato">Etiquetas de formato</h3>
+<h4 id="1-etiquetas-semanticas-de-texto">1. Etiquetas semánticas de texto</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;strong&gt;</code></td>
+<td>Texto importante.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;em&gt;</code></td>
+<td>Énfasis.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;mark&gt;</code></td>
+<td>Resaltado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;s&gt;</code></td>
+<td>Texto incorrecto o eliminado.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-la-etiqueta-span">2. La etiqueta <code>&lt;span&gt;</code></h4>
+<p>Para estilizar texto en línea:</p>
+<pre><code class="language-html">&lt;p&gt;Hola &lt;span class=&quot;resaltado&quot;&gt;mundo&lt;/span&gt;&lt;/p&gt;
+</code></pre>
+<h4 id="3-la-etiqueta-br-y-wbr">3. La etiqueta <code>&lt;br&gt;</code> y <code>&lt;wbr&gt;</code></h4>
+<p>Salto de línea forzado:</p>
+<pre><code class="language-html">Hola&lt;br /&gt;Mundo
+</code></pre>
+<p>Salto condicional (<code>&lt;wbr&gt;</code>) en palabras largas:</p>
+<pre><code class="language-html">supercalifragilistico&lt;wbr /&gt;espialidoso
+</code></pre>
+<hr>
+<h3 id="etiquetas-de-enlaces">Etiquetas de enlaces</h3>
+<h4 id="1-enlaces-o-hipervinculos">1. Enlaces o hipervínculos</h4>
+<pre><code class="language-html">&lt;a href=&quot;https://example.com&quot;&gt;Ir a ejemplo&lt;/a&gt;
+</code></pre>
+<h4 id="2-atributos-utiles">2. Atributos útiles</h4>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>target=&quot;_blank&quot;</code></td>
+<td>Abre en nueva pestaña.</td>
+</tr>
+<tr>
+<td><code>rel=&quot;noopener noreferrer&quot;</code></td>
+<td>Seguridad en enlaces externos.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-tecnicas">Etiquetas técnicas</h3>
+<h4 id="1-kbd-y-samp">1. <code>&lt;kbd&gt;</code> y <code>&lt;samp&gt;</code></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;kbd&gt;</code></td>
+<td>Entrada de teclado.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;samp&gt;</code></td>
+<td>Salida de un programa.</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-html">Presiona &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;C&lt;/kbd&gt;
+</code></pre>
+<h4 id="2-time-y-data">2. <code>&lt;time&gt;</code> y <code>&lt;data&gt;</code></h4>
+<pre><code class="language-html">&lt;time datetime=&quot;2025-09-09&quot;&gt;9 de septiembre de 2025&lt;/time&gt;
+&lt;data value=&quot;12345&quot;&gt;Producto 12345&lt;/data&gt;
+</code></pre>
+<h4 id="3-code">3. <code>&lt;code&gt;</code></h4>
+<pre><code class="language-html">&lt;code&gt;console.log(&quot;Hola mundo&quot;);&lt;/code&gt;
+</code></pre>
+<hr>
+<h2 id="semantica">Semántica</h2>
+<p>Son etiquetas que dan sentido al contenido, como <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code> o <code>&lt;table&gt;</code>. Ayudan a la accesibilidad y al SEO.</p>
+<h3 id="etiquetas-semanticas">Etiquetas semánticas</h3>
+<h4 id="1-etiquetas-de-seccion">1. Etiquetas de sección</h4>
+<ul>
+<li><code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code></li>
+<li><code>&lt;main&gt;</code>, <code>&lt;section&gt;</code></li>
+<li><code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code></li>
+</ul>
+<h4 id="2-ejemplo">2. Ejemplo:</h4>
+<pre><code class="language-html">&lt;article&gt;
+  &lt;h2&gt;Noticia&lt;/h2&gt;
+  &lt;p&gt;Contenido de la noticia...&lt;/p&gt;
+&lt;/article&gt;
+</code></pre>
+<h4 id="3-jerarquia-de-titulos-h1-a-h6">3. Jerarquía de títulos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</h4>
+<p>Siempre debe existir un solo <code>&lt;h1&gt;</code> por página.</p>
+<hr>
+<h3 id="etiquetas-de-texto-semantico">Etiquetas de texto semántico</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;q&gt;</code></td>
+<td>Citas cortas.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;cite&gt;</code></td>
+<td>Referencias.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;small&gt;</code></td>
+<td>Texto de menor importancia.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;abbr&gt;</code></td>
+<td>Abreviaturas con significado.</td>
+</tr>
+<tr>
+<td style="text-align:center">``y<code>&lt;del&gt;</code></td>
+<td>Texto agregado o eliminado.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-de-tablas">Etiquetas de tablas</h3>
+<p>Estructura básica:</p>
+<pre><code class="language-html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Nombre&lt;/th&gt;
+    &lt;th&gt;Edad&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Ana&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<hr>
+<hr>
+<h2 id="formularios">Formularios</h2>
+<p>Permiten recoger información del usuario con <code>&lt;form&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, <code>&lt;select&gt;</code> y botones, incluyendo validaciones y tipos especiales.</p>
+<h3 id="etiquetas-principales">Etiquetas principales</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>&lt;form&gt;</code></td>
+<td>Contenedor de formulario.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;input&gt;</code></td>
+<td>Campo de entrada.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;textarea&gt;</code></td>
+<td>Texto largo.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></td>
+<td>Listas desplegables.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-especializadas">Etiquetas especializadas</h3>
+<p>Ejemplo <code>&lt;input&gt;</code> con tipos:</p>
+<pre><code class="language-html">&lt;input type=&quot;number&quot; placeholder=&quot;Edad&quot; /&gt;
+&lt;input type=&quot;date&quot; /&gt;
+&lt;input type=&quot;checkbox&quot; /&gt; Acepto términos
+&lt;input type=&quot;color&quot; /&gt;
+&lt;input type=&quot;file&quot; /&gt;
+</code></pre>
+<hr>
+<h3 id="envio-de-formularios">Envío de formularios</h3>
+<ul>
+<li>Botón tradicional:</li>
+</ul>
+<pre><code class="language-html">&lt;input type=&quot;submit&quot; value=&quot;Enviar&quot; /&gt;
+</code></pre>
+<ul>
+<li>Botón personalizado:</li>
+</ul>
+<pre><code class="language-html">&lt;button&gt;Enviar&lt;/button&gt;
+</code></pre>
+<hr>
+<h3 id="validaciones-basicas">Validaciones básicas</h3>
+<pre><code class="language-html">&lt;input type=&quot;email&quot; required /&gt; &lt;input type=&quot;text&quot; pattern=&quot;[A-Za-z]{3,}&quot; /&gt;
+</code></pre>
+<hr>
+<hr>
+<h2 id="interactividad">Interactividad</h2>
+<p>Se usan para hacer la página dinámica, con <code>&lt;script&gt;</code> para JavaScript y etiquetas como <code>&lt;details&gt;</code>, <code>&lt;dialog&gt;</code> o <code>&lt;template&gt;</code> para contenido interactivo.</p>
+<h3 id="etiquetas-de-scripting">Etiquetas de scripting</h3>
+<h4 id="1-script">1. <code>&lt;script&gt;</code></h4>
+<pre><code class="language-html">&lt;script src=&quot;app.js&quot; defer&gt;&lt;/script&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Etiqueta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>defer</code></td>
+<td>Ejecuta después de cargar el DOM.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>async</code></td>
+<td>Ejecuta en paralelo.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="etiquetas-interactivas">Etiquetas interactivas</h3>
+<ul>
+<li><code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>:</li>
+</ul>
+<pre><code class="language-html">&lt;details&gt;
+  &lt;summary&gt;Más información&lt;/summary&gt;
+  &lt;p&gt;Texto oculto que se despliega al hacer clic.&lt;/p&gt;
+&lt;/details&gt;
+</code></pre>
+<ul>
+<li><code>&lt;dialog&gt;</code>:</li>
+</ul>
+<pre><code class="language-html">&lt;dialog open&gt;Este es un diálogo&lt;/dialog&gt;
+</code></pre>
+<ul>
+<li><code>&lt;template&gt;</code> para contenido dinámico:</li>
+</ul>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;p&gt;Contenido dinámico&lt;/p&gt;
+&lt;/template&gt;
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/MarkdownMd/">
+              Markdown
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTMLMd/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/GitMd/">
+              Git
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/NodeMd/">
+              Node.js
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Plantilla/">
+              Plantilla
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

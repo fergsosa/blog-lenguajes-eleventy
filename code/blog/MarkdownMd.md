@@ -11,7 +11,7 @@ date: "2023-02-03"
 
 ![{{title}}]({{img}})
 
-# <!-- Que es -->
+# <!--! Que es -->
 
 ## ¿Qué es?
 
@@ -99,10 +99,10 @@ Los párrafos cortos son aquellos párrafos que tienen entre tres y seis líneas
 
 ## Citas
 
-Las citas se crean con el carácter > al inicio de la línea.\
-Para anidar citas, se agrega otro >> adicional.
+Las citas se crean con el carácter `>` al inicio de la línea.\
+Para anidar citas, se agrega otro `>>` adicional.
 
-> ##### \> CITAS ANIDADAS
+> \> **Citas Anidadas**
 >
 > > \>\> Siempre tienes opción de no tener opinión. - Marcos Aurelio.\
 > > \>\> Todo lo que escuchamos es una opinión, no un hecho.\
@@ -110,15 +110,12 @@ Para anidar citas, se agrega otro >> adicional.
 > >
 > > > \>\>\> _Marcos Aurelio_
 
-### Alertas
-
-> \> [!NOTA] _Información útil que los usuarios deben conocer._
-
-> \> [!IMPORTANT] _Información clave que los usuarios deben conocer._
-
-> \> [!WARNING] _Información urgente que requiere la atención del usuario._
-
-> \> [!PRECAUCIÓN] _Advierte sobre los riesgos._
+> \> **Alertas**
+>
+> > \>\> [!NOTA] _Información útil que los usuarios deben conocer._\
+> > \>\> [!IMPORTANT] _Información clave que los usuarios deben conocer._\
+> > \>\> [!WARNING] _Información urgente que requiere la atención del usuario._\
+> > \>\> [!PRECAUCIÓN] _Advierte sobre los riesgos._
 
 ## Listas
 

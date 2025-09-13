@@ -4,14 +4,16 @@ title: Node.js
 img: /img/portada/node.avif
 description: Ideas principales de Node.js
 tags: ["blog", "lenguajes"]
-date: "2023-02-02"
+date: "2024-01-01"
 ---
 
 # {{title}}
 
 ![{{title}}]({{img}})
 
-## ¿Qué es Node.js y en qué se diferencia de otros?
+# <!--! Que es -->
+
+## ¿Qué es Node.js?
 
 Node.js es un **entorno de ejecución de JavaScript** que se ejecuta **fuera del navegador**, construido sobre el motor V8 de Google Chrome.  
 Permite usar JavaScript en el **lado del servidor** para crear aplicaciones escalables y rápidas.
@@ -27,7 +29,7 @@ Permite usar JavaScript en el **lado del servidor** para crear aplicaciones esca
 - **Comunidad y ecosistema:**
   - Cuenta con NPM, uno de los gestores de paquetes más grandes del mundo.
 
-## ¿Para qué se usa y en qué contextos?
+### ¿Para qué se usa?
 
 Node.js se utiliza principalmente para **aplicaciones que necesitan alta concurrencia** y operaciones en tiempo real, como:
 
@@ -39,23 +41,23 @@ Node.js se utiliza principalmente para **aplicaciones que necesitan alta concurr
 
 **Mejor contexto:** cuando hay muchas operaciones de **entrada/salida (I/O)** y se busca eficiencia sin bloquear procesos.
 
-## ¿Qué puedo construir con Node.js?
+### ¿Qué puedo construir con Node.js?
 
 Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
-- Backend de aplicaciones web:
+- **Backend de aplicaciones web:**
   - REST API, GraphQL.
-- Sistemas en tiempo real:
+- **Sistemas en tiempo real:**
   - chat, juegos multijugador, notificaciones en vivo.
-- Aplicaciones de streaming:
+- **Aplicaciones de streaming:**
   - Netflix, Spotify, etc.
-- Automatizaciones y scripts:
+- **Automatizaciones y scripts:**
   - bots, web scraping, herramientas CLI.
-- Microservicios y arquitecturas distribuidas.
-- Aplicaciones serverless:
+- **Microservicios y arquitecturas distribuidas.**
+- **Aplicaciones serverless:**
   - con plataformas como AWS Lambda o Vercel.
 
-## ¿Cuándo es más conveniente usarlo?
+### ¿Cuándo es más conveniente usarlo?
 
 #### Conviene usar Node.js cuando:
 
@@ -70,7 +72,7 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 - El sistema requiere **operaciones complejas y secuenciales** que no se benefician de la asincronía.
 - El equipo no tiene experiencia en asincronía y manejo de promesas.
 
-## Buenas prácticas y patrones recomendados para Node.js
+### Buenas prácticas recomendadas
 
 - **Estructura modular:**
   - separar el proyecto en controladores, rutas, servicios y utilidades.
@@ -97,7 +99,7 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
 ---
 
-## Resumen final
+### Síntesis rápida de Node.js
 
 - **Fortalezas principales:**
 
@@ -120,6 +122,17 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 - **Cuándo evitarlo:**
   - Procesamiento intensivo como inteligencia artificial, renderizado 3D o cálculos matemáticos complejos.
   - Sistemas que requieren lógica de negocio muy secuencial y pesada.
+
+---
+
+# Temas {#temas#}
+
+- [inicio](#node-js)
+- [Conceptos relacionados](#conceptos-relacionados)
+- [Herramientas recomendadas](#herramientas-recomendadas)
+- [Conceptos Claves](#conceptos-claves)
+- [Comandos](#comandos)
+- [Otros artículos](#categorias)
 
 ---
 
@@ -257,7 +270,11 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
 > Estas herramientas combinadas permiten construir aplicaciones Node.js **seguras, escalables y mantenibles**, desde prototipos rápidos hasta sistemas de gran escala.
 
-# Conceptos
+[🔼 temas](#temas)
+
+---
+
+# Conceptos Claves
 
 - **Modelo cliente / servidor**: solicitudes
 - **Patrón de software**: MVC (modelo vista controlador)
@@ -365,6 +382,10 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
   - _Herramientas para depurar código Node.js._
   - Debugger: Node.js ofrece herramientas integradas de depuración que permiten inspeccionar el estado de ejecución de una aplicación, establecer puntos de interrupción, rastrear variables y ejecutar el código paso a paso para identificar y corregir errores.
 
+[🔼 temas](#temas)
+
+---
+
 # Comandos
 
 ## Control de versiones de Node
@@ -428,6 +449,10 @@ npx <command>   # Ejecuta comandos npm sin necesidad de instalarlos globalmente.
 nvm install 14.17.0   # instalar la versión n°
 nvm use 14.17.0       # usar la versión n°
 ```
+
+---
+
+[🔼 temas](#temas)
 
 ---
 
@@ -613,3 +638,7 @@ res.render("index", { titulo: "Página de Inicio" });
 ```
 
 #### Estos métodos son fundamentales para trabajar con Express y permiten manejar y responder a las solicitudes HTTP de manera efectiva.
+
+[🔼 temas](#temas)
+
+---

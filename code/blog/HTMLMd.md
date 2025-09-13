@@ -4,248 +4,256 @@ title: HTML
 img: /img/portada/html.avif
 description: Ideas principales de HTML
 tags: ["blog", "lenguajes"]
-date: "2023-02-01"
+date: "2023-03-01"
 ---
 
 # {{title}}
 
 ![{{title}}]({{img}})
 
-# <!--! Que es HTML -->
+[temas](#temas)
 
-### ¿Qué es HTML? _(HyperText Markup Language)_
+## ¿Qué es HTML?
 
-HTML (_HyperText Markup Language_) es el _lenguaje de marcado_ estándar
-para estructurar y organizar contenido de las páginas web.
+HTML (**HyperText Markup Language**) es el **lenguaje estándar para estructurar contenido web**.  
+A diferencia de lenguajes de programación, **no ejecuta lógica** ni procesos, sino que define la **estructura y semántica** de una página.  
+Se complementa con **CSS** para el diseño visual y **JavaScript** para la interactividad.
 
-### ¿Para qué sirve HTML?
+> **Clave:** HTML describe **qué es** cada elemento, no **cómo luce** ni **cómo funciona**.
 
-Su propósito principal es estructurar el contenido de la web mediante etiquetas que definen elementos como texto, imágenes, enlaces,formularios, etc.
+### ¿Para qué se usa?
 
-### ¿Cómo funciona HTML?
+Se utiliza principalmente para:
 
-HTML funciona mediante **etiquetas** que el navegador interpreta para mostrar el contenido correctamente.\
-Cada etiqueta indica qué tipo de elemento se está creando.  
-Las etiquetas normalmente tienen una **apertura** `<p>` y un **cierre** `</p>`:
+- Crear **páginas web** y aplicaciones basadas en navegador.
+- Definir la **estructura de documentos digitales** (ej: artículos, blogs, manuales).
+- Integrar **contenido multimedia** como imágenes, audio y video.
+- Conectar la interfaz visual con datos o sistemas a través de **APIs**.
 
-```html
-<p>Este es un párrafo</p>
-```
+Es ideal cuando necesitas **accesibilidad, compatibilidad web y semántica clara**.
 
-### ¿Por qué usar HTML?
+### ¿Qué puedo construir con HTML?
 
-1. **Estándar universal:** Todo navegador entiende HTML, lo que lo hace compatible en cualquier plataforma.
+Con HTML puedes construir:
 
-2. **Base de la web:** Es el punto de partida para usar CSS y JavaScript.
+- **Sitios web** (desde estáticos hasta dinámicos).
+- **Aplicaciones web** junto con CSS y JavaScript.
+- **Prototipos** para interfaces.
+- **Documentación técnica** o manuales digitales.
+- **Plantillas de correo electrónico**.
 
-3. **Simple y accesible:** Su sintaxis es sencilla de aprender y muy legible.
+Básicamente, cualquier contenido que deba mostrarse en un navegador.
 
-4. **Personalización:** Permite crear páginas a medida con una gran variedad de elementos.
+### ¿Cuándo es más conveniente usarlo?
 
-5. **SEO y accesibilidad:** Bien estructurado, mejora la visibilidad en buscadores y la experiencia de usuarios con discapacidades.
+Es mejor usar HTML cuando:
 
-> Sin HTML, simplemente no existiría la web como la conocemos.
+- El objetivo es **mostrar contenido estructurado** en la web.
+- Necesitas **compatibilidad universal** con navegadores.
+- Se requiere **SEO**, accesibilidad o semántica.
+- Estás desarrollando interfaces que dependen de otros lenguajes (CSS, JS).
 
----
+No es recomendable usarlo **solo**, sin CSS ni JavaScript, si buscas algo altamente interactivo o visualmente complejo.
 
-<!--! # Sintaxis de HTML
+### Buenas prácticas recomendadas
 
-## Estructura básica d
+- **Usa etiquetas semánticas** (`<header>`, `<main>`, `<article>`, `<footer>`) para mejorar accesibilidad y SEO.
+- **Estructura tu HTML como un árbol lógico**, con títulos jerárquicos (`<h1>` a `<h6>`).
+- Mantén el código **ordenado e indentado**.
+- **Evita contenido repetitivo**: usa plantillas o componentes reutilizables.
+- **Optimiza recursos**: imágenes comprimidas, scripts externos y carga diferida.
+- Valida tu HTML con herramientas como [W3C Validator](https://validator.w3.org/).
 
-Todo documento HTML sigue una estructura básica que el navegador puede interpretar:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi primera página</title>
-  </head>
-  <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Este es mi primer párrafo en HTML.</p>
-    <a href="https://www.ejemplo.com">Visitar página</a>
-  </body>
-</html>
-```
-
-### Explicación:
-
-- `<!DOCTYPE html>` → Indica que el documento está escrito en HTML5.
-- `<html lang="es">` → Etiqueta raíz, define el idioma del documento.
-- `<head>` → Contiene información **meta** (no visible directamente).
-- `<meta charset="UTF-8">` → Define la codificación de caracteres (incluye acentos y ñ).
-- `<meta name="viewport">` → Ajusta la visualización en dispositivos móviles.
-- `<title>` → Título que aparece en la pestaña del navegador.
-- `<body>` → Contenido visible de la página (texto, imágenes, enlaces, etc.).
+> **Pro tip:** Mantén siempre el enfoque en la **semántica y accesibilidad**.
 
 ---
 
----
+### Síntesis rápida de HTML.
+
+- **Fortalezas principales:**
+
+  - Lenguaje base de la web.
+  - Compatible con todos los navegadores.
+  - Estructura clara y semántica para SEO y accesibilidad.
+
+- **Debilidades principales:**
+
+  - No maneja lógica por sí mismo.
+  - Necesita CSS y JS para diseño e interactividad.
+  - Limitado fuera del contexto web.
+
+- **Cuándo usarlo:**
+
+  - Para estructurar contenido web.
+  - En cualquier interfaz que requiera compatibilidad universal.
+  - Para SEO y accesibilidad.
+
+- **Cuándo evitarlo:**
+  - Si buscas construir **solo con HTML** una aplicación compleja.
+  - Si necesitas lógica avanzada sin otros lenguajes.
 
 ---
 
-## 🔻Elemento HTML:
+# Temas {#temas#}
 
-- Unidad básica de construcción en HTML.
-- Se define mediante etiquetas.
+- [inicio](#html)
+- [Conceptos relacionados](#conceptos-relacionados)
+- [Herramientas recomendadas](#herramientas-recomendadas)
+- [Conceptos Claves](#conceptos-claves)
+- [Comandos](#comandos)
+- [Otros artículos](#categorias)
 
-## 🔻Etiqueta HTML:
+---
 
-- Marcas que rodean el contenido y proporcionan información sobre la estructura del documento.
+# Conceptos relacionados
 
-## 🔻Atributo:
+Para trabajar con HTML de manera efectiva, es importante conocer algunos conceptos relacionados que te ayudarán a entender cómo se integra en el desarrollo web.
 
-- Proporciona información adicional sobre un elemento.
-- Se define dentro de la etiqueta y tiene la forma `"nombre="valor""`.
+### 1. CSS (Cascading Style Sheets)
 
-## 🔻Documento HTML:
+CSS se utiliza para **dar estilo y diseño visual** a las páginas creadas con HTML.  
+Mientras que HTML define la **estructura**, CSS se encarga de cómo se **ve** el contenido.
 
-- Archivo que contiene el código HTML completo.
+> Ejemplo: cambiar colores, fuentes, tamaños, distribución en pantalla, etc.
 
-## 🔻Encabezado HTML `<head>`:
+---
 
-- Sección del documento que contiene información no visible para el usuario, como meta-etiquetas, enlaces a hojas de estilo y scripts.
+### 2. JavaScript
 
-## 🔻Cuerpo HTML `<body>`:
+JavaScript es el lenguaje que agrega **interactividad y lógica** a la web.  
+Con HTML defines la estructura, con CSS el diseño, y con JS haces que la página **reaccione a eventos** como clics, formularios o animaciones.
 
-- Sección del documento que contiene el contenido visible, como texto, imágenes, enlaces, etc.
+> Ejemplo: validación de formularios, menús dinámicos, sliders.
 
-## 🔻Título `<title>`:
+---
 
-- Define el título del documento que se muestra en la barra de título del navegador.
+### 3. DOM (Document Object Model)
 
-## 🔻Párrafo `<p>`:
+El **DOM** es la representación estructurada de tu documento HTML en memoria.  
+Permite que JavaScript **acceda y modifique** elementos HTML en tiempo real.
 
-- Define un párrafo de texto.
+> Ejemplo: cambiar el texto de un `<p>` o mostrar un popup al presionar un botón.
 
-## 🔻Encabezados `<h1>, <h2>, ..., <h6>`:
+---
 
-- Definen encabezados de distintos niveles, donde `<h1>` es el más alto y `<h6>` el más bajo.
+### 4. SEO (Search Engine Optimization)
 
-## 🔻Lista ordenada `<ol>` y lista no ordenada `<ul>`:
+El SEO consiste en optimizar el contenido HTML para que **motores de búsqueda** como Google puedan indexarlo correctamente.  
+Esto incluye el uso de **etiquetas semánticas**, meta descripciones y títulos jerárquicos.
 
-- `<ol>` para listas numeradas.
-- `<ul>` para listas sin números.
-- `<li>` para elementos de la lista.
+> Ejemplo: usar `<article>` para contenido principal, `<h1>` para el título principal y `<meta>` para información descriptiva.
 
-## 🔻Enlace `<a>`:
+---
 
-- Crea hipervínculos.
-- Atributo href especifica la URL de destino.
+### 5. Accesibilidad Web (A11Y)
 
-## 🔻Imagen `<img>`:
+La accesibilidad busca que **todas las personas**, incluyendo quienes tienen discapacidades, puedan navegar e interactuar con tu contenido.
 
-- Inserta imágenes.
-- Atributo src especifica la ruta de la imagen.
+Buenas prácticas:
 
-## 🔻Formulario `<form>`:
+- Uso correcto de etiquetas semánticas.
+- Texto alternativo en imágenes (`alt`).
+- Navegación con teclado.
+- Contrastes adecuados de color.
 
-- Recopila datos del usuario.
-- Contiene elementos como campos de texto, botones, etc.
+---
 
-## 🔻Campo de texto `<input type="text">`:
+### 6. Etiquetas Semánticas
 
-- Permite al usuario ingresar texto.
+Son etiquetas que **describen el significado** de su contenido, mejorando la legibilidad y accesibilidad.
 
-## 🔻Botón `<button>`:
+Ejemplos:
 
-- Crea botones interactivos.
+- `<header>` → Encabezado de la página o sección.
+- `<main>` → Contenido principal.
+- `<article>` → Contenido independiente.
+- `<footer>` → Pie de página.
 
-## 🔻Comentarios `<!-- comentario -- >`:
+---
 
-- Texto que no se muestra en la página, pero que puede ser útil para agregar notas o aclaraciones en el código.
+# Herramientas recomendadas
 
-## 🔻Enlace de correo electrónico
+Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML de manera más eficiente:
 
-- `<a  href="mailto:correo@ejemplo.com">`:
+### **1. Editores de código**
 
-- Crea un enlace que permite a los usuarios enviar correos electrónicos al destinatario especificado.
+- **Visual Studio Code (VSCode):** popular, extensible y con soporte para HTML, CSS y JS.
+- Sublime Text: rápido y liviano, ideal para proyectos pequeños.
+- Atom: flexible, aunque menos actualizado.
 
-## 🔻Div `<div>`:
+> Extensión recomendada en VSCode:
+>
+> - _HTML CSS Support_ para autocompletado.
+> - _Prettier_ para formateo automático.
+> - _Live Server_ para ver cambios en tiempo real.
 
-- Un contenedor genérico que se utiliza para agrupar y estructurar otros elementos HTML. Es útil para aplicar estilos o scripts a un conjunto de elementos relacionados.
+---
 
-## 🔻Span `<span>`:
+### **2. Validadores y herramientas de calidad**
 
-- Similar a `<div>`, pero se utiliza para aplicar estilos o scripts a pequeñas secciones de texto o elementos dentro de un bloque.
+- [W3C Validator](https://validator.w3.org/) → Validación de HTML según los estándares.
+- [WebAIM](https://webaim.org/) → Análisis de accesibilidad.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) → Auditoría de SEO, rendimiento y accesibilidad.
 
-## 🔻Tabla `<table>`:
+---
 
-- Define una tabla en HTML.
-- Contiene elementos como
-- `<tr>` (fila)
-- `<td>` (celda de datos)
-- `<th>` (celda de encabezado).
+### **3. Recursos gráficos y multimedia**
 
-## 🔻Encabezado de tabla `<thead>`
+- [Unsplash](https://unsplash.com/) → Imágenes libres de uso.
+- [Pexels](https://pexels.com/) → Videos e imágenes gratuitas.
+- [TinyPNG](https://tinypng.com/) → Compresión de imágenes sin perder calidad.
 
-## 🔻Cuerpo de tabla `<tbody>`
+---
 
-## 🔻Pie de tabla `<tfoot>`:
+### **4. Herramientas para prototipado**
 
-- Secciones que ayudan a organizar y estructurar una tabla.
+- [Figma](https://figma.com/) → Diseño visual y prototipos de interfaces.
+- [Canva](https://canva.com/) → Creación rápida de diseños simples.
 
-## 🔻Formulario
+---
 
-## 🔻Casillas de verificación `<input type="checkbox">`
+### **5. Herramientas de desarrollo en el navegador**
 
-## 🔻Botones de radio `<input type="radio">`:
+Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen **DevTools**, útiles para:
 
-- Permiten al usuario seleccionar opciones en un formulario.
+- Inspeccionar elementos HTML y CSS.
+- Depurar errores en JavaScript.
+- Medir rendimiento y accesibilidad.
 
-## 🔻Campo de contraseña `<input type="password">`:
+> Atajo común en navegadores: `F12` o `Ctrl + Shift + I`.
 
-- Similar al campo de texto, pero oculta los caracteres ingresados.
+---
 
-## 🔻Desplegable `<select>`:
+### **6. Frameworks y librerías para HTML**
 
-- Crea un menú desplegable de opciones.
-- Contiene elementos `<option>` que representan las opciones seleccionables.
+Si quieres optimizar tu flujo de trabajo con HTML, puedes usar herramientas que te den componentes listos o plantillas:
 
-## 🔻Etiqueta de línea `<br>`:
+- **Bootstrap** → Para diseño rápido y responsive.
+- **Tailwind CSS** → Estilos utilitarios y personalizables.
+- **Materialize** → Basado en Material Design.
 
-- Inserta un salto de línea o un quiebre de línea dentro del texto.
+> Aunque no reemplazan el HTML, te permiten trabajar más rápido con interfaces modernas.
 
-## 🔻Estilo `<style>`:
+[🔼 temas](#temas)
 
-- Sección en el encabezado donde se pueden definir reglas de estilo CSS para aplicar estilos a elementos HTML.
+---
 
-## 🔻JavaScript `<script>`:
-
-- Sección en el encabezado o el cuerpo donde se puede incluir código JavaScript para agregar interactividad a la página.
-
-## 🔻Meta-etiquetas `<meta>`:
-
-- Proporcionan información sobre la configuración del documento, como la codificación de caracteres, la descripción y las palabras clave.
-
-## 🔻Atributo id y class:
-
-- **id** se utiliza para identificar de manera única un elemento.
-- **class** se utiliza para agrupar elementos y aplicar estilos o scripts a múltiples elementos. -->
-
-# Conocimiento General
+# Conceptos Claves
 
 ### 1. Diferencia entre `<div>` y `<span>`
 
-**`<div>`**: Es un elemento de **bloque**, ocupa todo el ancho
-disponible y comienza en una nueva línea.\
-**`<span>`**: Es un elemento **en línea**, solo ocupa el espacio de
-su contenido y no fuerza un salto de línea.
-
----
+- **`<div>`**: Es un elemento de **bloque**, ocupa todo el ancho disponible y comienza en una nueva línea.
+- **`<span>`**: Es un elemento **en línea**, solo ocupa el espacio de
+  su contenido y no fuerza un salto de línea.
 
 ### 2. Modelo de caja (Box Model)
 
 Todo elemento en HTML se representa como una caja compuesta por:
 
-1. **Content**: El contenido (texto, imagen, etc.).
-2. **Padding**: Espacio entre el contenido y el borde.
-3. **Border**: El borde alrededor del padding.
-4. **Margin**: Espacio externo que separa el elemento de otros.
-
----
+- **Content**: El contenido (texto, imagen, etc.).
+- **Padding**: Espacio entre el contenido y el borde.
+- **Border**: El borde alrededor del padding.
+- **Margin**: Espacio externo que separa el elemento de otros.
 
 ### 3. Función de `<!DOCTYPE html>`
 
@@ -259,24 +267,18 @@ En HTML5 se usa simplemente:
 Esto asegura que el navegador interprete el documento en **modo
 estándar**, evitando errores de compatibilidad.
 
----
-
 ### 4. Semántica en HTML5
 
 La **semántica** significa usar etiquetas que describan el significado
 del contenido.\
 Esto mejora la **accesibilidad**, **SEO** y la comprensión del código.
 
-**Ejemplos:** `<header>`, `<nav>`, `<article>`, `<section>`, `<footer>`, `<main>`, `<aside>`.
-
----
+> **Ejemplos:** `<header>`, `<nav>`, `<article>`, `<section>`, `<footer>`, `<main>`, `<aside>`.
 
 ### 5. Diferencia entre `id` y `class`
 
-**`id`**: es un identificador único, que no se repite.\
-**`class`**: Agrupa elementos con estilos o comportamientos compartidos.
-
----
+- **`id`**: es un identificador único, que no se repite.
+- **`class`**: Agrupa elementos con estilos o comportamientos compartidos.
 
 ### 6. Insertar una imagen con `<img>`
 
@@ -288,10 +290,8 @@ Etiqueta básica:
 
 **Atributos obligatorios:**
 
-`src`: Ruta de la imagen.\
-`alt`: Texto alternativo (importante para accesibilidad y SEO).
-
----
+- **`src:`** Ruta de la imagen.
+- **`alt:`** Texto alternativo (importante para accesibilidad y SEO).
 
 ### 7. Uso de `<meta>` y `charset`
 
@@ -306,11 +306,9 @@ Etiqueta básica:
 
 > Esto evita problemas con caracteres especiales como tildes o eñes.
 
----
-
 ### 8. Estructura de una tabla en HTML
 
-Principales etiquetas:
+**Principales etiquetas:**
 
 ```html
 <table>
@@ -345,48 +343,39 @@ Principales etiquetas:
 |  `<th>`   | Celda de encabezado. |
 |  `<td>`   | Celda normal         |
 
----
-
 ### 9. Propósito de `<script>`
 
 Se utiliza para **agregar JavaScript** a la página.
 
-**Ubicaciones recomendadas:**
-
-> Justo antes de `</body>`. Mejor rendimiento porque carga el HTML primero.\
-> En `<head>` con el atributo `defer`:
+- **Ubicaciones recomendadas:**
+  - Justo antes de `</body>`. Mejor rendimiento porque carga el HTML primero.
+  - En `<head>` con el atributo `defer`:
 
 ```html
 <script src="app.js" defer></script>
 ```
 
----
-
 ### 10. Diferencia entre `<b>` y `<strong>`, `<i>` y `<em>`
 
-`<b>` y `<i>`: Solo efectos visuales (**negrita** y _cursiva_).\
- `<strong>` y `<em>`: Dan **énfasis semántico**, usados por lectores de pantalla y SEO.
+- **`<b>` y `<i>`:**
+  - Solo efectos visuales (**negrita** y _cursiva_).
+- **`<strong>` y `<em>`:**
+  - Dan **énfasis semántico**, usados por lectores de pantalla y SEO.
 
 ```html
 <b>Texto importante visualmente</b>
 <strong>Texto importante semánticamente</strong>
 ```
 
----
-
 ### 11. Atributos globales
 
 Pueden aplicarse a **cualquier etiqueta HTML**.
 
-**Ejemplos:** - `id` - `class` - `style` - `title` - `hidden` - `lang`
-
----
+> **Ejemplos:** - `id` - `class` - `style` - `title` - `hidden` - `lang`
 
 ### 12. Diferencia entre `localStorage` y `sessionStorage`
 
 Ambos almacenan datos en el navegador.
-
----
 
 | Característica | localStorage                 | sessionStorage               |
 | -------------- | ---------------------------- | ---------------------------- |
@@ -394,13 +383,15 @@ Ambos almacenan datos en el navegador.
 | Tamaño aprox.  | 5-10 MB                      | 5-10 MB                      |
 | Uso común      | Guardar preferencias, tokens | Datos temporales             |
 
----
-
----
-
 ### 13. Validación de formularios en HTML5
 
 HTML5 incluye atributos que validan datos sin JavaScript:
+
+> **Ejemplo:**
+
+```html
+<input type="email" required />
+```
 
 | atributo     | descripción                        |
 | ------------ | ---------------------------------- |
@@ -408,14 +399,6 @@ HTML5 incluye atributos que validan datos sin JavaScript:
 | `pattern`    | Validar con expresiones regulares. |
 | `min`, `max` | Para números y fechas.             |
 | `type`       | `email`, `number`, `url`, etc      |
-
-**Ejemplo:**
-
-```html
-<input type="email" required />
-```
-
----
 
 ### 14. Iframe y riesgos
 
@@ -425,9 +408,16 @@ Un **iframe** inserta contenido externo dentro de una página.
 <iframe src="https://example.com"></iframe>
 ```
 
-**Usos:** - Videos de YouTube. - Mapas interactivos.
+- **Usos:**
+  - Videos de YouTube.
+  - Mapas interactivos.
+- **Riesgos:**
+  - Vulnerable a ataques.
+  - Se recomienda usar atributos como: " `sandbox`, `allowfullscreen` o `loading="lazy"` "
 
-**Riesgos:** - Vulnerable a ataques. Se recomienda usar atributos como: " `sandbox`, `allowfullscreen` o `loading="lazy"` "
+[🔼 temas](#temas)
+
+---
 
 # Sintaxis
 
@@ -472,8 +462,6 @@ Establece una URL base para todas las rutas relativas del documento.
 <base href="https://example.com/" />
 ```
 
----
-
 ### Metadatos
 
 #### 1. La etiqueta `<meta>`
@@ -509,8 +497,6 @@ Permite que la página se adapte a móviles.
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 ```
-
----
 
 ### Recursos externos
 
@@ -779,13 +765,13 @@ Siempre debe existir un solo `<h1>` por página.
 
 ### Etiquetas de texto semántico
 
-|     Etiqueta      | Descripción                   |
-| :---------------: | ----------------------------- |
-|       `<q>`       | Citas cortas.                 |
-|     `<cite>`      | Referencias.                  |
-|     `<small>`     | Texto de menor importancia.   |
-|     `<abbr>`      | Abreviaturas con significado. |
-| `<ins>` y `<del>` | Texto agregado o eliminado.   |
+|  Etiqueta  | Descripción                   |
+| :--------: | ----------------------------- |
+|   `<q>`    | Citas cortas.                 |
+|  `<cite>`  | Referencias.                  |
+| `<small>`  | Texto de menor importancia.   |
+|  `<abbr>`  | Abreviaturas con significado. |
+| ``y`<del>` | Texto agregado o eliminado.   |
 
 ---
 
@@ -805,6 +791,8 @@ Estructura básica:
   </tr>
 </table>
 ```
+
+---
 
 ---
 
@@ -861,6 +849,8 @@ Ejemplo `<input>` con tipos:
 
 ---
 
+---
+
 ## Interactividad
 
 Se usan para hacer la página dinámica, con `<script>` para JavaScript y etiquetas como `<details>`, `<dialog>` o `<template>` para contenido interactivo.
@@ -904,3 +894,7 @@ Se usan para hacer la página dinámica, con `<script>` para JavaScript y etique
   <p>Contenido dinámico</p>
 </template>
 ```
+
+[🔼 temas](#temas)
+
+---
