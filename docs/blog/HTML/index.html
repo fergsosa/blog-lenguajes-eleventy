@@ -26,82 +26,86 @@
       <h1 id="html">HTML</h1>
 <p><img src="/blog-lenguajes-eleventy/img/portada/html.avif" alt="HTML"></p>
 <p><a href="#temas">temas</a></p>
+<h1 id="1-introduccion"><!--! 1. Introducción --></h1>
 <h2 id="que-es-html">¿Qué es HTML?</h2>
-<p>HTML (<strong>HyperText Markup Language</strong>) es el <strong>lenguaje estándar para estructurar contenido web</strong>.<br>
-A diferencia de lenguajes de programación, <strong>no ejecuta lógica</strong> ni procesos, sino que define la <strong>estructura y semántica</strong> de una página.<br>
-Se complementa con <strong>CSS</strong> para el diseño visual y <strong>JavaScript</strong> para la interactividad.</p>
-<blockquote>
-<p><strong>Clave:</strong> HTML describe <strong>qué es</strong> cada elemento, no <strong>cómo luce</strong> ni <strong>cómo funciona</strong>.</p>
-</blockquote>
+<ul>
+<li>HTML (<strong>HyperText Markup Language</strong>) es el <strong>lenguaje estándar para estructurar contenido web</strong>.</li>
+<li>No un lenguaje de programación tradicional.</li>
+<li>Su función principal es <strong>estructurar contenido</strong> mediante etiquetas.</li>
+<li>Se diferencia de otros lenguajes porque:
+<ul>
+<li>No realiza cálculos ni lógica compleja (como JavaScript).</li>
+<li>No maneja estilos de manera directa (para eso se usa CSS).</li>
+<li>Sirve como <strong>esqueleto</strong> de páginas web, mientras que otros lenguajes complementan funcionalidad y diseño.</li>
+</ul>
+</li>
+</ul>
 <h3 id="para-que-se-usa">¿Para qué se usa?</h3>
 <p>Se utiliza principalmente para:</p>
 <ul>
-<li>Crear <strong>páginas web</strong> y aplicaciones basadas en navegador.</li>
-<li>Definir la <strong>estructura de documentos digitales</strong> (ej: artículos, blogs, manuales).</li>
-<li>Integrar <strong>contenido multimedia</strong> como imágenes, audio y video.</li>
-<li>Conectar la interfaz visual con datos o sistemas a través de <strong>APIs</strong>.</li>
+<li><strong>Uso principal:</strong> Construcción de páginas web y aplicaciones front-end.</li>
+<li><strong>Contextos ideales:</strong>
+<ul>
+<li>Sitios informativos estáticos.</li>
+<li>Plantillas web básicas.</li>
+<li>Integración con CSS y JavaScript para páginas interactivas.</li>
 </ul>
-<p>Es ideal cuando necesitas <strong>accesibilidad, compatibilidad web y semántica clara</strong>.</p>
+</li>
+<li>HTML es <strong>universal</strong>, compatible con todos los navegadores y dispositivos.</li>
+</ul>
 <h3 id="que-puedo-construir-con-html">¿Qué puedo construir con HTML?</h3>
 <p>Con HTML puedes construir:</p>
 <ul>
-<li><strong>Sitios web</strong> (desde estáticos hasta dinámicos).</li>
-<li><strong>Aplicaciones web</strong> junto con CSS y JavaScript.</li>
-<li><strong>Prototipos</strong> para interfaces.</li>
-<li><strong>Documentación técnica</strong> o manuales digitales.</li>
-<li><strong>Plantillas de correo electrónico</strong>.</li>
+<li>Páginas web estáticas: blogs, portafolios, landing pages.</li>
+<li>Formularios de captura de datos.</li>
+<li>Estructuras complejas combinadas con CSS y JS: dashboards, aplicaciones web, tiendas online.</li>
+<li>Contenido multimedia: imágenes, videos, audio, enlaces y tablas.</li>
+<li>Plantillas de correo electrónico.</li>
 </ul>
 <p>Básicamente, cualquier contenido que deba mostrarse en un navegador.</p>
 <h3 id="cuando-es-mas-conveniente-usarlo">¿Cuándo es más conveniente usarlo?</h3>
-<p>Es mejor usar HTML cuando:</p>
 <ul>
-<li>El objetivo es <strong>mostrar contenido estructurado</strong> en la web.</li>
-<li>Necesitas <strong>compatibilidad universal</strong> con navegadores.</li>
-<li>Se requiere <strong>SEO</strong>, accesibilidad o semántica.</li>
-<li>Estás desarrollando interfaces que dependen de otros lenguajes (CSS, JS).</li>
+<li>Ideal cuando se necesita <strong>contenido estructurado y semántico</strong>.</li>
+<li>Cuando se busca compatibilidad y accesibilidad máxima.</li>
+<li>Como base para frameworks modernos (React, Angular, Vue) donde HTML sirve como plantilla.</li>
 </ul>
-<p>No es recomendable usarlo <strong>solo</strong>, sin CSS ni JavaScript, si buscas algo altamente interactivo o visualmente complejo.</p>
-<h3 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h3>
+<p><strong>No sustituye</strong> lenguajes de programación ni frameworks para lógica compleja o interactividad avanzada.</p>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <ul>
 <li><strong>Usa etiquetas semánticas</strong> (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>) para mejorar accesibilidad y SEO.</li>
 <li><strong>Estructura tu HTML como un árbol lógico</strong>, con títulos jerárquicos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>).</li>
-<li>Mantén el código <strong>ordenado e indentado</strong>.</li>
+<li><strong>Organización del código:</strong> identación clara y consistente.</li>
 <li><strong>Evita contenido repetitivo</strong>: usa plantillas o componentes reutilizables.</li>
-<li><strong>Optimiza recursos</strong>: imágenes comprimidas, scripts externos y carga diferida.</li>
-<li>Valida tu HTML con herramientas como <a href="https://validator.w3.org/">W3C Validator</a>.</li>
+<li><strong>Evitar inline styles:</strong> usar CSS externo o interno.</li>
+<li><strong>Comentarios útiles:</strong> para documentar secciones complejas.</li>
 </ul>
 <blockquote>
 <p><strong>Pro tip:</strong> Mantén siempre el enfoque en la <strong>semántica y accesibilidad</strong>.</p>
 </blockquote>
 <hr>
-<h3 id="sintesis-rapida-de-html">Síntesis rápida de HTML.</h3>
+<h2 id="resumen-rapido">Resumen rápido.</h2>
 <ul>
-<li>
-<p><strong>Fortalezas principales:</strong></p>
+<li><strong>Fortalezas principales:</strong>
 <ul>
-<li>Lenguaje base de la web.</li>
-<li>Compatible con todos los navegadores.</li>
-<li>Estructura clara y semántica para SEO y accesibilidad.</li>
+<li>Simplicidad y universalidad.</li>
+<li>Semántica clara para contenido.</li>
+<li>Compatible con todos los navegadores y dispositivos.</li>
 </ul>
 </li>
-<li>
-<p><strong>Debilidades principales:</strong></p>
+<li><strong>Debilidades principales:</strong>
 <ul>
 <li>No maneja lógica por sí mismo.</li>
 <li>Necesita CSS y JS para diseño e interactividad.</li>
 <li>Limitado fuera del contexto web.</li>
 </ul>
 </li>
-<li>
-<p><strong>Cuándo usarlo:</strong></p>
+<li><strong>Cuándo usarlo:</strong>
 <ul>
 <li>Para estructurar contenido web.</li>
-<li>En cualquier interfaz que requiera compatibilidad universal.</li>
-<li>Para SEO y accesibilidad.</li>
+<li>Como base de sitios estáticos o dinámicos.</li>
 </ul>
 </li>
-<li>
-<p><strong>Cuándo evitarlo:</strong></p>
+<li><strong>Cuándo evitarlo:</strong>
 <ul>
 <li>Si buscas construir <strong>solo con HTML</strong> una aplicación compleja.</li>
 <li>Si necesitas lógica avanzada sin otros lenguajes.</li>
@@ -127,28 +131,24 @@ Mientras que HTML define la <strong>estructura</strong>, CSS se encarga de cómo
 <blockquote>
 <p>Ejemplo: cambiar colores, fuentes, tamaños, distribución en pantalla, etc.</p>
 </blockquote>
-<hr>
 <h3 id="2-javascript">2. JavaScript</h3>
 <p>JavaScript es el lenguaje que agrega <strong>interactividad y lógica</strong> a la web.<br>
 Con HTML defines la estructura, con CSS el diseño, y con JS haces que la página <strong>reaccione a eventos</strong> como clics, formularios o animaciones.</p>
 <blockquote>
 <p>Ejemplo: validación de formularios, menús dinámicos, sliders.</p>
 </blockquote>
-<hr>
 <h3 id="3-dom-document-object-model">3. DOM (Document Object Model)</h3>
 <p>El <strong>DOM</strong> es la representación estructurada de tu documento HTML en memoria.<br>
 Permite que JavaScript <strong>acceda y modifique</strong> elementos HTML en tiempo real.</p>
 <blockquote>
 <p>Ejemplo: cambiar el texto de un <code>&lt;p&gt;</code> o mostrar un popup al presionar un botón.</p>
 </blockquote>
-<hr>
 <h3 id="4-seo-search-engine-optimization">4. SEO (Search Engine Optimization)</h3>
 <p>El SEO consiste en optimizar el contenido HTML para que <strong>motores de búsqueda</strong> como Google puedan indexarlo correctamente.<br>
 Esto incluye el uso de <strong>etiquetas semánticas</strong>, meta descripciones y títulos jerárquicos.</p>
 <blockquote>
 <p>Ejemplo: usar <code>&lt;article&gt;</code> para contenido principal, <code>&lt;h1&gt;</code> para el título principal y <code>&lt;meta&gt;</code> para información descriptiva.</p>
 </blockquote>
-<hr>
 <h3 id="5-accesibilidad-web-a11y">5. Accesibilidad Web (A11Y)</h3>
 <p>La accesibilidad busca que <strong>todas las personas</strong>, incluyendo quienes tienen discapacidades, puedan navegar e interactuar con tu contenido.</p>
 <p>Buenas prácticas:</p>
@@ -158,7 +158,6 @@ Esto incluye el uso de <strong>etiquetas semánticas</strong>, meta descripcione
 <li>Navegación con teclado.</li>
 <li>Contrastes adecuados de color.</li>
 </ul>
-<hr>
 <h3 id="6-etiquetas-semanticas">6. Etiquetas Semánticas</h3>
 <p>Son etiquetas que <strong>describen el significado</strong> de su contenido, mejorando la legibilidad y accesibilidad.</p>
 <p>Ejemplos:</p>
@@ -185,27 +184,23 @@ Esto incluye el uso de <strong>etiquetas semánticas</strong>, meta descripcione
 <li><em>Live Server</em> para ver cambios en tiempo real.</li>
 </ul>
 </blockquote>
-<hr>
 <h3 id="2-validadores-y-herramientas-de-calidad"><strong>2. Validadores y herramientas de calidad</strong></h3>
 <ul>
 <li><a href="https://validator.w3.org/">W3C Validator</a> → Validación de HTML según los estándares.</li>
 <li><a href="https://webaim.org/">WebAIM</a> → Análisis de accesibilidad.</li>
 <li><a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a> → Auditoría de SEO, rendimiento y accesibilidad.</li>
 </ul>
-<hr>
 <h3 id="3-recursos-graficos-y-multimedia"><strong>3. Recursos gráficos y multimedia</strong></h3>
 <ul>
 <li><a href="https://unsplash.com/">Unsplash</a> → Imágenes libres de uso.</li>
 <li><a href="https://pexels.com/">Pexels</a> → Videos e imágenes gratuitas.</li>
 <li><a href="https://tinypng.com/">TinyPNG</a> → Compresión de imágenes sin perder calidad.</li>
 </ul>
-<hr>
 <h3 id="4-herramientas-para-prototipado"><strong>4. Herramientas para prototipado</strong></h3>
 <ul>
 <li><a href="https://figma.com/">Figma</a> → Diseño visual y prototipos de interfaces.</li>
 <li><a href="https://canva.com/">Canva</a> → Creación rápida de diseños simples.</li>
 </ul>
-<hr>
 <h3 id="5-herramientas-de-desarrollo-en-el-navegador"><strong>5. Herramientas de desarrollo en el navegador</strong></h3>
 <p>Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen <strong>DevTools</strong>, útiles para:</p>
 <ul>
@@ -216,7 +211,6 @@ Esto incluye el uso de <strong>etiquetas semánticas</strong>, meta descripcione
 <blockquote>
 <p>Atajo común en navegadores: <code>F12</code> o <code>Ctrl + Shift + I</code>.</p>
 </blockquote>
-<hr>
 <h3 id="6-frameworks-y-librerias-para-html"><strong>6. Frameworks y librerías para HTML</strong></h3>
 <p>Si quieres optimizar tu flujo de trabajo con HTML, puedes usar herramientas que te den componentes listos o plantillas:</p>
 <ul>
@@ -459,7 +453,7 @@ normalmente UTF-8:</li>
 </ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
-<h1 id="sintaxis">Sintaxis</h1>
+<h1 id="comandos">Comandos</h1>
 <h2 id="html-y-la-semantica-web">HTML y la semántica web</h2>
 <p>La semántica web implica usar <strong>etiquetas con significado</strong>, de modo que el contenido sea comprensible tanto para humanos como para máquinas (navegadores, buscadores, lectores de pantalla).</p>
 <hr>
@@ -557,7 +551,6 @@ tal como se escribe
   &lt;figcaption&gt;Paisaje de montaña&lt;/figcaption&gt;
 &lt;/figure&gt;
 </code></pre>
-<hr>
 <h3 id="etiquetas-multimedia">Etiquetas multimedia</h3>
 <h4 id="1-la-etiqueta-img">1. La etiqueta <code>&lt;img&gt;</code></h4>
 <pre><code class="language-html">&lt;img src=&quot;imagen.jpg&quot; alt=&quot;Descripción de la imagen&quot; /&gt;
@@ -631,7 +624,6 @@ tal como se escribe
 <p>Salto condicional (<code>&lt;wbr&gt;</code>) en palabras largas:</p>
 <pre><code class="language-html">supercalifragilistico&lt;wbr /&gt;espialidoso
 </code></pre>
-<hr>
 <h3 id="etiquetas-de-enlaces">Etiquetas de enlaces</h3>
 <h4 id="1-enlaces-o-hipervinculos">1. Enlaces o hipervínculos</h4>
 <pre><code class="language-html">&lt;a href=&quot;https://example.com&quot;&gt;Ir a ejemplo&lt;/a&gt;
@@ -655,7 +647,6 @@ tal como se escribe
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="etiquetas-tecnicas">Etiquetas técnicas</h3>
 <h4 id="1-kbd-y-samp">1. <code>&lt;kbd&gt;</code> y <code>&lt;samp&gt;</code></h4>
 <table>
@@ -703,7 +694,6 @@ tal como se escribe
 </code></pre>
 <h4 id="3-jerarquia-de-titulos-h1-a-h6">3. Jerarquía de títulos (<code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code>)</h4>
 <p>Siempre debe existir un solo <code>&lt;h1&gt;</code> por página.</p>
-<hr>
 <h3 id="etiquetas-de-texto-semantico">Etiquetas de texto semántico</h3>
 <table>
 <thead>
@@ -735,7 +725,6 @@ tal como se escribe
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="etiquetas-de-tablas">Etiquetas de tablas</h3>
 <p>Estructura básica:</p>
 <pre><code class="language-html">&lt;table&gt;
@@ -780,7 +769,6 @@ tal como se escribe
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="etiquetas-especializadas">Etiquetas especializadas</h3>
 <p>Ejemplo <code>&lt;input&gt;</code> con tipos:</p>
 <pre><code class="language-html">&lt;input type=&quot;number&quot; placeholder=&quot;Edad&quot; /&gt;
@@ -789,7 +777,6 @@ tal como se escribe
 &lt;input type=&quot;color&quot; /&gt;
 &lt;input type=&quot;file&quot; /&gt;
 </code></pre>
-<hr>
 <h3 id="envio-de-formularios">Envío de formularios</h3>
 <ul>
 <li>Botón tradicional:</li>
@@ -801,7 +788,6 @@ tal como se escribe
 </ul>
 <pre><code class="language-html">&lt;button&gt;Enviar&lt;/button&gt;
 </code></pre>
-<hr>
 <h3 id="validaciones-basicas">Validaciones básicas</h3>
 <pre><code class="language-html">&lt;input type=&quot;email&quot; required /&gt; &lt;input type=&quot;text&quot; pattern=&quot;[A-Za-z]{3,}&quot; /&gt;
 </code></pre>
@@ -831,7 +817,6 @@ tal como se escribe
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="etiquetas-interactivas">Etiquetas interactivas</h3>
 <ul>
 <li><code>&lt;details&gt;</code> y <code>&lt;summary&gt;</code>:</li>
@@ -864,32 +849,32 @@ tal como se escribe
       <ul>
         
           <li>
-            <a href="/blog-lenguajes-eleventy/blog/MarkdownMd/">
-              Markdown
+            <a href="/blog-lenguajes-eleventy/blog/Plantilla/">
+              Plantilla
             </a>
           </li>
         
           <li>
-            <a href="/blog-lenguajes-eleventy/blog/HTMLMd/">
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
               HTML
             </a>
           </li>
         
           <li>
-            <a href="/blog-lenguajes-eleventy/blog/GitMd/">
-              Git
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
             </a>
           </li>
         
           <li>
-            <a href="/blog-lenguajes-eleventy/blog/NodeMd/">
-              Node.js
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
             </a>
           </li>
         
           <li>
-            <a href="/blog-lenguajes-eleventy/blog/Plantilla/">
-              Plantilla
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
             </a>
           </li>
         

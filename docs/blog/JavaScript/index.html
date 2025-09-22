@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <meta name="description" content="Ideas principales de JavaScript">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="javascript">JavaScript</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/javascript.avif" alt="img"></p>
+<p>JavaScript es uno de los lenguajes de programación más populares y fundamentales en el desarrollo web moderno. Su versatilidad y gran comunidad lo convierten en una herramienta clave para programadores de todos los niveles.</p>
+<hr>
+<h2 id="1-que-es-javascript">1. ¿Qué es JavaScript?</h2>
+<p>JavaScript (JS) es un <strong>lenguaje de programación interpretado</strong>, <strong>orientado a objetos</strong> y <strong>basado en eventos</strong>, diseñado inicialmente para dotar de interactividad a las páginas web.</p>
+<p><strong>Diferencias clave frente a otros lenguajes:</strong></p>
+<ul>
+<li><strong>Interpretado en el navegador:</strong> No requiere compilación previa como C++ o Java.</li>
+<li><strong>Multiparadigma:</strong> Soporta programación funcional, orientada a objetos y basada en eventos.</li>
+<li><strong>Enfoque web:</strong> Se ejecuta principalmente en navegadores, aunque con <strong>Node.js</strong> también se utiliza en el backend.</li>
+<li><strong>Alta integración con HTML y CSS</strong>, algo que otros lenguajes no ofrecen de forma nativa.</li>
+</ul>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>JavaScript se utiliza en una amplia variedad de contextos, siendo el estándar para la programación en la web.</p>
+<p><strong>Aplicaciones principales:</strong></p>
+<ul>
+<li><strong>Frontend:</strong> Crear interfaces dinámicas e interactivas (con React, Vue, Angular).</li>
+<li><strong>Backend:</strong> Desarrollo de servidores y APIs con <strong>Node.js</strong>.</li>
+<li><strong>Aplicaciones móviles:</strong> Usando frameworks como React Native o Ionic.</li>
+<li><strong>Aplicaciones de escritorio:</strong> Con tecnologías como Electron.</li>
+<li><strong>Automatización y scripting:</strong> Scripts para tareas repetitivas o automatización de flujos.</li>
+</ul>
+<blockquote>
+<p><strong>Ideal cuando necesitas</strong> interactividad, comunicación en tiempo real, aplicaciones rápidas y prototipos ágiles.</p>
+</blockquote>
+<h3 id="3-que-puedo-construir-con-javascript">3. ¿Qué puedo construir con JavaScript?</h3>
+<p>Con JavaScript puedes crear prácticamente cualquier tipo de aplicación moderna:</p>
+<ul>
+<li>🌐 <strong>Sitios web dinámicos</strong> y responsivos.</li>
+<li>📱 <strong>Aplicaciones móviles híbridas</strong> (iOS y Android).</li>
+<li>🖥️ <strong>Aplicaciones de escritorio</strong> multiplataforma.</li>
+<li>🔗 <strong>APIs REST y GraphQL</strong> para servicios y microservicios.</li>
+<li>🎮 <strong>Videojuegos</strong> 2D y 3D en navegadores.</li>
+<li>🤖 <strong>Bots y automatizaciones</strong> para redes sociales o tareas repetitivas.</li>
+<li>🧪 <strong>Aplicaciones de análisis de datos</strong> y dashboards en tiempo real.</li>
+</ul>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<p>JavaScript es la mejor elección en los siguientes escenarios:</p>
+<ul>
+<li><strong>Proyectos web:</strong> Es el estándar para navegadores, no existe alternativa real.</li>
+<li><strong>Prototipos rápidos:</strong> Sintaxis sencilla y frameworks maduros aceleran el desarrollo.</li>
+<li><strong>Aplicaciones en tiempo real:</strong> Chats, videojuegos o herramientas colaborativas.</li>
+<li><strong>Unificar frontend y backend:</strong> Permite usar un solo lenguaje en todo el stack.</li>
+</ul>
+<blockquote>
+<p>⚠️ <strong>Evítalo</strong> si el proyecto requiere alto rendimiento computacional, como simulaciones científicas o software de bajo nivel, donde lenguajes como <strong>C++ o Rust</strong> son más adecuados.</p>
+</blockquote>
+<h3 id="5-buenas-practicas-y-patrones-recomendados">5. Buenas prácticas y patrones recomendados</h3>
+<p>Para escribir buen código en JavaScript, sigue estas recomendaciones:</p>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Usa <code>const</code> y <code>let</code></strong> en lugar de <code>var</code> para mayor claridad y control.</li>
+<li><strong>Escribe código modular:</strong> Divide en funciones, módulos y componentes reutilizables.</li>
+<li><strong>Aplica convenciones de nombres:</strong> <code>camelCase</code> para variables y funciones.</li>
+<li><strong>Agrega comentarios claros y útiles</strong>, pero no excesivos.</li>
+<li><strong>Evita la repetición (DRY):</strong> <em>Don't Repeat Yourself</em>.</li>
+<li><strong>Validación constante:</strong> Prueba y depura tu código con herramientas como ESLint.</li>
+</ul>
+<h4 id="patrones-de-diseno-recomendados"><strong>Patrones de diseño recomendados:</strong></h4>
+<ul>
+<li><strong>Módulos:</strong> Para encapsular y organizar el código.</li>
+<li><strong>Singleton:</strong> Para recursos globales únicos, como la configuración.</li>
+<li><strong>Observer:</strong> Para manejar eventos y estados en interfaces.</li>
+<li><strong>Factory:</strong> Para crear objetos complejos de manera consistente.</li>
+<li><strong>MVC/MVVM:</strong> Separar la lógica de negocio de la interfaz de usuario.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<p><strong>Síntesis rápida de lo aprendido sobre JavaScript</strong></p>
+<ul>
+<li><strong>Fortalezas principales:</strong>
+<ul>
+<li>Versatilidad: frontend, backend, móvil y escritorio.</li>
+<li>Amplio ecosistema y comunidad activa.</li>
+<li>Integración nativa con HTML y CSS.</li>
+<li>Gran cantidad de librerías y frameworks maduros.</li>
+</ul>
+</li>
+<li><strong>Debilidades principales:</strong>
+<ul>
+<li>Menor rendimiento frente a lenguajes compilados como C++ o Rust.</li>
+<li>Código propenso a errores si no se sigue una buena estructura.</li>
+<li>Fragmentación en frameworks y herramientas.</li>
+<li>Dificultad en proyectos muy grandes sin buenas prácticas.</li>
+</ul>
+</li>
+<li><strong>Cuándo usarlo:</strong>
+<ul>
+<li>Desarrollo web y aplicaciones interactivas.</li>
+<li>Prototipos rápidos y MVPs.</li>
+<li>Proyectos donde se busca rapidez y flexibilidad.</li>
+</ul>
+</li>
+<li><strong>Cuándo evitarlo:</strong>
+<ul>
+<li>Aplicaciones que requieren cálculos complejos y alto rendimiento.</li>
+<li>Sistemas embebidos o de bajo nivel.</li>
+<li>Proyectos donde la seguridad extrema es la prioridad principal.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#node-js">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de aprender JavaScript o mientras lo estudias, es importante entender estos conceptos fundamentales:</p>
+<h2 id="1-fundamentos-de-programacion">1. Fundamentos de programación</h2>
+<ul>
+<li><strong>Algoritmos y lógica:</strong> La base para resolver problemas.</li>
+<li><strong>Variables y constantes:</strong> Manejo de datos en memoria (<code>let</code>, <code>const</code>).</li>
+<li><strong>Tipos de datos:</strong>
+<ul>
+<li>Primitivos: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code>.</li>
+<li>Complejos: <code>object</code>, <code>array</code>, <code>function</code>.</li>
+</ul>
+</li>
+<li><strong>Estructuras de control:</strong> Condicionales (<code>if</code>, <code>switch</code>) y bucles (<code>for</code>, <code>while</code>).</li>
+<li><strong>Funciones:</strong> Declarativas, expresivas, flecha (<em>arrow functions</em>).</li>
+<li><strong>Paradigmas de programación:</strong>
+<ul>
+<li><em>Imperativo</em>: Cómo se hace.</li>
+<li><em>Declarativo</em>: Qué se quiere lograr.</li>
+<li><em>Orientado a objetos</em>: Uso de clases y objetos.</li>
+<li><em>Funcional</em>: Uso de funciones puras y composición.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-web-y-entorno-de-ejecucion">2. Web y entorno de ejecución</h2>
+<ul>
+<li><strong>HTML:</strong> Estructura base de las páginas web.</li>
+<li><strong>CSS:</strong> Estilos y diseño visual.</li>
+<li><strong>DOM (Document Object Model):</strong> Representación en memoria de una página web para manipular elementos dinámicamente.</li>
+<li><strong>BOM (Browser Object Model):</strong> Objetos que el navegador proporciona, como <code>window</code> o <code>navigator</code>.</li>
+<li><strong>Eventos:</strong> Manejo de interacciones del usuario (<code>click</code>, <code>input</code>, <code>submit</code>).</li>
+</ul>
+<h2 id="3-programacion-asincrona">3. Programación asíncrona</h2>
+<p>JavaScript es <strong>single-threaded</strong> pero puede manejar tareas asíncronas.</p>
+<ul>
+<li><strong>Callbacks:</strong> Primera forma de manejar tareas asincrónicas.</li>
+<li><strong>Promises:</strong> Flujo controlado con <code>.then()</code> y <code>.catch()</code>.</li>
+<li><strong>Async/Await:</strong> Sintaxis moderna y más legible para trabajar con promesas.</li>
+<li><strong>Event Loop:</strong> Mecanismo que gestiona la ejecución de código y tareas pendientes.</li>
+</ul>
+<h2 id="4-json-y-apis">4. JSON y APIs</h2>
+<ul>
+<li><strong>JSON (JavaScript Object Notation):</strong> Formato ligero para intercambio de datos.</li>
+<li><strong>APIs:</strong> Interfaces para comunicación entre sistemas.
+<ul>
+<li>REST API.</li>
+<li>GraphQL.</li>
+</ul>
+</li>
+<li><strong>Fetch API:</strong> Hacer peticiones HTTP con <code>fetch()</code>.</li>
+</ul>
+<h2 id="5-ecosistema-javascript">5. Ecosistema JavaScript</h2>
+<ul>
+<li><strong>Node.js:</strong> Ejecutar JavaScript fuera del navegador, principalmente para el backend.</li>
+<li><strong>npm (Node Package Manager):</strong> Gestor de paquetes y librerías.</li>
+<li><strong>Frameworks y librerías populares:</strong>
+<ul>
+<li><strong>Frontend:</strong> React, Vue, Angular, Svelte.</li>
+<li><strong>Backend:</strong> Express, NestJS, Fastify.</li>
+<li><strong>Testing:</strong> Jest, Mocha, Cypress.</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-principios-de-desarrollo">6. Principios de desarrollo</h2>
+<ul>
+<li><strong>DRY (<em>Don't Repeat Yourself</em>):</strong> Evitar duplicación de código.</li>
+<li><strong>KISS (<em>Keep It Simple, Stupid</em>):</strong> Mantener el código simple y entendible.</li>
+<li><strong>SOLID:</strong> Buenas prácticas de programación orientada a objetos.</li>
+<li><strong>Clean Code:</strong> Código limpio, legible y mantenible.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Estas herramientas te ayudarán a <strong>desarrollar, depurar y optimizar</strong> proyectos en JavaScript de manera profesional.</p>
+<h2 id="1-editores-y-entornos-de-desarrollo">1. Editores y entornos de desarrollo</h2>
+<ul>
+<li><strong>Visual Studio Code (VSCode):</strong> Editor moderno, liviano y altamente configurable.</li>
+<li><strong>WebStorm:</strong> IDE especializado para JavaScript.</li>
+<li>Extensiones útiles para VSCode:
+<ul>
+<li><em>ESLint:</em> Detección de errores y estandarización de código.</li>
+<li><em>Prettier:</em> Formateo automático.</li>
+<li><em>GitLens:</em> Mejor gestión de versiones.</li>
+<li><em>Debugger for Chrome:</em> Depuración integrada.</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-control-de-versiones">2. Control de versiones</h2>
+<ul>
+<li><strong>Git:</strong> Sistema de control de versiones.</li>
+<li><strong>GitHub / GitLab / Bitbucket:</strong> Plataformas para alojar proyectos y colaborar en equipo.</li>
+</ul>
+<h2 id="3-terminal-y-linea-de-comandos">3. Terminal y línea de comandos</h2>
+<ul>
+<li><strong>Node.js CLI:</strong> Ejecutar scripts y proyectos.</li>
+<li><strong>npm / yarn / pnpm:</strong> Manejo de dependencias y paquetes.</li>
+<li><strong>Comandos clave:</strong>
+<ul>
+<li><code>node app.js</code> → Ejecutar un archivo.</li>
+<li><code>npm init -y</code> → Inicializar un proyecto.</li>
+<li><code>npm install paquete</code> → Instalar dependencias.</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-depuracion-y-pruebas">4. Depuración y pruebas</h2>
+<ul>
+<li><strong>Herramientas del navegador:</strong>
+<ul>
+<li>Consola (<code>console.log()</code>) para depurar.</li>
+<li>Pestaña <em>Network</em> para analizar solicitudes HTTP.</li>
+<li><em>Performance</em> para medir tiempos de carga.</li>
+</ul>
+</li>
+<li><strong>Frameworks de testing:</strong>
+<ul>
+<li><strong>Jest:</strong> Pruebas unitarias.</li>
+<li><strong>Cypress:</strong> Pruebas de interfaz (end-to-end).</li>
+<li><strong>Mocha + Chai:</strong> Pruebas flexibles y personalizadas.</li>
+</ul>
+</li>
+</ul>
+<h2 id="5-automatizacion-y-bundlers">5. Automatización y bundlers</h2>
+<ul>
+<li><strong>Bundlers:</strong> Empaquetar y optimizar el código.
+<ul>
+<li>Webpack, Parcel, Vite.</li>
+</ul>
+</li>
+<li><strong>Transpiladores:</strong>
+<ul>
+<li><strong>Babel:</strong> Para compatibilidad con navegadores antiguos.</li>
+</ul>
+</li>
+<li><strong>Automatización de tareas:</strong>
+<ul>
+<li>Gulp, npm scripts.</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-entorno-backend">6. Entorno backend</h2>
+<ul>
+<li><strong>Express:</strong> Framework minimalista para servidores.</li>
+<li><strong>MongoDB Atlas:</strong> Base de datos en la nube.</li>
+<li><strong>Postman / Insomnia:</strong> Probar APIs y endpoints.</li>
+<li><strong>Docker:</strong> Contenerizar aplicaciones y entornos.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código reutilizables que facilitan tareas comunes.</p>
+<h2 id="1-declaracion-de-variables">1. Declaración de variables</h2>
+<pre><code class="language-js">const PI = 3.1416; // Constante (no cambia)
+let nombre = &quot;Juan&quot;; // Variable que puede cambiar
+</code></pre>
+<h2 id="2-funciones">2. Funciones</h2>
+<pre><code class="language-js">// Función tradicional
+function saludar(nombre) {
+  return `Hola, ${nombre}`;
+}
+
+// Función flecha (arrow function)
+const despedir = (nombre) =&gt; `Adiós, ${nombre}`;
+</code></pre>
+<h2 id="3-condicional-simple">3. Condicional simple</h2>
+<pre><code class="language-js">const edad = 18;
+
+if (edad &gt;= 18) {
+  console.log(&quot;Eres mayor de edad&quot;);
+} else {
+  console.log(&quot;Eres menor de edad&quot;);
+}
+</code></pre>
+<h2 id="4-operador-ternario">4. Operador ternario</h2>
+<pre><code class="language-js">const mensaje = edad &gt;= 18 ? &quot;Mayor de edad&quot; : &quot;Menor de edad&quot;;
+console.log(mensaje);
+</code></pre>
+<h2 id="5-bucles">5. Bucles</h2>
+<pre><code class="language-js">// For
+for (let i = 0; i &lt; 5; i++) {
+  console.log(i);
+}
+
+// While
+let count = 0;
+while (count &lt; 5) {
+  console.log(count++);
+}
+
+// For...of (recorrer arrays)
+const frutas = [&quot;Manzana&quot;, &quot;Banana&quot;, &quot;Pera&quot;];
+for (const fruta of frutas) {
+  console.log(fruta);
+}
+</code></pre>
+<h2 id="6-objetos-y-arrays">6. Objetos y Arrays</h2>
+<pre><code class="language-js">const persona = {
+  nombre: &quot;Ana&quot;,
+  edad: 25,
+};
+
+const colores = [&quot;Rojo&quot;, &quot;Verde&quot;, &quot;Azul&quot;];
+console.log(persona.nombre); // Acceder a propiedad
+console.log(colores[0]); // Acceder a elemento
+</code></pre>
+<h2 id="7-desestructuracion">7. Desestructuración</h2>
+<pre><code class="language-js">// Objetos
+const { nombre, edad } = persona;
+console.log(nombre, edad);
+
+// Arrays
+const [primero, segundo] = colores;
+console.log(primero, segundo);
+</code></pre>
+<h2 id="8-fetch-api-peticiones-http">8. Fetch API (peticiones HTTP)</h2>
+<pre><code class="language-js">fetch(&quot;https://api.example.com/data&quot;)
+  .then((res) =&gt; res.json())
+  .then((data) =&gt; console.log(data))
+  .catch((err) =&gt; console.error(&quot;Error:&quot;, err));
+</code></pre>
+<h2 id="9-async-await">9. Async / Await</h2>
+<pre><code class="language-js">async function obtenerDatos() {
+  try {
+    const res = await fetch(&quot;https://api.example.com/data&quot;);
+    const data = await res.json();
+    console.log(data);
+  } catch (error) {
+    console.error(&quot;Error:&quot;, error);
+  }
+}
+</code></pre>
+<h2 id="10-exportar-e-importar-modulos">10. Exportar e importar módulos</h2>
+<pre><code class="language-js">// archivo.js
+export const saludar = (nombre) =&gt; `Hola, ${nombre}`;
+
+// app.js
+import { saludar } from &quot;./archivo.js&quot;;
+console.log(saludar(&quot;Carlos&quot;));
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<p>Sintaxis y comandos básicos <strong>cortos y directos</strong> para uso diario.</p>
+<h2 id="variables-y-constantes">Variables y constantes</h2>
+<pre><code class="language-js">let edad = 25; // Variable modificable
+const PI = 3.14; // Constante
+</code></pre>
+<h2 id="tipos-de-datos">Tipos de datos</h2>
+<pre><code class="language-js">let nombre = &quot;Pedro&quot;; // String
+let edad = 30; // Number
+let activo = true; // Boolean
+let lista = [1, 2, 3]; // Array
+let persona = { nombre: &quot;Ana&quot;, edad: 25 }; // Objeto
+let nada = null; // Null
+let indefinido; // Undefined
+</code></pre>
+<h2 id="operadores-basicos">Operadores básicos</h2>
+<pre><code class="language-js">// Aritméticos
+let suma = 5 + 3;
+let resta = 5 - 3;
+let producto = 5 * 3;
+let division = 5 / 3;
+
+// Comparación
+console.log(5 === &quot;5&quot;); // false (estricta)
+console.log(5 == &quot;5&quot;); // true (no estricta)
+console.log(5 !== 3); // true
+
+// Lógicos
+console.log(true &amp;&amp; false); // false
+console.log(true || false); // true
+console.log(!true); // false
+</code></pre>
+<h2 id="funciones-y-callbacks">Funciones y callbacks</h2>
+<pre><code class="language-js">// Función simple
+function sumar(a, b) {
+  return a + b;
+}
+
+// Función como variable
+const restar = function (a, b) {
+  return a - b;
+};
+
+// Función flecha
+const multiplicar = (a, b) =&gt; a * b;
+</code></pre>
+<h2 id="array-methods-comunes">Array Methods comunes</h2>
+<pre><code class="language-js">const numeros = [1, 2, 3, 4, 5];
+
+numeros.forEach((n) =&gt; console.log(n)); // Recorrer
+const dobles = numeros.map((n) =&gt; n * 2); // Nuevo array
+const pares = numeros.filter((n) =&gt; n % 2 === 0); // Filtrar
+const sumaTotal = numeros.reduce((acc, n) =&gt; acc + n, 0); // Reducir
+</code></pre>
+<h2 id="manejo-de-errores">Manejo de errores</h2>
+<pre><code class="language-js">try {
+  const resultado = dividir(10, 0);
+} catch (error) {
+  console.error(&quot;Ocurrió un error:&quot;, error.message);
+} finally {
+  console.log(&quot;Proceso finalizado&quot;);
+}
+</code></pre>
+<h2 id="clases-y-objetos">Clases y objetos</h2>
+<pre><code class="language-js">class Persona {
+  constructor(nombre, edad) {
+    this.nombre = nombre;
+    this.edad = edad;
+  }
+
+  saludar() {
+    return `Hola, me llamo ${this.nombre}`;
+  }
+}
+
+const ana = new Persona(&quot;Ana&quot;, 25);
+console.log(ana.saludar());
+</code></pre>
+<h2 id="promesas">Promesas</h2>
+<pre><code class="language-js">const promesa = new Promise((resolve, reject) =&gt; {
+  let exito = true;
+  exito ? resolve(&quot;Todo bien&quot;) : reject(&quot;Error&quot;);
+});
+
+promesa
+  .then((resultado) =&gt; console.log(resultado))
+  .catch((error) =&gt; console.error(error));
+</code></pre>
+<h2 id="console-y-depuracion">Console y depuración</h2>
+<pre><code class="language-js">console.log(&quot;Información general&quot;);
+console.warn(&quot;Advertencia&quot;);
+console.error(&quot;Error crítico&quot;);
+console.table([{ nombre: &quot;Ana&quot; }, { nombre: &quot;Luis&quot; }]); // Tabla
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-tipos-de-datos-primitivos-en-javascript">1. Tipos de datos primitivos en JavaScript</h3>
+<p><strong>Primitivos:</strong></p>
+<ul>
+<li><code>string</code></li>
+<li><code>number</code></li>
+<li><code>bigint</code></li>
+<li><code>boolean</code></li>
+<li><code>undefined</code></li>
+<li><code>null</code></li>
+<li><code>symbol</code></li>
+</ul>
+<p><strong>Por referencia:</strong></p>
+<ul>
+<li><code>object</code> (arrays, funciones, objetos literales, etc.)</li>
+</ul>
+<p><strong>Diferencia:</strong></p>
+<ul>
+<li>Los <strong>primitivos</strong> se pasan por <em>valor</em>, es decir, se copia el valor original.</li>
+<li>Los <strong>por referencia</strong> se pasan por <em>referencia</em>, apuntando al mismo espacio en memoria.</li>
+</ul>
+<pre><code class="language-js">let a = 10;
+let b = a;
+b = 20;
+console.log(a); // 10 (no cambia)
+
+let obj1 = { nombre: &quot;Ana&quot; };
+let obj2 = obj1;
+obj2.nombre = &quot;Luis&quot;;
+console.log(obj1.nombre); // &quot;Luis&quot;
+</code></pre>
+<h3 id="2-diferencia-entre-var-let-y-const">2. Diferencia entre var, let y const</h3>
+<ul>
+<li><strong><code>var</code></strong>
+<ul>
+<li>Ámbito de función.</li>
+<li>Se eleva (hoisting).</li>
+<li>Puede redeclararse.</li>
+</ul>
+</li>
+<li><strong><code>let</code></strong>
+<ul>
+<li>Ámbito de bloque <code>{}</code>.</li>
+<li>No se puede redeclarar en el mismo ámbito.</li>
+</ul>
+</li>
+<li><strong><code>const</code></strong>
+<ul>
+<li>Igual que <code>let</code>, pero el valor no puede ser reasignado.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-js">var x = 1;
+let y = 2;
+const z = 3;
+</code></pre>
+<p><strong>Recomendación:</strong> usar <code>let</code> y <code>const</code> siempre que sea posible.</p>
+<h3 id="3-hoisting-elevacion">3. Hoisting (elevación)</h3>
+<p>Es el comportamiento donde <strong>declaraciones</strong> se mueven al inicio del ámbito antes de ejecutar el código.</p>
+<pre><code class="language-js">console.log(x); // undefined
+var x = 5;
+
+// Equivalente a:
+var x;
+console.log(x);
+x = 5;
+</code></pre>
+<p>Con <code>let</code> y <code>const</code> el hoisting ocurre pero no permite acceder a la variable antes de su declaración (temporal dead zone).</p>
+<h3 id="4-funciones-flecha-y-this">4. Funciones flecha y <code>this</code></h3>
+<ul>
+<li><strong>Funciones tradicionales:</strong> <code>this</code> depende de cómo se llama la función.</li>
+<li><strong>Funciones flecha:</strong> heredan el <code>this</code> del contexto donde fueron definidas.</li>
+</ul>
+<pre><code class="language-js">function tradicional() {
+  console.log(this);
+}
+
+const flecha = () =&gt; {
+  console.log(this);
+};
+</code></pre>
+<p>En un objeto:</p>
+<pre><code class="language-js">const obj = {
+  nombre: &quot;Ana&quot;,
+  regular() {
+    console.log(this.nombre); // &quot;Ana&quot;
+  },
+  arrow: () =&gt; {
+    console.log(this.nombre); // undefined
+  },
+};
+obj.regular();
+obj.arrow();
+</code></pre>
+<h3 id="5-closures-cierres">5. Closures (cierres)</h3>
+<p>Un closure ocurre cuando una función <strong>recuerda</strong> variables de su contexto incluso después de que ese contexto haya terminado.</p>
+<p><strong>Ejemplo útil:</strong></p>
+<pre><code class="language-js">function contador() {
+  let count = 0;
+  return function () {
+    count++;
+    return count;
+  };
+}
+
+const incrementar = contador();
+console.log(incrementar()); // 1
+console.log(incrementar()); // 2
+</code></pre>
+<p><strong>Problema: variables compartidas:</strong></p>
+<pre><code class="language-js">function crearFunciones() {
+  let arr = [];
+  for (var i = 0; i &lt; 3; i++) {
+    arr.push(() =&gt; console.log(i));
+  }
+  return arr;
+}
+
+crearFunciones().forEach((fn) =&gt; fn()); // 3, 3, 3
+</code></pre>
+<p>Solución: usar <code>let</code> o crear un scope adicional.</p>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-promesas-y-promise-all-promise-race">6. Promesas y Promise.all / Promise.race</h3>
+<ul>
+<li><strong>Promesas</strong> representan operaciones asincrónicas.</li>
+</ul>
+<pre><code class="language-js">const promesa = new Promise((resolve, reject) =&gt; {
+  setTimeout(() =&gt; resolve(&quot;Listo!&quot;), 1000);
+});
+
+promesa.then(console.log);
+</code></pre>
+<ul>
+<li><strong>Promise.all:</strong> espera que todas las promesas se resuelvan.</li>
+<li><strong>Promise.race:</strong> devuelve el resultado de la primera promesa que se resuelva o rechace.</li>
+</ul>
+<pre><code class="language-js">Promise.all([p1, p2]).then((resultados) =&gt; console.log(resultados));
+Promise.race([p1, p2]).then((primero) =&gt; console.log(primero));
+</code></pre>
+<h3 id="7-ciclo-de-vida-de-un-evento-dom">7. Ciclo de vida de un evento DOM</h3>
+<ol>
+<li><strong>Capturing:</strong> evento baja desde el <code>window</code> hasta el elemento objetivo.</li>
+<li><strong>Target:</strong> el evento llega al elemento específico.</li>
+<li><strong>Bubbling:</strong> el evento sube de regreso al <code>window</code>.</li>
+</ol>
+<pre><code class="language-js">element.addEventListener(&quot;click&quot;, handler, true); // Capturing
+element.addEventListener(&quot;click&quot;, handler, false); // Bubbling
+</code></pre>
+<p><strong>Detener propagación:</strong></p>
+<pre><code class="language-js">event.stopPropagation();
+</code></pre>
+<h3 id="8-event-loop-microtasks-y-macrotasks">8. Event loop, microtasks y macrotasks</h3>
+<p>El <strong>event loop</strong> gestiona la ejecución de tareas en JavaScript.</p>
+<ul>
+<li><strong>Macrotasks:</strong> <code>setTimeout</code>, <code>setInterval</code>, I/O.</li>
+<li><strong>Microtasks:</strong> Promesas, <code>process.nextTick</code>.</li>
+</ul>
+<p>Orden:</p>
+<ol>
+<li>Ejecutar <em>todo el stack principal</em>.</li>
+<li>Ejecutar todas las <strong>microtasks</strong> pendientes.</li>
+<li>Ejecutar la siguiente <strong>macrotask</strong>.</li>
+</ol>
+<pre><code class="language-js">console.log(&quot;Inicio&quot;);
+setTimeout(() =&gt; console.log(&quot;Macrotask&quot;), 0);
+Promise.resolve().then(() =&gt; console.log(&quot;Microtask&quot;));
+console.log(&quot;Fin&quot;);
+</code></pre>
+<p>Salida:</p>
+<pre><code>Inicio
+Fin
+Microtask
+Macrotask
+</code></pre>
+<h3 id="9-inmutabilidad-en-javascript">9. Inmutabilidad en JavaScript</h3>
+<p>La inmutabilidad significa que los datos <strong>no se modifican directamente</strong>, sino que se crea una <strong>copia nueva</strong>.</p>
+<pre><code class="language-js">const original = { nombre: &quot;Ana&quot; };
+
+// ❌ Mutación
+original.nombre = &quot;Luis&quot;;
+
+// ✅ Inmutable
+const copia = { ...original, nombre: &quot;Luis&quot; };
+</code></pre>
+<p>Métodos inmutables comunes en arrays:</p>
+<ul>
+<li><code>.map()</code></li>
+<li><code>.filter()</code></li>
+<li><code>.concat()</code></li>
+</ul>
+<h3 id="10-destructuring-con-valores-por-defecto-y-renombramiento">10. Destructuring con valores por defecto y renombramiento</h3>
+<pre><code class="language-js">// Objetos
+const usuario = { nombre: &quot;Ana&quot;, edad: 25 };
+const { nombre: n, edad = 18 } = usuario;
+console.log(n, edad);
+
+// Arrays
+const colores = [&quot;Rojo&quot;];
+const [primero = &quot;Verde&quot;, segundo = &quot;Azul&quot;] = colores;
+console.log(primero, segundo);
+</code></pre>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-iteradores-y-generadores">11. Iteradores y generadores</h3>
+<ul>
+<li><strong>Iterador:</strong> objeto con método <code>next()</code> que devuelve <code>{ value, done }</code>.</li>
+<li><strong>Generador:</strong> función que usa <code>function*</code> y <code>yield</code>.</li>
+</ul>
+<pre><code class="language-js">function* numeros() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const it = numeros();
+console.log(it.next().value); // 1
+</code></pre>
+<p><strong>Lazy evaluation:</strong> valores se generan bajo demanda.</p>
+<h3 id="12-prototype-y-herencia-prototipica">12. Prototype y herencia prototípica</h3>
+<p>Cada objeto tiene un prototipo que define propiedades y métodos compartidos.</p>
+<pre><code class="language-js">function Persona(nombre) {
+  this.nombre = nombre;
+}
+Persona.prototype.saludar = function () {
+  return `Hola, soy ${this.nombre}`;
+};
+
+const ana = new Persona(&quot;Ana&quot;);
+console.log(ana.saludar());
+</code></pre>
+<p><strong>Si modificas el prototipo después:</strong> los objetos existentes también acceden a los nuevos métodos.</p>
+<h3 id="13-manejo-de-errores-en-codigo-asincrono">13. Manejo de errores en código asíncrono</h3>
+<p>Con <strong>promesas</strong>:</p>
+<pre><code class="language-js">fetch(&quot;url&quot;)
+  .then((res) =&gt; res.json())
+  .catch((error) =&gt; console.error(error));
+</code></pre>
+<p>Con <strong>async/await</strong>:</p>
+<pre><code class="language-js">async function cargarDatos() {
+  try {
+    const res = await fetch(&quot;url&quot;);
+    const data = await res.json();
+  } catch (error) {
+    console.error(error);
+  }
+}
+</code></pre>
+<p><strong>Consejo:</strong> siempre usar <code>try/catch</code> y <code>.catch()</code> para evitar errores silenciosos.</p>
+<h3 id="14-concepto-de-this">14. Concepto de <code>this</code></h3>
+<ul>
+<li><strong>Global:</strong> <code>this</code> es <code>window</code> o <code>undefined</code> (modo estricto).</li>
+<li><strong>Método de objeto:</strong> <code>this</code> es el objeto que llama.</li>
+<li><strong>Función regular:</strong> depende de cómo se invoque.</li>
+<li><strong>Arrow function:</strong> hereda <code>this</code> del contexto donde se creó.</li>
+</ul>
+<pre><code class="language-js">const obj = {
+  nombre: &quot;Ana&quot;,
+  regular: function () {
+    console.log(this.nombre);
+  },
+  flecha: () =&gt; {
+    console.log(this.nombre);
+  },
+};
+obj.regular(); // Ana
+obj.flecha(); // undefined
+</code></pre>
+<h3 id="15-shadow-dom-virtual-dom-y-regular-dom">15. Shadow DOM, Virtual DOM y Regular DOM</h3>
+<ul>
+<li><strong>Regular DOM:</strong> estructura HTML tradicional del navegador.</li>
+<li><strong>Shadow DOM:</strong> encapsula estilos y estructura (Web Components).</li>
+<li><strong>Virtual DOM:</strong> representación en memoria usada por librerías como React.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><strong>Virtual DOM:</strong> cuando necesitas actualizaciones eficientes y reactividad (React, Vue).</li>
+<li><strong>Shadow DOM:</strong> para crear componentes web encapsulados.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Plantilla/">
+              Plantilla
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

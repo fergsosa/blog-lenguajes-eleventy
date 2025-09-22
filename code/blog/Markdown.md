@@ -4,12 +4,14 @@ title: Markdown
 img: /img/portada/markdown.avif
 description: Ideas principales de Markdown
 tags: ["blog", "lenguajes"]
-date: "2023-02-03"
+date: "2023-07-01"
 ---
 
 # {{title}}
 
 ![{{title}}]({{img}})
+
+[temas](#temas)
 
 # <!--! Que es -->
 
@@ -60,6 +62,23 @@ Algunas ventajas clave de Markdown:
 
 > En resumen, Markdown es ideal cuando quieres **crear contenido estructurado y limpio**, sin complicarte con herramientas avanzadas de edición.
 
+# Temas {#temas#}
+
+- [inicio](#html)
+- [Sintaxis Básica](#sintaxis-basica)
+  - [Énfasis texto](#enfasis-texto)
+  - [Encabezado](#encabezado)
+  - [Párrafos y saltos de línea](#parrafos-y-saltos-de-línea)
+  - [Citas](#citas)
+  - [Listas](#listas)
+  - [Reglas horizontales](#reglas-horizontales)
+  - [links](#links)
+  - [Códigos](#codigos)
+  - [Imagines](#imagines)
+  - [Tablas](#tablas)
+  - [Formulario](#formulario)
+- [Otros artículos](#categorias)
+
 # Sintaxis Básica
 
 ## Énfasis texto
@@ -92,6 +111,8 @@ Cuantos más `#`, menor nivel de encabezado _(de 1 a 6)_.<br/><br/>
 |  5  |    ##### | Ejemplo del apartado     |
 |  6  |   ###### | Sub-Apartado del Ejemplo |
 
+[🔼 temas](#temas)
+
 ## Párrafos y saltos de línea
 
 Para generar un nuevo **párrafo** en Markdown simplemente separa el texto mediante una línea en blanco.\
@@ -116,6 +137,8 @@ Para anidar citas, se agrega otro `>>` adicional.
 > > \>\> [!IMPORTANT] _Información clave que los usuarios deben conocer._\
 > > \>\> [!WARNING] _Información urgente que requiere la atención del usuario._\
 > > \>\> [!PRECAUCIÓN] _Advierte sobre los riesgos._
+
+[🔼 temas](#temas)
 
 ## Listas
 
@@ -159,6 +182,8 @@ Se crean con tres o más `* `,` -` o` _` en una línea para separar secciones de
 | `***` | `---` | `___` |
 
 ---
+
+[🔼 temas](#temas)
 
 ## links
 
@@ -205,6 +230,8 @@ Para bloques de código más extensos, utiliza tres backticks y opcionalmente es
 </pre>
 ```
 
+[🔼 temas](#temas)
+
 ## Imagines
 
 La sintaxis es similar a los enlaces, pero con un `!` al inicio y Imagen con título
@@ -245,3 +272,5 @@ Markdown estándar no incluye formularios nativos, pero puedes usar HTML dentro 
 <input type="search" name="q" id="q">
 
 </form>
+
+[🔼 temas](#temas)

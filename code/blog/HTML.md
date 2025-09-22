@@ -13,81 +13,75 @@ date: "2023-03-01"
 
 [temas](#temas)
 
+# <!--! 1. Introducción -->
+
 ## ¿Qué es HTML?
 
-HTML (**HyperText Markup Language**) es el **lenguaje estándar para estructurar contenido web**.  
-A diferencia de lenguajes de programación, **no ejecuta lógica** ni procesos, sino que define la **estructura y semántica** de una página.  
-Se complementa con **CSS** para el diseño visual y **JavaScript** para la interactividad.
-
-> **Clave:** HTML describe **qué es** cada elemento, no **cómo luce** ni **cómo funciona**.
+- HTML (**HyperText Markup Language**) es el **lenguaje estándar para estructurar contenido web**.
+- No un lenguaje de programación tradicional.
+- Su función principal es **estructurar contenido** mediante etiquetas.
+- Se diferencia de otros lenguajes porque:
+  - No realiza cálculos ni lógica compleja (como JavaScript).
+  - No maneja estilos de manera directa (para eso se usa CSS).
+  - Sirve como **esqueleto** de páginas web, mientras que otros lenguajes complementan funcionalidad y diseño.
 
 ### ¿Para qué se usa?
 
 Se utiliza principalmente para:
 
-- Crear **páginas web** y aplicaciones basadas en navegador.
-- Definir la **estructura de documentos digitales** (ej: artículos, blogs, manuales).
-- Integrar **contenido multimedia** como imágenes, audio y video.
-- Conectar la interfaz visual con datos o sistemas a través de **APIs**.
-
-Es ideal cuando necesitas **accesibilidad, compatibilidad web y semántica clara**.
+- **Uso principal:** Construcción de páginas web y aplicaciones front-end.
+- **Contextos ideales:**
+  - Sitios informativos estáticos.
+  - Plantillas web básicas.
+  - Integración con CSS y JavaScript para páginas interactivas.
+- HTML es **universal**, compatible con todos los navegadores y dispositivos.
 
 ### ¿Qué puedo construir con HTML?
 
 Con HTML puedes construir:
 
-- **Sitios web** (desde estáticos hasta dinámicos).
-- **Aplicaciones web** junto con CSS y JavaScript.
-- **Prototipos** para interfaces.
-- **Documentación técnica** o manuales digitales.
-- **Plantillas de correo electrónico**.
+- Páginas web estáticas: blogs, portafolios, landing pages.
+- Formularios de captura de datos.
+- Estructuras complejas combinadas con CSS y JS: dashboards, aplicaciones web, tiendas online.
+- Contenido multimedia: imágenes, videos, audio, enlaces y tablas.
+- Plantillas de correo electrónico.
 
 Básicamente, cualquier contenido que deba mostrarse en un navegador.
 
 ### ¿Cuándo es más conveniente usarlo?
 
-Es mejor usar HTML cuando:
+- Ideal cuando se necesita **contenido estructurado y semántico**.
+- Cuando se busca compatibilidad y accesibilidad máxima.
+- Como base para frameworks modernos (React, Angular, Vue) donde HTML sirve como plantilla.
 
-- El objetivo es **mostrar contenido estructurado** en la web.
-- Necesitas **compatibilidad universal** con navegadores.
-- Se requiere **SEO**, accesibilidad o semántica.
-- Estás desarrollando interfaces que dependen de otros lenguajes (CSS, JS).
+**No sustituye** lenguajes de programación ni frameworks para lógica compleja o interactividad avanzada.
 
-No es recomendable usarlo **solo**, sin CSS ni JavaScript, si buscas algo altamente interactivo o visualmente complejo.
-
-### Buenas prácticas recomendadas
+## Buenas prácticas recomendadas
 
 - **Usa etiquetas semánticas** (`<header>`, `<main>`, `<article>`, `<footer>`) para mejorar accesibilidad y SEO.
 - **Estructura tu HTML como un árbol lógico**, con títulos jerárquicos (`<h1>` a `<h6>`).
-- Mantén el código **ordenado e indentado**.
+- **Organización del código:** identación clara y consistente.
 - **Evita contenido repetitivo**: usa plantillas o componentes reutilizables.
-- **Optimiza recursos**: imágenes comprimidas, scripts externos y carga diferida.
-- Valida tu HTML con herramientas como [W3C Validator](https://validator.w3.org/).
+- **Evitar inline styles:** usar CSS externo o interno.
+- **Comentarios útiles:** para documentar secciones complejas.
 
 > **Pro tip:** Mantén siempre el enfoque en la **semántica y accesibilidad**.
 
 ---
 
-### Síntesis rápida de HTML.
+## Resumen rápido.
 
 - **Fortalezas principales:**
-
-  - Lenguaje base de la web.
-  - Compatible con todos los navegadores.
-  - Estructura clara y semántica para SEO y accesibilidad.
-
+  - Simplicidad y universalidad.
+  - Semántica clara para contenido.
+  - Compatible con todos los navegadores y dispositivos.
 - **Debilidades principales:**
-
   - No maneja lógica por sí mismo.
   - Necesita CSS y JS para diseño e interactividad.
   - Limitado fuera del contexto web.
-
 - **Cuándo usarlo:**
-
   - Para estructurar contenido web.
-  - En cualquier interfaz que requiera compatibilidad universal.
-  - Para SEO y accesibilidad.
-
+  - Como base de sitios estáticos o dinámicos.
 - **Cuándo evitarlo:**
   - Si buscas construir **solo con HTML** una aplicación compleja.
   - Si necesitas lógica avanzada sin otros lenguajes.
@@ -116,16 +110,12 @@ Mientras que HTML define la **estructura**, CSS se encarga de cómo se **ve** el
 
 > Ejemplo: cambiar colores, fuentes, tamaños, distribución en pantalla, etc.
 
----
-
 ### 2. JavaScript
 
 JavaScript es el lenguaje que agrega **interactividad y lógica** a la web.  
 Con HTML defines la estructura, con CSS el diseño, y con JS haces que la página **reaccione a eventos** como clics, formularios o animaciones.
 
 > Ejemplo: validación de formularios, menús dinámicos, sliders.
-
----
 
 ### 3. DOM (Document Object Model)
 
@@ -134,16 +124,12 @@ Permite que JavaScript **acceda y modifique** elementos HTML en tiempo real.
 
 > Ejemplo: cambiar el texto de un `<p>` o mostrar un popup al presionar un botón.
 
----
-
 ### 4. SEO (Search Engine Optimization)
 
 El SEO consiste en optimizar el contenido HTML para que **motores de búsqueda** como Google puedan indexarlo correctamente.  
 Esto incluye el uso de **etiquetas semánticas**, meta descripciones y títulos jerárquicos.
 
 > Ejemplo: usar `<article>` para contenido principal, `<h1>` para el título principal y `<meta>` para información descriptiva.
-
----
 
 ### 5. Accesibilidad Web (A11Y)
 
@@ -155,8 +141,6 @@ Buenas prácticas:
 - Texto alternativo en imágenes (`alt`).
 - Navegación con teclado.
 - Contrastes adecuados de color.
-
----
 
 ### 6. Etiquetas Semánticas
 
@@ -187,15 +171,11 @@ Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML d
 > - _Prettier_ para formateo automático.
 > - _Live Server_ para ver cambios en tiempo real.
 
----
-
 ### **2. Validadores y herramientas de calidad**
 
 - [W3C Validator](https://validator.w3.org/) → Validación de HTML según los estándares.
 - [WebAIM](https://webaim.org/) → Análisis de accesibilidad.
 - [Lighthouse](https://developers.google.com/web/tools/lighthouse) → Auditoría de SEO, rendimiento y accesibilidad.
-
----
 
 ### **3. Recursos gráficos y multimedia**
 
@@ -203,14 +183,10 @@ Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML d
 - [Pexels](https://pexels.com/) → Videos e imágenes gratuitas.
 - [TinyPNG](https://tinypng.com/) → Compresión de imágenes sin perder calidad.
 
----
-
 ### **4. Herramientas para prototipado**
 
 - [Figma](https://figma.com/) → Diseño visual y prototipos de interfaces.
 - [Canva](https://canva.com/) → Creación rápida de diseños simples.
-
----
 
 ### **5. Herramientas de desarrollo en el navegador**
 
@@ -221,8 +197,6 @@ Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen **DevTools**, ú
 - Medir rendimiento y accesibilidad.
 
 > Atajo común en navegadores: `F12` o `Ctrl + Shift + I`.
-
----
 
 ### **6. Frameworks y librerías para HTML**
 
@@ -419,7 +393,7 @@ Un **iframe** inserta contenido externo dentro de una página.
 
 ---
 
-# Sintaxis
+# Comandos
 
 ## HTML y la semántica web
 
@@ -598,8 +572,6 @@ Se usa para imágenes y contenido asociado:
 </figure>
 ```
 
----
-
 ### Etiquetas multimedia
 
 #### 1. La etiqueta `<img>`
@@ -689,8 +661,6 @@ Salto condicional (`<wbr>`) en palabras largas:
 supercalifragilistico<wbr />espialidoso
 ```
 
----
-
 ### Etiquetas de enlaces
 
 #### 1. Enlaces o hipervínculos
@@ -705,8 +675,6 @@ supercalifragilistico<wbr />espialidoso
 | --------------------------- | ------------------------------ |
 | `target="_blank"`           | Abre en nueva pestaña.         |
 | `rel="noopener noreferrer"` | Seguridad en enlaces externos. |
-
----
 
 ### Etiquetas técnicas
 
@@ -761,8 +729,6 @@ Son etiquetas que dan sentido al contenido, como `<header>`, `<footer>`, `<secti
 
 Siempre debe existir un solo `<h1>` por página.
 
----
-
 ### Etiquetas de texto semántico
 
 |  Etiqueta  | Descripción                   |
@@ -772,8 +738,6 @@ Siempre debe existir un solo `<h1>` por página.
 | `<small>`  | Texto de menor importancia.   |
 |  `<abbr>`  | Abreviaturas con significado. |
 | ``y`<del>` | Texto agregado o eliminado.   |
-
----
 
 ### Etiquetas de tablas
 
@@ -809,8 +773,6 @@ Permiten recoger información del usuario con `<form>`, `<input>`, `<textarea>`,
 |      `<textarea>`       | Texto largo.              |
 | `<select>` y `<option>` | Listas desplegables.      |
 
----
-
 ### Etiquetas especializadas
 
 Ejemplo `<input>` con tipos:
@@ -822,8 +784,6 @@ Ejemplo `<input>` con tipos:
 <input type="color" />
 <input type="file" />
 ```
-
----
 
 ### Envío de formularios
 
@@ -838,8 +798,6 @@ Ejemplo `<input>` con tipos:
 ```html
 <button>Enviar</button>
 ```
-
----
 
 ### Validaciones básicas
 
@@ -867,8 +825,6 @@ Se usan para hacer la página dinámica, con `<script>` para JavaScript y etique
 | :------: | --------------------------------- |
 | `defer`  | Ejecuta después de cargar el DOM. |
 | `async`  | Ejecuta en paralelo.              |
-
----
 
 ### Etiquetas interactivas
 
