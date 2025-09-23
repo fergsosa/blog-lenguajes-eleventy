@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal Bash</title>
+    <meta name="description" content="Línea comandos, administración sistema.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="terminal-bash">Terminal Bash</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/terminal-bash.avif" alt="img"></p>
+<h1 id="terminal-bash-2">Terminal Bash</h1>
+<h2 id="1-que-es-terminal-bash">1. ¿Qué es Terminal Bash?</h2>
+<p><strong>Bash (Bourne Again SHell)</strong> es un <strong>intérprete de comandos</strong> que se ejecuta en una terminal.<br>
+Se diferencia de otros terminales porque:</p>
+<ul>
+<li>Es <strong>estándar en sistemas Unix/Linux</strong> y también funciona en macOS y Windows (mediante WSL o Git Bash).</li>
+<li>Permite <strong>automatizar tareas</strong> mediante scripts.</li>
+<li>Su sintaxis es <strong>simple y directa</strong>, enfocada en eficiencia y rapidez.</li>
+<li>Es altamente <strong>personalizable</strong> mediante variables, alias y configuraciones.</li>
+</ul>
+<p>En resumen, Bash no es solo un lugar para escribir comandos, sino también un <strong>lenguaje de scripting</strong>.</p>
+<hr>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>Bash se utiliza para <strong>administrar, automatizar y ejecutar procesos en el sistema operativo</strong>.<br>
+Algunos contextos ideales:</p>
+<ul>
+<li><strong>Desarrollo de software</strong>: ejecutar scripts de despliegue, gestionar dependencias y entornos.</li>
+<li><strong>DevOps y servidores</strong>: automatizar configuraciones y despliegues en la nube.</li>
+<li><strong>Manejo de archivos y directorios</strong>: copiar, mover, comprimir y buscar archivos de forma eficiente.</li>
+<li><strong>Procesamiento de datos</strong>: manipular logs, filtrar información y realizar tareas repetitivas.</li>
+<li><strong>Educación y aprendizaje</strong>: entender cómo funcionan los sistemas operativos a bajo nivel.</li>
+</ul>
+<hr>
+<h3 id="3-que-puedo-construir-con-terminal-bash">3. ¿Qué puedo construir con Terminal Bash?</h3>
+<p>Con Bash puedes <strong>crear herramientas y automatizaciones</strong> para mejorar la productividad. Ejemplos:</p>
+<ul>
+<li>Scripts para <strong>automatizar tareas repetitivas</strong> (backups, limpieza de archivos, actualizaciones).</li>
+<li><strong>Pipelines de datos</strong> usando comandos como <code>grep</code>, <code>awk</code>, <code>sed</code>.</li>
+<li>Pequeños <strong>programas CLI</strong> (Command Line Interface).</li>
+<li>Flujos de <strong>despliegue continuo (CI/CD)</strong> para proyectos.</li>
+<li>Utilidades personalizadas para <strong>trabajar con proyectos en Git</strong>, Docker, Node.js, etc.</li>
+</ul>
+<hr>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<p>Usa Bash cuando:</p>
+<ul>
+<li>Necesitas <strong>automatizar tareas rápidas</strong> sin instalar herramientas externas.</li>
+<li>Trabajas en <strong>entornos Linux/Unix</strong>, donde Bash es nativo.</li>
+<li>Quieres <strong>control total</strong> sobre procesos y archivos.</li>
+<li>Requieres <strong>procesamiento de texto</strong> con herramientas integradas (<code>cat</code>, <code>grep</code>, <code>awk</code>, <code>sed</code>).</li>
+<li>Buscas <strong>integración con otros programas</strong> y comandos de sistema.</li>
+</ul>
+<p>No es la mejor opción cuando:</p>
+<ul>
+<li>Necesitas <strong>interfaces gráficas</strong> o aplicaciones complejas.</li>
+<li>El proyecto requiere <strong>mucha lógica avanzada</strong> (en ese caso, lenguajes como Python o Node.js son más adecuados).</li>
+</ul>
+<hr>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<p>Escribir scripts en Bash requiere <strong>orden y claridad</strong>. Algunas recomendaciones:</p>
+<ul>
+<li>
+<p><strong>Usar comentarios</strong> para explicar secciones del script:</p>
+<pre><code class="language-bash"># Este script limpia archivos temporales
+rm -rf /tmp/*
+</code></pre>
+</li>
+<li>
+<p>Validar entradas y salidas para evitar errores inesperados.</p>
+</li>
+<li>
+<p>Utilizar variables descriptivas:</p>
+<pre><code class="language-bash">LOG_DIR=&quot;/var/log/mi_app&quot;
+</code></pre>
+</li>
+<li>
+<p>Controlar errores con if, &amp;&amp;, || o set -e:</p>
+</li>
+</ul>
+<pre><code class="language-bash">cp archivo.txt respaldo/ &amp;&amp; echo &quot;Copia exitosa&quot;
+</code></pre>
+<ul>
+<li>Evitar escribir comandos largos en una sola línea, usar pipes (|) y funciones.</li>
+<li>Mantener scripts modulares y reutilizables.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<p>Bash es una herramienta poderosa para automatizar tareas, trabajar con sistemas y desarrollar flujos eficientes de trabajo, especialmente en entornos Linux y DevOps.</p>
+<ul>
+<li><strong>Fortalezas principales:</strong>
+<ul>
+<li>Ligero y rápido, sin depender de interfaces gráficas.</li>
+<li>Integración directa con el sistema operativo.</li>
+<li>Potente para automatización y scripting.</li>
+<li>Compatible con la mayoría de sistemas Unix/Linux y Windows (WSL).</li>
+</ul>
+</li>
+<li><strong>Debilidades principales:</strong>
+<ul>
+<li>Curva de aprendizaje inicial moderada.</li>
+<li>Sintaxis menos amigable comparada con otros lenguajes.</li>
+<li>Limitado para proyectos con lógica compleja o estructuras avanzadas.</li>
+</ul>
+</li>
+<li><strong>Cuándo usarlo:</strong>
+-Tareas repetitivas y automatización.
+<ul>
+<li>Administración de servidores y entornos de desarrollo.</li>
+<li>Procesamiento rápido de texto y archivos.</li>
+<li>Integración con herramientas como Git, Docker o Node.js.</li>
+</ul>
+</li>
+<li><strong>Cuándo evitarlo:</strong>
+<ul>
+<li>Aplicaciones con interfaces gráficas.</li>
+<li>Sistemas que requieren cálculos complejos o programación orientada a objetos.</li>
+<li>Proyectos donde la legibilidad del código sea prioritaria.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#node-js">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de usar Bash de forma efectiva, es importante comprender algunos conceptos esenciales:</p>
+<ul>
+<li><strong>Shell</strong>: Programa que interpreta los comandos que escribes en la terminal. Bash es un tipo de shell.</li>
+<li><strong>Comando</strong>: Instrucción que le das al sistema operativo a través de la terminal (<code>ls</code>, <code>cd</code>, <code>rm</code>, etc.).</li>
+<li><strong>Script</strong>: Archivo de texto con una serie de comandos que Bash ejecuta de forma secuencial.</li>
+<li><strong>Path / Ruta</strong>: Ubicación de un archivo o directorio dentro del sistema de archivos.</li>
+<li><strong>Variables</strong>: Almacenan información que puedes reutilizar dentro de scripts (<code>USER=&quot;Fernando&quot;</code>).</li>
+<li><strong>Alias</strong>: Atajo para comandos largos o frecuentes (<code>alias ll=&quot;ls -la&quot;</code>).</li>
+<li><strong>Permisos de archivos</strong>: Controlan quién puede leer, escribir o ejecutar un archivo (<code>chmod</code>, <code>chown</code>).</li>
+<li><strong>Pipes (<code>|</code>)</strong>: Permiten encadenar la salida de un comando a la entrada de otro (<code>cat archivo.txt | grep &quot;error&quot;</code>).</li>
+<li><strong>Redirecciones</strong>: Envían la salida de comandos a archivos o toman entrada desde archivos (<code>&gt;</code>, <code>&gt;&gt;</code>, <code>&lt;</code>).</li>
+<li><strong>Funciones</strong>: Bloques de código reutilizables dentro de scripts.</li>
+<li><strong>Procesos y jobs</strong>: Programas que se ejecutan en el sistema; se pueden controlar con <code>ps</code>, <code>kill</code>, <code>bg</code>, <code>fg</code>.</li>
+<li><strong>Comodines / Wildcards</strong>: Símbolos que representan uno o varios caracteres (<code>*</code>, <code>?</code>) en nombres de archivos.</li>
+</ul>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar de manera eficiente con Bash, estas herramientas son fundamentales:</p>
+<ul>
+<li><strong>Git</strong>: Control de versiones desde la terminal (<code>git clone</code>, <code>git commit</code>).</li>
+<li><strong>grep</strong>: Buscar texto dentro de archivos (<code>grep &quot;texto&quot; archivo.txt</code>).</li>
+<li><strong>awk</strong>: Procesamiento y análisis de texto en columnas.</li>
+<li><strong>sed</strong>: Edición de texto desde la línea de comandos.</li>
+<li><strong>curl / wget</strong>: Descargar archivos y datos desde URLs.</li>
+<li><strong>tar / zip / unzip</strong>: Comprimir y descomprimir archivos y carpetas.</li>
+<li><strong>nano / vim / vi</strong>: Editores de texto integrados para scripts.</li>
+<li><strong>htop / top</strong>: Monitoreo de procesos en tiempo real.</li>
+<li><strong>chmod / chown</strong>: Cambiar permisos y propietarios de archivos.</li>
+<li><strong>ssh</strong>: Conexión remota a otros sistemas.</li>
+<li><strong>tmux / screen</strong>: Multiplexores de terminal para sesiones persistentes.</li>
+<li><strong>alias y functions</strong>: Personalización y optimización de comandos repetitivos.</li>
+<li><strong>history</strong>: Ver el historial de comandos ejecutados.</li>
+<li><strong>find</strong>: Buscar archivos y directorios según criterios específicos.</li>
+</ul>
+<blockquote>
+<p>Estas herramientas permiten <strong>maximizar la eficiencia en la línea de comandos</strong>, automatizar tareas y trabajar en entornos de desarrollo y administración de sistemas de forma profesional.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Algunos fragmentos de código útiles que se usan frecuentemente:</p>
+<pre><code class="language-bash"># Crear un directorio y moverse a él
+mkdir proyecto &amp;&amp; cd proyecto
+
+# Copiar archivos a otra carpeta
+cp archivo.txt /ruta/destino/
+
+# Mover o renombrar archivos
+mv archivo.txt /ruta/destino/nuevo_nombre.txt
+
+# Eliminar archivos o carpetas
+rm archivo.txt
+rm -rf carpeta/
+
+# Listar archivos y carpetas
+ls
+ls -la        # Mostrar todos los archivos, incluidos ocultos, con detalles
+
+# Buscar texto dentro de archivos
+grep &quot;texto&quot; archivo.txt
+
+# Redireccionar salida a un archivo
+echo &quot;Hola mundo&quot; &gt; archivo.txt        # Crear o sobrescribir
+echo &quot;Hola otra vez&quot; &gt;&gt; archivo.txt    # Agregar al final
+
+# Variables
+NOMBRE=&quot;Fernando&quot;
+echo &quot;Hola $NOMBRE&quot;
+
+# Función simple
+saludo() {
+    echo &quot;Hola $1&quot;
+}
+saludo Fernando
+
+# Ejecutar un script
+bash script.sh
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Función</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>cd</code></td>
+<td>Cambiar de directorio</td>
+<td><code>cd /home/user/proyecto</code></td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Mostrar ruta actual</td>
+<td><code>pwd</code></td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td>Listar archivos</td>
+<td><code>ls -la</code></td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td>Crear directorio</td>
+<td><code>mkdir nueva_carpeta</code></td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td>Eliminar archivos</td>
+<td><code>rm archivo.txt</code></td>
+</tr>
+<tr>
+<td><code>cp</code></td>
+<td>Copiar archivos</td>
+<td><code>cp origen.txt destino.txt</code></td>
+</tr>
+<tr>
+<td><code>mv</code></td>
+<td>Mover o renombrar</td>
+<td><code>mv viejo.txt nuevo.txt</code></td>
+</tr>
+<tr>
+<td><code>touch</code></td>
+<td>Crear archivo vacío</td>
+<td><code>touch archivo.txt</code></td>
+</tr>
+<tr>
+<td><code>cat</code></td>
+<td>Mostrar contenido</td>
+<td><code>cat archivo.txt</code></td>
+</tr>
+<tr>
+<td><code>echo</code></td>
+<td>Mostrar texto</td>
+<td><code>echo &quot;Hola mundo&quot;</code></td>
+</tr>
+<tr>
+<td><code>grep</code></td>
+<td>Buscar texto</td>
+<td><code>grep &quot;error&quot; archivo.log</code></td>
+</tr>
+<tr>
+<td><code>chmod</code></td>
+<td>Cambiar permisos</td>
+<td><code>chmod +x script.sh</code></td>
+</tr>
+<tr>
+<td><code>chown</code></td>
+<td>Cambiar propietario</td>
+<td><code>chown user:grupo archivo.txt</code></td>
+</tr>
+<tr>
+<td><code>history</code></td>
+<td>Ver historial</td>
+<td><code>history</code></td>
+</tr>
+<tr>
+<td><code>alias</code></td>
+<td>Crear atajos</td>
+<td><code>alias ll='ls -la'</code></td>
+</tr>
+</tbody>
+</table>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="nivel-basico">🟢 Nivel Básico</h2>
+<h3 id="1-comandos-esenciales">1. Comandos esenciales</h3>
+<ul>
+<li><strong><code>ls</code></strong>: Lista los archivos y carpetas del directorio actual.</li>
+<li><strong><code>ls -l</code></strong>: Lista con detalles como permisos, propietario, tamaño y fecha.</li>
+<li><strong><code>ls -a</code></strong>: Lista todos los archivos, incluidos los ocultos (que comienzan con <code>.</code>).<br>
+<strong>Uso:</strong></li>
+<li><code>ls</code> para ver rápidamente contenido.</li>
+<li><code>ls -l</code> para inspeccionar propiedades de archivos.</li>
+<li><code>ls -a</code> para mostrar archivos ocultos de configuración.</li>
+</ul>
+<hr>
+<h3 id="2-directorios">2. Directorios</h3>
+<ul>
+<li><strong>Rutas relativas</strong>: Dependen del directorio actual (<code>./carpeta/archivo.txt</code>).</li>
+<li><strong>Rutas absolutas</strong>: Parten desde la raíz <code>/</code> (<code>/home/user/carpeta/archivo.txt</code>).</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">cd ./documentos          # Relativa
+cd /home/usuario/documentos  # Absoluta
+</code></pre>
+<hr>
+<h3 id="3-permisos-de-archivos">3. Permisos de archivos</h3>
+<ul>
+<li>Salida de <code>ls -l</code>:</li>
+</ul>
+<pre><code>-rw-r--r-- 1 user grupo 1234 sep 22 archivo.txt
+</code></pre>
+<ul>
+<li>
+<p><code>-</code>: tipo de archivo (<code>-</code> archivo, <code>d</code> directorio)</p>
+</li>
+<li>
+<p><code>rw-</code>: permisos del propietario (lectura y escritura)</p>
+</li>
+<li>
+<p><code>r--</code>: permisos del grupo (solo lectura)</p>
+</li>
+<li>
+<p><code>r--</code>: permisos de otros (solo lectura)</p>
+</li>
+<li>
+<p>Cambiar permisos para que solo el propietario pueda leer y escribir:</p>
+</li>
+</ul>
+<pre><code class="language-bash">chmod 600 archivo.txt
+</code></pre>
+<hr>
+<h3 id="4-redireccion-de-salida">4. Redirección de salida</h3>
+<ul>
+<li><code>&gt;</code>: sobrescribe un archivo con la salida.</li>
+<li><code>&gt;&gt;</code>: agrega la salida al final de un archivo.</li>
+<li><code>2&gt;</code>: redirige errores a un archivo.</li>
+<li><code>&amp;&gt;</code>: redirige salida estándar y errores al mismo archivo.</li>
+</ul>
+<p><strong>Ejemplos:</strong></p>
+<pre><code class="language-bash">echo &quot;Hola&quot; &gt; archivo.txt       # Sobrescribe
+echo &quot;Más texto&quot; &gt;&gt; archivo.txt # Agrega
+ls archivo_inexistente 2&gt; error.log # Errores
+comando &amp;&gt; salida.log           # Todo redirigido
+</code></pre>
+<hr>
+<h3 id="5-variables-de-entorno">5. Variables de entorno</h3>
+<ul>
+<li><strong>PATH</strong>: Lista de directorios donde Bash busca comandos.</li>
+<li>Agregar carpeta personalizada:</li>
+</ul>
+<pre><code class="language-bash">export PATH=$PATH:/home/user/mis_comandos
+</code></pre>
+<hr>
+<h2 id="nivel-intermedio">🟡 Nivel Intermedio</h2>
+<h3 id="6-combinacion-de-comandos">6. Combinación de comandos</h3>
+<ul>
+<li><code>;</code> ejecuta todos los comandos en secuencia, aunque uno falle.</li>
+<li><code>&amp;&amp;</code> ejecuta el siguiente solo si el anterior tuvo éxito.</li>
+<li><code>||</code> ejecuta el siguiente solo si el anterior falla.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">echo &quot;Inicio&quot;; ls -l
+mkdir nueva &amp;&amp; cd nueva
+comando_inexistente || echo &quot;Falló&quot;
+</code></pre>
+<hr>
+<h3 id="7-procesos">7. Procesos</h3>
+<ul>
+<li><code>&amp;</code>: Ejecuta proceso en segundo plano.</li>
+<li><code>fg</code>: Trae un proceso de fondo al primer plano.</li>
+<li><code>bg</code>: Continúa un proceso detenido en segundo plano.</li>
+<li><code>jobs</code>: Lista procesos en segundo plano.</li>
+<li><code>kill</code>: Termina un proceso.</li>
+</ul>
+<p><strong>Caso práctico:</strong> Ejecutar un script largo en segundo plano:</p>
+<pre><code class="language-bash">./script_largo.sh &amp;
+jobs
+fg %1
+kill 1234
+</code></pre>
+<hr>
+<h3 id="8-filtros-y-pipes">8. Filtros y pipes</h3>
+<ul>
+<li><code>grep</code>: Filtra líneas que coinciden con un patrón.</li>
+<li><code>awk</code>: Procesa texto por columnas.</li>
+<li><code>sed</code>: Edita texto en flujo.</li>
+</ul>
+<p><strong>Ejemplo combinando grep y sed:</strong></p>
+<pre><code class="language-bash">grep &quot;ERROR&quot; log.txt | sed 's/ERROR/ALERTA/g'
+</code></pre>
+<hr>
+<h3 id="9-busqueda-de-archivos">9. Búsqueda de archivos</h3>
+<ul>
+<li><code>find</code>: Busca en tiempo real según criterios.</li>
+<li><code>locate</code>: Busca en base de datos indexada (más rápido pero no siempre actualizado).</li>
+</ul>
+<p><strong>Preferencia:</strong> <code>find</code> para precisión en tiempo real, <code>locate</code> para búsquedas rápidas.</p>
+<hr>
+<h3 id="10-expansiones-en-bash">10. Expansiones en Bash</h3>
+<ul>
+<li><strong>Llaves <code>{}</code></strong>: Expandir múltiples opciones.<pre><code class="language-bash">echo file{1,2,3}.txt  # file1.txt file2.txt file3.txt
+</code></pre>
+</li>
+<li><strong>Globbing <code>*</code></strong>: Coincide con cualquier número de caracteres.<pre><code class="language-bash">ls *.txt
+</code></pre>
+</li>
+<li><strong>Command substitution <code>$()</code></strong>: Ejecuta un comando y usa su salida.<pre><code class="language-bash">hoy=$(date)
+echo &quot;Hoy es $hoy&quot;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="nivel-avanzado">🔴 Nivel Avanzado</h2>
+<h3 id="11-scripting-basico">11. Scripting básico</h3>
+<pre><code class="language-bash">#!/bin/bash
+archivo=$1
+wc $archivo
+</code></pre>
+<p><strong>Uso:</strong> <code>bash contar.sh archivo.txt</code> → muestra líneas, palabras y caracteres.</p>
+<hr>
+<h3 id="12-condicionales-en-bash">12. Condicionales en Bash</h3>
+<pre><code class="language-bash">if [ -r &quot;$archivo&quot; ]; then
+  echo &quot;El archivo existe y es legible&quot;
+elif [ -e &quot;$archivo&quot; ]; then
+  echo &quot;El archivo existe pero no es legible&quot;
+else
+  echo &quot;El archivo no existe&quot;
+fi
+</code></pre>
+<hr>
+<h3 id="13-bucles">13. Bucles</h3>
+<pre><code class="language-bash">for f in *.txt; do
+  echo &quot;Procesando $f&quot;
+done
+</code></pre>
+<hr>
+<h3 id="14-optimizacion-y-buenas-practicas">14. Optimización y buenas prácticas</h3>
+<ol>
+<li>Comentar el código para claridad.</li>
+<li>Validar entradas y errores (<code>if</code>, <code>||</code>, <code>set -e</code>).</li>
+<li>Mantener scripts modulares y funciones reutilizables.</li>
+</ol>
+<hr>
+<h3 id="15-depuracion-de-scripts">15. Depuración de scripts</h3>
+<ul>
+<li><strong><code>set -x</code></strong>: Muestra cada comando antes de ejecutarlo.</li>
+<li><strong><code>PS4</code></strong>: Personaliza prefijo de depuración.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">#!/bin/bash
+PS4='+ ${BASH_SOURCE}:${LINENO}:${FUNCNAME[0]}: '
+set -x
+echo &quot;Depuración activa&quot;
+ls archivo_inexistente
+</code></pre>
+<blockquote>
+<p>La salida mostrará línea por línea cómo se ejecutan los comandos, facilitando la detección de errores.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

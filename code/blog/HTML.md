@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: HTML
 img: /img/portada/html.avif
-description: Ideas principales de HTML
+description: Estructura web, contenido semántico.
 tags: ["blog", "lenguajes"]
 date: "2023-03-01"
 ---

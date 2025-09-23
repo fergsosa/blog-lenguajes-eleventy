@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub</title>
+    <meta name="description" content="Repositorios remotos, colaboración código.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="github">GitHub</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/github.avif" alt="img"></p>
+<h2 id="1-que-es-github">1. ¿Qué es GitHub?</h2>
+<p><strong>GitHub</strong> es una plataforma basada en la nube para el control de versiones y la colaboración en proyectos de software.<br>
+Está construida sobre <strong>Git</strong>, un sistema de control de versiones distribuido, y añade funcionalidades como:</p>
+<ul>
+<li><strong>Interfaz web</strong> para gestionar repositorios.</li>
+<li>Herramientas de <strong>colaboración</strong>: issues, pull requests y revisiones de código.</li>
+<li>Integración con <strong>CI/CD</strong> (acciones automatizadas).</li>
+<li><strong>Gestión de equipos y organizaciones</strong>.</li>
+<li><strong>Hosting gratuito</strong> para proyectos de código abierto.</li>
+</ul>
+<p><strong>Diferencias frente a otros:</strong></p>
+<ul>
+<li>GitHub vs <strong>GitLab</strong>: GitLab tiene más herramientas integradas (DevOps completo), mientras que GitHub destaca por su comunidad y ecosistema.</li>
+<li>GitHub vs <strong>Bitbucket</strong>: Bitbucket se integra mejor con el ecosistema Atlassian (Jira, Trello), GitHub es más universal y popular.</li>
+</ul>
+<hr>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>GitHub se utiliza principalmente para:</p>
+<ul>
+<li><strong>Control de versiones</strong> y seguimiento de cambios en proyectos.</li>
+<li><strong>Trabajo colaborativo</strong> entre desarrolladores, diseñadores y equipos técnicos.</li>
+<li><strong>Revisión y mejora de código</strong> mediante <em>pull requests</em>.</li>
+<li><strong>Automatización de flujos de trabajo</strong> como pruebas, despliegues y documentación.</li>
+<li><strong>Portafolios profesionales</strong> para mostrar proyectos y habilidades.</li>
+</ul>
+<p><strong>Contextos ideales:</strong></p>
+<ul>
+<li>Equipos distribuidos trabajando en un mismo proyecto.</li>
+<li>Proyectos de código abierto con múltiples colaboradores.</li>
+<li>Empresas que requieren trazabilidad y control de cambios.</li>
+<li>Estudiantes y desarrolladores que buscan aprender y compartir código.</li>
+</ul>
+<hr>
+<h3 id="3-que-puedo-construir-con-github">3. ¿Qué puedo construir con GitHub?</h3>
+<p>Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:</p>
+<ul>
+<li><strong>Aplicaciones web</strong> y móviles.</li>
+<li><strong>Librerías o frameworks</strong> para comunidades de desarrolladores.</li>
+<li><strong>Documentación técnica</strong> utilizando Markdown.</li>
+<li><strong>Automatizaciones y flujos DevOps</strong> con GitHub Actions.</li>
+<li><strong>Páginas web</strong> mediante GitHub Pages.</li>
+</ul>
+<blockquote>
+<p><em>Ejemplo: alojar un portafolio personal con GitHub Pages.</em></p>
+</blockquote>
+<hr>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<p>Usar GitHub es más recomendable cuando:</p>
+<ul>
+<li>Buscas <strong>colaboración y comunidad</strong>, ya que es la plataforma con más usuarios activos.</li>
+<li>Tu proyecto necesita <strong>visibilidad pública</strong>, como proyectos open source.</li>
+<li>Quieres integrar herramientas de automatización y despliegue rápido.</li>
+<li>Trabajas con equipos que requieren una <strong>historia detallada</strong> de cambios y revisiones.</li>
+</ul>
+<p>No es la mejor opción si:</p>
+<ul>
+<li>Tu empresa necesita <strong>privacidad total y control local</strong> sin depender de un servicio en la nube.</li>
+<li>Buscas una herramienta <strong>todo en uno</strong> con DevOps integrado como GitLab.</li>
+</ul>
+<hr>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<hr>
+<ul>
+<li><strong>Nombres descriptivos</strong> para commits y ramas.</li>
+<li>Mensajes de commit claros y estructurados, por ejemplo:
+<ul>
+<li><code>feat</code>: agregar funcionalidad de login</li>
+<li><code>fix</code>: corregir error en validación de email</li>
+<li><code>docs</code>: actualizar guía de instalación</li>
+</ul>
+</li>
+<li><strong>Uso de ramas</strong> para organizar el flujo de trabajo:
+<ul>
+<li><code>main</code> o <code>master</code>: versión estable y lista para producción.</li>
+<li><code>develop</code>: rama de integración para desarrollo.</li>
+<li><code>feature/nombre</code>: nuevas funcionalidades.</li>
+<li><code>hotfix/nombre</code>: correcciones urgentes.</li>
+</ul>
+</li>
+<li>Revisar el código mediante <strong>pull requests</strong> antes de fusionar.</li>
+<li>Mantener <strong>documentación actualizada</strong> dentro del repositorio.</li>
+<li>Usar <strong>Issues y Projects</strong> para gestionar tareas y bugs.</li>
+<li>Integrar <strong>pruebas automáticas</strong> y despliegues continuos cuando sea posible.</li>
+</ul>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<blockquote>
+<p><strong>GitHub</strong> es la plataforma más popular para gestionar proyectos de software de forma colaborativa, ofreciendo control de versiones, automatización y visibilidad pública.</p>
+</blockquote>
+<ul>
+<li><strong>Fortalezas principales:</strong>
+<ul>
+<li>Gran comunidad y soporte.</li>
+<li>Integración con herramientas externas y CI/CD.</li>
+<li>Ideal para proyectos open source.</li>
+<li>Funciones gratuitas muy completas.</li>
+</ul>
+</li>
+<li><strong>Debilidades principales:</strong>
+<ul>
+<li>Menor privacidad en la versión gratuita.</li>
+<li>Dependencia de la nube.</li>
+<li>Algunas herramientas avanzadas requieren plan pago.</li>
+</ul>
+</li>
+<li><strong>Cuándo usarlo:</strong>
+<ul>
+<li>Proyectos colaborativos y de código abierto.</li>
+<li>Creación de portafolios y muestras de trabajo.</li>
+<li>Automatización de flujos de desarrollo y despliegue.</li>
+</ul>
+</li>
+<li><strong>Cuándo evitarlo:</strong>
+<ul>
+<li>Proyectos ultra confidenciales sin conexión a internet.</li>
+<li>Empresas que prefieren soluciones auto hospedadas.</li>
+<li>Casos donde se requiera un sistema DevOps más integrado.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#node-js">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<p>IMPORTANTE: Formatea toda la respuesta usando <strong>exclusivamente Markdown</strong>. Incluye títulos, subtítulos, listas, negritas y cursivas donde sea apropiado para mejorar la legibilidad y estructura.</p>
+<p>Lenguaje: TypeScript (7)</p>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de usar GitHub de forma efectiva, es importante conocer algunos conceptos clave que se relacionan directamente con la plataforma y su funcionamiento.</p>
+<h3 id="1-git">1. <strong>Git</strong></h3>
+<p>Sistema de <strong>control de versiones distribuido</strong> que permite registrar cambios en el código, trabajar de forma colaborativa y mantener un historial completo de modificaciones.</p>
+<blockquote>
+<p><em>Git es la base sobre la que se construye GitHub.</em></p>
+</blockquote>
+<hr>
+<h3 id="2-repositorio-repo">2. <strong>Repositorio (Repo)</strong></h3>
+<p>Espacio donde se almacena el proyecto, incluyendo:</p>
+<ul>
+<li>Código fuente.</li>
+<li>Archivos de configuración.</li>
+<li>Documentación.</li>
+<li>Historial de cambios (commits).</li>
+</ul>
+<p>Puede ser <strong>público</strong> (visible para todos) o <strong>privado</strong> (acceso restringido).</p>
+<hr>
+<h3 id="3-commit">3. <strong>Commit</strong></h3>
+<p>Registro puntual de cambios realizados en el proyecto.</p>
+<ul>
+<li>Incluye un <strong>mensaje descriptivo</strong> sobre qué se modificó.</li>
+<li>Funciona como un <em>checkpoint</em> en la evolución del código.</li>
+</ul>
+<blockquote>
+<p>Ejemplo de mensaje de commit:<br>
+<code>feat: agregar formulario de registro</code></p>
+</blockquote>
+<hr>
+<h3 id="4-branch-rama">4. <strong>Branch (Rama)</strong></h3>
+<p>Versión paralela del proyecto que permite trabajar en nuevas funciones o correcciones sin afectar la rama principal.</p>
+<p>Flujo común de ramas:</p>
+<ul>
+<li><code>main</code>: Versión estable.</li>
+<li><code>develop</code>: Integración de cambios en desarrollo.</li>
+<li><code>feature/nombre</code>: Nuevas funcionalidades.</li>
+<li><code>hotfix/nombre</code>: Correcciones urgentes.</li>
+</ul>
+<hr>
+<h3 id="5-pull-request-pr">5. <strong>Pull Request (PR)</strong></h3>
+<p>Solicitud para fusionar cambios de una rama en otra, generalmente revisada por otros miembros del equipo antes de aprobarla.</p>
+<ul>
+<li>Permite <strong>revisar código</strong>, <strong>discutir cambios</strong> y <strong>mantener calidad</strong>.</li>
+</ul>
+<hr>
+<h3 id="6-issue">6. <strong>Issue</strong></h3>
+<p>Herramienta para <strong>registrar tareas, bugs o mejoras</strong> dentro de un proyecto.</p>
+<ul>
+<li>Puede asignarse a usuarios específicos.</li>
+<li>Facilita la organización y seguimiento de problemas.</li>
+</ul>
+<hr>
+<h3 id="7-fork">7. <strong>Fork</strong></h3>
+<p>Copia de un repositorio en tu propia cuenta para:</p>
+<ul>
+<li>Probar cambios sin afectar el original.</li>
+<li>Contribuir a proyectos open source.</li>
+</ul>
+<hr>
+<h3 id="8-merge">8. <strong>Merge</strong></h3>
+<p>Proceso de <strong>fusionar cambios</strong> de una rama a otra.</p>
+<p>Tipos comunes de merge:</p>
+<ul>
+<li><strong>Merge commit:</strong> conserva el historial completo.</li>
+<li><strong>Squash and merge:</strong> combina varios commits en uno solo.</li>
+<li><strong>Rebase and merge:</strong> integra cambios de forma lineal.</li>
+</ul>
+<hr>
+<h3 id="9-markdown">9. <strong>Markdown</strong></h3>
+<p>Lenguaje de marcado ligero usado en GitHub para:</p>
+<ul>
+<li>Documentación (<code>README.md</code>).</li>
+<li>Issues y Pull Requests.</li>
+<li>Wikis y páginas web.</li>
+</ul>
+<hr>
+<h3 id="10-github-actions">10. <strong>GitHub Actions</strong></h3>
+<p>Sistema de <strong>automatización</strong> para ejecutar flujos de trabajo como:</p>
+<ul>
+<li>Pruebas automáticas.</li>
+<li>Despliegues a producción.</li>
+<li>Análisis de calidad de código.</li>
+</ul>
+<hr>
+<h3 id="11-github-pages">11. <strong>GitHub Pages</strong></h3>
+<p>Servicio gratuito de GitHub para <strong>publicar sitios web estáticos</strong> directamente desde un repositorio.</p>
+<hr>
+<h3 id="12-licencias">12. <strong>Licencias</strong></h3>
+<p>Definen cómo otros pueden usar, modificar y distribuir tu código.</p>
+<p>Ejemplo:</p>
+<ul>
+<li><code>MIT</code>: Libre uso con atribución.</li>
+<li><code>GPL</code>: Uso libre, pero derivados deben ser open source.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<h2 id="snippets-rapidos-2">Snippets Rápidos</h2>
+<p>Fragmentos de código y configuraciones que se utilizan con frecuencia en proyectos de GitHub.</p>
+<h3 id="1-estructura-basica-de-readme-md">1. <strong>Estructura básica de README.md</strong></h3>
+<p>Archivo principal para documentar un proyecto en GitHub.</p>
+<pre><code class="language-markdown"># Nombre del Proyecto
+
+Descripción breve de lo que hace el proyecto y su propósito.
+
+## Instalación
+
+```bash
+git clone https://github.com/usuario/proyecto.git
+cd proyecto
+npm install
+```
+</code></pre>
+<h2 id="uso">Uso</h2>
+<pre><code class="language-bash">npm run dev
+</code></pre>
+<h2 id="contribuir">Contribuir</h2>
+<ol>
+<li>Haz un fork del proyecto.</li>
+<li>Crea una nueva rama (<code>git checkout -b feature/nueva-funcion</code>).</li>
+<li>Realiza tus cambios y haz commit (<code>git commit -m 'feat: descripción del cambio'</code>).</li>
+<li>Haz push a la rama (<code>git push origin feature/nueva-funcion</code>).</li>
+<li>Crea un Pull Request.</li>
+</ol>
+<h2 id="licencia">Licencia</h2>
+<p>Este proyecto está bajo la licencia MIT.</p>
+<pre><code>
+---
+
+### 2. **.gitignore básico para Node.js**
+Evitar subir archivos innecesarios al repositorio.
+
+
+node_modules/
+.env
+dist/
+coverage/
+
+</code></pre>
+<hr>
+<h3 id="3-flujo-tipico-de-ramas-en-github">3. <strong>Flujo típico de ramas en GitHub</strong></h3>
+<p>Estructura recomendada para ramas en proyectos colaborativos.</p>
+<pre><code>
+main # Versión estable lista para producción
+develop # Rama de integración para desarrollo
+feature/ # Nuevas funcionalidades
+hotfix/ # Correcciones urgentes
+release/ # Versión previa a producción
+
+</code></pre>
+<hr>
+<h3 id="4-template-para-issues">4. <strong>Template para Issues</strong></h3>
+<p>Archivo <code>.github/ISSUE_TEMPLATE/bug_report.md</code></p>
+<pre><code class="language-markdown">## Descripción del bug
+
+Explica claramente el problema.
+
+## Pasos para reproducir
+
+1. Ir a...
+2. Hacer clic en...
+3. Ver error.
+
+## Comportamiento esperado
+
+Explica lo que debería suceder.
+
+## Información adicional
+
+Capturas de pantalla, versiones, etc.
+</code></pre>
+<hr>
+<h3 id="5-template-para-pull-requests">5. <strong>Template para Pull Requests</strong></h3>
+<p>Archivo <code>.github/PULL_REQUEST_TEMPLATE.md</code></p>
+<pre><code class="language-markdown">## Descripción
+
+Breve resumen de los cambios realizados.
+
+## Tipo de cambio
+
+- [ ] Nueva funcionalidad
+- [ ] Corrección de bug
+- [ ] Mejora de documentación
+- [ ] Refactor
+
+## Checklist
+
+- [ ] El código sigue las convenciones del proyecto.
+- [ ] Los tests se han ejecutado correctamente.
+- [ ] La documentación se ha actualizado si es necesario.
+</code></pre>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-cual-es-la-diferencia-fundamental-entre-git-y-github">1. ¿Cuál es la diferencia fundamental entre Git y GitHub?</h3>
+<ul>
+<li><strong>Git</strong> es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.</li>
+<li><strong>GitHub</strong> es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como <em>pull requests</em>, <em>issues</em> y <em>actions</em>.</li>
+</ul>
+<hr>
+<h3 id="2-explica-el-proposito-de-un-pull-request-solicitud-de-extraccion-y-describe-el-proceso-general-para-crear-uno">2. Explica el propósito de un &quot;pull request&quot; (solicitud de extracción) y describe el proceso general para crear uno.</h3>
+<p>Un <em>pull request</em> (PR) es una solicitud para fusionar cambios de una rama a otra en un repositorio. Sirve para revisar, discutir y aprobar cambios antes de integrarlos.</p>
+<p><strong>Proceso:</strong></p>
+<ol>
+<li>Crear una rama para los cambios:<pre><code class="language-bash">git checkout -b feature/nueva-funcion
+</code></pre>
+</li>
+<li>Hacer commits con las modificaciones.</li>
+<li>Subir la rama al repositorio remoto:<pre><code class="language-bash">git push origin feature/nueva-funcion
+</code></pre>
+</li>
+<li>En GitHub, crear un <em>Pull Request</em> desde la rama hacia <code>main</code> o <code>develop</code>.</li>
+<li>Solicitar revisiones y, una vez aprobado, fusionar.</li>
+</ol>
+<hr>
+<h3 id="3-como-se-clona-un-repositorio-de-github-a-tu-maquina-local-que-comandos-de-git-utilizarias">3. ¿Cómo se clona un repositorio de GitHub a tu máquina local? ¿Qué comandos de Git utilizarías?</h3>
+<p>Para clonar un repositorio:</p>
+<pre><code class="language-bash">git clone https://github.com/usuario/repo.git
+cd repo
+</code></pre>
+<p>Este comando descarga el repositorio y configura automáticamente el remoto llamado <code>origin</code>.</p>
+<hr>
+<h3 id="4-describe-la-diferencia-entre-git-fetch-git-pull-y-git-merge-cuando-usarias-cada-uno">4. Describe la diferencia entre git fetch, git pull y git merge. ¿Cuándo usarías cada uno?</h3>
+<ul>
+<li><code>git fetch</code>: Descarga cambios remotos <strong>sin fusionarlos</strong>. Útil para revisar cambios antes de integrarlos.</li>
+<li><code>git pull</code>: Descarga y <strong>fusiona</strong> cambios automáticamente (fetch + merge).</li>
+<li><code>git merge</code>: Fusiona manualmente ramas ya descargadas.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><code>fetch</code> → cuando quieres inspeccionar cambios antes de aplicarlos.</li>
+<li><code>pull</code> → cuando quieres mantener tu rama actual actualizada rápidamente.</li>
+<li><code>merge</code> → cuando integras ramas de forma controlada.</li>
+</ul>
+<hr>
+<h3 id="5-que-es-el-archivo-gitignore-y-por-que-es-importante-en-un-proyecto-da-un-ejemplo-de-su-contenido">5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto? Da un ejemplo de su contenido.</h3>
+<p>El archivo <code>.gitignore</code> especifica qué archivos o carpetas <strong>no deben ser rastreados</strong> por Git, evitando subir información sensible o archivos innecesarios.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code>node_modules/
+.env
+dist/
+*.log
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-explica-el-concepto-de-rebase-en-git-y-como-se-diferencia-de-git-merge-cuando-seria-apropiado-usar-rebase">6. Explica el concepto de &quot;rebase&quot; en Git y cómo se diferencia de git merge. ¿Cuándo sería apropiado usar rebase?</h3>
+<ul>
+<li><code>git rebase</code> reorganiza la historia de commits, aplicando tus cambios <strong>encima</strong> de otra rama, creando un historial lineal.</li>
+<li><code>git merge</code> combina dos ramas preservando la historia completa, incluyendo ramas y bifurcaciones.</li>
+</ul>
+<p><strong>Cuándo usar rebase:</strong></p>
+<ul>
+<li>Para mantener un historial limpio y lineal en proyectos colaborativos.</li>
+<li>Antes de crear un <em>Pull Request</em>.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git checkout feature
+git rebase main
+</code></pre>
+<hr>
+<h3 id="7-que-es-un-fork-en-github-y-en-que-situaciones-lo-utilizarias-cual-es-el-proceso-para-mantener-tu-fork-sincronizado-con-el-repositorio-original">7. ¿Qué es un &quot;fork&quot; en GitHub y en qué situaciones lo utilizarías? ¿Cuál es el proceso para mantener tu &quot;fork&quot; sincronizado con el repositorio original?</h3>
+<ul>
+<li>Un <strong>fork</strong> es una copia completa de un repositorio en tu cuenta de GitHub.</li>
+<li>Es útil para <strong>contribuir a proyectos open source</strong> sin afectar el repositorio original.</li>
+</ul>
+<p><strong>Proceso para sincronizar:</strong></p>
+<pre><code class="language-bash">git remote add upstream https://github.com/original/repo.git
+git fetch upstream
+git checkout main
+git merge upstream/main
+git push origin main
+</code></pre>
+<hr>
+<h3 id="8-para-que-sirve-git-revert-vs-git-reset-explica-diferencias-entre-sus-modos-soft-mixed-hard">8. ¿Para qué sirve git revert vs git reset? Explica diferencias entre sus modos (--soft, --mixed, --hard).</h3>
+<ul>
+<li><code>git revert</code>: Crea un commit que <strong>revierte cambios previos</strong> sin modificar la historia.</li>
+<li><code>git reset</code>: <strong>Retrocede en la historia</strong>, modificando el estado de commits y el área de staging.</li>
+</ul>
+<p><strong>Modos de reset:</strong></p>
+<ul>
+<li><code>--soft</code>: Mantiene cambios en staging.</li>
+<li><code>--mixed</code>: Mantiene cambios en el directorio de trabajo, pero limpia el staging.</li>
+<li><code>--hard</code>: Elimina cambios por completo.</li>
+</ul>
+<hr>
+<h3 id="9-que-son-los-tags-en-git-como-los-usarias-para-marcar-versiones-estables-en-un-proyecto">9. ¿Qué son los tags en Git? ¿Cómo los usarías para marcar versiones estables en un proyecto?</h3>
+<ul>
+<li>Los <strong>tags</strong> son marcadores que señalan commits específicos, comúnmente usados para identificar <strong>versiones estables</strong>.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git tag -a v1.0.0 -m &quot;Versión estable inicial&quot;
+git push origin v1.0.0
+</code></pre>
+<p>Esto permite rastrear versiones y generar releases en GitHub.</p>
+<hr>
+<h3 id="10-como-se-gestionan-las-ramas-en-github-describe-el-flujo-de-trabajo-de-ramas-que-consideras-una-buena-practica">10. ¿Cómo se gestionan las ramas en GitHub? Describe el flujo de trabajo de ramas que consideras una buena práctica.</h3>
+<p>Flujo recomendado (<em>Git Flow</em> simplificado):</p>
+<ul>
+<li><code>main</code>: Rama estable para producción.</li>
+<li><code>develop</code>: Rama para integrar cambios en desarrollo.</li>
+<li><code>feature/*</code>: Nuevas funcionalidades.</li>
+<li><code>hotfix/*</code>: Correcciones urgentes en producción.</li>
+<li><code>release/*</code>: Preparación previa a producción.</li>
+</ul>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-describe-como-se-puede-proteger-una-rama-principal-por-ejemplo-main-o-master-usando-politicas-de-github">11. Describe cómo se puede proteger una rama principal (por ejemplo main o master) usando políticas de GitHub.</h3>
+<p>En GitHub se puede proteger una rama mediante la sección <strong>Branch Protection Rules</strong>:</p>
+<ul>
+<li>Requerir <em>Pull Requests</em> antes de hacer merge.</li>
+<li>Exigir revisiones de código y aprobaciones.</li>
+<li>Bloquear <em>force pushes</em> y borrado de la rama.</li>
+<li>Configurar integración con tests automáticos que deben aprobarse antes de fusionar.</li>
+</ul>
+<hr>
+<h3 id="12-que-son-los-submodules-en-git-y-cuando-seria-util-utilizarlos-en-un-repositorio-de-github">12. ¿Qué son los submodules en Git y cuándo sería útil utilizarlos en un repositorio de GitHub?</h3>
+<ul>
+<li>Los <strong>submodules</strong> permiten incluir un repositorio Git dentro de otro.</li>
+<li>Útiles cuando necesitas <strong>dependencias versionadas</strong> que se actualicen por separado.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git submodule add https://github.com/usuario/lib.git libs/lib
+</code></pre>
+<hr>
+<h3 id="13-menciona-al-menos-dos-estrategias-avanzadas-de-branching-y-cuando-conviene-utilizarlas">13. Menciona al menos dos estrategias avanzadas de branching y cuándo conviene utilizarlas.</h3>
+<ul>
+<li><strong>Git Flow</strong>: Ideal para proyectos grandes con ciclos definidos de desarrollo, pruebas y releases.</li>
+<li><strong>Trunk Based Development</strong>: Para equipos ágiles que integran cambios frecuentemente en una sola rama principal.</li>
+</ul>
+<hr>
+<h3 id="14-explica-como-auditar-el-historial-de-cambios-de-un-repositorio-grande-para-identificar-cuando-se-introdujo-un-bug-o-una-caracteristica-especifica">14. Explica cómo auditar el historial de cambios de un repositorio grande para identificar cuándo se introdujo un bug o una característica específica.</h3>
+<ul>
+<li>Usar <code>git log</code> para inspeccionar cambios:<pre><code class="language-bash">git log --oneline --grep=&quot;mensaje relacionado&quot;
+</code></pre>
+</li>
+<li>Usar <code>git blame</code> para ver quién modificó una línea específica:<pre><code class="language-bash">git blame archivo.js
+</code></pre>
+</li>
+<li>Usar <code>git bisect</code> para encontrar el commit exacto que introdujo un bug:<pre><code class="language-bash">git bisect start
+git bisect bad
+git bisect good commit_id
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="15-explica-el-concepto-de-github-actions-y-describe-un-flujo-de-trabajo-de-integracion-continua-despliegue-continuo-ci-cd-que-podrias-implementar-con-el">15. Explica el concepto de &quot;GitHub Actions&quot; y describe un flujo de trabajo de integración continua/despliegue continuo (CI/CD) que podrías implementar con él.</h3>
+<ul>
+<li><strong>GitHub Actions</strong> es una herramienta de automatización integrada en GitHub para ejecutar flujos de trabajo como pruebas, builds y despliegues.</li>
+</ul>
+<p><strong>Ejemplo de flujo CI/CD:</strong></p>
+<ol>
+<li>Cuando se hace <em>push</em> a la rama <code>main</code>, se ejecutan pruebas automáticas.</li>
+<li>Si las pruebas pasan, se genera un build de la aplicación.</li>
+<li>El build se despliega automáticamente a un servidor o plataforma como Heroku o AWS.</li>
+</ol>
+<p>Archivo <code>.github/workflows/ci.yml</code>:</p>
+<pre><code class="language-yaml">name: CI Pipeline
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Instalar dependencias
+        run: npm install
+      - name: Ejecutar pruebas
+        run: npm test
+</code></pre>
+<p>Esto asegura calidad y despliegues automáticos de forma segura.</p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

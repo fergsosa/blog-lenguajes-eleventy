@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: JavaScript
 img: /img/portada/javascript.avif
-description: Ideas principales de JavaScript
+description: Lenguaje dinámico, interacción web.
 tags: ["blog", "lenguajes"]
 date: "2023-06-01"
 ---
@@ -113,7 +113,7 @@ Para escribir buen código en JavaScript, sigue estas recomendaciones:
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#javascript)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Comandos](#comandos)

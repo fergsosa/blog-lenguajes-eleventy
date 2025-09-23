@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TypeScript</title>
-    <meta name="description" content="Ideas principales de TypeScript">
+    <meta name="description" content="JavaScript tipado, mayor seguridad.">
     <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
     <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
   </head>
@@ -451,40 +451,263 @@ npm install ts-node -D
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
-<p><a href="#temas">🔼 temas</a></p>
-<h1 id="seccion-03">Seccion 03 •</h1>
-<h2 id="conceptos-claves-2">Conceptos Claves</h2>
-<p>Genera 15 preguntas de entrevista técnica sobre TypeScript.</p>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-typescript-y-en-que-se-diferencia-de-javascript">1. ¿Qué es TypeScript y en qué se diferencia de JavaScript?</h3>
+<p>TypeScript es un <strong>superset de JavaScript</strong> desarrollado por Microsoft que agrega <strong>tipado estático</strong> y características avanzadas al lenguaje.<br>
+La diferencia principal es que TypeScript permite detectar errores en tiempo de desarrollo y debe <strong>compilarse a JavaScript</strong> antes de ejecutarse.</p>
+<p><strong>Resumen:</strong></p>
 <ul>
-<li>Incluye temas básicos, intermedios y avanzados.</li>
-<li>Mezcla teoría y práctica.</li>
-<li>Cubre sintaxis, estructuras de datos, buenas prácticas y casos reales.</li>
-<li>Redacta las preguntas de forma clara, sin respuestas.</li>
+<li><strong>JavaScript:</strong> lenguaje dinámico, tipado en tiempo de ejecución.</li>
+<li><strong>TypeScript:</strong> lenguaje con tipado estático y detección temprana de errores.</li>
 </ul>
-<h3 id="nivel-basico">🟢 Nivel Básico</h3>
+<h3 id="2-tipos-primitivos-en-typescript">2. Tipos primitivos en TypeScript</h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>let nombre: string = &quot;Fernando&quot;;</code></td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td><code>let edad: number = 30;</code></td>
+</tr>
+<tr>
+<td><code>boolean</code></td>
+<td><code>let activo: boolean = true;</code></td>
+</tr>
+<tr>
+<td><code>null</code></td>
+<td><code>let valor: null = null;</code></td>
+</tr>
+<tr>
+<td><code>undefined</code></td>
+<td><code>let indefinido: undefined = undefined;</code></td>
+</tr>
+<tr>
+<td><code>bigint</code></td>
+<td><code>let numeroGrande: bigint = 9007199254740991n;</code></td>
+</tr>
+<tr>
+<td><code>symbol</code></td>
+<td><code>let id: symbol = Symbol(&quot;id&quot;);</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-interfaces-vs-type-aliases">3. Interfaces vs Type Aliases</h3>
+<ul>
+<li><strong>Interfaces (<code>interface</code>):</strong> Definen la estructura de objetos y permiten herencia.</li>
+<li><strong>Type Aliases (<code>type</code>):</strong> Pueden representar objetos, uniones, funciones, etc.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-typescript">interface Usuario {
+  id: number;
+  nombre: string;
+}
+
+type Resultado = &quot;success&quot; | &quot;error&quot;;
+</code></pre>
+<h3 id="4-union-types-vs-intersection-types">4. Union Types vs Intersection Types</h3>
+<ul>
+<li><strong>Union Types (<code>|</code>):</strong> Permite <strong>uno u otro tipo</strong>.</li>
+</ul>
+<pre><code class="language-typescript">let id: number | string;
+id = 10;
+id = &quot;ABC123&quot;;
+</code></pre>
+<ul>
+<li><strong>Intersection Types (<code>&amp;</code>):</strong> Combina múltiples tipos en uno solo.</li>
+</ul>
+<pre><code class="language-typescript">interface Persona {
+  nombre: string;
+}
+interface Empleado {
+  salario: number;
+}
+
+type PersonaEmpleado = Persona &amp; Empleado;
+const trabajador: PersonaEmpleado = { nombre: &quot;Ana&quot;, salario: 5000 };
+</code></pre>
+<h3 id="5-tipar-funcion-con-objeto-como-parametro-y-valor-de-retorno">5. Tipar función con objeto como parámetro y valor de retorno</h3>
+<pre><code class="language-typescript">function calcularTotal(producto: { precio: number; cantidad: number }): number {
+  return producto.precio * producto.cantidad;
+}
+
+const total = calcularTotal({ precio: 10, cantidad: 2 }); // 20
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-generics-y-ejemplo-practico">6. Generics y ejemplo práctico</h3>
+<p>Los <strong>Generics</strong> permiten escribir código reutilizable y flexible, indicando el tipo como parámetro.</p>
+<pre><code class="language-typescript">function encontrarElemento&lt;T&gt;(
+  arr: T[],
+  predicado: (item: T) =&gt; boolean
+): T | undefined {
+  return arr.find(predicado);
+}
+
+const numeros = [1, 2, 3, 4];
+const resultado = encontrarElemento(numeros, (num) =&gt; num &gt; 2); // 3
+</code></pre>
+<h3 id="7-utility-types-y-ejemplo-real">7. Utility Types y ejemplo real</h3>
+<p><strong>Utility Types</strong> son tipos predefinidos que ayudan a manipular otros tipos.</p>
+<p><strong>Ejemplo con <code>Partial</code>:</strong><br>
+Hace que todas las propiedades de un tipo sean opcionales.</p>
+<pre><code class="language-typescript">interface Usuario {
+  id: number;
+  nombre: string;
+  email: string;
+}
+
+function actualizarUsuario(id: number, cambios: Partial&lt;Usuario&gt;) {
+  // Solo se pasan los campos que se quieren actualizar
+}
+
+actualizarUsuario(1, { nombre: &quot;Carlos&quot; });
+</code></pre>
+<h3 id="8-significado-de-noimplicitany">8. Significado de noImplicitAny</h3>
+<p>Habilitar <code>noImplicitAny</code> en <code>tsconfig.json</code> obliga a <strong>definir explícitamente los tipos</strong>.<br>
+Esto evita que TypeScript asigne automáticamente <code>any</code> cuando no se especifica el tipo.</p>
+<pre><code class="language-typescript">// ❌ Sin noImplicitAny, esto sería válido:
+function sumar(a, b) {
+  return a + b;
+}
+
+// ✅ Con noImplicitAny habilitado, se requiere tipado:
+function sumar(a: number, b: number): number {
+  return a + b;
+}
+</code></pre>
+<h3 id="9-type-guards-y-ejemplo-practico">9. Type Guards y ejemplo práctico</h3>
+<p><strong>Type Guards</strong> permiten validar el tipo en tiempo de ejecución.</p>
+<pre><code class="language-typescript">interface Perro {
+  ladrar: () =&gt; void;
+}
+interface Gato {
+  maullar: () =&gt; void;
+}
+
+function esPerro(animal: Perro | Gato): animal is Perro {
+  return (animal as Perro).ladrar !== undefined;
+}
+
+function hacerSonido(animal: Perro | Gato) {
+  if (esPerro(animal)) {
+    animal.ladrar();
+  } else {
+    animal.maullar();
+  }
+}
+</code></pre>
+<h3 id="10-tuples-vs-arreglos">10. Tuples vs Arreglos</h3>
+<ul>
+<li><strong>Tuples:</strong> Longitud y tipos <strong>fijos</strong>.</li>
+<li><strong>Arreglos normales:</strong> Longitud y tipos variables.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-typescript">let coordenadas: [number, number] = [10, 20];
+// coordenadas[0] = &quot;hola&quot;; ❌ Error
+
+let lista: number[] = [1, 2, 3];
+lista.push(4); // ✅ Válido
+</code></pre>
+<p>Se usan en casos como representar <strong>pares clave-valor</strong> o datos estructurados.</p>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-decorators-y-tipos">11. Decorators y tipos</h3>
+<p>Los <strong>Decorators</strong> añaden metadatos o modifican el comportamiento de clases y elementos.</p>
+<ul>
+<li><strong>Clase:</strong></li>
+</ul>
+<pre><code class="language-typescript">function Log(clase: Function) {
+  console.log(`Clase creada: ${clase.name}`);
+}
+
+@Log
+class Persona {}
+</code></pre>
+<ul>
+<li><strong>Método:</strong></li>
+</ul>
+<pre><code class="language-typescript">function MedirTiempo(
+  target: any,
+  propertyKey: string,
+  descriptor: PropertyDescriptor
+) {
+  const metodoOriginal = descriptor.value;
+  descriptor.value = function (...args: any[]) {
+    console.time(&quot;Tiempo&quot;);
+    const resultado = metodoOriginal.apply(this, args);
+    console.timeEnd(&quot;Tiempo&quot;);
+    return resultado;
+  };
+}
+
+class Calculadora {
+  @MedirTiempo
+  sumar(a: number, b: number) {
+    return a + b;
+  }
+}
+</code></pre>
+<h3 id="12-conditional-types">12. Conditional Types</h3>
+<p>Permiten <strong>definir tipos según una condición</strong>.</p>
+<pre><code class="language-typescript">type EsString&lt;T&gt; = T extends string ? &quot;Es texto&quot; : &quot;No es texto&quot;;
+
+type Caso1 = EsString&lt;string&gt;; // &quot;Es texto&quot;
+type Caso2 = EsString&lt;number&gt;; // &quot;No es texto&quot;
+</code></pre>
+<p>Esto ayuda a <strong>crear tipos dinámicos y reutilizables</strong>.</p>
+<h3 id="13-uso-del-tipo-never">13. Uso del tipo <code>never</code></h3>
+<p>El tipo <code>never</code> se utiliza en funciones que <strong>nunca retornan un valor</strong>, como errores o loops infinitos.</p>
+<pre><code class="language-typescript">function lanzarError(mensaje: string): never {
+  throw new Error(mensaje);
+}
+</code></pre>
+<p>Se usa para indicar que la función no tiene un punto de retorno.</p>
+<h3 id="14-migracion-de-javascript-a-typescript">14. Migración de JavaScript a TypeScript</h3>
+<p><strong>Estrategia:</strong></p>
 <ol>
-<li>¿Qué es TypeScript y en qué se diferencia de JavaScript?</li>
-<li>Menciona los tipos primitivos en TypeScript y da ejemplos de cada uno.</li>
-<li>¿Para qué sirven los interfaces en TypeScript? ¿Cómo se diferencian de los type aliases?</li>
-<li>¿Qué son union types y intersection types? Da ejemplos prácticos de cuándo usarías cada uno.</li>
-<li>¿Cómo se tipa una función que recibe un objeto como parámetro y retorna un valor? Da un ejemplo.</li>
+<li>Configurar <code>tsconfig.json</code> con <code>&quot;allowJs&quot;: true</code> y <code>&quot;checkJs&quot;: false</code>.</li>
+<li>Renombrar archivos <code>.js</code> a <code>.ts</code> de forma progresiva.</li>
+<li>Activar <code>&quot;strict&quot;: true</code> gradualmente.</li>
+<li>Usar <code>Partial</code>, <code>any</code> temporalmente en lugares complejos.</li>
+<li>Agregar pruebas automáticas antes y después de la migración.</li>
 </ol>
-<h3 id="nivel-intermedio">🟡 Nivel Intermedio</h3>
-<ol start="6">
-<li>¿Qué son los generics? Escribe una función genérica simple que reciba un arreglo de elementos de tipo T y retorne el primero que coincida con un predicado.</li>
-<li>¿Qué son los utility types que ofrece TypeScript (por ejemplo Partial, Required, Pick, Omit, Record)? Escoge uno y describe un caso real donde lo usarías.</li>
-<li>¿Qué significa tener noImplicitAny habilitado en el archivo de configuración tsconfig.json? ¿Cómo afecta al código?</li>
-<li>¿Qué son los type guards y cómo se pueden implementar? Da un ejemplo práctico de función que use type guard para distinguir entre dos posibles tipos.</li>
-<li>Explícame cómo funcionan los tuples en TypeScript, sus diferencias respecto a un arreglo normal, y cuándo los usarías.</li>
-</ol>
-<h3 id="nivel-avanzado">🔴 Nivel Avanzado</h3>
-<ol start="11">
-<li>¿Qué son los decorators en TypeScript? Describe al menos dos tipos de decoradores (por ejemplo de clase, método, propiedad) y un caso de uso real.</li>
-<li>Explora el concepto de conditional types (tipos condicionales). Da un ejemplo de tipo condicional complejo, y explica qué problemas ayuda a resolver.</li>
-<li>¿Qué es never como tipo de retorno y en qué casos se debería usar? Da un ejemplo de función real donde never sea apropiado.</li>
-<li>Describe cómo manejarías migrar un proyecto grande de JavaScript puro a TypeScript. ¿Qué estrategia seguirías para minimizar riesgos? ¿Qué configuraciones del compilador considerarías estrictas?</li>
-<li>Imagina que tienes una función asíncrona que devuelve datos de una API con distintos posibles esquemas dependiendo de un campo “type”. ¿Cómo garantizarías con TypeScript que el consumidor de esa función maneje todos los casos correctamente, evitando errores en tiempo de ejecución?</li>
-</ol>
+<p>Configuraciones clave:</p>
+<ul>
+<li><code>&quot;strict&quot;: true</code></li>
+<li><code>&quot;noImplicitAny&quot;: true</code></li>
+<li><code>&quot;strictNullChecks&quot;: true</code>
+<h3 id="15-manejo-seguro-de-multiples-esquemas-en-una-api">15. Manejo seguro de múltiples esquemas en una API</h3>
+</li>
+</ul>
+<p>Usar <strong>discriminated unions</strong> para garantizar que todos los casos sean manejados.</p>
+<pre><code class="language-typescript">type RespuestaAPI =
+  | { type: &quot;usuario&quot;; data: { id: number; nombre: string } }
+  | { type: &quot;producto&quot;; data: { id: number; precio: number } };
+
+function procesarRespuesta(respuesta: RespuestaAPI) {
+  switch (respuesta.type) {
+    case &quot;usuario&quot;:
+      console.log(respuesta.data.nombre);
+      break;
+    case &quot;producto&quot;:
+      console.log(respuesta.data.precio);
+      break;
+    default:
+      const exhaustivo: never = respuesta;
+      return exhaustivo;
+  }
+}
+</code></pre>
+<p>Esto asegura que <strong>TypeScript te obligue a cubrir todos los casos</strong>.</p>
+<p><a href="#temas">🔼 temas</a></p>
 
     </main>
     <hr>
@@ -492,12 +715,6 @@ npm install ts-node -D
       <h2 id="categorias">Categorías</h2>
       <h3 id="otros-articulos">Otros artículos</h3>
       <ul>
-        
-          <li>
-            <a href="/blog-lenguajes-eleventy/blog/Plantilla/">
-              Plantilla
-            </a>
-          </li>
         
           <li>
             <a href="/blog-lenguajes-eleventy/blog/HTML/">

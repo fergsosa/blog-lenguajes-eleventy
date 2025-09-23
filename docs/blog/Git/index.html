@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git</title>
+    <meta name="description" content="Control versiones, historial código.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="git">Git</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/git.avif" alt="Git"></p>
+<p><a href="#temas">temas</a></p>
+<h2 id="que-es-git">¿Qué es Git?</h2>
+<p><strong>Git</strong> es un <strong>sistema de control de versiones distribuido</strong> que permite gestionar y rastrear los cambios realizados en archivos y proyectos a lo largo del tiempo.<br>
+Fue creado por <strong>Linus Torvalds</strong> en 2005 para el desarrollo del kernel de Linux.</p>
+<p><strong>Diferencias con otros sistemas de control de versiones:</strong></p>
+<ul>
+<li><strong>Distribuido:</strong> Cada desarrollador tiene una copia completa del repositorio, con todo el historial de cambios, a diferencia de sistemas centralizados como <strong>Subversion (SVN)</strong>.</li>
+<li><strong>Rápido y eficiente:</strong> Opera de manera local para la mayoría de las acciones, lo que mejora el rendimiento.</li>
+<li><strong>Seguridad:</strong> Utiliza <strong>hashes SHA-1/SHA-256</strong> para asegurar la integridad de los datos.</li>
+<li><strong>Ramas (branches) ligeras:</strong> Permite crear y fusionar ramas de forma sencilla y eficiente.</li>
+<li><strong>Popularidad y soporte:</strong> Git es el estándar de facto en la industria, lo que asegura herramientas y documentación abundantes.</li>
+</ul>
+<h3 id="para-que-se-usa">¿Para qué se usa?</h3>
+<p>Git se utiliza principalmente para:</p>
+<ul>
+<li><strong>Control de versiones:</strong> Mantener un historial claro y seguro de cambios en proyectos de software.</li>
+<li><strong>Colaboración en equipo:</strong> Permite que varios desarrolladores trabajen en paralelo sin interferir entre sí.</li>
+<li><strong>Gestión de ramas y características:</strong> Facilita la creación de ramas para desarrollar nuevas funciones, corregir errores o experimentar sin afectar la rama principal.</li>
+<li><strong>Despliegue y automatización:</strong> Integración con <strong>CI/CD</strong> y herramientas como GitHub Actions, GitLab CI o Jenkins.</li>
+</ul>
+<p><strong>Contextos ideales:</strong></p>
+<ul>
+<li>Proyectos de <strong>desarrollo de software profesional</strong>.</li>
+<li>Equipos distribuidos o remotos que necesitan trabajar en simultáneo.</li>
+<li>Proyectos <strong>open source</strong> donde muchas personas contribuyen desde distintos lugares.</li>
+<li>Control de versiones para documentación, configuraciones o infraestructura como código (IaC).</li>
+</ul>
+<h3 id="que-puedo-construir-con-git">¿Qué puedo construir con Git?</h3>
+<p>Aunque Git no es un lenguaje de programación ni una herramienta de construcción de software, <strong>sirve como base para organizar cualquier proyecto</strong>.<br>
+Con Git puedes estructurar y versionar proyectos como:</p>
+<ul>
+<li><strong>Aplicaciones web</strong> y móviles.</li>
+<li><strong>Microservicios</strong> en backend.</li>
+<li><strong>Documentación técnica</strong> y manuales.</li>
+<li><strong>Infraestructura como código (IaC)</strong>.</li>
+<li><strong>Bibliotecas y frameworks</strong>.</li>
+<li><strong>Configuraciones de entornos y scripts</strong>.</li>
+</ul>
+<p>En otras palabras, <strong>Git no construye el proyecto</strong>, pero <strong>lo mantiene organizado, versionado y seguro</strong>.</p>
+<h3 id="cuando-es-mas-conveniente-usarlo">¿Cuándo es más conveniente usarlo?</h3>
+<p>Git es más conveniente cuando:</p>
+<ul>
+<li>Trabajas en proyectos <strong>colaborativos</strong> con varias personas.</li>
+<li>Necesitas <strong>historial detallado</strong> de cambios y revertir versiones fácilmente.</li>
+<li>Quieres implementar <strong>flujo de trabajo con ramas</strong> (Git Flow, GitHub Flow, Trunk-Based Development, etc.).</li>
+<li>Necesitas <strong>integración con plataformas populares</strong> como GitHub, GitLab o Bitbucket.</li>
+<li>Trabajas con <strong>despliegues automatizados</strong> o integración continua.</li>
+</ul>
+<p>Puede no ser necesario si:</p>
+<ul>
+<li>El proyecto es <strong>pequeño, individual y temporal</strong>, donde un control de versiones puede ser innecesario.</li>
+<li>Necesitas algo extremadamente simple como un <strong>backup puntual</strong>, donde bastaría con copias manuales.</li>
+</ul>
+<h3 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h3>
+<p>Para mantener un flujo de trabajo eficiente y limpio, sigue estas prácticas:</p>
+<h3 id="buenas-practicas"><strong>Buenas prácticas:</strong></h3>
+<ol>
+<li>
+<p><strong>Commits pequeños y descriptivos:</strong></p>
+<ul>
+<li>Mensajes claros que describan <em>qué</em> y <em>por qué</em> se hizo el cambio.</li>
+<li>Ejemplo: <code>fix: corrige bug en login por credenciales inválidas</code>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Uso adecuado de ramas:</strong></p>
+<ul>
+<li><code>main</code> o <code>master</code>: rama estable y lista para producción.</li>
+<li><code>develop</code>: para integrar nuevas funcionalidades.</li>
+<li><code>feature/*</code>: para nuevas características.</li>
+<li><code>hotfix/*</code>: para correcciones urgentes en producción.</li>
+</ul>
+</li>
+<li>
+<p><strong>Evitar subir archivos innecesarios:</strong></p>
+<ul>
+<li>Configurar <code>.gitignore</code> para excluir archivos como <code>node_modules</code>, logs, builds, etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Actualizar tu rama antes de fusionar (pull/rebase):</strong></p>
+<ul>
+<li>Evitar conflictos integrando cambios recientes antes de hacer un merge.</li>
+</ul>
+</li>
+<li>
+<p><strong>Revisar código antes de fusionar (Pull Request/Code Review):</strong></p>
+<ul>
+<li>Mantener la calidad y coherencia del proyecto.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="resumen-final">Resumen final</h3>
+<blockquote>
+<p>Síntesis rápida de lo aprendido sobre Git.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Fortalezas principales:</strong></p>
+<ul>
+<li>Distribuido, rápido y seguro.</li>
+<li>Excelente manejo de ramas.</li>
+<li>Gran comunidad y herramientas compatibles.</li>
+</ul>
+</li>
+<li>
+<p><strong>Debilidades principales:</strong></p>
+<ul>
+<li>Curva de aprendizaje inicial.</li>
+<li>Posibles conflictos al fusionar cambios.</li>
+<li>Puede ser complejo para proyectos extremadamente simples.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usarlo:</strong></p>
+<ul>
+<li>Proyectos colaborativos, open source o con despliegues continuos.</li>
+<li>Necesidad de control detallado del historial de cambios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo evitarlo:</strong></p>
+<ul>
+<li>Proyectos muy pequeños o temporales.</li>
+<li>Situaciones donde la complejidad de Git no justifica su uso.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#git">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Al trabajar con Git, es importante conocer algunos conceptos clave que forman la base del control de versiones:</p>
+<ul>
+<li>
+<p><strong>Repositorio (Repository):</strong><br>
+Espacio donde se almacena el historial completo de un proyecto, incluyendo archivos, commits, ramas y etiquetas.<br>
+Puede ser:</p>
+<ul>
+<li><strong>Local:</strong> Guardado en tu computadora.</li>
+<li><strong>Remoto:</strong> Guardado en la nube o servidor, como GitHub o GitLab.</li>
+</ul>
+</li>
+<li>
+<p><strong>Commit:</strong><br>
+Un &quot;snapshot&quot; o captura del estado de los archivos en un momento específico.<br>
+Cada commit incluye un mensaje descriptivo y un identificador único.</p>
+</li>
+<li>
+<p><strong>Branch (Rama):</strong><br>
+Línea de desarrollo independiente que permite trabajar en nuevas características o correcciones sin afectar la rama principal.</p>
+</li>
+<li>
+<p><strong>Merge (Fusión):</strong><br>
+Proceso de unir los cambios de una rama a otra, normalmente para integrar nuevas funcionalidades o arreglos.</p>
+</li>
+<li>
+<p><strong>Pull y Push:</strong></p>
+<ul>
+<li><strong>Push:</strong> Enviar cambios locales a un repositorio remoto.</li>
+<li><strong>Pull:</strong> Obtener cambios desde el repositorio remoto al local, combinándolos con tu trabajo.</li>
+</ul>
+</li>
+<li>
+<p><strong>Clone:</strong><br>
+Crear una copia completa de un repositorio remoto en tu máquina local.</p>
+</li>
+<li>
+<p><strong>Fork:</strong><br>
+Copiar un proyecto a tu cuenta para trabajar en él de forma independiente, útil en proyectos open source.</p>
+</li>
+<li>
+<p><strong>Stash:</strong><br>
+Guardar temporalmente cambios no confirmados para trabajar en otra tarea y luego recuperarlos.</p>
+</li>
+<li>
+<p><strong>Tag (Etiqueta):</strong><br>
+Marca utilizada para señalar puntos importantes en el historial, como versiones estables (<code>v1.0.0</code>).</p>
+</li>
+<li>
+<p><strong>.gitignore:</strong><br>
+Archivo que define qué elementos no deben ser rastreados por Git, como dependencias o archivos temporales.</p>
+</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Existen diversas herramientas que facilitan el uso de Git y mejoran la productividad, tanto en entornos gráficos como en línea de comandos:</p>
+<h3 id="plataformas-en-la-nube">Plataformas en la nube</h3>
+<ul>
+<li>
+<p><strong>GitHub:</strong><br>
+La plataforma más popular para alojar repositorios y colaborar en proyectos open source y privados.</p>
+</li>
+<li>
+<p><strong>GitLab:</strong><br>
+Ofrece repositorios privados gratuitos, herramientas de CI/CD integradas y mayor control sobre la privacidad.</p>
+</li>
+<li>
+<p><strong>Bitbucket:</strong><br>
+Integración nativa con herramientas de Atlassian como Jira y Trello.</p>
+</li>
+</ul>
+<h3 id="clientes-de-escritorio">Clientes de escritorio</h3>
+<ul>
+<li><strong>GitHub Desktop:</strong> Interfaz sencilla y amigable para principiantes que trabajan con GitHub.</li>
+<li><strong>Sourcetree:</strong> Herramienta visual con soporte para Git y Mercurial, ideal para flujos más avanzados.</li>
+<li><strong>GitKraken:</strong> Interfaz potente y visual, enfocada en equipos que manejan proyectos complejos.</li>
+</ul>
+<h3 id="cli-y-terminal">CLI y terminal</h3>
+<ul>
+<li>
+<p><strong>Git CLI:</strong><br>
+El cliente oficial de línea de comandos, fundamental para tareas avanzadas y automatización.</p>
+</li>
+<li>
+<p><strong>Oh My Zsh con plugin de Git:</strong><br>
+Mejora la experiencia en la terminal con autocompletado, alias y atajos.</p>
+</li>
+<li>
+<p><strong>Git Bash (Windows):</strong><br>
+Proporciona una terminal similar a Linux para trabajar con Git en sistemas Windows.</p>
+</li>
+</ul>
+<h3 id="complementos-para-editores-y-entornos-de-desarrollo-ide">Complementos para editores y entornos de desarrollo (IDE)</h3>
+<ul>
+<li>
+<p><strong>Visual Studio Code:</strong></p>
+<ul>
+<li>Extensiones recomendadas:
+<ul>
+<li><em>GitLens:</em> Muestra información detallada sobre commits y autores.</li>
+<li><em>GitHub Pull Requests &amp; Issues:</em> Gestión directa de PRs e issues desde el editor.</li>
+<li><em>Git Graph:</em> Visualización gráfica de ramas y commits.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>JetBrains (WebStorm, IntelliJ, PyCharm, etc.):</strong><br>
+Integración de Git nativa con soporte visual y herramientas avanzadas.</p>
+</li>
+</ul>
+<h3 id="herramientas-de-integracion-y-automatizacion">Herramientas de integración y automatización</h3>
+<ul>
+<li><strong>GitHub Actions:</strong> Automatización de flujos como pruebas, despliegues y validaciones.</li>
+<li><strong>GitLab CI/CD:</strong> Pipelines integrados directamente con tus repositorios en GitLab.</li>
+<li><strong>Jenkins:</strong> Integración continua para equipos que requieren mayor personalización.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h3 id="1-diferencia-entre-git-y-github">1. Diferencia entre Git y GitHub</h3>
+<ul>
+<li>
+<p><strong>Git:</strong><br>
+Herramienta de control de versiones distribuido. Permite rastrear cambios en archivos y coordinar trabajo entre desarrolladores.</p>
+<ul>
+<li>Se instala en tu computadora.</li>
+<li>Funciona sin internet para la mayoría de sus tareas.</li>
+<li>Administra repositorios localmente y remotamente.</li>
+</ul>
+</li>
+<li>
+<p><strong>GitHub:</strong><br>
+Plataforma en la nube para alojar repositorios Git y facilitar la colaboración.</p>
+<ul>
+<li>Ofrece herramientas como <em>pull requests</em>, <em>issues</em> y <em>actions</em>.</li>
+<li>Necesita internet para interactuar con repositorios alojados en la plataforma.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Resumen:</strong><br>
+Git es la <strong>herramienta</strong>, GitHub es <strong>el servicio donde puedes alojar y gestionar repositorios Git</strong>.</p>
+</blockquote>
+<h3 id="2-diferencia-entre-git-fetch-y-git-pull">2. Diferencia entre <code>git fetch</code> y <code>git pull</code></h3>
+<ul>
+<li>
+<p><strong>git fetch:</strong><br>
+Descarga cambios desde el repositorio remoto <strong>sin aplicarlos automáticamente</strong>.</p>
+<ul>
+<li>Sirve para revisar primero los cambios antes de integrarlos.</li>
+<li>No altera tu rama actual.</li>
+</ul>
+</li>
+<li>
+<p><strong>git pull:</strong><br>
+Hace lo mismo que <code>git fetch</code> pero <strong>fusiona inmediatamente los cambios</strong> en tu rama activa.</p>
+<ul>
+<li>Puede generar conflictos si hay diferencias con tu trabajo local.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Resumen:</strong><br>
+Usa <code>git fetch</code> para <strong>observar y revisar cambios</strong>, y <code>git pull</code> para <strong>actualizar tu rama directamente</strong>.</p>
+</blockquote>
+<h3 id="3-flujo-de-trabajo-basico-de-git">3. Flujo de trabajo básico de Git</h3>
+<p>Flujo típico para trabajar en un proyecto con Git:</p>
+<ol>
+<li>
+<p><strong>Clonar el repositorio:</strong></p>
+<pre><code class="language-bash">git clone &lt;URL-del-repositorio&gt;
+</code></pre>
+</li>
+<li>
+<p><strong>Crear una rama para trabajar:</strong></p>
+<pre><code class="language-bash">git checkout -b feature/nueva-funcionalidad
+</code></pre>
+</li>
+<li>
+<p><strong>Hacer cambios en los archivos.</strong></p>
+</li>
+<li>
+<p><strong>Agregar cambios al staging area:</strong></p>
+<pre><code class="language-bash">git add .
+</code></pre>
+</li>
+<li>
+<p><strong>Confirmar los cambios con un commit:</strong></p>
+<pre><code class="language-bash">git commit -m &quot;feat: agrega nueva funcionalidad&quot;
+</code></pre>
+</li>
+<li>
+<p><strong>Subir cambios al repositorio remoto:</strong></p>
+<pre><code class="language-bash">git push origin feature/nueva-funcionalidad
+</code></pre>
+</li>
+</ol>
+<h3 id="4-merge-conflict-y-como-resolverlo">4. Merge conflict y cómo resolverlo</h3>
+<p>Un <strong>merge conflict</strong> ocurre cuando Git no puede combinar automáticamente cambios de dos ramas porque:</p>
+<ul>
+<li>La misma línea de un archivo fue editada de forma diferente.</li>
+<li>Un archivo fue eliminado en una rama y modificado en otra.</li>
+</ul>
+<p><strong>Pasos para resolverlo:</strong></p>
+<ol>
+<li>
+<p>Git marcará el conflicto en el archivo:</p>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+código actual
+=======
+código de la otra rama
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; rama-remota
+</code></pre>
+</li>
+<li>
+<p>Edita el archivo y deja solo la versión correcta.</p>
+</li>
+<li>
+<p>Marca como resuelto:</p>
+<pre><code class="language-bash">git add archivo_conflicto.js
+</code></pre>
+</li>
+<li>
+<p>Finaliza el merge:</p>
+<pre><code class="language-bash">git commit
+</code></pre>
+</li>
+</ol>
+<h3 id="5-staging-area-o-indice-en-git">5. Staging area (o índice) en Git</h3>
+<p>El <strong>staging area</strong> es un espacio intermedio donde Git guarda los cambios que se incluirán en el próximo commit.</p>
+<ul>
+<li>Permite <strong>seleccionar</strong> qué cambios van a confirmarse.</li>
+<li>Evita enviar modificaciones incompletas o incorrectas al historial.</li>
+</ul>
+<p><strong>Flujo:</strong></p>
+<pre><code class="language-bash">git add archivo.js                # Mueve cambios al staging area
+git commit -m &quot;feat: agrega nueva función&quot;
+</code></pre>
+<blockquote>
+<p><strong>Analogía:</strong><br>
+Es como un &quot;carrito de compras&quot; donde eliges qué cambios llevar antes de &quot;pagar&quot; (commit).</p>
+</blockquote>
+<h3 id="6-diferencia-entre-git-rebase-y-git-merge">6. Diferencia entre <code>git rebase</code> y <code>git merge</code></h3>
+<ul>
+<li>
+<p><strong>git merge:</strong></p>
+<ul>
+<li>Combina el historial de dos ramas creando un <strong>nuevo commit de merge</strong>.</li>
+<li>Mantiene el historial tal como ocurrió.</li>
+<li>Ideal para preservar el contexto histórico.</li>
+</ul>
+</li>
+<li>
+<p><strong>git rebase:</strong></p>
+<ul>
+<li>Toma los commits de una rama y los &quot;reaplica&quot; sobre otra.</li>
+<li>Genera un historial <strong>lineal y limpio</strong>.</li>
+<li>Útil para simplificar antes de integrar ramas.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>Resumen:</strong></p>
+<ul>
+<li><code>merge</code> → mantiene el historial original.</li>
+<li><code>rebase</code> → reescribe historial para mayor claridad.</li>
+</ul>
+</blockquote>
+<h3 id="7-uso-de-git-stash">7. Uso de <code>git stash</code></h3>
+<p><code>git stash</code> guarda temporalmente los cambios no confirmados para que puedas:</p>
+<ul>
+<li>Cambiar de rama sin hacer un commit.</li>
+<li>Probar algo nuevo sin perder tu progreso.</li>
+</ul>
+<p><strong>Comandos:</strong></p>
+<pre><code class="language-bash">git stash                            # Guarda cambios
+git stash pop                        # Recupera cambios guardados
+</code></pre>
+<h3 id="8-revertir-un-commit-ya-subido-al-repositorio-remoto">8. Revertir un commit ya subido al repositorio remoto</h3>
+<h4 id="git-revert"><strong>git revert</strong></h4>
+<ul>
+<li>Crea un <strong>nuevo commit que deshace los cambios</strong> de uno anterior.</li>
+<li>Seguro para repositorios compartidos porque no reescribe historial.</li>
+</ul>
+<pre><code class="language-bash">git revert &lt;ID-del-commit&gt;
+</code></pre>
+<h4 id="git-reset"><strong>git reset</strong></h4>
+<ul>
+<li>Reescribe el historial, eliminando commits.</li>
+<li>Puede causar problemas si otros ya descargaron esos commits.</li>
+<li>Usar solo en ramas personales.</li>
+</ul>
+<pre><code class="language-bash">git reset --hard &lt;ID-del-commit&gt;
+git push origin main --force
+</code></pre>
+<blockquote>
+<p><strong>Regla de oro:</strong></p>
+<ul>
+<li><code>git revert</code> → repositorios compartidos.</li>
+<li><code>git reset</code> → uso local y controlado.</li>
+</ul>
+</blockquote>
+<h3 id="9-que-es-una-rama-en-git-y-su-utilidad">9. Qué es una rama en Git y su utilidad</h3>
+<p>Una <strong>rama (branch)</strong> es una línea de desarrollo independiente.</p>
+<ul>
+<li>Permite trabajar en nuevas funciones o arreglos sin afectar el código principal.</li>
+<li>Facilita la colaboración y el control de versiones.</li>
+</ul>
+<p><strong>Crear una rama:</strong></p>
+<pre><code class="language-bash">git checkout -b feature/login
+</code></pre>
+<h3 id="10-eliminar-archivos-no-rastreados-untracked-files">10. Eliminar archivos no rastreados (untracked files)</h3>
+<p>Para eliminar archivos que Git no está rastreando:</p>
+<pre><code class="language-bash">git clean -f
+</code></pre>
+<p>Para eliminar también carpetas:</p>
+<pre><code class="language-bash">git clean -fd
+</code></pre>
+<blockquote>
+<p><strong>Precaución:</strong> Esto elimina archivos permanentemente.</p>
+</blockquote>
+<h3 id="11-que-es-head-en-git">11. Qué es HEAD en Git</h3>
+<p><strong>HEAD</strong> es un puntero que indica <strong>en qué commit y rama estás trabajando</strong>.</p>
+<ul>
+<li>Apunta normalmente al último commit de la rama activa.</li>
+<li>Cambia cuando te mueves de rama.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git checkout main # HEAD ahora apunta a la rama main
+</code></pre>
+<h3 id="12-uso-de-git-cherry-pick">12. Uso de <code>git cherry-pick</code></h3>
+<p><code>git cherry-pick</code> aplica un commit específico de otra rama en la rama actual.</p>
+<p><strong>Situaciones útiles:</strong></p>
+<ul>
+<li>Traer un bugfix sin fusionar toda la rama.</li>
+<li>Integrar una funcionalidad concreta.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git cherry-pick &lt;ID-del-commit&gt;
+</code></pre>
+<h3 id="13-ver-historial-de-cambios-de-un-archivo-especifico">13. Ver historial de cambios de un archivo específico</h3>
+<p>Ver historial simple:</p>
+<pre><code class="language-bash">git log -- &lt;archivo&gt;
+</code></pre>
+<p>Ver historial con detalles:</p>
+<pre><code class="language-bash">git log -p -- &lt;archivo&gt;
+</code></pre>
+<h3 id="14-concepto-de-tags-y-cuando-se-usan">14. Concepto de tags y cuándo se usan</h3>
+<p>Los <strong>tags (etiquetas)</strong> marcan puntos importantes en el historial, como versiones estables.</p>
+<p><strong>Tipos de tags:</strong></p>
+<ul>
+<li><strong>Lightweight Tag:</strong> Etiqueta simple que apunta a un commit.</li>
+<li><strong>Annotated Tag:</strong> Incluye información adicional como autor y fecha.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-bash">git tag v1.0.0
+git push origin v1.0.0
+</code></pre>
+<p><strong>Uso común:</strong></p>
+<ul>
+<li>Versionado de lanzamientos (<code>v1.0.0</code>).</li>
+<li>Marcar hitos importantes en el desarrollo.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<p>Esta sección resume los comandos más comunes de Git, agrupados por categorías, con ejemplos y explicaciones rápidas.</p>
+<h3 id="1-configuracion-inicial">1. Configuración inicial</h3>
+<pre><code class="language-bash"># Configura Git antes de usarlo por primera vez:
+git config --global user.name &quot;Tu Nombre&quot;
+git config --global user.email &quot;tuemail@example.com&quot;
+
+# Ver la configuración actual:
+git config --list
+
+# Definir editor por defecto (opcional):
+git config --global core.editor &quot;code --wait&quot;
+</code></pre>
+<h3 id="2-crear-o-clonar-repositorios">2. Crear o clonar repositorios</h3>
+<pre><code class="language-bash">git init                          # Inicializar un repositorio nuevo.
+git clone &lt;URL-del-repositorio&gt;   # Clonar un repositorio existente.
+</code></pre>
+<h3 id="3-estados-y-seguimiento-de-cambios">3. Estados y seguimiento de cambios</h3>
+<pre><code class="language-bash">git status                    # Ver el estado actual del repositorio.
+git diff                      # Ver los cambios en archivos.
+git diff --staged             # Ver cambios en el staging area.
+</code></pre>
+<h3 id="4-staging-area-y-commits">4. Staging area y commits</h3>
+<pre><code class="language-bash">git add archivo.js                         # Agregar archivos al staging area.
+git add .                                  # Agregar todos los archivos modificados.
+git commit -m &quot;feat: nueva funcionalidad&quot;  # Confirmar cambios con un mensaje.
+git commit --amend                         # Modificar el último commit (sin crear uno nuevo.
+</code></pre>
+<h3 id="5-ramas-branches">5. Ramas (branches)</h3>
+<pre><code class="language-bash">git branch                      # Ver todas las ramas
+git branch nombre-rama          # Crear una nueva rama
+git branch -d nombre-rama       # Eliminar una rama local
+git branch -m nomViejo nomNvo   # RENOMBRAR rama / posicionado en otras rama
+
+git checkout -b nombre-rama     # Crear y cambiar a rama nueva
+git switch -c nomb              #
+git checkout nombre-rama        # Cambiar de rama
+git switch                      #
+</code></pre>
+<h3 id="6-sincronizacion-con-repositorio-remoto">6. Sincronización con repositorio remoto</h3>
+<pre><code class="language-bash">git remote -v                                # Ver repositorios remotos
+git remote add origin &lt;URL-del-repositorio&gt;  # Agregar un repositorio remoto
+git fetch                                    # Descargar cambios sin fusionar
+git pull origin main                         # Descargar y fusionar cambios
+git push origin nombre-rama                  # Subir cambios a la rama remota
+git push --all origin                        # Subir todas las ramas locales
+
+</code></pre>
+<h3 id="7-fusion-e-integracion">7. Fusión e integración</h3>
+<pre><code class="language-bash">git merge nombre-rama        # Fusionar una rama en la actual
+git rebase main              # Rebase (reestructurar historial)
+git add archivo_conflicto.js # Resolver conflictos después de merge/rebase
+git commit
+</code></pre>
+<h3 id="8-stash-guardar-cambios-temporalmente">8. Stash (guardar cambios temporalmente)</h3>
+<pre><code class="language-bash">git stash                       # Guardar cambios sin hacer commit
+git stash list                  # Ver lista de stashes guardados
+git stash pop                   # Recuperar y aplicar el último stash
+git stash apply stash@{0}       # Aplicar un stash específico (sin borrarlo)
+</code></pre>
+<h3 id="9-logs-e-historial">9. Logs e historial</h3>
+<pre><code class="language-bash">git log                         # Ver historial de commits
+git log --oneline               # Historial resumido
+git log --oneline --graph --all # Ver historial con gráfico
+git log -- archivo.js           # Ver cambios en un archivo específico
+</code></pre>
+<h3 id="10-reset-y-revert">10. Reset y revert</h3>
+<pre><code class="language-bash">git checkout -- archivo.js        # Deshacer cambios en archivos sin stage
+git reset archivo.js              # Quitar archivos del staging area (sin borrar cambios)
+git revert &lt;ID-del-commit&gt;        # Revertir un commit seguro (repositorio compartido)
+git reset --hard &lt;ID-del-commit&gt;  # Reset para volver a un commit previo (destructivo)
+</code></pre>
+<h3 id="11-limpiar-archivos-no-rastreados">11. Limpiar archivos no rastreados</h3>
+<pre><code class="language-bash">git clean -f                         # Eliminar archivos no rastreados
+git clean -fd                        # Eliminar también carpetas
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>Precaución:</strong> Estos archivos se eliminan permanentemente.</p>
+</blockquote>
+<h3 id="12-tags-etiquetas">12. Tags (etiquetas)</h3>
+<pre><code class="language-bash">git tag v1.0.0                        # Crear un tag
+git tag -a v1.0.0 -m &quot;Versión 1.0.0&quot;  # Crear un tag con mensaje (annotated tag)
+git tag                               # Listar tags existentes
+git push origin --tags                # Subir tags al remoto
+</code></pre>
+<h3 id="13-cherry-pick">13. Cherry-pick</h3>
+<p>Aplicar un commit específico de otra rama:</p>
+<pre><code class="language-bash">git cherry-pick &lt;ID-del-commit&gt;
+</code></pre>
+<h3 id="14-alias-utiles">14. Alias útiles</h3>
+<p>Simplificar comandos con alias globales:</p>
+<pre><code class="language-bash">git config --global alias.st status
+git config --global alias.cm &quot;commit -m&quot;
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.lg &quot;log --oneline --graph --all&quot;
+</code></pre>
+<p><strong>Uso ejemplo:</strong></p>
+<pre><code class="language-bash">git st    # en lugar de git status
+git cm &quot;mensaje&quot;
+git lg
+</code></pre>
+<h3 id="15-modifico-commit">15. Modifico commit</h3>
+<pre><code class="language-bash"> git commit --amend     # vuelvo al ultimo commit y lo puedo modificar el NOMBRE/DESCRIPCIÓN
+ git rebase -i head~3   # te muestra los ultimo commit a los que puedes volver / edit: para volver
+
+ pick 8442d96 commit 03
+ edit a6863b6 commit 04 # vuelve
+ pick f8284fe Ultimo commit
+
+ git rebase --continue      # inicializar
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves-2">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-git-y-en-que-se-diferencia-de-otros-sistemas-de-control-de-versiones-como-svn-o-mercurial">1. Qué es Git y en qué se diferencia de otros sistemas de control de versiones como SVN o Mercurial?</h3>
+<p>Git es un <strong>sistema de control de versiones distribuido</strong> que permite a múltiples desarrolladores trabajar en el mismo proyecto sin depender de un único servidor central.<br>
+A diferencia de SVN o Mercurial, Git:</p>
+<ul>
+<li>No necesita conexión constante a un servidor central.</li>
+<li>Cada clon del repositorio contiene <strong>todo el historial</strong>.</li>
+<li>Ofrece ramas (branches) <strong>ligeras y rápidas</strong>, facilitando la experimentación y trabajo paralelo.</li>
+</ul>
+<hr>
+<h3 id="2-explica-la-diferencia-entre-los-estados-de-un-archivo-en-git-untracked-modified-staged-y-committed">2. Explica la diferencia entre los estados de un archivo en Git: untracked, modified, staged y committed.</h3>
+<ul>
+<li><strong>Untracked</strong>: El archivo no está siendo seguido por Git.</li>
+<li><strong>Modified</strong>: El archivo fue modificado pero aún no está preparado para un commit.</li>
+<li><strong>Staged</strong>: El archivo está listo para ser incluido en el próximo commit (<code>git add</code>).</li>
+<li><strong>Committed</strong>: El archivo ya está guardado en el historial del repositorio.</li>
+</ul>
+<hr>
+<h3 id="3-cual-es-la-diferencia-entre-git-clone-y-git-fork-y-en-que-contexto-usarias-cada-uno">3. ¿Cuál es la diferencia entre git clone y git fork y en qué contexto usarías cada uno?</h3>
+<ul>
+<li><strong>git clone</strong>: Crea una copia <strong>local</strong> de un repositorio remoto.</li>
+<li><strong>git fork</strong>: Duplica un repositorio <strong>en tu cuenta de GitHub u otra plataforma</strong>, para luego clonar y trabajar en tu propia copia.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><code>clone</code>: Cuando tienes permisos directos sobre el repositorio original.</li>
+<li><code>fork</code>: Cuando deseas contribuir a un proyecto sin modificar el original directamente.</li>
+</ul>
+<hr>
+<h3 id="4-describe-la-funcion-de-los-comandos-git-fetch-git-pull-y-git-push">4. Describe la función de los comandos git fetch, git pull y git push.</h3>
+<ul>
+<li><strong>git fetch</strong>: Descarga cambios del remoto pero <strong>no los fusiona</strong> automáticamente.</li>
+<li><strong>git pull</strong>: Hace un <code>fetch</code> + <code>merge</code> para actualizar tu rama local.</li>
+<li><strong>git push</strong>: Sube tus commits locales al repositorio remoto.</li>
+</ul>
+<hr>
+<h3 id="5-si-accidentalmente-borras-un-archivo-en-tu-proyecto-como-lo-recuperarias-usando-git">5. Si accidentalmente borras un archivo en tu proyecto, ¿cómo lo recuperarías usando Git?</h3>
+<pre><code class="language-bash">git checkout -- nombre_del_archivo
+</code></pre>
+<p>O si el archivo estaba eliminado pero no has hecho commit:</p>
+<pre><code class="language-bash">git restore nombre_del_archivo
+</code></pre>
+<p>Si ya hiciste commit y lo subiste, puedes usar:</p>
+<pre><code class="language-bash">git checkout commit_id -- nombre_del_archivo
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-explica-la-diferencia-entre-git-merge-y-git-rebase-en-que-situaciones-usarias-uno-u-otro">6. Explica la diferencia entre git merge y git rebase. ¿En qué situaciones usarías uno u otro?</h3>
+<ul>
+<li><strong>git merge</strong>: Une ramas creando un <strong>commit de merge</strong>, conservando el historial completo.</li>
+<li><strong>git rebase</strong>: Reaplica los commits de una rama sobre otra, <strong>reescribiendo el historial</strong>.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><code>merge</code>: Ideal para preservar la historia de cambios en equipos grandes.</li>
+<li><code>rebase</code>: Para mantener un historial <strong>lineal y limpio</strong>.</li>
+</ul>
+<hr>
+<h3 id="7-tienes-un-commit-con-un-mensaje-incorrecto-y-aun-no-lo-has-subido-al-repositorio-remoto-como-lo-corregirias">7. Tienes un commit con un mensaje incorrecto y aún no lo has subido al repositorio remoto. ¿Cómo lo corregirías?</h3>
+<pre><code class="language-bash">git commit --amend -m &quot;Nuevo mensaje corregido&quot;
+</code></pre>
+<hr>
+<h3 id="8-durante-un-git-pull-encuentras-un-conflicto-de-merge-describe-el-proceso-paso-a-paso-para-resolverlo-correctamente">8. Durante un git pull, encuentras un conflicto de merge. Describe el proceso paso a paso para resolverlo correctamente.</h3>
+<ol>
+<li>Identificar archivos en conflicto:<pre><code class="language-bash">git status
+</code></pre>
+</li>
+<li>Editar manualmente los archivos para resolver conflictos.</li>
+<li>Marcar los archivos como resueltos:<pre><code class="language-bash">git add archivo_resuelto
+</code></pre>
+</li>
+<li>Completar el merge:<pre><code class="language-bash">git commit
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="9-que-hace-el-comando-git-stash-y-como-se-recupera-el-trabajo-guardado-en-un-stash-especifico">9. ¿Qué hace el comando git stash y cómo se recupera el trabajo guardado en un stash específico?</h3>
+<ul>
+<li><strong>git stash</strong> guarda cambios sin comprometerlos en un commit.</li>
+<li>Para ver los stashes disponibles:<pre><code class="language-bash">git stash list
+</code></pre>
+</li>
+<li>Para aplicar un stash específico:<pre><code class="language-bash">git stash apply stash@{n}
+</code></pre>
+</li>
+<li>Para aplicar y eliminarlo:<pre><code class="language-bash">git stash pop stash@{n}
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="10-explica-que-es-un-detached-head-en-git-y-como-volver-al-flujo-normal-de-trabajo-despues-de-estar-en-ese-estado">10. Explica qué es un detached HEAD en Git y cómo volver al flujo normal de trabajo después de estar en ese estado.</h3>
+<p>Un <strong>detached HEAD</strong> ocurre cuando revisas un commit directamente en lugar de una rama.<br>
+Para volver a una rama normal:</p>
+<pre><code class="language-bash">git checkout nombre_de_rama
+</code></pre>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-cual-es-la-diferencia-entre-un-branch-local-y-uno-remoto-como-sincronizarias-un-branch-local-que-esta-desactualizado-respecto-al-remoto">11. ¿Cuál es la diferencia entre un branch local y uno remoto? ¿Cómo sincronizarías un branch local que está desactualizado respecto al remoto?</h3>
+<ul>
+<li><strong>Branch local</strong>: Rama que existe solo en tu máquina.</li>
+<li><strong>Branch remoto</strong>: Rama alojada en un servidor como GitHub.</li>
+</ul>
+<p>Para sincronizar:</p>
+<pre><code class="language-bash">git fetch
+git merge origin/nombre_de_rama
+</code></pre>
+<p>O directamente:</p>
+<pre><code class="language-bash">git pull
+</code></pre>
+<hr>
+<h3 id="12-como-usarias-git-bisect-para-encontrar-un-commit-que-introdujo-un-bug-en-el-proyecto">12. ¿Cómo usarías git bisect para encontrar un commit que introdujo un bug en el proyecto?</h3>
+<ol>
+<li>Iniciar bisect:<pre><code class="language-bash">git bisect start
+</code></pre>
+</li>
+<li>Marcar commit bueno:<pre><code class="language-bash">git bisect good commit_id
+</code></pre>
+</li>
+<li>Marcar commit malo:<pre><code class="language-bash">git bisect bad commit_id
+</code></pre>
+</li>
+<li>Git va probando commits hasta encontrar el problemático.</li>
+<li>Finalizar:<pre><code class="language-bash">git bisect reset
+</code></pre>
+</li>
+</ol>
+<hr>
+<h3 id="13-explica-la-diferencia-entre-git-reset-git-revert-y-git-restore-en-que-casos-elegirias-cada-uno">13. Explica la diferencia entre git reset, git revert y git restore. ¿En qué casos elegirías cada uno?</h3>
+<ul>
+<li><strong>git reset</strong>: Deshace commits y puede modificar el historial. <strong>Peligroso</strong> si ya se subió al remoto.</li>
+<li><strong>git revert</strong>: Crea un commit nuevo que revierte cambios <strong>sin alterar el historial</strong>.</li>
+<li><strong>git restore</strong>: Restaura archivos individuales a un estado previo.</li>
+</ul>
+<p><strong>Uso recomendado:</strong></p>
+<ul>
+<li><code>reset</code>: Para trabajo local no compartido.</li>
+<li><code>revert</code>: Para revertir commits en repositorios compartidos.</li>
+<li><code>restore</code>: Para restaurar archivos específicos.</li>
+</ul>
+<hr>
+<h3 id="14-en-un-proyecto-con-muchos-colaboradores-que-estrategias-seguirias-para-mantener-un-historial-de-commits-limpio-y-entendible">14. En un proyecto con muchos colaboradores, ¿qué estrategias seguirías para mantener un historial de commits limpio y entendible?</h3>
+<ul>
+<li>Usar <strong>commits atómicos y descriptivos</strong>.</li>
+<li>Adoptar una convención como <strong>Conventional Commits</strong>.</li>
+<li>Hacer <code>rebase</code> antes de <code>merge</code> para evitar merges innecesarios.</li>
+<li>Revisar cambios mediante <strong>Pull Requests</strong>.</li>
+<li>Hacer limpieza periódica de ramas obsoletas.</li>
+</ul>
+<hr>
+<h3 id="15-describe-como-configurar-y-usar-hooks-en-git-y-da-un-ejemplo-practico-de-un-hook-que-podria-mejorar-la-calidad-del-codigo">15. Describe cómo configurar y usar hooks en Git, y da un ejemplo práctico de un hook que podría mejorar la calidad del código.</h3>
+<p>Los <strong>hooks</strong> son scripts que se ejecutan automáticamente en ciertos eventos de Git.</p>
+<p><strong>Configuración:</strong></p>
+<ol>
+<li>Ubicación: <code>.git/hooks/</code></li>
+<li>Crear un archivo como <code>pre-commit</code> y darle permisos de ejecución:<pre><code class="language-bash">chmod +x .git/hooks/pre-commit
+</code></pre>
+</li>
+</ol>
+<p><strong>Ejemplo práctico (validar lint antes de commit):</strong></p>
+<pre><code class="language-bash">#!/bin/sh
+npm run lint
+if [ $? -ne 0 ]; then
+  echo &quot;❌ Lint falló. Corrige los errores antes de hacer commit.&quot;
+  exit 1
+fi
+</code></pre>
+<p>Esto evita que se suba código con errores de estilo.</p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

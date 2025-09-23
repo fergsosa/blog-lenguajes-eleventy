@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Markdown
 img: /img/portada/markdown.avif
-description: Ideas principales de Markdown
+description: Texto ligero, formato rápido.
 tags: ["blog", "lenguajes"]
 date: "2023-07-01"
 ---
@@ -64,7 +64,7 @@ Algunas ventajas clave de Markdown:
 
 # Temas {#temas#}
 
-- [inicio](#html)
+- [inicio](#markdown)
 - [Sintaxis Básica](#sintaxis-basica)
   - [Énfasis texto](#enfasis-texto)
   - [Encabezado](#encabezado)

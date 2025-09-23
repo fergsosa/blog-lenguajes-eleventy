@@ -4,7 +4,7 @@ title: Plantilla
 # img: /img/portada/git.avif
 img: https://placehold.co/784x396
 description: Ideas principales de Plantilla
-tags: ["blog", "lenguajes"]
+tags: ["blog", "plantilla"]
 date: "2020-12-11"
 ---
 
@@ -42,7 +42,7 @@ date: "2020-12-11"
 
 ---
 
-# Temas {#temas#}
+# Temas
 
 - [inicio](#git)
 - [Conceptos relacionados](#conceptos-relacionados)
