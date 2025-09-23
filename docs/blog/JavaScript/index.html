@@ -71,8 +71,6 @@
 <blockquote>
 <p>⚠️ <strong>Evítalo</strong> si el proyecto requiere alto rendimiento computacional, como simulaciones científicas o software de bajo nivel, donde lenguajes como <strong>C++ o Rust</strong> son más adecuados.</p>
 </blockquote>
-<h3 id="5-buenas-practicas-y-patrones-recomendados">5. Buenas prácticas y patrones recomendados</h3>
-<p>Para escribir buen código en JavaScript, sigue estas recomendaciones:</p>
 <h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <ul>
 <li><strong>Usa <code>const</code> y <code>let</code></strong> en lugar de <code>var</code> para mayor claridad y control.</li>
@@ -92,38 +90,31 @@
 </ul>
 <hr>
 <h2 id="resumen-rapido">Resumen rápido</h2>
-<p><strong>Síntesis rápida de lo aprendido sobre JavaScript</strong></p>
-<ul>
-<li><strong>Fortalezas principales:</strong>
+<h4 id="fortalezas-principales">Fortalezas principales:</h4>
 <ul>
 <li>Versatilidad: frontend, backend, móvil y escritorio.</li>
 <li>Amplio ecosistema y comunidad activa.</li>
 <li>Integración nativa con HTML y CSS.</li>
 <li>Gran cantidad de librerías y frameworks maduros.</li>
 </ul>
-</li>
-<li><strong>Debilidades principales:</strong>
+<h4 id="debilidades-principales">Debilidades principales:</h4>
 <ul>
 <li>Menor rendimiento frente a lenguajes compilados como C++ o Rust.</li>
 <li>Código propenso a errores si no se sigue una buena estructura.</li>
 <li>Fragmentación en frameworks y herramientas.</li>
 <li>Dificultad en proyectos muy grandes sin buenas prácticas.</li>
 </ul>
-</li>
-<li><strong>Cuándo usarlo:</strong>
+<h4 id="cuando-usarlo">Cuándo usarlo:</h4>
 <ul>
 <li>Desarrollo web y aplicaciones interactivas.</li>
 <li>Prototipos rápidos y MVPs.</li>
 <li>Proyectos donde se busca rapidez y flexibilidad.</li>
 </ul>
-</li>
-<li><strong>Cuándo evitarlo:</strong>
+<h4 id="cuando-evitarlo">Cuándo evitarlo:</h4>
 <ul>
 <li>Aplicaciones que requieren cálculos complejos y alto rendimiento.</li>
 <li>Sistemas embebidos o de bajo nivel.</li>
 <li>Proyectos donde la seguridad extrema es la prioridad principal.</li>
-</ul>
-</li>
 </ul>
 <hr>
 <h1 id="temas">Temas</h1>
@@ -138,7 +129,7 @@
 <hr>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Antes de aprender JavaScript o mientras lo estudias, es importante entender estos conceptos fundamentales:</p>
-<h2 id="1-fundamentos-de-programacion">1. Fundamentos de programación</h2>
+<h3 id="1-fundamentos-de-programacion">1. Fundamentos de programación</h3>
 <ul>
 <li><strong>Algoritmos y lógica:</strong> La base para resolver problemas.</li>
 <li><strong>Variables y constantes:</strong> Manejo de datos en memoria (<code>let</code>, <code>const</code>).</li>
@@ -159,7 +150,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="2-web-y-entorno-de-ejecucion">2. Web y entorno de ejecución</h2>
+<h3 id="2-web-y-entorno-de-ejecucion">2. Web y entorno de ejecución</h3>
 <ul>
 <li><strong>HTML:</strong> Estructura base de las páginas web.</li>
 <li><strong>CSS:</strong> Estilos y diseño visual.</li>
@@ -167,15 +158,15 @@
 <li><strong>BOM (Browser Object Model):</strong> Objetos que el navegador proporciona, como <code>window</code> o <code>navigator</code>.</li>
 <li><strong>Eventos:</strong> Manejo de interacciones del usuario (<code>click</code>, <code>input</code>, <code>submit</code>).</li>
 </ul>
-<h2 id="3-programacion-asincrona">3. Programación asíncrona</h2>
-<p>JavaScript es <strong>single-threaded</strong> pero puede manejar tareas asíncronas.</p>
+<h3 id="3-programacion-asincrona">3. Programación asíncrona</h3>
+<p>JavaScript es <strong><em>single-threaded</em></strong> pero puede manejar tareas asíncronas.</p>
 <ul>
 <li><strong>Callbacks:</strong> Primera forma de manejar tareas asincrónicas.</li>
 <li><strong>Promises:</strong> Flujo controlado con <code>.then()</code> y <code>.catch()</code>.</li>
 <li><strong>Async/Await:</strong> Sintaxis moderna y más legible para trabajar con promesas.</li>
 <li><strong>Event Loop:</strong> Mecanismo que gestiona la ejecución de código y tareas pendientes.</li>
 </ul>
-<h2 id="4-json-y-apis">4. JSON y APIs</h2>
+<h3 id="4-json-y-apis">4. JSON y APIs</h3>
 <ul>
 <li><strong>JSON (JavaScript Object Notation):</strong> Formato ligero para intercambio de datos.</li>
 <li><strong>APIs:</strong> Interfaces para comunicación entre sistemas.
@@ -186,7 +177,7 @@
 </li>
 <li><strong>Fetch API:</strong> Hacer peticiones HTTP con <code>fetch()</code>.</li>
 </ul>
-<h2 id="5-ecosistema-javascript">5. Ecosistema JavaScript</h2>
+<h3 id="5-ecosistema-javascript">5. Ecosistema JavaScript</h3>
 <ul>
 <li><strong>Node.js:</strong> Ejecutar JavaScript fuera del navegador, principalmente para el backend.</li>
 <li><strong>npm (Node Package Manager):</strong> Gestor de paquetes y librerías.</li>
@@ -198,7 +189,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="6-principios-de-desarrollo">6. Principios de desarrollo</h2>
+<h3 id="6-principios-de-desarrollo">6. Principios de desarrollo</h3>
 <ul>
 <li><strong>DRY (<em>Don't Repeat Yourself</em>):</strong> Evitar duplicación de código.</li>
 <li><strong>KISS (<em>Keep It Simple, Stupid</em>):</strong> Mantener el código simple y entendible.</li>
@@ -209,25 +200,25 @@
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Estas herramientas te ayudarán a <strong>desarrollar, depurar y optimizar</strong> proyectos en JavaScript de manera profesional.</p>
-<h2 id="1-editores-y-entornos-de-desarrollo">1. Editores y entornos de desarrollo</h2>
+<h3 id="1-editores-y-entornos-de-desarrollo">1. Editores y entornos de desarrollo</h3>
 <ul>
-<li><strong>Visual Studio Code (VSCode):</strong> Editor moderno, liviano y altamente configurable.</li>
-<li><strong>WebStorm:</strong> IDE especializado para JavaScript.</li>
-<li>Extensiones útiles para VSCode:
+<li><strong>Visual Studio Code (VSCode):</strong> Editor moderno, liviano y altamente configurable.\</li>
+<li><strong>WebStorm:</strong> IDE especializado para JavaScript.\</li>
+<li><strong>Extensiones útiles para VSCode:</strong>
 <ul>
-<li><em>ESLint:</em> Detección de errores y estandarización de código.</li>
-<li><em>Prettier:</em> Formateo automático.</li>
-<li><em>GitLens:</em> Mejor gestión de versiones.</li>
-<li><em>Debugger for Chrome:</em> Depuración integrada.</li>
+<li><strong>ESLint:</strong> Detección de errores y estandarización de código.</li>
+<li><strong>Prettier:</strong> Formateo automático.</li>
+<li><strong>GitLens:</strong> Mejor gestión de versiones.</li>
+<li><strong>Debugger for Chrome:</strong> Depuración integrada.</li>
 </ul>
 </li>
 </ul>
-<h2 id="2-control-de-versiones">2. Control de versiones</h2>
+<h3 id="2-control-de-versiones">2. Control de versiones</h3>
 <ul>
 <li><strong>Git:</strong> Sistema de control de versiones.</li>
 <li><strong>GitHub / GitLab / Bitbucket:</strong> Plataformas para alojar proyectos y colaborar en equipo.</li>
 </ul>
-<h2 id="3-terminal-y-linea-de-comandos">3. Terminal y línea de comandos</h2>
+<h3 id="3-terminal-y-linea-de-comandos">3. Terminal y línea de comandos</h3>
 <ul>
 <li><strong>Node.js CLI:</strong> Ejecutar scripts y proyectos.</li>
 <li><strong>npm / yarn / pnpm:</strong> Manejo de dependencias y paquetes.</li>
@@ -239,42 +230,33 @@
 </ul>
 </li>
 </ul>
-<h2 id="4-depuracion-y-pruebas">4. Depuración y pruebas</h2>
-<ul>
-<li><strong>Herramientas del navegador:</strong>
+<h3 id="4-depuracion-y-pruebas">4. Depuración y pruebas</h3>
+<h4 id="herramientas-del-navegador">Herramientas del navegador:</h4>
 <ul>
 <li>Consola (<code>console.log()</code>) para depurar.</li>
 <li>Pestaña <em>Network</em> para analizar solicitudes HTTP.</li>
 <li><em>Performance</em> para medir tiempos de carga.</li>
 </ul>
-</li>
-<li><strong>Frameworks de testing:</strong>
+<h4 id="frameworks-de-testing">Frameworks de testing:</h4>
 <ul>
 <li><strong>Jest:</strong> Pruebas unitarias.</li>
 <li><strong>Cypress:</strong> Pruebas de interfaz (end-to-end).</li>
 <li><strong>Mocha + Chai:</strong> Pruebas flexibles y personalizadas.</li>
 </ul>
-</li>
-</ul>
-<h2 id="5-automatizacion-y-bundlers">5. Automatización y bundlers</h2>
-<ul>
-<li><strong>Bundlers:</strong> Empaquetar y optimizar el código.
+<h3 id="5-automatizacion-y-bundlers">5. Automatización y bundlers</h3>
+<p><strong>Bundlers:</strong> Empaquetar y optimizar el código.</p>
 <ul>
 <li>Webpack, Parcel, Vite.</li>
 </ul>
-</li>
-<li><strong>Transpiladores:</strong>
+<p><strong>Transpiladores:</strong></p>
 <ul>
 <li><strong>Babel:</strong> Para compatibilidad con navegadores antiguos.</li>
 </ul>
-</li>
-<li><strong>Automatización de tareas:</strong>
+<p><strong>Automatización de tareas:</strong></p>
 <ul>
 <li>Gulp, npm scripts.</li>
 </ul>
-</li>
-</ul>
-<h2 id="6-entorno-backend">6. Entorno backend</h2>
+<h3 id="6-entorno-backend">6. Entorno backend</h3>
 <ul>
 <li><strong>Express:</strong> Framework minimalista para servidores.</li>
 <li><strong>MongoDB Atlas:</strong> Base de datos en la nube.</li>
@@ -285,11 +267,11 @@
 <hr>
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
 <p>Fragmentos de código reutilizables que facilitan tareas comunes.</p>
-<h2 id="1-declaracion-de-variables">1. Declaración de variables</h2>
+<h3 id="1-declaracion-de-variables">1. Declaración de variables</h3>
 <pre><code class="language-js">const PI = 3.1416; // Constante (no cambia)
 let nombre = &quot;Juan&quot;; // Variable que puede cambiar
 </code></pre>
-<h2 id="2-funciones">2. Funciones</h2>
+<h3 id="2-funciones">2. Funciones</h3>
 <pre><code class="language-js">// Función tradicional
 function saludar(nombre) {
   return `Hola, ${nombre}`;
@@ -298,7 +280,7 @@ function saludar(nombre) {
 // Función flecha (arrow function)
 const despedir = (nombre) =&gt; `Adiós, ${nombre}`;
 </code></pre>
-<h2 id="3-condicional-simple">3. Condicional simple</h2>
+<h3 id="3-condicional-simple">3. Condicional simple</h3>
 <pre><code class="language-js">const edad = 18;
 
 if (edad &gt;= 18) {
@@ -307,11 +289,11 @@ if (edad &gt;= 18) {
   console.log(&quot;Eres menor de edad&quot;);
 }
 </code></pre>
-<h2 id="4-operador-ternario">4. Operador ternario</h2>
+<h3 id="4-operador-ternario">4. Operador ternario</h3>
 <pre><code class="language-js">const mensaje = edad &gt;= 18 ? &quot;Mayor de edad&quot; : &quot;Menor de edad&quot;;
 console.log(mensaje);
 </code></pre>
-<h2 id="5-bucles">5. Bucles</h2>
+<h3 id="5-bucles">5. Bucles</h3>
 <pre><code class="language-js">// For
 for (let i = 0; i &lt; 5; i++) {
   console.log(i);
@@ -329,7 +311,7 @@ for (const fruta of frutas) {
   console.log(fruta);
 }
 </code></pre>
-<h2 id="6-objetos-y-arrays">6. Objetos y Arrays</h2>
+<h3 id="6-objetos-y-arrays">6. Objetos y Arrays</h3>
 <pre><code class="language-js">const persona = {
   nombre: &quot;Ana&quot;,
   edad: 25,
@@ -339,7 +321,7 @@ const colores = [&quot;Rojo&quot;, &quot;Verde&quot;, &quot;Azul&quot;];
 console.log(persona.nombre); // Acceder a propiedad
 console.log(colores[0]); // Acceder a elemento
 </code></pre>
-<h2 id="7-desestructuracion">7. Desestructuración</h2>
+<h3 id="7-desestructuracion">7. Desestructuración</h3>
 <pre><code class="language-js">// Objetos
 const { nombre, edad } = persona;
 console.log(nombre, edad);
@@ -348,13 +330,13 @@ console.log(nombre, edad);
 const [primero, segundo] = colores;
 console.log(primero, segundo);
 </code></pre>
-<h2 id="8-fetch-api-peticiones-http">8. Fetch API (peticiones HTTP)</h2>
+<h3 id="8-fetch-api-peticiones-http">8. Fetch API (peticiones HTTP)</h3>
 <pre><code class="language-js">fetch(&quot;https://api.example.com/data&quot;)
   .then((res) =&gt; res.json())
   .then((data) =&gt; console.log(data))
   .catch((err) =&gt; console.error(&quot;Error:&quot;, err));
 </code></pre>
-<h2 id="9-async-await">9. Async / Await</h2>
+<h3 id="9-async-await">9. Async / Await</h3>
 <pre><code class="language-js">async function obtenerDatos() {
   try {
     const res = await fetch(&quot;https://api.example.com/data&quot;);
@@ -365,7 +347,7 @@ console.log(primero, segundo);
   }
 }
 </code></pre>
-<h2 id="10-exportar-e-importar-modulos">10. Exportar e importar módulos</h2>
+<h3 id="10-exportar-e-importar-modulos">10. Exportar e importar módulos</h3>
 <pre><code class="language-js">// archivo.js
 export const saludar = (nombre) =&gt; `Hola, ${nombre}`;
 
@@ -377,11 +359,11 @@ console.log(saludar(&quot;Carlos&quot;));
 <hr>
 <h1 id="comandos">Comandos</h1>
 <p>Sintaxis y comandos básicos <strong>cortos y directos</strong> para uso diario.</p>
-<h2 id="variables-y-constantes">Variables y constantes</h2>
+<h3 id="variables-y-constantes">Variables y constantes</h3>
 <pre><code class="language-js">let edad = 25; // Variable modificable
 const PI = 3.14; // Constante
 </code></pre>
-<h2 id="tipos-de-datos">Tipos de datos</h2>
+<h3 id="tipos-de-datos">Tipos de datos</h3>
 <pre><code class="language-js">let nombre = &quot;Pedro&quot;; // String
 let edad = 30; // Number
 let activo = true; // Boolean
@@ -390,7 +372,7 @@ let persona = { nombre: &quot;Ana&quot;, edad: 25 }; // Objeto
 let nada = null; // Null
 let indefinido; // Undefined
 </code></pre>
-<h2 id="operadores-basicos">Operadores básicos</h2>
+<h3 id="operadores-basicos">Operadores básicos</h3>
 <pre><code class="language-js">// Aritméticos
 let suma = 5 + 3;
 let resta = 5 - 3;
@@ -407,7 +389,7 @@ console.log(true &amp;&amp; false); // false
 console.log(true || false); // true
 console.log(!true); // false
 </code></pre>
-<h2 id="funciones-y-callbacks">Funciones y callbacks</h2>
+<h3 id="funciones-y-callbacks">Funciones y callbacks</h3>
 <pre><code class="language-js">// Función simple
 function sumar(a, b) {
   return a + b;
@@ -421,7 +403,7 @@ const restar = function (a, b) {
 // Función flecha
 const multiplicar = (a, b) =&gt; a * b;
 </code></pre>
-<h2 id="array-methods-comunes">Array Methods comunes</h2>
+<h3 id="array-methods-comunes">Array Methods comunes</h3>
 <pre><code class="language-js">const numeros = [1, 2, 3, 4, 5];
 
 numeros.forEach((n) =&gt; console.log(n)); // Recorrer
@@ -429,7 +411,7 @@ const dobles = numeros.map((n) =&gt; n * 2); // Nuevo array
 const pares = numeros.filter((n) =&gt; n % 2 === 0); // Filtrar
 const sumaTotal = numeros.reduce((acc, n) =&gt; acc + n, 0); // Reducir
 </code></pre>
-<h2 id="manejo-de-errores">Manejo de errores</h2>
+<h3 id="manejo-de-errores">Manejo de errores</h3>
 <pre><code class="language-js">try {
   const resultado = dividir(10, 0);
 } catch (error) {
@@ -438,7 +420,7 @@ const sumaTotal = numeros.reduce((acc, n) =&gt; acc + n, 0); // Reducir
   console.log(&quot;Proceso finalizado&quot;);
 }
 </code></pre>
-<h2 id="clases-y-objetos">Clases y objetos</h2>
+<h3 id="clases-y-objetos">Clases y objetos</h3>
 <pre><code class="language-js">class Persona {
   constructor(nombre, edad) {
     this.nombre = nombre;
@@ -453,7 +435,7 @@ const sumaTotal = numeros.reduce((acc, n) =&gt; acc + n, 0); // Reducir
 const ana = new Persona(&quot;Ana&quot;, 25);
 console.log(ana.saludar());
 </code></pre>
-<h2 id="promesas">Promesas</h2>
+<h3 id="promesas">Promesas</h3>
 <pre><code class="language-js">const promesa = new Promise((resolve, reject) =&gt; {
   let exito = true;
   exito ? resolve(&quot;Todo bien&quot;) : reject(&quot;Error&quot;);
@@ -463,7 +445,7 @@ promesa
   .then((resultado) =&gt; console.log(resultado))
   .catch((error) =&gt; console.error(error));
 </code></pre>
-<h2 id="console-y-depuracion">Console y depuración</h2>
+<h3 id="console-y-depuracion">Console y depuración</h3>
 <pre><code class="language-js">console.log(&quot;Información general&quot;);
 console.warn(&quot;Advertencia&quot;);
 console.error(&quot;Error crítico&quot;);
@@ -474,21 +456,13 @@ console.table([{ nombre: &quot;Ana&quot; }, { nombre: &quot;Luis&quot; }]); // T
 <h1 id="conceptos-claves">Conceptos Claves</h1>
 <h2 id="basico">🟢 Básico</h2>
 <h3 id="1-tipos-de-datos-primitivos-en-javascript">1. Tipos de datos primitivos en JavaScript</h3>
-<p><strong>Primitivos:</strong></p>
-<ul>
-<li><code>string</code></li>
-<li><code>number</code></li>
-<li><code>bigint</code></li>
-<li><code>boolean</code></li>
-<li><code>undefined</code></li>
-<li><code>null</code></li>
-<li><code>symbol</code></li>
-</ul>
-<p><strong>Por referencia:</strong></p>
+<h4 id="primitivos">Primitivos:</h4>
+<p><code>string | number | bigint | boolean | undefined | null | symbol</code></p>
+<h4 id="por-referencia">Por referencia:</h4>
 <ul>
 <li><code>object</code> (arrays, funciones, objetos literales, etc.)</li>
 </ul>
-<p><strong>Diferencia:</strong></p>
+<h4 id="diferencia">Diferencia:</h4>
 <ul>
 <li>Los <strong>primitivos</strong> se pasan por <em>valor</em>, es decir, se copia el valor original.</li>
 <li>Los <strong>por referencia</strong> se pasan por <em>referencia</em>, apuntando al mismo espacio en memoria.</li>
@@ -504,25 +478,20 @@ obj2.nombre = &quot;Luis&quot;;
 console.log(obj1.nombre); // &quot;Luis&quot;
 </code></pre>
 <h3 id="2-diferencia-entre-var-let-y-const">2. Diferencia entre var, let y const</h3>
-<ul>
-<li><strong><code>var</code></strong>
+<h4 id="var"><code>var</code></h4>
 <ul>
 <li>Ámbito de función.</li>
 <li>Se eleva (hoisting).</li>
 <li>Puede redeclararse.</li>
 </ul>
-</li>
-<li><strong><code>let</code></strong>
+<h4 id="let"><code>let</code></h4>
 <ul>
 <li>Ámbito de bloque <code>{}</code>.</li>
 <li>No se puede redeclarar en el mismo ámbito.</li>
 </ul>
-</li>
-<li><strong><code>const</code></strong>
+<h4 id="const"><code>const</code></h4>
 <ul>
 <li>Igual que <code>let</code>, pero el valor no puede ser reasignado.</li>
-</ul>
-</li>
 </ul>
 <pre><code class="language-js">var x = 1;
 let y = 2;

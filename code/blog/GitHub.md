@@ -31,7 +31,7 @@ Está construida sobre **Git**, un sistema de control de versiones distribuido, 
 
 ### 2. ¿Para qué se usa?
 
-GitHub se utiliza principalmente para:
+#### Usos principales:
 
 - **Control de versiones** y seguimiento de cambios en proyectos.
 - **Trabajo colaborativo** entre desarrolladores, diseñadores y equipos técnicos.
@@ -39,14 +39,12 @@ GitHub se utiliza principalmente para:
 - **Automatización de flujos de trabajo** como pruebas, despliegues y documentación.
 - **Portafolios profesionales** para mostrar proyectos y habilidades.
 
-**Contextos ideales:**
+#### Contextos ideales:
 
 - Equipos distribuidos trabajando en un mismo proyecto.
 - Proyectos de código abierto con múltiples colaboradores.
 - Empresas que requieren trazabilidad y control de cambios.
 - Estudiantes y desarrolladores que buscan aprender y compartir código.
-
----
 
 ### 3. ¿Qué puedo construir con {{title}}?
 
@@ -60,27 +58,21 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 
 > _Ejemplo: alojar un portafolio personal con GitHub Pages._
 
----
-
 ### 4. ¿Cuándo es más conveniente usarlo?
 
-Usar GitHub es más recomendable cuando:
+#### Usar GitHub es más recomendable cuando:
 
 - Buscas **colaboración y comunidad**, ya que es la plataforma con más usuarios activos.
 - Tu proyecto necesita **visibilidad pública**, como proyectos open source.
 - Quieres integrar herramientas de automatización y despliegue rápido.
 - Trabajas con equipos que requieren una **historia detallada** de cambios y revisiones.
 
-No es la mejor opción si:
+#### No es la mejor opción si:
 
 - Tu empresa necesita **privacidad total y control local** sin depender de un servicio en la nube.
 - Buscas una herramienta **todo en uno** con DevOps integrado como GitLab.
 
----
-
 ## Buenas prácticas recomendadas
-
----
 
 - **Nombres descriptivos** para commits y ramas.
 - Mensajes de commit claros y estructurados, por ejemplo:
@@ -97,27 +89,34 @@ No es la mejor opción si:
 - Usar **Issues y Projects** para gestionar tareas y bugs.
 - Integrar **pruebas automáticas** y despliegues continuos cuando sea posible.
 
+---
+
 ## Resumen rápido
 
-> **GitHub** es la plataforma más popular para gestionar proyectos de software de forma colaborativa, ofreciendo control de versiones, automatización y visibilidad pública.
+#### Fortalezas principales:
 
-- **Fortalezas principales:**
-  - Gran comunidad y soporte.
-  - Integración con herramientas externas y CI/CD.
-  - Ideal para proyectos open source.
-  - Funciones gratuitas muy completas.
-- **Debilidades principales:**
-  - Menor privacidad en la versión gratuita.
-  - Dependencia de la nube.
-  - Algunas herramientas avanzadas requieren plan pago.
-- **Cuándo usarlo:**
-  - Proyectos colaborativos y de código abierto.
-  - Creación de portafolios y muestras de trabajo.
-  - Automatización de flujos de desarrollo y despliegue.
-- **Cuándo evitarlo:**
-  - Proyectos ultra confidenciales sin conexión a internet.
-  - Empresas que prefieren soluciones auto hospedadas.
-  - Casos donde se requiera un sistema DevOps más integrado.
+- Gran comunidad y soporte.
+- Integración con herramientas externas y CI/CD.
+- Ideal para proyectos open source.
+- Funciones gratuitas muy completas.
+
+#### Debilidades principales:
+
+- Menor privacidad en la versión gratuita.
+- Dependencia de la nube.
+- Algunas herramientas avanzadas requieren plan pago.
+
+#### Cuándo usarlo:
+
+- Proyectos colaborativos y de código abierto.
+- Creación de portafolios y muestras de trabajo.
+- Automatización de flujos de desarrollo y despliegue.
+
+#### Cuándo evitarlo:
+
+- Proyectos ultra confidenciales sin conexión a internet.
+- Empresas que prefieren soluciones auto hospedadas.
+- Casos donde se requiera un sistema DevOps más integrado.
 
 ---
 
@@ -129,10 +128,6 @@ No es la mejor opción si:
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)
-
-IMPORTANTE: Formatea toda la respuesta usando **exclusivamente Markdown**. Incluye títulos, subtítulos, listas, negritas y cursivas donde sea apropiado para mejorar la legibilidad y estructura.
-
-Lenguaje: TypeScript (7)
 
 ---
 
@@ -146,8 +141,6 @@ Sistema de **control de versiones distribuido** que permite registrar cambios en
 
 > _Git es la base sobre la que se construye GitHub._
 
----
-
 ### 2. **Repositorio (Repo)**
 
 Espacio donde se almacena el proyecto, incluyendo:
@@ -159,8 +152,6 @@ Espacio donde se almacena el proyecto, incluyendo:
 
 Puede ser **público** (visible para todos) o **privado** (acceso restringido).
 
----
-
 ### 3. **Commit**
 
 Registro puntual de cambios realizados en el proyecto.
@@ -171,28 +162,22 @@ Registro puntual de cambios realizados en el proyecto.
 > Ejemplo de mensaje de commit:  
 > `feat: agregar formulario de registro`
 
----
-
 ### 4. **Branch (Rama)**
 
 Versión paralela del proyecto que permite trabajar en nuevas funciones o correcciones sin afectar la rama principal.
 
-Flujo común de ramas:
+#### Flujo común de ramas:
 
 - `main`: Versión estable.
 - `develop`: Integración de cambios en desarrollo.
 - `feature/nombre`: Nuevas funcionalidades.
 - `hotfix/nombre`: Correcciones urgentes.
 
----
-
 ### 5. **Pull Request (PR)**
 
 Solicitud para fusionar cambios de una rama en otra, generalmente revisada por otros miembros del equipo antes de aprobarla.
 
 - Permite **revisar código**, **discutir cambios** y **mantener calidad**.
-
----
 
 ### 6. **Issue**
 
@@ -201,8 +186,6 @@ Herramienta para **registrar tareas, bugs o mejoras** dentro de un proyecto.
 - Puede asignarse a usuarios específicos.
 - Facilita la organización y seguimiento de problemas.
 
----
-
 ### 7. **Fork**
 
 Copia de un repositorio en tu propia cuenta para:
@@ -210,19 +193,15 @@ Copia de un repositorio en tu propia cuenta para:
 - Probar cambios sin afectar el original.
 - Contribuir a proyectos open source.
 
----
-
 ### 8. **Merge**
 
 Proceso de **fusionar cambios** de una rama a otra.
 
-Tipos comunes de merge:
+#### Tipos comunes de merge:
 
 - **Merge commit:** conserva el historial completo.
 - **Squash and merge:** combina varios commits en uno solo.
 - **Rebase and merge:** integra cambios de forma lineal.
-
----
 
 ### 9. **Markdown**
 
@@ -232,8 +211,6 @@ Lenguaje de marcado ligero usado en GitHub para:
 - Issues y Pull Requests.
 - Wikis y páginas web.
 
----
-
 ### 10. **GitHub Actions**
 
 Sistema de **automatización** para ejecutar flujos de trabajo como:
@@ -242,13 +219,9 @@ Sistema de **automatización** para ejecutar flujos de trabajo como:
 - Despliegues a producción.
 - Análisis de calidad de código.
 
----
-
 ### 11. **GitHub Pages**
 
 Servicio gratuito de GitHub para **publicar sitios web estáticos** directamente desde un repositorio.
-
----
 
 ### 12. **Licencias**
 
@@ -312,10 +285,7 @@ npm run dev
 Este proyecto está bajo la licencia MIT.
 
 ```
-
----
-
-### 2. **.gitignore básico para Node.js**
+ ### 2. **.gitignore básico para Node.js**
 Evitar subir archivos innecesarios al repositorio.
 
 
@@ -325,8 +295,6 @@ dist/
 coverage/
 
 ```
-
----
 
 ### 3. **Flujo típico de ramas en GitHub**
 
@@ -341,8 +309,6 @@ hotfix/ # Correcciones urgentes
 release/ # Versión previa a producción
 
 ```
-
----
 
 ### 4. **Template para Issues**
 
@@ -368,8 +334,6 @@ Explica lo que debería suceder.
 Capturas de pantalla, versiones, etc.
 ```
 
----
-
 ### 5. **Template para Pull Requests**
 
 Archivo `.github/PULL_REQUEST_TEMPLATE.md`
@@ -393,8 +357,6 @@ Breve resumen de los cambios realizados.
 - [ ] La documentación se ha actualizado si es necesario.
 ```
 
----
-
 [🔼 temas](#temas)
 
 ---
@@ -414,8 +376,6 @@ Breve resumen de los cambios realizados.
 - **Git** es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.
 - **GitHub** es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como _pull requests_, _issues_ y _actions_.
 
----
-
 ### 2. Explica el propósito de un "pull request" (solicitud de extracción) y describe el proceso general para crear uno.
 
 Un _pull request_ (PR) es una solicitud para fusionar cambios de una rama a otra en un repositorio. Sirve para revisar, discutir y aprobar cambios antes de integrarlos.
@@ -434,8 +394,6 @@ Un _pull request_ (PR) es una solicitud para fusionar cambios de una rama a otra
 4. En GitHub, crear un _Pull Request_ desde la rama hacia `main` o `develop`.
 5. Solicitar revisiones y, una vez aprobado, fusionar.
 
----
-
 ### 3. ¿Cómo se clona un repositorio de GitHub a tu máquina local? ¿Qué comandos de Git utilizarías?
 
 Para clonar un repositorio:
@@ -446,8 +404,6 @@ cd repo
 ```
 
 Este comando descarga el repositorio y configura automáticamente el remoto llamado `origin`.
-
----
 
 ### 4. Describe la diferencia entre git fetch, git pull y git merge. ¿Cuándo usarías cada uno?
 
@@ -460,8 +416,6 @@ Este comando descarga el repositorio y configura automáticamente el remoto llam
 - `fetch` → cuando quieres inspeccionar cambios antes de aplicarlos.
 - `pull` → cuando quieres mantener tu rama actual actualizada rápidamente.
 - `merge` → cuando integras ramas de forma controlada.
-
----
 
 ### 5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto? Da un ejemplo de su contenido.
 
@@ -497,8 +451,6 @@ git checkout feature
 git rebase main
 ```
 
----
-
 ### 7. ¿Qué es un "fork" en GitHub y en qué situaciones lo utilizarías? ¿Cuál es el proceso para mantener tu "fork" sincronizado con el repositorio original?
 
 - Un **fork** es una copia completa de un repositorio en tu cuenta de GitHub.
@@ -514,8 +466,6 @@ git merge upstream/main
 git push origin main
 ```
 
----
-
 ### 8. ¿Para qué sirve git revert vs git reset? Explica diferencias entre sus modos (--soft, --mixed, --hard).
 
 - `git revert`: Crea un commit que **revierte cambios previos** sin modificar la historia.
@@ -526,8 +476,6 @@ git push origin main
 - `--soft`: Mantiene cambios en staging.
 - `--mixed`: Mantiene cambios en el directorio de trabajo, pero limpia el staging.
 - `--hard`: Elimina cambios por completo.
-
----
 
 ### 9. ¿Qué son los tags en Git? ¿Cómo los usarías para marcar versiones estables en un proyecto?
 
@@ -542,17 +490,15 @@ git push origin v1.0.0
 
 Esto permite rastrear versiones y generar releases en GitHub.
 
----
-
 ### 10. ¿Cómo se gestionan las ramas en GitHub? Describe el flujo de trabajo de ramas que consideras una buena práctica.
 
 Flujo recomendado (_Git Flow_ simplificado):
 
-- `main`: Rama estable para producción.
-- `develop`: Rama para integrar cambios en desarrollo.
-- `feature/*`: Nuevas funcionalidades.
-- `hotfix/*`: Correcciones urgentes en producción.
-- `release/*`: Preparación previa a producción.
+- **`main`:** Rama estable para producción.
+- **`develop`:** Rama para integrar cambios en desarrollo.
+- **`feature`:** Nuevas funcionalidades.
+- **`hotfix`:** Correcciones urgentes en producción.
+- **`release`:** Preparación previa a producción.
 
 ---
 
@@ -567,8 +513,6 @@ En GitHub se puede proteger una rama mediante la sección **Branch Protection Ru
 - Bloquear _force pushes_ y borrado de la rama.
 - Configurar integración con tests automáticos que deben aprobarse antes de fusionar.
 
----
-
 ### 12. ¿Qué son los submodules en Git y cuándo sería útil utilizarlos en un repositorio de GitHub?
 
 - Los **submodules** permiten incluir un repositorio Git dentro de otro.
@@ -580,14 +524,10 @@ En GitHub se puede proteger una rama mediante la sección **Branch Protection Ru
 git submodule add https://github.com/usuario/lib.git libs/lib
 ```
 
----
-
 ### 13. Menciona al menos dos estrategias avanzadas de branching y cuándo conviene utilizarlas.
 
 - **Git Flow**: Ideal para proyectos grandes con ciclos definidos de desarrollo, pruebas y releases.
 - **Trunk Based Development**: Para equipos ágiles que integran cambios frecuentemente en una sola rama principal.
-
----
 
 ### 14. Explica cómo auditar el historial de cambios de un repositorio grande para identificar cuándo se introdujo un bug o una característica específica.
 
@@ -605,8 +545,6 @@ git submodule add https://github.com/usuario/lib.git libs/lib
   git bisect bad
   git bisect good commit_id
   ```
-
----
 
 ### 15. Explica el concepto de "GitHub Actions" y describe un flujo de trabajo de integración continua/despliegue continuo (CI/CD) que podrías implementar con él.
 
@@ -637,4 +575,4 @@ jobs:
         run: npm test
 ```
 
-Esto asegura calidad y despliegues automáticos de forma segura.
+> Esto asegura calidad y despliegues automáticos de forma segura.

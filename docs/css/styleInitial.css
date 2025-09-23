@@ -28,6 +28,20 @@
 /**••• OTROS ••••••••••••••••••
   ▶ opacity, cursor, pointer-events    */
 
+/* Selectores flujo 
+
+* > (Hijo Directo)
+* ~ (Hermano General): Selecciona todos elementos en mismo nivel 
+* + (Hermano Adyacente): siguiente elemento en el mismo nivel.
+
+* :is(h1, h2, h3): 
+Agrupa varios selectores. 
+* :not(.activo): 
+Selecciona cualquier elemento que NO cumpla con la condición del selector que pones entre paréntesis.
+* :has(img): 
+El "selector padre". Selecciona un elemento si contiene otro elemento que coincida con el selector que pones dentro del paréntesis.
+*/
+
 @view-transition {
   navigation: auto;
 }

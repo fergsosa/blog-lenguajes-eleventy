@@ -28,7 +28,7 @@
 <h2 id="1-que-es-typescript">1. ¿Qué es TypeScript?</h2>
 <p>TypeScript es un <strong>superset de JavaScript</strong> desarrollado por <strong>Microsoft</strong> que agrega <strong>tipado estático</strong> y <strong>características avanzadas</strong> al lenguaje.<br>
 Esto significa que todo código JavaScript válido también es válido en TypeScript, pero con la ventaja de <strong>detectar errores antes de ejecutar el programa</strong> gracias a su sistema de tipos.</p>
-<p><strong>Diferencias clave respecto a JavaScript:</strong></p>
+<h4 id="diferencias-clave-respecto-a-javascript">Diferencias clave respecto a JavaScript:</h4>
 <ul>
 <li><strong>Tipado estático</strong>: permite definir tipos para variables, parámetros y funciones.</li>
 <li><strong>Compilación</strong>: el código TypeScript debe compilarse a JavaScript para ser ejecutado.</li>
@@ -37,7 +37,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 </ul>
 <h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
 <p>TypeScript se utiliza principalmente para <strong>desarrollo a gran escala</strong> donde la <strong>mantenibilidad</strong> y la <strong>calidad del código</strong> son esenciales.</p>
-<p><strong>Contextos ideales:</strong></p>
+<h4 id="contextos-ideales">Contextos ideales:</h4>
 <ul>
 <li>Aplicaciones <strong>web complejas</strong> con frameworks como <em>React</em>, <em>Angular</em>, <em>Vue</em>.</li>
 <li>Proyectos <strong>backend</strong> con <em>Node.js</em>.</li>
@@ -65,7 +65,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 <p>⚠️ <em>En proyectos pequeños, prototipos o scripts simples, puede ser excesivo usar TypeScript debido a la configuración y compilación necesarias.</em></p>
 </blockquote>
 <h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
-<p><strong>Buenas prácticas:</strong></p>
+<h4 id="buenas-practicas">Buenas prácticas</h4>
 <ul>
 <li>Usa <strong>tipos explícitos</strong> (<code>string</code>, <code>number</code>, <code>boolean</code>) para mayor claridad.</li>
 <li>Mantén una <strong>estructura clara de carpetas</strong> en el proyecto.</li>
@@ -74,7 +74,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 <li>Escribe <strong>interfaces y tipos reutilizables</strong> para mayor consistencia.</li>
 <li>Documenta el código usando <em>JSDoc</em> o comentarios claros.</li>
 </ul>
-<p><strong>Patrones recomendados:</strong></p>
+<h4 id="patrones-recomendados">Patrones recomendados</h4>
 <ul>
 <li><strong>Programación modular</strong>: dividir el código en módulos y componentes reutilizables.</li>
 <li>Uso de <strong>interfaces</strong> para definir contratos entre módulos.</li>
@@ -83,42 +83,29 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 </ul>
 <hr>
 <h2 id="resumen-rapido">Resumen rápido</h2>
-<blockquote>
-<p>Síntesis rápida de lo aprendido sobre TypeScript.</p>
-</blockquote>
-<ul>
-<li>
-<p><strong>Fortalezas principales:</strong></p>
+<h4 id="fortalezas-principales">Fortalezas principales:</h4>
 <ul>
 <li>Tipado estático que reduce errores.</li>
 <li>Excelente integración con editores como VSCode.</li>
 <li>Compatible con librerías y frameworks populares.</li>
 <li>Escalable para proyectos grandes y equipos.</li>
 </ul>
-</li>
-<li>
-<p><strong>Debilidades principales:</strong></p>
+<h4 id="debilidades-principales">Debilidades principales:</h4>
 <ul>
 <li>Requiere un proceso de compilación.</li>
 <li>Curva de aprendizaje inicial.</li>
 <li>Puede ser excesivo para proyectos pequeños.</li>
 </ul>
-</li>
-<li>
-<p><strong>Cuándo usarlo:</strong></p>
+<h4 id="cuando-usarlo">Cuándo usarlo:</h4>
 <ul>
 <li>Aplicaciones web o backend a gran escala.</li>
 <li>Proyectos con múltiples desarrolladores.</li>
 <li>Librerías y SDKs que otros usarán.</li>
 </ul>
-</li>
-<li>
-<p><strong>Cuándo evitarlo:</strong></p>
+<h4 id="cuando-evitarlo">Cuándo evitarlo:</h4>
 <ul>
 <li>Prototipos rápidos o pruebas pequeñas.</li>
 <li>Scripts sencillos donde el tipado no aporta valor.</li>
-</ul>
-</li>
 </ul>
 <hr>
 <h1 id="temas">Temas</h1>
@@ -133,7 +120,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 <hr>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Antes de comenzar a trabajar con TypeScript, es importante comprender algunos conceptos clave que te ayudarán a sacarle el máximo provecho al lenguaje.</p>
-<h2 id="1-javascript">1. JavaScript</h2>
+<h3 id="1-javascript">1. JavaScript</h3>
 <p>TypeScript es un <strong>superset de JavaScript</strong>, por lo que debes conocer:</p>
 <ul>
 <li><strong>Tipos primitivos</strong>: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>.</li>
@@ -145,7 +132,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 <blockquote>
 <p>⚠️ <em>Sin una base sólida de JavaScript, aprender TypeScript será más complicado.</em></p>
 </blockquote>
-<h2 id="2-tipado-estatico">2. Tipado Estático</h2>
+<h3 id="2-tipado-estatico">2. Tipado Estático</h3>
 <p>El <strong>tipado estático</strong> es la base de TypeScript.<br>
 Permite definir y <strong>validar el tipo de datos</strong> en tiempo de desarrollo.</p>
 <p>Ejemplo:</p>
@@ -158,7 +145,7 @@ edad = &quot;veinticinco&quot;; // ❌ Error: no se puede asignar string a numbe
 <li>Mejor autocompletado y documentación.</li>
 <li>Código más legible y seguro.</li>
 </ul>
-<h2 id="3-interfaces-y-tipos">3. Interfaces y Tipos</h2>
+<h3 id="3-interfaces-y-tipos">3. Interfaces y Tipos</h3>
 <p>Permiten <strong>definir la forma de objetos</strong> y estructurar mejor el código.</p>
 <p>Ejemplo con <code>interface</code>:</p>
 <pre><code class="language-typescript">interface Usuario {
@@ -173,7 +160,7 @@ const user: Usuario = {
   activo: true,
 };
 </code></pre>
-<h2 id="4-orientacion-a-objetos-poo">4. Orientación a Objetos (POO)</h2>
+<h3 id="4-orientacion-a-objetos-poo">4. Orientación a Objetos (POO)</h3>
 <p>TypeScript tiene soporte completo para POO:</p>
 <ul>
 <li><strong>Clases</strong> (<code>class</code>)</li>
@@ -199,7 +186,7 @@ class Perro extends Animal {
 const miPerro = new Perro(&quot;Firulais&quot;);
 miPerro.hacerSonido();
 </code></pre>
-<h2 id="5-compilacion-y-transpilacion">5. Compilación y Transpilación</h2>
+<h3 id="5-compilacion-y-transpilacion">5. Compilación y Transpilación</h3>
 <p>TypeScript <strong>no se ejecuta directamente</strong> en el navegador o Node.js.<br>
 Debe <strong>compilarse a JavaScript</strong> mediante el comando:</p>
 <pre><code class="language-bash">tsc archivo.ts
@@ -211,7 +198,7 @@ Debe <strong>compilarse a JavaScript</strong> mediante el comando:</p>
 <li><code>.ts</code> (código fuente en TypeScript).</li>
 <li><code>.js</code> (código compilado en JavaScript).</li>
 </ul>
-<h2 id="6-modulos-y-namespaces">6. Módulos y Namespaces</h2>
+<h3 id="6-modulos-y-namespaces">6. Módulos y Namespaces</h3>
 <p>Para organizar el código en archivos separados y reutilizables:</p>
 <pre><code class="language-typescript">// archivo saludo.ts
 export function saludar(nombre: string): string {
@@ -227,7 +214,7 @@ console.log(saludar(&quot;Fernando&quot;));
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Estas herramientas te ayudarán a trabajar de manera más eficiente y profesional con TypeScript.</p>
-<h2 id="1-node-js-npm">1. Node.js + NPM</h2>
+<h3 id="1-node-js-npm">1. Node.js + NPM</h3>
 <p>Permite ejecutar y gestionar proyectos de TypeScript.</p>
 <ul>
 <li>Descargar en: <a href="https://nodejs.org">https://nodejs.org</a></li>
@@ -236,7 +223,7 @@ npm -v
 </code></pre>
 </li>
 </ul>
-<h2 id="2-typescript-compiler-tsc">2. TypeScript Compiler (tsc)</h2>
+<h3 id="2-typescript-compiler-tsc">2. TypeScript Compiler (tsc)</h3>
 <p>El compilador oficial de TypeScript.</p>
 <p>Instalación global:</p>
 <pre><code class="language-bash">npm install -g typescript
@@ -250,7 +237,7 @@ npm -v
 <p>Inicializar proyecto con <code>tsconfig.json</code>:</p>
 <pre><code class="language-bash">tsc --init
 </code></pre>
-<h2 id="3-visual-studio-code-vscode">3. Visual Studio Code (VSCode)</h2>
+<h3 id="3-visual-studio-code-vscode">3. Visual Studio Code (VSCode)</h3>
 <p>El editor más popular para trabajar con TypeScript.</p>
 <p>Extensiones recomendadas:</p>
 <ul>
@@ -259,7 +246,7 @@ npm -v
 <li><strong>Prettier</strong> → Formateo automático de código.</li>
 <li><strong>Error Lens</strong> → Destaca errores directamente en el editor.</li>
 </ul>
-<h2 id="4-ts-node">4. ts-node</h2>
+<h3 id="4-ts-node">4. ts-node</h3>
 <p>Permite ejecutar archivos TypeScript directamente <strong>sin compilar manualmente</strong>.</p>
 <p>Instalación:</p>
 <pre><code class="language-bash">npm install -g ts-node
@@ -267,13 +254,13 @@ npm -v
 <p>Uso:</p>
 <pre><code class="language-bash">ts-node app.ts
 </code></pre>
-<h2 id="5-eslint-prettier">5. ESLint + Prettier</h2>
+<h3 id="5-eslint-prettier">5. ESLint + Prettier</h3>
 <p>Mantienen el código limpio y legible.</p>
 <p>Instalación rápida:</p>
 <pre><code class="language-bash">npm install eslint prettier -D
 </code></pre>
 <p>Configura un archivo <code>.eslintrc.json</code> y <code>.prettierrc</code>.</p>
-<h2 id="6-git-github">6. Git + GitHub</h2>
+<h3 id="6-git-github">6. Git + GitHub</h3>
 <p>Para control de versiones y colaboración.</p>
 <p>Comandos básicos:</p>
 <pre><code class="language-bash">git init
@@ -281,7 +268,7 @@ git add .
 git commit -m &quot;Primer commit&quot;
 git push origin main
 </code></pre>
-<h2 id="7-frameworks-y-librerias-compatibles">7. Frameworks y Librerías compatibles</h2>
+<h3 id="7-frameworks-y-librerias-compatibles">7. Frameworks y Librerías compatibles</h3>
 <ul>
 <li><strong>React con TypeScript</strong> → Interfaces y props tipadas.</li>
 <li><strong>Express con TypeScript</strong> → Backend robusto y escalable.</li>
@@ -293,17 +280,17 @@ git push origin main
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
 <p>Fragmentos de código que se usan <strong>frecuentemente</strong> al trabajar con TypeScript.<br>
 Ideales para copiar y pegar en proyectos.</p>
-<h2 id="1-declaracion-de-variables-con-tipos">1. Declaración de variables con tipos</h2>
+<h3 id="1-declaracion-de-variables-con-tipos">1. Declaración de variables con tipos</h3>
 <pre><code class="language-typescript">let nombre: string = &quot;Fernando&quot;;
 let edad: number = 30;
 let activo: boolean = true;
 </code></pre>
-<h2 id="2-funcion-con-tipado-en-parametros-y-retorno">2. Función con tipado en parámetros y retorno</h2>
+<h3 id="2-funcion-con-tipado-en-parametros-y-retorno">2. Función con tipado en parámetros y retorno</h3>
 <pre><code class="language-typescript">function sumar(a: number, b: number): number {
   return a + b;
 }
 </code></pre>
-<h2 id="3-interface-basica-para-un-objeto">3. Interface básica para un objeto</h2>
+<h3 id="3-interface-basica-para-un-objeto">3. Interface básica para un objeto</h3>
 <pre><code class="language-typescript">interface Usuario {
   id: number;
   nombre: string;
@@ -316,7 +303,7 @@ const user: Usuario = {
   activo: true,
 };
 </code></pre>
-<h2 id="4-clase-con-constructor-y-metodo">4. Clase con constructor y método</h2>
+<h3 id="4-clase-con-constructor-y-metodo">4. Clase con constructor y método</h3>
 <pre><code class="language-typescript">class Persona {
   constructor(public nombre: string, public edad: number) {}
 
@@ -328,7 +315,7 @@ const user: Usuario = {
 const persona = new Persona(&quot;Carlos&quot;, 28);
 persona.saludar();
 </code></pre>
-<h2 id="5-uso-de-enum">5. Uso de <code>enum</code></h2>
+<h3 id="5-uso-de-enum">5. Uso de <code>enum</code></h3>
 <pre><code class="language-typescript">enum EstadoPedido {
   Pendiente,
   EnProceso,
@@ -337,7 +324,7 @@ persona.saludar();
 
 let estado: EstadoPedido = EstadoPedido.Pendiente;
 </code></pre>
-<h2 id="6-tipos-genericos">6. Tipos genéricos</h2>
+<h3 id="6-tipos-genericos">6. Tipos genéricos</h3>
 <pre><code class="language-typescript">function identidad&lt;T&gt;(valor: T): T {
   return valor;
 }
@@ -345,14 +332,14 @@ let estado: EstadoPedido = EstadoPedido.Pendiente;
 console.log(identidad&lt;string&gt;(&quot;Hola&quot;));
 console.log(identidad&lt;number&gt;(123));
 </code></pre>
-<h2 id="7-promesa-tipada">7. Promesa tipada</h2>
+<h3 id="7-promesa-tipada">7. Promesa tipada</h3>
 <pre><code class="language-typescript">function obtenerDatos(): Promise&lt;string&gt; {
   return new Promise((resolve) =&gt; {
     setTimeout(() =&gt; resolve(&quot;Datos recibidos&quot;), 1000);
   });
 }
 </code></pre>
-<h2 id="8-import-y-export">8. Import y export</h2>
+<h3 id="8-import-y-export">8. Import y export</h3>
 <pre><code class="language-typescript">// archivo operaciones.ts
 export function sumar(a: number, b: number): number {
   return a + b;
@@ -366,43 +353,43 @@ console.log(sumar(5, 3));
 <hr>
 <h1 id="comandos">Comandos</h1>
 <p>Resumen de los <strong>comandos y sintaxis principales</strong> con ejemplos breves.</p>
-<h2 id="1-inicializar-proyecto-typescript">1. Inicializar proyecto TypeScript</h2>
+<h3 id="1-inicializar-proyecto-typescript">1. Inicializar proyecto TypeScript</h3>
 <p>Crea un archivo de configuración <code>tsconfig.json</code>:</p>
 <pre><code class="language-bash">tsc --init
 </code></pre>
-<h2 id="2-compilar-un-archivo-typescript">2. Compilar un archivo TypeScript</h2>
+<h3 id="2-compilar-un-archivo-typescript">2. Compilar un archivo TypeScript</h3>
 <p>Convierte <code>.ts</code> a <code>.js</code>:</p>
 <pre><code class="language-bash">tsc archivo.ts
 </code></pre>
-<h2 id="3-ejecutar-codigo-sin-compilar-ts-node">3. Ejecutar código sin compilar (ts-node)</h2>
+<h3 id="3-ejecutar-codigo-sin-compilar-ts-node">3. Ejecutar código sin compilar (ts-node)</h3>
 <pre><code class="language-bash">ts-node app.ts
 </code></pre>
-<h2 id="4-tipos-basicos">4. Tipos básicos</h2>
+<h3 id="4-tipos-basicos">4. Tipos básicos</h3>
 <pre><code class="language-typescript">let texto: string = &quot;Hola&quot;;
 let numero: number = 100;
 let esActivo: boolean = false;
 </code></pre>
-<h2 id="5-tipo-any-evitar-en-lo-posible">5. Tipo <code>any</code> (evitar en lo posible)</h2>
+<h3 id="5-tipo-any-evitar-en-lo-posible">5. Tipo <code>any</code> (evitar en lo posible)</h3>
 <pre><code class="language-typescript">let variable: any = &quot;Puede ser cualquier cosa&quot;;
 variable = 42;
 </code></pre>
-<h2 id="6-union-types">6. Union Types</h2>
+<h3 id="6-union-types">6. Union Types</h3>
 <p>Permite más de un tipo en una variable.</p>
 <pre><code class="language-typescript">let id: string | number;
 id = &quot;abc&quot;;
 id = 123;
 </code></pre>
-<h2 id="7-tipado-en-funciones">7. Tipado en funciones</h2>
+<h3 id="7-tipado-en-funciones">7. Tipado en funciones</h3>
 <pre><code class="language-typescript">function multiplicar(a: number, b: number): number {
   return a * b;
 }
 </code></pre>
-<h2 id="8-parametros-opcionales">8. Parámetros opcionales</h2>
+<h3 id="8-parametros-opcionales">8. Parámetros opcionales</h3>
 <pre><code class="language-typescript">function saludar(nombre?: string) {
   console.log(`Hola ${nombre || &quot;desconocido&quot;}`);
 }
 </code></pre>
-<h2 id="9-interfaces">9. Interfaces</h2>
+<h3 id="9-interfaces">9. Interfaces</h3>
 <pre><code class="language-typescript">interface Producto {
   id: number;
   nombre: string;
@@ -411,7 +398,7 @@ id = 123;
 
 const item: Producto = { id: 1, nombre: &quot;Laptop&quot;, precio: 1500 };
 </code></pre>
-<h2 id="10-uso-de-readonly-y-optional">10. Uso de <code>readonly</code> y <code>optional (?)</code></h2>
+<h3 id="10-uso-de-readonly-y-optional">10. Uso de <code>readonly</code> y <code>optional (?)</code></h3>
 <pre><code class="language-typescript">interface Config {
   readonly version: string;
   descripcion?: string;
@@ -420,12 +407,12 @@ const item: Producto = { id: 1, nombre: &quot;Laptop&quot;, precio: 1500 };
 const conf: Config = { version: &quot;1.0.0&quot; };
 // conf.version = &quot;2.0.0&quot;; ❌ Error
 </code></pre>
-<h2 id="11-genericos">11. Genéricos</h2>
+<h3 id="11-genericos">11. Genéricos</h3>
 <pre><code class="language-typescript">function identidad&lt;T&gt;(valor: T): T {
   return valor;
 }
 </code></pre>
-<h2 id="12-modificadores-de-clase">12. Modificadores de clase</h2>
+<h3 id="12-modificadores-de-clase">12. Modificadores de clase</h3>
 <pre><code class="language-typescript">class Vehiculo {
   public marca: string;
   private motor: string;
@@ -438,14 +425,14 @@ const conf: Config = { version: &quot;1.0.0&quot; };
   }
 }
 </code></pre>
-<h2 id="13-compilar-y-vigilar-cambios-en-tiempo-real">13. Compilar y vigilar cambios en tiempo real</h2>
+<h3 id="13-compilar-y-vigilar-cambios-en-tiempo-real">13. Compilar y vigilar cambios en tiempo real</h3>
 <pre><code class="language-bash">tsc --watch
 </code></pre>
-<h2 id="14-instalar-dependencias-en-proyecto">14. Instalar dependencias en proyecto</h2>
+<h3 id="14-instalar-dependencias-en-proyecto">14. Instalar dependencias en proyecto</h3>
 <pre><code class="language-bash">npm install typescript -D
 npm install ts-node -D
 </code></pre>
-<h2 id="15-ejecutar-proyecto-con-nodemon-y-ts-node">15. Ejecutar proyecto con nodemon y ts-node</h2>
+<h3 id="15-ejecutar-proyecto-con-nodemon-y-ts-node">15. Ejecutar proyecto con nodemon y ts-node</h3>
 <pre><code class="language-bash">npx nodemon --exec ts-node src/index.ts
 </code></pre>
 <p><a href="#temas">🔼 temas</a></p>
@@ -671,7 +658,7 @@ type Caso2 = EsString&lt;number&gt;; // &quot;No es texto&quot;
 </code></pre>
 <p>Se usa para indicar que la función no tiene un punto de retorno.</p>
 <h3 id="14-migracion-de-javascript-a-typescript">14. Migración de JavaScript a TypeScript</h3>
-<p><strong>Estrategia:</strong></p>
+<h4 id="estrategia">Estrategia:</h4>
 <ol>
 <li>Configurar <code>tsconfig.json</code> con <code>&quot;allowJs&quot;: true</code> y <code>&quot;checkJs&quot;: false</code>.</li>
 <li>Renombrar archivos <code>.js</code> a <code>.ts</code> de forma progresiva.</li>
@@ -679,14 +666,13 @@ type Caso2 = EsString&lt;number&gt;; // &quot;No es texto&quot;
 <li>Usar <code>Partial</code>, <code>any</code> temporalmente en lugares complejos.</li>
 <li>Agregar pruebas automáticas antes y después de la migración.</li>
 </ol>
-<p>Configuraciones clave:</p>
+<h4 id="configuraciones-clave">Configuraciones clave:</h4>
 <ul>
 <li><code>&quot;strict&quot;: true</code></li>
 <li><code>&quot;noImplicitAny&quot;: true</code></li>
-<li><code>&quot;strictNullChecks&quot;: true</code>
-<h3 id="15-manejo-seguro-de-multiples-esquemas-en-una-api">15. Manejo seguro de múltiples esquemas en una API</h3>
-</li>
+<li><code>&quot;strictNullChecks&quot;: true</code></li>
 </ul>
+<h3 id="15-manejo-seguro-de-multiples-esquemas-en-una-api">15. Manejo seguro de múltiples esquemas en una API</h3>
 <p>Usar <strong>discriminated unions</strong> para garantizar que todos los casos sean manejados.</p>
 <pre><code class="language-typescript">type RespuestaAPI =
   | { type: &quot;usuario&quot;; data: { id: number; nombre: string } }
@@ -706,7 +692,9 @@ function procesarRespuesta(respuesta: RespuestaAPI) {
   }
 }
 </code></pre>
+<blockquote>
 <p>Esto asegura que <strong>TypeScript te obligue a cubrir todos los casos</strong>.</p>
+</blockquote>
 <p><a href="#temas">🔼 temas</a></p>
 
     </main>

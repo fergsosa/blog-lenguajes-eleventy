@@ -11,10 +11,6 @@ date: "2023-07-01"
 
 ![{{title}}]({{img}})
 
-[temas](#temas)
-
-# <!--! Que es -->
-
 ## ¿Qué es?
 
 Markdown es un **lenguaje de marcado ligero** que permite dar formato a texto de manera sencilla y legible.  
@@ -22,45 +18,37 @@ Se basa en una sintaxis muy simple, utilizando caracteres comunes como `#`, `*` 
 
 > _En otras palabras, un archivo `.md` se puede entender como texto plano, pero al renderizarlo se convierte en contenido con estilo como títulos, listas, enlaces o imágenes._
 
----
-
-## ¿Para qué sirve?
+### ¿Para qué sirve?
 
 Markdown se utiliza para **crear documentos con formato** sin necesidad de herramientas complejas.  
 Es ideal para:
 
-- Documentación técnica y manuales.
-- Archivos README.md en proyectos de software.
-- Blogs y publicaciones en la web.
-- Notas personales y apuntes.
-- Creación de contenido para plataformas como GitHub, GitLab, Reddit o Stack Overflow.
+- **Documentación** técnica y manuales.
+- Archivos **README.md** en proyectos de software.
+- **Blogs** y **publicaciones** en la web.
+- **Notas** personales y apuntes.
+- Creación de **contenido para plataformas** como GitHub, GitLab, Reddit o Stack Overflow.
 
 Es muy popular en el desarrollo de software por su simplicidad y compatibilidad con múltiples herramientas.
 
----
-
-## ¿Cómo funciona?
+### ¿Cómo funciona?
 
 Markdown funciona al **traducir texto plano con sintaxis específica** a HTML u otros formatos visuales.\
 Esto se logra porque los caracteres especiales (`#`, `**`, `>`, etc.) indican al procesador cómo interpretar el texto.
 
----
-
-## ¿Por qué usar?
+### ¿Por qué usar?
 
 Algunas ventajas clave de Markdown:
 
 - **Simplicidad:** Es fácil de aprender y usar, incluso para principiantes.
-
 - **Legibilidad:** El texto se entiende tanto en su forma original como procesado.
-
 - **Portabilidad:** Funciona en múltiples plataformas y herramientas, como GitHub, VSCode o Notion.
-
 - **Versatilidad:** Puede generar HTML, PDF y otros formatos.
-
 - **Ligero y rápido:** No necesita software pesado, solo un editor de texto.
 
 > En resumen, Markdown es ideal cuando quieres **crear contenido estructurado y limpio**, sin complicarte con herramientas avanzadas de edición.
+
+---
 
 # Temas {#temas#}
 
@@ -78,6 +66,8 @@ Algunas ventajas clave de Markdown:
   - [Tablas](#tablas)
   - [Formulario](#formulario)
 - [Otros artículos](#categorias)
+
+---
 
 # Sintaxis Básica
 
@@ -123,7 +113,7 @@ Los párrafos cortos son aquellos párrafos que tienen entre tres y seis líneas
 Las citas se crean con el carácter `>` al inicio de la línea.\
 Para anidar citas, se agrega otro `>>` adicional.
 
-> \> **Citas Anidadas**
+> #### \> Citas Anidadas
 >
 > > \>\> Siempre tienes opción de no tener opinión. - Marcos Aurelio.\
 > > \>\> Todo lo que escuchamos es una opinión, no un hecho.\
@@ -131,7 +121,7 @@ Para anidar citas, se agrega otro `>>` adicional.
 > >
 > > > \>\>\> _Marcos Aurelio_
 
-> \> **Alertas**
+> #### \> Alertas
 >
 > > \>\> [!NOTA] _Información útil que los usuarios deben conocer._\
 > > \>\> [!IMPORTANT] _Información clave que los usuarios deben conocer._\

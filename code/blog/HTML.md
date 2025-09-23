@@ -13,8 +13,6 @@ date: "2023-03-01"
 
 [temas](#temas)
 
-# <!--! 1. Introducción -->
-
 ## ¿Qué es HTML?
 
 - HTML (**HyperText Markup Language**) es el **lenguaje estándar para estructurar contenido web**.
@@ -40,13 +38,13 @@ Se utiliza principalmente para:
 
 Con HTML puedes construir:
 
-- Páginas web estáticas: blogs, portafolios, landing pages.
-- Formularios de captura de datos.
-- Estructuras complejas combinadas con CSS y JS: dashboards, aplicaciones web, tiendas online.
-- Contenido multimedia: imágenes, videos, audio, enlaces y tablas.
-- Plantillas de correo electrónico.
+- **Páginas web estáticas:** blogs, portafolios, landing pages.
+- **Formularios** de captura de datos.
+- **Estructuras complejas combinadas con CSS y JS:** dashboards, aplicaciones web, tiendas online.
+- **Contenido multimedia:** imágenes, videos, audio, enlaces y tablas.
+- **Plantillas** de correo electrónico.
 
-Básicamente, cualquier contenido que deba mostrarse en un navegador.
+> Básicamente, cualquier contenido que deba mostrarse en un navegador.
 
 ### ¿Cuándo es más conveniente usarlo?
 
@@ -71,20 +69,27 @@ Básicamente, cualquier contenido que deba mostrarse en un navegador.
 
 ## Resumen rápido.
 
-- **Fortalezas principales:**
-  - Simplicidad y universalidad.
-  - Semántica clara para contenido.
-  - Compatible con todos los navegadores y dispositivos.
-- **Debilidades principales:**
-  - No maneja lógica por sí mismo.
-  - Necesita CSS y JS para diseño e interactividad.
-  - Limitado fuera del contexto web.
-- **Cuándo usarlo:**
-  - Para estructurar contenido web.
-  - Como base de sitios estáticos o dinámicos.
-- **Cuándo evitarlo:**
-  - Si buscas construir **solo con HTML** una aplicación compleja.
-  - Si necesitas lógica avanzada sin otros lenguajes.
+#### Fortalezas principales:
+
+- Simplicidad y universalidad.
+- Semántica clara para contenido.
+- Compatible con todos los navegadores y dispositivos.
+
+#### Debilidades principales:
+
+- No maneja lógica por sí mismo.
+- Necesita CSS y JS para diseño e interactividad.
+- Limitado fuera del contexto web.
+
+#### Cuándo usarlo:
+
+- Para estructurar contenido web.
+- Como base de sitios estáticos o dinámicos.
+
+#### Cuándo evitarlo:
+
+- Si buscas construir **solo con HTML** una aplicación compleja.
+- Si necesitas lógica avanzada sin otros lenguajes.
 
 ---
 
@@ -135,7 +140,7 @@ Esto incluye el uso de **etiquetas semánticas**, meta descripciones y títulos 
 
 La accesibilidad busca que **todas las personas**, incluyendo quienes tienen discapacidades, puedan navegar e interactuar con tu contenido.
 
-Buenas prácticas:
+**Buenas prácticas:**
 
 - Uso correcto de etiquetas semánticas.
 - Texto alternativo en imágenes (`alt`).
@@ -148,10 +153,10 @@ Son etiquetas que **describen el significado** de su contenido, mejorando la leg
 
 Ejemplos:
 
-- `<header>` → Encabezado de la página o sección.
-- `<main>` → Contenido principal.
-- `<article>` → Contenido independiente.
-- `<footer>` → Pie de página.
+- **`<header>`**: Encabezado de la página o sección.
+- **`<main>`**: Contenido principal.
+- **`<article>`**: Contenido independiente.
+- **`<footer>`**: Pie de página.
 
 ---
 
@@ -162,31 +167,31 @@ Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML d
 ### **1. Editores de código**
 
 - **Visual Studio Code (VSCode):** popular, extensible y con soporte para HTML, CSS y JS.
-- Sublime Text: rápido y liviano, ideal para proyectos pequeños.
-- Atom: flexible, aunque menos actualizado.
+- **Sublime Text:** rápido y liviano, ideal para proyectos pequeños.
+- **Atom:** flexible, aunque menos actualizado.
 
-> Extensión recomendada en VSCode:
->
-> - _HTML CSS Support_ para autocompletado.
-> - _Prettier_ para formateo automático.
-> - _Live Server_ para ver cambios en tiempo real.
+#### Extensión recomendada en VSCode:
+
+- _HTML CSS Support_ para autocompletado.
+- _Prettier_ para formateo automático.
+- _Live Server_ para ver cambios en tiempo real.
 
 ### **2. Validadores y herramientas de calidad**
 
-- [W3C Validator](https://validator.w3.org/) → Validación de HTML según los estándares.
-- [WebAIM](https://webaim.org/) → Análisis de accesibilidad.
-- [Lighthouse](https://developers.google.com/web/tools/lighthouse) → Auditoría de SEO, rendimiento y accesibilidad.
+- [W3C Validator](https://validator.w3.org/): Validación de HTML según los estándares.
+- [WebAIM](https://webaim.org/): Análisis de accesibilidad.
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse): Auditoría de SEO, rendimiento y accesibilidad.
 
 ### **3. Recursos gráficos y multimedia**
 
-- [Unsplash](https://unsplash.com/) → Imágenes libres de uso.
-- [Pexels](https://pexels.com/) → Videos e imágenes gratuitas.
-- [TinyPNG](https://tinypng.com/) → Compresión de imágenes sin perder calidad.
+- [Unsplash](https://unsplash.com/): Imágenes libres de uso.
+- [Pexels](https://pexels.com/): Videos e imágenes gratuitas.
+- [TinyPNG](https://tinypng.com/): Compresión de imágenes sin perder calidad.
 
 ### **4. Herramientas para prototipado**
 
-- [Figma](https://figma.com/) → Diseño visual y prototipos de interfaces.
-- [Canva](https://canva.com/) → Creación rápida de diseños simples.
+- [Figma](https://figma.com/): Diseño visual y prototipos de interfaces.
+- [Canva](https://canva.com/): Creación rápida de diseños simples.
 
 ### **5. Herramientas de desarrollo en el navegador**
 
@@ -202,9 +207,17 @@ Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen **DevTools**, ú
 
 Si quieres optimizar tu flujo de trabajo con HTML, puedes usar herramientas que te den componentes listos o plantillas:
 
-- **Bootstrap** → Para diseño rápido y responsive.
-- **Tailwind CSS** → Estilos utilitarios y personalizables.
-- **Materialize** → Basado en Material Design.
+#### **Bootstrap**
+
+- Para diseño rápido y responsive.
+
+#### **Tailwind CSS**
+
+- Estilos utilitarios y personalizables.
+
+#### **Materialize**
+
+- Basado en Material Design.
 
 > Aunque no reemplazan el HTML, te permiten trabajar más rápido con interfaces modernas.
 

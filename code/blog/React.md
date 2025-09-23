@@ -20,7 +20,7 @@ React es una de las bibliotecas más populares para construir interfaces de usua
 React es una **biblioteca de JavaScript** enfocada exclusivamente en la **capa de la vista (UI)** de una aplicación.  
 A diferencia de frameworks completos como Angular o Vue, React **no impone una estructura estricta**, permitiendo mayor flexibilidad para integrar librerías externas según las necesidades del proyecto.
 
-**Diferencias clave frente a otros:**
+#### Diferencias clave frente a otros:
 
 - **Enfocado solo en la UI**: No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).
 - **Componentes reutilizables**: Basado en la construcción de bloques independientes.
@@ -33,7 +33,7 @@ A diferencia de frameworks completos como Angular o Vue, React **no impone una e
 
 React se utiliza para **crear interfaces interactivas y dinámicas** en aplicaciones web y móviles.
 
-**Contextos ideales:**
+#### Contextos ideales:
 
 - Aplicaciones web con **interacciones complejas**.
 - **Dashboards** o paneles administrativos con datos en tiempo real.
@@ -57,7 +57,7 @@ Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual
 
 ### 4. ¿Cuándo es más conveniente usarlo?
 
-React es recomendable cuando:
+#### React es recomendable cuando:
 
 - Tu proyecto **requiere una interfaz dinámica y reactiva**.
 - Necesitas **escalar y mantener** el código a largo plazo.
@@ -73,7 +73,7 @@ React es recomendable cuando:
 
 ## Buenas prácticas recomendadas
 
-Para mantener un código limpio y escalable en React, se recomienda:
+#### Para mantener un código limpio y escalable en React, se recomienda:
 
 - **Componentes pequeños y reutilizables**.
 - Nombrar archivos y carpetas con **convenciones claras** (ej. PascalCase para componentes).
@@ -82,6 +82,7 @@ Para mantener un código limpio y escalable en React, se recomienda:
 - Gestionar el estado global solo cuando sea necesario.
 - Mantener una **estructura de carpetas ordenada**:
 
+```
 src/
 ├── components/
 ├── pages/
@@ -89,6 +90,7 @@ src/
 ├── context/
 ├── utils/
 └── App.jsx
+```
 
 - Implementar **testing** (ej. Jest, React Testing Library).
 - Documentar los componentes y funciones clave.
@@ -97,25 +99,30 @@ src/
 
 ## Resumen rápido
 
-React es una biblioteca potente y flexible para **construir interfaces dinámicas y escalables**. Su enfoque basado en componentes y su gran ecosistema lo hacen ideal para proyectos modernos.
+#### Fortalezas principales:
 
-- **Fortalezas principales:**
-  - Virtual DOM para alto rendimiento.
-  - Ecosistema robusto y en constante evolución.
-  - Gran comunidad y documentación.
-  - Flexibilidad para integrarse con otras librerías.
-- **Debilidades principales:**
-  - Curva de aprendizaje inicial moderada.
-  - No incluye herramientas integradas para todo (estado global, rutas, etc.).
-  - Configuración inicial más compleja que frameworks todo-en-uno.
-- **Cuándo usarlo:**
-  - Aplicaciones interactivas y dinámicas.
-  - Proyectos que requieren escalabilidad.
-  - Sistemas con componentes reutilizables.
-- **Cuándo evitarlo:**
-  - Páginas estáticas simples.
-  - Proyectos con recursos limitados donde la complejidad de React no es necesaria.
-  - Cuando se busca una solución "todo en uno" sin depender de librerías externas.
+- Virtual DOM para alto rendimiento.
+- Ecosistema robusto y en constante evolución.
+- Gran comunidad y documentación.
+- Flexibilidad para integrarse con otras librerías.
+
+#### Debilidades principales:
+
+- Curva de aprendizaje inicial moderada.
+- No incluye herramientas integradas para todo (estado global, rutas, etc.).
+- Configuración inicial más compleja que frameworks todo-en-uno.
+
+#### Cuándo usarlo:
+
+- Aplicaciones interactivas y dinámicas.
+- Proyectos que requieren escalabilidad.
+- Sistemas con componentes reutilizables.
+
+#### Cuándo evitarlo:
+
+- Páginas estáticas simples.
+- Proyectos con recursos limitados donde la complejidad de React no es necesaria.
+- Cuando se busca una solución "todo en uno" sin depender de librerías externas.
 
 ---
 
@@ -128,33 +135,71 @@ React es una biblioteca potente y flexible para **construir interfaces dinámica
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)
 
-IMPORTANTE: Formatea toda la respuesta usando **exclusivamente Markdown**. Incluye títulos, subtítulos, listas, negritas y cursivas donde sea apropiado para mejorar la legibilidad y estructura.
-
-Lenguaje: TypeScript (7)
-
 ---
 
 # Conceptos relacionados
 
 Antes de trabajar con React, es fundamental comprender algunos conceptos que forman la base de su funcionamiento y del desarrollo moderno en JavaScript.
 
-| **Concepto**                      | **Descripción breve**                                                                                    |
-| --------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **JavaScript ES6+**               | Nuevas características como `let`, `const`, funciones flecha, `destructuring` y `spread/rest operators`. |
-| **HTML5 y CSS3**                  | Estructura y estilos básicos para la interfaz de usuario.                                                |
-| **JSX**                           | Sintaxis similar a HTML usada dentro de React para definir componentes.                                  |
-| **DOM y Virtual DOM**             | El DOM representa la estructura HTML, mientras que el Virtual DOM optimiza actualizaciones en React.     |
-| **Componentes**                   | Bloques reutilizables que representan partes de la interfaz.                                             |
-| **Props**                         | Datos que se pasan a los componentes como parámetros.                                                    |
-| **State**                         | Estado interno de un componente que puede cambiar con el tiempo.                                         |
-| **Hooks**                         | Funciones especiales (`useState`, `useEffect`, etc.) para manejar estado y ciclos de vida.               |
-| **Context API**                   | Mecanismo para compartir datos entre componentes sin "prop drilling".                                    |
-| **Single Page Application (SPA)** | Aplicaciones que cargan una sola página y actualizan dinámicamente la UI sin recargar.                   |
-| **Node.js**                       | Entorno de ejecución necesario para correr React y gestionar dependencias.                               |
-| **npm/yarn/pnpm**                 | Gestores de paquetes para instalar librerías y dependencias.                                             |
-| **Babel**                         | Compilador que transforma JSX y código moderno a una versión compatible con navegadores.                 |
-| **Webpack / Vite**                | Empaquetadores y servidores de desarrollo para optimizar el proyecto.                                    |
-| **REST API / GraphQL**            | Métodos para consumir datos externos dentro de una aplicación React.                                     |
+### JavaScript ES6
+
+Nuevas características como `let`, `const`, funciones flecha, `destructuring` y `spread/rest operators`.
+
+### HTML5 y CSS3
+
+Estructura y estilos básicos para la interfaz de usuario.
+
+### JSX
+
+Sintaxis similar a HTML usada dentro de React para definir componentes.
+
+### DOM y Virtual DOM
+
+El DOM representa la estructura HTML, mientras que el Virtual DOM optimiza actualizaciones en React.
+
+### Componentes
+
+Bloques reutilizables que representan partes de la interfaz.
+
+### Props
+
+Datos que se pasan a los componentes como parámetros.
+
+### State
+
+Estado interno de un componente que puede cambiar con el tiempo.
+
+### Hooks
+
+Funciones especiales (`useState`, `useEffect`, etc.) para manejar estado y ciclos de vida.
+
+### Context API
+
+Mecanismo para compartir datos entre componentes sin "prop drilling".
+
+### Single Page Application (SPA
+
+Aplicaciones que cargan una sola página y actualizan dinámicamente la UI sin recargar.
+
+### Node.js
+
+Entorno de ejecución necesario para correr React y gestionar dependencias.
+
+### npm/yarn/pnpm
+
+Gestores de paquetes para instalar librerías y dependencias.
+
+### Babel
+
+Compilador que transforma JSX y código moderno a una versión compatible con navegadores.
+
+### Webpack / Vite
+
+Empaquetadores y servidores de desarrollo para optimizar el proyecto.
+
+### REST API / GraphQL
+
+Métodos para consumir datos externos dentro de una aplicación React.
 
 > 💡 **Consejo:** Tener bases sólidas en **JavaScript moderno** es esencial antes de aprender React.
 
@@ -166,18 +211,55 @@ Antes de trabajar con React, es fundamental comprender algunos conceptos que for
 
 React por sí solo no incluye todo lo necesario para un proyecto completo. Estas herramientas complementan su desarrollo y ayudan a cubrir necesidades como estado global, enrutamiento, pruebas y optimización.
 
-| **Categoría**                    | **Herramienta**                          | **Uso principal**                                                    |
-| -------------------------------- | ---------------------------------------- | -------------------------------------------------------------------- |
-| **Entorno y gestor de paquetes** | Node.js + npm/yarn/pnpm                  | Ejecutar React y manejar dependencias.                               |
-| **Empaquetador / Dev Server**    | Vite / Webpack / Parcel                  | Optimizar y servir la aplicación durante el desarrollo y producción. |
-| **Enrutamiento**                 | React Router                             | Navegación y rutas dentro de la aplicación.                          |
-| **Estado global**                | Redux / Zustand / Recoil / Jotai         | Manejar estados compartidos entre múltiples componentes.             |
-| **Estilos**                      | Tailwind CSS / Styled Components / Sass  | Estilizar la aplicación de manera escalable.                         |
-| **Testing**                      | Jest / React Testing Library             | Probar componentes y lógica de la aplicación.                        |
-| **Consumo de APIs**              | Axios / Fetch API                        | Conectar con servicios externos (REST o GraphQL).                    |
-| **Despliegue**                   | Vercel / Netlify / Render / GitHub Pages | Subir la aplicación a producción de forma rápida y sencilla.         |
-| **Herramientas de desarrollo**   | React DevTools                           | Depurar componentes y estado desde el navegador.                     |
-| **Documentación**                | Storybook / Docz                         | Crear y mantener documentación visual de componentes.                |
+### **Entorno y gestor de paquetes**
+
+- **Herramientas:** Node.js + npm/yarn/pnpm
+- **Uso Principal:** Ejecutar React y manejar dependencias. |
+
+### **Empaquetador / Dev Server**
+
+- **Herramientas:** Vite / Webpack / Parcel
+- **Uso Principal:** Optimizar y servir la aplicación durante el desarrollo y producción. |
+
+### **Enrutamiento**
+
+- **Herramientas:** React Router
+- **Uso Principal:** Navegación y rutas dentro de la aplicación. |
+
+### **Estado global**
+
+- **Herramientas:** Redux / Zustand / Recoil / Jotai
+- **Uso Principal:** Manejar estados compartidos entre múltiples componentes. |
+
+### **Estilos**
+
+- **Herramientas:** Tailwind CSS / Styled Components / Sass
+- **Uso Principal:** Estilizar la aplicación de manera escalable. |
+
+### **Testing**
+
+- **Herramientas:** Jest / React Testing Library
+- **Uso Principal:** Probar componentes y lógica de la aplicación. |
+
+### **Consumo de APIs**
+
+- **Herramientas:** Axios / Fetch API
+- **Uso Principal:** Conectar con servicios externos (REST o GraphQL). |
+
+### **Despliegue**
+
+- **Herramientas:** Vercel / Netlify / Render / GitHub Pages
+- **Uso Principal:** Subir la aplicación a producción de forma rápida y sencilla. |
+
+### **Herramientas de desarrollo**
+
+- **Herramientas:** React DevTools
+- **Uso Principal:** Depurar componentes y estado desde el navegador. |
+
+### **Documentación**
+
+- **Herramientas:** Storybook / Docz
+- **Uso Principal:** Crear y mantener documentación visual de componentes. |
 
 ---
 
@@ -187,7 +269,7 @@ React por sí solo no incluye todo lo necesario para un proyecto completo. Estas
 
 # Flujo básico de un proyecto React
 
-1. **Inicializar proyecto:**
+### 1. Inicializar proyecto:
 
 ```bash
 npm create vite@latest my-app
@@ -196,7 +278,7 @@ npm install
 npm run dev
 ```
 
-2. **Estructura recomendada:**
+### 2. Estructura recomendada:
 
 ```bash
 src/
@@ -210,7 +292,7 @@ src/
 
 ```
 
-3. **Componente básico:**
+### 3. Componente básico:
 
 ```bash
 function Saludo({ nombre }) {
@@ -220,7 +302,7 @@ function Saludo({ nombre }) {
 export default Saludo;
 ```
 
-4. **Uso en la app:**
+### 4. Uso en la app:
 
 ```bash
 import Saludo from './components/Saludo';
@@ -246,7 +328,7 @@ Estos fragmentos son patrones comunes que usarás frecuentemente en React.
 
 ---
 
-### **1. Componente funcional básico**
+### 1. Componente funcional básico
 
 ```jsx
 function Saludo() {
@@ -258,7 +340,7 @@ export default Saludo;
 
 ---
 
-### **2. Componente con Props**
+### 2. Componente con Props
 
 ```jsx
 function Saludo({ nombre }) {
@@ -273,7 +355,7 @@ export default Saludo;
 
 ---
 
-### **3. Hook `useState` - Manejo de estado**
+### 3. Hook `useState` - Manejo de estado
 
 ```jsx
 import { useState } from "react";
@@ -292,7 +374,7 @@ function Contador() {
 
 ---
 
-### **4. Hook `useEffect` - Ciclo de vida**
+### 4. Hook `useEffect` - Ciclo de vida
 
 ```jsx
 import { useEffect } from "react";
@@ -308,7 +390,7 @@ function App() {
 
 ---
 
-### **5. Evento en JSX**
+### 5. Evento en JSX
 
 ```jsx
 function Boton() {
@@ -320,7 +402,7 @@ function Boton() {
 
 ---
 
-### **6. Listado con `.map()`**
+### 6. Listado con `.map()`
 
 ```jsx
 const frutas = ["🍎", "🍌", "🍊"];
@@ -338,7 +420,7 @@ function ListaFrutas() {
 
 ---
 
-### **7. Renderizado condicional**
+### 7. Renderizado condicional
 
 ```jsx
 function Mensaje({ logueado }) {
@@ -348,7 +430,7 @@ function Mensaje({ logueado }) {
 
 ---
 
-### **8. Uso básico de Context API**
+### 8. Uso básico de Context API
 
 ```jsx
 import { createContext, useContext } from "react";
@@ -371,7 +453,7 @@ function App() {
 
 ---
 
-### **9. Fetch de datos con `useEffect`**
+### 9. Fetch de datos con `useEffect`
 
 ```jsx
 import { useState, useEffect } from "react";
@@ -397,7 +479,7 @@ function Usuarios() {
 
 ---
 
-### **10. React Router básico**
+### 10. React Router básico
 
 ```jsx
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
@@ -549,31 +631,31 @@ git push -u origin main
 
 ### 1. Diferencia entre un componente de clase y un componente funcional
 
-- **Componente de clase:**
+#### Componente de clase:
 
-  - Utiliza la sintaxis de clases de JavaScript.
-  - Requiere el método `render()` para devolver JSX.
-  - Antes de Hooks, eran necesarios para manejar _state_ y ciclo de vida.
+- Utiliza la sintaxis de clases de JavaScript.
+- Requiere el método `render()` para devolver JSX.
+- Antes de Hooks, eran necesarios para manejar _state_ y ciclo de vida.
 
-  ```jsx
-  class MiComponente extends React.Component {
-    render() {
-      return <h1>Hola desde clase</h1>;
-    }
+```jsx
+class MiComponente extends React.Component {
+  render() {
+    return <h1>Hola desde clase</h1>;
   }
-  ```
+}
+```
 
-- **Componente funcional:**
+#### Componente funcional:
 
-  - Es una función que retorna JSX.
-  - Con los Hooks puede manejar estado y efectos secundarios.
-  - Más simple y recomendado hoy en día.
+- Es una función que retorna JSX.
+- Con los Hooks puede manejar estado y efectos secundarios.
+- Más simple y recomendado hoy en día.
 
-  ```jsx
-  function MiComponente() {
-    return <h1>Hola desde funcional</h1>;
-  }
-  ```
+```jsx
+function MiComponente() {
+  return <h1>Hola desde funcional</h1>;
+}
+```
 
 ---
 
@@ -630,12 +712,14 @@ class App extends React.Component {
 
 ### 5. State en React: cuándo y cómo usarlo
 
-El **state**:
+#### El state:
 
 - Es un objeto interno que guarda datos dinámicos.
 - Permite que la UI **se actualice automáticamente** cuando cambia.
 
-**Uso típico:** manejar contadores, formularios, filtros, etc.
+**Uso típico:**
+
+- manejar contadores, formularios, filtros, etc.
 
 ```jsx
 import { useState } from "react";
@@ -703,7 +787,7 @@ Los **Hooks** permiten usar características avanzadas en componentes funcionale
 
 El **Context API** permite **compartir datos globales** sin pasar props manualmente por cada nivel.
 
-**Escenarios típicos:**
+#### Escenarios típicos:
 
 - Tema oscuro/claro.
 - Usuario autenticado.
@@ -779,12 +863,12 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 
 - Un **HOC** es una función que **recibe un componente y devuelve otro mejorado**.
 
-**Ventajas:**
+#### Ventajas:
 
 - Reutilización de lógica.
 - Separación clara de responsabilidades.
 
-**Desventajas:**
+#### Desventajas:
 
 - Código más difícil de leer.
 - _Wrapper hell_ por demasiadas capas.

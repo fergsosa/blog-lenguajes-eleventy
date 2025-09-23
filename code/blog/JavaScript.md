@@ -63,10 +63,6 @@ JavaScript es la mejor elección en los siguientes escenarios:
 
 > ⚠️ **Evítalo** si el proyecto requiere alto rendimiento computacional, como simulaciones científicas o software de bajo nivel, donde lenguajes como **C++ o Rust** son más adecuados.
 
-### 5. Buenas prácticas y patrones recomendados
-
-Para escribir buen código en JavaScript, sigue estas recomendaciones:
-
 ## Buenas prácticas recomendadas
 
 - **Usa `const` y `let`** en lugar de `var` para mayor claridad y control.
@@ -88,26 +84,31 @@ Para escribir buen código en JavaScript, sigue estas recomendaciones:
 
 ## Resumen rápido
 
-**Síntesis rápida de lo aprendido sobre JavaScript**
+#### Fortalezas principales:
 
-- **Fortalezas principales:**
-  - Versatilidad: frontend, backend, móvil y escritorio.
-  - Amplio ecosistema y comunidad activa.
-  - Integración nativa con HTML y CSS.
-  - Gran cantidad de librerías y frameworks maduros.
-- **Debilidades principales:**
-  - Menor rendimiento frente a lenguajes compilados como C++ o Rust.
-  - Código propenso a errores si no se sigue una buena estructura.
-  - Fragmentación en frameworks y herramientas.
-  - Dificultad en proyectos muy grandes sin buenas prácticas.
-- **Cuándo usarlo:**
-  - Desarrollo web y aplicaciones interactivas.
-  - Prototipos rápidos y MVPs.
-  - Proyectos donde se busca rapidez y flexibilidad.
-- **Cuándo evitarlo:**
-  - Aplicaciones que requieren cálculos complejos y alto rendimiento.
-  - Sistemas embebidos o de bajo nivel.
-  - Proyectos donde la seguridad extrema es la prioridad principal.
+- Versatilidad: frontend, backend, móvil y escritorio.
+- Amplio ecosistema y comunidad activa.
+- Integración nativa con HTML y CSS.
+- Gran cantidad de librerías y frameworks maduros.
+
+#### Debilidades principales:
+
+- Menor rendimiento frente a lenguajes compilados como C++ o Rust.
+- Código propenso a errores si no se sigue una buena estructura.
+- Fragmentación en frameworks y herramientas.
+- Dificultad en proyectos muy grandes sin buenas prácticas.
+
+#### Cuándo usarlo:
+
+- Desarrollo web y aplicaciones interactivas.
+- Prototipos rápidos y MVPs.
+- Proyectos donde se busca rapidez y flexibilidad.
+
+#### Cuándo evitarlo:
+
+- Aplicaciones que requieren cálculos complejos y alto rendimiento.
+- Sistemas embebidos o de bajo nivel.
+- Proyectos donde la seguridad extrema es la prioridad principal.
 
 ---
 
@@ -126,7 +127,7 @@ Para escribir buen código en JavaScript, sigue estas recomendaciones:
 
 Antes de aprender JavaScript o mientras lo estudias, es importante entender estos conceptos fundamentales:
 
-## 1. Fundamentos de programación
+### 1. Fundamentos de programación
 
 - **Algoritmos y lógica:** La base para resolver problemas.
 - **Variables y constantes:** Manejo de datos en memoria (`let`, `const`).
@@ -141,7 +142,7 @@ Antes de aprender JavaScript o mientras lo estudias, es importante entender esto
   - _Orientado a objetos_: Uso de clases y objetos.
   - _Funcional_: Uso de funciones puras y composición.
 
-## 2. Web y entorno de ejecución
+### 2. Web y entorno de ejecución
 
 - **HTML:** Estructura base de las páginas web.
 - **CSS:** Estilos y diseño visual.
@@ -149,16 +150,16 @@ Antes de aprender JavaScript o mientras lo estudias, es importante entender esto
 - **BOM (Browser Object Model):** Objetos que el navegador proporciona, como `window` o `navigator`.
 - **Eventos:** Manejo de interacciones del usuario (`click`, `input`, `submit`).
 
-## 3. Programación asíncrona
+### 3. Programación asíncrona
 
-JavaScript es **single-threaded** pero puede manejar tareas asíncronas.
+JavaScript es **_single-threaded_** pero puede manejar tareas asíncronas.
 
 - **Callbacks:** Primera forma de manejar tareas asincrónicas.
 - **Promises:** Flujo controlado con `.then()` y `.catch()`.
 - **Async/Await:** Sintaxis moderna y más legible para trabajar con promesas.
 - **Event Loop:** Mecanismo que gestiona la ejecución de código y tareas pendientes.
 
-## 4. JSON y APIs
+### 4. JSON y APIs
 
 - **JSON (JavaScript Object Notation):** Formato ligero para intercambio de datos.
 - **APIs:** Interfaces para comunicación entre sistemas.
@@ -166,7 +167,7 @@ JavaScript es **single-threaded** pero puede manejar tareas asíncronas.
   - GraphQL.
 - **Fetch API:** Hacer peticiones HTTP con `fetch()`.
 
-## 5. Ecosistema JavaScript
+### 5. Ecosistema JavaScript
 
 - **Node.js:** Ejecutar JavaScript fuera del navegador, principalmente para el backend.
 - **npm (Node Package Manager):** Gestor de paquetes y librerías.
@@ -175,7 +176,7 @@ JavaScript es **single-threaded** pero puede manejar tareas asíncronas.
   - **Backend:** Express, NestJS, Fastify.
   - **Testing:** Jest, Mocha, Cypress.
 
-## 6. Principios de desarrollo
+### 6. Principios de desarrollo
 
 - **DRY (_Don't Repeat Yourself_):** Evitar duplicación de código.
 - **KISS (_Keep It Simple, Stupid_):** Mantener el código simple y entendible.
@@ -190,22 +191,22 @@ JavaScript es **single-threaded** pero puede manejar tareas asíncronas.
 
 Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos en JavaScript de manera profesional.
 
-## 1. Editores y entornos de desarrollo
+### 1. Editores y entornos de desarrollo
 
-- **Visual Studio Code (VSCode):** Editor moderno, liviano y altamente configurable.
-- **WebStorm:** IDE especializado para JavaScript.
-- Extensiones útiles para VSCode:
-  - _ESLint:_ Detección de errores y estandarización de código.
-  - _Prettier:_ Formateo automático.
-  - _GitLens:_ Mejor gestión de versiones.
-  - _Debugger for Chrome:_ Depuración integrada.
+- **Visual Studio Code (VSCode):** Editor moderno, liviano y altamente configurable.\
+- **WebStorm:** IDE especializado para JavaScript.\
+- **Extensiones útiles para VSCode:**
+  - **ESLint:** Detección de errores y estandarización de código.
+  - **Prettier:** Formateo automático.
+  - **GitLens:** Mejor gestión de versiones.
+  - **Debugger for Chrome:** Depuración integrada.
 
-## 2. Control de versiones
+### 2. Control de versiones
 
 - **Git:** Sistema de control de versiones.
 - **GitHub / GitLab / Bitbucket:** Plataformas para alojar proyectos y colaborar en equipo.
 
-## 3. Terminal y línea de comandos
+### 3. Terminal y línea de comandos
 
 - **Node.js CLI:** Ejecutar scripts y proyectos.
 - **npm / yarn / pnpm:** Manejo de dependencias y paquetes.
@@ -214,27 +215,35 @@ Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos
   - `npm init -y` → Inicializar un proyecto.
   - `npm install paquete` → Instalar dependencias.
 
-## 4. Depuración y pruebas
+### 4. Depuración y pruebas
 
-- **Herramientas del navegador:**
-  - Consola (`console.log()`) para depurar.
-  - Pestaña _Network_ para analizar solicitudes HTTP.
-  - _Performance_ para medir tiempos de carga.
-- **Frameworks de testing:**
-  - **Jest:** Pruebas unitarias.
-  - **Cypress:** Pruebas de interfaz (end-to-end).
-  - **Mocha + Chai:** Pruebas flexibles y personalizadas.
+#### Herramientas del navegador:
 
-## 5. Automatización y bundlers
+- Consola (`console.log()`) para depurar.
+- Pestaña _Network_ para analizar solicitudes HTTP.
+- _Performance_ para medir tiempos de carga.
 
-- **Bundlers:** Empaquetar y optimizar el código.
-  - Webpack, Parcel, Vite.
-- **Transpiladores:**
-  - **Babel:** Para compatibilidad con navegadores antiguos.
-- **Automatización de tareas:**
-  - Gulp, npm scripts.
+#### Frameworks de testing:
 
-## 6. Entorno backend
+- **Jest:** Pruebas unitarias.
+- **Cypress:** Pruebas de interfaz (end-to-end).
+- **Mocha + Chai:** Pruebas flexibles y personalizadas.
+
+### 5. Automatización y bundlers
+
+**Bundlers:** Empaquetar y optimizar el código.
+
+- Webpack, Parcel, Vite.
+
+**Transpiladores:**
+
+- **Babel:** Para compatibilidad con navegadores antiguos.
+
+**Automatización de tareas:**
+
+- Gulp, npm scripts.
+
+### 6. Entorno backend
 
 - **Express:** Framework minimalista para servidores.
 - **MongoDB Atlas:** Base de datos en la nube.
@@ -249,14 +258,14 @@ Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos
 
 Fragmentos de código reutilizables que facilitan tareas comunes.
 
-## 1. Declaración de variables
+### 1. Declaración de variables
 
 ```js
 const PI = 3.1416; // Constante (no cambia)
 let nombre = "Juan"; // Variable que puede cambiar
 ```
 
-## 2. Funciones
+### 2. Funciones
 
 ```js
 // Función tradicional
@@ -268,7 +277,7 @@ function saludar(nombre) {
 const despedir = (nombre) => `Adiós, ${nombre}`;
 ```
 
-## 3. Condicional simple
+### 3. Condicional simple
 
 ```js
 const edad = 18;
@@ -280,14 +289,14 @@ if (edad >= 18) {
 }
 ```
 
-## 4. Operador ternario
+### 4. Operador ternario
 
 ```js
 const mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
 console.log(mensaje);
 ```
 
-## 5. Bucles
+### 5. Bucles
 
 ```js
 // For
@@ -308,7 +317,7 @@ for (const fruta of frutas) {
 }
 ```
 
-## 6. Objetos y Arrays
+### 6. Objetos y Arrays
 
 ```js
 const persona = {
@@ -321,7 +330,7 @@ console.log(persona.nombre); // Acceder a propiedad
 console.log(colores[0]); // Acceder a elemento
 ```
 
-## 7. Desestructuración
+### 7. Desestructuración
 
 ```js
 // Objetos
@@ -333,7 +342,7 @@ const [primero, segundo] = colores;
 console.log(primero, segundo);
 ```
 
-## 8. Fetch API (peticiones HTTP)
+### 8. Fetch API (peticiones HTTP)
 
 ```js
 fetch("https://api.example.com/data")
@@ -342,7 +351,7 @@ fetch("https://api.example.com/data")
   .catch((err) => console.error("Error:", err));
 ```
 
-## 9. Async / Await
+### 9. Async / Await
 
 ```js
 async function obtenerDatos() {
@@ -356,7 +365,7 @@ async function obtenerDatos() {
 }
 ```
 
-## 10. Exportar e importar módulos
+### 10. Exportar e importar módulos
 
 ```js
 // archivo.js
@@ -375,14 +384,14 @@ console.log(saludar("Carlos"));
 
 Sintaxis y comandos básicos **cortos y directos** para uso diario.
 
-## Variables y constantes
+### Variables y constantes
 
 ```js
 let edad = 25; // Variable modificable
 const PI = 3.14; // Constante
 ```
 
-## Tipos de datos
+### Tipos de datos
 
 ```js
 let nombre = "Pedro"; // String
@@ -394,7 +403,7 @@ let nada = null; // Null
 let indefinido; // Undefined
 ```
 
-## Operadores básicos
+### Operadores básicos
 
 ```js
 // Aritméticos
@@ -414,7 +423,7 @@ console.log(true || false); // true
 console.log(!true); // false
 ```
 
-## Funciones y callbacks
+### Funciones y callbacks
 
 ```js
 // Función simple
@@ -431,7 +440,7 @@ const restar = function (a, b) {
 const multiplicar = (a, b) => a * b;
 ```
 
-## Array Methods comunes
+### Array Methods comunes
 
 ```js
 const numeros = [1, 2, 3, 4, 5];
@@ -442,7 +451,7 @@ const pares = numeros.filter((n) => n % 2 === 0); // Filtrar
 const sumaTotal = numeros.reduce((acc, n) => acc + n, 0); // Reducir
 ```
 
-## Manejo de errores
+### Manejo de errores
 
 ```js
 try {
@@ -454,7 +463,7 @@ try {
 }
 ```
 
-## Clases y objetos
+### Clases y objetos
 
 ```js
 class Persona {
@@ -472,7 +481,7 @@ const ana = new Persona("Ana", 25);
 console.log(ana.saludar());
 ```
 
-## Promesas
+### Promesas
 
 ```js
 const promesa = new Promise((resolve, reject) => {
@@ -485,7 +494,7 @@ promesa
   .catch((error) => console.error(error));
 ```
 
-## Console y depuración
+### Console y depuración
 
 ```js
 console.log("Información general");
@@ -504,21 +513,15 @@ console.table([{ nombre: "Ana" }, { nombre: "Luis" }]); // Tabla
 
 ### 1. Tipos de datos primitivos en JavaScript
 
-**Primitivos:**
+#### Primitivos:
 
-- `string`
-- `number`
-- `bigint`
-- `boolean`
-- `undefined`
-- `null`
-- `symbol`
+`string | number | bigint | boolean | undefined | null | symbol`
 
-**Por referencia:**
+#### Por referencia:
 
 - `object` (arrays, funciones, objetos literales, etc.)
 
-**Diferencia:**
+#### Diferencia:
 
 - Los **primitivos** se pasan por _valor_, es decir, se copia el valor original.
 - Los **por referencia** se pasan por _referencia_, apuntando al mismo espacio en memoria.
@@ -537,15 +540,20 @@ console.log(obj1.nombre); // "Luis"
 
 ### 2. Diferencia entre var, let y const
 
-- **`var`**
-  - Ámbito de función.
-  - Se eleva (hoisting).
-  - Puede redeclararse.
-- **`let`**
-  - Ámbito de bloque `{}`.
-  - No se puede redeclarar en el mismo ámbito.
-- **`const`**
-  - Igual que `let`, pero el valor no puede ser reasignado.
+#### `var`
+
+- Ámbito de función.
+- Se eleva (hoisting).
+- Puede redeclararse.
+
+#### `let`
+
+- Ámbito de bloque `{}`.
+- No se puede redeclarar en el mismo ámbito.
+
+#### `const`
+
+- Igual que `let`, pero el valor no puede ser reasignado.
 
 ```js
 var x = 1;

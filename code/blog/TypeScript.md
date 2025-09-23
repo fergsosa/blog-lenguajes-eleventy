@@ -16,7 +16,7 @@ date: "2023-06-02"
 TypeScript es un **superset de JavaScript** desarrollado por **Microsoft** que agrega **tipado estático** y **características avanzadas** al lenguaje.  
 Esto significa que todo código JavaScript válido también es válido en TypeScript, pero con la ventaja de **detectar errores antes de ejecutar el programa** gracias a su sistema de tipos.
 
-**Diferencias clave respecto a JavaScript:**
+#### Diferencias clave respecto a JavaScript:
 
 - **Tipado estático**: permite definir tipos para variables, parámetros y funciones.
 - **Compilación**: el código TypeScript debe compilarse a JavaScript para ser ejecutado.
@@ -27,7 +27,7 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 
 TypeScript se utiliza principalmente para **desarrollo a gran escala** donde la **mantenibilidad** y la **calidad del código** son esenciales.
 
-**Contextos ideales:**
+#### Contextos ideales:
 
 - Aplicaciones **web complejas** con frameworks como _React_, _Angular_, _Vue_.
 - Proyectos **backend** con _Node.js_.
@@ -57,7 +57,7 @@ TypeScript es especialmente útil en situaciones donde:
 
 ## Buenas prácticas recomendadas
 
-**Buenas prácticas:**
+#### Buenas prácticas
 
 - Usa **tipos explícitos** (`string`, `number`, `boolean`) para mayor claridad.
 - Mantén una **estructura clara de carpetas** en el proyecto.
@@ -66,7 +66,7 @@ TypeScript es especialmente útil en situaciones donde:
 - Escribe **interfaces y tipos reutilizables** para mayor consistencia.
 - Documenta el código usando _JSDoc_ o comentarios claros.
 
-**Patrones recomendados:**
+#### Patrones recomendados
 
 - **Programación modular**: dividir el código en módulos y componentes reutilizables.
 - Uso de **interfaces** para definir contratos entre módulos.
@@ -77,30 +77,29 @@ TypeScript es especialmente útil en situaciones donde:
 
 ## Resumen rápido
 
-> Síntesis rápida de lo aprendido sobre TypeScript.
+#### Fortalezas principales:
 
-- **Fortalezas principales:**
+- Tipado estático que reduce errores.
+- Excelente integración con editores como VSCode.
+- Compatible con librerías y frameworks populares.
+- Escalable para proyectos grandes y equipos.
 
-  - Tipado estático que reduce errores.
-  - Excelente integración con editores como VSCode.
-  - Compatible con librerías y frameworks populares.
-  - Escalable para proyectos grandes y equipos.
+#### Debilidades principales:
 
-- **Debilidades principales:**
+- Requiere un proceso de compilación.
+- Curva de aprendizaje inicial.
+- Puede ser excesivo para proyectos pequeños.
 
-  - Requiere un proceso de compilación.
-  - Curva de aprendizaje inicial.
-  - Puede ser excesivo para proyectos pequeños.
+#### Cuándo usarlo:
 
-- **Cuándo usarlo:**
+- Aplicaciones web o backend a gran escala.
+- Proyectos con múltiples desarrolladores.
+- Librerías y SDKs que otros usarán.
 
-  - Aplicaciones web o backend a gran escala.
-  - Proyectos con múltiples desarrolladores.
-  - Librerías y SDKs que otros usarán.
+#### Cuándo evitarlo:
 
-- **Cuándo evitarlo:**
-  - Prototipos rápidos o pruebas pequeñas.
-  - Scripts sencillos donde el tipado no aporta valor.
+- Prototipos rápidos o pruebas pequeñas.
+- Scripts sencillos donde el tipado no aporta valor.
 
 ---
 
@@ -119,7 +118,7 @@ TypeScript es especialmente útil en situaciones donde:
 
 Antes de comenzar a trabajar con TypeScript, es importante comprender algunos conceptos clave que te ayudarán a sacarle el máximo provecho al lenguaje.
 
-## 1. JavaScript
+### 1. JavaScript
 
 TypeScript es un **superset de JavaScript**, por lo que debes conocer:
 
@@ -131,7 +130,7 @@ TypeScript es un **superset de JavaScript**, por lo que debes conocer:
 
 > ⚠️ _Sin una base sólida de JavaScript, aprender TypeScript será más complicado._
 
-## 2. Tipado Estático
+### 2. Tipado Estático
 
 El **tipado estático** es la base de TypeScript.  
 Permite definir y **validar el tipo de datos** en tiempo de desarrollo.
@@ -149,7 +148,7 @@ edad = "veinticinco"; // ❌ Error: no se puede asignar string a number
 - Mejor autocompletado y documentación.
 - Código más legible y seguro.
 
-## 3. Interfaces y Tipos
+### 3. Interfaces y Tipos
 
 Permiten **definir la forma de objetos** y estructurar mejor el código.
 
@@ -169,7 +168,7 @@ const user: Usuario = {
 };
 ```
 
-## 4. Orientación a Objetos (POO)
+### 4. Orientación a Objetos (POO)
 
 TypeScript tiene soporte completo para POO:
 
@@ -199,7 +198,7 @@ const miPerro = new Perro("Firulais");
 miPerro.hacerSonido();
 ```
 
-## 5. Compilación y Transpilación
+### 5. Compilación y Transpilación
 
 TypeScript **no se ejecuta directamente** en el navegador o Node.js.  
 Debe **compilarse a JavaScript** mediante el comando:
@@ -216,7 +215,7 @@ Esto genera un archivo `.js` listo para ejecutarse.
 - `.ts` (código fuente en TypeScript).
 - `.js` (código compilado en JavaScript).
 
-## 6. Módulos y Namespaces
+### 6. Módulos y Namespaces
 
 Para organizar el código en archivos separados y reutilizables:
 
@@ -240,7 +239,7 @@ console.log(saludar("Fernando"));
 
 Estas herramientas te ayudarán a trabajar de manera más eficiente y profesional con TypeScript.
 
-## 1. Node.js + NPM
+### 1. Node.js + NPM
 
 Permite ejecutar y gestionar proyectos de TypeScript.
 
@@ -251,7 +250,7 @@ Permite ejecutar y gestionar proyectos de TypeScript.
   npm -v
   ```
 
-## 2. TypeScript Compiler (tsc)
+### 2. TypeScript Compiler (tsc)
 
 El compilador oficial de TypeScript.
 
@@ -279,7 +278,7 @@ Inicializar proyecto con `tsconfig.json`:
 tsc --init
 ```
 
-## 3. Visual Studio Code (VSCode)
+### 3. Visual Studio Code (VSCode)
 
 El editor más popular para trabajar con TypeScript.
 
@@ -290,7 +289,7 @@ Extensiones recomendadas:
 - **Prettier** → Formateo automático de código.
 - **Error Lens** → Destaca errores directamente en el editor.
 
-## 4. ts-node
+### 4. ts-node
 
 Permite ejecutar archivos TypeScript directamente **sin compilar manualmente**.
 
@@ -306,7 +305,7 @@ Uso:
 ts-node app.ts
 ```
 
-## 5. ESLint + Prettier
+### 5. ESLint + Prettier
 
 Mantienen el código limpio y legible.
 
@@ -318,7 +317,7 @@ npm install eslint prettier -D
 
 Configura un archivo `.eslintrc.json` y `.prettierrc`.
 
-## 6. Git + GitHub
+### 6. Git + GitHub
 
 Para control de versiones y colaboración.
 
@@ -331,7 +330,7 @@ git commit -m "Primer commit"
 git push origin main
 ```
 
-## 7. Frameworks y Librerías compatibles
+### 7. Frameworks y Librerías compatibles
 
 - **React con TypeScript** → Interfaces y props tipadas.
 - **Express con TypeScript** → Backend robusto y escalable.
@@ -347,7 +346,7 @@ git push origin main
 Fragmentos de código que se usan **frecuentemente** al trabajar con TypeScript.  
 Ideales para copiar y pegar en proyectos.
 
-## 1. Declaración de variables con tipos
+### 1. Declaración de variables con tipos
 
 ```typescript
 let nombre: string = "Fernando";
@@ -355,7 +354,7 @@ let edad: number = 30;
 let activo: boolean = true;
 ```
 
-## 2. Función con tipado en parámetros y retorno
+### 2. Función con tipado en parámetros y retorno
 
 ```typescript
 function sumar(a: number, b: number): number {
@@ -363,7 +362,7 @@ function sumar(a: number, b: number): number {
 }
 ```
 
-## 3. Interface básica para un objeto
+### 3. Interface básica para un objeto
 
 ```typescript
 interface Usuario {
@@ -379,7 +378,7 @@ const user: Usuario = {
 };
 ```
 
-## 4. Clase con constructor y método
+### 4. Clase con constructor y método
 
 ```typescript
 class Persona {
@@ -394,7 +393,7 @@ const persona = new Persona("Carlos", 28);
 persona.saludar();
 ```
 
-## 5. Uso de `enum`
+### 5. Uso de `enum`
 
 ```typescript
 enum EstadoPedido {
@@ -406,7 +405,7 @@ enum EstadoPedido {
 let estado: EstadoPedido = EstadoPedido.Pendiente;
 ```
 
-## 6. Tipos genéricos
+### 6. Tipos genéricos
 
 ```typescript
 function identidad<T>(valor: T): T {
@@ -417,7 +416,7 @@ console.log(identidad<string>("Hola"));
 console.log(identidad<number>(123));
 ```
 
-## 7. Promesa tipada
+### 7. Promesa tipada
 
 ```typescript
 function obtenerDatos(): Promise<string> {
@@ -427,7 +426,7 @@ function obtenerDatos(): Promise<string> {
 }
 ```
 
-## 8. Import y export
+### 8. Import y export
 
 ```typescript
 // archivo operaciones.ts
@@ -448,7 +447,7 @@ console.log(sumar(5, 3));
 
 Resumen de los **comandos y sintaxis principales** con ejemplos breves.
 
-## 1. Inicializar proyecto TypeScript
+### 1. Inicializar proyecto TypeScript
 
 Crea un archivo de configuración `tsconfig.json`:
 
@@ -456,7 +455,7 @@ Crea un archivo de configuración `tsconfig.json`:
 tsc --init
 ```
 
-## 2. Compilar un archivo TypeScript
+### 2. Compilar un archivo TypeScript
 
 Convierte `.ts` a `.js`:
 
@@ -464,13 +463,13 @@ Convierte `.ts` a `.js`:
 tsc archivo.ts
 ```
 
-## 3. Ejecutar código sin compilar (ts-node)
+### 3. Ejecutar código sin compilar (ts-node)
 
 ```bash
 ts-node app.ts
 ```
 
-## 4. Tipos básicos
+### 4. Tipos básicos
 
 ```typescript
 let texto: string = "Hola";
@@ -478,14 +477,14 @@ let numero: number = 100;
 let esActivo: boolean = false;
 ```
 
-## 5. Tipo `any` (evitar en lo posible)
+### 5. Tipo `any` (evitar en lo posible)
 
 ```typescript
 let variable: any = "Puede ser cualquier cosa";
 variable = 42;
 ```
 
-## 6. Union Types
+### 6. Union Types
 
 Permite más de un tipo en una variable.
 
@@ -495,7 +494,7 @@ id = "abc";
 id = 123;
 ```
 
-## 7. Tipado en funciones
+### 7. Tipado en funciones
 
 ```typescript
 function multiplicar(a: number, b: number): number {
@@ -503,7 +502,7 @@ function multiplicar(a: number, b: number): number {
 }
 ```
 
-## 8. Parámetros opcionales
+### 8. Parámetros opcionales
 
 ```typescript
 function saludar(nombre?: string) {
@@ -511,7 +510,7 @@ function saludar(nombre?: string) {
 }
 ```
 
-## 9. Interfaces
+### 9. Interfaces
 
 ```typescript
 interface Producto {
@@ -523,7 +522,7 @@ interface Producto {
 const item: Producto = { id: 1, nombre: "Laptop", precio: 1500 };
 ```
 
-## 10. Uso de `readonly` y `optional (?)`
+### 10. Uso de `readonly` y `optional (?)`
 
 ```typescript
 interface Config {
@@ -535,7 +534,7 @@ const conf: Config = { version: "1.0.0" };
 // conf.version = "2.0.0"; ❌ Error
 ```
 
-## 11. Genéricos
+### 11. Genéricos
 
 ```typescript
 function identidad<T>(valor: T): T {
@@ -543,7 +542,7 @@ function identidad<T>(valor: T): T {
 }
 ```
 
-## 12. Modificadores de clase
+### 12. Modificadores de clase
 
 ```typescript
 class Vehiculo {
@@ -559,20 +558,20 @@ class Vehiculo {
 }
 ```
 
-## 13. Compilar y vigilar cambios en tiempo real
+### 13. Compilar y vigilar cambios en tiempo real
 
 ```bash
 tsc --watch
 ```
 
-## 14. Instalar dependencias en proyecto
+### 14. Instalar dependencias en proyecto
 
 ```bash
 npm install typescript -D
 npm install ts-node -D
 ```
 
-## 15. Ejecutar proyecto con nodemon y ts-node
+### 15. Ejecutar proyecto con nodemon y ts-node
 
 ```bash
 npx nodemon --exec ts-node src/index.ts
@@ -829,7 +828,7 @@ Se usa para indicar que la función no tiene un punto de retorno.
 
 ### 14. Migración de JavaScript a TypeScript
 
-**Estrategia:**
+#### Estrategia:
 
 1. Configurar `tsconfig.json` con `"allowJs": true` y `"checkJs": false`.
 2. Renombrar archivos `.js` a `.ts` de forma progresiva.
@@ -837,12 +836,13 @@ Se usa para indicar que la función no tiene un punto de retorno.
 4. Usar `Partial`, `any` temporalmente en lugares complejos.
 5. Agregar pruebas automáticas antes y después de la migración.
 
-Configuraciones clave:
+#### Configuraciones clave:
 
 - `"strict": true`
 - `"noImplicitAny": true`
 - `"strictNullChecks": true`
-  ### 15. Manejo seguro de múltiples esquemas en una API
+
+### 15. Manejo seguro de múltiples esquemas en una API
 
 Usar **discriminated unions** para garantizar que todos los casos sean manejados.
 
@@ -866,6 +866,6 @@ function procesarRespuesta(respuesta: RespuestaAPI) {
 }
 ```
 
-Esto asegura que **TypeScript te obligue a cubrir todos los casos**.
+> Esto asegura que **TypeScript te obligue a cubrir todos los casos**.
 
 [🔼 temas](#temas)
