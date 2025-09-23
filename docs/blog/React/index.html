@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <meta name="description" content="Librería para interfaces de usuario.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="react">React</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/react.avif" alt="img"></p>
+<p>React es una de las bibliotecas más populares para construir interfaces de usuario dinámicas y reactivas. Fue desarrollada por <strong>Facebook (Meta)</strong> y actualmente es mantenida por la comunidad y la empresa. Su principal objetivo es <strong>facilitar la creación de interfaces escalables, reutilizables y fáciles de mantener</strong>.</p>
+<hr>
+<h2 id="1-que-es-react">1. ¿Qué es React?</h2>
+<p>React es una <strong>biblioteca de JavaScript</strong> enfocada exclusivamente en la <strong>capa de la vista (UI)</strong> de una aplicación.<br>
+A diferencia de frameworks completos como Angular o Vue, React <strong>no impone una estructura estricta</strong>, permitiendo mayor flexibilidad para integrar librerías externas según las necesidades del proyecto.</p>
+<p><strong>Diferencias clave frente a otros:</strong></p>
+<ul>
+<li><strong>Enfocado solo en la UI</strong>: No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).</li>
+<li><strong>Componentes reutilizables</strong>: Basado en la construcción de bloques independientes.</li>
+<li><strong>Virtual DOM</strong>: Optimiza el rendimiento actualizando solo lo necesario en la interfaz.</li>
+<li><strong>Gran comunidad y ecosistema</strong>: Extensa cantidad de librerías y recursos disponibles.</li>
+</ul>
+<hr>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>React se utiliza para <strong>crear interfaces interactivas y dinámicas</strong> en aplicaciones web y móviles.</p>
+<p><strong>Contextos ideales:</strong></p>
+<ul>
+<li>Aplicaciones web con <strong>interacciones complejas</strong>.</li>
+<li><strong>Dashboards</strong> o paneles administrativos con datos en tiempo real.</li>
+<li><strong>Single Page Applications (SPA)</strong> donde se requiere navegación fluida sin recargar la página.</li>
+<li>Aplicaciones móviles usando <strong>React Native</strong>.</li>
+</ul>
+<hr>
+<h3 id="3-que-puedo-construir-con-react">3. ¿Qué puedo construir con React?</h3>
+<p>Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual:</p>
+<ul>
+<li><strong>Sitios web dinámicos</strong>.</li>
+<li><strong>Plataformas de comercio electrónico</strong>.</li>
+<li><strong>Aplicaciones móviles</strong> (con React Native).</li>
+<li><strong>Sistemas internos empresariales</strong>.</li>
+<li><strong>Landing pages interactivas</strong>.</li>
+<li><strong>Componentes UI personalizados</strong> que se pueden integrar en otros proyectos.</li>
+</ul>
+<hr>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<p>React es recomendable cuando:</p>
+<ul>
+<li>Tu proyecto <strong>requiere una interfaz dinámica y reactiva</strong>.</li>
+<li>Necesitas <strong>escalar y mantener</strong> el código a largo plazo.</li>
+<li>Buscas <strong>modularidad y reutilización de componentes</strong>.</li>
+<li>Quieres aprovechar <strong>herramientas del ecosistema</strong>, como:
+<ul>
+<li>Next.js (SSR y SSG).</li>
+<li>React Router (navegación).</li>
+<li>Redux, Zustand, Recoil (estado global).</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>⚠️ <em>Si tu proyecto es muy simple, como una página estática con HTML y CSS, puede que React sea excesivo y un framework más ligero sea suficiente.</em></p>
+</blockquote>
+<hr>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<p>Para mantener un código limpio y escalable en React, se recomienda:</p>
+<ul>
+<li><strong>Componentes pequeños y reutilizables</strong>.</li>
+<li>Nombrar archivos y carpetas con <strong>convenciones claras</strong> (ej. PascalCase para componentes).</li>
+<li><strong>Separar la lógica de negocio de la interfaz</strong>.</li>
+<li>Usar <strong>Hooks</strong> (<code>useState</code>, <code>useEffect</code>, <code>useContext</code>, etc.) en lugar de clases.</li>
+<li>Gestionar el estado global solo cuando sea necesario.</li>
+<li>Mantener una <strong>estructura de carpetas ordenada</strong>:</li>
+</ul>
+<p>src/
+├── components/
+├── pages/
+├── hooks/
+├── context/
+├── utils/
+└── App.jsx</p>
+<ul>
+<li>Implementar <strong>testing</strong> (ej. Jest, React Testing Library).</li>
+<li>Documentar los componentes y funciones clave.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<p>React es una biblioteca potente y flexible para <strong>construir interfaces dinámicas y escalables</strong>. Su enfoque basado en componentes y su gran ecosistema lo hacen ideal para proyectos modernos.</p>
+<ul>
+<li><strong>Fortalezas principales:</strong>
+<ul>
+<li>Virtual DOM para alto rendimiento.</li>
+<li>Ecosistema robusto y en constante evolución.</li>
+<li>Gran comunidad y documentación.</li>
+<li>Flexibilidad para integrarse con otras librerías.</li>
+</ul>
+</li>
+<li><strong>Debilidades principales:</strong>
+<ul>
+<li>Curva de aprendizaje inicial moderada.</li>
+<li>No incluye herramientas integradas para todo (estado global, rutas, etc.).</li>
+<li>Configuración inicial más compleja que frameworks todo-en-uno.</li>
+</ul>
+</li>
+<li><strong>Cuándo usarlo:</strong>
+<ul>
+<li>Aplicaciones interactivas y dinámicas.</li>
+<li>Proyectos que requieren escalabilidad.</li>
+<li>Sistemas con componentes reutilizables.</li>
+</ul>
+</li>
+<li><strong>Cuándo evitarlo:</strong>
+<ul>
+<li>Páginas estáticas simples.</li>
+<li>Proyectos con recursos limitados donde la complejidad de React no es necesaria.</li>
+<li>Cuando se busca una solución &quot;todo en uno&quot; sin depender de librerías externas.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#node-js">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<p>IMPORTANTE: Formatea toda la respuesta usando <strong>exclusivamente Markdown</strong>. Incluye títulos, subtítulos, listas, negritas y cursivas donde sea apropiado para mejorar la legibilidad y estructura.</p>
+<p>Lenguaje: TypeScript (7)</p>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con React, es fundamental comprender algunos conceptos que forman la base de su funcionamiento y del desarrollo moderno en JavaScript.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Concepto</strong></th>
+<th><strong>Descripción breve</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JavaScript ES6+</strong></td>
+<td>Nuevas características como <code>let</code>, <code>const</code>, funciones flecha, <code>destructuring</code> y <code>spread/rest operators</code>.</td>
+</tr>
+<tr>
+<td><strong>HTML5 y CSS3</strong></td>
+<td>Estructura y estilos básicos para la interfaz de usuario.</td>
+</tr>
+<tr>
+<td><strong>JSX</strong></td>
+<td>Sintaxis similar a HTML usada dentro de React para definir componentes.</td>
+</tr>
+<tr>
+<td><strong>DOM y Virtual DOM</strong></td>
+<td>El DOM representa la estructura HTML, mientras que el Virtual DOM optimiza actualizaciones en React.</td>
+</tr>
+<tr>
+<td><strong>Componentes</strong></td>
+<td>Bloques reutilizables que representan partes de la interfaz.</td>
+</tr>
+<tr>
+<td><strong>Props</strong></td>
+<td>Datos que se pasan a los componentes como parámetros.</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>Estado interno de un componente que puede cambiar con el tiempo.</td>
+</tr>
+<tr>
+<td><strong>Hooks</strong></td>
+<td>Funciones especiales (<code>useState</code>, <code>useEffect</code>, etc.) para manejar estado y ciclos de vida.</td>
+</tr>
+<tr>
+<td><strong>Context API</strong></td>
+<td>Mecanismo para compartir datos entre componentes sin &quot;prop drilling&quot;.</td>
+</tr>
+<tr>
+<td><strong>Single Page Application (SPA)</strong></td>
+<td>Aplicaciones que cargan una sola página y actualizan dinámicamente la UI sin recargar.</td>
+</tr>
+<tr>
+<td><strong>Node.js</strong></td>
+<td>Entorno de ejecución necesario para correr React y gestionar dependencias.</td>
+</tr>
+<tr>
+<td><strong>npm/yarn/pnpm</strong></td>
+<td>Gestores de paquetes para instalar librerías y dependencias.</td>
+</tr>
+<tr>
+<td><strong>Babel</strong></td>
+<td>Compilador que transforma JSX y código moderno a una versión compatible con navegadores.</td>
+</tr>
+<tr>
+<td><strong>Webpack / Vite</strong></td>
+<td>Empaquetadores y servidores de desarrollo para optimizar el proyecto.</td>
+</tr>
+<tr>
+<td><strong>REST API / GraphQL</strong></td>
+<td>Métodos para consumir datos externos dentro de una aplicación React.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Consejo:</strong> Tener bases sólidas en <strong>JavaScript moderno</strong> es esencial antes de aprender React.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>React por sí solo no incluye todo lo necesario para un proyecto completo. Estas herramientas complementan su desarrollo y ayudan a cubrir necesidades como estado global, enrutamiento, pruebas y optimización.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Categoría</strong></th>
+<th><strong>Herramienta</strong></th>
+<th><strong>Uso principal</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Entorno y gestor de paquetes</strong></td>
+<td>Node.js + npm/yarn/pnpm</td>
+<td>Ejecutar React y manejar dependencias.</td>
+</tr>
+<tr>
+<td><strong>Empaquetador / Dev Server</strong></td>
+<td>Vite / Webpack / Parcel</td>
+<td>Optimizar y servir la aplicación durante el desarrollo y producción.</td>
+</tr>
+<tr>
+<td><strong>Enrutamiento</strong></td>
+<td>React Router</td>
+<td>Navegación y rutas dentro de la aplicación.</td>
+</tr>
+<tr>
+<td><strong>Estado global</strong></td>
+<td>Redux / Zustand / Recoil / Jotai</td>
+<td>Manejar estados compartidos entre múltiples componentes.</td>
+</tr>
+<tr>
+<td><strong>Estilos</strong></td>
+<td>Tailwind CSS / Styled Components / Sass</td>
+<td>Estilizar la aplicación de manera escalable.</td>
+</tr>
+<tr>
+<td><strong>Testing</strong></td>
+<td>Jest / React Testing Library</td>
+<td>Probar componentes y lógica de la aplicación.</td>
+</tr>
+<tr>
+<td><strong>Consumo de APIs</strong></td>
+<td>Axios / Fetch API</td>
+<td>Conectar con servicios externos (REST o GraphQL).</td>
+</tr>
+<tr>
+<td><strong>Despliegue</strong></td>
+<td>Vercel / Netlify / Render / GitHub Pages</td>
+<td>Subir la aplicación a producción de forma rápida y sencilla.</td>
+</tr>
+<tr>
+<td><strong>Herramientas de desarrollo</strong></td>
+<td>React DevTools</td>
+<td>Depurar componentes y estado desde el navegador.</td>
+</tr>
+<tr>
+<td><strong>Documentación</strong></td>
+<td>Storybook / Docz</td>
+<td>Crear y mantener documentación visual de componentes.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="flujo-basico-de-un-proyecto-react">Flujo básico de un proyecto React</h1>
+<ol>
+<li><strong>Inicializar proyecto:</strong></li>
+</ol>
+<pre><code class="language-bash">npm create vite@latest my-app
+cd my-app
+npm install
+npm run dev
+</code></pre>
+<ol start="2">
+<li><strong>Estructura recomendada:</strong></li>
+</ol>
+<pre><code class="language-bash">src/
+├── components/    # Componentes reutilizables
+├── pages/         # Vistas o páginas
+├── hooks/         # Custom Hooks
+├── context/       # Context API y estados globales
+├── utils/         # Funciones auxiliares
+├── assets/        # Imágenes y recursos estáticos
+└── App.jsx        # Punto principal de la aplicación
+
+</code></pre>
+<ol start="3">
+<li><strong>Componente básico:</strong></li>
+</ol>
+<pre><code class="language-bash">function Saludo({ nombre }) {
+  return &lt;h1&gt;Hola, {nombre} 👋&lt;/h1&gt;;
+}
+
+export default Saludo;
+</code></pre>
+<ol start="4">
+<li><strong>Uso en la app:</strong></li>
+</ol>
+<pre><code class="language-bash">import Saludo from './components/Saludo';
+
+function App() {
+  return (
+    &lt;div&gt;
+      &lt;Saludo nombre=&quot;Fernando&quot; /&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default App;
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Estos fragmentos son patrones comunes que usarás frecuentemente en React.</p>
+<hr>
+<h3 id="1-componente-funcional-basico"><strong>1. Componente funcional básico</strong></h3>
+<pre><code class="language-jsx">function Saludo() {
+  return &lt;h1&gt;¡Hola React! 👋&lt;/h1&gt;;
+}
+
+export default Saludo;
+</code></pre>
+<hr>
+<h3 id="2-componente-con-props"><strong>2. Componente con Props</strong></h3>
+<pre><code class="language-jsx">function Saludo({ nombre }) {
+  return &lt;h1&gt;Hola, {nombre}&lt;/h1&gt;;
+}
+
+export default Saludo;
+
+// Uso:
+&lt;Saludo nombre=&quot;Fernando&quot; /&gt;;
+</code></pre>
+<hr>
+<h3 id="3-hook-usestate-manejo-de-estado"><strong>3. Hook <code>useState</code> - Manejo de estado</strong></h3>
+<pre><code class="language-jsx">import { useState } from &quot;react&quot;;
+
+function Contador() {
+  const [contador, setContador] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Valor: {contador}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setContador(contador + 1)}&gt;Sumar&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="4-hook-useeffect-ciclo-de-vida"><strong>4. Hook <code>useEffect</code> - Ciclo de vida</strong></h3>
+<pre><code class="language-jsx">import { useEffect } from &quot;react&quot;;
+
+function App() {
+  useEffect(() =&gt; {
+    console.log(&quot;Componente montado&quot;);
+  }, []);
+
+  return &lt;h1&gt;Hola Mundo&lt;/h1&gt;;
+}
+</code></pre>
+<hr>
+<h3 id="5-evento-en-jsx"><strong>5. Evento en JSX</strong></h3>
+<pre><code class="language-jsx">function Boton() {
+  const handleClick = () =&gt; alert(&quot;¡Clic!&quot;);
+
+  return &lt;button onClick={handleClick}&gt;Presióname&lt;/button&gt;;
+}
+</code></pre>
+<hr>
+<h3 id="6-listado-con-map"><strong>6. Listado con <code>.map()</code></strong></h3>
+<pre><code class="language-jsx">const frutas = [&quot;🍎&quot;, &quot;🍌&quot;, &quot;🍊&quot;];
+
+function ListaFrutas() {
+  return (
+    &lt;ul&gt;
+      {frutas.map((fruta, index) =&gt; (
+        &lt;li key={index}&gt;{fruta}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="7-renderizado-condicional"><strong>7. Renderizado condicional</strong></h3>
+<pre><code class="language-jsx">function Mensaje({ logueado }) {
+  return &lt;div&gt;{logueado ? &lt;p&gt;Bienvenido 🎉&lt;/p&gt; : &lt;p&gt;Inicia sesión 🔑&lt;/p&gt;}&lt;/div&gt;;
+}
+</code></pre>
+<hr>
+<h3 id="8-uso-basico-de-context-api"><strong>8. Uso básico de Context API</strong></h3>
+<pre><code class="language-jsx">import { createContext, useContext } from &quot;react&quot;;
+
+const TemaContext = createContext(&quot;light&quot;);
+
+function Boton() {
+  const tema = useContext(TemaContext);
+  return &lt;button&gt;{tema === &quot;light&quot; ? &quot;☀️ Claro&quot; : &quot;🌙 Oscuro&quot;}&lt;/button&gt;;
+}
+
+function App() {
+  return (
+    &lt;TemaContext.Provider value=&quot;dark&quot;&gt;
+      &lt;Boton /&gt;
+    &lt;/TemaContext.Provider&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="9-fetch-de-datos-con-useeffect"><strong>9. Fetch de datos con <code>useEffect</code></strong></h3>
+<pre><code class="language-jsx">import { useState, useEffect } from &quot;react&quot;;
+
+function Usuarios() {
+  const [usuarios, setUsuarios] = useState([]);
+
+  useEffect(() =&gt; {
+    fetch(&quot;https://jsonplaceholder.typicode.com/users&quot;)
+      .then((res) =&gt; res.json())
+      .then((data) =&gt; setUsuarios(data));
+  }, []);
+
+  return (
+    &lt;ul&gt;
+      {usuarios.map((user) =&gt; (
+        &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="10-react-router-basico"><strong>10. React Router básico</strong></h3>
+<pre><code class="language-jsx">import { BrowserRouter, Routes, Route, Link } from &quot;react-router-dom&quot;;
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;Link to=&quot;/&quot;&gt;Inicio&lt;/Link&gt; | &lt;Link to=&quot;/about&quot;&gt;Acerca&lt;/Link&gt;
+      &lt;/nav&gt;
+      &lt;Routes&gt;
+        &lt;Route path=&quot;/&quot; element={&lt;h1&gt;Página de inicio&lt;/h1&gt;} /&gt;
+        &lt;Route path=&quot;/about&quot; element={&lt;h1&gt;Acerca de&lt;/h1&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}
+</code></pre>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h2 id="referencia-rapida-de-comandos">Referencia rápida de comandos</h2>
+<pre><code class="language-bash"># Crear proyecto con Vite
+npm create vite@latest my-app
+
+# Instalar dependencias
+npm install
+
+# Ejecutar proyecto en modo desarrollo
+npm run dev
+
+# Generar versión de producción
+npm run build
+
+# Instalar React Router
+npm install react-router-dom
+
+# Instalar Redux Toolkit
+npm install @reduxjs/toolkit react-redux
+
+# Instalar Tailwind CSS
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+</code></pre>
+<h3 id="resumen-visual">🔗 Resumen visual</h3>
+<ul>
+<li><strong>React:</strong> Construcción de interfaces reactivas.</li>
+<li><strong>Vite:</strong> Desarrollo rápido y empaquetado.</li>
+<li><strong>React Router:</strong> Navegación y rutas.</li>
+<li><strong>Redux/Zustand:</strong> Manejo de estado global.</li>
+<li><strong>Tailwind CSS:</strong> Estilización eficiente.</li>
+<li><strong>Jest + RTL:</strong> Pruebas unitarias y de integración.</li>
+<li><strong>Vercel/Netlify:</strong> Despliegue en la nube.</li>
+</ul>
+<blockquote>
+<p>🚀 Con estas herramientas y conceptos, podrás crear aplicaciones React escalables, rápidas y listas para producción.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h2 id="sintaxis-mas-usados">⌨️ Sintaxis más usados</h2>
+<h3 id="inicializacion-y-ejecucion"><strong>Inicialización y ejecución</strong></h3>
+<pre><code class="language-bash"># Crear nuevo proyecto con Vite
+npm create vite@latest my-app
+
+# Entrar al proyecto
+cd my-app
+
+# Instalar dependencias
+npm install
+
+# Ejecutar servidor de desarrollo
+npm run dev
+
+# Crear versión de producción
+npm run build
+</code></pre>
+<hr>
+<h3 id="instalacion-de-librerias-comunes"><strong>Instalación de librerías comunes</strong></h3>
+<pre><code class="language-bash"># React Router (rutas)
+npm install react-router-dom
+
+# Redux Toolkit (estado global)
+npm install @reduxjs/toolkit react-redux
+
+# Tailwind CSS (estilos)
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+# Axios (consumo de APIs)
+npm install axios
+</code></pre>
+<hr>
+<h3 id="jsx-basico"><strong>JSX básico</strong></h3>
+<pre><code class="language-jsx">// Variables dentro de JSX
+&lt;h1&gt;Hola {nombre} 👋&lt;/h1&gt;;
+
+// Atributos dinámicos
+&lt;img src={imagen} alt=&quot;Logo&quot; /&gt;;
+
+// Estilos inline
+&lt;p style={ color: &quot;red&quot;, fontSize: &quot;18px&quot; }&gt;Texto en rojo&lt;/p&gt;;
+</code></pre>
+<hr>
+<h3 id="comandos-git-para-react"><strong>Comandos Git para React</strong></h3>
+<pre><code class="language-bash"># Inicializar repositorio
+git init
+
+# Agregar archivos al staging area
+git add .
+
+# Confirmar cambios
+git commit -m &quot;feat: inicialización proyecto React&quot;
+
+# Subir a GitHub
+git remote add origin &lt;URL_REPOSITORIO&gt;
+git push -u origin main
+</code></pre>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-diferencia-entre-un-componente-de-clase-y-un-componente-funcional">1. Diferencia entre un componente de clase y un componente funcional</h3>
+<ul>
+<li>
+<p><strong>Componente de clase:</strong></p>
+<ul>
+<li>Utiliza la sintaxis de clases de JavaScript.</li>
+<li>Requiere el método <code>render()</code> para devolver JSX.</li>
+<li>Antes de Hooks, eran necesarios para manejar <em>state</em> y ciclo de vida.</li>
+</ul>
+<pre><code class="language-jsx">class MiComponente extends React.Component {
+  render() {
+    return &lt;h1&gt;Hola desde clase&lt;/h1&gt;;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Componente funcional:</strong></p>
+<ul>
+<li>Es una función que retorna JSX.</li>
+<li>Con los Hooks puede manejar estado y efectos secundarios.</li>
+<li>Más simple y recomendado hoy en día.</li>
+</ul>
+<pre><code class="language-jsx">function MiComponente() {
+  return &lt;h1&gt;Hola desde funcional&lt;/h1&gt;;
+}
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="2-virtual-dom-y-como-mejora-el-rendimiento">2. Virtual DOM y cómo mejora el rendimiento</h3>
+<p>El <strong>Virtual DOM</strong> es una copia ligera en memoria del DOM real.<br>
+Cuando ocurre un cambio en la UI:</p>
+<ol>
+<li>React actualiza el Virtual DOM.</li>
+<li>Compara el Virtual DOM actual con el anterior (<strong>diffing</strong>).</li>
+<li>Solo actualiza en el DOM real los elementos que cambiaron.</li>
+</ol>
+<p><strong>Beneficio:</strong> mejora el rendimiento porque evita renderizar todo el árbol de componentes.</p>
+<hr>
+<h3 id="3-props-en-react-proposito-e-inmutabilidad">3. Props en React: propósito e inmutabilidad</h3>
+<ul>
+<li>Los <strong>props</strong> son datos que se <strong>pasan de un componente padre a un hijo</strong>.</li>
+<li>Se usan para:
+<ul>
+<li>Configurar un componente.</li>
+<li>Personalizar su comportamiento.</li>
+<li>Reutilizar componentes.</li>
+</ul>
+</li>
+</ul>
+<p>⚠️ <strong>Inmutabilidad:</strong></p>
+<ul>
+<li>Un componente <strong>no debe modificar sus props</strong> directamente.</li>
+<li>Esto mantiene un flujo de datos <strong>unidireccional</strong>.</li>
+</ul>
+<pre><code class="language-jsx">function Saludo({ nombre }) {
+  return &lt;h1&gt;Hola, {nombre}&lt;/h1&gt;;
+}
+</code></pre>
+<hr>
+<h3 id="4-funcion-del-metodo-render-en-un-componente-de-clase">4. Función del método render() en un componente de clase</h3>
+<p>El método <code>render()</code>:</p>
+<ul>
+<li>Genera el <strong>JSX que se mostrará en pantalla</strong>.</li>
+<li>Solo puede devolver un elemento raíz o un <strong>Fragment</strong>.</li>
+</ul>
+<pre><code class="language-jsx">class App extends React.Component {
+  render() {
+    return &lt;h1&gt;Hola Mundo&lt;/h1&gt;;
+  }
+}
+</code></pre>
+<hr>
+<h3 id="5-state-en-react-cuando-y-como-usarlo">5. State en React: cuándo y cómo usarlo</h3>
+<p>El <strong>state</strong>:</p>
+<ul>
+<li>Es un objeto interno que guarda datos dinámicos.</li>
+<li>Permite que la UI <strong>se actualice automáticamente</strong> cuando cambia.</li>
+</ul>
+<p><strong>Uso típico:</strong> manejar contadores, formularios, filtros, etc.</p>
+<pre><code class="language-jsx">import { useState } from &quot;react&quot;;
+
+function Contador() {
+  const [count, setCount] = useState(0);
+
+  return &lt;button onClick={() =&gt; setCount(count + 1)}&gt;{count}&lt;/button&gt;;
+}
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-ciclo-de-vida-de-un-componente">6. Ciclo de vida de un componente</h3>
+<p>En <strong>componentes de clase</strong>, hay tres fases principales:</p>
+<ul>
+<li><strong>Montaje (Mounting):</strong> se crea el componente y se agrega al DOM.
+<ul>
+<li><code>componentDidMount()</code></li>
+</ul>
+</li>
+<li><strong>Actualización (Updating):</strong> ocurre cuando cambian <code>props</code> o <code>state</code>.
+<ul>
+<li><code>componentDidUpdate()</code></li>
+</ul>
+</li>
+<li><strong>Desmontaje (Unmounting):</strong> se elimina el componente del DOM.
+<ul>
+<li><code>componentWillUnmount()</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="7-hooks-y-ejemplos-de-uso">7. Hooks y ejemplos de uso</h3>
+<p>Los <strong>Hooks</strong> permiten usar características avanzadas en componentes funcionales.</p>
+<ul>
+<li><strong>useState</strong> → Manejo de estado local.<pre><code class="language-jsx">const [contador, setContador] = useState(0);
+</code></pre>
+</li>
+<li><strong>useEffect</strong> → Ejecutar efectos secundarios como llamadas a APIs.<pre><code class="language-jsx">useEffect(() =&gt; console.log(&quot;Montado&quot;), []);
+</code></pre>
+</li>
+<li><strong>useContext</strong> → Acceder a datos globales sin <em>props drilling</em>.<pre><code class="language-jsx">const valor = useContext(MiContexto);
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="8-como-funciona-useeffect-y-su-arreglo-de-dependencias">8. Cómo funciona useEffect y su arreglo de dependencias</h3>
+<ul>
+<li><code>useEffect</code> ejecuta lógica <strong>después de que el componente renderiza</strong>.</li>
+<li>El <strong>arreglo de dependencias</strong> determina cuándo se ejecuta:
+<ul>
+<li><code>[]</code> → Solo al montar.</li>
+<li><code>[variable]</code> → Cuando cambia esa variable.</li>
+<li>Sin arreglo → Cada render.</li>
+</ul>
+</li>
+</ul>
+<p>⚠️ <em>Problemas si está mal definido:</em></p>
+<ul>
+<li>Efectos infinitos.</li>
+<li>Bajo rendimiento.</li>
+<li>Fugas de memoria.</li>
+</ul>
+<hr>
+<h3 id="9-context-api-y-uso-en-escenarios-reales">9. Context API y uso en escenarios reales</h3>
+<p>El <strong>Context API</strong> permite <strong>compartir datos globales</strong> sin pasar props manualmente por cada nivel.</p>
+<p><strong>Escenarios típicos:</strong></p>
+<ul>
+<li>Tema oscuro/claro.</li>
+<li>Usuario autenticado.</li>
+<li>Configuración global (ej. idioma).</li>
+</ul>
+<pre><code class="language-jsx">const TemaContext = React.createContext(&quot;light&quot;);
+
+function App() {
+  return (
+    &lt;TemaContext.Provider value=&quot;dark&quot;&gt;
+      &lt;MiComponente /&gt;
+    &lt;/TemaContext.Provider&gt;
+  );
+}
+</code></pre>
+<hr>
+<h3 id="10-usereducer-vs-usestate">10. useReducer vs useState</h3>
+<ul>
+<li><strong>useReducer:</strong> ideal para <strong>estados complejos</strong> con múltiples transiciones.</li>
+<li><strong>useState:</strong> adecuado para estados simples.</li>
+</ul>
+<p>Ejemplo de <code>useReducer</code>:</p>
+<pre><code class="language-jsx">function reducer(state, action) {
+  switch (action.type) {
+    case &quot;increment&quot;:
+      return { count: state.count + 1 };
+    default:
+      return state;
+  }
+}
+const [state, dispatch] = useReducer(reducer, { count: 0 });
+</code></pre>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-key-en-listas-y-su-importancia">11. Key en listas y su importancia</h3>
+<ul>
+<li><strong>Key</strong>: identificador único que React usa para diferenciar elementos en listas.</li>
+<li>Sin <code>key</code>:
+<ul>
+<li>React puede renderizar incorrectamente elementos.</li>
+<li>Problemas con el estado interno de componentes.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-jsx">{
+  items.map((item) =&gt; &lt;li key={item.id}&gt;{item.nombre}&lt;/li&gt;);
+}
+</code></pre>
+<hr>
+<h3 id="12-error-boundaries">12. Error Boundaries</h3>
+<ul>
+<li>Son componentes que <strong>atrapan errores</strong> en sus componentes hijos sin romper toda la app.</li>
+<li>Se implementan con clases usando:
+<ul>
+<li><code>componentDidCatch()</code></li>
+<li><code>getDerivedStateFromError()</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Útil para:</strong></p>
+<ul>
+<li>Formularios críticos.</li>
+<li>Secciones importantes como carritos de compras.</li>
+</ul>
+<hr>
+<h3 id="13-higher-order-components-hocs">13. Higher-Order Components (HOCs)</h3>
+<ul>
+<li>Un <strong>HOC</strong> es una función que <strong>recibe un componente y devuelve otro mejorado</strong>.</li>
+</ul>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li>Reutilización de lógica.</li>
+<li>Separación clara de responsabilidades.</li>
+</ul>
+<p><strong>Desventajas:</strong></p>
+<ul>
+<li>Código más difícil de leer.</li>
+<li><em>Wrapper hell</em> por demasiadas capas.</li>
+</ul>
+<p>Actualmente, los Hooks suelen reemplazarlos por su simplicidad.</p>
+<hr>
+<h3 id="14-fragments-en-react">14. Fragments en React</h3>
+<ul>
+<li>Permiten devolver múltiples elementos sin añadir un nodo extra al DOM.</li>
+</ul>
+<pre><code class="language-jsx">return (
+  &lt;&gt;
+    &lt;h1&gt;Título&lt;/h1&gt;
+    &lt;p&gt;Descripción&lt;/p&gt;
+  &lt;/&gt;
+);
+</code></pre>
+<hr>
+<h3 id="15-estrategias-de-optimizacion-de-rendimiento">15. Estrategias de optimización de rendimiento</h3>
+<ol>
+<li>
+<p><strong>React.memo:</strong><br>
+Memoriza componentes para evitar renderizados innecesarios.</p>
+</li>
+<li>
+<p><strong>useCallback y useMemo:</strong></p>
+<ul>
+<li><code>useCallback</code> → Memoriza funciones.</li>
+<li><code>useMemo</code> → Memoriza cálculos costosos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Code splitting:</strong><br>
+Carga diferida de componentes con <code>React.lazy</code>.</p>
+</li>
+</ol>
+<p><a href="#temas">🔼 temas</a></p>
+<!-- # Seccion 03 •
+
+## Conceptos Claves
+
+Genera 15 preguntas de entrevista técnica sobre React.
+
+- Incluye temas básicos, intermedios y avanzados.
+- Mezcla teoría y práctica.
+- Cubre sintaxis, estructuras de datos, buenas prácticas y casos reales.
+- Redacta las preguntas de forma clara, sin respuestas.
+
+### 🟢 Básico
+
+1. ¿Cuál es la diferencia entre un componente de clase y un componente funcional en React?
+2. Explica el concepto de Virtual DOM y cómo mejora el rendimiento de una aplicación React.
+3. Qué son los props en React? ¿Cuál es su propósito y por qué se consideran inmutables?
+4. ¿Cuál es la función del método render() en un componente de clase y qué debe devolver?
+5. Describe qué es el state en React. ¿Cuándo y cómo lo usarías en un componente?
+
+### 🟡 Intermedio
+
+6. Explica el ciclo de vida de un componente de React. Nombra y describe al menos tres de los métodos principales del ciclo de vida.
+7. ¿Qué son los Hooks en React? Menciona al menos tres Hooks y describe un caso práctico de uso para cada uno.
+8. Explica cómo funciona useEffect y qué papel juega su arreglo de dependencias. ¿Qué problemas puede ocasionar no definir bien ese arreglo?
+9. ¿Qué es el Context API? Describe un escenario real donde usarías Context en lugar de pasar props manualmente por muchos componentes.
+10. ¿Qué es useReducer y en qué casos lo preferirías sobre useState?
+
+### 🔴 Avanzado
+
+11. ¿Qué es la clave (key) en las listas de React? Explica su importancia y qué problemas puede causar su omisión.
+12. ¿Qué son los error boundaries en React? ¿Cómo se implementan y cuándo conviene usarlos?
+13. ¿Qué son los Higher-Order Components (HOCs) y qué ventajas/desventajas tienen frente a Hooks o componentes funcionales?
+14. ¿Qué son los fragmentos (Fragments) de React y cuándo se deben utilizar?
+15. ¿Cómo optimizarías el rendimiento de una aplicación React que tiene un componente que se vuelve a renderizar con frecuencia? Nombra y explica al menos dos estrategias. -->
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

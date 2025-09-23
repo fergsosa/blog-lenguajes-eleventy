@@ -78,6 +78,37 @@ Resumir comandos principales con ejemplos cortos.
 
 ---
 
+# Armado <!--!  Armado-->
+
+## 💻 Tecnologías y Lenguajes
+
+- **HTML**: Estructura básica de páginas web
+- **JavaScript**: Interactividad dinámica en navegadores
+- **TypeScript**: JavaScript tipado para aplicaciones grandes
+- **Markdown**: Formato ligero para documentación legible
+
+## 🛠️ Herramientas de Desarrollo
+
+- **Git**: Control de versiones distribuido eficiente
+- **GitHub**: Plataforma colaborativa para repositorios Git
+- **Bash-Terminal**: Interfaz de comandos para sistemas operativos
+
+## ⚛️ Frameworks y Generadores
+
+- **React**: Librería para interfaces de usuario
+- **Eleventy**: Generador estático para sitios rápidos
+
+## 🗄️ Bases de Datos
+
+- **Base-de-Datos**: Almacena y organiza información estructurada
+- **MySQL**: Base de datos relacional popular
+- **MongoDB**: Base de datos NoSQL orientada documentos
+
+## 🌐 Backend y Servidores
+
+- **NodeJS**: Entorno JavaScript para servidor backend
+- **Express**: Framework minimalista para servidores NodeJS
+
 # Estructura <!--!  Estructura-->
 
 # {{title}}
