@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MongoDB</title>
+    <meta name="description" content="Base no relacional, documentos.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="mongodb">MongoDB</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/mongodb.avif" alt="img"></p>
+<h2 id="1-que-es-mongodb">1. ¿Qué es MongoDB?</h2>
+<p>MongoDB es un <strong>sistema de gestión de bases de datos NoSQL</strong> que almacena la información en <strong>documentos BSON</strong> (una extensión de JSON).<br>
+Se diferencia de bases de datos relacionales como <strong>MySQL</strong> o <strong>PostgreSQL</strong> en varios aspectos clave:</p>
+<ul>
+<li>
+<p><strong>Estructura flexible:</strong><br>
+No requiere un esquema fijo como las tablas en SQL.<br>
+Cada documento puede tener campos distintos y anidados.</p>
+</li>
+<li>
+<p><strong>Alta escalabilidad horizontal:</strong><br>
+Permite distribuir datos en múltiples servidores (<strong>sharding</strong>) para manejar grandes volúmenes.</p>
+</li>
+<li>
+<p><strong>Consultas potentes:</strong><br>
+Uso de operadores avanzados para búsquedas complejas sin necesidad de <code>JOIN</code>.</p>
+</li>
+<li>
+<p><strong>Velocidad en datos no estructurados:</strong><br>
+Ideal para datos que cambian con frecuencia o no tienen una estructura definida.</p>
+</li>
+</ul>
+<hr>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>MongoDB es ideal para proyectos que requieren <strong>agilidad</strong> y <strong>flexibilidad en el modelado de datos</strong>, como:</p>
+<ul>
+<li>Aplicaciones web y móviles con datos dinámicos.</li>
+<li>Sistemas que manejan <strong>grandes volúmenes de datos</strong> (Big Data).</li>
+<li>Proyectos con <strong>esquemas que cambian con frecuencia</strong>.</li>
+<li><strong>APIs REST o GraphQL</strong> donde se trabaja con documentos JSON.</li>
+<li>Aplicaciones que necesitan <strong>escalar rápidamente</strong> con alto tráfico.</li>
+</ul>
+<blockquote>
+<p>Ejemplo: redes sociales, plataformas de e-commerce, aplicaciones de streaming o sistemas de IoT.</p>
+</blockquote>
+<hr>
+<h3 id="3-que-puedo-construir-con-mongodb">3. ¿Qué puedo construir con MongoDB?</h3>
+<p>Con MongoDB puedes crear desde <strong>aplicaciones simples</strong> hasta <strong>sistemas empresariales complejos</strong>.<br>
+Algunos ejemplos incluyen:</p>
+<ul>
+<li>
+<p><strong>E-commerce:</strong><br>
+Gestión de productos, carritos de compra y pedidos.</p>
+</li>
+<li>
+<p><strong>Sistemas de mensajería:</strong><br>
+Chats en tiempo real con datos no estructurados.</p>
+</li>
+<li>
+<p><strong>Plataformas de análisis:</strong><br>
+Procesamiento de datos de sensores o transacciones.</p>
+</li>
+<li>
+<p><strong>APIs modernas:</strong><br>
+Backends escalables para apps móviles y web.</p>
+</li>
+<li>
+<p><strong>Sistemas de recomendación:</strong><br>
+Basados en datos de usuarios y patrones de uso.</p>
+</li>
+</ul>
+<hr>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<p>MongoDB sobresale en escenarios donde:</p>
+<ul>
+<li>El <strong>esquema de datos cambia constantemente</strong> o es flexible.</li>
+<li>Se manejan <strong>datos no estructurados o semiestructurados</strong>, como JSON.</li>
+<li>Se espera <strong>crecimiento rápido y escalabilidad</strong>.</li>
+<li>El rendimiento en <strong>lectura y escritura</strong> es más importante que la integridad referencial compleja.</li>
+<li>El proyecto necesita <strong>desarrollos ágiles</strong> y prototipado rápido.</li>
+</ul>
+<blockquote>
+<p>Si necesitas relaciones complejas y fuertes restricciones de integridad, una base SQL podría ser mejor.</p>
+</blockquote>
+<hr>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<p>Para trabajar eficientemente con MongoDB, sigue estas recomendaciones:</p>
+<h4 id="estructura-y-diseno"><strong>Estructura y diseño</strong></h4>
+<ul>
+<li><strong>Modela los datos según cómo serán consultados</strong>, no solo cómo se almacenan.</li>
+<li>Usa <strong>subdocumentos y arrays</strong> para datos relacionados en lugar de múltiples colecciones cuando sea posible.</li>
+<li>Evita documentos demasiado grandes (límite recomendado: <strong>16MB por documento</strong>).</li>
+</ul>
+<h4 id="rendimiento"><strong>Rendimiento</strong></h4>
+<ul>
+<li><strong>Crea índices adecuados</strong> para optimizar consultas frecuentes.</li>
+<li>Utiliza <strong>paginación con <code>limit</code> y <code>skip</code></strong> para manejar grandes conjuntos de resultados.</li>
+<li>Monitorea el tamaño de la base y planifica el <strong>sharding</strong> cuando sea necesario.</li>
+</ul>
+<h4 id="codigo-limpio"><strong>Código limpio</strong></h4>
+<ul>
+<li>Centraliza la lógica de conexión y configuración.</li>
+<li>Utiliza <strong>variables de entorno</strong> para credenciales y configuración.</li>
+<li>Implementa <strong>validaciones de datos</strong> antes de guardarlos.</li>
+<li>Mantén <strong>nombres claros y consistentes</strong> para colecciones y campos.</li>
+</ul>
+<h4 id="seguridad"><strong>Seguridad</strong></h4>
+<ul>
+<li>Configura usuarios con <strong>roles y permisos adecuados</strong>.</li>
+<li>Habilita <strong>autenticación y cifrado</strong> de datos.</li>
+<li>Nunca expongas la base de datos directamente a internet sin protección.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<blockquote>
+<p>Síntesis rápida de lo aprendido sobre MongoDB.</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Fortalezas principales:</strong></p>
+<ul>
+<li>Flexibilidad en el esquema de datos.</li>
+<li>Escalabilidad horizontal eficiente.</li>
+<li>Alto rendimiento con datos no estructurados.</li>
+<li>Integración natural con aplicaciones modernas (JSON).</li>
+</ul>
+</li>
+<li>
+<p><strong>Debilidades principales:</strong></p>
+<ul>
+<li>No es ideal para relaciones complejas.</li>
+<li>Puede consumir más espacio en disco que SQL.</li>
+<li>Requiere diseño cuidadoso para evitar consultas ineficientes.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo usarlo:</strong></p>
+<ul>
+<li>Proyectos que necesitan crecer rápido.</li>
+<li>Datos que cambian con frecuencia.</li>
+<li>Aplicaciones web/móviles con estructuras dinámicas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cuándo evitarlo:</strong></p>
+<ul>
+<li>Sistemas financieros o con <strong>alta integridad transaccional</strong>.</li>
+<li>Proyectos con <strong>relaciones complejas</strong> y normalización estricta.</li>
+<li>Cuando la estructura de datos es muy estable y no requiere flexibilidad.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#node-js">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con MongoDB, es importante entender los siguientes conceptos:</p>
+<h3 id="1-documentos"><strong>1. Documentos</strong></h3>
+<ul>
+<li>Unidad básica de datos en MongoDB.</li>
+<li>Se almacenan en formato <strong>BSON</strong> (Binary JSON).</li>
+<li>Similar a un objeto en JavaScript.</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Fernando&quot;,
+  &quot;edad&quot;: 28,
+  &quot;email&quot;: &quot;fernando@example.com&quot;
+}
+</code></pre>
+<hr>
+<h3 id="2-colecciones"><strong>2. Colecciones</strong></h3>
+<ul>
+<li>Conjunto de documentos relacionados, equivalente a una tabla en SQL.</li>
+<li>Ejemplo: una colección llamada <code>usuarios</code> que contiene varios documentos con información de usuarios.</li>
+</ul>
+<hr>
+<h3 id="3-base-de-datos"><strong>3. Base de datos</strong></h3>
+<ul>
+<li>Contenedor de colecciones.</li>
+<li>Cada aplicación puede tener una o varias bases de datos según la necesidad.</li>
+</ul>
+<hr>
+<h3 id="4-bson"><strong>4. BSON</strong></h3>
+<ul>
+<li>Formato binario basado en JSON.</li>
+<li>Permite almacenar tipos de datos más complejos, como:
+<ul>
+<li><code>ObjectId</code></li>
+<li><code>Date</code></li>
+<li><code>Binary</code></li>
+<li><code>Decimal128</code></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="5-objectid"><strong>5. ObjectId</strong></h3>
+<ul>
+<li>Identificador único para cada documento.</li>
+<li>Se genera automáticamente al insertar un documento.</li>
+</ul>
+<pre><code class="language-json">{
+  &quot;_id&quot;: &quot;651c5f4b8d0f5e9d12345678&quot;,
+  &quot;nombre&quot;: &quot;Producto 1&quot;,
+  &quot;precio&quot;: 1500
+}
+</code></pre>
+<hr>
+<h3 id="6-crud"><strong>6. CRUD</strong></h3>
+<p>Operaciones esenciales que se realizan en una base de datos:</p>
+<ul>
+<li><strong>C</strong>reate → Crear documentos.</li>
+<li><strong>R</strong>ead → Leer datos.</li>
+<li><strong>U</strong>pdate → Actualizar documentos.</li>
+<li><strong>D</strong>elete → Eliminar documentos.</li>
+</ul>
+<hr>
+<h3 id="7-indices"><strong>7. Índices</strong></h3>
+<ul>
+<li>Mejoran la <strong>velocidad de búsqueda</strong> y consultas.</li>
+<li>Sin índices, MongoDB recorre toda la colección (<strong>full scan</strong>).</li>
+</ul>
+<blockquote>
+<p>Ejemplo: indexar el campo <code>email</code> en una colección de usuarios.</p>
+</blockquote>
+<pre><code class="language-js">db.usuarios.createIndex({ email: 1 });
+</code></pre>
+<hr>
+<h3 id="8-agregaciones-aggregation-pipeline"><strong>8. Agregaciones (<code>Aggregation Pipeline</code>)</strong></h3>
+<ul>
+<li>Herramienta poderosa para <strong>procesar y transformar datos</strong>.</li>
+<li>Funciona en etapas (<code>stages</code>) como un flujo de trabajo.</li>
+</ul>
+<p>Ejemplo básico: contar usuarios por país.</p>
+<pre><code class="language-js">db.usuarios.aggregate([
+  { $group: { _id: &quot;$pais&quot;, totalUsuarios: { $sum: 1 } } },
+]);
+</code></pre>
+<hr>
+<h3 id="9-replica-set"><strong>9. Replica Set</strong></h3>
+<ul>
+<li>Grupo de servidores MongoDB que mantienen copias sincronizadas de los datos.</li>
+<li>Brinda <strong>alta disponibilidad</strong> y <strong>resiliencia</strong>.</li>
+</ul>
+<hr>
+<h3 id="10-sharding"><strong>10. Sharding</strong></h3>
+<ul>
+<li>Técnica de <strong>escalamiento horizontal</strong>.</li>
+<li>Distribuye datos en múltiples servidores para manejar grandes volúmenes.</li>
+</ul>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar con MongoDB de forma eficiente, estas son las herramientas más importantes:</p>
+<hr>
+<h3 id="1-mongodb-compass"><strong>1. MongoDB Compass</strong></h3>
+<ul>
+<li>Interfaz gráfica oficial de MongoDB.</li>
+<li>Permite <strong>visualizar datos, crear índices y ejecutar consultas</strong> sin usar la terminal.</li>
+<li>Ideal para desarrolladores que prefieren trabajar visualmente.</li>
+</ul>
+<blockquote>
+<p>Descarga: <a href="https://www.mongodb.com/products/compass">https://www.mongodb.com/products/compass</a></p>
+</blockquote>
+<hr>
+<h3 id="2-mongodb-atlas"><strong>2. MongoDB Atlas</strong></h3>
+<ul>
+<li>Plataforma en la nube para gestionar bases de datos MongoDB.</li>
+<li>Características clave:
+<ul>
+<li>Escalabilidad automática.</li>
+<li>Backups automáticos.</li>
+<li>Alta disponibilidad global.</li>
+<li>Seguridad integrada.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Uso recomendado: hosting de bases de datos para producción y pruebas.<br>
+Registro gratuito: <a href="https://www.mongodb.com/cloud/atlas">https://www.mongodb.com/cloud/atlas</a></p>
+</blockquote>
+<hr>
+<h3 id="3-extension-mongodb-for-vs-code"><strong>3. Extensión MongoDB for VS Code</strong></h3>
+<ul>
+<li>Permite <strong>conectarse a bases de datos</strong> directamente desde Visual Studio Code.</li>
+<li>Ejecuta consultas y explora colecciones sin salir del editor.</li>
+</ul>
+<blockquote>
+<p>Instalar desde el Marketplace de VS Code:<br>
+<code>MongoDB for VS Code</code></p>
+</blockquote>
+<hr>
+<h3 id="4-mongoose-odm-para-node-js"><strong>4. Mongoose (ODM para Node.js)</strong></h3>
+<ul>
+<li>Librería para interactuar con MongoDB en proyectos de <strong>Node.js</strong>.</li>
+<li>Beneficios:
+<ul>
+<li>Definir <strong>esquemas y modelos</strong> para los datos.</li>
+<li>Validación automática.</li>
+<li>Simplificación en consultas y operaciones complejas.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-bash">npm install mongoose
+</code></pre>
+<hr>
+<h3 id="5-robo-3t-alternativa-a-compass"><strong>5. Robo 3T (alternativa a Compass)</strong></h3>
+<ul>
+<li>Cliente liviano para administrar bases de datos MongoDB.</li>
+<li>Ideal para usuarios que buscan una herramienta <strong>rápida y minimalista</strong>.</li>
+</ul>
+<blockquote>
+<p>Descarga: <a href="https://robomongo.org/">https://robomongo.org/</a></p>
+</blockquote>
+<hr>
+<h3 id="6-node-js-express"><strong>6. Node.js + Express</strong></h3>
+<p>MongoDB se integra perfectamente con <strong>Node.js</strong> y <strong>Express</strong> para construir APIs y aplicaciones backend modernas.</p>
+<blockquote>
+<p>Paquete oficial de MongoDB para Node.js:</p>
+</blockquote>
+<pre><code class="language-bash">npm install mongodb
+</code></pre>
+<hr>
+<h3 id="7-docker"><strong>7. Docker</strong></h3>
+<ul>
+<li>Permite levantar un contenedor de MongoDB en segundos para desarrollo o pruebas.</li>
+</ul>
+<pre><code class="language-bash">docker run -d -p 27017:27017 --name my-mongo mongo
+</code></pre>
+<hr>
+<h3 id="8-mongosh"><strong>8. Mongosh</strong></h3>
+<ul>
+<li>Shell interactivo para trabajar con MongoDB desde la terminal.</li>
+<li>Reemplazo moderno del clásico <code>mongo shell</code>.</li>
+</ul>
+<blockquote>
+<p>Instalación: <a href="https://www.mongodb.com/try/download/shell">https://www.mongodb.com/try/download/shell</a></p>
+</blockquote>
+<hr>
+<h2 id="resumen-rapido-de-herramientas">📌 Resumen rápido de herramientas</h2>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Uso principal</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MongoDB Compass</strong></td>
+<td>Visualización y gestión de datos</td>
+<td>GUI</td>
+</tr>
+<tr>
+<td><strong>MongoDB Atlas</strong></td>
+<td>Base de datos en la nube</td>
+<td>Cloud Service</td>
+</tr>
+<tr>
+<td><strong>Mongoose</strong></td>
+<td>ODM para Node.js</td>
+<td>Librería</td>
+</tr>
+<tr>
+<td><strong>VS Code Extension</strong></td>
+<td>Conectar MongoDB desde el editor</td>
+<td>Extensión</td>
+</tr>
+<tr>
+<td><strong>Robo 3T</strong></td>
+<td>Cliente ligero de MongoDB</td>
+<td>GUI</td>
+</tr>
+<tr>
+<td><strong>Docker</strong></td>
+<td>MongoDB en contenedor</td>
+<td>Virtualización</td>
+</tr>
+<tr>
+<td><strong>Mongosh</strong></td>
+<td>Interacción con MongoDB en terminal</td>
+<td>CLI</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código para tareas comunes en <strong>Node.js</strong> con MongoDB.</p>
+<hr>
+<h3 id="1-conexion-basica-con-mongoose"><strong>1. Conexión básica con Mongoose</strong></h3>
+<pre><code class="language-js">import mongoose from &quot;mongoose&quot;;
+
+mongoose
+  .connect(&quot;mongodb://localhost:27017/mi_base&quot;)
+  .then(() =&gt; console.log(&quot;Conectado a MongoDB&quot;))
+  .catch((err) =&gt; console.error(&quot;Error de conexión&quot;, err));
+</code></pre>
+<hr>
+<h3 id="2-definir-un-modelo"><strong>2. Definir un modelo</strong></h3>
+<pre><code class="language-js">const usuarioSchema = new mongoose.Schema({
+  nombre: String,
+  email: { type: String, required: true },
+  edad: Number,
+});
+
+const Usuario = mongoose.model(&quot;Usuario&quot;, usuarioSchema);
+</code></pre>
+<hr>
+<h3 id="3-crear-un-documento"><strong>3. Crear un documento</strong></h3>
+<pre><code class="language-js">const nuevoUsuario = new Usuario({
+  nombre: &quot;Ana&quot;,
+  email: &quot;ana@example.com&quot;,
+  edad: 25,
+});
+await nuevoUsuario.save();
+</code></pre>
+<hr>
+<h3 id="4-consultar-documentos"><strong>4. Consultar documentos</strong></h3>
+<pre><code class="language-js">const usuarios = await Usuario.find(); // Todos los usuarios
+const ana = await Usuario.findOne({ nombre: &quot;Ana&quot; }); // Un usuario específico
+</code></pre>
+<hr>
+<h3 id="5-actualizar-un-documento"><strong>5. Actualizar un documento</strong></h3>
+<pre><code class="language-js">await Usuario.updateOne({ nombre: &quot;Ana&quot; }, { edad: 26 });
+</code></pre>
+<hr>
+<h3 id="6-eliminar-un-documento"><strong>6. Eliminar un documento</strong></h3>
+<pre><code class="language-js">await Usuario.deleteOne({ nombre: &quot;Ana&quot; });
+</code></pre>
+<hr>
+<h3 id="7-conexion-nativa-sin-mongoose"><strong>7. Conexión nativa sin Mongoose</strong></h3>
+<pre><code class="language-js">import { MongoClient } from &quot;mongodb&quot;;
+
+const cliente = new MongoClient(&quot;mongodb://localhost:27017&quot;);
+await cliente.connect();
+
+const db = cliente.db(&quot;mi_base&quot;);
+const coleccion = db.collection(&quot;usuarios&quot;);
+
+await coleccion.insertOne({ nombre: &quot;Carlos&quot;, edad: 30 });
+</code></pre>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<p>Comandos básicos para trabajar desde <strong>mongosh</strong> o la terminal.</p>
+<hr>
+<h3 id="1-conectarse-a-mongodb"><strong>1. Conectarse a MongoDB</strong></h3>
+<pre><code class="language-bash">mongosh
+</code></pre>
+<blockquote>
+<p>Si está en otro host/puerto:</p>
+</blockquote>
+<pre><code class="language-bash">mongosh &quot;mongodb://localhost:27017&quot;
+</code></pre>
+<hr>
+<h3 id="2-mostrar-bases-de-datos"><strong>2. Mostrar bases de datos</strong></h3>
+<pre><code class="language-bash">show dbs
+</code></pre>
+<hr>
+<h3 id="3-crear-o-usar-una-base-de-datos"><strong>3. Crear o usar una base de datos</strong></h3>
+<pre><code class="language-bash">use mi_base
+</code></pre>
+<hr>
+<h3 id="4-mostrar-colecciones"><strong>4. Mostrar colecciones</strong></h3>
+<pre><code class="language-bash">show collections
+</code></pre>
+<hr>
+<h3 id="5-insertar-documentos"><strong>5. Insertar documentos</strong></h3>
+<pre><code class="language-js">db.usuarios.insertOne({ nombre: &quot;Ana&quot;, edad: 25 });
+db.usuarios.insertMany([
+  { nombre: &quot;Luis&quot;, edad: 30 },
+  { nombre: &quot;Carla&quot;, edad: 22 },
+]);
+</code></pre>
+<hr>
+<h3 id="6-consultar-documentos"><strong>6. Consultar documentos</strong></h3>
+<pre><code class="language-js">db.usuarios.find(); // Todos
+db.usuarios.find({ edad: { $gt: 25 } }); // Condición
+db.usuarios.findOne({ nombre: &quot;Ana&quot; }); // Solo uno
+</code></pre>
+<hr>
+<h3 id="7-actualizar-documentos"><strong>7. Actualizar documentos</strong></h3>
+<pre><code class="language-js">db.usuarios.updateOne({ nombre: &quot;Ana&quot; }, { $set: { edad: 26 } });
+
+db.usuarios.updateMany({ edad: { $lt: 18 } }, { $set: { estado: &quot;menor&quot; } });
+</code></pre>
+<hr>
+<h3 id="8-eliminar-documentos"><strong>8. Eliminar documentos</strong></h3>
+<pre><code class="language-js">db.usuarios.deleteOne({ nombre: &quot;Ana&quot; });
+db.usuarios.deleteMany({ edad: { $lt: 18 } });
+</code></pre>
+<hr>
+<h3 id="9-crear-indice"><strong>9. Crear índice</strong></h3>
+<pre><code class="language-js">db.usuarios.createIndex({ email: 1 });
+</code></pre>
+<hr>
+<h3 id="10-contar-documentos"><strong>10. Contar documentos</strong></h3>
+<pre><code class="language-js">db.usuarios.countDocuments();
+</code></pre>
+<hr>
+<h3 id="11-agregaciones-basicas"><strong>11. Agregaciones básicas</strong></h3>
+<p>Contar usuarios por país:</p>
+<pre><code class="language-js">db.usuarios.aggregate([{ $group: { _id: &quot;$pais&quot;, total: { $sum: 1 } } }]);
+</code></pre>
+<hr>
+<h3 id="12-exportar-e-importar-datos"><strong>12. Exportar e importar datos</strong></h3>
+<p>Exportar colección:</p>
+<pre><code class="language-bash">mongoexport --db mi_base --collection usuarios --out usuarios.json
+</code></pre>
+<p>Importar colección:</p>
+<pre><code class="language-bash">mongoimport --db mi_base --collection usuarios --file usuarios.json
+</code></pre>
+<hr>
+<h2 id="resumen-rapido-de-comandos">📌 Resumen rápido de comandos</h2>
+<table>
+<thead>
+<tr>
+<th>Acción</th>
+<th>Comando</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver bases de datos</td>
+<td><code>show dbs</code></td>
+</tr>
+<tr>
+<td>Usar base de datos</td>
+<td><code>use mi_base</code></td>
+</tr>
+<tr>
+<td>Ver colecciones</td>
+<td><code>show collections</code></td>
+</tr>
+<tr>
+<td>Insertar</td>
+<td><code>db.usuarios.insertOne({nombre: &quot;Ana&quot;})</code></td>
+</tr>
+<tr>
+<td>Consultar</td>
+<td><code>db.usuarios.find({edad: {$gt: 25}})</code></td>
+</tr>
+<tr>
+<td>Actualizar</td>
+<td><code>db.usuarios.updateOne({...}, {$set: {...}})</code></td>
+</tr>
+<tr>
+<td>Eliminar</td>
+<td><code>db.usuarios.deleteOne({...})</code></td>
+</tr>
+<tr>
+<td>Crear índice</td>
+<td><code>db.usuarios.createIndex({email: 1})</code></td>
+</tr>
+<tr>
+<td>Contar documentos</td>
+<td><code>db.usuarios.countDocuments()</code></td>
+</tr>
+<tr>
+<td>Agregar datos</td>
+<td><code>db.usuarios.aggregate([...])</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-estructura-principal-documentos-y-colecciones"><strong>1. Estructura principal: Documentos y Colecciones</strong></h3>
+<ul>
+<li><strong>Documento</strong>: Es la unidad básica de almacenamiento en MongoDB. Está representado en formato <strong>BSON</strong> (similar a JSON).</li>
+<li><strong>Colección</strong>: Conjunto de documentos relacionados, similar a una tabla en bases de datos relacionales.</li>
+</ul>
+<p><strong>Ejemplo de documento:</strong></p>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Ana&quot;,
+  &quot;edad&quot;: 25,
+  &quot;email&quot;: &quot;ana@example.com&quot;
+}
+</code></pre>
+<p><strong>Colección:</strong> <code>usuarios</code> puede contener miles de documentos similares.</p>
+<hr>
+<h3 id="2-bson-vs-json"><strong>2. BSON vs JSON</strong></h3>
+<ul>
+<li><strong>BSON (Binary JSON)</strong>: Es el formato binario que usa MongoDB internamente.
+<ul>
+<li>Soporta <strong>tipos de datos adicionales</strong> como <code>ObjectId</code>, <code>Date</code>, <code>Decimal128</code>, <code>Binary</code>.</li>
+<li>Más eficiente en almacenamiento y velocidad.</li>
+</ul>
+</li>
+<li><strong>JSON</strong>: Solo texto plano, más limitado en tipos de datos.</li>
+</ul>
+<p><strong>MongoDB usa BSON</strong> porque optimiza la lectura y escritura de datos, y soporta tipos que JSON no maneja.</p>
+<hr>
+<h3 id="3-operaciones-crud-basicas"><strong>3. Operaciones CRUD básicas</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operación</th>
+<th>Sintaxis ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Insertar</strong></td>
+<td><code>db.usuarios.insertOne({ nombre: &quot;Ana&quot;, edad: 25 })</code></td>
+</tr>
+<tr>
+<td><strong>Buscar</strong></td>
+<td><code>db.usuarios.find({ nombre: &quot;Ana&quot; })</code></td>
+</tr>
+<tr>
+<td><strong>Actualizar</strong></td>
+<td><code>db.usuarios.updateOne({ nombre: &quot;Ana&quot; }, { $set: { edad: 26 } })</code></td>
+</tr>
+<tr>
+<td><strong>Eliminar</strong></td>
+<td><code>db.usuarios.deleteOne({ nombre: &quot;Ana&quot; })</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="4-objectid"><strong>4. ObjectID</strong></h3>
+<ul>
+<li>Es el identificador único que MongoDB asigna automáticamente a cada documento en el campo <code>_id</code>.</li>
+<li>Tiene <strong>12 bytes</strong>, distribuidos así:
+<ol>
+<li><strong>4 bytes</strong> → Marca de tiempo (timestamp).</li>
+<li><strong>5 bytes</strong> → Identificador de máquina y proceso.</li>
+<li><strong>3 bytes</strong> → Contador incremental.</li>
+</ol>
+</li>
+</ul>
+<p>Esto asegura <strong>unicidad global</strong> sin necesidad de un servidor central.</p>
+<p><strong>Ejemplo:</strong><br>
+<code>64f83d2a8d9b4e7cbb123456</code></p>
+<hr>
+<h3 id="5-crear-un-indice"><strong>5. Crear un índice</strong></h3>
+<pre><code class="language-js">db.usuarios.createIndex({ email: 1 });
+</code></pre>
+<ul>
+<li><code>1</code> → Orden ascendente.</li>
+<li><code>-1</code> → Orden descendente.</li>
+</ul>
+<p><strong>Importancia:</strong><br>
+Los índices aceleran la búsqueda de documentos, evitando que MongoDB recorra toda la colección (<strong>full collection scan</strong>).</p>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-tipos-de-indices-y-casos-de-uso"><strong>6. Tipos de índices y casos de uso</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descripción</th>
+<th>Ejemplo de uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Single-field</strong></td>
+<td>Índice en un solo campo.</td>
+<td><code>db.usuarios.createIndex({ email: 1 })</code></td>
+</tr>
+<tr>
+<td><strong>Compound</strong></td>
+<td>Índice en múltiples campos.</td>
+<td><code>db.usuarios.createIndex({ nombre: 1, edad: -1 })</code></td>
+</tr>
+<tr>
+<td><strong>Text</strong></td>
+<td>Búsqueda de texto.</td>
+<td><code>db.posts.createIndex({ contenido: &quot;text&quot; })</code></td>
+</tr>
+<tr>
+<td><strong>Geoespacial</strong></td>
+<td>Para ubicaciones y mapas.</td>
+<td><code>db.tiendas.createIndex({ ubicacion: &quot;2dsphere&quot; })</code></td>
+</tr>
+<tr>
+<td><strong>Hashed</strong></td>
+<td>Para sharding basado en hash.</td>
+<td><code>db.usuarios.createIndex({ userId: &quot;hashed&quot; })</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="7-documentos-embebidos-vs-referencias"><strong>7. Documentos embebidos vs Referencias</strong></h3>
+<ul>
+<li>
+<p><strong>Embebidos (Embedded):</strong></p>
+<ul>
+<li>Toda la información está en el mismo documento.</li>
+<li>Más rápido para lecturas frecuentes.</li>
+<li>Ideal para datos que siempre se consultan juntos.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Ana&quot;,
+  &quot;direccion&quot;: {
+    &quot;calle&quot;: &quot;Av. Siempre Viva&quot;,
+    &quot;ciudad&quot;: &quot;Springfield&quot;
+  }
+}
+</code></pre>
+</li>
+<li>
+<p><strong>Referencias (Referencing):</strong></p>
+<ul>
+<li>Documentos separados que se relacionan mediante un <code>ObjectId</code>.</li>
+<li>Útil cuando los datos cambian con frecuencia o se comparten entre colecciones.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-json">{
+  &quot;nombre&quot;: &quot;Ana&quot;,
+  &quot;direccionId&quot;: ObjectId(&quot;64f83d2a8d9b4e7cbb123456&quot;)
+}
+</code></pre>
+</li>
+</ul>
+<hr>
+<h3 id="8-diferencia-entre-set-inc-y-push"><strong>8. Diferencia entre $set, $inc y $push</strong></h3>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Uso</th>
+<th>Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>$set</strong></td>
+<td>Actualiza el valor de un campo.</td>
+<td><code>db.usuarios.updateOne({ nombre: &quot;Ana&quot; }, { $set: { edad: 30 } })</code></td>
+</tr>
+<tr>
+<td><strong>$inc</strong></td>
+<td>Incrementa o decrementa un valor numérico.</td>
+<td><code>db.usuarios.updateOne({ nombre: &quot;Ana&quot; }, { $inc: { puntos: 5 } })</code></td>
+</tr>
+<tr>
+<td><strong>$push</strong></td>
+<td>Agrega un elemento a un arreglo.</td>
+<td><code>db.usuarios.updateOne({ nombre: &quot;Ana&quot; }, { $push: { hobbies: &quot;correr&quot; } })</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="9-schemas-en-mongodb"><strong>9. Schemas en MongoDB</strong></h3>
+<ul>
+<li>MongoDB es <strong>schema-less</strong> (sin esquema rígido), pero <strong>se pueden definir esquemas opcionales</strong> usando librerías como <strong>Mongoose</strong>.</li>
+<li>Beneficios:
+<ul>
+<li>Validación de datos.</li>
+<li>Estandarización.</li>
+<li>Prevención de errores.</li>
+</ul>
+</li>
+<li>Buenas prácticas:
+<ul>
+<li>Mantener consistencia en los campos.</li>
+<li>Definir reglas claras para documentos.</li>
+<li>Usar validaciones al insertar datos.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="10-replica-set"><strong>10. Replica set</strong></h3>
+<ul>
+<li>Grupo de servidores que mantienen <strong>copias sincronizadas</strong> de los datos.</li>
+<li>Funciones clave:
+<ul>
+<li>Alta disponibilidad.</li>
+<li>Recuperación automática ante fallos (<strong>failover</strong>).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Funcionamiento:</strong></p>
+<ol>
+<li>Un <strong>Primary</strong> recibe todas las escrituras.</li>
+<li>Los <strong>Secondaries</strong> replican los datos.</li>
+<li>Si el Primary falla, uno de los Secondaries es elegido automáticamente como nuevo Primary.</li>
+</ol>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-join-entre-colecciones-con-lookup"><strong>11. Join entre colecciones con $lookup</strong></h3>
+<pre><code class="language-js">db.pedidos.aggregate([
+  {
+    $lookup: {
+      from: &quot;clientes&quot;,
+      localField: &quot;clienteId&quot;,
+      foreignField: &quot;_id&quot;,
+      as: &quot;infoCliente&quot;,
+    },
+  },
+]);
+</code></pre>
+<blockquote>
+<p>Similar a un <strong>LEFT JOIN</strong> en SQL.</p>
+</blockquote>
+<hr>
+<h3 id="12-estrategias-de-escalabilidad-horizontal"><strong>12. Estrategias de escalabilidad horizontal</strong></h3>
+<ol>
+<li>
+<p><strong>Sharding:</strong></p>
+<ul>
+<li>Divide la base de datos en fragmentos distribuidos en varios servidores.</li>
+<li>Mejora el rendimiento con grandes volúmenes de datos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Replica Sets:</strong></p>
+<ul>
+<li>Multiplica copias de los datos para mejorar disponibilidad y tolerancia a fallos.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="13-transacciones-en-mongodb"><strong>13. Transacciones en MongoDB</strong></h3>
+<ul>
+<li>Permiten ejecutar múltiples operaciones <strong>como una sola unidad atómica</strong>.</li>
+<li>Útiles en operaciones financieras o multi-documento.</li>
+</ul>
+<p><strong>Ejemplo básico:</strong></p>
+<pre><code class="language-js">const session = client.startSession();
+session.startTransaction();
+
+try {
+  await db
+    .collection(&quot;cuentas&quot;)
+    .updateOne({ _id: 1 }, { $inc: { saldo: -100 } }, { session });
+
+  await db
+    .collection(&quot;cuentas&quot;)
+    .updateOne({ _id: 2 }, { $inc: { saldo: 100 } }, { session });
+
+  await session.commitTransaction();
+} catch (e) {
+  await session.abortTransaction();
+}
+</code></pre>
+<hr>
+<h3 id="14-consulta-optimizada-para-los-10-documentos-mas-recientes"><strong>14. Consulta optimizada para los 10 documentos más recientes</strong></h3>
+<p><strong>Estrategia:</strong></p>
+<ol>
+<li>Crear un índice en el campo <code>fecha</code>:<pre><code class="language-js">db.posts.createIndex({ fecha: -1 });
+</code></pre>
+</li>
+<li>Consulta optimizada:<pre><code class="language-js">db.posts.find().sort({ fecha: -1 }).limit(10);
+</code></pre>
+</li>
+</ol>
+<p>Esto evita un <strong>full collection scan</strong> y utiliza el índice directamente.</p>
+<hr>
+<h3 id="15-modelado-de-datos-para-red-social"><strong>15. Modelado de datos para red social</strong></h3>
+<p><strong>Colección <code>usuarios</code>:</strong></p>
+<pre><code class="language-json">{
+  &quot;_id&quot;: ObjectId(&quot;...&quot;),
+  &quot;nombre&quot;: &quot;Ana&quot;,
+  &quot;amigos&quot;: [ObjectId(&quot;...&quot;), ObjectId(&quot;...&quot;)]
+}
+</code></pre>
+<p><strong>Colección <code>posts</code>:</strong></p>
+<pre><code class="language-json">{
+  &quot;_id&quot;: ObjectId(&quot;...&quot;),
+  &quot;usuarioId&quot;: ObjectId(&quot;...&quot;),
+  &quot;contenido&quot;: &quot;Mi primer post&quot;,
+  &quot;likes&quot;: [ObjectId(&quot;...&quot;), ObjectId(&quot;...&quot;)]
+}
+</code></pre>
+<p><strong>Estrategia:</strong></p>
+<ul>
+<li><strong>Amigos</strong>: Array embebido, porque suele consultarse junto al perfil.</li>
+<li><strong>Likes</strong>: Guardar solo los IDs para evitar duplicidad y mantener la consulta rápida.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
