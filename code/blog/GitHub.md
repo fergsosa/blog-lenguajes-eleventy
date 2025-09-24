@@ -263,9 +263,12 @@ Editor de código altamente compatible con GitHub.
 
 Extensiones recomendadas:
 
-- **GitLens:** Información avanzada sobre commits y ramas.
-- **GitHub Pull Requests and Issues:** Manejar PRs e Issues directamente desde VSCode.
-- **Markdown Preview Enhanced:** Visualizar archivos `.md` en tiempo real.
+- **GitLens:**\
+  Información avanzada sobre commits y ramas.
+- **GitHub Pull Requests and Issues:**\
+  Manejar PRs e Issues directamente desde VSCode.
+- **Markdown Preview Enhanced:**\
+  Visualizar archivos `.md` en tiempo real.
 
 ---
 
@@ -307,20 +310,28 @@ gh pr merge               # Fusionar pull request
 
 ### 6. Integraciones y Automatización
 
-- **GitHub Actions:** Automatización de pruebas y despliegues.
-- **CI/CD externos:** Jenkins, Travis CI, CircleCI.
-- **Bots y Webhooks:** Automatización de tareas personalizadas.
+- **GitHub Actions:**\
+  Automatización de pruebas y despliegues.
+- **CI/CD externos:**\
+  Jenkins, Travis CI, CircleCI.
+- **Bots y Webhooks:**\
+  Automatización de tareas personalizadas.
 
 ### 7. Navegadores y Extensiones Web
 
-- **Octotree:** Visualización estructurada de repositorios en GitHub.
-- **Refined GitHub:** Mejoras visuales y funcionales en la interfaz.
+- **Octotree:**\
+  Visualización estructurada de repositorios en GitHub.
+- **Refined GitHub:**\
+  Mejoras visuales y funcionales en la interfaz.
 
 ### 8. Documentación y Wikis
 
-- **README.md:** Documentación principal.
-- **GitHub Wiki:** Información extensa y organizada.
-- **Plantillas para Issues y PRs:** Estandarizar contribuciones.
+- **README.md:**\
+  Documentación principal.
+- **GitHub Wiki:**\
+  Información extensa y organizada.
+- **Plantillas para Issues y PRs:**\
+  Estandarizar contribuciones.
 
 [🔼 temas](#temas)
 
@@ -543,13 +554,10 @@ git push -u origin main                 # Subir cambios
 
 ### 1. ¿Cuál es la diferencia fundamental entre Git y GitHub?
 
-#### Git:
-
-- Es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.
-
-#### GitHub:
-
-- Es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como _pull requests_, _issues_ y _actions_.
+- **Git:**\
+  Es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.
+- **GitHub:**\
+  Es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como _pull requests_, _issues_ y _actions_.
 
 ### 2. Explica el propósito de un "pull request" (solicitud de extracción) y describe el proceso general para crear uno.
 
@@ -703,8 +711,10 @@ git submodule add https://github.com/usuario/lib.git libs/lib
 
 ### 13. Menciona al menos dos estrategias avanzadas de branching y cuándo conviene utilizarlas.
 
-- **Git Flow**: Ideal para proyectos grandes con ciclos definidos de desarrollo, pruebas y releases.
-- **Trunk Based Development**: Para equipos ágiles que integran cambios frecuentemente en una sola rama principal.
+- **Git Flow**:\
+  Ideal para proyectos grandes con ciclos definidos de desarrollo, pruebas y releases.
+- **Trunk Based Development**:\
+  Para equipos ágiles que integran cambios frecuentemente en una sola rama principal.
 
 ### 14. Explica cómo auditar el historial de cambios de un repositorio grande para identificar cuándo se introdujo un bug o una característica específica.
 

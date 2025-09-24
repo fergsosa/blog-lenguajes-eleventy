@@ -41,14 +41,18 @@
 <p>Bash se utiliza para <strong>administrar, automatizar y ejecutar procesos en el sistema operativo</strong>.</p>
 <h4 id="algunos-contextos-ideales">Algunos contextos ideales:</h4>
 <ul>
-<li><strong>Desarrollo de software</strong>: ejecutar scripts de despliegue, gestionar dependencias y entornos.</li>
-<li><strong>DevOps y servidores</strong>: automatizar configuraciones y despliegues en la nube.</li>
-<li><strong>Manejo de archivos y directorios</strong>: copiar, mover, comprimir y buscar archivos de forma eficiente.</li>
-<li><strong>Procesamiento de datos</strong>: manipular logs, filtrar información y realizar tareas repetitivas.</li>
-<li><strong>Educación y aprendizaje</strong>: entender cómo funcionan los sistemas operativos a bajo nivel.
-<h3 id="3-que-puedo-construir-con-terminal-bash">3. ¿Qué puedo construir con Terminal Bash?</h3>
-</li>
+<li><strong>Desarrollo de software:</strong><br>
+ejecutar scripts de despliegue, gestionar dependencias y entornos.</li>
+<li><strong>DevOps y servidores:</strong><br>
+automatizar configuraciones y despliegues en la nube.</li>
+<li><strong>Manejo de archivos y directorios:</strong><br>
+copiar, mover, comprimir y buscar archivos de forma eficiente.</li>
+<li><strong>Procesamiento de datos:</strong><br>
+manipular logs, filtrar información y realizar tareas repetitivas.</li>
+<li><strong>Educación y aprendizaje:</strong><br>
+entender cómo funcionan los sistemas operativos a bajo nivel.</li>
 </ul>
+<h3 id="3-que-puedo-construir-con-terminal-bash">3. ¿Qué puedo construir con Terminal Bash?</h3>
 <p>Con Bash puedes <strong>crear herramientas y automatizaciones</strong> para mejorar la productividad.</p>
 <h4 id="ejemplos">Ejemplos:</h4>
 <ul>
@@ -56,10 +60,9 @@
 <li><strong>Pipelines de datos</strong> usando comandos como <code>grep</code>, <code>awk</code>, <code>sed</code>.</li>
 <li>Pequeños <strong>programas CLI</strong> (Command Line Interface).</li>
 <li>Flujos de <strong>despliegue continuo (CI/CD)</strong> para proyectos.</li>
-<li>Utilidades personalizadas para <strong>trabajar con proyectos en Git</strong>, Docker, Node.js, etc.
-<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
-</li>
+<li>Utilidades personalizadas para <strong>trabajar con proyectos en Git</strong>, Docker, Node.js, etc.</li>
 </ul>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
 <h4 id="usa-bash-cuando">Usa Bash cuando:</h4>
 <ul>
 <li>Necesitas <strong>automatizar tareas rápidas</strong> sin instalar herramientas externas.</li>
@@ -71,10 +74,9 @@
 <h4 id="no-es-la-mejor-opcion-cuando">No es la mejor opción cuando:</h4>
 <ul>
 <li>Necesitas <strong>interfaces gráficas</strong> o aplicaciones complejas.</li>
-<li>El proyecto requiere <strong>mucha lógica avanzada</strong> (en ese caso, lenguajes como Python o Node.js son más adecuados).
-<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
-</li>
+<li>El proyecto requiere <strong>mucha lógica avanzada</strong> (en ese caso, lenguajes como Python o Node.js son más adecuados).</li>
 </ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <p>Escribir scripts en Bash requiere <strong>orden y claridad</strong>. Algunas recomendaciones:</p>
 <ul>
 <li>
@@ -117,8 +119,8 @@ rm -rf /tmp/*
 <li>Limitado para proyectos con lógica compleja o estructuras avanzadas.</li>
 </ul>
 <h4 id="cuando-usarlo">Cuándo usarlo:</h4>
-<p>-Tareas repetitivas y automatización.</p>
 <ul>
+<li>Tareas repetitivas y automatización.</li>
 <li>Administración de servidores y entornos de desarrollo.</li>
 <li>Procesamiento rápido de texto y archivos.</li>
 <li>Integración con herramientas como Git, Docker o Node.js.</li>
@@ -335,7 +337,7 @@ bash script.sh
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
-<h2 id="nivel-basico">🟢 Nivel Básico</h2>
+<h2 id="basico">🟢 Básico</h2>
 <h3 id="1-comandos-esenciales">1. Comandos esenciales</h3>
 <ul>
 <li><strong><code>ls</code></strong>: Lista los archivos y carpetas del directorio actual.</li>
@@ -346,7 +348,6 @@ bash script.sh
 <li><code>ls -l</code> para inspeccionar propiedades de archivos.</li>
 <li><code>ls -a</code> para mostrar archivos ocultos de configuración.</li>
 </ul>
-<hr>
 <h3 id="2-directorios">2. Directorios</h3>
 <ul>
 <li><strong>Rutas relativas</strong>: Dependen del directorio actual (<code>./carpeta/archivo.txt</code>).</li>
@@ -356,7 +357,6 @@ bash script.sh
 <pre><code class="language-bash">cd ./documentos          # Relativa
 cd /home/usuario/documentos  # Absoluta
 </code></pre>
-<hr>
 <h3 id="3-permisos-de-archivos">3. Permisos de archivos</h3>
 <ul>
 <li><strong>Salida de <code>ls -l</code>:</strong></li>
@@ -372,7 +372,6 @@ cd /home/usuario/documentos  # Absoluta
 </ul>
 <pre><code class="language-bash">chmod 600 archivo.txt
 </code></pre>
-<hr>
 <h3 id="4-redireccion-de-salida">4. Redirección de salida</h3>
 <ul>
 <li><strong><code>&gt;:</code></strong> sobrescribe un archivo con la salida.</li>
@@ -386,7 +385,6 @@ echo &quot;Más texto&quot; &gt;&gt; archivo.txt # Agrega
 ls archivo_inexistente 2&gt; error.log # Errores
 comando &amp;&gt; salida.log           # Todo redirigido
 </code></pre>
-<hr>
 <h3 id="5-variables-de-entorno">5. Variables de entorno</h3>
 <ul>
 <li><strong>PATH</strong>: Lista de directorios donde Bash busca comandos.</li>
@@ -395,7 +393,7 @@ comando &amp;&gt; salida.log           # Todo redirigido
 <pre><code class="language-bash">export PATH=$PATH:/home/user/mis_comandos
 </code></pre>
 <hr>
-<h2 id="nivel-intermedio">🟡 Nivel Intermedio</h2>
+<h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-combinacion-de-comandos">6. Combinación de comandos</h3>
 <ul>
 <li><code>;</code> ejecuta todos los comandos en secuencia, aunque uno falle.</li>
@@ -407,7 +405,6 @@ comando &amp;&gt; salida.log           # Todo redirigido
 mkdir nueva &amp;&amp; cd nueva
 comando_inexistente || echo &quot;Falló&quot;
 </code></pre>
-<hr>
 <h3 id="7-procesos">7. Procesos</h3>
 <ul>
 <li><strong><code>&amp;</code>:</strong> Ejecuta proceso en segundo plano.</li>
@@ -422,7 +419,6 @@ jobs
 fg %1
 kill 1234
 </code></pre>
-<hr>
 <h3 id="8-filtros-y-pipes">8. Filtros y pipes</h3>
 <ul>
 <li><strong><code>grep</code>:</strong> Filtra líneas que coinciden con un patrón.</li>
@@ -432,14 +428,12 @@ kill 1234
 <p><strong>Ejemplo combinando grep y sed:</strong></p>
 <pre><code class="language-bash">grep &quot;ERROR&quot; log.txt | sed 's/ERROR/ALERTA/g'
 </code></pre>
-<hr>
 <h3 id="9-busqueda-de-archivos">9. Búsqueda de archivos</h3>
 <ul>
 <li><strong><code>find</code>:</strong> Busca en tiempo real según criterios.</li>
 <li><strong><code>locate</code>:</strong> Busca en base de datos indexada (más rápido pero no siempre actualizado).</li>
 </ul>
 <p><strong>Preferencia:</strong> <code>find</code> para precisión en tiempo real, <code>locate</code> para búsquedas rápidas.</p>
-<hr>
 <h3 id="10-expansiones-en-bash">10. Expansiones en Bash</h3>
 <ul>
 <li><strong>Llaves <code>{}</code></strong>: Expandir múltiples opciones.<pre><code class="language-bash">echo file{1,2,3}.txt  # file1.txt file2.txt file3.txt
@@ -454,7 +448,7 @@ echo &quot;Hoy es $hoy&quot;
 </li>
 </ul>
 <hr>
-<h2 id="nivel-avanzado">🔴 Nivel Avanzado</h2>
+<h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-scripting-basico">11. Scripting básico</h3>
 <pre><code class="language-bash">#!/bin/bash
 archivo=$1
@@ -463,7 +457,6 @@ wc $archivo
 <blockquote>
 <p><strong>Uso:</strong> <code>bash contar.sh archivo.txt</code> → muestra líneas, palabras y caracteres.</p>
 </blockquote>
-<hr>
 <h3 id="12-condicionales-en-bash">12. Condicionales en Bash</h3>
 <pre><code class="language-bash">if [ -r &quot;$archivo&quot; ]; then
   echo &quot;El archivo existe y es legible&quot;
@@ -473,20 +466,17 @@ else
   echo &quot;El archivo no existe&quot;
 fi
 </code></pre>
-<hr>
 <h3 id="13-bucles">13. Bucles</h3>
 <pre><code class="language-bash">for f in *.txt; do
   echo &quot;Procesando $f&quot;
 done
 </code></pre>
-<hr>
 <h3 id="14-optimizacion-y-buenas-practicas">14. Optimización y buenas prácticas</h3>
 <ol>
 <li>Comentar el código para claridad.</li>
 <li>Validar entradas y errores (<code>if</code>, <code>||</code>, <code>set -e</code>).</li>
 <li>Mantener scripts modulares y funciones reutilizables.</li>
 </ol>
-<hr>
 <h3 id="15-depuracion-de-scripts">15. Depuración de scripts</h3>
 <ul>
 <li><strong><code>set -x</code></strong>: Muestra cada comando antes de ejecutarlo.</li>

@@ -25,28 +25,12 @@
     <main>
       <h1 id="base-de-datos">Base de Datos</h1>
 <p><img src="/blog-lenguajes-eleventy/img/portada/db.avif" alt="img"></p>
-<!-- ## 1. ¿Qué es Base de Datos?
-
-### 2. ¿Para qué se usa?
-
-### 3. ¿Qué puedo construir con Base de Datos?
-
-### 4. ¿Cuándo es más conveniente usarlo?
-
-## Buenas prácticas recomendadas
-
----
-
-## Resumen rápido
-
---- -->
 <h2 id="1-que-es-base-de-datos">1. ¿Qué es Base de Datos?</h2>
 <p>Una <strong>base de datos</strong> es un sistema que <strong>almacena información de manera estructurada</strong> para que pueda ser consultada, actualizada y administrada fácilmente.<br>
 Su objetivo principal es <strong>centralizar datos</strong> y permitir que múltiples usuarios o sistemas accedan a ellos de forma <strong>segura y coherente</strong>.</p>
 <blockquote>
 <p>Ejemplo: Una tienda en línea utiliza una base de datos para guardar información de usuarios, productos, pedidos y pagos.</p>
 </blockquote>
-<hr>
 <h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
 <p>Las bases de datos se usan para <strong>gestionar información crítica</strong> en diferentes entornos.<br>
 Son especialmente útiles cuando se requiere:</p>
@@ -66,21 +50,25 @@ Son especialmente útiles cuando se requiere:</p>
 <li>Sistemas de seguimiento y analítica de datos.</li>
 <li>Redes sociales y mensajería.</li>
 </ul>
-<hr>
 <h3 id="3-que-puedo-construir-con-base-de-datos">3. ¿Qué puedo construir con Base de Datos?</h3>
 <p>Con bases de datos se pueden construir aplicaciones que <strong>gestionen información dinámica</strong>.<br>
 Algunos ejemplos prácticos:</p>
 <ul>
-<li><strong>Gestión de usuarios</strong> → Registro, inicio de sesión y permisos.</li>
-<li><strong>Aplicaciones de ventas</strong> → Catálogo de productos y control de stock.</li>
-<li><strong>Plataformas de contenido</strong> → Blogs, foros y redes sociales.</li>
-<li><strong>Sistemas administrativos</strong> → Control de inventario y facturación.</li>
-<li><strong>Aplicaciones de analítica</strong> → Reportes y estadísticas en tiempo real.</li>
-<li><strong>Sistemas distribuidos</strong> → Aplicaciones que requieren sincronización entre múltiples servidores.</li>
+<li><strong>Gestión de usuarios:</strong><br>
+Registro, inicio de sesión y permisos.</li>
+<li><strong>Aplicaciones de ventas:</strong><br>
+Catálogo de productos y control de stock.</li>
+<li><strong>Plataformas de contenido:</strong><br>
+Blogs, foros y redes sociales.</li>
+<li><strong>Sistemas administrativos:</strong><br>
+Control de inventario y facturación.</li>
+<li><strong>Aplicaciones de analítica:</strong><br>
+Reportes y estadísticas en tiempo real.</li>
+<li><strong>Sistemas distribuidos:</strong><br>
+Aplicaciones que requieren sincronización entre múltiples servidores.</li>
 </ul>
-<hr>
 <h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
-<p>Es recomendable usar una base de datos cuando:</p>
+<h4 id="es-recomendable-usar-una-base-de-datos-cuando">Es recomendable usar una base de datos cuando:</h4>
 <ul>
 <li>Se necesita <strong>persistencia de datos</strong> más allá de la memoria temporal de una aplicación.</li>
 <li>Hay <strong>muchos usuarios o procesos accediendo simultáneamente</strong> a la información.</li>
@@ -88,44 +76,46 @@ Algunos ejemplos prácticos:</p>
 <li>La <strong>integridad y consistencia</strong> de la información es crítica.</li>
 <li>Se necesita <strong>seguridad</strong> y <strong>gestión de permisos</strong> para el acceso a los datos.</li>
 </ul>
-<p><strong>Alternativas que podrías considerar:</strong></p>
+<h4 id="alternativas-que-podrias-considerar">Alternativas que podrías considerar:</h4>
 <ul>
-<li>Archivos de texto o JSON → Útiles para datos simples y temporales.</li>
-<li>Almacenamiento en memoria (ej. Redis) → Para datos de rápido acceso pero no críticos.</li>
-<li>APIs externas → Cuando no es necesario gestionar datos internamente.</li>
+<li><strong>Archivos de texto o JSON:</strong><br>
+Útiles para datos simples y temporales.</li>
+<li><strong>Almacenamiento en memoria (ej. Redis):</strong><br>
+Para datos de rápido acceso pero no críticos.</li>
+<li><strong>APIs externas:</strong><br>
+Cuando no es necesario gestionar datos internamente.</li>
 </ul>
 <blockquote>
 <p><strong>Regla general:</strong><br>
 Si tu aplicación depende de datos que deben <strong>perdurar y mantenerse organizados</strong>, utiliza una base de datos.</p>
 </blockquote>
-<hr>
 <h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <p>Para trabajar con bases de datos de forma eficiente y segura, se recomienda seguir estas <strong>buenas prácticas</strong>:</p>
-<h4 id="diseno">🔹 Diseño</h4>
+<h4 id="diseno">Diseño</h4>
 <ul>
 <li>Planifica la <strong>estructura de la base de datos</strong> antes de implementarla.</li>
 <li>Utiliza <strong>normalización</strong> para evitar redundancia y mejorar la integridad.</li>
 <li>Define <strong>relaciones claras</strong> entre tablas o colecciones.</li>
 </ul>
-<h4 id="seguridad">🔹 Seguridad</h4>
+<h4 id="seguridad">Seguridad</h4>
 <ul>
 <li>Implementa <strong>roles y permisos</strong> para controlar el acceso.</li>
 <li>Nunca almacenes <strong>contraseñas en texto plano</strong>, usa <em>hashing</em> seguro (ej. bcrypt).</li>
 <li>Protege la base de datos contra <strong>inyecciones SQL o NoSQL</strong> mediante consultas preparadas.</li>
 </ul>
-<h4 id="rendimiento">🔹 Rendimiento</h4>
+<h4 id="rendimiento">Rendimiento</h4>
 <ul>
 <li>Usa <strong>índices</strong> en columnas o campos que se consulten con frecuencia.</li>
 <li>Optimiza las consultas para evitar operaciones costosas.</li>
 <li>Evita cargar datos innecesarios (usa <code>SELECT</code> con campos específicos).</li>
 </ul>
-<h4 id="mantenimiento">🔹 Mantenimiento</h4>
+<h4 id="mantenimiento">Mantenimiento</h4>
 <ul>
 <li>Crea <strong>copias de seguridad</strong> regularmente (<em>backups</em>).</li>
 <li>Documenta la estructura y las relaciones de la base de datos.</li>
 <li>Realiza <strong>monitoreo y auditorías</strong> para detectar problemas a tiempo.</li>
 </ul>
-<h4 id="patrones-de-desarrollo">🔹 Patrones de desarrollo</h4>
+<h4 id="patrones-de-desarrollo">Patrones de desarrollo</h4>
 <ul>
 <li><strong>Repository Pattern:</strong> Para separar la lógica de acceso a datos del resto de la aplicación.</li>
 <li><strong>Migration System:</strong> Para llevar control de cambios en la estructura de la base de datos.</li>
@@ -133,10 +123,6 @@ Si tu aplicación depende de datos que deben <strong>perdurar y mantenerse organ
 </ul>
 <hr>
 <h2 id="resumen-rapido">Resumen rápido</h2>
-<blockquote>
-<p><strong>Síntesis rápida:</strong><br>
-Una base de datos es la mejor solución para almacenar, organizar y proteger datos críticos en aplicaciones que necesitan escalabilidad, integridad y seguridad.</p>
-</blockquote>
 <h3 id="fortalezas-principales">✅ Fortalezas principales:</h3>
 <ul>
 <li>Manejo eficiente de grandes volúmenes de datos.</li>
@@ -165,6 +151,7 @@ Una base de datos es la mejor solución para almacenar, organizar y proteger dat
 <li>Cuando se manejan <strong>datos estáticos</strong> que no cambian con frecuencia.</li>
 <li>En proyectos pequeños donde un archivo JSON o CSV es suficiente.</li>
 </ul>
+<hr>
 <h1 id="temas">Temas</h1>
 <ul>
 <li><a href="#node-js">inicio</a></li>
@@ -178,68 +165,47 @@ Una base de datos es la mejor solución para almacenar, organizar y proteger dat
 <hr>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Antes de trabajar con bases de datos, es importante conocer ciertos conceptos que te permitirán comprender mejor su funcionamiento:</p>
-<table>
-<thead>
-<tr>
-<th><strong>Concepto</strong></th>
-<th><strong>Descripción</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Dato</strong></td>
-<td>Unidad mínima de información almacenada en la base de datos.</td>
-</tr>
-<tr>
-<td><strong>Registro (Row)</strong></td>
-<td>Conjunto de datos relacionados que representan una entidad, como un usuario o un producto.</td>
-</tr>
-<tr>
-<td><strong>Tabla (Table)</strong></td>
-<td>Estructura que organiza registros en filas y columnas (modelo relacional).</td>
-</tr>
-<tr>
-<td><strong>Campo (Column)</strong></td>
-<td>Atributo o propiedad de una tabla, como <code>nombre</code>, <code>precio</code> o <code>email</code>.</td>
-</tr>
-<tr>
-<td><strong>Clave primaria (PK)</strong></td>
-<td>Identificador único para cada registro en una tabla.</td>
-</tr>
-<tr>
-<td><strong>Clave foránea (FK)</strong></td>
-<td>Campo que establece una relación entre dos tablas.</td>
-</tr>
-<tr>
-<td><strong>Relación</strong></td>
-<td>Conexión lógica entre tablas para vincular datos.</td>
-</tr>
-<tr>
-<td><strong>Query (Consulta)</strong></td>
-<td>Instrucción para recuperar, insertar, actualizar o eliminar datos.</td>
-</tr>
-<tr>
-<td><strong>Transacción</strong></td>
-<td>Conjunto de operaciones que se ejecutan como una unidad, asegurando integridad de datos.</td>
-</tr>
-<tr>
-<td><strong>Normalización</strong></td>
-<td>Proceso de organizar datos para evitar duplicidad y mejorar la consistencia.</td>
-</tr>
-<tr>
-<td><strong>Índice (Index)</strong></td>
-<td>Estructura que acelera la búsqueda y consulta de información.</td>
-</tr>
-<tr>
-<td><strong>Backup</strong></td>
-<td>Copia de seguridad de los datos para prevenir pérdidas.</td>
-</tr>
-<tr>
-<td><strong>Motor de Base de Datos (DBMS)</strong></td>
-<td>Software que gestiona la base de datos, como MySQL, PostgreSQL o MongoDB.</td>
-</tr>
-</tbody>
-</table>
+<!-- | **Concepto**                      | **Descripción**                                                                            |
+| --------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Dato**                          | Unidad mínima de información almacenada en la base de datos.                               |
+| **Registro (Row)**                | Conjunto de datos relacionados que representan una entidad, como un usuario o un producto. |
+| **Tabla (Table)**                 | Estructura que organiza registros en filas y columnas (modelo relacional).                 |
+| **Campo (Column)**                | Atributo o propiedad de una tabla, como `nombre`, `precio` o `email`.                      |
+| **Clave primaria (PK)**           | Identificador único para cada registro en una tabla.                                       |
+| **Clave foránea (FK)**            | Campo que establece una relación entre dos tablas.                                         |
+| **Relación**                      | Conexión lógica entre tablas para vincular datos.                                          |
+| **Query (Consulta)**              | Instrucción para recuperar, insertar, actualizar o eliminar datos.                         |
+| **Transacción**                   | Conjunto de operaciones que se ejecutan como una unidad, asegurando integridad de datos.   |
+| **Normalización**                 | Proceso de organizar datos para evitar duplicidad y mejorar la consistencia.               |
+| **Índice (Index)**                | Estructura que acelera la búsqueda y consulta de información.                              |
+| **Backup**                        | Copia de seguridad de los datos para prevenir pérdidas.                                    |
+| **Motor de Base de Datos (DBMS)** | Software que gestiona la base de datos, como MySQL, PostgreSQL o MongoDB.                  | -->
+<h3 id="dato">Dato</h3>
+<p>Unidad mínima de información almacenada en la base de datos. |</p>
+<h3 id="registro-row">Registro (Row)</h3>
+<p>Conjunto de datos relacionados que representan una entidad, como un usuario o un producto. |</p>
+<h3 id="tabla-table">Tabla (Table)</h3>
+<p>Estructura que organiza registros en filas y columnas (modelo relacional). |</p>
+<h3 id="campo-column">Campo (Column)</h3>
+<p>Atributo o propiedad de una tabla, como <code>nombre</code>, <code>precio</code> o <code>email</code>. |</p>
+<h3 id="clave-primaria-pk">Clave primaria (PK)</h3>
+<p>Identificador único para cada registro en una tabla. |</p>
+<h3 id="clave-foranea-fk">Clave foránea (FK)</h3>
+<p>Campo que establece una relación entre dos tablas. |</p>
+<h3 id="relacion">Relación</h3>
+<p>Conexión lógica entre tablas para vincular datos. |</p>
+<h3 id="query-consulta">Query (Consulta)</h3>
+<p>Instrucción para recuperar, insertar, actualizar o eliminar datos. |</p>
+<h3 id="transaccion">Transacción</h3>
+<p>Conjunto de operaciones que se ejecutan como una unidad, asegurando integridad de datos. |</p>
+<h3 id="normalizacion">Normalización</h3>
+<p>Proceso de organizar datos para evitar duplicidad y mejorar la consistencia. |</p>
+<h3 id="indice-index">Índice (Index)</h3>
+<p>Estructura que acelera la búsqueda y consulta de información. |</p>
+<h3 id="backup">Backup</h3>
+<p>Copia de seguridad de los datos para prevenir pérdidas. |</p>
+<h3 id="motor-de-base-de-datos-dbms">Motor de Base de Datos (DBMS</h3>
+<p>Software que gestiona la base de datos, como MySQL, PostgreSQL o MongoDB. |</p>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
@@ -272,56 +238,71 @@ Una base de datos es la mejor solución para almacenar, organizar y proteger dat
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="2-clientes-y-consolas">2. Clientes y Consolas</h3>
 <p>Para interactuar directamente con la base de datos:</p>
 <ul>
-<li><strong>MySQL Workbench</strong> → Interfaz visual para MySQL/MariaDB.</li>
-<li><strong>pgAdmin</strong> → Cliente oficial para PostgreSQL.</li>
-<li><strong>MongoDB Compass</strong> → Cliente visual para MongoDB.</li>
-<li><strong>DBeaver</strong> → Cliente universal compatible con múltiples DBMS.</li>
-<li><strong>HeidiSQL</strong> → Cliente ligero para MySQL y PostgreSQL.</li>
-<li><strong>Terminal / CLI</strong> → Ideal para administración rápida y scripting.</li>
+<li><strong>MySQL Workbench:</strong><br>
+Interfaz visual para MySQL/MariaDB.</li>
+<li><strong>pgAdmin:</strong><br>
+Cliente oficial para PostgreSQL.</li>
+<li><strong>MongoDB Compass:</strong><br>
+Cliente visual para MongoDB.</li>
+<li><strong>DBeaver:</strong><br>
+Cliente universal compatible con múltiples DBMS.</li>
+<li><strong>HeidiSQL:</strong><br>
+Cliente ligero para MySQL y PostgreSQL.</li>
+<li><strong>Terminal / CLI:</strong><br>
+Ideal para administración rápida y scripting.</li>
 </ul>
-<hr>
 <h3 id="3-herramientas-de-monitoreo-y-optimizacion">3. Herramientas de Monitoreo y Optimización</h3>
 <p>Sirven para <strong>analizar el rendimiento</strong> y mantener la base de datos en buen estado.</p>
 <ul>
-<li><strong>Prometheus + Grafana</strong> → Métricas y visualización en tiempo real.</li>
-<li><strong>Percona Toolkit</strong> → Optimización y diagnósticos para MySQL y MariaDB.</li>
-<li><strong>New Relic</strong> → Supervisión del rendimiento.</li>
-<li><strong>Elastic Stack (ELK)</strong> → Análisis y visualización de logs.</li>
+<li><strong>Prometheus + Grafana:</strong><br>
+Métricas y visualización en tiempo real.</li>
+<li><strong>Percona Toolkit:</strong><br>
+Optimización y diagnósticos para MySQL y MariaDB.</li>
+<li><strong>New Relic:</strong><br>
+Supervisión del rendimiento.</li>
+<li><strong>Elastic Stack (ELK:)</strong><br>
+Análisis y visualización de logs.</li>
 </ul>
-<hr>
 <h3 id="4-gestion-de-migraciones-y-modelado">4. Gestión de Migraciones y Modelado</h3>
 <p>Facilitan el control de cambios en la estructura de la base de datos:</p>
 <ul>
-<li><strong>Prisma</strong> → ORM moderno para Node.js.</li>
-<li><strong>Sequelize</strong> → ORM popular para Node.js con SQL.</li>
-<li><strong>Knex.js</strong> → Construcción de queries SQL en JavaScript.</li>
-<li><strong>Liquibase</strong> → Control de versiones y migraciones de bases de datos.</li>
-<li><strong>ERD Tools</strong> → Herramientas para diagramar bases de datos (dbdiagram.io, Draw.io).</li>
+<li><strong>Prisma:</strong><br>
+ORM moderno para Node.js.</li>
+<li><strong>Sequelize:</strong><br>
+ORM popular para Node.js con SQL.</li>
+<li><strong>Knex.js:</strong><br>
+Construcción de queries SQL en JavaScript.</li>
+<li><strong>Liquibase:</strong><br>
+Control de versiones y migraciones de bases de datos.</li>
+<li><strong>ERD Tools:</strong><br>
+Herramientas para diagramar bases de datos (dbdiagram.io, Draw.io).</li>
 </ul>
-<hr>
 <h3 id="5-backup-y-recuperacion">5. Backup y Recuperación</h3>
 <p>Herramientas para copias de seguridad y restauración:</p>
 <ul>
 <li><code>mysqldump</code> → Exportar bases de datos MySQL.</li>
 <li><code>pg_dump</code> → Exportar bases de datos PostgreSQL.</li>
-<li><strong>MongoDB Atlas Backup</strong> → Copias automáticas en la nube.</li>
-<li><strong>Duplicati</strong> → Backups programados y cifrados.</li>
+<li><strong>MongoDB Atlas Backup:</strong><br>
+Copias automáticas en la nube.</li>
+<li><strong>Duplicati:</strong><br>
+Backups programados y cifrados.</li>
 </ul>
-<hr>
 <h3 id="6-extensiones-y-plugins-para-vscode">6. Extensiones y Plugins para VSCode</h3>
 <p>Facilitan la integración del desarrollo con la base de datos:</p>
 <ul>
-<li><strong>SQLTools</strong> → Conexión directa a bases de datos SQL.</li>
-<li><strong>MongoDB for VSCode</strong> → Soporte oficial para MongoDB.</li>
-<li><strong>Database Client</strong> → Exploración y ejecución de queries.</li>
-<li><strong>Prisma Extension</strong> → Integración para trabajar con Prisma ORM.</li>
+<li><strong>SQLTools:</strong><br>
+Conexión directa a bases de datos SQL.</li>
+<li><strong>MongoDB for VSCode:</strong><br>
+Soporte oficial para MongoDB.</li>
+<li><strong>Database Client:</strong><br>
+Exploración y ejecución de queries.</li>
+<li><strong>Prisma Extension:</strong><br>
+Integración para trabajar con Prisma ORM.
+<a href="#temas">🔼 temas</a></li>
 </ul>
-<hr>
-<p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
 <p>Fragmentos de código que se usan con frecuencia en proyectos de bases de datos:</p>
@@ -337,7 +318,6 @@ const db = await mysql.createConnection({
 
 console.log(&quot;Conectado a la base de datos&quot;);
 </code></pre>
-<hr>
 <h3 id="2-conexion-a-mongodb-node-js-con-mongoose">2. Conexión a MongoDB (Node.js con <code>mongoose</code>)</h3>
 <pre><code class="language-js">import mongoose from &quot;mongoose&quot;;
 
@@ -346,7 +326,6 @@ mongoose
   .then(() =&gt; console.log(&quot;Conexión exitosa a MongoDB&quot;))
   .catch((err) =&gt; console.error(&quot;Error de conexión&quot;, err));
 </code></pre>
-<hr>
 <h3 id="3-crear-modelo-con-mongoose">3. Crear Modelo con Mongoose</h3>
 <pre><code class="language-js">const Usuario = mongoose.model(&quot;Usuario&quot;, {
   nombre: String,
@@ -354,21 +333,17 @@ mongoose
   activo: { type: Boolean, default: true },
 });
 </code></pre>
-<hr>
 <h3 id="4-insertar-registro-sql">4. Insertar Registro SQL</h3>
 <pre><code class="language-sql">INSERT INTO usuarios (nombre, email)
 VALUES ('Ana López', 'ana@example.com');
 </code></pre>
-<hr>
 <h3 id="5-consulta-basica-con-filtro-sql">5. Consulta Básica con Filtro SQL</h3>
 <pre><code class="language-sql">SELECT nombre, email FROM usuarios WHERE activo = 1;
 </code></pre>
-<hr>
 <h3 id="6-busqueda-de-documento-en-mongodb">6. Búsqueda de Documento en MongoDB</h3>
 <pre><code class="language-js">const usuario = await Usuario.findOne({ email: &quot;ana@example.com&quot; });
 console.log(usuario);
 </code></pre>
-<hr>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="comandos">Comandos</h1>
@@ -379,7 +354,6 @@ SHOW DATABASES;            -- Listar bases de datos
 USE mi_base;               -- Seleccionar base de datos
 DROP DATABASE mi_base;     -- Eliminar base de datos
 </code></pre>
-<hr>
 <h3 id="tablas">Tablas</h3>
 <pre><code class="language-sql">CREATE TABLE productos (  -- Crear tabla
   id INT PRIMARY KEY AUTO_INCREMENT,
@@ -391,7 +365,6 @@ SHOW TABLES;               -- Listar tablas
 DESCRIBE productos;        -- Ver estructura de la tabla
 DROP TABLE productos;      -- Eliminar tabla
 </code></pre>
-<hr>
 <h3 id="crud-basico-create-read-update-delete">CRUD Básico (Create, Read, Update, Delete)</h3>
 <pre><code class="language-sql">-- Crear
 INSERT INTO productos (nombre, precio) VALUES ('Teclado', 50.00);
@@ -406,7 +379,6 @@ UPDATE productos SET precio = 45.00 WHERE id = 1;
 -- Eliminar
 DELETE FROM productos WHERE id = 1;
 </code></pre>
-<hr>
 <h3 id="relaciones-y-claves">Relaciones y Claves</h3>
 <pre><code class="language-sql">ALTER TABLE pedidos
 ADD FOREIGN KEY (producto_id) REFERENCES productos(id);  -- Clave foránea
@@ -414,7 +386,6 @@ ADD FOREIGN KEY (producto_id) REFERENCES productos(id);  -- Clave foránea
 CREATE INDEX idx_precio ON productos(precio);            -- Crear índice
 DROP INDEX idx_precio ON productos;                      -- Eliminar índice
 </code></pre>
-<hr>
 <h3 id="transacciones">Transacciones</h3>
 <pre><code class="language-sql">START TRANSACTION;
 UPDATE productos SET precio = precio - 5 WHERE id = 1;
@@ -422,7 +393,6 @@ UPDATE productos SET precio = precio + 5 WHERE id = 2;
 COMMIT;   -- Confirmar cambios
 ROLLBACK; -- Deshacer cambios
 </code></pre>
-<hr>
 <h3 id="backup-y-restauracion">Backup y Restauración</h3>
 <pre><code class="language-bash"># Exportar base de datos MySQL
 mysqldump -u root -p mi_base &gt; backup.sql
@@ -430,7 +400,6 @@ mysqldump -u root -p mi_base &gt; backup.sql
 # Importar base de datos MySQL
 mysql -u root -p mi_base &lt; backup.sql
 </code></pre>
-<hr>
 <h3 id="comandos-basicos-de-mongodb-cli">Comandos Básicos de MongoDB (CLI)</h3>
 <pre><code class="language-bash">show dbs                     # Listar bases de datos
 use mi_base                  # Seleccionar base
@@ -443,112 +412,86 @@ db.users.deleteOne({nombre: &quot;Ana&quot;})  # Eliminar
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
-<h2 id="nivel-basico">🟢 Nivel Básico</h2>
+<h2 id="basico">🟢 Básico</h2>
 <h3 id="1-conceptos-fundamentales">1. Conceptos fundamentales</h3>
 <p><strong>Diferencia entre base de datos relacional y no relacional:</strong></p>
-<ul>
-<li>
-<p><strong>Base de datos relacional (SQL):</strong></p>
+<h4 id="base-de-datos-relacional-sql">Base de datos relacional (SQL):</h4>
 <ul>
 <li>Organiza la información en <strong>tablas con filas y columnas</strong>.</li>
 <li>Usa <strong>relaciones</strong> (claves primarias y foráneas) para conectar datos.</li>
 <li>Ejemplo: MySQL, PostgreSQL, Oracle Database.</li>
 </ul>
-</li>
-<li>
-<p><strong>Base de datos no relacional (NoSQL):</strong></p>
+<h4 id="base-de-datos-no-relacional-nosql">Base de datos no relacional (NoSQL):</h4>
 <ul>
 <li>Almacena datos en formatos <strong>flexibles</strong>, como documentos, grafos o pares clave-valor.</li>
 <li>No requiere un esquema fijo.</li>
 <li>Ejemplo: MongoDB, Redis, Cassandra.</li>
-</ul>
-</li>
 </ul>
 <blockquote>
 <p><strong>Resumen:</strong><br>
 SQL → Datos estructurados y relaciones complejas.<br>
 NoSQL → Datos flexibles y escalabilidad horizontal.</p>
 </blockquote>
-<hr>
 <h3 id="2-normalizacion">2. Normalización</h3>
 <p>La <strong>normalización</strong> es el proceso de <strong>organizar datos</strong> para minimizar la redundancia y mejorar la integridad.</p>
 <p><strong>Formas normales:</strong></p>
-<ul>
-<li>
-<p><strong>1FN (Primera Forma Normal):</strong></p>
+<h4 id="1fn-primera-forma-normal">1FN (Primera Forma Normal):</h4>
 <ul>
 <li>Cada campo debe contener un <strong>valor atómico</strong> (sin listas o conjuntos).</li>
 <li>Ejemplo: En lugar de <code>telefonos: &quot;123, 456&quot;</code>, tener una tabla separada de teléfonos.</li>
 </ul>
-</li>
-<li>
-<p><strong>2FN (Segunda Forma Normal):</strong></p>
+<h4 id="2fn-segunda-forma-normal">2FN (Segunda Forma Normal):</h4>
 <ul>
 <li>Cumple la 1FN y <strong>todos los campos dependen de la clave primaria</strong>.</li>
 </ul>
-</li>
-<li>
-<p><strong>3FN (Tercera Forma Normal):</strong></p>
+<h4 id="3fn-tercera-forma-normal">3FN (Tercera Forma Normal):</h4>
 <ul>
 <li>Cumple la 2FN y <strong>no tiene dependencias transitivas</strong>, es decir, que un campo no dependa de otro campo no clave.</li>
-</ul>
-</li>
 </ul>
 <blockquote>
 <p><strong>Importancia:</strong><br>
 Reduce redundancia, evita inconsistencias y mejora el rendimiento.</p>
 </blockquote>
-<hr>
 <h3 id="3-tipos-de-relaciones">3. Tipos de relaciones</h3>
+<h4 id="uno-a-uno-1-1">Uno a uno (1:1):</h4>
 <ul>
-<li>
-<p><strong>Uno a uno (1:1):</strong><br>
-Un registro en una tabla se relaciona con <strong>solo un registro</strong> en otra.<br>
-<em>Ejemplo:</em> Cada usuario tiene un único perfil.</p>
+<li>Un registro en una tabla se relaciona con <strong>solo un registro</strong> en otra.</li>
+<li><em>Ejemplo:</em> Cada usuario tiene un único perfil.</li>
+</ul>
 <pre><code class="language-sql">usuarios.id = perfiles.usuario_id
 </code></pre>
-</li>
-<li>
-<p><strong>Uno a muchos (1:N):</strong><br>
-Un registro en una tabla se relaciona con <strong>varios registros</strong> en otra.<br>
-<em>Ejemplo:</em> Un cliente puede tener varios pedidos.</p>
+<h4 id="uno-a-muchos-1-n">Uno a muchos (1:N):</h4>
+<ul>
+<li>Un registro en una tabla se relaciona con <strong>varios registros</strong> en otra.</li>
+<li><em>Ejemplo:</em> Un cliente puede tener varios pedidos.</li>
+</ul>
 <pre><code class="language-sql">clientes.id = pedidos.cliente_id
 </code></pre>
-</li>
-<li>
-<p><strong>Muchos a muchos (N:M):</strong><br>
-Varios registros de una tabla se relacionan con <strong>varios registros</strong> de otra.<br>
-<em>Ejemplo:</em> Estudiantes y cursos (un estudiante puede inscribirse en muchos cursos y viceversa).<br>
-Se necesita una <strong>tabla intermedia</strong>:</p>
+<h4 id="muchos-a-muchos-n-m">Muchos a muchos (N:M):</h4>
+<ul>
+<li>Varios registros de una tabla se relacionan con <strong>varios registros</strong> de otra.</li>
+<li><em>Ejemplo:</em> Estudiantes y cursos (un estudiante puede inscribirse en muchos cursos y viceversa).<br>
+Se necesita una <strong>tabla intermedia</strong>:</li>
+</ul>
 <pre><code class="language-sql">estudiante_curso (estudiante_id, curso_id)
 </code></pre>
-</li>
-</ul>
-<hr>
 <h3 id="4-tipos-de-datos-char-vs-varchar">4. Tipos de datos (CHAR vs VARCHAR)</h3>
-<ul>
-<li>
-<p><strong>CHAR(n):</strong></p>
+<h4 id="char-n">CHAR(n):</h4>
 <ul>
 <li>Tamaño fijo.</li>
 <li>Si el dato es más corto, se rellena con espacios.</li>
 <li><strong>Uso:</strong> Códigos de longitud fija como DNI, CUIL.</li>
 </ul>
-</li>
-<li>
-<p><strong>VARCHAR(n):</strong></p>
+<h4 id="varchar-n">VARCHAR(n):</h4>
 <ul>
 <li>Tamaño variable.</li>
 <li>Más eficiente para textos de longitud variable.</li>
 <li><strong>Uso:</strong> Nombres, direcciones, correos electrónicos.</li>
 </ul>
-</li>
-</ul>
 <blockquote>
 <p><strong>Regla general:</strong><br>
 Usa <code>CHAR</code> para valores de longitud fija y <code>VARCHAR</code> para texto variable.</p>
 </blockquote>
-<hr>
 <h3 id="5-consultas-simples">5. Consultas simples</h3>
 <p><strong>Consulta SQL:</strong></p>
 <pre><code class="language-sql">SELECT nombre, correo
@@ -557,7 +500,7 @@ WHERE estado = 'Activo'
 ORDER BY nombre ASC;
 </code></pre>
 <hr>
-<h2 id="nivel-intermedio">🟡 Nivel Intermedio</h2>
+<h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-indices">6. Índices</h3>
 <p>Un <strong>índice</strong> es una estructura que <strong>acelera la búsqueda de datos</strong> en una tabla, similar a un índice en un libro.</p>
 <p><strong>Ventajas:</strong></p>
@@ -573,15 +516,18 @@ ORDER BY nombre ASC;
 <p><strong>Consejo:</strong><br>
 Usa índices en columnas que se consulten frecuentemente, pero no abuses de ellos.</p>
 </blockquote>
-<hr>
 <h3 id="7-transacciones-y-propiedades-acid">7. Transacciones y Propiedades ACID</h3>
 <p>Las <strong>transacciones</strong> son conjuntos de operaciones que se ejecutan como una sola unidad lógica.</p>
 <p><strong>Propiedades ACID:</strong></p>
 <ul>
-<li><strong>A - Atomicidad:</strong> Todas las operaciones se completan o ninguna se aplica.</li>
-<li><strong>C - Consistencia:</strong> La base de datos pasa de un estado válido a otro.</li>
-<li><strong>I - Aislamiento:</strong> Las transacciones no interfieren entre sí.</li>
-<li><strong>D - Durabilidad:</strong> Los cambios persisten incluso ante fallas.</li>
+<li><strong>A - Atomicidad:</strong><br>
+Todas las operaciones se completan o ninguna se aplica.</li>
+<li><strong>C - Consistencia:</strong><br>
+La base de datos pasa de un estado válido a otro.</li>
+<li><strong>I - Aislamiento:</strong><br>
+Las transacciones no interfieren entre sí.</li>
+<li><strong>D - Durabilidad:</strong><br>
+Los cambios persisten incluso ante fallas.</li>
 </ul>
 <p><strong>Ejemplo en operación bancaria:</strong></p>
 <ul>
@@ -593,45 +539,51 @@ Usa índices en columnas que se consulten frecuentemente, pero no abuses de ello
 </ol>
 </li>
 </ul>
-<hr>
 <h3 id="8-joins">8. Joins</h3>
 <p><strong>Diferencias:</strong></p>
 <ul>
-<li><strong>INNER JOIN:</strong> Solo devuelve registros que existen en ambas tablas.</li>
-<li><strong>LEFT JOIN:</strong> Devuelve todos los registros de la tabla izquierda, aunque no haya coincidencias en la derecha.</li>
-<li><strong>RIGHT JOIN:</strong> Devuelve todos los registros de la tabla derecha, aunque no haya coincidencias en la izquierda.</li>
-<li><strong>FULL OUTER JOIN:</strong> Devuelve todos los registros de ambas tablas, coincidan o no.</li>
+<li><strong>INNER JOIN:</strong><br>
+Solo devuelve registros que existen en ambas tablas.</li>
+<li><strong>LEFT JOIN:</strong><br>
+Devuelve todos los registros de la tabla izquierda, aunque no haya coincidencias en la derecha.</li>
+<li><strong>RIGHT JOIN:</strong><br>
+Devuelve todos los registros de la tabla derecha, aunque no haya coincidencias en la izquierda.</li>
+<li><strong>FULL OUTER JOIN:</strong><br>
+Devuelve todos los registros de ambas tablas, coincidan o no.</li>
 </ul>
 <p><strong>Consulta: Pedidos con clientes (incluyendo clientes faltantes):</strong></p>
 <pre><code class="language-sql">SELECT p.id_pedido, p.fecha, c.nombre
 FROM pedidos p
 LEFT JOIN clientes c ON p.cliente_id = c.id;
 </code></pre>
-<hr>
 <h3 id="9-consultas-anidadas">9. Consultas anidadas</h3>
 <p><strong>Empleados con salario superior al promedio:</strong></p>
 <pre><code class="language-sql">SELECT nombre
 FROM empleados
 WHERE salario &gt; (SELECT AVG(salario) FROM empleados);
 </code></pre>
-<hr>
 <h3 id="10-modelado-sistema-de-vuelos">10. Modelado (Sistema de vuelos)</h3>
 <p>Criterios a considerar:</p>
 <ul>
-<li><strong>Entidades principales:</strong> vuelos, aviones, aeropuertos, pasajeros, reservas.</li>
+<li><strong>Entidades principales:</strong><br>
+vuelos, aviones, aeropuertos, pasajeros, reservas.</li>
 <li><strong>Relaciones:</strong>
 <ul>
 <li>Un vuelo tiene un avión asignado (1:1).</li>
 <li>Un vuelo puede tener múltiples reservas (1:N).</li>
 </ul>
 </li>
-<li><strong>Integridad:</strong> Uso de claves primarias y foráneas.</li>
-<li><strong>Escalabilidad:</strong> Capacidad de crecer sin perder rendimiento.</li>
-<li><strong>Seguridad:</strong> Control de accesos y roles.</li>
-<li><strong>Normalización:</strong> Evitar redundancia en datos como aeropuertos o pasajeros.</li>
+<li><strong>Integridad:</strong><br>
+Uso de claves primarias y foráneas.</li>
+<li><strong>Escalabilidad:</strong><br>
+Capacidad de crecer sin perder rendimiento.</li>
+<li><strong>Seguridad:</strong><br>
+Control de accesos y roles.</li>
+<li><strong>Normalización:</strong><br>
+Evitar redundancia en datos como aeropuertos o pasajeros.</li>
 </ul>
 <hr>
-<h2 id="nivel-avanzado">🔴 Nivel Avanzado</h2>
+<h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-optimizacion-de-rendimiento">11. Optimización de rendimiento</h3>
 <p>Pasos para diagnosticar un reporte lento:</p>
 <ol>
@@ -642,27 +594,19 @@ WHERE salario &gt; (SELECT AVG(salario) FROM empleados);
 <li><strong>Optimizar joins</strong> y subconsultas.</li>
 <li>Considerar <strong>caché</strong> o materialización de vistas.</li>
 </ol>
-<hr>
 <h3 id="12-sharding-vs-replicacion">12. Sharding vs Replicación</h3>
-<ul>
-<li>
-<p><strong>Sharding:</strong></p>
+<h4 id="sharding">Sharding:</h4>
 <ul>
 <li>Divide los datos en <strong>múltiples servidores</strong>.</li>
 <li>Mejora la <strong>escalabilidad horizontal</strong>.</li>
 <li><em>Ejemplo:</em> Distribuir usuarios según regiones: América en un servidor, Europa en otro.</li>
 </ul>
-</li>
-<li>
-<p><strong>Replicación:</strong></p>
+<h4 id="replicacion">Replicación:</h4>
 <ul>
 <li>Copia exacta de la base de datos en diferentes servidores.</li>
 <li>Mejora <strong>disponibilidad y tolerancia a fallos</strong>.</li>
 <li><em>Ejemplo:</em> Tener un servidor principal y varios de solo lectura.</li>
 </ul>
-</li>
-</ul>
-<hr>
 <h3 id="13-integridad-referencial">13. Integridad referencial</h3>
 <p>Garantiza que las relaciones entre tablas sean <strong>coherentes</strong>.</p>
 <p><strong>Ejemplo: Clientes y Pedidos</strong></p>
@@ -680,20 +624,23 @@ CREATE TABLE pedidos (
 <blockquote>
 <p>Así, no se puede crear un pedido con un cliente inexistente.</p>
 </blockquote>
-<hr>
 <h3 id="14-gestion-de-concurrencia">14. Gestión de concurrencia</h3>
-<p><strong>Problemas comunes:</strong></p>
+<h4 id="problemas-comunes">Problemas comunes:</h4>
 <ul>
-<li><strong>Dirty read:</strong> Leer datos no confirmados por otra transacción.</li>
-<li><strong>Lost update:</strong> Dos transacciones sobrescriben cambios sin darse cuenta.</li>
+<li><strong>Dirty read:</strong><br>
+Leer datos no confirmados por otra transacción.</li>
+<li><strong>Lost update:</strong><br>
+Dos transacciones sobrescriben cambios sin darse cuenta.</li>
 </ul>
-<p><strong>Estrategias:</strong></p>
+<h4 id="estrategias">Estrategias:</h4>
 <ul>
-<li><strong>Bloqueos (Locks):</strong> Exclusivos o compartidos para evitar conflictos.</li>
-<li><strong>Versionado (MVCC):</strong> Cada transacción ve una copia consistente de los datos.</li>
-<li><strong>Optimistic Locking:</strong> Se asume que no habrá conflictos y se validan antes de confirmar.</li>
+<li><strong>Bloqueos (Locks):</strong><br>
+Exclusivos o compartidos para evitar conflictos.</li>
+<li><strong>Versionado (MVCC):</strong><br>
+Cada transacción ve una copia consistente de los datos.</li>
+<li><strong>Optimistic Locking:</strong><br>
+Se asume que no habrá conflictos y se validan antes de confirmar.</li>
 </ul>
-<hr>
 <h3 id="15-migraciones-y-versiones">15. Migraciones y versiones</h3>
 <p>Buenas prácticas para manejar cambios en producción:</p>
 <ul>
@@ -707,68 +654,6 @@ CREATE TABLE pedidos (
 <p><strong>Regla de oro:</strong> Nunca modificar una base de datos en producción sin respaldo y sin pruebas previas.</p>
 </blockquote>
 <p><a href="#temas">🔼 temas</a></p>
-<h1></h1>
-<!-- # Seccion 02 •
-
-## Snippets rápidos
-
-Fragmentos de código que usas frecuentemente:
-
-## Comandos/sintaxis mas usadados en base de datos
-
-Resumir comandos principales con ejemplos **cortos y directos**. -->
-<!-- # Seccion 03 •
-
-## Conceptos Claves
-
-Genera 15 preguntas de entrevista técnica sobre bases de datos.
-
-- Incluye temas básicos, intermedios y avanzados.
-- Mezcla teoría y práctica.
-- Cubre sintaxis, estructuras de datos, buenas prácticas y casos reales.
-- Redacta las preguntas de forma clara, sin respuestas.
-
-### 🟢 Nivel Básico
-
-1. Conceptos fundamentales:
-   - Explica la diferencia entre una base de datos relacional y una no relacional, y menciona ejemplos de cada tipo.
-2. Normalización:
-   - ¿Qué es la normalización en bases de datos? Describe al menos tres formas normales y su importancia.
-3. Tipos de relaciones:
-   - Define y da un ejemplo de cada tipo de relación: uno a uno (1:1), uno a muchos (1:N) y muchos a muchos (N:M).
-4. Tipos de datos:
-   - En SQL, ¿cuál es la diferencia entre CHAR y VARCHAR? ¿Cuándo usarías cada uno?
-5. Consultas simples:
-   - Escribe una consulta SQL para obtener el nombre y correo de todos los clientes cuyo estado sea "Activo", ordenados alfabéticamente por nombre.
-
-### 🟡 Nivel Intermedio
-
-6. Índices:
-   - Explica qué es un índice en una base de datos, cómo mejora el rendimiento y en qué casos podría afectar negativamente.
-7. Transacciones:
-   - Describe las propiedades ACID de una transacción y brinda un ejemplo práctico de cómo se aplican en una operación bancaria.
-8. Joins:
-   - Explica la diferencia entre INNER JOIN, LEFT JOIN, RIGHT JOIN y FULL OUTER JOIN.
-   - Luego, escribe una consulta para listar todos los pedidos junto con la información de sus clientes, incluso si el cliente no existe.
-9. Consultas anidadas:
-   - Escribe una consulta SQL que devuelva el nombre de los empleados que tienen un salario superior al promedio de la empresa.
-10. Modelado:
-    - ¿Qué criterios considerarías al diseñar un modelo de base de datos para un sistema de reservas de vuelos?
-
-### 🔴 Nivel Avanzado
-
-11. Optimización:
-    - Un reporte que antes tardaba segundos ahora tarda varios minutos en ejecutarse. ¿Qué pasos seguirías para diagnosticar y mejorar su rendimiento?
-12. Sharding vs Replicación:
-    - Explica la diferencia entre sharding y replicación.
-    - Da un ejemplo de un escenario donde usarías cada uno.
-13. Integridad referencial:
-    - ¿Cómo implementarías integridad referencial en una base de datos?
-    - Explica con un ejemplo de tablas Pedidos y Clientes.
-14. Gestión de concurrencia:
-    - Un sistema permite que múltiples usuarios editen registros al mismo tiempo. ¿Cómo manejarías conflictos de concurrencia y qué estrategias existen para prevenir problemas como el dirty read o el lost update?
-15. Migraciones y versiones:
-    - Describe las buenas prácticas para gestionar cambios en la estructura de una base de datos en un proyecto que está en producción. -->
 
     </main>
     <hr>

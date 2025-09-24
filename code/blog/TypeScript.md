@@ -123,11 +123,11 @@ Antes de comenzar a trabajar con TypeScript, es importante comprender algunos co
 
 TypeScript es un **superset de JavaScript**, por lo que debes conocer:
 
-- **Tipos primitivos**: `string`, `number`, `boolean`, `null`, `undefined`.
-- **Funciones y parámetros**.
-- **Objetos y arreglos**.
-- **Clases y herencia**.
-- **Módulos** (`import` y `export`).
+- Tipos primitivos: `string`, `number`, `boolean`, `null`, `undefined`.
+- Funciones y parámetros.
+- Objetos y arreglos.
+- Clases y herencia.
+- Módulos (`import` y `export`).
 
 > ⚠️ _Sin una base sólida de JavaScript, aprender TypeScript será más complicado._
 
@@ -173,10 +173,10 @@ const user: Usuario = {
 
 TypeScript tiene soporte completo para POO:
 
-- **Clases** (`class`)
-- **Herencia** (`extends`)
-- **Modificadores de acceso** (`public`, `private`, `protected`)
-- **Abstract Classes** y **Interfaces**
+- Clases (`class`)
+- Herencia (`extends`)
+- Modificadores de acceso (`public`, `private`, `protected`)
+- Abstract Classes y Interfaces
 
 Ejemplo:
 
@@ -255,28 +255,11 @@ Permite ejecutar y gestionar proyectos de TypeScript.
 
 El compilador oficial de TypeScript.
 
-Instalación global:
-
 ```bash
-npm install -g typescript
-```
-
-Verificar versión:
-
-```bash
-tsc -v
-```
-
-Compilar un archivo:
-
-```bash
-tsc index.ts
-```
-
-Inicializar proyecto con `tsconfig.json`:
-
-```bash
-tsc --init
+npm install -g typescript   # Instalación global
+tsc -v                      # Verificar versión
+tsc index.ts                # Compilar un archivo
+tsc --init                  # Inicializar proyecto con `tsconfig.json`
 ```
 
 ### 3. Visual Studio Code (VSCode)
@@ -285,25 +268,22 @@ El editor más popular para trabajar con TypeScript.
 
 Extensiones recomendadas:
 
-- **TypeScript Hero** → Mejora la organización de imports.
-- **ESLint** → Mantiene un estilo de código consistente.
-- **Prettier** → Formateo automático de código.
-- **Error Lens** → Destaca errores directamente en el editor.
+- **TypeScript Hero**\
+  Mejora la organización de imports.
+- **ESLint**\
+  Mantiene un estilo de código consistente.
+- **Prettier**\
+  Formateo automático de código.
+- **Error Lens**\
+  Destaca errores directamente en el editor.
 
 ### 4. ts-node
 
 Permite ejecutar archivos TypeScript directamente **sin compilar manualmente**.
 
-Instalación:
-
 ```bash
-npm install -g ts-node
-```
-
-Uso:
-
-```bash
-ts-node app.ts
+npm install -g ts-node    # Instalación
+ts-node app.ts            # Uso
 ```
 
 ### 5. ESLint + Prettier
@@ -333,10 +313,14 @@ git push origin main
 
 ### 7. Frameworks y Librerías compatibles
 
-- **React con TypeScript** → Interfaces y props tipadas.
-- **Express con TypeScript** → Backend robusto y escalable.
-- **NestJS** → Framework orientado a microservicios y POO.
-- **TypeORM / Prisma** → Manejo tipado de bases de datos.
+- **React con TypeScript**\
+  Interfaces y props tipadas.
+- **Express con TypeScript**\
+  Backend robusto y escalable.
+- **NestJS**\
+  Framework orientado a microservicios y POO.
+- **TypeORM / Prisma**\
+  Manejo tipado de bases de datos.
 
 [🔼 temas](#temas)
 
@@ -598,20 +582,32 @@ La diferencia principal es que TypeScript permite detectar errores en tiempo de 
 
 ### 2. Tipos primitivos en TypeScript
 
-| Tipo        | Ejemplo                                         |
-| ----------- | ----------------------------------------------- |
-| `string`    | `let nombre: string = "Fernando";`              |
-| `number`    | `let edad: number = 30;`                        |
-| `boolean`   | `let activo: boolean = true;`                   |
-| `null`      | `let valor: null = null;`                       |
-| `undefined` | `let indefinido: undefined = undefined;`        |
-| `bigint`    | `let numeroGrande: bigint = 9007199254740991n;` |
-| `symbol`    | `let id: symbol = Symbol("id");`                |
+| variable            |          tipo | valor                |
+| ------------------- | ------------: | -------------------- |
+| `let nombre:`       |    `string =` | `"Fernando";`        |
+| `let edad:`         |    `number =` | `30;`                |
+| `let activo:`       |   `boolean =` | `true;`              |
+| `let valor:`        |      `null =` | `null;`              |
+| `let indefinido:`   | `undefined =` | `undefined;`         |
+| `let numeroGrande:` |    `bigint =` | `9007199254740991n;` |
+| `let id:`           |    `symbol =` | `Symbol("id");`      |
+
+```bash
+let nombre: string = "Fernando";                 # string
+let edad: number = 30;                           # number
+let activo: boolean = true;                      # boolean
+let valor: null = null;                          # null
+let indefinido: undefined = undefined;           # undefined
+let numeroGrande: bigint = 9007199254740991n;    # bigint
+let id: symbol = Symbol("id");                   # symbol
+```
 
 ### 3. Interfaces vs Type Aliases
 
-- **Interfaces (`interface`):** Definen la estructura de objetos y permiten herencia.
-- **Type Aliases (`type`):** Pueden representar objetos, uniones, funciones, etc.
+- **Interfaces (`interface`):**\
+  Definen la estructura de objetos y permiten herencia.
+- **Type Aliases (`type`):**\
+  Pueden representar objetos, uniones, funciones, etc.
 
 **Ejemplo:**
 
@@ -743,8 +739,10 @@ function hacerSonido(animal: Perro | Gato) {
 
 ### 10. Tuples vs Arreglos
 
-- **Tuples:** Longitud y tipos **fijos**.
-- **Arreglos normales:** Longitud y tipos variables.
+- **Tuples:**\
+  Longitud y tipos **fijos**.
+- **Arreglos normales:**\
+  Longitud y tipos variables.
 
 **Ejemplo:**
 

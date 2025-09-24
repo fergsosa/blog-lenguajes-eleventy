@@ -21,10 +21,14 @@ Eleventy es una herramienta que convierte archivos de contenido como **Markdown*
 
 #### Diferencias principales respecto a otros SSGs:
 
-- **Simplicidad:** Configuración mínima para comenzar a trabajar.
-- **Flexibilidad:** Soporte para múltiples lenguajes de plantillas sin depender de uno solo.
-- **Ligereza:** No requiere un framework completo como React, Vue o Angular.
-- **Velocidad:** Generación rápida de sitios estáticos optimizados.
+- **Simplicidad:**\
+  Configuración mínima para comenzar a trabajar.
+- **Flexibilidad:**\
+  Soporte para múltiples lenguajes de plantillas sin depender de uno solo.
+- **Ligereza:**\
+  No requiere un framework completo como React, Vue o Angular.
+- **Velocidad:**\
+  Generación rápida de sitios estáticos optimizados.
 
 > A diferencia de frameworks como Next.js o Gatsby, Eleventy **no añade JavaScript por defecto**, permitiendo sitios más ligeros y rápidos.
 
@@ -44,11 +48,16 @@ Eleventy se utiliza principalmente para crear sitios web donde el contenido es e
 
 #### Con Eleventy puedes crear una variedad de proyectos web, entre ellos:
 
-- **Blogs** con categorías, etiquetas y RSS.
-- **Documentación** para proyectos open source o empresas.
-- **Portfolios** minimalistas y optimizados.
-- **Landing pages** enfocadas en conversión y SEO.
-- **Sitios corporativos** con contenido estático y de fácil gestión.
+- **Blogs:**\
+  con categorías, etiquetas y RSS.
+- **Documentación:**\
+  para proyectos open source o empresas.
+- **Portfolios:**\
+  minimalistas y optimizados.
+- **Landing pages:**\
+  enfocadas en conversión y SEO.
+- **Sitios corporativos:**\
+  con contenido estático y de fácil gestión.
 
 > Básicamente, cualquier sitio donde **no se requiera lógica compleja de backend**.
 
@@ -128,44 +137,44 @@ Eleventy se utiliza principalmente para crear sitios web donde el contenido es e
 
 Estos conceptos son esenciales para trabajar con Eleventy de manera efectiva:
 
-### **Sitios estáticos (Static Sites):**
+### Sitios estáticos (Static Sites):
 
 Páginas web que no dependen de un servidor para generar contenido dinámico. Todo el HTML se genera antes del despliegue.
 
-### **Plantillas (Templates):**
+### Plantillas (Templates):
 
 Archivos que definen la estructura de tus páginas. Eleventy soporta varios lenguajes de plantillas como:\
 • Nunjucks • Liquid • Handlebars • Mustache • EJS • Markdown
 
-### **Layouts:**
+### Layouts:
 
 Plantillas base reutilizables que permiten mantener un diseño consistente en varias páginas.
 
-### **Includes (Inclusiones):**
+### Includes (Inclusiones):
 
 Fragmentos de código que se pueden insertar dentro de plantillas para evitar duplicación.
 
-### **Collections:**
+### Collections:
 
 Conjuntos de contenido agrupados por categorías, etiquetas o cualquier criterio personalizado.
 
-### **Front Matter:**
+### Front Matter:
 
 Metadatos escritos en YAML, JSON o JavaScript al inicio de archivos que permiten configurar propiedades de cada página.
 
-### **Data Files:**
+### Data Files:
 
 Archivos en `_data/` que proporcionan información global o específica de páginas para usar en plantillas.
 
-### **Filters y Shortcodes:**
+### Filters y Shortcodes:
 
 Funciones que transforman datos o generan contenido dinámico durante la generación del sitio.
 
-### **Markdown:**
+### Markdown:
 
 Lenguaje de marcado ligero usado para escribir contenido fácilmente, que Eleventy convierte en HTML.
 
-### **Build/Deploy:**
+### Build/Deploy:
 
 Proceso de generar los archivos estáticos y subirlos a un servidor o servicio de hosting.
 
@@ -177,41 +186,41 @@ Proceso de generar los archivos estáticos y subirlos a un servidor o servicio d
 
 Estas herramientas y servicios facilitan la creación, gestión y despliegue de proyectos Eleventy:
 
-### **Node.js:**
+### Node.js:
 
-- Entorno de ejecución JavaScript necesario para instalar y ejecutar Eleventy.
+Entorno de ejecución JavaScript necesario para instalar y ejecutar Eleventy.
 
-### **npm o Yarn:**
+### npm o Yarn:
 
-- Gestores de paquetes para instalar dependencias como Eleventy y plugins.
+Gestores de paquetes para instalar dependencias como Eleventy y plugins.
 
-### **Editor de código (VSCode, Sublime, etc.):**
+### Editor de código (VSCode, Sublime, etc.):
 
-- Con soporte para plantillas y sintaxis de Markdown.
+Con soporte para plantillas y sintaxis de Markdown.
 
-### **Browsersync:**
+### Browsersync:
 
-- Para recarga automática del navegador durante desarrollo.
+Para recarga automática del navegador durante desarrollo.
 
-### **Netlify / Vercel / GitHub Pages:**
+### Netlify / Vercel / GitHub Pages:
 
-- Plataformas de hosting optimizadas para sitios estáticos.
+Plataformas de hosting optimizadas para sitios estáticos.
 
-### **Preprocesadores CSS (Sass, PostCSS):**
+### Preprocesadores CSS (Sass, PostCSS):
 
-- Para estilos más organizados y reutilizables.
+Para estilos más organizados y reutilizables.
 
-### **Plugins de Eleventy:**
+### Plugins de Eleventy:
 
-- Como `eleventy-plugin-syntaxhighlight` para resaltar código o `eleventy-plugin-seo` para mejorar SEO.
+Como `eleventy-plugin-syntaxhighlight` para resaltar código o `eleventy-plugin-seo` para mejorar SEO.
 
-### **Git:**
+### Git:
 
-- Para control de versiones y colaboración en proyectos.
+Para control de versiones y colaboración en proyectos.
 
-### **Imagemin / TinyPNG:**
+### Imagemin / TinyPNG:
 
-- Para optimizar imágenes y reducir el tamaño de los archivos del sitio.
+Para optimizar imágenes y reducir el tamaño de los archivos del sitio.
 
 > Combinando estos conceptos y herramientas, podrás construir sitios web **eficientes, rápidos y fáciles de mantener** con Eleventy.
 
@@ -346,7 +355,7 @@ netlify deploy --prod
 
 {% raw %}
 
-## 🟢 Nivel Básico
+## 🟢 Básico
 
 ### 1. ¿Qué es Eleventy y en qué se diferencia de otros generadores de sitios estáticos?
 
@@ -426,14 +435,18 @@ src/_data/site.json
 
 ### 5. Menciona al menos tres ventajas de usar Eleventy frente a un CMS tradicional.
 
-- **Mayor velocidad:** Los sitios estáticos cargan mucho más rápido.
-- **Seguridad:** Sin base de datos ni backend que puedan ser atacados.
-- **Simplicidad en despliegue:** Basta con subir los archivos generados a un servidor estático.
-- **Menor costo:** Hosting económico o gratuito (Netlify, GitHub Pages).
+- **Mayor velocidad:**\
+  Los sitios estáticos cargan mucho más rápido.
+- **Seguridad:**\
+  Sin base de datos ni backend que puedan ser atacados.
+- **Simplicidad en despliegue:**\
+  Basta con subir los archivos generados a un servidor estático.
+- **Menor costo:**\
+  Hosting económico o gratuito (Netlify, GitHub Pages).
 
 ---
 
-## 🟡 Nivel Intermedio
+## 🟡 Intermedio
 
 ### 6. ¿Cómo se crean y usan collections en Eleventy? Da un ejemplo práctico de uso.
 
@@ -466,7 +479,8 @@ module.exports = function (eleventyConfig) {
 
 ### 7. Explica la diferencia entre filtros (filters) y shortcodes en Eleventy, y cuándo usar cada uno.
 
-- **Filtros (Filters):** Transforman datos en plantillas.
+- **Filtros (Filters):**\
+  Transforman datos en plantillas.
 
   - Ejemplo: convertir texto a mayúsculas.
 
@@ -479,7 +493,8 @@ eleventyConfig.addFilter("upper", (str) => str.toUpperCase());
 <!-- Resultado: HOLA MUNDO -->
 ```
 
-- **Shortcodes:** Insertan bloques de contenido dinámico.
+- **Shortcodes:**\
+  Insertan bloques de contenido dinámico.
 
   - Ejemplo: generar una tarjeta de usuario.
 
@@ -566,7 +581,7 @@ module.exports = function (eleventyConfig) {
 
 ---
 
-## 🔴 Nivel Avanzado
+## 🔴 Avanzado
 
 ### 11. Explica cómo implementar paginación en Eleventy y proporciona un ejemplo de estructura de archivos necesaria.
 
@@ -639,7 +654,8 @@ include "layouts/default.njk" %} {% endif %}
 
 ### 13. Describe un caso real donde Eleventy se combine con una API externa para generar contenido dinámico en un sitio estático.
 
-- **Caso:** Crear un blog que muestra precios de criptomonedas en tiempo real.
+- **Caso:**\
+  Crear un blog que muestra precios de criptomonedas en tiempo real.
 - **Proceso:**
   1. Hacer una petición a la API desde un archivo en `_data/` usando Node.js.
   2. Generar páginas estáticas con los datos obtenidos.
@@ -692,23 +708,24 @@ module.exports = function (eleventyConfig) {
 
 ### 15. ¿Qué técnicas recomiendas para optimizar el rendimiento de un sitio generado con Eleventy?
 
-- **Optimización en build:**
+#### Optimización en build:
 
-  - Minificar HTML, CSS y JS.
-  - Optimizar imágenes (usando Imagemin o TinyPNG).
-  - Habilitar generación incremental cuando sea posible.
+- Minificar HTML, CSS y JS.
+- Optimizar imágenes (usando Imagemin o TinyPNG).
+- Habilitar generación incremental cuando sea posible.
 
-- **Optimización en tiempo de carga:**
+#### Optimización en tiempo de carga:
 
-  - Usar lazy loading en imágenes.
-  - Implementar caching con headers adecuados.
-  - Evitar JavaScript innecesario.
-  - Usar fuentes locales optimizadas.
+- Usar lazy loading en imágenes.
+- Implementar caching con headers adecuados.
+- Evitar JavaScript innecesario.
+- Usar fuentes locales optimizadas.
 
-- **Deploy eficiente:**
-  - Automatizar despliegue con Netlify o Vercel.
-  - Configurar CDN para contenido estático.
-  - Mantener actualizadas las dependencias del proyecto.
+#### Deploy eficiente:
+
+- Automatizar despliegue con Netlify o Vercel.
+- Configurar CDN para contenido estático.
+- Mantener actualizadas las dependencias del proyecto.
 
 ---
 

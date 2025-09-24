@@ -40,11 +40,16 @@ Esto se logra porque los caracteres especiales (`#`, `**`, `>`, etc.) indican al
 
 Algunas ventajas clave de Markdown:
 
-- **Simplicidad:** Es fácil de aprender y usar, incluso para principiantes.
-- **Legibilidad:** El texto se entiende tanto en su forma original como procesado.
-- **Portabilidad:** Funciona en múltiples plataformas y herramientas, como GitHub, VSCode o Notion.
-- **Versatilidad:** Puede generar HTML, PDF y otros formatos.
-- **Ligero y rápido:** No necesita software pesado, solo un editor de texto.
+- **Simplicidad:**\
+  Es fácil de aprender y usar, incluso para principiantes.
+- **Legibilidad:**\
+  El texto se entiende tanto en su forma original como procesado.
+- **Portabilidad:**\
+  Funciona en múltiples plataformas y herramientas, como GitHub, VSCode o Notion.
+- **Versatilidad:**\
+  Puede generar HTML, PDF y otros formatos.
+- **Ligero y rápido:**\
+  No necesita software pesado, solo un editor de texto.
 
 > En resumen, Markdown es ideal cuando quieres **crear contenido estructurado y limpio**, sin complicarte con herramientas avanzadas de edición.
 

@@ -31,10 +31,14 @@
 <p>Eleventy es una herramienta que convierte archivos de contenido como <strong>Markdown</strong>, <strong>HTML</strong>, <strong>Nunjucks</strong>, <strong>Liquid</strong>, entre otros, en un sitio web estático listo para desplegar.</p>
 <h4 id="diferencias-principales-respecto-a-otros-ssgs">Diferencias principales respecto a otros SSGs:</h4>
 <ul>
-<li><strong>Simplicidad:</strong> Configuración mínima para comenzar a trabajar.</li>
-<li><strong>Flexibilidad:</strong> Soporte para múltiples lenguajes de plantillas sin depender de uno solo.</li>
-<li><strong>Ligereza:</strong> No requiere un framework completo como React, Vue o Angular.</li>
-<li><strong>Velocidad:</strong> Generación rápida de sitios estáticos optimizados.</li>
+<li><strong>Simplicidad:</strong><br>
+Configuración mínima para comenzar a trabajar.</li>
+<li><strong>Flexibilidad:</strong><br>
+Soporte para múltiples lenguajes de plantillas sin depender de uno solo.</li>
+<li><strong>Ligereza:</strong><br>
+No requiere un framework completo como React, Vue o Angular.</li>
+<li><strong>Velocidad:</strong><br>
+Generación rápida de sitios estáticos optimizados.</li>
 </ul>
 <blockquote>
 <p>A diferencia de frameworks como Next.js o Gatsby, Eleventy <strong>no añade JavaScript por defecto</strong>, permitiendo sitios más ligeros y rápidos.</p>
@@ -52,11 +56,16 @@
 <h3 id="3-que-puedo-construir-con-eleventy">3. ¿Qué puedo construir con Eleventy?</h3>
 <h4 id="con-eleventy-puedes-crear-una-variedad-de-proyectos-web-entre-ellos">Con Eleventy puedes crear una variedad de proyectos web, entre ellos:</h4>
 <ul>
-<li><strong>Blogs</strong> con categorías, etiquetas y RSS.</li>
-<li><strong>Documentación</strong> para proyectos open source o empresas.</li>
-<li><strong>Portfolios</strong> minimalistas y optimizados.</li>
-<li><strong>Landing pages</strong> enfocadas en conversión y SEO.</li>
-<li><strong>Sitios corporativos</strong> con contenido estático y de fácil gestión.</li>
+<li><strong>Blogs:</strong><br>
+con categorías, etiquetas y RSS.</li>
+<li><strong>Documentación:</strong><br>
+para proyectos open source o empresas.</li>
+<li><strong>Portfolios:</strong><br>
+minimalistas y optimizados.</li>
+<li><strong>Landing pages:</strong><br>
+enfocadas en conversión y SEO.</li>
+<li><strong>Sitios corporativos:</strong><br>
+con contenido estático y de fácil gestión.</li>
 </ul>
 <blockquote>
 <p>Básicamente, cualquier sitio donde <strong>no se requiera lógica compleja de backend</strong>.</p>
@@ -129,67 +138,49 @@ src/ &gt; _includes/ _data/ posts/ styles/ index.md</li>
 <hr>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Estos conceptos son esenciales para trabajar con Eleventy de manera efectiva:</p>
-<h3 id="sitios-estaticos-static-sites"><strong>Sitios estáticos (Static Sites):</strong></h3>
+<h3 id="sitios-estaticos-static-sites">Sitios estáticos (Static Sites):</h3>
 <p>Páginas web que no dependen de un servidor para generar contenido dinámico. Todo el HTML se genera antes del despliegue.</p>
-<h3 id="plantillas-templates"><strong>Plantillas (Templates):</strong></h3>
+<h3 id="plantillas-templates">Plantillas (Templates):</h3>
 <p>Archivos que definen la estructura de tus páginas. Eleventy soporta varios lenguajes de plantillas como:<br>
 • Nunjucks • Liquid • Handlebars • Mustache • EJS • Markdown</p>
-<h3 id="layouts"><strong>Layouts:</strong></h3>
+<h3 id="layouts">Layouts:</h3>
 <p>Plantillas base reutilizables que permiten mantener un diseño consistente en varias páginas.</p>
-<h3 id="includes-inclusiones"><strong>Includes (Inclusiones):</strong></h3>
+<h3 id="includes-inclusiones">Includes (Inclusiones):</h3>
 <p>Fragmentos de código que se pueden insertar dentro de plantillas para evitar duplicación.</p>
-<h3 id="collections"><strong>Collections:</strong></h3>
+<h3 id="collections">Collections:</h3>
 <p>Conjuntos de contenido agrupados por categorías, etiquetas o cualquier criterio personalizado.</p>
-<h3 id="front-matter"><strong>Front Matter:</strong></h3>
+<h3 id="front-matter">Front Matter:</h3>
 <p>Metadatos escritos en YAML, JSON o JavaScript al inicio de archivos que permiten configurar propiedades de cada página.</p>
-<h3 id="data-files"><strong>Data Files:</strong></h3>
+<h3 id="data-files">Data Files:</h3>
 <p>Archivos en <code>_data/</code> que proporcionan información global o específica de páginas para usar en plantillas.</p>
-<h3 id="filters-y-shortcodes"><strong>Filters y Shortcodes:</strong></h3>
+<h3 id="filters-y-shortcodes">Filters y Shortcodes:</h3>
 <p>Funciones que transforman datos o generan contenido dinámico durante la generación del sitio.</p>
-<h3 id="markdown"><strong>Markdown:</strong></h3>
+<h3 id="markdown">Markdown:</h3>
 <p>Lenguaje de marcado ligero usado para escribir contenido fácilmente, que Eleventy convierte en HTML.</p>
-<h3 id="build-deploy"><strong>Build/Deploy:</strong></h3>
+<h3 id="build-deploy">Build/Deploy:</h3>
 <p>Proceso de generar los archivos estáticos y subirlos a un servidor o servicio de hosting.</p>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Estas herramientas y servicios facilitan la creación, gestión y despliegue de proyectos Eleventy:</p>
-<h3 id="node-js"><strong>Node.js:</strong></h3>
-<ul>
-<li>Entorno de ejecución JavaScript necesario para instalar y ejecutar Eleventy.</li>
-</ul>
-<h3 id="npm-o-yarn"><strong>npm o Yarn:</strong></h3>
-<ul>
-<li>Gestores de paquetes para instalar dependencias como Eleventy y plugins.</li>
-</ul>
-<h3 id="editor-de-codigo-vscode-sublime-etc"><strong>Editor de código (VSCode, Sublime, etc.):</strong></h3>
-<ul>
-<li>Con soporte para plantillas y sintaxis de Markdown.</li>
-</ul>
-<h3 id="browsersync"><strong>Browsersync:</strong></h3>
-<ul>
-<li>Para recarga automática del navegador durante desarrollo.</li>
-</ul>
-<h3 id="netlify-vercel-github-pages"><strong>Netlify / Vercel / GitHub Pages:</strong></h3>
-<ul>
-<li>Plataformas de hosting optimizadas para sitios estáticos.</li>
-</ul>
-<h3 id="preprocesadores-css-sass-postcss"><strong>Preprocesadores CSS (Sass, PostCSS):</strong></h3>
-<ul>
-<li>Para estilos más organizados y reutilizables.</li>
-</ul>
-<h3 id="plugins-de-eleventy"><strong>Plugins de Eleventy:</strong></h3>
-<ul>
-<li>Como <code>eleventy-plugin-syntaxhighlight</code> para resaltar código o <code>eleventy-plugin-seo</code> para mejorar SEO.</li>
-</ul>
-<h3 id="git"><strong>Git:</strong></h3>
-<ul>
-<li>Para control de versiones y colaboración en proyectos.</li>
-</ul>
-<h3 id="imagemin-tinypng"><strong>Imagemin / TinyPNG:</strong></h3>
-<ul>
-<li>Para optimizar imágenes y reducir el tamaño de los archivos del sitio.</li>
-</ul>
+<h3 id="node-js">Node.js:</h3>
+<p>Entorno de ejecución JavaScript necesario para instalar y ejecutar Eleventy.</p>
+<h3 id="npm-o-yarn">npm o Yarn:</h3>
+<p>Gestores de paquetes para instalar dependencias como Eleventy y plugins.</p>
+<h3 id="editor-de-codigo-vscode-sublime-etc">Editor de código (VSCode, Sublime, etc.):</h3>
+<p>Con soporte para plantillas y sintaxis de Markdown.</p>
+<h3 id="browsersync">Browsersync:</h3>
+<p>Para recarga automática del navegador durante desarrollo.</p>
+<h3 id="netlify-vercel-github-pages">Netlify / Vercel / GitHub Pages:</h3>
+<p>Plataformas de hosting optimizadas para sitios estáticos.</p>
+<h3 id="preprocesadores-css-sass-postcss">Preprocesadores CSS (Sass, PostCSS):</h3>
+<p>Para estilos más organizados y reutilizables.</p>
+<h3 id="plugins-de-eleventy">Plugins de Eleventy:</h3>
+<p>Como <code>eleventy-plugin-syntaxhighlight</code> para resaltar código o <code>eleventy-plugin-seo</code> para mejorar SEO.</p>
+<h3 id="git">Git:</h3>
+<p>Para control de versiones y colaboración en proyectos.</p>
+<h3 id="imagemin-tinypng">Imagemin / TinyPNG:</h3>
+<p>Para optimizar imágenes y reducir el tamaño de los archivos del sitio.</p>
 <blockquote>
 <p>Combinando estos conceptos y herramientas, podrás construir sitios web <strong>eficientes, rápidos y fáciles de mantener</strong> con Eleventy.</p>
 </blockquote>
@@ -292,7 +283,7 @@ npx @11ty/eleventy --init
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
-<h2 id="nivel-basico">🟢 Nivel Básico</h2>
+<h2 id="basico">🟢 Básico</h2>
 <h3 id="1-que-es-eleventy-y-en-que-se-diferencia-de-otros-generadores-de-sitios-estaticos">1. ¿Qué es Eleventy y en qué se diferencia de otros generadores de sitios estáticos?</h3>
 <p>Eleventy es un <strong>generador de sitios estáticos (SSG)</strong> que transforma archivos de contenido (Markdown, HTML, etc.) en un sitio optimizado y listo para producción.</p>
 <p><strong>Diferencias principales:</strong></p>
@@ -351,13 +342,17 @@ Eleventy soporta varios lenguajes de plantillas, incluyendo:</p>
 <hr>
 <h3 id="5-menciona-al-menos-tres-ventajas-de-usar-eleventy-frente-a-un-cms-tradicional">5. Menciona al menos tres ventajas de usar Eleventy frente a un CMS tradicional.</h3>
 <ul>
-<li><strong>Mayor velocidad:</strong> Los sitios estáticos cargan mucho más rápido.</li>
-<li><strong>Seguridad:</strong> Sin base de datos ni backend que puedan ser atacados.</li>
-<li><strong>Simplicidad en despliegue:</strong> Basta con subir los archivos generados a un servidor estático.</li>
-<li><strong>Menor costo:</strong> Hosting económico o gratuito (Netlify, GitHub Pages).</li>
+<li><strong>Mayor velocidad:</strong><br>
+Los sitios estáticos cargan mucho más rápido.</li>
+<li><strong>Seguridad:</strong><br>
+Sin base de datos ni backend que puedan ser atacados.</li>
+<li><strong>Simplicidad en despliegue:</strong><br>
+Basta con subir los archivos generados a un servidor estático.</li>
+<li><strong>Menor costo:</strong><br>
+Hosting económico o gratuito (Netlify, GitHub Pages).</li>
 </ul>
 <hr>
-<h2 id="nivel-intermedio">🟡 Nivel Intermedio</h2>
+<h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-como-se-crean-y-usan-collections-en-eleventy-da-un-ejemplo-practico-de-uso">6. ¿Cómo se crean y usan collections en Eleventy? Da un ejemplo práctico de uso.</h3>
 <p>Las <strong>collections</strong> permiten agrupar contenido automáticamente según criterios definidos.</p>
 <p><strong>Ejemplo:</strong></p>
@@ -382,7 +377,8 @@ module.exports = function (eleventyConfig) {
 <h3 id="7-explica-la-diferencia-entre-filtros-filters-y-shortcodes-en-eleventy-y-cuando-usar-cada-uno">7. Explica la diferencia entre filtros (filters) y shortcodes en Eleventy, y cuándo usar cada uno.</h3>
 <ul>
 <li>
-<p><strong>Filtros (Filters):</strong> Transforman datos en plantillas.</p>
+<p><strong>Filtros (Filters):</strong><br>
+Transforman datos en plantillas.</p>
 <ul>
 <li>Ejemplo: convertir texto a mayúsculas.</li>
 </ul>
@@ -395,7 +391,8 @@ module.exports = function (eleventyConfig) {
 </code></pre>
 <ul>
 <li>
-<p><strong>Shortcodes:</strong> Insertan bloques de contenido dinámico.</p>
+<p><strong>Shortcodes:</strong><br>
+Insertan bloques de contenido dinámico.</p>
 <ul>
 <li>Ejemplo: generar una tarjeta de usuario.</li>
 </ul>
@@ -467,7 +464,7 @@ Permite personalizar el comportamiento del proyecto, como:</p>
 <li><strong>Optimizar recursos estáticos</strong> como imágenes y fuentes.</li>
 </ul>
 <hr>
-<h2 id="nivel-avanzado">🔴 Nivel Avanzado</h2>
+<h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-explica-como-implementar-paginacion-en-eleventy-y-proporciona-un-ejemplo-de-estructura-de-archivos-necesaria">11. Explica cómo implementar paginación en Eleventy y proporciona un ejemplo de estructura de archivos necesaria.</h3>
 <p>La <strong>paginación</strong> divide contenido grande en varias páginas.</p>
 <p><strong>Estructura:</strong></p>
@@ -523,7 +520,8 @@ include &quot;layouts/default.njk&quot; %} {% endif %}
 <hr>
 <h3 id="13-describe-un-caso-real-donde-eleventy-se-combine-con-una-api-externa-para-generar-contenido-dinamico-en-un-sitio-estatico">13. Describe un caso real donde Eleventy se combine con una API externa para generar contenido dinámico en un sitio estático.</h3>
 <ul>
-<li><strong>Caso:</strong> Crear un blog que muestra precios de criptomonedas en tiempo real.</li>
+<li><strong>Caso:</strong><br>
+Crear un blog que muestra precios de criptomonedas en tiempo real.</li>
 <li><strong>Proceso:</strong>
 <ol>
 <li>Hacer una petición a la API desde un archivo en <code>_data/</code> usando Node.js.</li>
@@ -563,32 +561,24 @@ module.exports = function (eleventyConfig) {
 </code></pre>
 <hr>
 <h3 id="15-que-tecnicas-recomiendas-para-optimizar-el-rendimiento-de-un-sitio-generado-con-eleventy">15. ¿Qué técnicas recomiendas para optimizar el rendimiento de un sitio generado con Eleventy?</h3>
-<ul>
-<li>
-<p><strong>Optimización en build:</strong></p>
+<h4 id="optimizacion-en-build">Optimización en build:</h4>
 <ul>
 <li>Minificar HTML, CSS y JS.</li>
 <li>Optimizar imágenes (usando Imagemin o TinyPNG).</li>
 <li>Habilitar generación incremental cuando sea posible.</li>
 </ul>
-</li>
-<li>
-<p><strong>Optimización en tiempo de carga:</strong></p>
+<h4 id="optimizacion-en-tiempo-de-carga">Optimización en tiempo de carga:</h4>
 <ul>
 <li>Usar lazy loading en imágenes.</li>
 <li>Implementar caching con headers adecuados.</li>
 <li>Evitar JavaScript innecesario.</li>
 <li>Usar fuentes locales optimizadas.</li>
 </ul>
-</li>
-<li>
-<p><strong>Deploy eficiente:</strong></p>
+<h4 id="deploy-eficiente">Deploy eficiente:</h4>
 <ul>
 <li>Automatizar despliegue con Netlify o Vercel.</li>
 <li>Configurar CDN para contenido estático.</li>
 <li>Mantener actualizadas las dependencias del proyecto.</li>
-</ul>
-</li>
 </ul>
 <hr>
 <p><a href="#temas">🔼 temas</a></p>

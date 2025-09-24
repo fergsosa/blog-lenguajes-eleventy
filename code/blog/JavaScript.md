@@ -19,12 +19,16 @@ JavaScript es uno de los lenguajes de programación más populares y fundamental
 
 JavaScript (JS) es un **lenguaje de programación interpretado**, **orientado a objetos** y **basado en eventos**, diseñado inicialmente para dotar de interactividad a las páginas web.
 
-**Diferencias clave frente a otros lenguajes:**
+#### Diferencias clave frente a otros lenguajes:
 
-- **Interpretado en el navegador:** No requiere compilación previa como C++ o Java.
-- **Multiparadigma:** Soporta programación funcional, orientada a objetos y basada en eventos.
-- **Enfoque web:** Se ejecuta principalmente en navegadores, aunque con **Node.js** también se utiliza en el backend.
-- **Alta integración con HTML y CSS**, algo que otros lenguajes no ofrecen de forma nativa.
+- **Interpretado en el navegador:**\
+  No requiere compilación previa como C++ o Java.
+- **Multiparadigma:**\
+  Soporta programación funcional, orientada a objetos y basada en eventos.
+- **Enfoque web:**\
+  Se ejecuta principalmente en navegadores, aunque con **Node.js** también se utiliza en el backend.
+- **Alta integración con HTML y CSS:**\
+  algo que otros lenguajes no ofrecen de forma nativa.
 
 ### 2. ¿Para qué se usa?
 
@@ -32,11 +36,16 @@ JavaScript se utiliza en una amplia variedad de contextos, siendo el estándar p
 
 **Aplicaciones principales:**
 
-- **Frontend:** Crear interfaces dinámicas e interactivas (con React, Vue, Angular).
-- **Backend:** Desarrollo de servidores y APIs con **Node.js**.
-- **Aplicaciones móviles:** Usando frameworks como React Native o Ionic.
-- **Aplicaciones de escritorio:** Con tecnologías como Electron.
-- **Automatización y scripting:** Scripts para tareas repetitivas o automatización de flujos.
+- **Frontend:**\
+   Crear interfaces dinámicas e interactivas (con React, Vue, Angular).
+- **Backend:**\
+   Desarrollo de servidores y APIs con **Node.js**.
+- **Aplicaciones móviles:**\
+   Usando frameworks como React Native o Ionic.
+- **Aplicaciones de escritorio:**\
+   Con tecnologías como Electron.
+- **Automatización y scripting:**\
+   Scripts para tareas repetitivas o automatización de flujos.
 
 > **Ideal cuando necesitas** interactividad, comunicación en tiempo real, aplicaciones rápidas y prototipos ágiles.
 
@@ -56,10 +65,14 @@ Con JavaScript puedes crear prácticamente cualquier tipo de aplicación moderna
 
 JavaScript es la mejor elección en los siguientes escenarios:
 
-- **Proyectos web:** Es el estándar para navegadores, no existe alternativa real.
-- **Prototipos rápidos:** Sintaxis sencilla y frameworks maduros aceleran el desarrollo.
-- **Aplicaciones en tiempo real:** Chats, videojuegos o herramientas colaborativas.
-- **Unificar frontend y backend:** Permite usar un solo lenguaje en todo el stack.
+- **Proyectos web:**\
+  Es el estándar para navegadores, no existe alternativa real.
+- **Prototipos rápidos:**\
+  Sintaxis sencilla y frameworks maduros aceleran el desarrollo.
+- **Aplicaciones en tiempo real:**\
+  Chats, videojuegos o herramientas colaborativas.
+- **Unificar frontend y backend:**\
+  Permite usar un solo lenguaje en todo el stack.
 
 > ⚠️ **Evítalo** si el proyecto requiere alto rendimiento computacional, como simulaciones científicas o software de bajo nivel, donde lenguajes como **C++ o Rust** son más adecuados.
 
@@ -130,13 +143,17 @@ Antes de aprender JavaScript o mientras lo estudias, es importante entender esto
 
 ### 1. Fundamentos de programación
 
-- **Algoritmos y lógica:** La base para resolver problemas.
-- **Variables y constantes:** Manejo de datos en memoria (`let`, `const`).
+- **Algoritmos y lógica:**\
+   La base para resolver problemas.
+- **Variables y constantes:**\
+   Manejo de datos en memoria (`let`, `const`).
 - **Tipos de datos:**
   - Primitivos: `string`, `number`, `boolean`, `null`, `undefined`, `symbol`, `bigint`.
   - Complejos: `object`, `array`, `function`.
-- **Estructuras de control:** Condicionales (`if`, `switch`) y bucles (`for`, `while`).
-- **Funciones:** Declarativas, expresivas, flecha (_arrow functions_).
+- **Estructuras de control:**\
+  Condicionales (`if`, `switch`) y bucles (`for`, `while`).
+- **Funciones:**\
+  Declarativas, expresivas, flecha (_arrow functions_).
 - **Paradigmas de programación:**
   - _Imperativo_: Cómo se hace.
   - _Declarativo_: Qué se quiere lograr.
@@ -145,33 +162,47 @@ Antes de aprender JavaScript o mientras lo estudias, es importante entender esto
 
 ### 2. Web y entorno de ejecución
 
-- **HTML:** Estructura base de las páginas web.
-- **CSS:** Estilos y diseño visual.
-- **DOM (Document Object Model):** Representación en memoria de una página web para manipular elementos dinámicamente.
-- **BOM (Browser Object Model):** Objetos que el navegador proporciona, como `window` o `navigator`.
-- **Eventos:** Manejo de interacciones del usuario (`click`, `input`, `submit`).
+- **HTML:**\
+  Estructura base de las páginas web.
+- **CSS:**\
+  Estilos y diseño visual.
+- **DOM (Document Object Model):**\
+  Representación en memoria de una página web para manipular elementos dinámicamente.
+- **BOM (Browser Object Model):**\
+  Objetos que el navegador proporciona, como `window` o `navigator`.
+- **Eventos:**\
+  Manejo de interacciones del usuario (`click`, `input`, `submit`).
 
 ### 3. Programación asíncrona
 
 JavaScript es **_single-threaded_** pero puede manejar tareas asíncronas.
 
-- **Callbacks:** Primera forma de manejar tareas asincrónicas.
-- **Promises:** Flujo controlado con `.then()` y `.catch()`.
-- **Async/Await:** Sintaxis moderna y más legible para trabajar con promesas.
-- **Event Loop:** Mecanismo que gestiona la ejecución de código y tareas pendientes.
+- **Callbacks:**\
+  Primera forma de manejar tareas asincrónicas.
+- **Promises:**\
+  Flujo controlado con `.then()` y `.catch()`.
+- **Async/Await:**\
+  Sintaxis moderna y más legible para trabajar con promesas.
+- **Event Loop:**\
+  Mecanismo que gestiona la ejecución de código y tareas pendientes.
 
 ### 4. JSON y APIs
 
-- **JSON (JavaScript Object Notation):** Formato ligero para intercambio de datos.
-- **APIs:** Interfaces para comunicación entre sistemas.
+- **JSON (JavaScript Object Notation):**\
+  Formato ligero para intercambio de datos.
+- **APIs:**\
+   Interfaces para comunicación entre sistemas.
   - REST API.
   - GraphQL.
-- **Fetch API:** Hacer peticiones HTTP con `fetch()`.
+- **Fetch API:**\
+  Hacer peticiones HTTP con `fetch()`.
 
 ### 5. Ecosistema JavaScript
 
-- **Node.js:** Ejecutar JavaScript fuera del navegador, principalmente para el backend.
-- **npm (Node Package Manager):** Gestor de paquetes y librerías.
+- **Node.js:**\
+  Ejecutar JavaScript fuera del navegador, principalmente para el backend.
+- **npm (Node Package Manager):**\
+  Gestor de paquetes y librerías.
 - **Frameworks y librerías populares:**
   - **Frontend:** React, Vue, Angular, Svelte.
   - **Backend:** Express, NestJS, Fastify.
@@ -179,10 +210,14 @@ JavaScript es **_single-threaded_** pero puede manejar tareas asíncronas.
 
 ### 6. Principios de desarrollo
 
-- **DRY (_Don't Repeat Yourself_):** Evitar duplicación de código.
-- **KISS (_Keep It Simple, Stupid_):** Mantener el código simple y entendible.
-- **SOLID:** Buenas prácticas de programación orientada a objetos.
-- **Clean Code:** Código limpio, legible y mantenible.
+- **DRY (_Don't Repeat Yourself_):**\
+  Evitar duplicación de código.
+- **KISS (_Keep It Simple, Stupid_):**\
+  Mantener el código simple y entendible.
+- **SOLID:**\
+  Buenas prácticas de programación orientada a objetos.
+- **Clean Code:**\
+  Código limpio, legible y mantenible.
 
 [🔼 temas](#temas)
 
@@ -194,8 +229,10 @@ Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos
 
 ### 1. Editores y entornos de desarrollo
 
-- **Visual Studio Code (VSCode):** Editor moderno, liviano y altamente configurable.\
-- **WebStorm:** IDE especializado para JavaScript.\
+- **Visual Studio Code (VSCode):**\
+  Editor moderno, liviano y altamente configurable.
+- **WebStorm:**\
+  IDE especializado para JavaScript.
 - **Extensiones útiles para VSCode:**
   - **ESLint:** Detección de errores y estandarización de código.
   - **Prettier:** Formateo automático.
@@ -204,13 +241,17 @@ Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos
 
 ### 2. Control de versiones
 
-- **Git:** Sistema de control de versiones.
-- **GitHub / GitLab / Bitbucket:** Plataformas para alojar proyectos y colaborar en equipo.
+- **Git:**\
+  Sistema de control de versiones.
+- **GitHub / GitLab / Bitbucket:**\
+  Plataformas para alojar proyectos y colaborar en equipo.
 
 ### 3. Terminal y línea de comandos
 
-- **Node.js CLI:** Ejecutar scripts y proyectos.
-- **npm / yarn / pnpm:** Manejo de dependencias y paquetes.
+- **Node.js CLI:**\
+  Ejecutar scripts y proyectos.
+- **npm / yarn / pnpm:**\
+  Manejo de dependencias y paquetes.
 - **Comandos clave:**
   - `node app.js` → Ejecutar un archivo.
   - `npm init -y` → Inicializar un proyecto.
@@ -226,30 +267,33 @@ Estas herramientas te ayudarán a **desarrollar, depurar y optimizar** proyectos
 
 #### Frameworks de testing:
 
-- **Jest:** Pruebas unitarias.
-- **Cypress:** Pruebas de interfaz (end-to-end).
-- **Mocha + Chai:** Pruebas flexibles y personalizadas.
+- **Jest:**\
+  Pruebas unitarias.
+- **Cypress:**\
+  Pruebas de interfaz (end-to-end).
+- **Mocha + Chai:**\
+  Pruebas flexibles y personalizadas.
 
 ### 5. Automatización y bundlers
 
-**Bundlers:** Empaquetar y optimizar el código.
-
-- Webpack, Parcel, Vite.
-
-**Transpiladores:**
-
-- **Babel:** Para compatibilidad con navegadores antiguos.
-
-**Automatización de tareas:**
-
-- Gulp, npm scripts.
+- **Bundlers:**\
+  Empaquetar y optimizar el código.
+  - Webpack, Parcel, Vite.
+- **Transpiladores:**
+  - **Babel:** Para compatibilidad con navegadores antiguos.
+- **Automatización de tareas:**\
+  Gulp, npm scripts.
 
 ### 6. Entorno backend
 
-- **Express:** Framework minimalista para servidores.
-- **MongoDB Atlas:** Base de datos en la nube.
-- **Postman / Insomnia:** Probar APIs y endpoints.
-- **Docker:** Contenerizar aplicaciones y entornos.
+- **Express:**\
+  Framework minimalista para servidores.
+- **MongoDB Atlas:**\
+  Base de datos en la nube.
+- **Postman / Insomnia:**\
+  Probar APIs y endpoints.
+- **Docker:**\
+  Contenerizar aplicaciones y entornos.
 
 [🔼 temas](#temas)
 
@@ -647,6 +691,8 @@ crearFunciones().forEach((fn) => fn()); // 3, 3, 3
 
 Solución: usar `let` o crear un scope adicional.
 
+---
+
 ## 🟡 Intermedio
 
 ### 6. Promesas y Promise.all / Promise.race
@@ -748,6 +794,8 @@ const colores = ["Rojo"];
 const [primero = "Verde", segundo = "Azul"] = colores;
 console.log(primero, segundo);
 ```
+
+---
 
 ## 🔴 Avanzado
 

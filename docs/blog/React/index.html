@@ -32,12 +32,15 @@
 A diferencia de frameworks completos como Angular o Vue, React <strong>no impone una estructura estricta</strong>, permitiendo mayor flexibilidad para integrar librerías externas según las necesidades del proyecto.</p>
 <h4 id="diferencias-clave-frente-a-otros">Diferencias clave frente a otros:</h4>
 <ul>
-<li><strong>Enfocado solo en la UI</strong>: No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).</li>
-<li><strong>Componentes reutilizables</strong>: Basado en la construcción de bloques independientes.</li>
-<li><strong>Virtual DOM</strong>: Optimiza el rendimiento actualizando solo lo necesario en la interfaz.</li>
-<li><strong>Gran comunidad y ecosistema</strong>: Extensa cantidad de librerías y recursos disponibles.</li>
+<li><strong>Enfocado solo en la UI:</strong><br>
+No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).</li>
+<li><strong>Componentes reutilizables:</strong><br>
+Basado en la construcción de bloques independientes.</li>
+<li><strong>Virtual DOM:</strong><br>
+Optimiza el rendimiento actualizando solo lo necesario en la interfaz.</li>
+<li><strong>Gran comunidad y ecosistema:</strong><br>
+Extensa cantidad de librerías y recursos disponibles.</li>
 </ul>
-<hr>
 <h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
 <p>React se utiliza para <strong>crear interfaces interactivas y dinámicas</strong> en aplicaciones web y móviles.</p>
 <h4 id="contextos-ideales">Contextos ideales:</h4>
@@ -47,7 +50,6 @@ A diferencia de frameworks completos como Angular o Vue, React <strong>no impone
 <li><strong>Single Page Applications (SPA)</strong> donde se requiere navegación fluida sin recargar la página.</li>
 <li>Aplicaciones móviles usando <strong>React Native</strong>.</li>
 </ul>
-<hr>
 <h3 id="3-que-puedo-construir-con-react">3. ¿Qué puedo construir con React?</h3>
 <p>Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual:</p>
 <ul>
@@ -58,7 +60,6 @@ A diferencia de frameworks completos como Angular o Vue, React <strong>no impone
 <li><strong>Landing pages interactivas</strong>.</li>
 <li><strong>Componentes UI personalizados</strong> que se pueden integrar en otros proyectos.</li>
 </ul>
-<hr>
 <h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
 <h4 id="react-es-recomendable-cuando">React es recomendable cuando:</h4>
 <ul>
@@ -76,7 +77,6 @@ A diferencia de frameworks completos como Angular o Vue, React <strong>no impone
 <blockquote>
 <p>⚠️ <em>Si tu proyecto es muy simple, como una página estática con HTML y CSS, puede que React sea excesivo y un framework más ligero sea suficiente.</em></p>
 </blockquote>
-<hr>
 <h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <h4 id="para-mantener-un-codigo-limpio-y-escalable-en-react-se-recomienda">Para mantener un código limpio y escalable en React, se recomienda:</h4>
 <ul>
@@ -225,9 +225,50 @@ A diferencia de frameworks completos como Angular o Vue, React <strong>no impone
 <h3 id="documentacion"><strong>Documentación</strong></h3>
 <ul>
 <li><strong>Herramientas:</strong> Storybook / Docz</li>
-<li><strong>Uso Principal:</strong> Crear y mantener documentación visual de componentes. |</li>
+<li><strong>Uso Principal:</strong> Crear y mantener documentación visual de componentes.</li>
 </ul>
-<hr>
+<h2 id="resumen-visual">Resumen visual</h2>
+<table>
+<thead>
+<tr>
+<th>herramienta</th>
+<th>descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>React</td>
+<td>Construcción de interfaces reactivas.</td>
+</tr>
+<tr>
+<td>Vite</td>
+<td>Desarrollo rápido y empaquetado.</td>
+</tr>
+<tr>
+<td>React Router</td>
+<td>Navegación y rutas.</td>
+</tr>
+<tr>
+<td>Redux/Zustand</td>
+<td>Manejo de estado global.</td>
+</tr>
+<tr>
+<td>Tailwind CSS</td>
+<td>Estilización eficiente.</td>
+</tr>
+<tr>
+<td>Jest + RTL</td>
+<td>Pruebas unitarias y de integración.</td>
+</tr>
+<tr>
+<td>Vercel/Netlify</td>
+<td>Despliegue en la nube.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🚀 Con estas herramientas y conceptos, podrás crear aplicaciones React escalables, rápidas y listas para producción.</p>
+</blockquote>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="flujo-basico-de-un-proyecto-react">Flujo básico de un proyecto React</h1>
@@ -272,7 +313,6 @@ export default App;
 <hr>
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
 <p>Estos fragmentos son patrones comunes que usarás frecuentemente en React.</p>
-<hr>
 <h3 id="1-componente-funcional-basico">1. Componente funcional básico</h3>
 <pre><code class="language-jsx">function Saludo() {
   return &lt;h1&gt;¡Hola React! 👋&lt;/h1&gt;;
@@ -280,7 +320,6 @@ export default App;
 
 export default Saludo;
 </code></pre>
-<hr>
 <h3 id="2-componente-con-props">2. Componente con Props</h3>
 <pre><code class="language-jsx">function Saludo({ nombre }) {
   return &lt;h1&gt;Hola, {nombre}&lt;/h1&gt;;
@@ -291,7 +330,6 @@ export default Saludo;
 // Uso:
 &lt;Saludo nombre=&quot;Fernando&quot; /&gt;;
 </code></pre>
-<hr>
 <h3 id="3-hook-usestate-manejo-de-estado">3. Hook <code>useState</code> - Manejo de estado</h3>
 <pre><code class="language-jsx">import { useState } from &quot;react&quot;;
 
@@ -306,7 +344,6 @@ function Contador() {
   );
 }
 </code></pre>
-<hr>
 <h3 id="4-hook-useeffect-ciclo-de-vida">4. Hook <code>useEffect</code> - Ciclo de vida</h3>
 <pre><code class="language-jsx">import { useEffect } from &quot;react&quot;;
 
@@ -318,7 +355,6 @@ function App() {
   return &lt;h1&gt;Hola Mundo&lt;/h1&gt;;
 }
 </code></pre>
-<hr>
 <h3 id="5-evento-en-jsx">5. Evento en JSX</h3>
 <pre><code class="language-jsx">function Boton() {
   const handleClick = () =&gt; alert(&quot;¡Clic!&quot;);
@@ -326,7 +362,6 @@ function App() {
   return &lt;button onClick={handleClick}&gt;Presióname&lt;/button&gt;;
 }
 </code></pre>
-<hr>
 <h3 id="6-listado-con-map">6. Listado con <code>.map()</code></h3>
 <pre><code class="language-jsx">const frutas = [&quot;🍎&quot;, &quot;🍌&quot;, &quot;🍊&quot;];
 
@@ -340,13 +375,11 @@ function ListaFrutas() {
   );
 }
 </code></pre>
-<hr>
 <h3 id="7-renderizado-condicional">7. Renderizado condicional</h3>
 <pre><code class="language-jsx">function Mensaje({ logueado }) {
   return &lt;div&gt;{logueado ? &lt;p&gt;Bienvenido 🎉&lt;/p&gt; : &lt;p&gt;Inicia sesión 🔑&lt;/p&gt;}&lt;/div&gt;;
 }
 </code></pre>
-<hr>
 <h3 id="8-uso-basico-de-context-api">8. Uso básico de Context API</h3>
 <pre><code class="language-jsx">import { createContext, useContext } from &quot;react&quot;;
 
@@ -365,7 +398,6 @@ function App() {
   );
 }
 </code></pre>
-<hr>
 <h3 id="9-fetch-de-datos-con-useeffect">9. Fetch de datos con <code>useEffect</code></h3>
 <pre><code class="language-jsx">import { useState, useEffect } from &quot;react&quot;;
 
@@ -387,7 +419,6 @@ function Usuarios() {
   );
 }
 </code></pre>
-<hr>
 <h3 id="10-react-router-basico">10. React Router básico</h3>
 <pre><code class="language-jsx">import { BrowserRouter, Routes, Route, Link } from &quot;react-router-dom&quot;;
 
@@ -405,11 +436,10 @@ function App() {
   );
 }
 </code></pre>
-<hr>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="comandos">Comandos</h1>
-<h2 id="referencia-rapida-de-comandos">Referencia rápida de comandos</h2>
+<h3 id="referencia-rapida-de-comandos">Referencia rápida de comandos</h3>
 <pre><code class="language-bash"># Crear proyecto con Vite
 npm create vite@latest my-app
 
@@ -432,22 +462,6 @@ npm install @reduxjs/toolkit react-redux
 npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 </code></pre>
-<h3 id="resumen-visual">🔗 Resumen visual</h3>
-<ul>
-<li><strong>React:</strong> Construcción de interfaces reactivas.</li>
-<li><strong>Vite:</strong> Desarrollo rápido y empaquetado.</li>
-<li><strong>React Router:</strong> Navegación y rutas.</li>
-<li><strong>Redux/Zustand:</strong> Manejo de estado global.</li>
-<li><strong>Tailwind CSS:</strong> Estilización eficiente.</li>
-<li><strong>Jest + RTL:</strong> Pruebas unitarias y de integración.</li>
-<li><strong>Vercel/Netlify:</strong> Despliegue en la nube.</li>
-</ul>
-<blockquote>
-<p>🚀 Con estas herramientas y conceptos, podrás crear aplicaciones React escalables, rápidas y listas para producción.</p>
-</blockquote>
-<p><a href="#temas">🔼 temas</a></p>
-<hr>
-<h2 id="sintaxis-mas-usados">⌨️ Sintaxis más usados</h2>
 <h3 id="inicializacion-y-ejecucion"><strong>Inicialización y ejecución</strong></h3>
 <pre><code class="language-bash"># Crear nuevo proyecto con Vite
 npm create vite@latest my-app
@@ -464,7 +478,6 @@ npm run dev
 # Crear versión de producción
 npm run build
 </code></pre>
-<hr>
 <h3 id="instalacion-de-librerias-comunes"><strong>Instalación de librerías comunes</strong></h3>
 <pre><code class="language-bash"># React Router (rutas)
 npm install react-router-dom
@@ -479,7 +492,6 @@ npx tailwindcss init -p
 # Axios (consumo de APIs)
 npm install axios
 </code></pre>
-<hr>
 <h3 id="jsx-basico"><strong>JSX básico</strong></h3>
 <pre><code class="language-jsx">// Variables dentro de JSX
 &lt;h1&gt;Hola {nombre} 👋&lt;/h1&gt;;
@@ -490,7 +502,6 @@ npm install axios
 // Estilos inline
 &lt;p style={ color: &quot;red&quot;, fontSize: &quot;18px&quot; }&gt;Texto en rojo&lt;/p&gt;;
 </code></pre>
-<hr>
 <h3 id="comandos-git-para-react"><strong>Comandos Git para React</strong></h3>
 <pre><code class="language-bash"># Inicializar repositorio
 git init
@@ -505,6 +516,7 @@ git commit -m &quot;feat: inicialización proyecto React&quot;
 git remote add origin &lt;URL_REPOSITORIO&gt;
 git push -u origin main
 </code></pre>
+<p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
 <h2 id="basico">🟢 Básico</h2>
@@ -531,17 +543,15 @@ git push -u origin main
   return &lt;h1&gt;Hola desde funcional&lt;/h1&gt;;
 }
 </code></pre>
-<hr>
 <h3 id="2-virtual-dom-y-como-mejora-el-rendimiento">2. Virtual DOM y cómo mejora el rendimiento</h3>
-<p>El <strong>Virtual DOM</strong> es una copia ligera en memoria del DOM real.<br>
-Cuando ocurre un cambio en la UI:</p>
+<p>El <strong>Virtual DOM</strong> es una copia ligera en memoria del DOM real.</p>
+<h4 id="cuando-ocurre-un-cambio-en-la-ui">Cuando ocurre un cambio en la UI:</h4>
 <ol>
 <li>React actualiza el Virtual DOM.</li>
 <li>Compara el Virtual DOM actual con el anterior (<strong>diffing</strong>).</li>
 <li>Solo actualiza en el DOM real los elementos que cambiaron.</li>
 </ol>
 <p><strong>Beneficio:</strong> mejora el rendimiento porque evita renderizar todo el árbol de componentes.</p>
-<hr>
 <h3 id="3-props-en-react-proposito-e-inmutabilidad">3. Props en React: propósito e inmutabilidad</h3>
 <ul>
 <li>Los <strong>props</strong> son datos que se <strong>pasan de un componente padre a un hijo</strong>.</li>
@@ -562,7 +572,6 @@ Cuando ocurre un cambio en la UI:</p>
   return &lt;h1&gt;Hola, {nombre}&lt;/h1&gt;;
 }
 </code></pre>
-<hr>
 <h3 id="4-funcion-del-metodo-render-en-un-componente-de-clase">4. Función del método render() en un componente de clase</h3>
 <p>El método <code>render()</code>:</p>
 <ul>
@@ -575,7 +584,6 @@ Cuando ocurre un cambio en la UI:</p>
   }
 }
 </code></pre>
-<hr>
 <h3 id="5-state-en-react-cuando-y-como-usarlo">5. State en React: cuándo y cómo usarlo</h3>
 <h4 id="el-state">El state:</h4>
 <ul>
@@ -599,37 +607,41 @@ function Contador() {
 <h3 id="6-ciclo-de-vida-de-un-componente">6. Ciclo de vida de un componente</h3>
 <p>En <strong>componentes de clase</strong>, hay tres fases principales:</p>
 <ul>
-<li><strong>Montaje (Mounting):</strong> se crea el componente y se agrega al DOM.
+<li><strong>Montaje (Mounting):</strong><br>
+se crea el componente y se agrega al DOM.
 <ul>
 <li><code>componentDidMount()</code></li>
 </ul>
 </li>
-<li><strong>Actualización (Updating):</strong> ocurre cuando cambian <code>props</code> o <code>state</code>.
+<li><strong>Actualización (Updating):</strong><br>
+ocurre cuando cambian <code>props</code> o <code>state</code>.
 <ul>
 <li><code>componentDidUpdate()</code></li>
 </ul>
 </li>
-<li><strong>Desmontaje (Unmounting):</strong> se elimina el componente del DOM.
+<li><strong>Desmontaje (Unmounting):</strong><br>
+se elimina el componente del DOM.
 <ul>
 <li><code>componentWillUnmount()</code></li>
 </ul>
 </li>
 </ul>
-<hr>
 <h3 id="7-hooks-y-ejemplos-de-uso">7. Hooks y ejemplos de uso</h3>
 <p>Los <strong>Hooks</strong> permiten usar características avanzadas en componentes funcionales.</p>
 <ul>
-<li><strong>useState</strong> → Manejo de estado local.<pre><code class="language-jsx">const [contador, setContador] = useState(0);
+<li><strong>useState:</strong><br>
+Manejo de estado local.<pre><code class="language-jsx">const [contador, setContador] = useState(0);
 </code></pre>
 </li>
-<li><strong>useEffect</strong> → Ejecutar efectos secundarios como llamadas a APIs.<pre><code class="language-jsx">useEffect(() =&gt; console.log(&quot;Montado&quot;), []);
+<li><strong>useEffect:</strong><br>
+Ejecutar efectos secundarios como llamadas a APIs.<pre><code class="language-jsx">useEffect(() =&gt; console.log(&quot;Montado&quot;), []);
 </code></pre>
 </li>
-<li><strong>useContext</strong> → Acceder a datos globales sin <em>props drilling</em>.<pre><code class="language-jsx">const valor = useContext(MiContexto);
+<li><strong>useContext:</strong><br>
+Acceder a datos globales sin <em>props drilling</em>.<pre><code class="language-jsx">const valor = useContext(MiContexto);
 </code></pre>
 </li>
 </ul>
-<hr>
 <h3 id="8-como-funciona-useeffect-y-su-arreglo-de-dependencias">8. Cómo funciona useEffect y su arreglo de dependencias</h3>
 <ul>
 <li><code>useEffect</code> ejecuta lógica <strong>después de que el componente renderiza</strong>.</li>
@@ -647,7 +659,6 @@ function Contador() {
 <li>Bajo rendimiento.</li>
 <li>Fugas de memoria.</li>
 </ul>
-<hr>
 <h3 id="9-context-api-y-uso-en-escenarios-reales">9. Context API y uso en escenarios reales</h3>
 <p>El <strong>Context API</strong> permite <strong>compartir datos globales</strong> sin pasar props manualmente por cada nivel.</p>
 <h4 id="escenarios-tipicos">Escenarios típicos:</h4>
@@ -666,11 +677,12 @@ function App() {
   );
 }
 </code></pre>
-<hr>
 <h3 id="10-usereducer-vs-usestate">10. useReducer vs useState</h3>
 <ul>
-<li><strong>useReducer:</strong> ideal para <strong>estados complejos</strong> con múltiples transiciones.</li>
-<li><strong>useState:</strong> adecuado para estados simples.</li>
+<li><strong>useReducer:</strong><br>
+ideal para <strong>estados complejos</strong> con múltiples transiciones.</li>
+<li><strong>useState:</strong><br>
+adecuado para estados simples.</li>
 </ul>
 <p>Ejemplo de <code>useReducer</code>:</p>
 <pre><code class="language-jsx">function reducer(state, action) {
@@ -699,7 +711,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
   items.map((item) =&gt; &lt;li key={item.id}&gt;{item.nombre}&lt;/li&gt;);
 }
 </code></pre>
-<hr>
 <h3 id="12-error-boundaries">12. Error Boundaries</h3>
 <ul>
 <li>Son componentes que <strong>atrapan errores</strong> en sus componentes hijos sin romper toda la app.</li>
@@ -715,7 +726,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 <li>Formularios críticos.</li>
 <li>Secciones importantes como carritos de compras.</li>
 </ul>
-<hr>
 <h3 id="13-higher-order-components-hocs">13. Higher-Order Components (HOCs)</h3>
 <ul>
 <li>Un <strong>HOC</strong> es una función que <strong>recibe un componente y devuelve otro mejorado</strong>.</li>
@@ -731,7 +741,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 <li><em>Wrapper hell</em> por demasiadas capas.</li>
 </ul>
 <p>Actualmente, los Hooks suelen reemplazarlos por su simplicidad.</p>
-<hr>
 <h3 id="14-fragments-en-react">14. Fragments en React</h3>
 <ul>
 <li>Permiten devolver múltiples elementos sin añadir un nodo extra al DOM.</li>
@@ -743,7 +752,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
   &lt;/&gt;
 );
 </code></pre>
-<hr>
 <h3 id="15-estrategias-de-optimizacion-de-rendimiento">15. Estrategias de optimización de rendimiento</h3>
 <ol>
 <li>
@@ -763,40 +771,6 @@ Carga diferida de componentes con <code>React.lazy</code>.</p>
 </li>
 </ol>
 <p><a href="#temas">🔼 temas</a></p>
-<!-- # Seccion 03 •
-
-## Conceptos Claves
-
-Genera 15 preguntas de entrevista técnica sobre React.
-
-- Incluye temas básicos, intermedios y avanzados.
-- Mezcla teoría y práctica.
-- Cubre sintaxis, estructuras de datos, buenas prácticas y casos reales.
-- Redacta las preguntas de forma clara, sin respuestas.
-
-### 🟢 Básico
-
-1. ¿Cuál es la diferencia entre un componente de clase y un componente funcional en React?
-2. Explica el concepto de Virtual DOM y cómo mejora el rendimiento de una aplicación React.
-3. Qué son los props en React? ¿Cuál es su propósito y por qué se consideran inmutables?
-4. ¿Cuál es la función del método render() en un componente de clase y qué debe devolver?
-5. Describe qué es el state en React. ¿Cuándo y cómo lo usarías en un componente?
-
-### 🟡 Intermedio
-
-6. Explica el ciclo de vida de un componente de React. Nombra y describe al menos tres de los métodos principales del ciclo de vida.
-7. ¿Qué son los Hooks en React? Menciona al menos tres Hooks y describe un caso práctico de uso para cada uno.
-8. Explica cómo funciona useEffect y qué papel juega su arreglo de dependencias. ¿Qué problemas puede ocasionar no definir bien ese arreglo?
-9. ¿Qué es el Context API? Describe un escenario real donde usarías Context en lugar de pasar props manualmente por muchos componentes.
-10. ¿Qué es useReducer y en qué casos lo preferirías sobre useState?
-
-### 🔴 Avanzado
-
-11. ¿Qué es la clave (key) en las listas de React? Explica su importancia y qué problemas puede causar su omisión.
-12. ¿Qué son los error boundaries en React? ¿Cómo se implementan y cuándo conviene usarlos?
-13. ¿Qué son los Higher-Order Components (HOCs) y qué ventajas/desventajas tienen frente a Hooks o componentes funcionales?
-14. ¿Qué son los fragmentos (Fragments) de React y cuándo se deben utilizar?
-15. ¿Cómo optimizarías el rendimiento de una aplicación React que tiene un componente que se vuelve a renderizar con frecuencia? Nombra y explica al menos dos estrategias. -->
 
     </main>
     <hr>

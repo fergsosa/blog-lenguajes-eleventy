@@ -29,22 +29,31 @@
 <hr>
 <h2 id="1-que-es-javascript">1. ¿Qué es JavaScript?</h2>
 <p>JavaScript (JS) es un <strong>lenguaje de programación interpretado</strong>, <strong>orientado a objetos</strong> y <strong>basado en eventos</strong>, diseñado inicialmente para dotar de interactividad a las páginas web.</p>
-<p><strong>Diferencias clave frente a otros lenguajes:</strong></p>
+<h4 id="diferencias-clave-frente-a-otros-lenguajes">Diferencias clave frente a otros lenguajes:</h4>
 <ul>
-<li><strong>Interpretado en el navegador:</strong> No requiere compilación previa como C++ o Java.</li>
-<li><strong>Multiparadigma:</strong> Soporta programación funcional, orientada a objetos y basada en eventos.</li>
-<li><strong>Enfoque web:</strong> Se ejecuta principalmente en navegadores, aunque con <strong>Node.js</strong> también se utiliza en el backend.</li>
-<li><strong>Alta integración con HTML y CSS</strong>, algo que otros lenguajes no ofrecen de forma nativa.</li>
+<li><strong>Interpretado en el navegador:</strong><br>
+No requiere compilación previa como C++ o Java.</li>
+<li><strong>Multiparadigma:</strong><br>
+Soporta programación funcional, orientada a objetos y basada en eventos.</li>
+<li><strong>Enfoque web:</strong><br>
+Se ejecuta principalmente en navegadores, aunque con <strong>Node.js</strong> también se utiliza en el backend.</li>
+<li><strong>Alta integración con HTML y CSS:</strong><br>
+algo que otros lenguajes no ofrecen de forma nativa.</li>
 </ul>
 <h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
 <p>JavaScript se utiliza en una amplia variedad de contextos, siendo el estándar para la programación en la web.</p>
 <p><strong>Aplicaciones principales:</strong></p>
 <ul>
-<li><strong>Frontend:</strong> Crear interfaces dinámicas e interactivas (con React, Vue, Angular).</li>
-<li><strong>Backend:</strong> Desarrollo de servidores y APIs con <strong>Node.js</strong>.</li>
-<li><strong>Aplicaciones móviles:</strong> Usando frameworks como React Native o Ionic.</li>
-<li><strong>Aplicaciones de escritorio:</strong> Con tecnologías como Electron.</li>
-<li><strong>Automatización y scripting:</strong> Scripts para tareas repetitivas o automatización de flujos.</li>
+<li><strong>Frontend:</strong><br>
+Crear interfaces dinámicas e interactivas (con React, Vue, Angular).</li>
+<li><strong>Backend:</strong><br>
+Desarrollo de servidores y APIs con <strong>Node.js</strong>.</li>
+<li><strong>Aplicaciones móviles:</strong><br>
+Usando frameworks como React Native o Ionic.</li>
+<li><strong>Aplicaciones de escritorio:</strong><br>
+Con tecnologías como Electron.</li>
+<li><strong>Automatización y scripting:</strong><br>
+Scripts para tareas repetitivas o automatización de flujos.</li>
 </ul>
 <blockquote>
 <p><strong>Ideal cuando necesitas</strong> interactividad, comunicación en tiempo real, aplicaciones rápidas y prototipos ágiles.</p>
@@ -63,10 +72,14 @@
 <h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
 <p>JavaScript es la mejor elección en los siguientes escenarios:</p>
 <ul>
-<li><strong>Proyectos web:</strong> Es el estándar para navegadores, no existe alternativa real.</li>
-<li><strong>Prototipos rápidos:</strong> Sintaxis sencilla y frameworks maduros aceleran el desarrollo.</li>
-<li><strong>Aplicaciones en tiempo real:</strong> Chats, videojuegos o herramientas colaborativas.</li>
-<li><strong>Unificar frontend y backend:</strong> Permite usar un solo lenguaje en todo el stack.</li>
+<li><strong>Proyectos web:</strong><br>
+Es el estándar para navegadores, no existe alternativa real.</li>
+<li><strong>Prototipos rápidos:</strong><br>
+Sintaxis sencilla y frameworks maduros aceleran el desarrollo.</li>
+<li><strong>Aplicaciones en tiempo real:</strong><br>
+Chats, videojuegos o herramientas colaborativas.</li>
+<li><strong>Unificar frontend y backend:</strong><br>
+Permite usar un solo lenguaje en todo el stack.</li>
 </ul>
 <blockquote>
 <p>⚠️ <strong>Evítalo</strong> si el proyecto requiere alto rendimiento computacional, como simulaciones científicas o software de bajo nivel, donde lenguajes como <strong>C++ o Rust</strong> son más adecuados.</p>
@@ -132,16 +145,20 @@
 <p>Antes de aprender JavaScript o mientras lo estudias, es importante entender estos conceptos fundamentales:</p>
 <h3 id="1-fundamentos-de-programacion">1. Fundamentos de programación</h3>
 <ul>
-<li><strong>Algoritmos y lógica:</strong> La base para resolver problemas.</li>
-<li><strong>Variables y constantes:</strong> Manejo de datos en memoria (<code>let</code>, <code>const</code>).</li>
+<li><strong>Algoritmos y lógica:</strong><br>
+La base para resolver problemas.</li>
+<li><strong>Variables y constantes:</strong><br>
+Manejo de datos en memoria (<code>let</code>, <code>const</code>).</li>
 <li><strong>Tipos de datos:</strong>
 <ul>
 <li>Primitivos: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code>.</li>
 <li>Complejos: <code>object</code>, <code>array</code>, <code>function</code>.</li>
 </ul>
 </li>
-<li><strong>Estructuras de control:</strong> Condicionales (<code>if</code>, <code>switch</code>) y bucles (<code>for</code>, <code>while</code>).</li>
-<li><strong>Funciones:</strong> Declarativas, expresivas, flecha (<em>arrow functions</em>).</li>
+<li><strong>Estructuras de control:</strong><br>
+Condicionales (<code>if</code>, <code>switch</code>) y bucles (<code>for</code>, <code>while</code>).</li>
+<li><strong>Funciones:</strong><br>
+Declarativas, expresivas, flecha (<em>arrow functions</em>).</li>
 <li><strong>Paradigmas de programación:</strong>
 <ul>
 <li><em>Imperativo</em>: Cómo se hace.</li>
@@ -153,35 +170,49 @@
 </ul>
 <h3 id="2-web-y-entorno-de-ejecucion">2. Web y entorno de ejecución</h3>
 <ul>
-<li><strong>HTML:</strong> Estructura base de las páginas web.</li>
-<li><strong>CSS:</strong> Estilos y diseño visual.</li>
-<li><strong>DOM (Document Object Model):</strong> Representación en memoria de una página web para manipular elementos dinámicamente.</li>
-<li><strong>BOM (Browser Object Model):</strong> Objetos que el navegador proporciona, como <code>window</code> o <code>navigator</code>.</li>
-<li><strong>Eventos:</strong> Manejo de interacciones del usuario (<code>click</code>, <code>input</code>, <code>submit</code>).</li>
+<li><strong>HTML:</strong><br>
+Estructura base de las páginas web.</li>
+<li><strong>CSS:</strong><br>
+Estilos y diseño visual.</li>
+<li><strong>DOM (Document Object Model):</strong><br>
+Representación en memoria de una página web para manipular elementos dinámicamente.</li>
+<li><strong>BOM (Browser Object Model):</strong><br>
+Objetos que el navegador proporciona, como <code>window</code> o <code>navigator</code>.</li>
+<li><strong>Eventos:</strong><br>
+Manejo de interacciones del usuario (<code>click</code>, <code>input</code>, <code>submit</code>).</li>
 </ul>
 <h3 id="3-programacion-asincrona">3. Programación asíncrona</h3>
 <p>JavaScript es <strong><em>single-threaded</em></strong> pero puede manejar tareas asíncronas.</p>
 <ul>
-<li><strong>Callbacks:</strong> Primera forma de manejar tareas asincrónicas.</li>
-<li><strong>Promises:</strong> Flujo controlado con <code>.then()</code> y <code>.catch()</code>.</li>
-<li><strong>Async/Await:</strong> Sintaxis moderna y más legible para trabajar con promesas.</li>
-<li><strong>Event Loop:</strong> Mecanismo que gestiona la ejecución de código y tareas pendientes.</li>
+<li><strong>Callbacks:</strong><br>
+Primera forma de manejar tareas asincrónicas.</li>
+<li><strong>Promises:</strong><br>
+Flujo controlado con <code>.then()</code> y <code>.catch()</code>.</li>
+<li><strong>Async/Await:</strong><br>
+Sintaxis moderna y más legible para trabajar con promesas.</li>
+<li><strong>Event Loop:</strong><br>
+Mecanismo que gestiona la ejecución de código y tareas pendientes.</li>
 </ul>
 <h3 id="4-json-y-apis">4. JSON y APIs</h3>
 <ul>
-<li><strong>JSON (JavaScript Object Notation):</strong> Formato ligero para intercambio de datos.</li>
-<li><strong>APIs:</strong> Interfaces para comunicación entre sistemas.
+<li><strong>JSON (JavaScript Object Notation):</strong><br>
+Formato ligero para intercambio de datos.</li>
+<li><strong>APIs:</strong><br>
+Interfaces para comunicación entre sistemas.
 <ul>
 <li>REST API.</li>
 <li>GraphQL.</li>
 </ul>
 </li>
-<li><strong>Fetch API:</strong> Hacer peticiones HTTP con <code>fetch()</code>.</li>
+<li><strong>Fetch API:</strong><br>
+Hacer peticiones HTTP con <code>fetch()</code>.</li>
 </ul>
 <h3 id="5-ecosistema-javascript">5. Ecosistema JavaScript</h3>
 <ul>
-<li><strong>Node.js:</strong> Ejecutar JavaScript fuera del navegador, principalmente para el backend.</li>
-<li><strong>npm (Node Package Manager):</strong> Gestor de paquetes y librerías.</li>
+<li><strong>Node.js:</strong><br>
+Ejecutar JavaScript fuera del navegador, principalmente para el backend.</li>
+<li><strong>npm (Node Package Manager):</strong><br>
+Gestor de paquetes y librerías.</li>
 <li><strong>Frameworks y librerías populares:</strong>
 <ul>
 <li><strong>Frontend:</strong> React, Vue, Angular, Svelte.</li>
@@ -192,10 +223,14 @@
 </ul>
 <h3 id="6-principios-de-desarrollo">6. Principios de desarrollo</h3>
 <ul>
-<li><strong>DRY (<em>Don't Repeat Yourself</em>):</strong> Evitar duplicación de código.</li>
-<li><strong>KISS (<em>Keep It Simple, Stupid</em>):</strong> Mantener el código simple y entendible.</li>
-<li><strong>SOLID:</strong> Buenas prácticas de programación orientada a objetos.</li>
-<li><strong>Clean Code:</strong> Código limpio, legible y mantenible.</li>
+<li><strong>DRY (<em>Don't Repeat Yourself</em>):</strong><br>
+Evitar duplicación de código.</li>
+<li><strong>KISS (<em>Keep It Simple, Stupid</em>):</strong><br>
+Mantener el código simple y entendible.</li>
+<li><strong>SOLID:</strong><br>
+Buenas prácticas de programación orientada a objetos.</li>
+<li><strong>Clean Code:</strong><br>
+Código limpio, legible y mantenible.</li>
 </ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
@@ -203,8 +238,10 @@
 <p>Estas herramientas te ayudarán a <strong>desarrollar, depurar y optimizar</strong> proyectos en JavaScript de manera profesional.</p>
 <h3 id="1-editores-y-entornos-de-desarrollo">1. Editores y entornos de desarrollo</h3>
 <ul>
-<li><strong>Visual Studio Code (VSCode):</strong> Editor moderno, liviano y altamente configurable.\</li>
-<li><strong>WebStorm:</strong> IDE especializado para JavaScript.\</li>
+<li><strong>Visual Studio Code (VSCode):</strong><br>
+Editor moderno, liviano y altamente configurable.</li>
+<li><strong>WebStorm:</strong><br>
+IDE especializado para JavaScript.</li>
 <li><strong>Extensiones útiles para VSCode:</strong>
 <ul>
 <li><strong>ESLint:</strong> Detección de errores y estandarización de código.</li>
@@ -216,13 +253,17 @@
 </ul>
 <h3 id="2-control-de-versiones">2. Control de versiones</h3>
 <ul>
-<li><strong>Git:</strong> Sistema de control de versiones.</li>
-<li><strong>GitHub / GitLab / Bitbucket:</strong> Plataformas para alojar proyectos y colaborar en equipo.</li>
+<li><strong>Git:</strong><br>
+Sistema de control de versiones.</li>
+<li><strong>GitHub / GitLab / Bitbucket:</strong><br>
+Plataformas para alojar proyectos y colaborar en equipo.</li>
 </ul>
 <h3 id="3-terminal-y-linea-de-comandos">3. Terminal y línea de comandos</h3>
 <ul>
-<li><strong>Node.js CLI:</strong> Ejecutar scripts y proyectos.</li>
-<li><strong>npm / yarn / pnpm:</strong> Manejo de dependencias y paquetes.</li>
+<li><strong>Node.js CLI:</strong><br>
+Ejecutar scripts y proyectos.</li>
+<li><strong>npm / yarn / pnpm:</strong><br>
+Manejo de dependencias y paquetes.</li>
 <li><strong>Comandos clave:</strong>
 <ul>
 <li><code>node app.js</code> → Ejecutar un archivo.</li>
@@ -240,29 +281,39 @@
 </ul>
 <h4 id="frameworks-de-testing">Frameworks de testing:</h4>
 <ul>
-<li><strong>Jest:</strong> Pruebas unitarias.</li>
-<li><strong>Cypress:</strong> Pruebas de interfaz (end-to-end).</li>
-<li><strong>Mocha + Chai:</strong> Pruebas flexibles y personalizadas.</li>
+<li><strong>Jest:</strong><br>
+Pruebas unitarias.</li>
+<li><strong>Cypress:</strong><br>
+Pruebas de interfaz (end-to-end).</li>
+<li><strong>Mocha + Chai:</strong><br>
+Pruebas flexibles y personalizadas.</li>
 </ul>
 <h3 id="5-automatizacion-y-bundlers">5. Automatización y bundlers</h3>
-<p><strong>Bundlers:</strong> Empaquetar y optimizar el código.</p>
+<ul>
+<li><strong>Bundlers:</strong><br>
+Empaquetar y optimizar el código.
 <ul>
 <li>Webpack, Parcel, Vite.</li>
 </ul>
-<p><strong>Transpiladores:</strong></p>
+</li>
+<li><strong>Transpiladores:</strong>
 <ul>
 <li><strong>Babel:</strong> Para compatibilidad con navegadores antiguos.</li>
 </ul>
-<p><strong>Automatización de tareas:</strong></p>
-<ul>
-<li>Gulp, npm scripts.</li>
+</li>
+<li><strong>Automatización de tareas:</strong><br>
+Gulp, npm scripts.</li>
 </ul>
 <h3 id="6-entorno-backend">6. Entorno backend</h3>
 <ul>
-<li><strong>Express:</strong> Framework minimalista para servidores.</li>
-<li><strong>MongoDB Atlas:</strong> Base de datos en la nube.</li>
-<li><strong>Postman / Insomnia:</strong> Probar APIs y endpoints.</li>
-<li><strong>Docker:</strong> Contenerizar aplicaciones y entornos.</li>
+<li><strong>Express:</strong><br>
+Framework minimalista para servidores.</li>
+<li><strong>MongoDB Atlas:</strong><br>
+Base de datos en la nube.</li>
+<li><strong>Postman / Insomnia:</strong><br>
+Probar APIs y endpoints.</li>
+<li><strong>Docker:</strong><br>
+Contenerizar aplicaciones y entornos.</li>
 </ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
@@ -563,6 +614,7 @@ console.log(incrementar()); // 2
 crearFunciones().forEach((fn) =&gt; fn()); // 3, 3, 3
 </code></pre>
 <p>Solución: usar <code>let</code> o crear un scope adicional.</p>
+<hr>
 <h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-promesas-y-promise-all-promise-race">6. Promesas y Promise.all / Promise.race</h3>
 <ul>
@@ -643,6 +695,7 @@ const colores = [&quot;Rojo&quot;];
 const [primero = &quot;Verde&quot;, segundo = &quot;Azul&quot;] = colores;
 console.log(primero, segundo);
 </code></pre>
+<hr>
 <h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-iteradores-y-generadores">11. Iteradores y generadores</h3>
 <ul>

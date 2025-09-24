@@ -31,19 +31,28 @@
 Fue creado por <strong>Linus Torvalds</strong> en 2005 para el desarrollo del kernel de Linux.</p>
 <h4 id="diferencias-con-otros-sistemas-de-control-de-versiones">Diferencias con otros sistemas de control de versiones:</h4>
 <ul>
-<li><strong>Distribuido:</strong> Cada desarrollador tiene una copia completa del repositorio, con todo el historial de cambios, a diferencia de sistemas centralizados como <strong>Subversion (SVN)</strong>.</li>
-<li><strong>Rápido y eficiente:</strong> Opera de manera local para la mayoría de las acciones, lo que mejora el rendimiento.</li>
-<li><strong>Seguridad:</strong> Utiliza <strong>hashes SHA-1/SHA-256</strong> para asegurar la integridad de los datos.</li>
-<li><strong>Ramas (branches) ligeras:</strong> Permite crear y fusionar ramas de forma sencilla y eficiente.</li>
-<li><strong>Popularidad y soporte:</strong> Git es el estándar de facto en la industria, lo que asegura herramientas y documentación abundantes.</li>
+<li><strong>Distribuido:</strong><br>
+Cada desarrollador tiene una copia completa del repositorio, con todo el historial de cambios, a diferencia de sistemas centralizados como <strong>Subversion (SVN)</strong>.</li>
+<li><strong>Rápido y eficiente:</strong><br>
+Opera de manera local para la mayoría de las acciones, lo que mejora el rendimiento.</li>
+<li><strong>Seguridad:</strong><br>
+Utiliza <strong>hashes SHA-1/SHA-256</strong> para asegurar la integridad de los datos.</li>
+<li><strong>Ramas (branches) ligeras:</strong><br>
+Permite crear y fusionar ramas de forma sencilla y eficiente.</li>
+<li><strong>Popularidad y soporte:</strong><br>
+Git es el estándar de facto en la industria, lo que asegura herramientas y documentación abundantes.</li>
 </ul>
 <h3 id="para-que-se-usa">¿Para qué se usa?</h3>
 <h4 id="git-se-utiliza-principalmente-para">Git se utiliza principalmente para:</h4>
 <ul>
-<li><strong>Control de versiones:</strong> Mantener un historial claro y seguro de cambios en proyectos de software.</li>
-<li><strong>Colaboración en equipo:</strong> Permite que varios desarrolladores trabajen en paralelo sin interferir entre sí.</li>
-<li><strong>Gestión de ramas y características:</strong> Facilita la creación de ramas para desarrollar nuevas funciones, corregir errores o experimentar sin afectar la rama principal.</li>
-<li><strong>Despliegue y automatización:</strong> Integración con <strong>CI/CD</strong> y herramientas como GitHub Actions, GitLab CI o Jenkins.</li>
+<li><strong>Control de versiones:</strong><br>
+Mantener un historial claro y seguro de cambios en proyectos de software.</li>
+<li><strong>Colaboración en equipo:</strong><br>
+Permite que varios desarrolladores trabajen en paralelo sin interferir entre sí.</li>
+<li><strong>Gestión de ramas y características:</strong><br>
+Facilita la creación de ramas para desarrollar nuevas funciones, corregir errores o experimentar sin afectar la rama principal.</li>
+<li><strong>Despliegue y automatización:</strong><br>
+Integración con <strong>CI/CD</strong> y herramientas como GitHub Actions, GitLab CI o Jenkins.</li>
 </ul>
 <p><strong>Contextos ideales:</strong></p>
 <ul>
@@ -131,7 +140,7 @@ Con Git puedes estructurar y versionar proyectos como:</p>
 <hr>
 <h1 id="temas">Temas</h1>
 <ul>
-<li><a href="#git">inicio</a></li>
+<li><a href="#git">Inicio</a></li>
 <li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
 <li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
 <li><a href="#comandos">Comandos</a></li>
@@ -216,9 +225,12 @@ Proporciona una terminal similar a Linux para trabajar con Git en sistemas Windo
 <p>Integración de Git nativa con soporte visual y herramientas avanzadas.</p>
 <h3 id="herramientas-de-integracion-y-automatizacion">Herramientas de integración y automatización</h3>
 <ul>
-<li><strong>GitHub Actions:</strong> Automatización de flujos como pruebas, despliegues y validaciones.</li>
-<li><strong>GitLab CI/CD:</strong> Pipelines integrados directamente con tus repositorios en GitLab.</li>
-<li><strong>Jenkins:</strong> Integración continua para equipos que requieren mayor personalización.</li>
+<li><strong>GitHub Actions:</strong><br>
+Automatización de flujos como pruebas, despliegues y validaciones.</li>
+<li><strong>GitLab CI/CD:</strong><br>
+Pipelines integrados directamente con tus repositorios en GitLab.</li>
+<li><strong>Jenkins:</strong><br>
+Integración continua para equipos que requieren mayor personalización.</li>
 </ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
@@ -339,14 +351,13 @@ git lg
 <h1 id="conceptos-claves">Conceptos Claves</h1>
 <h2 id="basico">🟢 Básico</h2>
 <h3 id="1-que-es-git-y-en-que-se-diferencia-de-otros-sistemas-de-control-de-versiones-como-svn-o-mercurial">1. Qué es Git y en qué se diferencia de otros sistemas de control de versiones como SVN o Mercurial?</h3>
-<p>Git es un <strong>sistema de control de versiones distribuido</strong> que permite a múltiples desarrolladores trabajar en el mismo proyecto sin depender de un único servidor central.<br>
-A diferencia de SVN o Mercurial, Git:</p>
+<p>Git es un <strong>sistema de control de versiones distribuido</strong> que permite a múltiples desarrolladores trabajar en el mismo proyecto sin depender de un único servidor central.</p>
+<h4 id="a-diferencia-de-svn-o-mercurial-git">A diferencia de SVN o Mercurial, Git:</h4>
 <ul>
 <li>No necesita conexión constante a un servidor central.</li>
 <li>Cada clon del repositorio contiene <strong>todo el historial</strong>.</li>
 <li>Ofrece ramas (branches) <strong>ligeras y rápidas</strong>, facilitando la experimentación y trabajo paralelo.</li>
 </ul>
-<hr>
 <h3 id="2-explica-la-diferencia-entre-los-estados-de-un-archivo-en-git-untracked-modified-staged-y-committed">2. Explica la diferencia entre los estados de un archivo en Git: untracked, modified, staged y committed.</h3>
 <ul>
 <li><strong>Untracked</strong>: El archivo no está siendo seguido por Git.</li>
@@ -354,25 +365,22 @@ A diferencia de SVN o Mercurial, Git:</p>
 <li><strong>Staged</strong>: El archivo está listo para ser incluido en el próximo commit (<code>git add</code>).</li>
 <li><strong>Committed</strong>: El archivo ya está guardado en el historial del repositorio.</li>
 </ul>
-<hr>
 <h3 id="3-cual-es-la-diferencia-entre-git-clone-y-git-fork-y-en-que-contexto-usarias-cada-uno">3. ¿Cuál es la diferencia entre git clone y git fork y en qué contexto usarías cada uno?</h3>
 <ul>
-<li><strong>git clone</strong>: Crea una copia <strong>local</strong> de un repositorio remoto.</li>
-<li><strong>git fork</strong>: Duplica un repositorio <strong>en tu cuenta de GitHub u otra plataforma</strong>, para luego clonar y trabajar en tu propia copia.</li>
+<li><strong><code>git clone</code></strong>: Crea una copia <strong>local</strong> de un repositorio remoto.</li>
+<li><strong><code>git fork</code></strong>: Duplica un repositorio <strong>en tu cuenta de GitHub u otra plataforma</strong>, para luego clonar y trabajar en tu propia copia.</li>
 </ul>
-<p><strong>Uso recomendado:</strong></p>
+<h4 id="uso-recomendado">Uso recomendado:</h4>
 <ul>
 <li><code>clone</code>: Cuando tienes permisos directos sobre el repositorio original.</li>
 <li><code>fork</code>: Cuando deseas contribuir a un proyecto sin modificar el original directamente.</li>
 </ul>
-<hr>
 <h3 id="4-describe-la-funcion-de-los-comandos-git-fetch-git-pull-y-git-push">4. Describe la función de los comandos git fetch, git pull y git push.</h3>
 <ul>
-<li><strong>git fetch</strong>: Descarga cambios del remoto pero <strong>no los fusiona</strong> automáticamente.</li>
-<li><strong>git pull</strong>: Hace un <code>fetch</code> + <code>merge</code> para actualizar tu rama local.</li>
-<li><strong>git push</strong>: Sube tus commits locales al repositorio remoto.</li>
+<li><strong><code>git fetch</code></strong>: Descarga cambios del remoto pero <strong>no los fusiona</strong> automáticamente.</li>
+<li><strong><code>git pull</code></strong>: Hace un <code>fetch</code> + <code>merge</code> para actualizar tu rama local.</li>
+<li><strong><code>git push</code></strong>: Sube tus commits locales al repositorio remoto.</li>
 </ul>
-<hr>
 <h3 id="5-si-accidentalmente-borras-un-archivo-en-tu-proyecto-como-lo-recuperarias-usando-git">5. Si accidentalmente borras un archivo en tu proyecto, ¿cómo lo recuperarías usando Git?</h3>
 <pre><code class="language-bash">git checkout -- nombre_del_archivo
 </code></pre>
@@ -386,19 +394,18 @@ A diferencia de SVN o Mercurial, Git:</p>
 <h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-explica-la-diferencia-entre-git-merge-y-git-rebase-en-que-situaciones-usarias-uno-u-otro">6. Explica la diferencia entre git merge y git rebase. ¿En qué situaciones usarías uno u otro?</h3>
 <ul>
-<li><strong>git merge</strong>: Une ramas creando un <strong>commit de merge</strong>, conservando el historial completo.</li>
-<li><strong>git rebase</strong>: Reaplica los commits de una rama sobre otra, <strong>reescribiendo el historial</strong>.</li>
+<li><strong><code>git merge</code></strong>: Une ramas creando un <strong>commit de merge</strong>, conservando el historial completo.</li>
+<li><strong><code>git rebase</code></strong>: Reaplica los commits de una rama sobre otra, <strong>reescribiendo el historial</strong>.</li>
 </ul>
 <p><strong>Uso recomendado:</strong></p>
 <ul>
 <li><code>merge</code>: Ideal para preservar la historia de cambios en equipos grandes.</li>
-<li><code>rebase</code>: Para mantener un historial <strong>lineal y limpio</strong>.</li>
-</ul>
-<hr>
+<li><code>rebase</code>: Para mantener un historial <strong>lineal y limpio</strong>.
 <h3 id="7-tienes-un-commit-con-un-mensaje-incorrecto-y-aun-no-lo-has-subido-al-repositorio-remoto-como-lo-corregirias">7. Tienes un commit con un mensaje incorrecto y aún no lo has subido al repositorio remoto. ¿Cómo lo corregirías?</h3>
+</li>
+</ul>
 <pre><code class="language-bash">git commit --amend -m &quot;Nuevo mensaje corregido&quot;
 </code></pre>
-<hr>
 <h3 id="8-durante-un-git-pull-encuentras-un-conflicto-de-merge-describe-el-proceso-paso-a-paso-para-resolverlo-correctamente">8. Durante un git pull, encuentras un conflicto de merge. Describe el proceso paso a paso para resolverlo correctamente.</h3>
 <ol>
 <li>Identificar archivos en conflicto:<pre><code class="language-bash">git status
@@ -412,10 +419,9 @@ A diferencia de SVN o Mercurial, Git:</p>
 </code></pre>
 </li>
 </ol>
-<hr>
 <h3 id="9-que-hace-el-comando-git-stash-y-como-se-recupera-el-trabajo-guardado-en-un-stash-especifico">9. ¿Qué hace el comando git stash y cómo se recupera el trabajo guardado en un stash específico?</h3>
 <ul>
-<li><strong>git stash</strong> guarda cambios sin comprometerlos en un commit.</li>
+<li><strong><code>git stash</code></strong> guarda cambios sin comprometerlos en un commit.</li>
 <li>Para ver los stashes disponibles:<pre><code class="language-bash">git stash list
 </code></pre>
 </li>
@@ -424,10 +430,9 @@ A diferencia de SVN o Mercurial, Git:</p>
 </li>
 <li>Para aplicar y eliminarlo:<pre><code class="language-bash">git stash pop stash@{n}
 </code></pre>
+<h3 id="10-explica-que-es-un-detached-head-en-git-y-como-volver-al-flujo-normal-de-trabajo-despues-de-estar-en-ese-estado">10. Explica qué es un detached HEAD en Git y cómo volver al flujo normal de trabajo después de estar en ese estado.</h3>
 </li>
 </ul>
-<hr>
-<h3 id="10-explica-que-es-un-detached-head-en-git-y-como-volver-al-flujo-normal-de-trabajo-despues-de-estar-en-ese-estado">10. Explica qué es un detached HEAD en Git y cómo volver al flujo normal de trabajo después de estar en ese estado.</h3>
 <p>Un <strong>detached HEAD</strong> ocurre cuando revisas un commit directamente en lugar de una rama.<br>
 Para volver a una rama normal:</p>
 <pre><code class="language-bash">git checkout nombre_de_rama
@@ -446,7 +451,6 @@ git merge origin/nombre_de_rama
 <p>O directamente:</p>
 <pre><code class="language-bash">git pull
 </code></pre>
-<hr>
 <h3 id="12-como-usarias-git-bisect-para-encontrar-un-commit-que-introdujo-un-bug-en-el-proyecto">12. ¿Cómo usarías git bisect para encontrar un commit que introdujo un bug en el proyecto?</h3>
 <ol>
 <li>Iniciar bisect:<pre><code class="language-bash">git bisect start
@@ -463,12 +467,11 @@ git merge origin/nombre_de_rama
 </code></pre>
 </li>
 </ol>
-<hr>
 <h3 id="13-explica-la-diferencia-entre-git-reset-git-revert-y-git-restore-en-que-casos-elegirias-cada-uno">13. Explica la diferencia entre git reset, git revert y git restore. ¿En qué casos elegirías cada uno?</h3>
 <ul>
-<li><strong>git reset</strong>: Deshace commits y puede modificar el historial. <strong>Peligroso</strong> si ya se subió al remoto.</li>
-<li><strong>git revert</strong>: Crea un commit nuevo que revierte cambios <strong>sin alterar el historial</strong>.</li>
-<li><strong>git restore</strong>: Restaura archivos individuales a un estado previo.</li>
+<li><strong><code>git reset</code></strong>: Deshace commits y puede modificar el historial. <strong>Peligroso</strong> si ya se subió al remoto.</li>
+<li><strong><code>git revert</code></strong>: Crea un commit nuevo que revierte cambios <strong>sin alterar el historial</strong>.</li>
+<li><strong><code>git restore</code></strong>: Restaura archivos individuales a un estado previo.</li>
 </ul>
 <p><strong>Uso recomendado:</strong></p>
 <ul>
@@ -476,7 +479,6 @@ git merge origin/nombre_de_rama
 <li><code>revert</code>: Para revertir commits en repositorios compartidos.</li>
 <li><code>restore</code>: Para restaurar archivos específicos.</li>
 </ul>
-<hr>
 <h3 id="14-en-un-proyecto-con-muchos-colaboradores-que-estrategias-seguirias-para-mantener-un-historial-de-commits-limpio-y-entendible">14. En un proyecto con muchos colaboradores, ¿qué estrategias seguirías para mantener un historial de commits limpio y entendible?</h3>
 <ul>
 <li>Usar <strong>commits atómicos y descriptivos</strong>.</li>
@@ -485,7 +487,6 @@ git merge origin/nombre_de_rama
 <li>Revisar cambios mediante <strong>Pull Requests</strong>.</li>
 <li>Hacer limpieza periódica de ramas obsoletas.</li>
 </ul>
-<hr>
 <h3 id="15-describe-como-configurar-y-usar-hooks-en-git-y-da-un-ejemplo-practico-de-un-hook-que-podria-mejorar-la-calidad-del-codigo">15. Describe cómo configurar y usar hooks en Git, y da un ejemplo práctico de un hook que podría mejorar la calidad del código.</h3>
 <p>Los <strong>hooks</strong> son scripts que se ejecutan automáticamente en ciertos eventos de Git.</p>
 <p><strong>Configuración:</strong></p>

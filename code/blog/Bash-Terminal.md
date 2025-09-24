@@ -30,12 +30,18 @@ Bash se utiliza para **administrar, automatizar y ejecutar procesos en el sistem
 
 #### Algunos contextos ideales:
 
-- **Desarrollo de software**: ejecutar scripts de despliegue, gestionar dependencias y entornos.
-- **DevOps y servidores**: automatizar configuraciones y despliegues en la nube.
-- **Manejo de archivos y directorios**: copiar, mover, comprimir y buscar archivos de forma eficiente.
-- **Procesamiento de datos**: manipular logs, filtrar información y realizar tareas repetitivas.
-- **Educación y aprendizaje**: entender cómo funcionan los sistemas operativos a bajo nivel.
-  ### 3. ¿Qué puedo construir con {{title}}?
+- **Desarrollo de software:**\
+  ejecutar scripts de despliegue, gestionar dependencias y entornos.
+- **DevOps y servidores:**\
+  automatizar configuraciones y despliegues en la nube.
+- **Manejo de archivos y directorios:**\
+  copiar, mover, comprimir y buscar archivos de forma eficiente.
+- **Procesamiento de datos:**\
+  manipular logs, filtrar información y realizar tareas repetitivas.
+- **Educación y aprendizaje:**\
+  entender cómo funcionan los sistemas operativos a bajo nivel.
+
+### 3. ¿Qué puedo construir con {{title}}?
 
 Con Bash puedes **crear herramientas y automatizaciones** para mejorar la productividad.
 
@@ -46,7 +52,8 @@ Con Bash puedes **crear herramientas y automatizaciones** para mejorar la produc
 - Pequeños **programas CLI** (Command Line Interface).
 - Flujos de **despliegue continuo (CI/CD)** para proyectos.
 - Utilidades personalizadas para **trabajar con proyectos en Git**, Docker, Node.js, etc.
-  ### 4. ¿Cuándo es más conveniente usarlo?
+
+### 4. ¿Cuándo es más conveniente usarlo?
 
 #### Usa Bash cuando:
 
@@ -60,7 +67,8 @@ Con Bash puedes **crear herramientas y automatizaciones** para mejorar la produc
 
 - Necesitas **interfaces gráficas** o aplicaciones complejas.
 - El proyecto requiere **mucha lógica avanzada** (en ese caso, lenguajes como Python o Node.js son más adecuados).
-  ## Buenas prácticas recomendadas
+
+## Buenas prácticas recomendadas
 
 Escribir scripts en Bash requiere **orden y claridad**. Algunas recomendaciones:
 
@@ -104,8 +112,7 @@ cp archivo.txt respaldo/ && echo "Copia exitosa"
 
 #### Cuándo usarlo:
 
--Tareas repetitivas y automatización.
-
+- Tareas repetitivas y automatización.
 - Administración de servidores y entornos de desarrollo.
 - Procesamiento rápido de texto y archivos.
 - Integración con herramientas como Git, Docker o Node.js.
@@ -325,7 +332,7 @@ bash script.sh
 
 # Conceptos Claves
 
-## 🟢 Nivel Básico
+## 🟢 Básico
 
 ### 1. Comandos esenciales
 
@@ -336,8 +343,6 @@ bash script.sh
 - `ls` para ver rápidamente contenido.
 - `ls -l` para inspeccionar propiedades de archivos.
 - `ls -a` para mostrar archivos ocultos de configuración.
-
----
 
 ### 2. Directorios
 
@@ -350,8 +355,6 @@ bash script.sh
 cd ./documentos          # Relativa
 cd /home/usuario/documentos  # Absoluta
 ```
-
----
 
 ### 3. Permisos de archivos
 
@@ -371,8 +374,6 @@ cd /home/usuario/documentos  # Absoluta
 chmod 600 archivo.txt
 ```
 
----
-
 ### 4. Redirección de salida
 
 - **`>:`** sobrescribe un archivo con la salida.
@@ -389,8 +390,6 @@ ls archivo_inexistente 2> error.log # Errores
 comando &> salida.log           # Todo redirigido
 ```
 
----
-
 ### 5. Variables de entorno
 
 - **PATH**: Lista de directorios donde Bash busca comandos.
@@ -402,7 +401,7 @@ export PATH=$PATH:/home/user/mis_comandos
 
 ---
 
-## 🟡 Nivel Intermedio
+## 🟡 Intermedio
 
 ### 6. Combinación de comandos
 
@@ -417,8 +416,6 @@ echo "Inicio"; ls -l
 mkdir nueva && cd nueva
 comando_inexistente || echo "Falló"
 ```
-
----
 
 ### 7. Procesos
 
@@ -437,8 +434,6 @@ fg %1
 kill 1234
 ```
 
----
-
 ### 8. Filtros y pipes
 
 - **`grep`:** Filtra líneas que coinciden con un patrón.
@@ -451,16 +446,12 @@ kill 1234
 grep "ERROR" log.txt | sed 's/ERROR/ALERTA/g'
 ```
 
----
-
 ### 9. Búsqueda de archivos
 
 - **`find`:** Busca en tiempo real según criterios.
 - **`locate`:** Busca en base de datos indexada (más rápido pero no siempre actualizado).
 
 **Preferencia:** `find` para precisión en tiempo real, `locate` para búsquedas rápidas.
-
----
 
 ### 10. Expansiones en Bash
 
@@ -480,7 +471,7 @@ grep "ERROR" log.txt | sed 's/ERROR/ALERTA/g'
 
 ---
 
-## 🔴 Nivel Avanzado
+## 🔴 Avanzado
 
 ### 11. Scripting básico
 
@@ -491,8 +482,6 @@ wc $archivo
 ```
 
 > **Uso:** `bash contar.sh archivo.txt` → muestra líneas, palabras y caracteres.
-
----
 
 ### 12. Condicionales en Bash
 
@@ -506,8 +495,6 @@ else
 fi
 ```
 
----
-
 ### 13. Bucles
 
 ```bash
@@ -516,15 +503,11 @@ for f in *.txt; do
 done
 ```
 
----
-
 ### 14. Optimización y buenas prácticas
 
 1. Comentar el código para claridad.
 2. Validar entradas y errores (`if`, `||`, `set -e`).
 3. Mantener scripts modulares y funciones reutilizables.
-
----
 
 ### 15. Depuración de scripts
 

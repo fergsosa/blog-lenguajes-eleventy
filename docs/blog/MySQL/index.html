@@ -28,31 +28,27 @@
 <h2 id="1-que-es-mysql">1. ¿Qué es MySQL?</h2>
 <p><strong>MySQL</strong> es un RDBMS <strong>open source</strong> que utiliza el <strong>lenguaje SQL (Structured Query Language)</strong> para gestionar y manipular datos.<br>
 Se destaca por su <strong>velocidad, estabilidad y facilidad de uso</strong>, lo que lo convierte en una opción sólida tanto para proyectos pequeños como para aplicaciones empresariales.</p>
-<p><strong>Diferencias clave frente a otros sistemas:</strong></p>
+<h4 id="diferencias-clave-frente-a-otros-sistemas">Diferencias clave frente a otros sistemas:</h4>
 <ul>
-<li>
-<p><strong>MySQL vs PostgreSQL</strong></p>
+<li><strong>MySQL vs PostgreSQL</strong>
 <ul>
 <li>MySQL suele ser más rápido en <strong>lecturas y consultas simples</strong>.</li>
 <li>PostgreSQL es mejor para <strong>consultas complejas y estructuras avanzadas</strong>.</li>
 </ul>
 </li>
-<li>
-<p><strong>MySQL vs MongoDB (NoSQL)</strong></p>
+<li><strong>MySQL vs MongoDB (NoSQL)</strong>
 <ul>
 <li>MySQL organiza datos en <strong>tablas y relaciones</strong>, ideal para datos estructurados.</li>
 <li>MongoDB usa <strong>documentos JSON</strong>, más flexible para datos no estructurados.</li>
 </ul>
 </li>
-<li>
-<p><strong>MySQL vs SQLite</strong></p>
+<li><strong>MySQL vs SQLite</strong>
 <ul>
 <li>MySQL está orientado a <strong>aplicaciones web y multiusuario</strong>.</li>
 <li>SQLite es más simple y usado en <strong>apps locales o móviles</strong>.</li>
 </ul>
 </li>
 </ul>
-<hr>
 <h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
 <p>MySQL se utiliza principalmente para <strong>almacenar, organizar y gestionar datos estructurados</strong>.<br>
 Es especialmente útil en proyectos donde la <strong>integridad de datos y las relaciones entre ellos son fundamentales</strong>.</p>
@@ -63,20 +59,23 @@ Es especialmente útil en proyectos donde la <strong>integridad de datos y las r
 <li>Sistemas con <strong>alta concurrencia de usuarios</strong>.</li>
 <li>Proyectos con <strong>integridad referencial</strong> (relaciones claras entre entidades).</li>
 </ul>
-<hr>
 <h3 id="3-que-puedo-construir-con-mysql">3. ¿Qué puedo construir con MySQL?</h3>
-<p>Con MySQL puedes desarrollar una amplia variedad de soluciones, tales como:</p>
+<h4 id="con-mysql-puedes-desarrollar-una-amplia-variedad-de-soluciones-tales-como">Con MySQL puedes desarrollar una amplia variedad de soluciones, tales como:</h4>
 <ul>
-<li><strong>Sistemas de gestión de usuarios</strong>: registro, login y control de roles.</li>
-<li><strong>E-commerce</strong>: catálogos de productos, carritos de compra y órdenes.</li>
-<li><strong>Sistemas de reservas</strong>: hoteles, vuelos, turnos médicos, etc.</li>
-<li><strong>Gestión de contenidos</strong>: blogs, portales de noticias o sitios corporativos.</li>
-<li><strong>Aplicaciones SaaS</strong>: paneles de administración y sistemas de seguimiento.</li>
+<li><strong>Sistemas de gestión de usuarios:</strong><br>
+registro, login y control de roles.</li>
+<li><strong>E-commerce:</strong><br>
+catálogos de productos, carritos de compra y órdenes.</li>
+<li><strong>Sistemas de reservas:</strong><br>
+hoteles, vuelos, turnos médicos, etc.</li>
+<li><strong>Gestión de contenidos:</strong><br>
+blogs, portales de noticias o sitios corporativos.</li>
+<li><strong>Aplicaciones SaaS:</strong><br>
+paneles de administración y sistemas de seguimiento.</li>
 </ul>
 <blockquote>
 <p>💡 <em>MySQL es la base de datos detrás de plataformas como WordPress, Shopify y Facebook (en sus inicios).</em></p>
 </blockquote>
-<hr>
 <h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
 <p><strong>MySQL es más conveniente cuando:</strong></p>
 <ul>
@@ -88,32 +87,34 @@ Es especialmente útil en proyectos donde la <strong>integridad de datos y las r
 </ul>
 <p><strong>Alternativas que podrían ser mejores:</strong></p>
 <ul>
-<li><strong>MongoDB</strong> → cuando los datos son muy <strong>flexibles y no estructurados</strong>.</li>
-<li><strong>PostgreSQL</strong> → para <strong>consultas complejas</strong> y datos muy relacionados.</li>
-<li><strong>SQLite</strong> → en <strong>aplicaciones locales o prototipos</strong>.</li>
+<li><strong>MongoDB:</strong><br>
+cuando los datos son muy <strong>flexibles y no estructurados</strong>.</li>
+<li><strong>PostgreSQL:</strong><br>
+para <strong>consultas complejas</strong> y datos muy relacionados.</li>
+<li><strong>SQLite:</strong><br>
+en <strong>aplicaciones locales o prototipos</strong>.</li>
 </ul>
-<hr>
 <h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
 <p>Para escribir buen código en MySQL y mantener una base de datos escalable y segura, sigue estas recomendaciones:</p>
-<h4 id="diseno-y-estructura"><strong>📐 Diseño y estructura</strong></h4>
+<h4 id="diseno-y-estructura">Diseño y estructura</h4>
 <ul>
 <li>Normaliza tus tablas hasta al menos la <strong>3ª forma normal (3NF)</strong>.</li>
 <li>Usa <strong>nombres descriptivos</strong> para tablas y columnas.</li>
 <li>Define <strong>tipos de datos adecuados</strong> (ejemplo: <code>INT</code> para IDs, <code>VARCHAR</code> para textos cortos).</li>
 </ul>
-<h4 id="rendimiento"><strong>⚡ Rendimiento</strong></h4>
+<h4 id="rendimiento">Rendimiento</h4>
 <ul>
 <li>Usa <strong>índices</strong> en columnas que se consulten frecuentemente.</li>
 <li>Evita el uso excesivo de <code>SELECT *</code>, especifica solo las columnas necesarias.</li>
 <li>Optimiza las consultas con <strong>joins eficientes</strong> y filtros adecuados.</li>
 </ul>
-<h4 id="seguridad"><strong>🔒 Seguridad</strong></h4>
+<h4 id="seguridad">Seguridad</h4>
 <ul>
 <li>Nunca almacenes contraseñas sin <strong>hashing seguro</strong> (<code>bcrypt</code> o similar).</li>
 <li>Usa <strong>usuarios y roles</strong> con permisos limitados.</li>
 <li>Evita la inyección SQL utilizando <strong>consultas preparadas</strong>.</li>
 </ul>
-<h4 id="mantenimiento"><strong>🔁 Mantenimiento</strong></h4>
+<h4 id="mantenimiento">Mantenimiento</h4>
 <ul>
 <li>Realiza <strong>respaldos periódicos</strong> (<code>mysqldump</code>).</li>
 <li>Monitorea el <strong>rendimiento y uso de recursos</strong>.</li>
@@ -121,41 +122,29 @@ Es especialmente útil en proyectos donde la <strong>integridad de datos y las r
 </ul>
 <hr>
 <h2 id="resumen-rapido">Resumen rápido</h2>
-<p><strong>MySQL</strong> es una solución potente y confiable para la gestión de bases de datos relacionales, ideal para una amplia gama de proyectos.</p>
-<h3 id="sintesis-rapida">Síntesis rápida:</h3>
-<ul>
-<li>
-<p><strong>Fortalezas principales:</strong></p>
+<h4 id="fortalezas-principales">Fortalezas principales:</h4>
 <ul>
 <li>Rápido, estable y ampliamente soportado.</li>
 <li>Ideal para datos estructurados y relaciones complejas.</li>
 <li>Gran comunidad y abundante documentación.</li>
 </ul>
-</li>
-<li>
-<p><strong>Debilidades principales:</strong></p>
+<h4 id="debilidades-principales">Debilidades principales:</h4>
 <ul>
 <li>Menos flexible que bases NoSQL como MongoDB.</li>
 <li>No tan avanzado como PostgreSQL en consultas complejas.</li>
 <li>Puede requerir optimización manual en proyectos grandes.</li>
 </ul>
-</li>
-<li>
-<p><strong>Cuándo usarlo:</strong></p>
+<h4 id="cuando-usarlo">Cuándo usarlo:</h4>
 <ul>
 <li>Sitios web dinámicos.</li>
 <li>Aplicaciones empresariales con datos consistentes.</li>
 <li>Sistemas que requieran integridad referencial.</li>
 </ul>
-</li>
-<li>
-<p><strong>Cuándo evitarlo:</strong></p>
+<h4 id="cuando-evitarlo">Cuándo evitarlo:</h4>
 <ul>
 <li>Proyectos con datos no estructurados.</li>
 <li>Aplicaciones muy pequeñas o locales (SQLite es más simple).</li>
 <li>Cuando necesitas funcionalidades avanzadas de PostgreSQL.</li>
-</ul>
-</li>
 </ul>
 <hr>
 <h1 id="temas">Temas</h1>
@@ -174,14 +163,12 @@ Es especialmente útil en proyectos donde la <strong>integridad de datos y las r
 <h3 id="1-base-de-datos-database"><strong>1. Base de Datos (Database)</strong></h3>
 <p>Un contenedor que organiza y almacena datos relacionados.<br>
 Ejemplo: una base de datos para un e-commerce podría contener tablas como <code>usuarios</code>, <code>productos</code> y <code>pedidos</code>.</p>
-<hr>
 <h3 id="2-tabla-table"><strong>2. Tabla (Table)</strong></h3>
 <p>Estructura que almacena datos en <strong>filas (rows)</strong> y <strong>columnas (columns)</strong>.<br>
 Cada fila es un registro y cada columna representa un atributo.</p>
 <blockquote>
 <p><em>Ejemplo: una tabla <code>usuarios</code> con columnas como <code>id</code>, <code>nombre</code>, <code>email</code>.</em></p>
 </blockquote>
-<hr>
 <h3 id="3-fila-row-registro-record"><strong>3. Fila (Row) / Registro (Record)</strong></h3>
 <p>Representa una entrada individual de datos dentro de una tabla.</p>
 <blockquote>
@@ -190,20 +177,17 @@ Cada fila es un registro y cada columna representa un atributo.</p>
 1  | Ana     | ana@email.com
 </code></pre>
 </blockquote>
-<hr>
 <h3 id="4-columna-column-campo-field"><strong>4. Columna (Column) / Campo (Field)</strong></h3>
 <p>Representa un tipo de dato específico en la tabla.</p>
 <blockquote>
 <p>Ejemplo: la columna <code>email</code> en la tabla <code>usuarios</code> almacena direcciones de correo.</p>
 </blockquote>
-<hr>
 <h3 id="5-llave-primaria-primary-key"><strong>5. Llave Primaria (Primary Key)</strong></h3>
 <p>Columna o conjunto de columnas que <strong>identifican de forma única</strong> a cada registro en una tabla.<br>
 Generalmente se llama <code>id</code>.</p>
 <blockquote>
 <p><em>Ejemplo: <code>id</code> en la tabla <code>usuarios</code>.</em></p>
 </blockquote>
-<hr>
 <h3 id="6-llave-foranea-foreign-key"><strong>6. Llave Foránea (Foreign Key)</strong></h3>
 <p>Columna que <strong>establece una relación</strong> con una clave primaria en otra tabla.</p>
 <blockquote>
@@ -212,7 +196,6 @@ Generalmente se llama <code>id</code>.</p>
 <li>Tabla <code>pedidos</code> tiene <code>usuario_id</code> que se relaciona con <code>id</code> de la tabla <code>usuarios</code>.</li>
 </ul>
 </blockquote>
-<hr>
 <h3 id="7-tipos-de-datos"><strong>7. Tipos de Datos</strong></h3>
 <p>Definen el tipo de valor que se puede almacenar en una columna. Algunos tipos comunes en MySQL:</p>
 <ul>
@@ -221,7 +204,6 @@ Generalmente se llama <code>id</code>.</p>
 <li><strong>Fecha y hora:</strong> <code>DATE</code>, <code>DATETIME</code>, <code>TIMESTAMP</code></li>
 <li><strong>Booleanos:</strong> <code>BOOLEAN</code> (<code>TRUE</code> o <code>FALSE</code>)</li>
 </ul>
-<hr>
 <h3 id="8-consultas-sql-queries"><strong>8. Consultas SQL (Queries)</strong></h3>
 <p>Instrucciones para interactuar con la base de datos.<br>
 Los principales tipos son:</p>
@@ -239,23 +221,20 @@ Ejemplo: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DE
 Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 </li>
 </ul>
-<hr>
 <h3 id="9-indices-indexes"><strong>9. Índices (Indexes)</strong></h3>
 <p>Estructuras que <strong>mejoran la velocidad de búsqueda</strong> en una tabla, similar a un índice en un libro.</p>
 <blockquote>
 <p><em>Se recomienda crear índices en columnas que se consulten frecuentemente.</em></p>
 </blockquote>
-<hr>
 <h3 id="10-joins"><strong>10. Joins</strong></h3>
 <p>Combinan datos de varias tablas basadas en una relación común:</p>
 <ul>
 <li><strong>INNER JOIN:</strong> devuelve coincidencias exactas.</li>
 <li><strong>LEFT JOIN:</strong> devuelve todos los registros de la tabla izquierda y coincidencias de la derecha.</li>
 <li><strong>RIGHT JOIN:</strong> inverso del LEFT JOIN.</li>
-<li><strong>FULL JOIN:</strong> devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).</li>
+<li><strong>FULL JOIN:</strong> devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).
+<a href="#temas">🔼 temas</a></li>
 </ul>
-<hr>
-<p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Para trabajar de forma eficiente con MySQL, estas son las herramientas clave que deberías conocer:</p>
@@ -268,7 +247,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <blockquote>
 <p>🔗 <a href="https://dev.mysql.com/downloads/workbench/">Descargar MySQL Workbench</a></p>
 </blockquote>
-<hr>
 <h3 id="2-phpmyadmin"><strong>2. phpMyAdmin</strong></h3>
 <ul>
 <li>Interfaz web para gestionar bases de datos MySQL.</li>
@@ -278,7 +256,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <blockquote>
 <p>🔗 <a href="https://www.phpmyadmin.net/">Sitio oficial phpMyAdmin</a></p>
 </blockquote>
-<hr>
 <h3 id="3-dbeaver"><strong>3. DBeaver</strong></h3>
 <ul>
 <li>Cliente universal para bases de datos.</li>
@@ -288,7 +265,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <blockquote>
 <p>🔗 <a href="https://dbeaver.io/">Descargar DBeaver</a></p>
 </blockquote>
-<hr>
 <h3 id="4-cli-mysql-command-line-client"><strong>4. CLI - MySQL Command Line Client</strong></h3>
 <ul>
 <li>Herramienta en terminal para ejecutar comandos SQL directamente.</li>
@@ -299,23 +275,18 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <pre><code class="language-bash">mysql -u root -p
 </code></pre>
 </blockquote>
-<hr>
 <h3 id="5-vs-code-extensiones-sql"><strong>5. VS Code + Extensiones SQL</strong></h3>
-<ul>
-<li>Usar <strong>Visual Studio Code</strong> con extensiones de SQL permite:
+<h4 id="usar-visual-studio-code-con-extensiones-de-sql-permite">Usar Visual Studio Code con extensiones de SQL permite:</h4>
 <ul>
 <li>Resaltar sintaxis SQL.</li>
 <li>Autocompletado.</li>
 <li>Ejecución directa de consultas conectadas a la base.</li>
 </ul>
-</li>
-</ul>
-<p>Extensiones recomendadas:</p>
+<h4 id="extensiones-recomendadas">Extensiones recomendadas:</h4>
 <ul>
 <li><em>SQLTools</em></li>
 <li><em>MySQL Syntax Highlighting</em></li>
 </ul>
-<hr>
 <h3 id="6-docker"><strong>6. Docker</strong></h3>
 <ul>
 <li>Ideal para levantar un <strong>entorno aislado</strong> de MySQL sin instalarlo en tu máquina.</li>
@@ -326,7 +297,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <pre><code class="language-bash">docker run --name mysql-dev -e MYSQL_ROOT_PASSWORD=1234 -p 3306:3306 -d mysql:latest
 </code></pre>
 </blockquote>
-<hr>
 <h3 id="resumen-de-herramientas"><strong>Resumen de Herramientas</strong></h3>
 <table>
 <thead>
@@ -369,7 +339,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 </tr>
 </tbody>
 </table>
-<hr>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
@@ -378,7 +347,6 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <pre><code class="language-sql">CREATE DATABASE tienda;
 USE tienda;
 </code></pre>
-<hr>
 <h3 id="2-crear-tabla-con-clave-primaria"><strong>2. Crear Tabla con Clave Primaria</strong></h3>
 <pre><code class="language-sql">CREATE TABLE usuarios (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -386,31 +354,25 @@ USE tienda;
   email VARCHAR(100) UNIQUE
 );
 </code></pre>
-<hr>
 <h3 id="3-insertar-datos"><strong>3. Insertar Datos</strong></h3>
 <pre><code class="language-sql">INSERT INTO usuarios (nombre, email)
 VALUES ('Ana Pérez', 'ana@email.com');
 </code></pre>
-<hr>
 <h3 id="4-consultar-datos"><strong>4. Consultar Datos</strong></h3>
 <pre><code class="language-sql">SELECT * FROM usuarios;           -- Todos los registros
 SELECT nombre, email FROM usuarios; -- Columnas específicas
 SELECT * FROM usuarios WHERE id = 1;
 </code></pre>
-<hr>
 <h3 id="5-actualizar-datos"><strong>5. Actualizar Datos</strong></h3>
 <pre><code class="language-sql">UPDATE usuarios SET nombre = 'Ana Gómez'
 WHERE id = 1;
 </code></pre>
-<hr>
 <h3 id="6-eliminar-datos"><strong>6. Eliminar Datos</strong></h3>
 <pre><code class="language-sql">DELETE FROM usuarios WHERE id = 1;
 </code></pre>
-<hr>
 <h3 id="7-crear-indice"><strong>7. Crear Índice</strong></h3>
 <pre><code class="language-sql">CREATE INDEX idx_email ON usuarios(email);
 </code></pre>
-<hr>
 <h3 id="8-relaciones-entre-tablas-fk"><strong>8. Relaciones entre Tablas (FK)</strong></h3>
 <pre><code class="language-sql">CREATE TABLE pedidos (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -419,13 +381,11 @@ WHERE id = 1;
   FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 </code></pre>
-<hr>
 <h3 id="9-join-basico"><strong>9. Join Básico</strong></h3>
 <pre><code class="language-sql">SELECT usuarios.nombre, pedidos.fecha
 FROM usuarios
 INNER JOIN pedidos ON usuarios.id = pedidos.usuario_id;
 </code></pre>
-<hr>
 <h3 id="10-respaldo-y-restauracion"><strong>10. Respaldo y Restauración</strong></h3>
 <pre><code class="language-bash">mysqldump -u root -p tienda &gt; backup.sql    # Crear respaldo
 mysql -u root -p tienda &lt; backup.sql        # Restaurar respaldo
@@ -539,38 +499,41 @@ SELECT * FROM A INNER JOIN B ON A.id = B.a_id; -- Joins
 <p>💡 <em>Consejo:</em> Usa <code>LIMIT</code> para limitar resultados:</p>
 <pre><code class="language-sql">SELECT * FROM usuarios LIMIT 5;
 </code></pre>
-</blockquote>
-<hr>
 <p><a href="#temas">🔼 temas</a></p>
+</blockquote>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
 <h2 id="basico">🟢 Básico</h2>
 <h3 id="1-diferencia-entre-delete-truncate-y-drop">1. Diferencia entre DELETE, TRUNCATE y DROP</h3>
 <ul>
 <li>
-<p><strong>DELETE:</strong> Elimina filas específicas de una tabla usando una condición <code>WHERE</code>. Mantiene la estructura y permite deshacer la operación si está dentro de una transacción.<br>
+<p><strong>DELETE:</strong><br>
+Elimina filas específicas de una tabla usando una condición <code>WHERE</code>. Mantiene la estructura y permite deshacer la operación si está dentro de una transacción.<br>
 <em>Uso:</em> Cuando necesitas borrar datos específicos.</p>
 <pre><code class="language-sql">DELETE FROM usuarios WHERE id = 1;
 </code></pre>
 </li>
 <li>
-<p><strong>TRUNCATE:</strong> Elimina <em>todos los registros</em> de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con <code>WHERE</code>.
+<p><strong>TRUNCATE:</strong><br>
+Elimina <em>todos los registros</em> de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con <code>WHERE</code>.
 <em>Uso:</em> Cuando quieres limpiar completamente una tabla, pero mantener su estructura.</p>
 <pre><code class="language-sql">TRUNCATE TABLE usuarios;
 </code></pre>
 </li>
 <li>
-<p><strong>DROP:</strong> Elimina por completo una tabla, incluyendo su estructura y datos.
+<p><strong>DROP:</strong><br>
+Elimina por completo una tabla, incluyendo su estructura y datos.
 <em>Uso:</em> Cuando ya no necesitas la tabla ni sus datos.</p>
 <pre><code class="language-sql">DROP TABLE usuarios;
 </code></pre>
 </li>
 </ul>
-<hr>
 <h3 id="2-clave-primaria-primary-key-vs-clave-foranea-foreign-key">2. Clave primaria (PRIMARY KEY) vs clave foránea (FOREIGN KEY)</h3>
 <ul>
-<li><strong>PRIMARY KEY:</strong> Identifica de manera única cada registro en una tabla. No permite valores duplicados ni nulos.</li>
-<li><strong>FOREIGN KEY:</strong> Establece una relación entre dos tablas, garantizando la integridad referencial.</li>
+<li><strong>PRIMARY KEY:</strong><br>
+Identifica de manera única cada registro en una tabla. No permite valores duplicados ni nulos.</li>
+<li><strong>FOREIGN KEY:</strong><br>
+Establece una relación entre dos tablas, garantizando la integridad referencial.</li>
 </ul>
 <pre><code class="language-sql">CREATE TABLE usuarios (
   id INT PRIMARY KEY,
@@ -583,15 +546,16 @@ CREATE TABLE pedidos (
   FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
 );
 </code></pre>
-<hr>
 <h3 id="3-diferencia-entre-varchar-y-char">3. Diferencia entre VARCHAR y CHAR</h3>
 <ul>
 <li>
-<p><strong>CHAR(n):</strong> Guarda cadenas con longitud fija. Completa con espacios si el valor es más corto.<br>
+<p><strong>CHAR(n):</strong><br>
+Guarda cadenas con longitud fija. Completa con espacios si el valor es más corto.<br>
 <em>Uso:</em> Ideal para campos con longitud constante (códigos, abreviaturas).</p>
 </li>
 <li>
-<p><strong>VARCHAR(n):</strong> Guarda cadenas con longitud variable. Solo utiliza el espacio necesario.<br>
+<p><strong>VARCHAR(n):</strong><br>
+Guarda cadenas con longitud variable. Solo utiliza el espacio necesario.<br>
 <em>Uso:</em> Ideal para campos como nombres, correos o direcciones.</p>
 </li>
 </ul>
@@ -616,11 +580,12 @@ CREATE TABLE pedidos (
 </tr>
 </tbody>
 </table>
-<hr>
 <h3 id="4-diferencia-entre-where-y-having">4. Diferencia entre WHERE y HAVING</h3>
 <ul>
-<li><strong>WHERE:</strong> Filtra filas antes de agrupar los datos (<code>GROUP BY</code>).</li>
-<li><strong>HAVING:</strong> Filtra resultados <em>después</em> de aplicar funciones de agregación.</li>
+<li><strong>WHERE:</strong><br>
+Filtra filas antes de agrupar los datos (<code>GROUP BY</code>).</li>
+<li><strong>HAVING:</strong><br>
+Filtra resultados <em>después</em> de aplicar funciones de agregación.</li>
 </ul>
 <p><strong>Ejemplo:</strong></p>
 <pre><code class="language-sql">-- Mostrar productos con stock promedio mayor a 50
@@ -629,15 +594,18 @@ FROM productos
 GROUP BY categoria
 HAVING promedio_stock &gt; 50;
 </code></pre>
-<hr>
 <h3 id="5-funcion-del-join-en-sql">5. Función del JOIN en SQL</h3>
 <p><code>JOIN</code> combina datos de varias tablas basándose en una relación.</p>
 <p>Tipos más comunes:</p>
 <ul>
-<li><strong>INNER JOIN:</strong> Devuelve solo registros coincidentes en ambas tablas.</li>
-<li><strong>LEFT JOIN:</strong> Devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha.</li>
-<li><strong>RIGHT JOIN:</strong> Igual que LEFT pero en sentido opuesto.</li>
-<li><strong>FULL JOIN:</strong> Devuelve todos los registros coincidentes o no (no soportado nativamente en MySQL).</li>
+<li><strong>INNER JOIN:</strong><br>
+Devuelve solo registros coincidentes en ambas tablas.</li>
+<li><strong>LEFT JOIN:</strong><br>
+Devuelve todos los registros de la tabla izquierda y los coincidentes de la derecha.</li>
+<li><strong>RIGHT JOIN:</strong><br>
+Igual que LEFT pero en sentido opuesto.</li>
+<li><strong>FULL JOIN:</strong><br>
+Devuelve todos los registros coincidentes o no (no soportado nativamente en MySQL).</li>
 </ul>
 <pre><code class="language-sql">SELECT u.nombre, p.fecha
 FROM usuarios u
@@ -647,13 +615,15 @@ INNER JOIN pedidos p ON u.id = p.usuario_id;
 <h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-indices-en-mysql">6. Índices en MySQL</h3>
 <ul>
-<li><strong>Definición:</strong> Estructuras que optimizan la búsqueda de datos.</li>
-<li><strong>Beneficio:</strong> Aceleran las consultas <code>SELECT</code> y búsquedas con <code>WHERE</code>.</li>
-<li><strong>Desventaja:</strong> Ocupan espacio y pueden ralentizar <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code>.</li>
+<li><strong>Definición:</strong><br>
+Estructuras que optimizan la búsqueda de datos.</li>
+<li><strong>Beneficio:</strong><br>
+Aceleran las consultas <code>SELECT</code> y búsquedas con <code>WHERE</code>.</li>
+<li><strong>Desventaja:</strong><br>
+Ocupan espacio y pueden ralentizar <code>INSERT</code>, <code>UPDATE</code> y <code>DELETE</code>.</li>
 </ul>
 <pre><code class="language-sql">CREATE INDEX idx_email ON usuarios(email);
 </code></pre>
-<hr>
 <h3 id="7-diferencia-entre-innodb-y-myisam">7. Diferencia entre InnoDB y MyISAM</h3>
 <table>
 <thead>
@@ -687,22 +657,26 @@ INNER JOIN pedidos p ON u.id = p.usuario_id;
 </tbody>
 </table>
 <p><em>Elección recomendada:</em> <strong>InnoDB</strong>, especialmente en aplicaciones web con muchas operaciones simultáneas.</p>
-<hr>
 <h3 id="8-transacciones-acid">8. Transacciones ACID</h3>
 <ul>
-<li><strong>ACID:</strong> Atomicidad, Consistencia, Aislamiento y Durabilidad.</li>
+<li><strong>ACID:</strong>
+<ul>
+<li>Atomicidad, Consistencia, Aislamiento y Durabilidad.</li>
 <li>Garantizan que las operaciones en la base de datos sean <strong>seguras y confiables</strong>.</li>
+</ul>
+</li>
 </ul>
 <pre><code class="language-sql">START TRANSACTION;
 UPDATE cuentas SET saldo = saldo - 100 WHERE id = 1;
 UPDATE cuentas SET saldo = saldo + 100 WHERE id = 2;
 COMMIT; -- o ROLLBACK si algo falla
 </code></pre>
-<hr>
 <h3 id="9-stored-procedure">9. Stored Procedure</h3>
 <ul>
-<li><strong>Definición:</strong> Bloque de SQL almacenado en la base para reutilización.</li>
-<li><strong>Uso:</strong> Automatizar procesos repetitivos o complejos.</li>
+<li><strong>Definición:</strong><br>
+Bloque de SQL almacenado en la base para reutilización.</li>
+<li><strong>Uso:</strong><br>
+Automatizar procesos repetitivos o complejos.</li>
 </ul>
 <pre><code class="language-sql">DELIMITER //
 CREATE PROCEDURE obtenerUsuarios()
@@ -711,61 +685,58 @@ BEGIN
 END //
 DELIMITER ;
 </code></pre>
-<hr>
 <h3 id="10-normalizacion-de-bases-de-datos">10. Normalización de Bases de Datos</h3>
 <p>Proceso para <strong>organizar datos</strong> y evitar redundancia.</p>
 <ul>
-<li><strong>1FN:</strong> Cada campo debe contener solo valores atómicos.</li>
-<li><strong>2FN:</strong> Cada campo debe depender completamente de la clave primaria.</li>
-<li><strong>3FN:</strong> Elimina dependencias transitivas.</li>
+<li><strong>1FN:</strong><br>
+Cada campo debe contener solo valores atómicos.</li>
+<li><strong>2FN:</strong><br>
+Cada campo debe depender completamente de la clave primaria.</li>
+<li><strong>3FN:</strong><br>
+Elimina dependencias transitivas.</li>
 </ul>
 <p><strong>Importancia:</strong> Mejora la integridad y eficiencia de la base.</p>
 <hr>
 <h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-subconsulta-correlacionada-vs-subconsulta-normal">11. Subconsulta correlacionada vs subconsulta normal</h3>
 <ul>
-<li><strong>Subconsulta normal:</strong> Se ejecuta una sola vez antes de la consulta principal.</li>
-<li><strong>Subconsulta correlacionada:</strong> Se ejecuta para cada fila procesada por la consulta externa.</li>
+<li><strong>Subconsulta normal:</strong><br>
+Se ejecuta una sola vez antes de la consulta principal.</li>
+<li><strong>Subconsulta correlacionada:</strong><br>
+Se ejecuta para cada fila procesada por la consulta externa.</li>
 </ul>
 <p><strong>Ejemplo correlacionada:</strong></p>
 <pre><code class="language-sql">SELECT nombre
 FROM usuarios u
 WHERE saldo &gt; (SELECT AVG(saldo) FROM cuentas c WHERE c.usuario_id = u.id);
 </code></pre>
-<hr>
 <h3 id="12-replicacion-en-mysql">12. Replicación en MySQL</h3>
 <p>Proceso de copiar datos de un servidor a otro.</p>
-<ul>
-<li><strong>Tipos de replicación:</strong>
+<h4 id="tipos-de-replicacion">Tipos de replicación:</h4>
 <ul>
 <li><strong>Maestro-Esclavo:</strong> Copia unidireccional.</li>
 <li><strong>Maestro-Maestro:</strong> Copia bidireccional.</li>
 <li><strong>Basada en GTID:</strong> Más moderna y confiable.</li>
 </ul>
-</li>
-</ul>
 <p><strong>Uso:</strong> Balanceo de carga, copias de seguridad en tiempo real.</p>
-<hr>
 <h3 id="13-control-de-concurrencia">13. Control de concurrencia</h3>
 <p>Permite que múltiples usuarios accedan a la base <strong>sin conflictos</strong>.</p>
-<ul>
-<li><strong>Problemas comunes:</strong>
+<h4 id="problemas-comunes">Problemas comunes:</h4>
 <ul>
 <li><em>Dirty Reads</em></li>
 <li><em>Lost Updates</em></li>
 <li><em>Deadlocks</em></li>
 </ul>
-</li>
-</ul>
 <p><strong>Solución en MySQL:</strong> Bloqueos por fila (InnoDB) y niveles de aislamiento.</p>
 <pre><code class="language-sql">SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 </code></pre>
-<hr>
 <h3 id="14-particionamiento-de-datos">14. Particionamiento de datos</h3>
 <p>Divide una tabla grande en <strong>partes más pequeñas</strong> para mejorar rendimiento.</p>
 <ul>
-<li><strong>Beneficios:</strong> Consultas más rápidas y administración más sencilla.</li>
-<li><strong>Desventajas:</strong> Mayor complejidad en el diseño.</li>
+<li><strong>Beneficios:</strong><br>
+Consultas más rápidas y administración más sencilla.</li>
+<li><strong>Desventajas:</strong><br>
+Mayor complejidad en el diseño.</li>
 </ul>
 <pre><code class="language-sql">CREATE TABLE ventas (
   id INT,
@@ -776,7 +747,6 @@ PARTITION BY RANGE (YEAR(fecha)) (
   PARTITION p2024 VALUES LESS THAN (2025)
 );
 </code></pre>
-<hr>
 <h3 id="15-trigger-en-mysql">15. Trigger en MySQL</h3>
 <p>Bloque de código que se ejecuta <strong>automáticamente</strong> ante eventos <code>INSERT</code>, <code>UPDATE</code> o <code>DELETE</code>.</p>
 <p><strong>Ejemplo: Registro automático en tabla de auditoría</strong></p>

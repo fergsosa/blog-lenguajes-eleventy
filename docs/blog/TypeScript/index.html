@@ -124,11 +124,11 @@ Esto significa que todo código JavaScript válido también es válido en TypeSc
 <h3 id="1-javascript">1. JavaScript</h3>
 <p>TypeScript es un <strong>superset de JavaScript</strong>, por lo que debes conocer:</p>
 <ul>
-<li><strong>Tipos primitivos</strong>: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>.</li>
-<li><strong>Funciones y parámetros</strong>.</li>
-<li><strong>Objetos y arreglos</strong>.</li>
-<li><strong>Clases y herencia</strong>.</li>
-<li><strong>Módulos</strong> (<code>import</code> y <code>export</code>).</li>
+<li>Tipos primitivos: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>.</li>
+<li>Funciones y parámetros.</li>
+<li>Objetos y arreglos.</li>
+<li>Clases y herencia.</li>
+<li>Módulos (<code>import</code> y <code>export</code>).</li>
 </ul>
 <blockquote>
 <p>⚠️ <em>Sin una base sólida de JavaScript, aprender TypeScript será más complicado.</em></p>
@@ -164,10 +164,10 @@ const user: Usuario = {
 <h3 id="4-orientacion-a-objetos-poo">4. Orientación a Objetos (POO)</h3>
 <p>TypeScript tiene soporte completo para POO:</p>
 <ul>
-<li><strong>Clases</strong> (<code>class</code>)</li>
-<li><strong>Herencia</strong> (<code>extends</code>)</li>
-<li><strong>Modificadores de acceso</strong> (<code>public</code>, <code>private</code>, <code>protected</code>)</li>
-<li><strong>Abstract Classes</strong> y <strong>Interfaces</strong></li>
+<li>Clases (<code>class</code>)</li>
+<li>Herencia (<code>extends</code>)</li>
+<li>Modificadores de acceso (<code>public</code>, <code>private</code>, <code>protected</code>)</li>
+<li>Abstract Classes y Interfaces</li>
 </ul>
 <p>Ejemplo:</p>
 <pre><code class="language-typescript">class Animal {
@@ -226,34 +226,28 @@ npm -v
 </ul>
 <h3 id="2-typescript-compiler-tsc">2. TypeScript Compiler (tsc)</h3>
 <p>El compilador oficial de TypeScript.</p>
-<p>Instalación global:</p>
-<pre><code class="language-bash">npm install -g typescript
-</code></pre>
-<p>Verificar versión:</p>
-<pre><code class="language-bash">tsc -v
-</code></pre>
-<p>Compilar un archivo:</p>
-<pre><code class="language-bash">tsc index.ts
-</code></pre>
-<p>Inicializar proyecto con <code>tsconfig.json</code>:</p>
-<pre><code class="language-bash">tsc --init
+<pre><code class="language-bash">npm install -g typescript   # Instalación global
+tsc -v                      # Verificar versión
+tsc index.ts                # Compilar un archivo
+tsc --init                  # Inicializar proyecto con `tsconfig.json`
 </code></pre>
 <h3 id="3-visual-studio-code-vscode">3. Visual Studio Code (VSCode)</h3>
 <p>El editor más popular para trabajar con TypeScript.</p>
 <p>Extensiones recomendadas:</p>
 <ul>
-<li><strong>TypeScript Hero</strong> → Mejora la organización de imports.</li>
-<li><strong>ESLint</strong> → Mantiene un estilo de código consistente.</li>
-<li><strong>Prettier</strong> → Formateo automático de código.</li>
-<li><strong>Error Lens</strong> → Destaca errores directamente en el editor.</li>
+<li><strong>TypeScript Hero</strong><br>
+Mejora la organización de imports.</li>
+<li><strong>ESLint</strong><br>
+Mantiene un estilo de código consistente.</li>
+<li><strong>Prettier</strong><br>
+Formateo automático de código.</li>
+<li><strong>Error Lens</strong><br>
+Destaca errores directamente en el editor.</li>
 </ul>
 <h3 id="4-ts-node">4. ts-node</h3>
 <p>Permite ejecutar archivos TypeScript directamente <strong>sin compilar manualmente</strong>.</p>
-<p>Instalación:</p>
-<pre><code class="language-bash">npm install -g ts-node
-</code></pre>
-<p>Uso:</p>
-<pre><code class="language-bash">ts-node app.ts
+<pre><code class="language-bash">npm install -g ts-node    # Instalación
+ts-node app.ts            # Uso
 </code></pre>
 <h3 id="5-eslint-prettier">5. ESLint + Prettier</h3>
 <p>Mantienen el código limpio y legible.</p>
@@ -271,10 +265,14 @@ git push origin main
 </code></pre>
 <h3 id="7-frameworks-y-librerias-compatibles">7. Frameworks y Librerías compatibles</h3>
 <ul>
-<li><strong>React con TypeScript</strong> → Interfaces y props tipadas.</li>
-<li><strong>Express con TypeScript</strong> → Backend robusto y escalable.</li>
-<li><strong>NestJS</strong> → Framework orientado a microservicios y POO.</li>
-<li><strong>TypeORM / Prisma</strong> → Manejo tipado de bases de datos.</li>
+<li><strong>React con TypeScript</strong><br>
+Interfaces y props tipadas.</li>
+<li><strong>Express con TypeScript</strong><br>
+Backend robusto y escalable.</li>
+<li><strong>NestJS</strong><br>
+Framework orientado a microservicios y POO.</li>
+<li><strong>TypeORM / Prisma</strong><br>
+Manejo tipado de bases de datos.</li>
 </ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
@@ -452,45 +450,63 @@ La diferencia principal es que TypeScript permite detectar errores en tiempo de 
 <table>
 <thead>
 <tr>
-<th>Tipo</th>
-<th>Ejemplo</th>
+<th>variable</th>
+<th style="text-align:right">tipo</th>
+<th>valor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>string</code></td>
-<td><code>let nombre: string = &quot;Fernando&quot;;</code></td>
+<td><code>let nombre:</code></td>
+<td style="text-align:right"><code>string =</code></td>
+<td><code>&quot;Fernando&quot;;</code></td>
 </tr>
 <tr>
-<td><code>number</code></td>
-<td><code>let edad: number = 30;</code></td>
+<td><code>let edad:</code></td>
+<td style="text-align:right"><code>number =</code></td>
+<td><code>30;</code></td>
 </tr>
 <tr>
-<td><code>boolean</code></td>
-<td><code>let activo: boolean = true;</code></td>
+<td><code>let activo:</code></td>
+<td style="text-align:right"><code>boolean =</code></td>
+<td><code>true;</code></td>
 </tr>
 <tr>
-<td><code>null</code></td>
-<td><code>let valor: null = null;</code></td>
+<td><code>let valor:</code></td>
+<td style="text-align:right"><code>null =</code></td>
+<td><code>null;</code></td>
 </tr>
 <tr>
-<td><code>undefined</code></td>
-<td><code>let indefinido: undefined = undefined;</code></td>
+<td><code>let indefinido:</code></td>
+<td style="text-align:right"><code>undefined =</code></td>
+<td><code>undefined;</code></td>
 </tr>
 <tr>
-<td><code>bigint</code></td>
-<td><code>let numeroGrande: bigint = 9007199254740991n;</code></td>
+<td><code>let numeroGrande:</code></td>
+<td style="text-align:right"><code>bigint =</code></td>
+<td><code>9007199254740991n;</code></td>
 </tr>
 <tr>
-<td><code>symbol</code></td>
-<td><code>let id: symbol = Symbol(&quot;id&quot;);</code></td>
+<td><code>let id:</code></td>
+<td style="text-align:right"><code>symbol =</code></td>
+<td><code>Symbol(&quot;id&quot;);</code></td>
 </tr>
 </tbody>
 </table>
+<pre><code class="language-bash">let nombre: string = &quot;Fernando&quot;;                 # string
+let edad: number = 30;                           # number
+let activo: boolean = true;                      # boolean
+let valor: null = null;                          # null
+let indefinido: undefined = undefined;           # undefined
+let numeroGrande: bigint = 9007199254740991n;    # bigint
+let id: symbol = Symbol(&quot;id&quot;);                   # symbol
+</code></pre>
 <h3 id="3-interfaces-vs-type-aliases">3. Interfaces vs Type Aliases</h3>
 <ul>
-<li><strong>Interfaces (<code>interface</code>):</strong> Definen la estructura de objetos y permiten herencia.</li>
-<li><strong>Type Aliases (<code>type</code>):</strong> Pueden representar objetos, uniones, funciones, etc.</li>
+<li><strong>Interfaces (<code>interface</code>):</strong><br>
+Definen la estructura de objetos y permiten herencia.</li>
+<li><strong>Type Aliases (<code>type</code>):</strong><br>
+Pueden representar objetos, uniones, funciones, etc.</li>
 </ul>
 <p><strong>Ejemplo:</strong></p>
 <pre><code class="language-typescript">interface Usuario {
@@ -594,8 +610,10 @@ function hacerSonido(animal: Perro | Gato) {
 </code></pre>
 <h3 id="10-tuples-vs-arreglos">10. Tuples vs Arreglos</h3>
 <ul>
-<li><strong>Tuples:</strong> Longitud y tipos <strong>fijos</strong>.</li>
-<li><strong>Arreglos normales:</strong> Longitud y tipos variables.</li>
+<li><strong>Tuples:</strong><br>
+Longitud y tipos <strong>fijos</strong>.</li>
+<li><strong>Arreglos normales:</strong><br>
+Longitud y tipos variables.</li>
 </ul>
 <p><strong>Ejemplo:</strong></p>
 <pre><code class="language-typescript">let coordenadas: [number, number] = [10, 20];

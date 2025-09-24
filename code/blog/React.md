@@ -22,12 +22,14 @@ A diferencia de frameworks completos como Angular o Vue, React **no impone una e
 
 #### Diferencias clave frente a otros:
 
-- **Enfocado solo en la UI**: No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).
-- **Componentes reutilizables**: Basado en la construcción de bloques independientes.
-- **Virtual DOM**: Optimiza el rendimiento actualizando solo lo necesario en la interfaz.
-- **Gran comunidad y ecosistema**: Extensa cantidad de librerías y recursos disponibles.
-
----
+- **Enfocado solo en la UI:**\
+  No incluye herramientas integradas para manejo de rutas o estado global (aunque existen librerías externas como React Router o Redux).
+- **Componentes reutilizables:**\
+  Basado en la construcción de bloques independientes.
+- **Virtual DOM:**\
+  Optimiza el rendimiento actualizando solo lo necesario en la interfaz.
+- **Gran comunidad y ecosistema:**\
+  Extensa cantidad de librerías y recursos disponibles.
 
 ### 2. ¿Para qué se usa?
 
@@ -40,8 +42,6 @@ React se utiliza para **crear interfaces interactivas y dinámicas** en aplicaci
 - **Single Page Applications (SPA)** donde se requiere navegación fluida sin recargar la página.
 - Aplicaciones móviles usando **React Native**.
 
----
-
 ### 3. ¿Qué puedo construir con {{title}}?
 
 Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual:
@@ -52,8 +52,6 @@ Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual
 - **Sistemas internos empresariales**.
 - **Landing pages interactivas**.
 - **Componentes UI personalizados** que se pueden integrar en otros proyectos.
-
----
 
 ### 4. ¿Cuándo es más conveniente usarlo?
 
@@ -68,8 +66,6 @@ Con React puedes desarrollar prácticamente cualquier tipo de aplicación visual
   - Redux, Zustand, Recoil (estado global).
 
 > ⚠️ _Si tu proyecto es muy simple, como una página estática con HTML y CSS, puede que React sea excesivo y un framework más ligero sea suficiente._
-
----
 
 ## Buenas prácticas recomendadas
 
@@ -260,9 +256,21 @@ React por sí solo no incluye todo lo necesario para un proyecto completo. Estas
 ### **Documentación**
 
 - **Herramientas:** Storybook / Docz
-- **Uso Principal:** Crear y mantener documentación visual de componentes. |
+- **Uso Principal:** Crear y mantener documentación visual de componentes.
 
----
+## Resumen visual
+
+| herramienta    | descripción                           |
+| -------------- | ------------------------------------- |
+| React          | Construcción de interfaces reactivas. |
+| Vite           | Desarrollo rápido y empaquetado.      |
+| React Router   | Navegación y rutas.                   |
+| Redux/Zustand  | Manejo de estado global.              |
+| Tailwind CSS   | Estilización eficiente.               |
+| Jest + RTL     | Pruebas unitarias y de integración.   |
+| Vercel/Netlify | Despliegue en la nube.                |
+
+> 🚀 Con estas herramientas y conceptos, podrás crear aplicaciones React escalables, rápidas y listas para producción.
 
 [🔼 temas](#temas)
 
@@ -327,8 +335,6 @@ export default App;
 
 Estos fragmentos son patrones comunes que usarás frecuentemente en React.
 
----
-
 ### 1. Componente funcional básico
 
 ```jsx
@@ -338,8 +344,6 @@ function Saludo() {
 
 export default Saludo;
 ```
-
----
 
 ### 2. Componente con Props
 
@@ -353,8 +357,6 @@ export default Saludo;
 // Uso:
 <Saludo nombre="Fernando" />;
 ```
-
----
 
 ### 3. Hook `useState` - Manejo de estado
 
@@ -373,8 +375,6 @@ function Contador() {
 }
 ```
 
----
-
 ### 4. Hook `useEffect` - Ciclo de vida
 
 ```jsx
@@ -389,8 +389,6 @@ function App() {
 }
 ```
 
----
-
 ### 5. Evento en JSX
 
 ```jsx
@@ -400,8 +398,6 @@ function Boton() {
   return <button onClick={handleClick}>Presióname</button>;
 }
 ```
-
----
 
 ### 6. Listado con `.map()`
 
@@ -419,8 +415,6 @@ function ListaFrutas() {
 }
 ```
 
----
-
 ### 7. Renderizado condicional
 
 ```jsx
@@ -428,8 +422,6 @@ function Mensaje({ logueado }) {
   return <div>{logueado ? <p>Bienvenido 🎉</p> : <p>Inicia sesión 🔑</p>}</div>;
 }
 ```
-
----
 
 ### 8. Uso básico de Context API
 
@@ -451,8 +443,6 @@ function App() {
   );
 }
 ```
-
----
 
 ### 9. Fetch de datos con `useEffect`
 
@@ -478,8 +468,6 @@ function Usuarios() {
 }
 ```
 
----
-
 ### 10. React Router básico
 
 ```jsx
@@ -500,15 +488,13 @@ function App() {
 }
 ```
 
----
-
 [🔼 temas](#temas)
 
 ---
 
 # Comandos
 
-## Referencia rápida de comandos
+### Referencia rápida de comandos
 
 ```bash
 # Crear proyecto con Vite
@@ -534,24 +520,6 @@ npm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init -p
 ```
 
-### 🔗 Resumen visual
-
-- **React:** Construcción de interfaces reactivas.
-- **Vite:** Desarrollo rápido y empaquetado.
-- **React Router:** Navegación y rutas.
-- **Redux/Zustand:** Manejo de estado global.
-- **Tailwind CSS:** Estilización eficiente.
-- **Jest + RTL:** Pruebas unitarias y de integración.
-- **Vercel/Netlify:** Despliegue en la nube.
-
-> 🚀 Con estas herramientas y conceptos, podrás crear aplicaciones React escalables, rápidas y listas para producción.
-
-[🔼 temas](#temas)
-
----
-
-## ⌨️ Sintaxis más usados
-
 ### **Inicialización y ejecución**
 
 ```bash
@@ -571,8 +539,6 @@ npm run dev
 npm run build
 ```
 
----
-
 ### **Instalación de librerías comunes**
 
 ```bash
@@ -590,8 +556,6 @@ npx tailwindcss init -p
 npm install axios
 ```
 
----
-
 ### **JSX básico**
 
 ```jsx
@@ -604,8 +568,6 @@ npm install axios
 // Estilos inline
 <p style={ color: "red", fontSize: "18px" }>Texto en rojo</p>;
 ```
-
----
 
 ### **Comandos Git para React**
 
@@ -623,6 +585,8 @@ git commit -m "feat: inicialización proyecto React"
 git remote add origin <URL_REPOSITORIO>
 git push -u origin main
 ```
+
+[🔼 temas](#temas)
 
 ---
 
@@ -658,20 +622,17 @@ function MiComponente() {
 }
 ```
 
----
-
 ### 2. Virtual DOM y cómo mejora el rendimiento
 
-El **Virtual DOM** es una copia ligera en memoria del DOM real.  
-Cuando ocurre un cambio en la UI:
+El **Virtual DOM** es una copia ligera en memoria del DOM real.
+
+#### Cuando ocurre un cambio en la UI:
 
 1. React actualiza el Virtual DOM.
 2. Compara el Virtual DOM actual con el anterior (**diffing**).
 3. Solo actualiza en el DOM real los elementos que cambiaron.
 
 **Beneficio:** mejora el rendimiento porque evita renderizar todo el árbol de componentes.
-
----
 
 ### 3. Props en React: propósito e inmutabilidad
 
@@ -692,8 +653,6 @@ function Saludo({ nombre }) {
 }
 ```
 
----
-
 ### 4. Función del método render() en un componente de clase
 
 El método `render()`:
@@ -708,8 +667,6 @@ class App extends React.Component {
   }
 }
 ```
-
----
 
 ### 5. State en React: cuándo y cómo usarlo
 
@@ -740,33 +697,35 @@ function Contador() {
 
 En **componentes de clase**, hay tres fases principales:
 
-- **Montaje (Mounting):** se crea el componente y se agrega al DOM.
+- **Montaje (Mounting):**\
+  se crea el componente y se agrega al DOM.
   - `componentDidMount()`
-- **Actualización (Updating):** ocurre cuando cambian `props` o `state`.
+- **Actualización (Updating):**\
+  ocurre cuando cambian `props` o `state`.
   - `componentDidUpdate()`
-- **Desmontaje (Unmounting):** se elimina el componente del DOM.
+- **Desmontaje (Unmounting):**\
+  se elimina el componente del DOM.
   - `componentWillUnmount()`
-
----
 
 ### 7. Hooks y ejemplos de uso
 
 Los **Hooks** permiten usar características avanzadas en componentes funcionales.
 
-- **useState** → Manejo de estado local.
+- **useState:**\
+  Manejo de estado local.
   ```jsx
   const [contador, setContador] = useState(0);
   ```
-- **useEffect** → Ejecutar efectos secundarios como llamadas a APIs.
+- **useEffect:**\
+  Ejecutar efectos secundarios como llamadas a APIs.
   ```jsx
   useEffect(() => console.log("Montado"), []);
   ```
-- **useContext** → Acceder a datos globales sin _props drilling_.
+- **useContext:**\
+  Acceder a datos globales sin _props drilling_.
   ```jsx
   const valor = useContext(MiContexto);
   ```
-
----
 
 ### 8. Cómo funciona useEffect y su arreglo de dependencias
 
@@ -781,8 +740,6 @@ Los **Hooks** permiten usar características avanzadas en componentes funcionale
 - Efectos infinitos.
 - Bajo rendimiento.
 - Fugas de memoria.
-
----
 
 ### 9. Context API y uso en escenarios reales
 
@@ -806,12 +763,12 @@ function App() {
 }
 ```
 
----
-
 ### 10. useReducer vs useState
 
-- **useReducer:** ideal para **estados complejos** con múltiples transiciones.
-- **useState:** adecuado para estados simples.
+- **useReducer:**\
+  ideal para **estados complejos** con múltiples transiciones.
+- **useState:**\
+  adecuado para estados simples.
 
 Ejemplo de `useReducer`:
 
@@ -844,8 +801,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 }
 ```
 
----
-
 ### 12. Error Boundaries
 
 - Son componentes que **atrapan errores** en sus componentes hijos sin romper toda la app.
@@ -857,8 +812,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 
 - Formularios críticos.
 - Secciones importantes como carritos de compras.
-
----
 
 ### 13. Higher-Order Components (HOCs)
 
@@ -876,8 +829,6 @@ const [state, dispatch] = useReducer(reducer, { count: 0 });
 
 Actualmente, los Hooks suelen reemplazarlos por su simplicidad.
 
----
-
 ### 14. Fragments en React
 
 - Permiten devolver múltiples elementos sin añadir un nodo extra al DOM.
@@ -890,8 +841,6 @@ return (
   </>
 );
 ```
-
----
 
 ### 15. Estrategias de optimización de rendimiento
 
@@ -907,38 +856,3 @@ return (
    Carga diferida de componentes con `React.lazy`.
 
 [🔼 temas](#temas)
-
-<!-- # Seccion 03 •
-
-## Conceptos Claves
-
-Genera 15 preguntas de entrevista técnica sobre React.
-
-- Incluye temas básicos, intermedios y avanzados.
-- Mezcla teoría y práctica.
-- Cubre sintaxis, estructuras de datos, buenas prácticas y casos reales.
-- Redacta las preguntas de forma clara, sin respuestas.
-
-### 🟢 Básico
-
-1. ¿Cuál es la diferencia entre un componente de clase y un componente funcional en React?
-2. Explica el concepto de Virtual DOM y cómo mejora el rendimiento de una aplicación React.
-3. Qué son los props en React? ¿Cuál es su propósito y por qué se consideran inmutables?
-4. ¿Cuál es la función del método render() en un componente de clase y qué debe devolver?
-5. Describe qué es el state en React. ¿Cuándo y cómo lo usarías en un componente?
-
-### 🟡 Intermedio
-
-6. Explica el ciclo de vida de un componente de React. Nombra y describe al menos tres de los métodos principales del ciclo de vida.
-7. ¿Qué son los Hooks en React? Menciona al menos tres Hooks y describe un caso práctico de uso para cada uno.
-8. Explica cómo funciona useEffect y qué papel juega su arreglo de dependencias. ¿Qué problemas puede ocasionar no definir bien ese arreglo?
-9. ¿Qué es el Context API? Describe un escenario real donde usarías Context en lugar de pasar props manualmente por muchos componentes.
-10. ¿Qué es useReducer y en qué casos lo preferirías sobre useState?
-
-### 🔴 Avanzado
-
-11. ¿Qué es la clave (key) en las listas de React? Explica su importancia y qué problemas puede causar su omisión.
-12. ¿Qué son los error boundaries en React? ¿Cómo se implementan y cuándo conviene usarlos?
-13. ¿Qué son los Higher-Order Components (HOCs) y qué ventajas/desventajas tienen frente a Hooks o componentes funcionales?
-14. ¿Qué son los fragmentos (Fragments) de React y cuándo se deben utilizar?
-15. ¿Cómo optimizarías el rendimiento de una aplicación React que tiene un componente que se vuelve a renderizar con frecuencia? Nombra y explica al menos dos estrategias. -->

@@ -56,12 +56,18 @@ Con HTML puedes construir:
 
 ## Buenas prácticas recomendadas
 
-- **Usa etiquetas semánticas** (`<header>`, `<main>`, `<article>`, `<footer>`) para mejorar accesibilidad y SEO.
-- **Estructura tu HTML como un árbol lógico**, con títulos jerárquicos (`<h1>` a `<h6>`).
-- **Organización del código:** identación clara y consistente.
-- **Evita contenido repetitivo**: usa plantillas o componentes reutilizables.
-- **Evitar inline styles:** usar CSS externo o interno.
-- **Comentarios útiles:** para documentar secciones complejas.
+- **Usa etiquetas semánticas:**\
+  (`<header>`, `<main>`, `<article>`, `<footer>`) para mejorar accesibilidad y SEO.
+- **Estructura tu HTML como un árbol lógico:**\
+  con títulos jerárquicos (`<h1>` a `<h6>`).
+- **Organización del código:**\
+  identación clara y consistente.
+- **Evita contenido repetitivo:**\
+  usa plantillas o componentes reutilizables.
+- **Evitar inline styles:**\
+  usar CSS externo o interno.
+- **Comentarios útiles:**\
+  para documentar secciones complejas.
 
 > **Pro tip:** Mantén siempre el enfoque en la **semántica y accesibilidad**.
 
@@ -166,9 +172,12 @@ Estas herramientas te ayudarán a escribir, probar y optimizar tu código HTML d
 
 ### **1. Editores de código**
 
-- **Visual Studio Code (VSCode):** popular, extensible y con soporte para HTML, CSS y JS.
-- **Sublime Text:** rápido y liviano, ideal para proyectos pequeños.
-- **Atom:** flexible, aunque menos actualizado.
+- **Visual Studio Code (VSCode):**\
+  popular, extensible y con soporte para HTML, CSS y JS.
+- **Sublime Text:**\
+  rápido y liviano, ideal para proyectos pequeños.
+- **Atom:**\
+  flexible, aunque menos actualizado.
 
 #### Extensión recomendada en VSCode:
 
@@ -207,17 +216,12 @@ Todos los navegadores modernos (Chrome, Edge, Firefox) incluyen **DevTools**, ú
 
 Si quieres optimizar tu flujo de trabajo con HTML, puedes usar herramientas que te den componentes listos o plantillas:
 
-#### **Bootstrap**
-
-- Para diseño rápido y responsive.
-
-#### **Tailwind CSS**
-
-- Estilos utilitarios y personalizables.
-
-#### **Materialize**
-
-- Basado en Material Design.
+- **Bootstrap:**\
+  Para diseño rápido y responsive.
+- **Tailwind CSS:**\
+  Estilos utilitarios y personalizables.
+- **Materialize:**\
+  Basado en Material Design.
 
 > Aunque no reemplazan el HTML, te permiten trabajar más rápido con interfaces modernas.
 
