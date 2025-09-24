@@ -35,10 +35,7 @@ Bash se utiliza para **administrar, automatizar y ejecutar procesos en el sistem
 - **Manejo de archivos y directorios**: copiar, mover, comprimir y buscar archivos de forma eficiente.
 - **Procesamiento de datos**: manipular logs, filtrar información y realizar tareas repetitivas.
 - **Educación y aprendizaje**: entender cómo funcionan los sistemas operativos a bajo nivel.
-
----
-
-### 3. ¿Qué puedo construir con {{title}}?
+  ### 3. ¿Qué puedo construir con {{title}}?
 
 Con Bash puedes **crear herramientas y automatizaciones** para mejorar la productividad.
 
@@ -49,10 +46,7 @@ Con Bash puedes **crear herramientas y automatizaciones** para mejorar la produc
 - Pequeños **programas CLI** (Command Line Interface).
 - Flujos de **despliegue continuo (CI/CD)** para proyectos.
 - Utilidades personalizadas para **trabajar con proyectos en Git**, Docker, Node.js, etc.
-
----
-
-### 4. ¿Cuándo es más conveniente usarlo?
+  ### 4. ¿Cuándo es más conveniente usarlo?
 
 #### Usa Bash cuando:
 
@@ -66,10 +60,7 @@ Con Bash puedes **crear herramientas y automatizaciones** para mejorar la produc
 
 - Necesitas **interfaces gráficas** o aplicaciones complejas.
 - El proyecto requiere **mucha lógica avanzada** (en ese caso, lenguajes como Python o Node.js son más adecuados).
-
----
-
-## Buenas prácticas recomendadas
+  ## Buenas prácticas recomendadas
 
 Escribir scripts en Bash requiere **orden y claridad**. Algunas recomendaciones:
 
@@ -132,6 +123,7 @@ cp archivo.txt respaldo/ && echo "Copia exitosa"
 - [inicio](#node-js)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
+- [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)

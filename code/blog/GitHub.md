@@ -125,6 +125,7 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 - [inicio](#node-js)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
+- [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)
@@ -135,13 +136,13 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 
 Antes de usar GitHub de forma efectiva, es importante conocer algunos conceptos clave que se relacionan directamente con la plataforma y su funcionamiento.
 
-### 1. **Git**
+### 1. Git
 
 Sistema de **control de versiones distribuido** que permite registrar cambios en el código, trabajar de forma colaborativa y mantener un historial completo de modificaciones.
 
 > _Git es la base sobre la que se construye GitHub._
 
-### 2. **Repositorio (Repo)**
+### 2. Repositorio (Repo)
 
 Espacio donde se almacena el proyecto, incluyendo:
 
@@ -152,7 +153,7 @@ Espacio donde se almacena el proyecto, incluyendo:
 
 Puede ser **público** (visible para todos) o **privado** (acceso restringido).
 
-### 3. **Commit**
+### 3. Commit
 
 Registro puntual de cambios realizados en el proyecto.
 
@@ -162,7 +163,7 @@ Registro puntual de cambios realizados en el proyecto.
 > Ejemplo de mensaje de commit:  
 > `feat: agregar formulario de registro`
 
-### 4. **Branch (Rama)**
+### 4. Branch (Rama)
 
 Versión paralela del proyecto que permite trabajar en nuevas funciones o correcciones sin afectar la rama principal.
 
@@ -173,27 +174,27 @@ Versión paralela del proyecto que permite trabajar en nuevas funciones o correc
 - `feature/nombre`: Nuevas funcionalidades.
 - `hotfix/nombre`: Correcciones urgentes.
 
-### 5. **Pull Request (PR)**
+### 5. Pull Request (PR)
 
 Solicitud para fusionar cambios de una rama en otra, generalmente revisada por otros miembros del equipo antes de aprobarla.
 
 - Permite **revisar código**, **discutir cambios** y **mantener calidad**.
 
-### 6. **Issue**
+### 6. Issue
 
 Herramienta para **registrar tareas, bugs o mejoras** dentro de un proyecto.
 
 - Puede asignarse a usuarios específicos.
 - Facilita la organización y seguimiento de problemas.
 
-### 7. **Fork**
+### 7. Fork
 
 Copia de un repositorio en tu propia cuenta para:
 
 - Probar cambios sin afectar el original.
 - Contribuir a proyectos open source.
 
-### 8. **Merge**
+### 8. Merge
 
 Proceso de **fusionar cambios** de una rama a otra.
 
@@ -203,7 +204,7 @@ Proceso de **fusionar cambios** de una rama a otra.
 - **Squash and merge:** combina varios commits en uno solo.
 - **Rebase and merge:** integra cambios de forma lineal.
 
-### 9. **Markdown**
+### 9. Markdown
 
 Lenguaje de marcado ligero usado en GitHub para:
 
@@ -211,7 +212,7 @@ Lenguaje de marcado ligero usado en GitHub para:
 - Issues y Pull Requests.
 - Wikis y páginas web.
 
-### 10. **GitHub Actions**
+### 10. GitHub Actions
 
 Sistema de **automatización** para ejecutar flujos de trabajo como:
 
@@ -219,11 +220,11 @@ Sistema de **automatización** para ejecutar flujos de trabajo como:
 - Despliegues a producción.
 - Análisis de calidad de código.
 
-### 11. **GitHub Pages**
+### 11. GitHub Pages
 
 Servicio gratuito de GitHub para **publicar sitios web estáticos** directamente desde un repositorio.
 
-### 12. **Licencias**
+### 12. Licencias
 
 Definen cómo otros pueden usar, modificar y distribuir tu código.
 
@@ -238,17 +239,98 @@ Ejemplo:
 
 # Herramientas recomendadas
 
+Para trabajar eficientemente con GitHub, estas herramientas y configuraciones son altamente recomendadas:
+
+### 1. Git CLI (Command Line Interface)
+
+Instalar Git en tu computadora para ejecutar comandos básicos:
+
+```
+git clone       # Clonar un repositorio.
+git add         # Agregar archivos al área de staging.
+git commit      # Guardar cambios con mensaje.
+git push        # Enviar cambios a GitHub.
+git pull        # Obtener cambios de GitHub.
+```
+
+> Descarga oficial: [https://git-scm.com/](https://git-scm.com/)
+
+---
+
+### 2. Visual Studio Code (VSCode)
+
+Editor de código altamente compatible con GitHub.
+
+Extensiones recomendadas:
+
+- **GitLens:** Información avanzada sobre commits y ramas.
+- **GitHub Pull Requests and Issues:** Manejar PRs e Issues directamente desde VSCode.
+- **Markdown Preview Enhanced:** Visualizar archivos `.md` en tiempo real.
+
+---
+
+### 3. GitHub Desktop
+
+Aplicación gráfica oficial de GitHub para usuarios que prefieren una interfaz visual en lugar de usar comandos.
+
+> Descarga oficial: [https://desktop.github.com/](https://desktop.github.com/)
+
+---
+
+### 4. SSH Keys
+
+Clave segura para autenticarte con GitHub sin tener que escribir usuario y contraseña cada vez que interactúas con un repositorio.
+
+Pasos básicos:
+
+1. Generar clave SSH:
+   ```bash
+   ssh-keygen -t rsa -b 4096 -C "tu_email@ejemplo.com"
+   ```
+2. Agregar la clave pública a GitHub.
+3. Configurar Git para usar SSH.
+
+### 5. GitHub CLI (gh)
+
+Herramienta oficial de línea de comandos para gestionar GitHub directamente desde la terminal.
+
+Comandos útiles:
+
+```
+gh repo create            # Crear repositorio en GitHub
+gh issue list             # Listar issues
+gh pr create              # Crear un pull request
+gh pr merge               # Fusionar pull request
+```
+
+> Instalación: https://cli.github.com/
+
+### 6. Integraciones y Automatización
+
+- **GitHub Actions:** Automatización de pruebas y despliegues.
+- **CI/CD externos:** Jenkins, Travis CI, CircleCI.
+- **Bots y Webhooks:** Automatización de tareas personalizadas.
+
+### 7. Navegadores y Extensiones Web
+
+- **Octotree:** Visualización estructurada de repositorios en GitHub.
+- **Refined GitHub:** Mejoras visuales y funcionales en la interfaz.
+
+### 8. Documentación y Wikis
+
+- **README.md:** Documentación principal.
+- **GitHub Wiki:** Información extensa y organizada.
+- **Plantillas para Issues y PRs:** Estandarizar contribuciones.
+
 [🔼 temas](#temas)
 
 ---
 
 # Snippets rápidos
 
-## Snippets Rápidos
-
 Fragmentos de código y configuraciones que se utilizan con frecuencia en proyectos de GitHub.
 
-### 1. **Estructura básica de README.md**
+### Estructura básica de README.md
 
 Archivo principal para documentar un proyecto en GitHub.
 
@@ -266,13 +348,13 @@ npm install
 ```
 ````
 
-## Uso
+### Uso
 
 ```bash
 npm run dev
 ```
 
-## Contribuir
+### Contribuir
 
 1. Haz un fork del proyecto.
 2. Crea una nueva rama (`git checkout -b feature/nueva-funcion`).
@@ -280,37 +362,34 @@ npm run dev
 4. Haz push a la rama (`git push origin feature/nueva-funcion`).
 5. Crea un Pull Request.
 
-## Licencia
+### Licencia
 
 Este proyecto está bajo la licencia MIT.
 
-```
- ### 2. **.gitignore básico para Node.js**
+#### 1. .gitignore básico para Node.js
+
 Evitar subir archivos innecesarios al repositorio.
 
-
+```
 node_modules/
 .env
 dist/
 coverage/
-
 ```
 
-### 3. **Flujo típico de ramas en GitHub**
+#### 2. Flujo típico de ramas en GitHub
 
 Estructura recomendada para ramas en proyectos colaborativos.
 
 ```
-
-main # Versión estable lista para producción
-develop # Rama de integración para desarrollo
-feature/ # Nuevas funcionalidades
-hotfix/ # Correcciones urgentes
-release/ # Versión previa a producción
-
+main        # Versión estable lista para producción
+develop     # Rama de integración para desarrollo
+feature     # Nuevas funcionalidades
+hotfix      # Correcciones urgentes
+release     # Versión previa a producción
 ```
 
-### 4. **Template para Issues**
+#### 3. Template para Issues
 
 Archivo `.github/ISSUE_TEMPLATE/bug_report.md`
 
@@ -334,7 +413,7 @@ Explica lo que debería suceder.
 Capturas de pantalla, versiones, etc.
 ```
 
-### 5. **Template para Pull Requests**
+#### 4. Template para Pull Requests
 
 Archivo `.github/PULL_REQUEST_TEMPLATE.md`
 
@@ -363,6 +442,97 @@ Breve resumen de los cambios realizados.
 
 # Comandos
 
+Estos son los **comandos principales de Git y GitHub**, con ejemplos claros y directos.
+
+### Configuración inicial
+
+```bash
+git config --global user.name "Tu Nombre"       # Configurar nombre de usuario
+git config --global user.email "tu@email.com"   # Configurar email
+git config --list                               # Ver configuración actual
+```
+
+### Creación y clonación de repositorios
+
+```bash
+git init                                         # Inicializar repositorio en carpeta actual
+git clone https://github.com/usuario/repo.git    # Clonar repositorio remoto
+```
+
+### Ciclo básico de trabajo
+
+```bash
+git status                            # Ver estado de archivos
+git add archivo.js                    # Agregar archivo específico
+git add .                             # Agregar todos los cambios
+git commit -m "feat: mensaje claro"   # Guardar cambios con mensaje
+git push origin main                  # Subir cambios a GitHub
+git pull origin main                  # Descargar cambios desde GitHub
+```
+
+### Ramas (Branch)
+
+```bash
+git branch                          # Listar ramas
+git branch nueva-rama               # Crear nueva rama
+git checkout nueva-rama             # Cambiar a otra rama
+git checkout -b feature/login       # Crear y cambiar a nueva rama
+git merge nueva-rama                # Fusionar una rama a la actual
+git branch -d rama-obsoleta         # Eliminar rama local
+```
+
+### Historial y commits
+
+```bash
+git log                      # Ver historial completo
+git log --oneline            # Historial resumido
+git diff                     # Ver cambios no confirmados
+git show commit_id           # Ver detalles de un commit específico
+```
+
+### Revertir y deshacer cambios
+
+```bash
+git reset archivo.js                   # Quitar archivo del staging
+git checkout -- archivo.js             # Deshacer cambios no guardados
+git reset --hard HEAD~1                # Deshacer último commit y cambios
+```
+
+### Trabajar con remotos
+
+```bash
+git remote -v                          # Ver repositorios remotos
+git remote add origin URL_REPO         # Vincular repositorio remoto
+git push -u origin main                # Subir cambios y establecer remoto por defecto
+```
+
+### Pull Requests (CLI de GitHub)
+
+Si tienes instalada la [GitHub CLI](https://cli.github.com/):
+
+```bash
+gh auth login                           # Autenticarse en GitHub
+gh repo create                          # Crear un nuevo repositorio en GitHub
+gh pr create                            # Crear Pull Request
+gh pr list                              # Listar Pull Requests
+gh pr merge                             # Fusionar Pull Request
+```
+
+### GitHub Pages
+
+Publicar un sitio web desde una rama:
+
+```bash
+git branch -M main                      # Renombrar rama principal a main
+git push -u origin main                 # Subir cambios
+# Luego habilitar GitHub Pages desde la configuración del repositorio
+```
+
+> **Tip:**  
+> Memoriza el flujo básico:  
+> `git add` → `git commit` → `git push`  
+> Este ciclo es la base del trabajo diario con Git y GitHub.
+
 [🔼 temas](#temas)
 
 ---
@@ -373,8 +543,13 @@ Breve resumen de los cambios realizados.
 
 ### 1. ¿Cuál es la diferencia fundamental entre Git y GitHub?
 
-- **Git** es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.
-- **GitHub** es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como _pull requests_, _issues_ y _actions_.
+#### Git:
+
+- Es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.
+
+#### GitHub:
+
+- Es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como _pull requests_, _issues_ y _actions_.
 
 ### 2. Explica el propósito de un "pull request" (solicitud de extracción) y describe el proceso general para crear uno.
 
@@ -394,7 +569,7 @@ Un _pull request_ (PR) es una solicitud para fusionar cambios de una rama a otra
 4. En GitHub, crear un _Pull Request_ desde la rama hacia `main` o `develop`.
 5. Solicitar revisiones y, una vez aprobado, fusionar.
 
-### 3. ¿Cómo se clona un repositorio de GitHub a tu máquina local? ¿Qué comandos de Git utilizarías?
+### 3. ¿Cómo se clona un repositorio de GitHub a tu máquina local?<br> ¿Qué comandos de Git utilizarías?
 
 Para clonar un repositorio:
 
@@ -405,19 +580,19 @@ cd repo
 
 Este comando descarga el repositorio y configura automáticamente el remoto llamado `origin`.
 
-### 4. Describe la diferencia entre git fetch, git pull y git merge. ¿Cuándo usarías cada uno?
+### 4. Describe la diferencia entre git fetch, git pull y git merge.<br> ¿Cuándo usarías cada uno?
 
-- `git fetch`: Descarga cambios remotos **sin fusionarlos**. Útil para revisar cambios antes de integrarlos.
-- `git pull`: Descarga y **fusiona** cambios automáticamente (fetch + merge).
-- `git merge`: Fusiona manualmente ramas ya descargadas.
+- **`git fetch:`** Descarga cambios remotos **sin fusionarlos**. Útil para revisar cambios antes de integrarlos.
+- **`git pull:`** Descarga y **fusiona** cambios automáticamente (fetch + merge).
+- **`git merge:`** Fusiona manualmente ramas ya descargadas.
 
-**Uso recomendado:**
+#### Uso recomendado:
 
-- `fetch` → cuando quieres inspeccionar cambios antes de aplicarlos.
-- `pull` → cuando quieres mantener tu rama actual actualizada rápidamente.
-- `merge` → cuando integras ramas de forma controlada.
+- **`fetch:`** cuando quieres inspeccionar cambios antes de aplicarlos.
+- **`pull:`** cuando quieres mantener tu rama actual actualizada rápidamente.
+- **`merge:`** cuando integras ramas de forma controlada.
 
-### 5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto? Da un ejemplo de su contenido.
+### 5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto?
 
 El archivo `.gitignore` especifica qué archivos o carpetas **no deben ser rastreados** por Git, evitando subir información sensible o archivos innecesarios.
 
@@ -436,8 +611,8 @@ dist/
 
 ### 6. Explica el concepto de "rebase" en Git y cómo se diferencia de git merge. ¿Cuándo sería apropiado usar rebase?
 
-- `git rebase` reorganiza la historia de commits, aplicando tus cambios **encima** de otra rama, creando un historial lineal.
-- `git merge` combina dos ramas preservando la historia completa, incluyendo ramas y bifurcaciones.
+- **`git rebase`** reorganiza la historia de commits, aplicando tus cambios **encima** de otra rama, creando un historial lineal.
+- **`git merge`** combina dos ramas preservando la historia completa, incluyendo ramas y bifurcaciones.
 
 **Cuándo usar rebase:**
 
@@ -468,14 +643,14 @@ git push origin main
 
 ### 8. ¿Para qué sirve git revert vs git reset? Explica diferencias entre sus modos (--soft, --mixed, --hard).
 
-- `git revert`: Crea un commit que **revierte cambios previos** sin modificar la historia.
-- `git reset`: **Retrocede en la historia**, modificando el estado de commits y el área de staging.
+- **`git revert:`** Crea un commit que **revierte cambios previos** sin modificar la historia.
+- **`git reset:`** **Retrocede en la historia**, modificando el estado de commits y el área de staging.
 
 **Modos de reset:**
 
-- `--soft`: Mantiene cambios en staging.
-- `--mixed`: Mantiene cambios en el directorio de trabajo, pero limpia el staging.
-- `--hard`: Elimina cambios por completo.
+- **`--soft:`** Mantiene cambios en staging.
+- **`--mixed:`** Mantiene cambios en el directorio de trabajo, pero limpia el staging.
+- **`--hard:`** Elimina cambios por completo.
 
 ### 9. ¿Qué son los tags en Git? ¿Cómo los usarías para marcar versiones estables en un proyecto?
 
@@ -494,11 +669,13 @@ Esto permite rastrear versiones y generar releases en GitHub.
 
 Flujo recomendado (_Git Flow_ simplificado):
 
-- **`main`:** Rama estable para producción.
-- **`develop`:** Rama para integrar cambios en desarrollo.
-- **`feature`:** Nuevas funcionalidades.
-- **`hotfix`:** Correcciones urgentes en producción.
-- **`release`:** Preparación previa a producción.
+```
+main            # Rama estable para producción.
+develop         # Rama para integrar cambios en desarrollo.
+feature         # Nuevas funcionalidades.
+hotfix          # Correcciones urgentes en producción.
+release         # Preparación previa a producción.
+```
 
 ---
 
@@ -576,3 +753,5 @@ jobs:
 ```
 
 > Esto asegura calidad y despliegues automáticos de forma segura.
+
+[🔼 temas](#temas)

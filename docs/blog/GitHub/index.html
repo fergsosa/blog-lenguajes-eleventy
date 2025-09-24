@@ -138,6 +138,7 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <li><a href="#node-js">inicio</a></li>
 <li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
 <li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
 <li><a href="#comandos">Comandos</a></li>
 <li><a href="#conceptos-claves">Conceptos Claves</a></li>
 <li><a href="#categorias">Otros artículos</a></li>
@@ -145,12 +146,12 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <hr>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Antes de usar GitHub de forma efectiva, es importante conocer algunos conceptos clave que se relacionan directamente con la plataforma y su funcionamiento.</p>
-<h3 id="1-git">1. <strong>Git</strong></h3>
+<h3 id="1-git">1. Git</h3>
 <p>Sistema de <strong>control de versiones distribuido</strong> que permite registrar cambios en el código, trabajar de forma colaborativa y mantener un historial completo de modificaciones.</p>
 <blockquote>
 <p><em>Git es la base sobre la que se construye GitHub.</em></p>
 </blockquote>
-<h3 id="2-repositorio-repo">2. <strong>Repositorio (Repo)</strong></h3>
+<h3 id="2-repositorio-repo">2. Repositorio (Repo)</h3>
 <p>Espacio donde se almacena el proyecto, incluyendo:</p>
 <ul>
 <li>Código fuente.</li>
@@ -159,7 +160,7 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <li>Historial de cambios (commits).</li>
 </ul>
 <p>Puede ser <strong>público</strong> (visible para todos) o <strong>privado</strong> (acceso restringido).</p>
-<h3 id="3-commit">3. <strong>Commit</strong></h3>
+<h3 id="3-commit">3. Commit</h3>
 <p>Registro puntual de cambios realizados en el proyecto.</p>
 <ul>
 <li>Incluye un <strong>mensaje descriptivo</strong> sobre qué se modificó.</li>
@@ -169,7 +170,7 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <p>Ejemplo de mensaje de commit:<br>
 <code>feat: agregar formulario de registro</code></p>
 </blockquote>
-<h3 id="4-branch-rama">4. <strong>Branch (Rama)</strong></h3>
+<h3 id="4-branch-rama">4. Branch (Rama)</h3>
 <p>Versión paralela del proyecto que permite trabajar en nuevas funciones o correcciones sin afectar la rama principal.</p>
 <h4 id="flujo-comun-de-ramas">Flujo común de ramas:</h4>
 <ul>
@@ -178,24 +179,24 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <li><code>feature/nombre</code>: Nuevas funcionalidades.</li>
 <li><code>hotfix/nombre</code>: Correcciones urgentes.</li>
 </ul>
-<h3 id="5-pull-request-pr">5. <strong>Pull Request (PR)</strong></h3>
+<h3 id="5-pull-request-pr">5. Pull Request (PR)</h3>
 <p>Solicitud para fusionar cambios de una rama en otra, generalmente revisada por otros miembros del equipo antes de aprobarla.</p>
 <ul>
 <li>Permite <strong>revisar código</strong>, <strong>discutir cambios</strong> y <strong>mantener calidad</strong>.</li>
 </ul>
-<h3 id="6-issue">6. <strong>Issue</strong></h3>
+<h3 id="6-issue">6. Issue</h3>
 <p>Herramienta para <strong>registrar tareas, bugs o mejoras</strong> dentro de un proyecto.</p>
 <ul>
 <li>Puede asignarse a usuarios específicos.</li>
 <li>Facilita la organización y seguimiento de problemas.</li>
 </ul>
-<h3 id="7-fork">7. <strong>Fork</strong></h3>
+<h3 id="7-fork">7. Fork</h3>
 <p>Copia de un repositorio en tu propia cuenta para:</p>
 <ul>
 <li>Probar cambios sin afectar el original.</li>
 <li>Contribuir a proyectos open source.</li>
 </ul>
-<h3 id="8-merge">8. <strong>Merge</strong></h3>
+<h3 id="8-merge">8. Merge</h3>
 <p>Proceso de <strong>fusionar cambios</strong> de una rama a otra.</p>
 <h4 id="tipos-comunes-de-merge">Tipos comunes de merge:</h4>
 <ul>
@@ -203,23 +204,23 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <li><strong>Squash and merge:</strong> combina varios commits en uno solo.</li>
 <li><strong>Rebase and merge:</strong> integra cambios de forma lineal.</li>
 </ul>
-<h3 id="9-markdown">9. <strong>Markdown</strong></h3>
+<h3 id="9-markdown">9. Markdown</h3>
 <p>Lenguaje de marcado ligero usado en GitHub para:</p>
 <ul>
 <li>Documentación (<code>README.md</code>).</li>
 <li>Issues y Pull Requests.</li>
 <li>Wikis y páginas web.</li>
 </ul>
-<h3 id="10-github-actions">10. <strong>GitHub Actions</strong></h3>
+<h3 id="10-github-actions">10. GitHub Actions</h3>
 <p>Sistema de <strong>automatización</strong> para ejecutar flujos de trabajo como:</p>
 <ul>
 <li>Pruebas automáticas.</li>
 <li>Despliegues a producción.</li>
 <li>Análisis de calidad de código.</li>
 </ul>
-<h3 id="11-github-pages">11. <strong>GitHub Pages</strong></h3>
+<h3 id="11-github-pages">11. GitHub Pages</h3>
 <p>Servicio gratuito de GitHub para <strong>publicar sitios web estáticos</strong> directamente desde un repositorio.</p>
-<h3 id="12-licencias">12. <strong>Licencias</strong></h3>
+<h3 id="12-licencias">12. Licencias</h3>
 <p>Definen cómo otros pueden usar, modificar y distribuir tu código.</p>
 <p>Ejemplo:</p>
 <ul>
@@ -229,12 +230,77 @@ Está construida sobre <strong>Git</strong>, un sistema de control de versiones 
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar eficientemente con GitHub, estas herramientas y configuraciones son altamente recomendadas:</p>
+<h3 id="1-git-cli-command-line-interface">1. Git CLI (Command Line Interface)</h3>
+<p>Instalar Git en tu computadora para ejecutar comandos básicos:</p>
+<pre><code>git clone       # Clonar un repositorio.
+git add         # Agregar archivos al área de staging.
+git commit      # Guardar cambios con mensaje.
+git push        # Enviar cambios a GitHub.
+git pull        # Obtener cambios de GitHub.
+</code></pre>
+<blockquote>
+<p>Descarga oficial: <a href="https://git-scm.com/">https://git-scm.com/</a></p>
+</blockquote>
+<hr>
+<h3 id="2-visual-studio-code-vscode">2. Visual Studio Code (VSCode)</h3>
+<p>Editor de código altamente compatible con GitHub.</p>
+<p>Extensiones recomendadas:</p>
+<ul>
+<li><strong>GitLens:</strong> Información avanzada sobre commits y ramas.</li>
+<li><strong>GitHub Pull Requests and Issues:</strong> Manejar PRs e Issues directamente desde VSCode.</li>
+<li><strong>Markdown Preview Enhanced:</strong> Visualizar archivos <code>.md</code> en tiempo real.</li>
+</ul>
+<hr>
+<h3 id="3-github-desktop">3. GitHub Desktop</h3>
+<p>Aplicación gráfica oficial de GitHub para usuarios que prefieren una interfaz visual en lugar de usar comandos.</p>
+<blockquote>
+<p>Descarga oficial: <a href="https://desktop.github.com/">https://desktop.github.com/</a></p>
+</blockquote>
+<hr>
+<h3 id="4-ssh-keys">4. SSH Keys</h3>
+<p>Clave segura para autenticarte con GitHub sin tener que escribir usuario y contraseña cada vez que interactúas con un repositorio.</p>
+<p>Pasos básicos:</p>
+<ol>
+<li>Generar clave SSH:<pre><code class="language-bash">ssh-keygen -t rsa -b 4096 -C &quot;tu_email@ejemplo.com&quot;
+</code></pre>
+</li>
+<li>Agregar la clave pública a GitHub.</li>
+<li>Configurar Git para usar SSH.</li>
+</ol>
+<h3 id="5-github-cli-gh">5. GitHub CLI (gh)</h3>
+<p>Herramienta oficial de línea de comandos para gestionar GitHub directamente desde la terminal.</p>
+<p>Comandos útiles:</p>
+<pre><code>gh repo create            # Crear repositorio en GitHub
+gh issue list             # Listar issues
+gh pr create              # Crear un pull request
+gh pr merge               # Fusionar pull request
+</code></pre>
+<blockquote>
+<p>Instalación: https://cli.github.com/</p>
+</blockquote>
+<h3 id="6-integraciones-y-automatizacion">6. Integraciones y Automatización</h3>
+<ul>
+<li><strong>GitHub Actions:</strong> Automatización de pruebas y despliegues.</li>
+<li><strong>CI/CD externos:</strong> Jenkins, Travis CI, CircleCI.</li>
+<li><strong>Bots y Webhooks:</strong> Automatización de tareas personalizadas.</li>
+</ul>
+<h3 id="7-navegadores-y-extensiones-web">7. Navegadores y Extensiones Web</h3>
+<ul>
+<li><strong>Octotree:</strong> Visualización estructurada de repositorios en GitHub.</li>
+<li><strong>Refined GitHub:</strong> Mejoras visuales y funcionales en la interfaz.</li>
+</ul>
+<h3 id="8-documentacion-y-wikis">8. Documentación y Wikis</h3>
+<ul>
+<li><strong>README.md:</strong> Documentación principal.</li>
+<li><strong>GitHub Wiki:</strong> Información extensa y organizada.</li>
+<li><strong>Plantillas para Issues y PRs:</strong> Estandarizar contribuciones.</li>
+</ul>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="snippets-rapidos">Snippets rápidos</h1>
-<h2 id="snippets-rapidos-2">Snippets Rápidos</h2>
 <p>Fragmentos de código y configuraciones que se utilizan con frecuencia en proyectos de GitHub.</p>
-<h3 id="1-estructura-basica-de-readme-md">1. <strong>Estructura básica de README.md</strong></h3>
+<h3 id="estructura-basica-de-readme-md">Estructura básica de README.md</h3>
 <p>Archivo principal para documentar un proyecto en GitHub.</p>
 <pre><code class="language-markdown"># Nombre del Proyecto
 
@@ -248,10 +314,10 @@ cd proyecto
 npm install
 ```
 </code></pre>
-<h2 id="uso">Uso</h2>
+<h3 id="uso">Uso</h3>
 <pre><code class="language-bash">npm run dev
 </code></pre>
-<h2 id="contribuir">Contribuir</h2>
+<h3 id="contribuir">Contribuir</h3>
 <ol>
 <li>Haz un fork del proyecto.</li>
 <li>Crea una nueva rama (<code>git checkout -b feature/nueva-funcion</code>).</li>
@@ -259,29 +325,24 @@ npm install
 <li>Haz push a la rama (<code>git push origin feature/nueva-funcion</code>).</li>
 <li>Crea un Pull Request.</li>
 </ol>
-<h2 id="licencia">Licencia</h2>
+<h3 id="licencia">Licencia</h3>
 <p>Este proyecto está bajo la licencia MIT.</p>
-<pre><code> ### 2. **.gitignore básico para Node.js**
-Evitar subir archivos innecesarios al repositorio.
-
-
-node_modules/
+<h4 id="1-gitignore-basico-para-node-js">1. .gitignore básico para Node.js</h4>
+<p>Evitar subir archivos innecesarios al repositorio.</p>
+<pre><code>node_modules/
 .env
 dist/
 coverage/
-
 </code></pre>
-<h3 id="3-flujo-tipico-de-ramas-en-github">3. <strong>Flujo típico de ramas en GitHub</strong></h3>
+<h4 id="2-flujo-tipico-de-ramas-en-github">2. Flujo típico de ramas en GitHub</h4>
 <p>Estructura recomendada para ramas en proyectos colaborativos.</p>
-<pre><code>
-main # Versión estable lista para producción
-develop # Rama de integración para desarrollo
-feature/ # Nuevas funcionalidades
-hotfix/ # Correcciones urgentes
-release/ # Versión previa a producción
-
+<pre><code>main        # Versión estable lista para producción
+develop     # Rama de integración para desarrollo
+feature     # Nuevas funcionalidades
+hotfix      # Correcciones urgentes
+release     # Versión previa a producción
 </code></pre>
-<h3 id="4-template-para-issues">4. <strong>Template para Issues</strong></h3>
+<h4 id="3-template-para-issues">3. Template para Issues</h4>
 <p>Archivo <code>.github/ISSUE_TEMPLATE/bug_report.md</code></p>
 <pre><code class="language-markdown">## Descripción del bug
 
@@ -301,7 +362,7 @@ Explica lo que debería suceder.
 
 Capturas de pantalla, versiones, etc.
 </code></pre>
-<h3 id="5-template-para-pull-requests">5. <strong>Template para Pull Requests</strong></h3>
+<h4 id="4-template-para-pull-requests">4. Template para Pull Requests</h4>
 <p>Archivo <code>.github/PULL_REQUEST_TEMPLATE.md</code></p>
 <pre><code class="language-markdown">## Descripción
 
@@ -323,14 +384,80 @@ Breve resumen de los cambios realizados.
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="comandos">Comandos</h1>
+<p>Estos son los <strong>comandos principales de Git y GitHub</strong>, con ejemplos claros y directos.</p>
+<h3 id="configuracion-inicial">Configuración inicial</h3>
+<pre><code class="language-bash">git config --global user.name &quot;Tu Nombre&quot;       # Configurar nombre de usuario
+git config --global user.email &quot;tu@email.com&quot;   # Configurar email
+git config --list                               # Ver configuración actual
+</code></pre>
+<h3 id="creacion-y-clonacion-de-repositorios">Creación y clonación de repositorios</h3>
+<pre><code class="language-bash">git init                                         # Inicializar repositorio en carpeta actual
+git clone https://github.com/usuario/repo.git    # Clonar repositorio remoto
+</code></pre>
+<h3 id="ciclo-basico-de-trabajo">Ciclo básico de trabajo</h3>
+<pre><code class="language-bash">git status                            # Ver estado de archivos
+git add archivo.js                    # Agregar archivo específico
+git add .                             # Agregar todos los cambios
+git commit -m &quot;feat: mensaje claro&quot;   # Guardar cambios con mensaje
+git push origin main                  # Subir cambios a GitHub
+git pull origin main                  # Descargar cambios desde GitHub
+</code></pre>
+<h3 id="ramas-branch">Ramas (Branch)</h3>
+<pre><code class="language-bash">git branch                          # Listar ramas
+git branch nueva-rama               # Crear nueva rama
+git checkout nueva-rama             # Cambiar a otra rama
+git checkout -b feature/login       # Crear y cambiar a nueva rama
+git merge nueva-rama                # Fusionar una rama a la actual
+git branch -d rama-obsoleta         # Eliminar rama local
+</code></pre>
+<h3 id="historial-y-commits">Historial y commits</h3>
+<pre><code class="language-bash">git log                      # Ver historial completo
+git log --oneline            # Historial resumido
+git diff                     # Ver cambios no confirmados
+git show commit_id           # Ver detalles de un commit específico
+</code></pre>
+<h3 id="revertir-y-deshacer-cambios">Revertir y deshacer cambios</h3>
+<pre><code class="language-bash">git reset archivo.js                   # Quitar archivo del staging
+git checkout -- archivo.js             # Deshacer cambios no guardados
+git reset --hard HEAD~1                # Deshacer último commit y cambios
+</code></pre>
+<h3 id="trabajar-con-remotos">Trabajar con remotos</h3>
+<pre><code class="language-bash">git remote -v                          # Ver repositorios remotos
+git remote add origin URL_REPO         # Vincular repositorio remoto
+git push -u origin main                # Subir cambios y establecer remoto por defecto
+</code></pre>
+<h3 id="pull-requests-cli-de-github">Pull Requests (CLI de GitHub)</h3>
+<p>Si tienes instalada la <a href="https://cli.github.com/">GitHub CLI</a>:</p>
+<pre><code class="language-bash">gh auth login                           # Autenticarse en GitHub
+gh repo create                          # Crear un nuevo repositorio en GitHub
+gh pr create                            # Crear Pull Request
+gh pr list                              # Listar Pull Requests
+gh pr merge                             # Fusionar Pull Request
+</code></pre>
+<h3 id="github-pages">GitHub Pages</h3>
+<p>Publicar un sitio web desde una rama:</p>
+<pre><code class="language-bash">git branch -M main                      # Renombrar rama principal a main
+git push -u origin main                 # Subir cambios
+# Luego habilitar GitHub Pages desde la configuración del repositorio
+</code></pre>
+<blockquote>
+<p><strong>Tip:</strong><br>
+Memoriza el flujo básico:<br>
+<code>git add</code> → <code>git commit</code> → <code>git push</code><br>
+Este ciclo es la base del trabajo diario con Git y GitHub.</p>
+</blockquote>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="conceptos-claves">Conceptos Claves</h1>
 <h2 id="basico">🟢 Básico</h2>
 <h3 id="1-cual-es-la-diferencia-fundamental-entre-git-y-github">1. ¿Cuál es la diferencia fundamental entre Git y GitHub?</h3>
+<h4 id="git">Git:</h4>
 <ul>
-<li><strong>Git</strong> es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.</li>
-<li><strong>GitHub</strong> es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como <em>pull requests</em>, <em>issues</em> y <em>actions</em>.</li>
+<li>Es un sistema de control de versiones distribuido que se ejecuta localmente para gestionar el historial de cambios de un proyecto.</li>
+</ul>
+<h4 id="github-2">GitHub:</h4>
+<ul>
+<li>Es una plataforma en la nube que utiliza Git para alojar repositorios, facilitar la colaboración y proporcionar herramientas adicionales como <em>pull requests</em>, <em>issues</em> y <em>actions</em>.</li>
 </ul>
 <h3 id="2-explica-el-proposito-de-un-pull-request-solicitud-de-extraccion-y-describe-el-proceso-general-para-crear-uno">2. Explica el propósito de un &quot;pull request&quot; (solicitud de extracción) y describe el proceso general para crear uno.</h3>
 <p>Un <em>pull request</em> (PR) es una solicitud para fusionar cambios de una rama a otra en un repositorio. Sirve para revisar, discutir y aprobar cambios antes de integrarlos.</p>
@@ -346,25 +473,25 @@ Breve resumen de los cambios realizados.
 <li>En GitHub, crear un <em>Pull Request</em> desde la rama hacia <code>main</code> o <code>develop</code>.</li>
 <li>Solicitar revisiones y, una vez aprobado, fusionar.</li>
 </ol>
-<h3 id="3-como-se-clona-un-repositorio-de-github-a-tu-maquina-local-que-comandos-de-git-utilizarias">3. ¿Cómo se clona un repositorio de GitHub a tu máquina local? ¿Qué comandos de Git utilizarías?</h3>
+<h3 id="3-como-se-clona-un-repositorio-de-github-a-tu-maquina-local-que-comandos-de-git-utilizarias">3. ¿Cómo se clona un repositorio de GitHub a tu máquina local?<br> ¿Qué comandos de Git utilizarías?</h3>
 <p>Para clonar un repositorio:</p>
 <pre><code class="language-bash">git clone https://github.com/usuario/repo.git
 cd repo
 </code></pre>
 <p>Este comando descarga el repositorio y configura automáticamente el remoto llamado <code>origin</code>.</p>
-<h3 id="4-describe-la-diferencia-entre-git-fetch-git-pull-y-git-merge-cuando-usarias-cada-uno">4. Describe la diferencia entre git fetch, git pull y git merge. ¿Cuándo usarías cada uno?</h3>
+<h3 id="4-describe-la-diferencia-entre-git-fetch-git-pull-y-git-merge-cuando-usarias-cada-uno">4. Describe la diferencia entre git fetch, git pull y git merge.<br> ¿Cuándo usarías cada uno?</h3>
 <ul>
-<li><code>git fetch</code>: Descarga cambios remotos <strong>sin fusionarlos</strong>. Útil para revisar cambios antes de integrarlos.</li>
-<li><code>git pull</code>: Descarga y <strong>fusiona</strong> cambios automáticamente (fetch + merge).</li>
-<li><code>git merge</code>: Fusiona manualmente ramas ya descargadas.</li>
+<li><strong><code>git fetch:</code></strong> Descarga cambios remotos <strong>sin fusionarlos</strong>. Útil para revisar cambios antes de integrarlos.</li>
+<li><strong><code>git pull:</code></strong> Descarga y <strong>fusiona</strong> cambios automáticamente (fetch + merge).</li>
+<li><strong><code>git merge:</code></strong> Fusiona manualmente ramas ya descargadas.</li>
 </ul>
-<p><strong>Uso recomendado:</strong></p>
+<h4 id="uso-recomendado">Uso recomendado:</h4>
 <ul>
-<li><code>fetch</code> → cuando quieres inspeccionar cambios antes de aplicarlos.</li>
-<li><code>pull</code> → cuando quieres mantener tu rama actual actualizada rápidamente.</li>
-<li><code>merge</code> → cuando integras ramas de forma controlada.</li>
+<li><strong><code>fetch:</code></strong> cuando quieres inspeccionar cambios antes de aplicarlos.</li>
+<li><strong><code>pull:</code></strong> cuando quieres mantener tu rama actual actualizada rápidamente.</li>
+<li><strong><code>merge:</code></strong> cuando integras ramas de forma controlada.</li>
 </ul>
-<h3 id="5-que-es-el-archivo-gitignore-y-por-que-es-importante-en-un-proyecto-da-un-ejemplo-de-su-contenido">5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto? Da un ejemplo de su contenido.</h3>
+<h3 id="5-que-es-el-archivo-gitignore-y-por-que-es-importante-en-un-proyecto">5. ¿Qué es el archivo .gitignore y por qué es importante en un proyecto?</h3>
 <p>El archivo <code>.gitignore</code> especifica qué archivos o carpetas <strong>no deben ser rastreados</strong> por Git, evitando subir información sensible o archivos innecesarios.</p>
 <p><strong>Ejemplo:</strong></p>
 <pre><code>node_modules/
@@ -376,8 +503,8 @@ dist/
 <h2 id="intermedio">🟡 Intermedio</h2>
 <h3 id="6-explica-el-concepto-de-rebase-en-git-y-como-se-diferencia-de-git-merge-cuando-seria-apropiado-usar-rebase">6. Explica el concepto de &quot;rebase&quot; en Git y cómo se diferencia de git merge. ¿Cuándo sería apropiado usar rebase?</h3>
 <ul>
-<li><code>git rebase</code> reorganiza la historia de commits, aplicando tus cambios <strong>encima</strong> de otra rama, creando un historial lineal.</li>
-<li><code>git merge</code> combina dos ramas preservando la historia completa, incluyendo ramas y bifurcaciones.</li>
+<li><strong><code>git rebase</code></strong> reorganiza la historia de commits, aplicando tus cambios <strong>encima</strong> de otra rama, creando un historial lineal.</li>
+<li><strong><code>git merge</code></strong> combina dos ramas preservando la historia completa, incluyendo ramas y bifurcaciones.</li>
 </ul>
 <p><strong>Cuándo usar rebase:</strong></p>
 <ul>
@@ -402,14 +529,14 @@ git push origin main
 </code></pre>
 <h3 id="8-para-que-sirve-git-revert-vs-git-reset-explica-diferencias-entre-sus-modos-soft-mixed-hard">8. ¿Para qué sirve git revert vs git reset? Explica diferencias entre sus modos (--soft, --mixed, --hard).</h3>
 <ul>
-<li><code>git revert</code>: Crea un commit que <strong>revierte cambios previos</strong> sin modificar la historia.</li>
-<li><code>git reset</code>: <strong>Retrocede en la historia</strong>, modificando el estado de commits y el área de staging.</li>
+<li><strong><code>git revert:</code></strong> Crea un commit que <strong>revierte cambios previos</strong> sin modificar la historia.</li>
+<li><strong><code>git reset:</code></strong> <strong>Retrocede en la historia</strong>, modificando el estado de commits y el área de staging.</li>
 </ul>
 <p><strong>Modos de reset:</strong></p>
 <ul>
-<li><code>--soft</code>: Mantiene cambios en staging.</li>
-<li><code>--mixed</code>: Mantiene cambios en el directorio de trabajo, pero limpia el staging.</li>
-<li><code>--hard</code>: Elimina cambios por completo.</li>
+<li><strong><code>--soft:</code></strong> Mantiene cambios en staging.</li>
+<li><strong><code>--mixed:</code></strong> Mantiene cambios en el directorio de trabajo, pero limpia el staging.</li>
+<li><strong><code>--hard:</code></strong> Elimina cambios por completo.</li>
 </ul>
 <h3 id="9-que-son-los-tags-en-git-como-los-usarias-para-marcar-versiones-estables-en-un-proyecto">9. ¿Qué son los tags en Git? ¿Cómo los usarías para marcar versiones estables en un proyecto?</h3>
 <ul>
@@ -422,13 +549,12 @@ git push origin v1.0.0
 <p>Esto permite rastrear versiones y generar releases en GitHub.</p>
 <h3 id="10-como-se-gestionan-las-ramas-en-github-describe-el-flujo-de-trabajo-de-ramas-que-consideras-una-buena-practica">10. ¿Cómo se gestionan las ramas en GitHub? Describe el flujo de trabajo de ramas que consideras una buena práctica.</h3>
 <p>Flujo recomendado (<em>Git Flow</em> simplificado):</p>
-<ul>
-<li><strong><code>main</code>:</strong> Rama estable para producción.</li>
-<li><strong><code>develop</code>:</strong> Rama para integrar cambios en desarrollo.</li>
-<li><strong><code>feature</code>:</strong> Nuevas funcionalidades.</li>
-<li><strong><code>hotfix</code>:</strong> Correcciones urgentes en producción.</li>
-<li><strong><code>release</code>:</strong> Preparación previa a producción.</li>
-</ul>
+<pre><code>main            # Rama estable para producción.
+develop         # Rama para integrar cambios en desarrollo.
+feature         # Nuevas funcionalidades.
+hotfix          # Correcciones urgentes en producción.
+release         # Preparación previa a producción.
+</code></pre>
 <hr>
 <h2 id="avanzado">🔴 Avanzado</h2>
 <h3 id="11-describe-como-se-puede-proteger-una-rama-principal-por-ejemplo-main-o-master-usando-politicas-de-github">11. Describe cómo se puede proteger una rama principal (por ejemplo main o master) usando políticas de GitHub.</h3>
@@ -495,6 +621,7 @@ jobs:
 <blockquote>
 <p>Esto asegura calidad y despliegues automáticos de forma segura.</p>
 </blockquote>
+<p><a href="#temas">🔼 temas</a></p>
 
     </main>
     <hr>

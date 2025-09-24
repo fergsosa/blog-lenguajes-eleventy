@@ -108,6 +108,7 @@ TypeScript es especialmente útil en situaciones donde:
 - [inicio](#typescript)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
+- [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)

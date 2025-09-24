@@ -117,6 +117,7 @@ JavaScript es la mejor elección en los siguientes escenarios:
 - [inicio](#javascript)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
+- [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#categorias)

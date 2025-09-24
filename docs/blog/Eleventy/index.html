@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleventy</title>
+    <meta name="description" content="Generador estático, sitios web rápidos.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="eleventy">Eleventy</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/eleventy.avif" alt="img"></p>
+<p>Eleventy, conocido también como <strong>11ty</strong>, es un generador de sitios estáticos (SSG - <em>Static Site Generator</em>) que se enfoca en la <strong>simplicidad</strong>, la <strong>flexibilidad</strong> y la <strong>velocidad</strong>. Es ideal para desarrolladores que desean crear sitios web rápidos y optimizados sin la complejidad de frameworks más grandes.</p>
+<hr>
+<h2 id="1-que-es-eleventy">1. ¿Qué es Eleventy?</h2>
+<p>Eleventy es una herramienta que convierte archivos de contenido como <strong>Markdown</strong>, <strong>HTML</strong>, <strong>Nunjucks</strong>, <strong>Liquid</strong>, entre otros, en un sitio web estático listo para desplegar.</p>
+<h4 id="diferencias-principales-respecto-a-otros-ssgs">Diferencias principales respecto a otros SSGs:</h4>
+<ul>
+<li><strong>Simplicidad:</strong> Configuración mínima para comenzar a trabajar.</li>
+<li><strong>Flexibilidad:</strong> Soporte para múltiples lenguajes de plantillas sin depender de uno solo.</li>
+<li><strong>Ligereza:</strong> No requiere un framework completo como React, Vue o Angular.</li>
+<li><strong>Velocidad:</strong> Generación rápida de sitios estáticos optimizados.</li>
+</ul>
+<blockquote>
+<p>A diferencia de frameworks como Next.js o Gatsby, Eleventy <strong>no añade JavaScript por defecto</strong>, permitiendo sitios más ligeros y rápidos.</p>
+</blockquote>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>Eleventy se utiliza principalmente para crear sitios web donde el contenido es estático o no necesita generación dinámica en el servidor.</p>
+<h4 id="contextos-ideales">Contextos ideales:</h4>
+<ul>
+<li>Blogs personales o corporativos.</li>
+<li>Documentación técnica de proyectos.</li>
+<li>Portfolios y páginas personales.</li>
+<li>Sitios informativos que priorizan la velocidad.</li>
+<li>Proyectos donde se busca simplicidad y bajo mantenimiento.</li>
+</ul>
+<h3 id="3-que-puedo-construir-con-eleventy">3. ¿Qué puedo construir con Eleventy?</h3>
+<h4 id="con-eleventy-puedes-crear-una-variedad-de-proyectos-web-entre-ellos">Con Eleventy puedes crear una variedad de proyectos web, entre ellos:</h4>
+<ul>
+<li><strong>Blogs</strong> con categorías, etiquetas y RSS.</li>
+<li><strong>Documentación</strong> para proyectos open source o empresas.</li>
+<li><strong>Portfolios</strong> minimalistas y optimizados.</li>
+<li><strong>Landing pages</strong> enfocadas en conversión y SEO.</li>
+<li><strong>Sitios corporativos</strong> con contenido estático y de fácil gestión.</li>
+</ul>
+<blockquote>
+<p>Básicamente, cualquier sitio donde <strong>no se requiera lógica compleja de backend</strong>.</p>
+</blockquote>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<h4 id="eleventy-es-conveniente-cuando-buscas">Eleventy es conveniente cuando buscas:</h4>
+<ul>
+<li><strong>Velocidad de carga extrema</strong>, sin JavaScript innecesario.</li>
+<li><strong>Facilidad de mantenimiento</strong>, sin una curva de aprendizaje complicada.</li>
+<li><strong>Compatibilidad con Markdown y contenido estático</strong>.</li>
+<li><strong>SEO optimizado</strong>, gracias a la generación de páginas limpias y rápidas.</li>
+<li><strong>Proyectos pequeños o medianos</strong> sin funcionalidades dinámicas complejas.</li>
+</ul>
+<h4 id="no-es-recomendable-si-necesitas">No es recomendable si necesitas:</h4>
+<ul>
+<li>Funcionalidades en tiempo real (chat, dashboards, etc.).</li>
+<li>Aplicaciones con muchos datos dinámicos.</li>
+<li>API complejas integradas directamente en el front-end.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<h4 id="para-mantener-un-proyecto-eleventy-limpio-escalable-y-eficiente">Para mantener un proyecto Eleventy limpio, escalable y eficiente:</h4>
+<ul>
+<li><strong>Organizar carpetas y plantillas</strong> siguiendo una estructura clara:<br>
+src/ &gt; _includes/ _data/ posts/ styles/ index.md</li>
+<li><strong>Utilizar layouts</strong> para evitar repetir código HTML.</li>
+<li><strong>Mantener contenido separado de la lógica</strong> usando Markdown para contenido y plantillas para diseño.</li>
+<li><strong>Versionar el proyecto</strong> con Git desde el inicio.</li>
+<li><strong>Optimizar imágenes y recursos estáticos</strong> antes de la generación.</li>
+<li><strong>Automatizar el deploy</strong> con servicios como Netlify o Vercel.</li>
+<li><strong>Comentar y documentar</strong> el código para futuros mantenimientos.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">Fortalezas principales:</h4>
+<ul>
+<li>Simplicidad y configuración mínima.</li>
+<li>Soporte para múltiples lenguajes de plantillas.</li>
+<li>Sitios rápidos y optimizados por defecto.</li>
+<li>Perfecto para SEO y rendimiento web.</li>
+</ul>
+<h4 id="debilidades-principales">Debilidades principales:</h4>
+<ul>
+<li>No maneja contenido dinámico de forma nativa.</li>
+<li>Menos popularidad comparado con otros frameworks.</li>
+<li>Requiere conocimiento básico de HTML, CSS y Markdown.</li>
+</ul>
+<h4 id="cuando-usarlo">Cuándo usarlo:</h4>
+<ul>
+<li>Para blogs, portfolios, landing pages y documentación.</li>
+<li>Proyectos donde la velocidad y simplicidad son prioridad.</li>
+<li>Sitios estáticos con contenido frecuente.</li>
+</ul>
+<h4 id="cuando-evitarlo">Cuándo evitarlo:</h4>
+<ul>
+<li>Aplicaciones con datos en tiempo real.</li>
+<li>Proyectos con lógica compleja de backend.</li>
+<li>Sistemas que requieren muchas integraciones dinámicas.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#eleventy">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Estos conceptos son esenciales para trabajar con Eleventy de manera efectiva:</p>
+<h3 id="sitios-estaticos-static-sites"><strong>Sitios estáticos (Static Sites):</strong></h3>
+<p>Páginas web que no dependen de un servidor para generar contenido dinámico. Todo el HTML se genera antes del despliegue.</p>
+<h3 id="plantillas-templates"><strong>Plantillas (Templates):</strong></h3>
+<p>Archivos que definen la estructura de tus páginas. Eleventy soporta varios lenguajes de plantillas como:<br>
+• Nunjucks • Liquid • Handlebars • Mustache • EJS • Markdown</p>
+<h3 id="layouts"><strong>Layouts:</strong></h3>
+<p>Plantillas base reutilizables que permiten mantener un diseño consistente en varias páginas.</p>
+<h3 id="includes-inclusiones"><strong>Includes (Inclusiones):</strong></h3>
+<p>Fragmentos de código que se pueden insertar dentro de plantillas para evitar duplicación.</p>
+<h3 id="collections"><strong>Collections:</strong></h3>
+<p>Conjuntos de contenido agrupados por categorías, etiquetas o cualquier criterio personalizado.</p>
+<h3 id="front-matter"><strong>Front Matter:</strong></h3>
+<p>Metadatos escritos en YAML, JSON o JavaScript al inicio de archivos que permiten configurar propiedades de cada página.</p>
+<h3 id="data-files"><strong>Data Files:</strong></h3>
+<p>Archivos en <code>_data/</code> que proporcionan información global o específica de páginas para usar en plantillas.</p>
+<h3 id="filters-y-shortcodes"><strong>Filters y Shortcodes:</strong></h3>
+<p>Funciones que transforman datos o generan contenido dinámico durante la generación del sitio.</p>
+<h3 id="markdown"><strong>Markdown:</strong></h3>
+<p>Lenguaje de marcado ligero usado para escribir contenido fácilmente, que Eleventy convierte en HTML.</p>
+<h3 id="build-deploy"><strong>Build/Deploy:</strong></h3>
+<p>Proceso de generar los archivos estáticos y subirlos a un servidor o servicio de hosting.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Estas herramientas y servicios facilitan la creación, gestión y despliegue de proyectos Eleventy:</p>
+<h3 id="node-js"><strong>Node.js:</strong></h3>
+<ul>
+<li>Entorno de ejecución JavaScript necesario para instalar y ejecutar Eleventy.</li>
+</ul>
+<h3 id="npm-o-yarn"><strong>npm o Yarn:</strong></h3>
+<ul>
+<li>Gestores de paquetes para instalar dependencias como Eleventy y plugins.</li>
+</ul>
+<h3 id="editor-de-codigo-vscode-sublime-etc"><strong>Editor de código (VSCode, Sublime, etc.):</strong></h3>
+<ul>
+<li>Con soporte para plantillas y sintaxis de Markdown.</li>
+</ul>
+<h3 id="browsersync"><strong>Browsersync:</strong></h3>
+<ul>
+<li>Para recarga automática del navegador durante desarrollo.</li>
+</ul>
+<h3 id="netlify-vercel-github-pages"><strong>Netlify / Vercel / GitHub Pages:</strong></h3>
+<ul>
+<li>Plataformas de hosting optimizadas para sitios estáticos.</li>
+</ul>
+<h3 id="preprocesadores-css-sass-postcss"><strong>Preprocesadores CSS (Sass, PostCSS):</strong></h3>
+<ul>
+<li>Para estilos más organizados y reutilizables.</li>
+</ul>
+<h3 id="plugins-de-eleventy"><strong>Plugins de Eleventy:</strong></h3>
+<ul>
+<li>Como <code>eleventy-plugin-syntaxhighlight</code> para resaltar código o <code>eleventy-plugin-seo</code> para mejorar SEO.</li>
+</ul>
+<h3 id="git"><strong>Git:</strong></h3>
+<ul>
+<li>Para control de versiones y colaboración en proyectos.</li>
+</ul>
+<h3 id="imagemin-tinypng"><strong>Imagemin / TinyPNG:</strong></h3>
+<ul>
+<li>Para optimizar imágenes y reducir el tamaño de los archivos del sitio.</li>
+</ul>
+<blockquote>
+<p>Combinando estos conceptos y herramientas, podrás construir sitios web <strong>eficientes, rápidos y fáciles de mantener</strong> con Eleventy.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<h3 id="1-crear-un-layout-base-nunjucks">1. Crear un layout base (Nunjucks)</h3>
+<pre><code class="language-html">&lt;!-- _includes/layout.njk --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;title&gt;Eleventy&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h3 id="2-pagina-usando-layout-y-front-matter">2. Página usando layout y front matter</h3>
+<pre><code class="language-markdown">---
+title: Mi primera página
+layout: layout.njk
+---
+
+# ¡Hola, mundo!
+
+Este es un ejemplo de contenido en Eleventy.
+</code></pre>
+<h3 id="3-crear-coleccion-de-posts">3. Crear colección de posts</h3>
+<pre><code class="language-javascript">// .eleventy.js
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection(&quot;posts&quot;, function (collectionApi) {
+    return collectionApi.getFilteredByGlob(&quot;src/posts/*.md&quot;);
+  });
+};
+</code></pre>
+<h3 id="4-insertar-un-include">4. Insertar un include</h3>
+<pre><code class="language-html">&lt;header&gt;
+  &lt;nav class=&quot;navbar&quot;&gt;
+  &lt;div class=&quot;grir-parent&quot;&gt;
+    &lt;div class=&quot;grid-item&quot;&gt;
+      &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt; FerBlog &lt;/a&gt;
+      &lt;div class=&quot;menu&quot;&gt;
+          &lt;a href=&quot;/&quot;&gt;Inicio&lt;/a&gt;
+          &lt;a href=&quot;/blog&quot;&gt;Blog&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;h1&gt;Bienvenido&lt;/h1&gt;
+&lt;footer&gt;
+  &lt;p&gt;Diseño hecho ©2024 Fernando Sosa&lt;/p&gt;
+&lt;/footer&gt;
+</code></pre>
+<h3 id="5-usar-un-filtro-personalizado">5. Usar un filtro personalizado</h3>
+<pre><code class="language-javascript">eleventyConfig.addFilter(&quot;upper&quot;, function (value) {
+  return value.toUpperCase();
+});
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="1-instalar-eleventy">1. Instalar Eleventy</h3>
+<pre><code class="language-bash">npm install @11ty/eleventy --save-dev
+</code></pre>
+<h3 id="2-crear-proyecto-y-estructura-inicial">2. Crear proyecto y estructura inicial</h3>
+<pre><code class="language-bash">mkdir mi-proyecto &amp;&amp; cd mi-proyecto
+npx @11ty/eleventy --init
+</code></pre>
+<h3 id="3-generar-sitio-localmente">3. Generar sitio localmente</h3>
+<pre><code class="language-bash">npx eleventy --serve
+# Levanta un servidor local con recarga automática
+</code></pre>
+<h3 id="4-generar-los-archivos-estaticos">4. Generar los archivos estáticos</h3>
+<pre><code class="language-bash">npx eleventy
+# Crea la carpeta _site con todos los archivos finales
+</code></pre>
+<h3 id="5-configuracion-basica-en-eleventy-js">5. Configuración básica en <code>.eleventy.js</code></h3>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy(&quot;src/assets&quot;); // Copiar archivos estáticos
+  return {
+    dir: {
+      input: &quot;src&quot;,
+      output: &quot;_site&quot;,
+    },
+  };
+};
+</code></pre>
+<h3 id="6-ignorar-archivos-o-carpetas">6. Ignorar archivos o carpetas</h3>
+<pre><code class="language-javascript">eleventyConfig.ignores.add(&quot;src/drafts/**/*&quot;);
+</code></pre>
+<h3 id="7-comando-para-despliegue-rapido-ejemplo-con-netlify-cli">7. Comando para despliegue rápido (ejemplo con Netlify CLI)</h3>
+<pre><code class="language-bash">netlify deploy --prod
+</code></pre>
+<blockquote>
+<p>Estos snippets y comandos cubren la mayoría de las necesidades iniciales para desarrollar un proyecto con Eleventy de manera rápida y organizada.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="nivel-basico">🟢 Nivel Básico</h2>
+<h3 id="1-que-es-eleventy-y-en-que-se-diferencia-de-otros-generadores-de-sitios-estaticos">1. ¿Qué es Eleventy y en qué se diferencia de otros generadores de sitios estáticos?</h3>
+<p>Eleventy es un <strong>generador de sitios estáticos (SSG)</strong> que transforma archivos de contenido (Markdown, HTML, etc.) en un sitio optimizado y listo para producción.</p>
+<p><strong>Diferencias principales:</strong></p>
+<ul>
+<li>Soporta múltiples lenguajes de plantillas sin depender de uno específico.</li>
+<li>No añade JavaScript innecesario por defecto, lo que mejora el rendimiento.</li>
+<li>Configuración mínima y curva de aprendizaje baja.</li>
+<li>Flexibilidad para crear desde blogs hasta sitios corporativos.</li>
+</ul>
+<hr>
+<h3 id="2-describe-la-estructura-basica-de-un-proyecto-eleventy">2. Describe la estructura básica de un proyecto Eleventy.</h3>
+<p>Una estructura común podría ser:</p>
+<pre><code>mi-proyecto/
+│
+├── src/                # Carpeta principal del contenido
+│   ├── _includes/      # Layouts y plantillas reutilizables
+│   ├── _data/          # Datos globales (JSON, YAML, JS)
+│   ├── posts/          # Contenido como artículos o páginas
+│   └── index.md        # Página de inicio
+│
+├── .eleventy.js        # Archivo de configuración
+├── package.json        # Dependencias y scripts
+└── _site/              # Archivos generados (output final)
+</code></pre>
+<hr>
+<h3 id="3-que-son-los-templates-en-eleventy-y-cuales-tipos-de-plantillas-soporta">3. ¿Qué son los templates en Eleventy y cuáles tipos de plantillas soporta?</h3>
+<p>Los <strong>templates</strong> (plantillas) definen la <strong>estructura y el diseño</strong> de las páginas.<br>
+Eleventy soporta varios lenguajes de plantillas, incluyendo:</p>
+<ul>
+<li><strong>Markdown</strong> (<code>.md</code>)</li>
+<li><strong>Nunjucks</strong> (<code>.njk</code>)</li>
+<li><strong>Liquid</strong> (<code>.liquid</code>)</li>
+<li><strong>Handlebars</strong> (<code>.hbs</code>)</li>
+<li><strong>EJS</strong></li>
+<li><strong>Mustache</strong></li>
+<li><strong>Pug</strong> (mediante configuración adicional)</li>
+</ul>
+<hr>
+<h3 id="4-explica-como-eleventy-maneja-los-datos-globales-y-como-se-accede-a-ellos-en-los-templates">4. Explica cómo Eleventy maneja los datos globales y cómo se accede a ellos en los templates.</h3>
+<p>Los <strong>datos globales</strong> se almacenan en la carpeta <code>_data/</code> y están disponibles en cualquier plantilla.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code>src/_data/site.json
+</code></pre>
+<pre><code class="language-json">{
+  &quot;title&quot;: &quot;Mi Blog&quot;,
+  &quot;author&quot;: &quot;Fernando&quot;
+}
+</code></pre>
+<p><strong>Uso en plantilla Nunjucks:</strong></p>
+<pre><code class="language-html">&lt;h1&gt;{{ site.title }}&lt;/h1&gt;
+&lt;p&gt;Autor: {{ site.author }}&lt;/p&gt;
+</code></pre>
+<blockquote>
+<p>Eleventy automáticamente expone el contenido de los archivos en <code>_data/</code> como variables globales.</p>
+</blockquote>
+<hr>
+<h3 id="5-menciona-al-menos-tres-ventajas-de-usar-eleventy-frente-a-un-cms-tradicional">5. Menciona al menos tres ventajas de usar Eleventy frente a un CMS tradicional.</h3>
+<ul>
+<li><strong>Mayor velocidad:</strong> Los sitios estáticos cargan mucho más rápido.</li>
+<li><strong>Seguridad:</strong> Sin base de datos ni backend que puedan ser atacados.</li>
+<li><strong>Simplicidad en despliegue:</strong> Basta con subir los archivos generados a un servidor estático.</li>
+<li><strong>Menor costo:</strong> Hosting económico o gratuito (Netlify, GitHub Pages).</li>
+</ul>
+<hr>
+<h2 id="nivel-intermedio">🟡 Nivel Intermedio</h2>
+<h3 id="6-como-se-crean-y-usan-collections-en-eleventy-da-un-ejemplo-practico-de-uso">6. ¿Cómo se crean y usan collections en Eleventy? Da un ejemplo práctico de uso.</h3>
+<p>Las <strong>collections</strong> permiten agrupar contenido automáticamente según criterios definidos.</p>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-javascript">// .eleventy.js
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection(&quot;posts&quot;, function (collectionApi) {
+    return collectionApi.getFilteredByGlob(&quot;src/posts/*.md&quot;);
+  });
+};
+</code></pre>
+<p><strong>Uso en plantilla:</strong></p>
+<pre><code class="language-html">&lt;ul&gt;
+  {% for post in collections.posts %}
+  &lt;li&gt;&lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.data.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+<blockquote>
+<p>Esto genera una lista automática con enlaces a cada post.</p>
+</blockquote>
+<hr>
+<h3 id="7-explica-la-diferencia-entre-filtros-filters-y-shortcodes-en-eleventy-y-cuando-usar-cada-uno">7. Explica la diferencia entre filtros (filters) y shortcodes en Eleventy, y cuándo usar cada uno.</h3>
+<ul>
+<li>
+<p><strong>Filtros (Filters):</strong> Transforman datos en plantillas.</p>
+<ul>
+<li>Ejemplo: convertir texto a mayúsculas.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">eleventyConfig.addFilter(&quot;upper&quot;, (str) =&gt; str.toUpperCase());
+</code></pre>
+<pre><code class="language-html">{{ &quot;hola mundo&quot; | upper }}
+&lt;!-- Resultado: HOLA MUNDO --&gt;
+</code></pre>
+<ul>
+<li>
+<p><strong>Shortcodes:</strong> Insertan bloques de contenido dinámico.</p>
+<ul>
+<li>Ejemplo: generar una tarjeta de usuario.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-javascript">eleventyConfig.addShortcode(&quot;userCard&quot;, function (name, role) {
+  return `&lt;div class=&quot;card&quot;&gt;&lt;h2&gt;${name}&lt;/h2&gt;&lt;p&gt;${role}&lt;/p&gt;&lt;/div&gt;`;
+});
+</code></pre>
+<pre><code class="language-html">{% userCard &quot;Fernando&quot;, &quot;Desarrollador&quot; %}
+</code></pre>
+<blockquote>
+<p><strong>Regla general:</strong><br>
+Usa <strong>filters</strong> para modificar datos y <strong>shortcodes</strong> para generar bloques HTML.</p>
+</blockquote>
+<hr>
+<h3 id="8-describe-como-se-integran-datos-de-archivos-json-o-yaml-en-eleventy">8. Describe cómo se integran datos de archivos JSON o YAML en Eleventy.</h3>
+<ul>
+<li>Eleventy detecta automáticamente archivos <code>.json</code> o <code>.yaml</code> en la carpeta <code>_data/</code>.</li>
+<li>Estos datos se convierten en variables disponibles en las plantillas.</li>
+</ul>
+<p><strong>Ejemplo con JSON:</strong></p>
+<pre><code class="language-json">// src/_data/team.json
+[
+  { &quot;name&quot;: &quot;Ana&quot;, &quot;role&quot;: &quot;Diseñadora&quot; },
+  { &quot;name&quot;: &quot;Luis&quot;, &quot;role&quot;: &quot;Desarrollador&quot; }
+]
+</code></pre>
+<p><strong>Uso en plantilla:</strong></p>
+<pre><code class="language-html">&lt;ul&gt;
+  {% for member in team %}
+  &lt;li&gt;{{ member.name }} - {{ member.role }}&lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</code></pre>
+<hr>
+<h3 id="9-que-es-el-archivo-eleventy-js-y-que-tipo-de-configuraciones-se-pueden-definir-alli">9. ¿Qué es el archivo <code>.eleventy.js</code> y qué tipo de configuraciones se pueden definir allí?</h3>
+<p>Es el <strong>archivo principal de configuración</strong> de Eleventy.<br>
+Permite personalizar el comportamiento del proyecto, como:</p>
+<ul>
+<li>Directorios de entrada y salida.</li>
+<li>Filtros y shortcodes personalizados.</li>
+<li>Configuración de plugins.</li>
+<li>Collections.</li>
+<li>Copia de archivos estáticos.</li>
+<li>Archivos o carpetas a ignorar.</li>
+</ul>
+<p><strong>Ejemplo básico:</strong></p>
+<pre><code class="language-javascript">module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy(&quot;src/assets&quot;);
+  return {
+    dir: {
+      input: &quot;src&quot;,
+      output: &quot;_site&quot;,
+    },
+  };
+};
+</code></pre>
+<hr>
+<h3 id="10-menciona-buenas-practicas-para-organizar-archivos-y-carpetas-en-un-proyecto-eleventy-de-mediana-escala">10. Menciona buenas prácticas para organizar archivos y carpetas en un proyecto Eleventy de mediana escala.</h3>
+<ul>
+<li><strong>Separar contenido de plantillas:</strong><br>
+<code>posts/</code> para contenido y <code>_includes/</code> para layouts.</li>
+<li><strong>Usar <code>_data/</code></strong> para datos globales y centralizados.</li>
+<li><strong>Crear subcarpetas temáticas</strong> si el sitio tiene muchas secciones.</li>
+<li><strong>Nombrar archivos de forma clara y consistente.</strong></li>
+<li><strong>Utilizar layouts reutilizables</strong> para no repetir código.</li>
+<li><strong>Versionar con Git</strong> desde el inicio.</li>
+<li><strong>Optimizar recursos estáticos</strong> como imágenes y fuentes.</li>
+</ul>
+<hr>
+<h2 id="nivel-avanzado">🔴 Nivel Avanzado</h2>
+<h3 id="11-explica-como-implementar-paginacion-en-eleventy-y-proporciona-un-ejemplo-de-estructura-de-archivos-necesaria">11. Explica cómo implementar paginación en Eleventy y proporciona un ejemplo de estructura de archivos necesaria.</h3>
+<p>La <strong>paginación</strong> divide contenido grande en varias páginas.</p>
+<p><strong>Estructura:</strong></p>
+<pre><code>src/
+└── posts/
+    ├── post1.md
+    ├── post2.md
+    └── post3.md
+└── blog/
+    └── index.njk
+</code></pre>
+<p><strong>Ejemplo en <code>index.njk</code>:</strong></p>
+<pre><code class="language-markdown">---
+pagination:
+  data: collections.posts
+  size: 5
+  alias: paginatedPosts
+layout: layout.njk
+---
+
+&lt;ul&gt;
+  {% for post in paginatedPosts %}
+    &lt;li&gt;&lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.data.title }}&lt;/a&gt;&lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+
+&lt;nav&gt;
+  {% if pagination.href.previous %}
+    &lt;a href=&quot;{{ pagination.href.previous }}&quot;&gt;Anterior&lt;/a&gt;
+  {% endif %}
+  {% if pagination.href.next %}
+    &lt;a href=&quot;{{ pagination.href.next }}&quot;&gt;Siguiente&lt;/a&gt;
+  {% endif %}
+&lt;/nav&gt;
+</code></pre>
+<hr>
+<h3 id="12-como-manejar-multiples-layouts-y-plantillas-condicionales-segun-la-categoria-de-una-pagina">12. ¿Cómo manejar múltiples layouts y plantillas condicionales según la categoría de una página?</h3>
+<ul>
+<li>Crear un layout por categoría.</li>
+<li>Usar front matter para asignar el layout dinámicamente.</li>
+</ul>
+<p><strong>Ejemplo:</strong></p>
+<pre><code class="language-markdown">---
+title: Post de diseño
+layout: layouts/design.njk
+category: design
+---
+</code></pre>
+<p>O manejarlo en una plantilla con condicionales:</p>
+<pre><code class="language-html">{% if category == &quot;design&quot; %} {% include &quot;layouts/design.njk&quot; %} {% else %} {%
+include &quot;layouts/default.njk&quot; %} {% endif %}
+</code></pre>
+<hr>
+<h3 id="13-describe-un-caso-real-donde-eleventy-se-combine-con-una-api-externa-para-generar-contenido-dinamico-en-un-sitio-estatico">13. Describe un caso real donde Eleventy se combine con una API externa para generar contenido dinámico en un sitio estático.</h3>
+<ul>
+<li><strong>Caso:</strong> Crear un blog que muestra precios de criptomonedas en tiempo real.</li>
+<li><strong>Proceso:</strong>
+<ol>
+<li>Hacer una petición a la API desde un archivo en <code>_data/</code> usando Node.js.</li>
+<li>Generar páginas estáticas con los datos obtenidos.</li>
+<li>Regenerar el sitio en cada build para actualizar la información.</li>
+</ol>
+</li>
+</ul>
+<p><strong>Ejemplo en <code>_data/crypto.js</code>:</strong></p>
+<pre><code>const fetch = require( &quot; node-fetch &quot; );
+
+module.exports = async function () {
+  const response = await fetch(&quot;https://api.coincap.io/v2/assets&quot;);
+  const data = await response.json();
+  return data.data.slice(0, 5); // Top 5 criptomonedas
+};
+</code></pre>
+<hr>
+<h3 id="14-explica-como-crear-y-usar-un-plugin-personalizado-en-eleventy">14. Explica cómo crear y usar un plugin personalizado en Eleventy.</h3>
+<p><strong>1. Crear el plugin:</strong></p>
+<pre><code class="language-javascript">// plugins/saludo.js
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addShortcode(&quot;saludo&quot;, function (nombre) {
+    return `&lt;p&gt;Hola, ${nombre}!&lt;/p&gt;`;
+  });
+};
+</code></pre>
+<p><strong>2. Importarlo en <code>.eleventy.js</code>:</strong></p>
+<pre><code class="language-javascript">const saludo = require(&quot;./plugins/saludo&quot;);
+
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(saludo);
+};
+</code></pre>
+<p><strong>3. Usarlo en plantilla:</strong></p>
+<pre><code class="language-html">{% saludo &quot;Fernando&quot; %&quot;}
+</code></pre>
+<hr>
+<h3 id="15-que-tecnicas-recomiendas-para-optimizar-el-rendimiento-de-un-sitio-generado-con-eleventy">15. ¿Qué técnicas recomiendas para optimizar el rendimiento de un sitio generado con Eleventy?</h3>
+<ul>
+<li>
+<p><strong>Optimización en build:</strong></p>
+<ul>
+<li>Minificar HTML, CSS y JS.</li>
+<li>Optimizar imágenes (usando Imagemin o TinyPNG).</li>
+<li>Habilitar generación incremental cuando sea posible.</li>
+</ul>
+</li>
+<li>
+<p><strong>Optimización en tiempo de carga:</strong></p>
+<ul>
+<li>Usar lazy loading en imágenes.</li>
+<li>Implementar caching con headers adecuados.</li>
+<li>Evitar JavaScript innecesario.</li>
+<li>Usar fuentes locales optimizadas.</li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy eficiente:</strong></p>
+<ul>
+<li>Automatizar despliegue con Netlify o Vercel.</li>
+<li>Configurar CDN para contenido estático.</li>
+<li>Mantener actualizadas las dependencias del proyecto.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>Eleventy es una herramienta poderosa y flexible que permite crear <strong>sitios rápidos, seguros y escalables</strong>, ideal para blogs, portfolios y documentación. Su simplicidad y rendimiento lo hacen destacar frente a frameworks más complejos o CMS tradicionales.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<h1></h1>
+<!-- # Temas 
+
+- [Comandos/Pasos](#comandos-Pasos)
+- [Pasos para comenzar un proyecto](#pasos-para-comenzar-un-proyecto)
+- [Atajos de _package.json_](#atajos-de-package-json)
+- [Instrucciones](#instrucciones)
+
+[🔼 Regresar](#temas) -->
+<!-- # VIEJO
+
+## Comandos/Pasos 
+
+### Trae dependencias
+
+1.  `echo '# Page header' > index.md`: crear un archivos Markdown _"index.md"_
+1.  `npx @11ty/eleventy`: trae las dependencias
+1.  `npx @11ty/eleventy --serve`: servidor
+
+[🔼 Regresar](#temas)
+
+## Pasos para comenzar un proyecto 
+
+1.  `npm init -y`: instala package.json de NodeJs.
+1.  `npm install @11ty/eleventy --save-dev`: dependencias.
+1.  `npx @11ty/eleventy --serve`: crea servidor (como live server).
+1.  `npm run clean`: borrar antes de desplegar/subir a producción.
+
+[🔼 Regresar](#temas)
+
+## Atajos de _package json_ 
+
+```json
+"scripts": {
+    "install": "npm install @11ty/eleventy --save-dev",
+    "start": "npx @11ty/eleventy --serve --port=7777",
+    "clean": "rm -rf docs",
+    "deploy": "npx @11ty/eleventy --pathprefix=/",
+    "deploy-subdomain": "npx @11ty/eleventy --pathprefix=/SUB-DIRECTORY/"
+  },
+```
+
+## Estructura de Carpetas
+
+- 📂 code
+  - 🔻 Carpetas de origen de _@11ty_
+  - 📁 \_data _( poder guardar datos tipo json )_
+  - 📁 \_includes _( Estructura de página )_
+  - 🔻 Carpetas adicionales
+  - 📁 css
+  - 📁 img
+  - 📁 js
+
+Para contenido de páginas uso **Nunjucks/YAML**
+
+Para todos artículos de blog uso **Markdown**
+
+---
+
+## **Subir proyectos a GitHub Pages**
+
+### _Starter Project_ _11ty_ + _GitHub Pages_.
+
+[🔼 Regresar](#temas)
+
+### Instrucciones 
+
+1. Clona este repositorio.
+   ```bash
+   git clone https://github.com/jonmircha/starter-project-eleventy-github-pages.git
+   ```
+1. Instala las dependencias.
+   ```bash
+   npm install
+   ```
+1. Iniciar el ambiente de desarrollo.
+   ```bash
+   npm start
+   ```
+1. Comienza a crear el contenido de tu sitio.
+1. Cuando termines recuerda modificar en el _**package.json**_ el contenido del comando _**deploy-subdomain**_, reemplazando el texto:
+   ```bash
+   --pathprefix=/subdirectory/
+   ```
+   por
+   ```bash
+   --pathprefix=/el-nombre-de-tu-repositorio/
+   ```
+1. Limpia la carpeta docs y ejecuta tu despliegue:
+   ```bash
+   npm run clean
+   npm run deploy-subdomain
+   ```
+1. Crea un repositorio en tu cuenta de _GitHub_.
+1. Vincula tu carpeta con tu repositorio.
+1. Sube el contenido a _GitHub_.
+1. Configura el Servicio de _GitHub Pages_.
+1. Feliz despliegue 🥳 🦡🎈.
+
+[Aquí](https://jonmircha.github.io/starter-project-eleventy-github-pages/) puedes ver la demo de este _starter project_.
+
+También puedes ver mi Curso de _11ty_ en _YouTube_, da clic a la siguiente imagen. 👇🏻
+
+[![Curso Eleventy](code/img/curso-youtube.png)](https://www.youtube.com/watch?v=yCF9l4_E5rI)
+
+---
+
+### 🔻Generador de Sitios Estáticos:
+
+- Sitios web sin contenido dinámico.
+- Eleventy es un generador de sitios estáticos, lo que significa que toma contenido y plantillas y los combina para producir archivos HTML, CSS y JavaScript estáticos que forman un sitio web completo.
+
+### 🔻Plantillas:
+
+- Estructuras para la generación de contenido.
+- Eleventy admite varias opciones de plantillas, incluyendo HTML simple, Markdown, Nunjucks, Liquid, Handlebars y más. Estas plantillas son archivos que contienen código que se utilizará para generar las páginas del sitio.
+
+### 🔻Datos:
+
+- Información utilizada en la construcción del sitio.
+- Eleventy permite la incorporación de datos en las plantillas desde una variedad de fuentes, como archivos JSON, YAML o JavaScript, así como desde APIs externas o bases de datos.
+
+### 🔻Colecciones:
+
+- Agrupaciones de contenido relacionado.
+- Eleventy permite organizar el contenido en colecciones, que son conjuntos de datos relacionados. Por ejemplo, puedes tener una colección para tus publicaciones de blog y otra para tus páginas de proyectos.
+
+### 🔻Configuración:
+
+- Ajustes personalizables del funcionamiento de Eleventy.
+- Eleventy es altamente configurable a través de su archivo de configuración .eleventy.js. Aquí puedes especificar opciones como directorios de entrada y salida, formatos de plantillas admitidos, y más.
+
+### 🔻Comandos de línea de comandos (CLI):
+
+- Interfaz de línea de comandos para Eleventy.
+- Eleventy incluye una interfaz de línea de comandos que te permite ejecutar diferentes tareas, como construir el sitio, servirlo localmente para desarrollo, y más.
+
+### 🔻Extensiones y complementos:
+
+- Adiciones para ampliar la funcionalidad de Eleventy.
+- Eleventy es extensible mediante el uso de complementos y extensiones que pueden agregar funcionalidades adicionales, como soporte para Sass, minificación de archivos, optimización de imágenes, entre otras cosas.
+
+[🔼 Regresar](#temas) -->
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
