@@ -4,28 +4,9 @@ title: Página de Contacto
 description: Meta descripción de la página de contacto
 ---
 
-
-
 <section class="blog c-visible">
 <h1> 💻 Tecnologías y Lenguajes </h1>
   {% for post in collections.lenguajes  %}
-    <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
-      <div class="text">
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.date }}</p>
-      </div>
-      <p>{{ post.data.description }}</p>
-
-    </a>
-  {% endfor %}
-</section>
-
-<section class="blog c-visible">
-<h1> 🛠️ Herramientas de Desarrollo </h1>
-  {% for post in collections.herramientas  %}
     <a href="{{ post.url }}"  >
       <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
           loading="lazy" decoding="async"
@@ -58,6 +39,23 @@ description: Meta descripción de la página de contacto
 </section>
 
 <section class="blog c-visible">
+<h1> 🌐 Backend y Servidores </h1>
+  {% for post in collections.backend  %}
+    <a href="{{ post.url }}"  >
+      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+          loading="lazy" decoding="async"
+          />
+      <div class="text">
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.date }}</p>
+      </div>
+      <p>{{ post.data.description }}</p>
+
+    </a>
+  {% endfor %}
+</section>
+
+<section class="blog c-visible">
 <h1> 🗄️ Bases de Datos </h1>
   {% for post in collections.bases_de_datos  %}
     <a href="{{ post.url }}"  >
@@ -75,8 +73,8 @@ description: Meta descripción de la página de contacto
 </section>
 
 <section class="blog c-visible">
-<h1> 🌐 Backend y Servidores </h1>
-  {% for post in collections.backend  %}
+<h1> 🛠️ Herramientas de Desarrollo </h1>
+  {% for post in collections.herramientas  %}
     <a href="{{ post.url }}"  >
       <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
           loading="lazy" decoding="async"
