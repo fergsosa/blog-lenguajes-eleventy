@@ -75,24 +75,24 @@ Con HTML puedes construir:
 
 ## Resumen rápido.
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Simplicidad y universalidad.
 - Semántica clara para contenido.
 - Compatible con todos los navegadores y dispositivos.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - No maneja lógica por sí mismo.
 - Necesita CSS y JS para diseño e interactividad.
 - Limitado fuera del contexto web.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Para estructurar contenido web.
 - Como base de sitios estáticos o dinámicos.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Si buscas construir **solo con HTML** una aplicación compleja.
 - Si necesitas lógica avanzada sin otros lenguajes.

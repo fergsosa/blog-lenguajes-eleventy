@@ -108,25 +108,25 @@ Para escribir buen código en MySQL y mantener una base de datos escalable y seg
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Rápido, estable y ampliamente soportado.
 - Ideal para datos estructurados y relaciones complejas.
 - Gran comunidad y abundante documentación.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Menos flexible que bases NoSQL como MongoDB.
 - No tan avanzado como PostgreSQL en consultas complejas.
 - Puede requerir optimización manual en proyectos grandes.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Sitios web dinámicos.
 - Aplicaciones empresariales con datos consistentes.
 - Sistemas que requieran integridad referencial.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Proyectos con datos no estructurados.
 - Aplicaciones muy pequeñas o locales (SQLite es más simple).
@@ -136,7 +136,7 @@ Para escribir buen código en MySQL y mantener una base de datos escalable y seg
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#mysql)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

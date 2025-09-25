@@ -112,24 +112,24 @@ Para mantener un flujo de trabajo eficiente y limpio, sigue estas prácticas:
 
 ### Resumen final
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Distribuido, rápido y seguro.
 - Excelente manejo de ramas.
 - Gran comunidad y herramientas compatibles.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Curva de aprendizaje inicial.
 - Posibles conflictos al fusionar cambios.
 - Puede ser complejo para proyectos extremadamente simples.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Proyectos colaborativos, open source o con despliegues continuos.
 - Necesidad de control detallado del historial de cambios.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Proyectos muy pequeños o temporales.
 - Situaciones donde la complejidad de Git no justifica su uso.

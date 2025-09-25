@@ -5,7 +5,6 @@ description: Meta descripción de la página de contacto
 ---
 
 
-<h1> -- </h1>
 
 <section class="blog c-visible">
 <h1> 💻 Tecnologías y Lenguajes </h1>
@@ -92,22 +91,6 @@ description: Meta descripción de la página de contacto
   {% endfor %}
 </section>
 
-<section class="blog c-visible">
-<h1>Plantilla</h1>
-  {% for post in collections.plantilla %}
-    <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
-      <div class="text">
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.date }}</p>
-      </div>
-      <p>{{ post.data.description }}</p>
-
-    </a>
-  {% endfor %}
-</section>
 
 {# <h1>Blog</h1>
 <section class="blog c-visible">

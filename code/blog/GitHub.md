@@ -93,26 +93,26 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Gran comunidad y soporte.
 - Integración con herramientas externas y CI/CD.
 - Ideal para proyectos open source.
 - Funciones gratuitas muy completas.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Menor privacidad en la versión gratuita.
 - Dependencia de la nube.
 - Algunas herramientas avanzadas requieren plan pago.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Proyectos colaborativos y de código abierto.
 - Creación de portafolios y muestras de trabajo.
 - Automatización de flujos de desarrollo y despliegue.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Proyectos ultra confidenciales sin conexión a internet.
 - Empresas que prefieren soluciones auto hospedadas.
@@ -122,7 +122,7 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#github)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

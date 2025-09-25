@@ -94,26 +94,26 @@ Eleventy se utiliza principalmente para crear sitios web donde el contenido es e
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Simplicidad y configuración mínima.
 - Soporte para múltiples lenguajes de plantillas.
 - Sitios rápidos y optimizados por defecto.
 - Perfecto para SEO y rendimiento web.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - No maneja contenido dinámico de forma nativa.
 - Menos popularidad comparado con otros frameworks.
 - Requiere conocimiento básico de HTML, CSS y Markdown.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Para blogs, portfolios, landing pages y documentación.
 - Proyectos donde la velocidad y simplicidad son prioridad.
 - Sitios estáticos con contenido frecuente.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Aplicaciones con datos en tiempo real.
 - Proyectos con lógica compleja de backend.

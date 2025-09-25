@@ -77,26 +77,26 @@ TypeScript es especialmente útil en situaciones donde:
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Tipado estático que reduce errores.
 - Excelente integración con editores como VSCode.
 - Compatible con librerías y frameworks populares.
 - Escalable para proyectos grandes y equipos.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Requiere un proceso de compilación.
 - Curva de aprendizaje inicial.
 - Puede ser excesivo para proyectos pequeños.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Aplicaciones web o backend a gran escala.
 - Proyectos con múltiples desarrolladores.
 - Librerías y SDKs que otros usarán.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Prototipos rápidos o pruebas pequeñas.
 - Scripts sencillos donde el tipado no aporta valor.

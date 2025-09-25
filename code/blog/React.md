@@ -95,26 +95,26 @@ src/
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Virtual DOM para alto rendimiento.
 - Ecosistema robusto y en constante evolución.
 - Gran comunidad y documentación.
 - Flexibilidad para integrarse con otras librerías.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Curva de aprendizaje inicial moderada.
 - No incluye herramientas integradas para todo (estado global, rutas, etc.).
 - Configuración inicial más compleja que frameworks todo-en-uno.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Aplicaciones interactivas y dinámicas.
 - Proyectos que requieren escalabilidad.
 - Sistemas con componentes reutilizables.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Páginas estáticas simples.
 - Proyectos con recursos limitados donde la complejidad de React no es necesaria.
@@ -124,7 +124,7 @@ src/
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#react)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

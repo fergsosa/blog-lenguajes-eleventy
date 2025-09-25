@@ -102,26 +102,26 @@ Para trabajar eficientemente con MongoDB, sigue estas recomendaciones:
 
 > Síntesis rápida de lo aprendido sobre MongoDB.
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Flexibilidad en el esquema de datos.
 - Escalabilidad horizontal eficiente.
 - Alto rendimiento con datos no estructurados.
 - Integración natural con aplicaciones modernas (JSON).
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - No es ideal para relaciones complejas.
 - Puede consumir más espacio en disco que SQL.
 - Requiere diseño cuidadoso para evitar consultas ineficientes.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Proyectos que necesitan crecer rápido.
 - Datos que cambian con frecuencia.
 - Aplicaciones web/móviles con estructuras dinámicas.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Sistemas financieros o con **alta integridad transaccional**.
 - Proyectos con **relaciones complejas** y normalización estricta.
@@ -131,7 +131,7 @@ Para trabajar eficientemente con MongoDB, sigue estas recomendaciones:
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#mongodb)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

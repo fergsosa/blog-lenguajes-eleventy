@@ -97,27 +97,27 @@ cp archivo.txt respaldo/ && echo "Copia exitosa"
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Ligero y rápido, sin depender de interfaces gráficas.
 - Integración directa con el sistema operativo.
 - Potente para automatización y scripting.
 - Compatible con la mayoría de sistemas Unix/Linux y Windows (WSL).
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Curva de aprendizaje inicial moderada.
 - Sintaxis menos amigable comparada con otros lenguajes.
 - Limitado para proyectos con lógica compleja o estructuras avanzadas.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Tareas repetitivas y automatización.
 - Administración de servidores y entornos de desarrollo.
 - Procesamiento rápido de texto y archivos.
 - Integración con herramientas como Git, Docker o Node.js.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Aplicaciones con interfaces gráficas.
 - Sistemas que requieren cálculos complejos o programación orientada a objetos.
@@ -127,7 +127,7 @@ cp archivo.txt respaldo/ && echo "Copia exitosa"
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#terminal-bash)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

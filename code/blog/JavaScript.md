@@ -97,27 +97,27 @@ JavaScript es la mejor elección en los siguientes escenarios:
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Versatilidad: frontend, backend, móvil y escritorio.
 - Amplio ecosistema y comunidad activa.
 - Integración nativa con HTML y CSS.
 - Gran cantidad de librerías y frameworks maduros.
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Menor rendimiento frente a lenguajes compilados como C++ o Rust.
 - Código propenso a errores si no se sigue una buena estructura.
 - Fragmentación en frameworks y herramientas.
 - Dificultad en proyectos muy grandes sin buenas prácticas.
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Desarrollo web y aplicaciones interactivas.
 - Prototipos rápidos y MVPs.
 - Proyectos donde se busca rapidez y flexibilidad.
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Aplicaciones que requieren cálculos complejos y alto rendimiento.
 - Sistemas embebidos o de bajo nivel.

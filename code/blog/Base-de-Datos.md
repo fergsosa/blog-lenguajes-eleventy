@@ -1,7 +1,7 @@
 ---
 layout: layout-post.njk
 title: Base de Datos
-img: /img/portada/db.avif
+img: /img/portada/base_de_datos.avif
 description: Almacén datos, consulta eficiente.
 tags: ["blog", "bases_de_datos"]
 date: "2024-08-01"
@@ -116,7 +116,7 @@ Para trabajar con bases de datos de forma eficiente y segura, se recomienda segu
 
 ## Resumen rápido
 
-### ✅ Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Manejo eficiente de grandes volúmenes de datos.
 - Integridad y consistencia garantizadas.
@@ -124,21 +124,21 @@ Para trabajar con bases de datos de forma eficiente y segura, se recomienda segu
 - Herramientas para respaldo y recuperación de información.
 - Escalabilidad a medida que la aplicación crece.
 
-### ⚠️ Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Puede ser complejo de configurar y mantener.
 - Requiere **planificación inicial sólida** para evitar problemas futuros.
 - Consumo de recursos en servidores de alto tráfico.
 - Necesita conocimientos técnicos para optimización avanzada.
 
-### 🛠️ Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - Cuando los datos deben **persistir a largo plazo**.
 - Si se necesita **multiusuario** con acceso simultáneo.
 - Cuando la **seguridad y consistencia** son una prioridad.
 - En aplicaciones que crecerán en volumen y complejidad.
 
-### 🚫 Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Para **prototipos simples** que no requieren persistencia.
 - Cuando se manejan **datos estáticos** que no cambian con frecuencia.
@@ -148,7 +148,7 @@ Para trabajar con bases de datos de forma eficiente y segura, se recomienda segu
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#base-de-datos)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
