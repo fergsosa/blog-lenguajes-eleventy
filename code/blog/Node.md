@@ -125,13 +125,13 @@ Con Node.js se pueden crear distintos tipos de aplicaciones, por ejemplo:
 
 # Temas {#temas#}
 
-- [inicio](#node-js)
+- [inicio](#que-es-node-js)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

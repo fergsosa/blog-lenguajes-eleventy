@@ -15,7 +15,7 @@ React es una de las bibliotecas más populares para construir interfaces de usua
 
 ---
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 React es una **biblioteca de JavaScript** enfocada exclusivamente en la **capa de la vista (UI)** de una aplicación.  
 A diferencia de frameworks completos como Angular o Vue, React **no impone una estructura estricta**, permitiendo mayor flexibilidad para integrar librerías externas según las necesidades del proyecto.
@@ -124,13 +124,13 @@ src/
 
 # Temas {#temas#}
 
-- [inicio](#react)
+- [inicio](#que-es-react)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

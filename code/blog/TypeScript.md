@@ -11,7 +11,7 @@ date: "2023-06-02"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 TypeScript es un **superset de JavaScript** desarrollado por **Microsoft** que agrega **tipado estático** y **características avanzadas** al lenguaje.  
 Esto significa que todo código JavaScript válido también es válido en TypeScript, pero con la ventaja de **detectar errores antes de ejecutar el programa** gracias a su sistema de tipos.
@@ -105,13 +105,13 @@ TypeScript es especialmente útil en situaciones donde:
 
 # Temas {#temas#}
 
-- [inicio](#typescript)
+- [inicio](#que-es-typescript)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

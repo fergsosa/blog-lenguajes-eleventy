@@ -21,22 +21,28 @@
 
 aside {
   max-width: 800px;
-  max-width: var(--max-width-blog);
   padding-bottom: 1rem;
   margin: 0 auto;
+  text-align: center;
 
-  text-align: right;
-  ul {
-    li {
+  .otros-articulos {
+    display: flex;
+    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
+    ul {
       text-align: right;
-      list-style-type: none;
-      &::after {
-        content: "«";
-        margin-right: 5px;
-        color: #18f;
-      }
-      a:hover {
-        color: #18f;
+      li {
+        list-style-type: none;
+        &::after {
+          content: "«";
+          margin-right: 5px;
+          color: #18f;
+        }
+
+        a:hover {
+          color: #18f;
+        }
       }
     }
   }
@@ -79,6 +85,16 @@ table {
   }
 }
 
+h1:first-of-type {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 1;
+  width: 100%;
+  max-width: calc(850px - 4rem);
+  margin: 0;
+  text-align: center;
+}
+
 /* ********** Site Styles ********** */
 
 body {
@@ -98,6 +114,7 @@ main {
   margin: 0 auto;
   background-color: var(--bg-dark);
   /* content-visibility: auto; */
+  /* position: relative; */
 }
 
 h3 {

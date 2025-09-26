@@ -14,7 +14,7 @@ Express.js es uno de los frameworks más populares para construir aplicaciones w
 
 ---
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 **Express.js** es un _framework minimalista_ para Node.js que proporciona herramientas para gestionar el enrutamiento, solicitudes HTTP, middleware y la creación de APIs.
 
@@ -130,13 +130,13 @@ Para escribir buen código en Express, considera lo siguiente:
 
 # Temas {#temas#}
 
-- [inicio](#express)
+- [inicio](#que-es-express)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

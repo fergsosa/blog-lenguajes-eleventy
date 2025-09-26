@@ -101,12 +101,12 @@ Con HTML puedes construir:
 
 # Temas {#temas#}
 
-- [inicio](#html)
+- [inicio](#que-es-html)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Conceptos Claves](#conceptos-claves)
 - [Comandos](#comandos)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

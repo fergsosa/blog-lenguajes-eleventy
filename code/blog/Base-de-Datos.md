@@ -11,7 +11,7 @@ date: "2024-08-01"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 Una **base de datos** es un sistema que **almacena información de manera estructurada** para que pueda ser consultada, actualizada y administrada fácilmente.  
 Su objetivo principal es **centralizar datos** y permitir que múltiples usuarios o sistemas accedan a ellos de forma **segura y coherente**.
@@ -148,13 +148,13 @@ Para trabajar con bases de datos de forma eficiente y segura, se recomienda segu
 
 # Temas {#temas#}
 
-- [inicio](#base-de-datos)
+- [inicio](#que-es-base-de-datos)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

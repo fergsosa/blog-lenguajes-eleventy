@@ -15,17 +15,60 @@
     </main>
     <hr>
     <aside>
-      <h2>Categorías</h2>
-      <h3>Otros artículos</h3>
-      <ul>
-        {% for article in collections.lenguajes %}
-          <li>
-            <a href="{{ article.url }}">
-              {{ article.data.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      <h2>OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4> 💻 Lenguajes </h4>
+          {% for article in collections.lenguajes %}
+            <li>
+              <a href="{{ article.url }}">
+                {{ article.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          <h4> ⚛️ Frameworks  </h4>
+          {% for article in collections.frameworks %}
+            <li>
+              <a href="{{ article.url }}">
+                {{ article.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          <h4> 🌐 Backend  </h4>
+          {% for article in collections.backend %}
+            <li>
+              <a href="{{ article.url }}">
+                {{ article.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          <h4> 🗄️ Bases de Datos </h4>
+          {% for article in collections.bases_de_datos %}
+            <li>
+              <a href="{{ article.url }}">
+                {{ article.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <ul>
+          <h4> 🛠️ Herramientas  </h4>
+          {% for article in collections.herramientas %}
+            <li>
+              <a href="{{ article.url }}">
+                {{ article.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
     </aside>
     {% include "footer.njk" %}
     <script src="/js/main.js" type="module"></script>

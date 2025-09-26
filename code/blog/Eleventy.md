@@ -15,7 +15,7 @@ Eleventy, conocido también como **11ty**, es un generador de sitios estáticos 
 
 ---
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 Eleventy es una herramienta que convierte archivos de contenido como **Markdown**, **HTML**, **Nunjucks**, **Liquid**, entre otros, en un sitio web estático listo para desplegar.
 
@@ -123,13 +123,13 @@ Eleventy se utiliza principalmente para crear sitios web donde el contenido es e
 
 # Temas {#temas#}
 
-- [inicio](#eleventy)
+- [inicio](#que-es-eleventy)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

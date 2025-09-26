@@ -138,12 +138,12 @@ Para mantener un flujo de trabajo eficiente y limpio, sigue estas prácticas:
 
 # Temas
 
-- [Inicio](#git)
+- [Inicio](#que-es-git)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

@@ -11,7 +11,7 @@ date: "2023-07-01"
 
 ![{{title}}]({{img}})
 
-## ¿Qué es?
+## ¿Qué es {{title}}?
 
 Markdown es un **lenguaje de marcado ligero** que permite dar formato a texto de manera sencilla y legible.  
 Se basa en una sintaxis muy simple, utilizando caracteres comunes como `#`, `*` o `-`, lo que hace que el texto sea fácil de leer incluso sin ser procesado.
@@ -57,7 +57,7 @@ Algunas ventajas clave de Markdown:
 
 # Temas {#temas#}
 
-- [inicio](#markdown)
+- [inicio](#que-es-markdown)
 - [Sintaxis Básica](#sintaxis-basica)
   - [Énfasis texto](#enfasis-texto)
   - [Encabezado](#encabezado)
@@ -70,7 +70,7 @@ Algunas ventajas clave de Markdown:
   - [Imagines](#imagines)
   - [Tablas](#tablas)
   - [Formulario](#formulario)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

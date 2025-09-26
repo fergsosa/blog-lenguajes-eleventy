@@ -11,7 +11,7 @@ date: "2024-08-02"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 **MySQL** es un RDBMS **open source** que utiliza el **lenguaje SQL (Structured Query Language)** para gestionar y manipular datos.  
 Se destaca por su **velocidad, estabilidad y facilidad de uso**, lo que lo convierte en una opción sólida tanto para proyectos pequeños como para aplicaciones empresariales.
@@ -136,13 +136,13 @@ Para escribir buen código en MySQL y mantener una base de datos escalable y seg
 
 # Temas {#temas#}
 
-- [inicio](#mysql)
+- [inicio](#que-es-mysql)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

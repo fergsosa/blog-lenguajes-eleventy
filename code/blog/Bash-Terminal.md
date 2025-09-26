@@ -11,7 +11,7 @@ date: "2024-05-01"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 **Bash (Bourne Again SHell)** es un **intérprete de comandos** que se ejecuta en una terminal.
 
@@ -127,13 +127,13 @@ cp archivo.txt respaldo/ && echo "Copia exitosa"
 
 # Temas {#temas#}
 
-- [inicio](#terminal-bash)
+- [inicio](#que-es-terminal-bash)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

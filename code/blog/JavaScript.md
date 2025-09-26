@@ -15,7 +15,7 @@ JavaScript es uno de los lenguajes de programación más populares y fundamental
 
 ---
 
-## 1. ¿Qué es JavaScript?
+## ¿Qué es JavaScript?
 
 JavaScript (JS) es un **lenguaje de programación interpretado**, **orientado a objetos** y **basado en eventos**, diseñado inicialmente para dotar de interactividad a las páginas web.
 
@@ -132,13 +132,13 @@ JavaScript es la mejor elección en los siguientes escenarios:
 
 # Temas {#temas#}
 
-- [inicio](#javascript)
+- [inicio](#que-es-javascript)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

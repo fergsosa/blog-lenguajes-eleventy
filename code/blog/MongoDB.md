@@ -11,7 +11,7 @@ date: "2024-09-01"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 MongoDB es un **sistema de gestión de bases de datos NoSQL** que almacena la información en **documentos BSON** (una extensión de JSON).
 
@@ -131,13 +131,13 @@ Para trabajar eficientemente con MongoDB, sigue estas recomendaciones:
 
 # Temas {#temas#}
 
-- [inicio](#mongodb)
+- [inicio](#que-es-mongodb)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 

@@ -11,7 +11,7 @@ date: "2023-07-02"
 
 ![img]({{img}})
 
-## 1. ¿Qué es {{title}}?
+## ¿Qué es {{title}}?
 
 **GitHub** es una plataforma basada en la nube para el control de versiones y la colaboración en proyectos de software.  
 Está construida sobre **Git**, un sistema de control de versiones distribuido, y añade funcionalidades como:
@@ -122,13 +122,13 @@ Con GitHub puedes crear y gestionar prácticamente cualquier tipo de proyecto:
 
 # Temas {#temas#}
 
-- [inicio](#github)
+- [inicio](#que-es-github)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
-- [Otros artículos](#categorias)
+- [Otros artículos](#otros-articulos)
 
 ---
 
