@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express</title>
+    <meta name="description" content="Framework NodeJS, APIs rápidas.">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="express">Express</h1>
+<p><img src="/blog-lenguajes-eleventy/img/portada/express.avif" alt="img">
+Express.js es uno de los frameworks más populares para construir aplicaciones web y APIs en Node.js. Es conocido por su <strong>simplicidad, flexibilidad y rapidez</strong>, lo que lo convierte en una herramienta ideal tanto para desarrolladores principiantes como para proyectos de gran escala.</p>
+<hr>
+<h2 id="1-que-es-express">1. ¿Qué es Express?</h2>
+<p><strong>Express.js</strong> es un <em>framework minimalista</em> para Node.js que proporciona herramientas para gestionar el enrutamiento, solicitudes HTTP, middleware y la creación de APIs.</p>
+<p><strong>Principales diferencias frente a otros frameworks:</strong></p>
+<ul>
+<li>Es <strong>ligero y no impone una estructura fija</strong>, a diferencia de frameworks como <em>Django</em> (Python) o <em>Laravel</em> (PHP).</li>
+<li>Permite una <strong>gran personalización</strong>, ideal para proyectos donde se requiere control detallado.</li>
+<li>Tiene una <strong>curva de aprendizaje baja</strong> debido a su sintaxis simple.</li>
+<li>Una comunidad <strong>amplia y activa</strong>, con gran cantidad de paquetes compatibles.</li>
+</ul>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>Express se utiliza principalmente para desarrollar aplicaciones que requieren un <strong>backend basado en JavaScript</strong>.<br>
+Algunos contextos donde se aplica mejor:</p>
+<ul>
+<li><strong>APIs REST</strong> para aplicaciones web o móviles.</li>
+<li><strong>Servidores web</strong> que manejan peticiones y respuestas.</li>
+<li><strong>Aplicaciones en tiempo real</strong> en conjunto con tecnologías como <em>Socket.IO</em>.</li>
+<li><strong>Microservicios</strong> debido a su modularidad y bajo peso.</li>
+<li>Prototipos rápidos gracias a su facilidad de configuración.</li>
+</ul>
+<h3 id="3-que-puedo-construir-con-express">3. ¿Qué puedo construir con Express?</h3>
+<p>Con Express puedes desarrollar una amplia variedad de soluciones, como:</p>
+<ul>
+<li>🌐 <strong>Sitios web dinámicos</strong> con manejo de rutas y plantillas.</li>
+<li>📱 <strong>APIs RESTful</strong> para comunicación entre frontend y backend.</li>
+<li>💾 <strong>Sistemas de autenticación</strong> y manejo de usuarios.</li>
+<li>📤 <strong>Servicios de subida y descarga de archivos</strong>.</li>
+<li>🔌 <strong>Integraciones con bases de datos</strong> como MongoDB, MySQL o PostgreSQL.</li>
+<li>⚡ <strong>Aplicaciones en tiempo real</strong> como chats o notificaciones en vivo.</li>
+</ul>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<h4 id="es-recomendable-usar-express-cuando">Es recomendable usar Express cuando:</h4>
+<ul>
+<li>Buscas <strong>flexibilidad y control total</strong> sobre la arquitectura.</li>
+<li>Necesitas <strong>desarrollar rápido</strong> sin la sobrecarga de frameworks grandes.</li>
+<li>Quieres trabajar en proyectos que <strong>escalen gradualmente</strong>.</li>
+<li>Tu equipo ya está familiarizado con <strong>JavaScript y Node.js</strong>.</li>
+<li>Deseas integrar <strong>tecnologías modernas</strong> como React, Angular o Vue en el frontend.</li>
+</ul>
+<h4 id="no-es-la-mejor-opcion-cuando">No es la mejor opción cuando:</h4>
+<ul>
+<li>Necesitas un framework <strong>opinado y con estructura predefinida</strong> (como NestJS o Django).</li>
+<li>El proyecto es extremadamente grande y requiere muchas <strong>reglas y convenciones claras</strong>.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<p>Para escribir buen código en Express, considera lo siguiente:</p>
+<h4 id="estructura-del-proyecto">Estructura del proyecto</h4>
+<ul>
+<li>Separar el código en <strong>capas</strong>:
+<ul>
+<li><strong>Rutas (Routes):</strong> Definir endpoints.</li>
+<li><strong>Controladores (Controllers):</strong> Lógica de negocio.</li>
+<li><strong>Modelos (Models):</strong> Interacción con la base de datos.</li>
+<li><strong>Utilidades (Utils):</strong> Funciones auxiliares.</li>
+<li><strong>Middleware:</strong> Autenticación, validación, logging, etc.</li>
+</ul>
+</li>
+</ul>
+<h4 id="patrones-recomendados">Patrones recomendados</h4>
+<ul>
+<li><strong>MVC (Modelo-Vista-Controlador):</strong><br>
+Mantiene el código organizado y escalable.</li>
+<li><strong>Uso de middleware reutilizables:</strong><br>
+Para validación, seguridad y manejo de errores.</li>
+<li><strong>Variables de entorno (.env):</strong><br>
+Para configuración sensible.</li>
+<li><strong>Logger:</strong><br>
+Para registrar errores y eventos (ej. <code>morgan</code> o <code>winston</code>).</li>
+<li><strong>Control centralizado de errores:</strong><br>
+Manejar errores con un middleware único.</li>
+</ul>
+<h4 id="otros-consejos">Otros consejos</h4>
+<ul>
+<li>Mantener dependencias actualizadas.</li>
+<li>Documentar la API con herramientas como Swagger o Postman.</li>
+<li>Implementar tests con Jest, Mocha u otra librería.</li>
+<li>Seguir buenas prácticas de seguridad:
+<ul>
+<li>Sanitizar datos de entrada.</li>
+<li>Usar <code>helmet</code> y <code>cors</code> para proteger la API.</li>
+<li>Configurar HTTPS cuando sea necesario.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Ligero y flexible.</li>
+<li>Amplia comunidad y ecosistema de paquetes.</li>
+<li>Rápido para prototipar y escalar.</li>
+<li>Fácil integración con bases de datos y frontend moderno.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Carece de una estructura predefinida, lo que puede generar desorden en proyectos grandes.</li>
+<li>Algunas funcionalidades deben agregarse manualmente mediante middleware.</li>
+<li>No tan seguro por defecto, requiere configuración extra.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Proyectos pequeños o medianos que necesitan escalar con el tiempo.</li>
+<li>Desarrollo rápido de APIs y servidores.</li>
+<li>Cuando se busca flexibilidad y control total sobre la arquitectura.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>Proyectos muy grandes donde se necesita un framework con reglas y convenciones claras.</li>
+<li>Cuando se prefiere un framework más completo y con soporte integrado, como <em>NestJS</em>, <em>Django</em> o <em>Rails</em>.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#express">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#categorias">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de profundizar en Express, es importante tener claros algunos conceptos que suelen estar vinculados a su uso. Estos conceptos forman la base para entender cómo funciona y cómo integrarlo con otras tecnologías.</p>
+<h3 id="node-js">Node.js</h3>
+<ul>
+<li><strong><em>Definición:</em></strong> Entorno de ejecución de JavaScript en el servidor.</li>
+<li>Express está construido sobre Node.js, por lo que conocer cómo funcionan los módulos, el Event Loop y <code>npm</code> es fundamental.</li>
+</ul>
+<h4 id="comando-para-iniciar-un-proyecto-node">Comando para iniciar un proyecto Node:</h4>
+<pre><code class="language-bash">npm init -y
+</code></pre>
+<h3 id="http-y-sus-metodos">HTTP y sus métodos</h3>
+<p>Express se basa en el protocolo <strong>HTTP</strong> para enviar y recibir información.</p>
+<h4 id="metodos-mas-comunes">Métodos más comunes:</h4>
+<table>
+<thead>
+<tr>
+<th>método</th>
+<th>acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Obtener datos.</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>Enviar o crear datos.</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Actualizar datos.</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>Actualizar parcialmente.</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Eliminar datos.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="middleware">Middleware</h3>
+<p>Funciones que se ejecutan <strong>entre la solicitud del cliente y la respuesta del servidor</strong>.<br>
+<strong>Usos comunes</strong>: autenticación, validación de datos, manejo de errores y logs.</p>
+<p><strong><em>Ejemplo básico:</em></strong></p>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  console.log(`Método: ${req.method} - Ruta: ${req.url}`);
+  next();
+});
+</code></pre>
+<h3 id="enrutamiento">Enrutamiento</h3>
+<p>Proceso de definir <strong>endpoints o rutas</strong> que responden a solicitudes específicas.</p>
+<p><strong><em>Ejemplo básico:</em></strong></p>
+<pre><code class="language-javascript">app.get(&quot;/usuarios&quot;, (req, res) =&gt; {
+  res.send(&quot;Lista de usuarios&quot;);
+});
+</code></pre>
+<h3 id="json">JSON</h3>
+<ul>
+<li>Formato estándar para enviar y recibir datos.</li>
+<li>Express permite procesar JSON fácilmente:<pre><code class="language-javascript">app.use(express.json());
+</code></pre>
+</li>
+</ul>
+<h3 id="variables-de-entorno-env">Variables de Entorno (.env)</h3>
+<p>Archivo donde se guardan configuraciones sensibles como credenciales, claves de API y puertos.</p>
+<p><strong><em>Ejemplo en <code>.env</code>:</em></strong></p>
+<pre><code>PORT=3000
+DB_URI=mongodb+srv://usuario:clave@cluster.mongodb.net
+</code></pre>
+<p><strong>Uso en código:</strong></p>
+<pre><code class="language-javascript">import dotenv from &quot;dotenv&quot;;
+dotenv.config();
+console.log(process.env.PORT);
+</code></pre>
+<h3 id="rest-y-restful">REST y RESTful</h3>
+<ul>
+<li><strong>REST:</strong><br>
+Arquitectura para diseñar APIs.</li>
+<li><strong>RESTful:</strong><br>
+Implementación de una API que sigue los principios REST.</li>
+<li><strong><em>Beneficios</em>:</strong><br>
+simplicidad y organización, estándar ampliamente usado.</li>
+</ul>
+<h3 id="bases-de-datos">Bases de datos</h3>
+<p>Express no incluye una base de datos integrada, pero se suele usar con:</p>
+<ul>
+<li><strong>MongoDB</strong><br>
+NoSQL, flexible y escalable.</li>
+<li><strong>MySQL</strong><br>
+SQL, estructurado y ampliamente usado.</li>
+<li><strong>PostgreSQL</strong><br>
+SQL, potente y seguro.</li>
+</ul>
+<h4 id="conexion-basica-con-mongodb-usando-mongoose">Conexión básica con MongoDB usando Mongoose:</h4>
+<pre><code class="language-javascript">import mongoose from &quot;mongoose&quot;;
+
+mongoose
+  .connect(process.env.DB_URI)
+  .then(() =&gt; console.log(&quot;Base de datos conectada&quot;))
+  .catch((err) =&gt; console.error(err));
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Estas herramientas facilitan el desarrollo, pruebas y despliegue de aplicaciones con Express:</p>
+<h3 id="node-js-y-npm">Node.js y npm</h3>
+<ul>
+<li>Node.js es el entorno que ejecuta Express.</li>
+<li>npm gestiona dependencias y librerías.</li>
+</ul>
+<h4 id="comandos-basicos">Comandos básicos:</h4>
+<pre><code class="language-bash">node index.js     # Ejecutar aplicación
+npm install       # Instalar dependencias
+npm run dev       # Correr script en modo desarrollo
+</code></pre>
+<h3 id="nodemon">Nodemon</h3>
+<p>Reinicia automáticamente el servidor cuando detecta cambios.</p>
+<pre><code class="language-bash">npm install nodemon --save-dev    # Instalación:
+npx nodemon index.js              # Uso:
+</code></pre>
+<h3 id="postman-o-insomnia">Postman o Insomnia</h3>
+<ul>
+<li>Herramientas para <strong>probar APIs</strong> de manera visual.</li>
+<li>Permiten enviar solicitudes HTTP, probar rutas y gestionar colecciones.</li>
+</ul>
+<h3 id="dotenv">dotenv</h3>
+<p>Manejo de <strong>variables de entorno</strong>.</p>
+<pre><code class="language-bash">npm install dotenv     #Instalación
+</code></pre>
+<h3 id="morgan">Morgan</h3>
+<p>Middleware para registrar información sobre solicitudes.</p>
+<pre><code class="language-bash"># Instalación:
+npm install morgan
+
+# Uso:
+import morgan from &quot;morgan&quot;;
+app.use(morgan(&quot;dev&quot;));
+</code></pre>
+<h3 id="helmet">Helmet</h3>
+<p>Mejora la <strong>seguridad</strong> agregando cabeceras HTTP.</p>
+<pre><code class="language-bash"># Instalación:
+npm install helmet
+
+# Uso:
+import helmet from &quot;helmet&quot;;
+app.use(helmet());
+</code></pre>
+<h3 id="cors">Cors</h3>
+<p>Controla quién puede acceder a la API desde otros dominios.</p>
+<pre><code class="language-bash"># Instalación:
+npm install cors
+
+# Uso:
+import cors from &quot;cors&quot;;
+app.use(cors());
+</code></pre>
+<h3 id="swagger-documentacion-de-apis">Swagger (Documentación de APIs)</h3>
+<ul>
+<li>Herramienta para <strong>documentar y visualizar APIs</strong>.</li>
+<li>Facilita pruebas y entendimiento de endpoints.</li>
+</ul>
+<h3 id="git-y-github">Git y GitHub</h3>
+<ul>
+<li>Control de versiones y colaboración.</li>
+</ul>
+<h4 id="comandos-basicos-2">Comandos básicos:</h4>
+<pre><code class="language-bash">git init
+git add .
+git commit -m &quot;Primer commit&quot;
+git push origin main
+</code></pre>
+<h3 id="vercel-render-railway">Vercel / Render / Railway</h3>
+<ul>
+<li>Plataformas para <strong>desplegar aplicaciones Express</strong> en la nube.</li>
+<li>Beneficios: fácil integración con GitHub, escalabilidad automática y configuración mínima.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<h3 id="servidor-basico">Servidor básico:</h3>
+<pre><code class="language-javascript">import express from &quot;express&quot;;
+const app = express();
+app.get(&quot;/&quot;, (req, res) =&gt; res.send(&quot;¡Hola!&quot;));
+app.listen(3000, () =&gt; console.log(&quot;Servidor corriendo&quot;));
+</code></pre>
+<h3 id="middleware-de-json">Middleware de JSON:</h3>
+<pre><code class="language-javascript">app.use(express.json());
+</code></pre>
+<h3 id="middleware-personalizado">Middleware personalizado:</h3>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  console.log(`${req.method} ${req.url}`);
+  next();
+});
+</code></pre>
+<h3 id="ruta-get-con-parametro">Ruta GET con parámetro:</h3>
+<pre><code class="language-javascript">app.get(&quot;/usuario/:id&quot;, (req, res) =&gt; {
+  res.send(`Usuario ${req.params.id}`);
+});
+</code></pre>
+<h3 id="ruta-post-para-recibir-datos">Ruta POST para recibir datos:</h3>
+<pre><code class="language-javascript">app.post(&quot;/usuario&quot;, (req, res) =&gt; {
+  res.json({ recibido: req.body });
+});
+</code></pre>
+<h3 id="error-handler-middleware">Error handler middleware:</h3>
+<pre><code class="language-javascript">app.use((err, req, res, next) =&gt; {
+  console.error(err.stack);
+  res.status(500).send(&quot;Ocurrió un error&quot;);
+});
+</code></pre>
+<h3 id="uso-de-cors">Uso de CORS:</h3>
+<pre><code class="language-javascript">import cors from &quot;cors&quot;;
+app.use(cors());
+</code></pre>
+<h3 id="logger-con-morgan">Logger con Morgan:</h3>
+<pre><code class="language-javascript">import morgan from &quot;morgan&quot;;
+app.use(morgan(&quot;dev&quot;));
+</code></pre>
+<h3 id="variables-de-entorno">Variables de entorno:</h3>
+<pre><code class="language-javascript">import dotenv from &quot;dotenv&quot;;
+dotenv.config();
+console.log(process.env.PORT);
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="instalar-express">Instalar Express:</h3>
+<pre><code class="language-bash">npm install express
+</code></pre>
+<h3 id="ejecutar-servidor-node">Ejecutar servidor Node:</h3>
+<pre><code class="language-bash">node index.js
+</code></pre>
+<h3 id="ejecutar-con-nodemon-reinicio-automatico">Ejecutar con nodemon (reinicio automático):</h3>
+<pre><code class="language-bash">npx nodemon index.js
+</code></pre>
+<h3 id="agregar-middleware-json">Agregar middleware JSON:</h3>
+<pre><code class="language-javascript">app.use(express.json());
+</code></pre>
+<h3 id="definir-rutas-basicas">Definir rutas básicas:</h3>
+<pre><code class="language-javascript">app.get(&quot;/ruta&quot;, (req, res) =&gt; res.send(&quot;GET&quot;));
+app.post(&quot;/ruta&quot;, (req, res) =&gt; res.send(&quot;POST&quot;));
+app.put(&quot;/ruta&quot;, (req, res) =&gt; res.send(&quot;PUT&quot;));
+app.delete(&quot;/ruta&quot;, (req, res) =&gt; res.send(&quot;DELETE&quot;));
+</code></pre>
+<h3 id="obtener-parametros-de-ruta">Obtener parámetros de ruta:</h3>
+<pre><code class="language-javascript">req.params.id;
+</code></pre>
+<h3 id="obtener-datos-del-body">Obtener datos del body:</h3>
+<pre><code class="language-javascript">req.body;
+</code></pre>
+<h3 id="enviar-json-como-respuesta">Enviar JSON como respuesta:</h3>
+<pre><code class="language-javascript">res.json({ mensaje: &quot;Hola&quot; });
+</code></pre>
+<h3 id="enviar-estado-http">Enviar estado HTTP:</h3>
+<pre><code class="language-javascript">res.status(404).send(&quot;No encontrado&quot;);
+</code></pre>
+<h3 id="registrar-middleware-personalizado">Registrar middleware personalizado:</h3>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  next();
+});
+</code></pre>
+<h3 id="importar-modulos-esm">Importar módulos (ESM):</h3>
+<pre><code class="language-javascript">import express from &quot;express&quot;;
+</code></pre>
+<h3 id="importar-modulos-commonjs">Importar módulos (CommonJS):</h3>
+<pre><code class="language-javascript">const express = require(&quot;express&quot;);
+</code></pre>
+<h3 id="escuchar-puerto-del-servidor">Escuchar puerto del servidor:</h3>
+<pre><code class="language-javascript">app.listen(3000, () =&gt; console.log(&quot;Servidor corriendo&quot;));
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-express-js-y-en-que-se-diferencia-de-usar-directamente-el-modulo-http-nativo">1. ¿Qué es Express.js y en qué se diferencia de usar directamente el módulo HTTP nativo?</h3>
+<ul>
+<li><strong>Express.js</strong> es un framework minimalista para Node.js que simplifica la creación de aplicaciones web y APIs.</li>
+</ul>
+<h4 id="diferencias-con-http-nativo">Diferencias con <code>http</code> nativo:</h4>
+<ul>
+<li>Express abstrae la creación de rutas, middlewares y respuestas.</li>
+<li>Con <code>http</code> tienes que manejar manualmente cabeceras, parseo de body y rutas.</li>
+<li>Express aporta <strong>middlewares, enrutamiento sencillo y utilidades integradas</strong>.</li>
+</ul>
+<h3 id="2-crear-un-servidor-basico-y-definir-una-ruta">2. Crear un servidor básico y definir una ruta</h3>
+<pre><code class="language-javascript">import express from &quot;express&quot;;
+const app = express();
+
+app.get(&quot;/&quot;, (req, res) =&gt; {
+  res.send(&quot;Hola, mundo!&quot;);
+});
+
+app.listen(3000, () =&gt; console.log(&quot;Servidor en http://localhost:3000&quot;));
+</code></pre>
+<h3 id="3-que-son-los-middlewares">3. ¿Qué son los middlewares?</h3>
+<ul>
+<li><strong>Middlewares</strong> son funciones que tienen acceso al <code>req</code>, <code>res</code> y a <code>next()</code>.</li>
+<li>Se usan para <strong>modificar la request</strong>, <strong>validar datos</strong>, <strong>manejar errores</strong> o <strong>añadir funcionalidades</strong>.</li>
+</ul>
+<blockquote>
+<p><strong><em>Ejemplo típico:</em></strong></p>
+</blockquote>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  console.log(`Petición recibida: ${req.method} ${req.url}`);
+  next();
+});
+</code></pre>
+<h3 id="4-diferencia-entre-app-use-y-app-get">4. Diferencia entre <code>app.use()</code> y <code>app.get()</code></h3>
+<ul>
+<li><strong><code>app.use()</code></strong><br>
+Aplica un middleware para <strong>todas las rutas</strong> o un path específico.</li>
+<li><strong><code>app.get()</code></strong><br>
+Define una ruta específica que responde a <strong>peticiones GET</strong>.</li>
+</ul>
+<h3 id="5-parametros-de-ruta-y-de-consulta">5. Parámetros de ruta y de consulta</h3>
+<h4 id="ruta-con-parametros">Ruta con parámetros</h4>
+<pre><code class="language-javascript">app.get(&quot;/users/:id&quot;, (req, res) =&gt; {
+  res.send(`Usuario ID: ${req.params.id}`);
+});
+</code></pre>
+<h4 id="parametros-de-consulta-name-ana">Parámetros de consulta (?name=Ana)</h4>
+<pre><code class="language-javascript">app.get(&quot;/search&quot;, (req, res) =&gt; {
+  res.send(`Buscando: ${req.query.name}`);
+});
+</code></pre>
+<h3 id="6-proposito-de-express-json-y-express-urlencoded">6. Propósito de <code>express.json()</code> y <code>express.urlencoded()</code></h3>
+<ul>
+<li><strong><code>express.json()</code>:</strong><br>
+Parsear JSON en el body de las requests.</li>
+<li><strong><code>express.urlencoded()</code>:</strong><br>
+Parsear datos de formularios (URL-encoded).</li>
+</ul>
+<h3 id="7-funcion-de-next">7. Función de <code>next()</code></h3>
+<p><strong><code>next()</code></strong> llama al siguiente middleware en la cadena.</p>
+<ul>
+<li><strong>Problema si se olvida:</strong><br>
+La petición queda colgada, sin respuesta.</li>
+</ul>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="8-estructura-de-proyecto-con-express">8. Estructura de proyecto con Express</h3>
+<pre><code class="language-bash">project/
+├── controllers/             # Lógica de negocio.
+│   └── userController.js
+├── routes/                  # Definición de rutas.
+│   └── userRoutes.js
+├── middlewares/             # Validaciones, autenticación.
+│   └── authMiddleware.js
+├── app.js                   # Configuración de Express.
+└── server.js                # Arranque del servidor.
+</code></pre>
+<h3 id="9-middleware-global-vs-a-nivel-de-ruta">9. Middleware global vs. a nivel de ruta</h3>
+<h4 id="global">Global:</h4>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  console.log(&quot;Middleware global&quot;);
+  next();
+});
+</code></pre>
+<h4 id="ruta-especifica">Ruta específica:</h4>
+<pre><code class="language-javascript">app.get(&quot;/admin&quot;, authMiddleware, (req, res) =&gt; {
+  res.send(&quot;Panel de admin&quot;);
+});
+</code></pre>
+<h3 id="10-manejo-de-errores-con-middleware">10. Manejo de errores con middleware</h3>
+<pre><code class="language-javascript">app.use((err, req, res, next) =&gt; {
+  console.error(err.stack);
+  res.status(500).json({ error: &quot;Error interno del servidor&quot; });
+});
+</code></pre>
+<h3 id="11-diferencia-entre-res-send-res-json-y-res-end">11. Diferencia entre <code>res.send()</code>, <code>res.json()</code> y <code>res.end()</code></h3>
+<ul>
+<li><strong><code>res.send()</code>:</strong><br>
+Envía texto, HTML o JSON (auto-detecta).</li>
+<li><strong><code>res.json()</code>:</strong><br>
+Envía respuesta con JSON y cabecera <code>application/json</code>.</li>
+<li><strong><code>res.end()</code>:</strong><br>
+Finaliza la respuesta sin enviar datos adicionales.</li>
+</ul>
+<h3 id="12-carga-de-archivos-con-multer">12. Carga de archivos con Multer</h3>
+<pre><code class="language-javascript">import multer from &quot;multer&quot;;
+const upload = multer({ dest: &quot;uploads/&quot; });
+
+app.post(&quot;/upload&quot;, upload.single(&quot;file&quot;), (req, res) =&gt; {
+  res.send(`Archivo subido: ${req.file.originalname}`);
+});
+</code></pre>
+<h3 id="13-proteger-rutas-con-autenticacion">13. Proteger rutas con autenticación</h3>
+<pre><code class="language-javascript">function authMiddleware(req, res, next) {
+  if (req.headers.authorization === &quot;Bearer token123&quot;) {
+    next();
+  } else {
+    res.status(401).send(&quot;No autorizado&quot;);
+  }
+}
+
+app.get(&quot;/private&quot;, authMiddleware, (req, res) =&gt; {
+  res.send(&quot;Contenido privado&quot;);
+});
+</code></pre>
+<h3 id="14-orden-de-ejecucion-en-express">14. Orden de ejecución en Express</h3>
+<ul>
+<li><strong>Orden de declaración = orden de ejecución</strong>.</li>
+<li>Primero los <strong>middlewares globales</strong>, luego las <strong>rutas específicas</strong>.</li>
+<li>Si no se llama a <code>next()</code>, el flujo se corta.</li>
+</ul>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="15-optimizacion-para-10-000-peticiones-concurrentes">15. Optimización para 10,000 peticiones concurrentes</h3>
+<h4 id="caching">Caching:</h4>
+<ul>
+<li>Cachear respuestas frecuentes con Redis o en memoria.</li>
+<li>Uso de CDN para contenido estático.</li>
+</ul>
+<h4 id="compression">Compression:</h4>
+<pre><code class="language-javascript">import compression from &quot;compression&quot;;
+app.use(compression());
+</code></pre>
+<h4 id="balanceo-de-carga">Balanceo de carga:</h4>
+<ul>
+<li>Usar <strong>PM2 cluster mode</strong> o <strong>Node Cluster API</strong>.</li>
+<li>Balanceadores externos como <strong>NGINX</strong> o <strong>AWS ELB</strong>.</li>
+</ul>
+<h4 id="buenas-practicas-de-arquitectura">Buenas prácticas de arquitectura:</h4>
+<ul>
+<li>Usar <strong>bases de datos optimizadas con índices</strong>.</li>
+<li>Implementar <strong>pool de conexiones</strong>.</li>
+<li><strong>Dividir la app en microservicios</strong> si escala.</li>
+<li>Evitar operaciones bloqueantes, usar <strong>async/await</strong> y <strong>streams</strong>.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="categorias">Categorías</h2>
+      <h3 id="otros-articulos">Otros artículos</h3>
+      <ul>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/HTML/">
+              HTML
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+              JavaScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+              TypeScript
+            </a>
+          </li>
+        
+          <li>
+            <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+              Markdown
+            </a>
+          </li>
+        
+      </ul>
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

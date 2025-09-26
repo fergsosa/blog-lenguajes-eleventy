@@ -87,11 +87,16 @@ JavaScript es la mejor elección en los siguientes escenarios:
 
 #### **Patrones de diseño recomendados:**
 
-- **Módulos:** Para encapsular y organizar el código.
-- **Singleton:** Para recursos globales únicos, como la configuración.
-- **Observer:** Para manejar eventos y estados en interfaces.
-- **Factory:** Para crear objetos complejos de manera consistente.
-- **MVC/MVVM:** Separar la lógica de negocio de la interfaz de usuario.
+- **Módulos:**\
+  Para encapsular y organizar el código.
+- **Singleton:**\
+  Para recursos globales únicos, como la configuración.
+- **Observer:**\
+  Para manejar eventos y estados en interfaces.
+- **Factory:**\
+  Para crear objetos complejos de manera consistente.
+- **MVC/MVVM:**\
+  Separar la lógica de negocio de la interfaz de usuario.
 
 ---
 
