@@ -152,15 +152,16 @@ Antes de comenzar a trabajar con MySQL, es importante familiarizarse con ciertos
 
 ### **1. Base de Datos (Database)**
 
-Un contenedor que organiza y almacena datos relacionados.  
-Ejemplo: una base de datos para un e-commerce podría contener tablas como `usuarios`, `productos` y `pedidos`.
+Un contenedor que organiza y almacena datos relacionados.
+
+> **Ejemplo:** una base de datos para un e-commerce podría contener tablas como `usuarios`, `productos` y `pedidos`.
 
 ### **2. Tabla (Table)**
 
 Estructura que almacena datos en **filas (rows)** y **columnas (columns)**.  
 Cada fila es un registro y cada columna representa un atributo.
 
-> _Ejemplo: una tabla `usuarios` con columnas como `id`, `nombre`, `email`._
+> **Ejemplo:** una tabla `usuarios` con columnas como `id`, `nombre`, `email`.\_
 
 ### **3. Fila (Row) / Registro (Record)**
 
@@ -177,7 +178,7 @@ Representa una entrada individual de datos dentro de una tabla.
 
 Representa un tipo de dato específico en la tabla.
 
-> Ejemplo: la columna `email` en la tabla `usuarios` almacena direcciones de correo.
+> **Ejemplo:** la columna `email` en la tabla `usuarios` almacena direcciones de correo.
 
 ### **5. Llave Primaria (Primary Key)**
 
@@ -190,7 +191,7 @@ Generalmente se llama `id`.
 
 Columna que **establece una relación** con una clave primaria en otra tabla.
 
-> Ejemplo:
+> **Ejemplo:**
 >
 > - Tabla `pedidos` tiene `usuario_id` que se relaciona con `id` de la tabla `usuarios`.
 
@@ -208,14 +209,19 @@ Definen el tipo de valor que se puede almacenar en una columna. Algunos tipos co
 Instrucciones para interactuar con la base de datos.  
 Los principales tipos son:
 
-- **DDL (Data Definition Language):** definir y estructurar datos.  
-  Ejemplo: `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`.
+- **DDL (Data Definition Language):** \
+  definir y estructurar datos.
 
-- **DML (Data Manipulation Language):** manipular datos.  
-  Ejemplo: `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+  > _Ejemplo:_ `CREATE TABLE`, `ALTER TABLE`, `DROP TABLE`.
 
-- **DCL (Data Control Language):** permisos y control de acceso.  
-  Ejemplo: `GRANT`, `REVOKE`.
+- **DML (Data Manipulation Language):** \
+  manipular datos.
+
+  > _Ejemplo:_ `SELECT`, `INSERT`, `UPDATE`, `DELETE`.
+
+- **DCL (Data Control Language):** \
+  permisos y control de acceso.
+  > _Ejemplo:_ `GRANT`, `REVOKE`.
 
 ### **9. Índices (Indexes)**
 
@@ -227,11 +233,16 @@ Estructuras que **mejoran la velocidad de búsqueda** en una tabla, similar a un
 
 Combinan datos de varias tablas basadas en una relación común:
 
-- **INNER JOIN:** devuelve coincidencias exactas.
-- **LEFT JOIN:** devuelve todos los registros de la tabla izquierda y coincidencias de la derecha.
-- **RIGHT JOIN:** inverso del LEFT JOIN.
-- **FULL JOIN:** devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).
-  [🔼 temas](#temas)
+- **INNER JOIN:**\
+  devuelve coincidencias exactas.
+- **LEFT JOIN:**\
+  devuelve todos los registros de la tabla izquierda y coincidencias de la derecha.
+- **RIGHT JOIN:**\
+  inverso del LEFT JOIN.
+- **FULL JOIN:**\
+  devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).
+
+[🔼 temas](#temas)
 
 ---
 
@@ -268,7 +279,7 @@ Para trabajar de forma eficiente con MySQL, estas son las herramientas clave que
 - Herramienta en terminal para ejecutar comandos SQL directamente.
 - Perfecta para administración avanzada y scripts automatizados.
 
-> Ejemplo:
+> **Ejemplo:**
 >
 > ```bash
 > mysql -u root -p
@@ -344,8 +355,8 @@ VALUES ('Ana Pérez', 'ana@email.com');
 ### **4. Consultar Datos**
 
 ```sql
-SELECT * FROM usuarios;           -- Todos los registros
-SELECT nombre, email FROM usuarios; -- Columnas específicas
+SELECT * FROM usuarios;              -- Todos los registros
+SELECT nombre, email FROM usuarios;  -- Columnas específicas
 SELECT * FROM usuarios WHERE id = 1;
 ```
 
@@ -432,18 +443,18 @@ ALTER TABLE tabla ...;    -- Modificar tabla
 DROP TABLE tabla;         -- Eliminar tabla
 
 -- CRUD
-INSERT INTO tabla (...) VALUES (...);   -- Crear
-SELECT * FROM tabla;                    -- Leer
-UPDATE tabla SET columna=valor WHERE id=1; -- Actualizar
-DELETE FROM tabla WHERE id=1;           -- Eliminar
+INSERT INTO tabla (...) VALUES (...);       -- Crear
+SELECT * FROM tabla;                        -- Leer
+UPDATE tabla SET columna=valor WHERE id=1;  -- Actualizar
+DELETE FROM tabla WHERE id=1;               -- Eliminar
 
 -- Relaciones
 FOREIGN KEY (columna) REFERENCES otra_tabla(id);
 
 -- Consultas avanzadas
-SELECT columna FROM tabla WHERE condicion;   -- Filtro
+SELECT columna FROM tabla WHERE condicion;            -- Filtro
 SELECT columna, COUNT(*) FROM tabla GROUP BY columna; -- Agrupar
-SELECT * FROM A INNER JOIN B ON A.id = B.a_id; -- Joins
+SELECT * FROM A INNER JOIN B ON A.id = B.a_id;        -- Joins
 ```
 
 > 💡 _Consejo:_ Usa `LIMIT` para limitar resultados:
@@ -463,24 +474,24 @@ SELECT * FROM A INNER JOIN B ON A.id = B.a_id; -- Joins
 ### 1. Diferencia entre DELETE, TRUNCATE y DROP
 
 - **DELETE:**\
-  Elimina filas específicas de una tabla usando una condición `WHERE`. Mantiene la estructura y permite deshacer la operación si está dentro de una transacción.  
-  _Uso:_ Cuando necesitas borrar datos específicos.
+  Elimina filas específicas de una tabla usando una condición `WHERE`. Mantiene la estructura y permite deshacer la operación si está dentro de una transacción.\
+  **_Uso:_** Cuando necesitas borrar datos específicos.
 
   ```sql
   DELETE FROM usuarios WHERE id = 1;
   ```
 
 - **TRUNCATE:**\
-  Elimina _todos los registros_ de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con `WHERE`.
-  _Uso:_ Cuando quieres limpiar completamente una tabla, pero mantener su estructura.
+  Elimina _todos los registros_ de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con `WHERE`.\
+  **_Uso:_** Cuando quieres limpiar completamente una tabla, pero mantener su estructura.
 
   ```sql
   TRUNCATE TABLE usuarios;
   ```
 
 - **DROP:**\
-  Elimina por completo una tabla, incluyendo su estructura y datos.
-  _Uso:_ Cuando ya no necesitas la tabla ni sus datos.
+  Elimina por completo una tabla, incluyendo su estructura y datos.\
+  **_Uso:_** Cuando ya no necesitas la tabla ni sus datos.
   ```sql
   DROP TABLE usuarios;
   ```
@@ -509,11 +520,11 @@ CREATE TABLE pedidos (
 
 - **CHAR(n):**\
   Guarda cadenas con longitud fija. Completa con espacios si el valor es más corto.  
-  _Uso:_ Ideal para campos con longitud constante (códigos, abreviaturas).
+  **_Uso:_** Ideal para campos con longitud constante (códigos, abreviaturas).
 
 - **VARCHAR(n):**\
   Guarda cadenas con longitud variable. Solo utiliza el espacio necesario.  
-  _Uso:_ Ideal para campos como nombres, correos o direcciones.
+  **_Uso:_** Ideal para campos como nombres, correos o direcciones.
 
 | Tipo        | Tamaño fijo | Tamaño variable |
 | ----------- | ----------- | --------------- |

@@ -161,13 +161,15 @@ en <strong>aplicaciones locales o prototipos</strong>.</li>
 <h1 id="conceptos-relacionados">Conceptos relacionados</h1>
 <p>Antes de comenzar a trabajar con MySQL, es importante familiarizarse con ciertos conceptos fundamentales que facilitarán el diseño y manejo de bases de datos.</p>
 <h3 id="1-base-de-datos-database"><strong>1. Base de Datos (Database)</strong></h3>
-<p>Un contenedor que organiza y almacena datos relacionados.<br>
-Ejemplo: una base de datos para un e-commerce podría contener tablas como <code>usuarios</code>, <code>productos</code> y <code>pedidos</code>.</p>
+<p>Un contenedor que organiza y almacena datos relacionados.</p>
+<blockquote>
+<p><strong>Ejemplo:</strong> una base de datos para un e-commerce podría contener tablas como <code>usuarios</code>, <code>productos</code> y <code>pedidos</code>.</p>
+</blockquote>
 <h3 id="2-tabla-table"><strong>2. Tabla (Table)</strong></h3>
 <p>Estructura que almacena datos en <strong>filas (rows)</strong> y <strong>columnas (columns)</strong>.<br>
 Cada fila es un registro y cada columna representa un atributo.</p>
 <blockquote>
-<p><em>Ejemplo: una tabla <code>usuarios</code> con columnas como <code>id</code>, <code>nombre</code>, <code>email</code>.</em></p>
+<p><strong>Ejemplo:</strong> una tabla <code>usuarios</code> con columnas como <code>id</code>, <code>nombre</code>, <code>email</code>._</p>
 </blockquote>
 <h3 id="3-fila-row-registro-record"><strong>3. Fila (Row) / Registro (Record)</strong></h3>
 <p>Representa una entrada individual de datos dentro de una tabla.</p>
@@ -180,7 +182,7 @@ Cada fila es un registro y cada columna representa un atributo.</p>
 <h3 id="4-columna-column-campo-field"><strong>4. Columna (Column) / Campo (Field)</strong></h3>
 <p>Representa un tipo de dato específico en la tabla.</p>
 <blockquote>
-<p>Ejemplo: la columna <code>email</code> en la tabla <code>usuarios</code> almacena direcciones de correo.</p>
+<p><strong>Ejemplo:</strong> la columna <code>email</code> en la tabla <code>usuarios</code> almacena direcciones de correo.</p>
 </blockquote>
 <h3 id="5-llave-primaria-primary-key"><strong>5. Llave Primaria (Primary Key)</strong></h3>
 <p>Columna o conjunto de columnas que <strong>identifican de forma única</strong> a cada registro en una tabla.<br>
@@ -191,7 +193,7 @@ Generalmente se llama <code>id</code>.</p>
 <h3 id="6-llave-foranea-foreign-key"><strong>6. Llave Foránea (Foreign Key)</strong></h3>
 <p>Columna que <strong>establece una relación</strong> con una clave primaria en otra tabla.</p>
 <blockquote>
-<p>Ejemplo:</p>
+<p><strong>Ejemplo:</strong></p>
 <ul>
 <li>Tabla <code>pedidos</code> tiene <code>usuario_id</code> que se relaciona con <code>id</code> de la tabla <code>usuarios</code>.</li>
 </ul>
@@ -209,16 +211,25 @@ Generalmente se llama <code>id</code>.</p>
 Los principales tipos son:</p>
 <ul>
 <li>
-<p><strong>DDL (Data Definition Language):</strong> definir y estructurar datos.<br>
-Ejemplo: <code>CREATE TABLE</code>, <code>ALTER TABLE</code>, <code>DROP TABLE</code>.</p>
+<p><strong>DDL (Data Definition Language):</strong> <br>
+definir y estructurar datos.</p>
+<blockquote>
+<p><em>Ejemplo:</em> <code>CREATE TABLE</code>, <code>ALTER TABLE</code>, <code>DROP TABLE</code>.</p>
+</blockquote>
 </li>
 <li>
-<p><strong>DML (Data Manipulation Language):</strong> manipular datos.<br>
-Ejemplo: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p>
+<p><strong>DML (Data Manipulation Language):</strong> <br>
+manipular datos.</p>
+<blockquote>
+<p><em>Ejemplo:</em> <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>.</p>
+</blockquote>
 </li>
 <li>
-<p><strong>DCL (Data Control Language):</strong> permisos y control de acceso.<br>
-Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
+<p><strong>DCL (Data Control Language):</strong> <br>
+permisos y control de acceso.</p>
+<blockquote>
+<p><em>Ejemplo:</em> <code>GRANT</code>, <code>REVOKE</code>.</p>
+</blockquote>
 </li>
 </ul>
 <h3 id="9-indices-indexes"><strong>9. Índices (Indexes)</strong></h3>
@@ -229,12 +240,16 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <h3 id="10-joins"><strong>10. Joins</strong></h3>
 <p>Combinan datos de varias tablas basadas en una relación común:</p>
 <ul>
-<li><strong>INNER JOIN:</strong> devuelve coincidencias exactas.</li>
-<li><strong>LEFT JOIN:</strong> devuelve todos los registros de la tabla izquierda y coincidencias de la derecha.</li>
-<li><strong>RIGHT JOIN:</strong> inverso del LEFT JOIN.</li>
-<li><strong>FULL JOIN:</strong> devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).
-<a href="#temas">🔼 temas</a></li>
+<li><strong>INNER JOIN:</strong><br>
+devuelve coincidencias exactas.</li>
+<li><strong>LEFT JOIN:</strong><br>
+devuelve todos los registros de la tabla izquierda y coincidencias de la derecha.</li>
+<li><strong>RIGHT JOIN:</strong><br>
+inverso del LEFT JOIN.</li>
+<li><strong>FULL JOIN:</strong><br>
+devuelve todos los registros de ambas tablas (no soportado directamente en MySQL).</li>
 </ul>
+<p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Para trabajar de forma eficiente con MySQL, estas son las herramientas clave que deberías conocer:</p>
@@ -271,7 +286,7 @@ Ejemplo: <code>GRANT</code>, <code>REVOKE</code>.</p>
 <li>Perfecta para administración avanzada y scripts automatizados.</li>
 </ul>
 <blockquote>
-<p>Ejemplo:</p>
+<p><strong>Ejemplo:</strong></p>
 <pre><code class="language-bash">mysql -u root -p
 </code></pre>
 </blockquote>
@@ -359,8 +374,8 @@ USE tienda;
 VALUES ('Ana Pérez', 'ana@email.com');
 </code></pre>
 <h3 id="4-consultar-datos"><strong>4. Consultar Datos</strong></h3>
-<pre><code class="language-sql">SELECT * FROM usuarios;           -- Todos los registros
-SELECT nombre, email FROM usuarios; -- Columnas específicas
+<pre><code class="language-sql">SELECT * FROM usuarios;              -- Todos los registros
+SELECT nombre, email FROM usuarios;  -- Columnas específicas
 SELECT * FROM usuarios WHERE id = 1;
 </code></pre>
 <h3 id="5-actualizar-datos"><strong>5. Actualizar Datos</strong></h3>
@@ -482,18 +497,18 @@ ALTER TABLE tabla ...;    -- Modificar tabla
 DROP TABLE tabla;         -- Eliminar tabla
 
 -- CRUD
-INSERT INTO tabla (...) VALUES (...);   -- Crear
-SELECT * FROM tabla;                    -- Leer
-UPDATE tabla SET columna=valor WHERE id=1; -- Actualizar
-DELETE FROM tabla WHERE id=1;           -- Eliminar
+INSERT INTO tabla (...) VALUES (...);       -- Crear
+SELECT * FROM tabla;                        -- Leer
+UPDATE tabla SET columna=valor WHERE id=1;  -- Actualizar
+DELETE FROM tabla WHERE id=1;               -- Eliminar
 
 -- Relaciones
 FOREIGN KEY (columna) REFERENCES otra_tabla(id);
 
 -- Consultas avanzadas
-SELECT columna FROM tabla WHERE condicion;   -- Filtro
+SELECT columna FROM tabla WHERE condicion;            -- Filtro
 SELECT columna, COUNT(*) FROM tabla GROUP BY columna; -- Agrupar
-SELECT * FROM A INNER JOIN B ON A.id = B.a_id; -- Joins
+SELECT * FROM A INNER JOIN B ON A.id = B.a_id;        -- Joins
 </code></pre>
 <blockquote>
 <p>💡 <em>Consejo:</em> Usa <code>LIMIT</code> para limitar resultados:</p>
@@ -509,21 +524,21 @@ SELECT * FROM A INNER JOIN B ON A.id = B.a_id; -- Joins
 <li>
 <p><strong>DELETE:</strong><br>
 Elimina filas específicas de una tabla usando una condición <code>WHERE</code>. Mantiene la estructura y permite deshacer la operación si está dentro de una transacción.<br>
-<em>Uso:</em> Cuando necesitas borrar datos específicos.</p>
+<strong><em>Uso:</em></strong> Cuando necesitas borrar datos específicos.</p>
 <pre><code class="language-sql">DELETE FROM usuarios WHERE id = 1;
 </code></pre>
 </li>
 <li>
 <p><strong>TRUNCATE:</strong><br>
-Elimina <em>todos los registros</em> de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con <code>WHERE</code>.
-<em>Uso:</em> Cuando quieres limpiar completamente una tabla, pero mantener su estructura.</p>
+Elimina <em>todos los registros</em> de una tabla de forma rápida y resetea el contador de auto incremento. No se puede usar con <code>WHERE</code>.<br>
+<strong><em>Uso:</em></strong> Cuando quieres limpiar completamente una tabla, pero mantener su estructura.</p>
 <pre><code class="language-sql">TRUNCATE TABLE usuarios;
 </code></pre>
 </li>
 <li>
 <p><strong>DROP:</strong><br>
-Elimina por completo una tabla, incluyendo su estructura y datos.
-<em>Uso:</em> Cuando ya no necesitas la tabla ni sus datos.</p>
+Elimina por completo una tabla, incluyendo su estructura y datos.<br>
+<strong><em>Uso:</em></strong> Cuando ya no necesitas la tabla ni sus datos.</p>
 <pre><code class="language-sql">DROP TABLE usuarios;
 </code></pre>
 </li>
@@ -551,12 +566,12 @@ CREATE TABLE pedidos (
 <li>
 <p><strong>CHAR(n):</strong><br>
 Guarda cadenas con longitud fija. Completa con espacios si el valor es más corto.<br>
-<em>Uso:</em> Ideal para campos con longitud constante (códigos, abreviaturas).</p>
+<strong><em>Uso:</em></strong> Ideal para campos con longitud constante (códigos, abreviaturas).</p>
 </li>
 <li>
 <p><strong>VARCHAR(n):</strong><br>
 Guarda cadenas con longitud variable. Solo utiliza el espacio necesario.<br>
-<em>Uso:</em> Ideal para campos como nombres, correos o direcciones.</p>
+<strong><em>Uso:</em></strong> Ideal para campos como nombres, correos o direcciones.</p>
 </li>
 </ul>
 <table>
@@ -847,6 +862,12 @@ VALUES (NEW.id, 'INSERT', NOW());
         </ul>
         <ul>
           <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
           
             <li>
               <a href="/blog-lenguajes-eleventy/blog/Git/">

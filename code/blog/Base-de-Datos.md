@@ -180,55 +180,55 @@ Antes de trabajar con bases de datos, es importante conocer ciertos conceptos qu
 
 ### Dato
 
-Unidad mínima de información almacenada en la base de datos. |
+Unidad mínima de información almacenada en la base de datos.
 
 ### Registro (Row)
 
-Conjunto de datos relacionados que representan una entidad, como un usuario o un producto. |
+Conjunto de datos relacionados que representan una entidad, como un usuario o un producto.
 
 ### Tabla (Table)
 
-Estructura que organiza registros en filas y columnas (modelo relacional). |
+Estructura que organiza registros en filas y columnas (modelo relacional).
 
 ### Campo (Column)
 
-Atributo o propiedad de una tabla, como `nombre`, `precio` o `email`. |
+Atributo o propiedad de una tabla, como `nombre`, `precio` o `email`.
 
 ### Clave primaria (PK)
 
-Identificador único para cada registro en una tabla. |
+Identificador único para cada registro en una tabla.
 
 ### Clave foránea (FK)
 
-Campo que establece una relación entre dos tablas. |
+Campo que establece una relación entre dos tablas.
 
 ### Relación
 
-Conexión lógica entre tablas para vincular datos. |
+Conexión lógica entre tablas para vincular datos.
 
 ### Query (Consulta)
 
-Instrucción para recuperar, insertar, actualizar o eliminar datos. |
+Instrucción para recuperar, insertar, actualizar o eliminar datos.
 
 ### Transacción
 
-Conjunto de operaciones que se ejecutan como una unidad, asegurando integridad de datos. |
+Conjunto de operaciones que se ejecutan como una unidad, asegurando integridad de datos.
 
 ### Normalización
 
-Proceso de organizar datos para evitar duplicidad y mejorar la consistencia. |
+Proceso de organizar datos para evitar duplicidad y mejorar la consistencia.
 
 ### Índice (Index)
 
-Estructura que acelera la búsqueda y consulta de información. |
+Estructura que acelera la búsqueda y consulta de información.
 
 ### Backup
 
-Copia de seguridad de los datos para prevenir pérdidas. |
+Copia de seguridad de los datos para prevenir pérdidas.
 
 ### Motor de Base de Datos (DBMS
 
-Software que gestiona la base de datos, como MySQL, PostgreSQL o MongoDB. |
+Software que gestiona la base de datos, como MySQL, PostgreSQL o MongoDB.
 
 [🔼 temas](#temas)
 
@@ -297,8 +297,10 @@ Facilitan el control de cambios en la estructura de la base de datos:
 
 Herramientas para copias de seguridad y restauración:
 
-- `mysqldump` → Exportar bases de datos MySQL.
-- `pg_dump` → Exportar bases de datos PostgreSQL.
+- `mysqldump`\
+  Exportar bases de datos MySQL.
+- `pg_dump`\
+  Exportar bases de datos PostgreSQL.
 - **MongoDB Atlas Backup:**\
   Copias automáticas en la nube.
 - **Duplicati:**\
