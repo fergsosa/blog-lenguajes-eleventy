@@ -8,9 +8,13 @@ description: Meta descripción de la página de contacto
 <h1> 💻 Tecnologías y Lenguajes </h1>
   {% for post in collections.lenguajes  %}
     <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
       <div class="text">
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.date }}</p>
@@ -25,9 +29,13 @@ description: Meta descripción de la página de contacto
 <h1> ⚛️ Frameworks y Generadores </h1>
   {% for post in collections.frameworks  %}
     <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
       <div class="text">
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.date }}</p>
@@ -42,9 +50,13 @@ description: Meta descripción de la página de contacto
 <h1> 🌐 Backend y Servidores </h1>
   {% for post in collections.backend  %}
     <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
       <div class="text">
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.date }}</p>
@@ -59,9 +71,13 @@ description: Meta descripción de la página de contacto
 <h1> 🗄️ Bases de Datos </h1>
   {% for post in collections.bases_de_datos  %}
     <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
       <div class="text">
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.date }}</p>
@@ -76,9 +92,13 @@ description: Meta descripción de la página de contacto
 <h1> 🛠️ Herramientas de Desarrollo </h1>
   {% for post in collections.herramientas  %}
     <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
       <div class="text">
         <h3>{{ post.data.title }}</h3>
         <p>{{ post.data.date }}</p>
@@ -89,20 +109,3 @@ description: Meta descripción de la página de contacto
   {% endfor %}
 </section>
 
-
-{# <h1>Blog</h1>
-<section class="blog c-visible">
-  {% for post in collections.blog  %}
-    <a href="{{ post.url }}"  >
-      <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
-          loading="lazy" decoding="async"
-          />
-      <div class="text">
-        <h3>{{ post.data.title }}</h3>
-        <p>{{ post.data.date }}</p>
-      </div>
-      <p>{{ post.data.description }}</p>
-
-    </a>
-  {% endfor %}
-</section> #}
