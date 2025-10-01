@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsonwebtoken</title>
+    <meta name="description" content="Ideas principales de jsonwebtoken">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="jsonwebtoken">jsonwebtoken</h1>
+<p><img src="https://placehold.co/784x396" alt="jsonwebtoken"></p>
+<h2 id="que-es-jsonwebtoken">¿Qué es jsonwebtoken??</h2>
+<p><strong>jsonwebtoken (JWT)</strong> es una librería que implementa el estándar <a href="https://jwt.io/">JSON Web Token</a>.<br>
+Un JWT es un <strong>formato de token seguro, compacto y auto-contenido</strong>, que permite transmitir información entre partes de forma confiable.</p>
+<h4 id="se-diferencia-de-otras-soluciones-como-cookies-de-sesion-o-tokens-opacos-porque">Se diferencia de otras soluciones como <strong>cookies de sesión</strong> o <strong>tokens opacos</strong> porque:</h4>
+<ul>
+<li><strong>Incluye la información dentro del token</strong><br>
+(claims), evitando la necesidad de guardar estado en el servidor.</li>
+<li><strong>Es independiente de la base de datos</strong><br>
+la verificación se hace con una clave secreta o par de claves (HS256, RS256, etc.).</li>
+<li><strong>Está estandarizado y ampliamente adoptado</strong><br>
+a diferencia de soluciones personalizadas.</li>
+</ul>
+<h3 id="1-para-que-se-usa">1. ¿Para qué se usa??</h3>
+<p>Se usa principalmente para <strong>autenticación y autorización</strong>.</p>
+<h4 id="los-contextos-mas-comunes-son">Los contextos más comunes son:</h4>
+<ul>
+<li><strong>Aplicaciones web y móviles:</strong><br>
+validar la identidad de usuarios sin mantener sesiones pesadas.</li>
+<li><strong>APIs REST y GraphQL:</strong><br>
+otorgar acceso a recursos mediante un token portátil.</li>
+<li><strong>Microservicios:</strong><br>
+intercambio de credenciales confiables entre servicios distribuidos.</li>
+</ul>
+<h3 id="2-que-puedo-construir-con-jsonwebtoken">2. ¿Qué puedo construir con jsonwebtoken??</h3>
+<p>Con JWT puedes construir:</p>
+<ul>
+<li><strong>Sistemas de autenticación de usuarios</strong><br>
+login / logout.</li>
+<li><strong>Autorización basada en roles</strong><br>
+ejemplo: admin, user.</li>
+<li><strong>APIs seguras</strong><br>
+que validen acceso con tokens en cabeceras HTTP.</li>
+<li><strong>Single Sign-On (SSO)</strong><br>
+para aplicaciones distribuidas.</li>
+<li><strong>Sistemas sin estado (stateless)</strong><br>
+en servidores, lo que mejora la escalabilidad.</li>
+</ul>
+<h3 id="3-cuando-es-mas-conveniente-usarlo">3. ¿Cuándo es más conveniente usarlo??</h3>
+<p>Es conveniente usar JWT cuando:</p>
+<ul>
+<li>Quieres una <strong>solución sin estado (stateless)</strong> en lugar de mantener sesiones en memoria/BD.</li>
+<li>Necesitas <strong>interoperabilidad</strong> entre diferentes lenguajes, servicios o plataformas.</li>
+<li>El sistema requiere <strong>escalar horizontalmente</strong>, y las sesiones tradicionales serían un cuello de botella.</li>
+<li>Buscas un <strong>formato estándar y seguro</strong>, compatible con librerías en múltiples entornos.</li>
+</ul>
+<blockquote>
+<p>En cambio, para <strong>aplicaciones pequeñas y simples</strong>, donde el manejo de sesiones no es un problema, podría ser mejor usar <strong>cookies de sesión</strong>.</p>
+</blockquote>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas?</h2>
+<ul>
+<li><strong>Usar algoritmos de firma seguros</strong><br>
+(HS256 o RS256, evitar <code>none</code>).</li>
+<li><strong>Definir tiempos de expiración (<code>exp</code>)</strong><br>
+para reducir riesgos de tokens robados.</li>
+<li><strong>Guardar los tokens en un lugar seguro</strong>:
+<ul>
+<li><em>En cliente web</em>: <code>httpOnly cookies</code> (más seguras que localStorage).</li>
+<li><em>En móviles</em>: almacenamiento seguro (Keychain/Keystore).</li>
+</ul>
+</li>
+<li><strong>No almacenar información sensible</strong><br>
+en el payload (ejemplo: contraseñas).</li>
+<li><strong>Rotar claves periódicamente</strong><br>
+para mayor seguridad.</li>
+<li><strong>Validar siempre la firma y expiración</strong><br>
+del token antes de confiar en él.</li>
+<li><strong>Dividir responsabilidades:</strong><br>
+un servicio emite tokens (auth service) y otros servicios los verifican.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Compacto, seguro y auto-contenido.</li>
+<li>Independiente del servidor y escalable.</li>
+<li>Amplia compatibilidad y estándar de la industria.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Difícil invalidar tokens antes de su expiración.</li>
+<li>Mal uso puede llevar a vulnerabilidades (ejemplo: guardar datos sensibles).</li>
+<li>Requiere atención especial en el almacenamiento en cliente.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Autenticación y autorización en APIs.</li>
+<li>Sistemas distribuidos o microservicios.</li>
+<li>Casos donde se busca escalabilidad y ausencia de estado en el servidor.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>Aplicaciones pequeñas donde una sesión en servidor es suficiente.</li>
+<li>Cuando necesitas invalidación inmediata de tokens sin infraestructura extra.</li>
+<li>Si no cuentas con experiencia en manejo de seguridad de tokens.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-jsonwebtoken">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con <strong>jsonwebtoken (JWT)</strong>, conviene entender los siguientes conceptos:</p>
+<h3 id="jwt-json-web-token">JWT (JSON Web Token):</h3>
+<p>Un estándar abierto (RFC 7519) que define un formato compacto y seguro para transmitir información entre partes.</p>
+<h3 id="header-encabezado">Header (Encabezado):</h3>
+<p>Contiene el algoritmo de firma (ejemplo: <code>HS256</code>, <code>RS256</code>) y el tipo de token (<code>JWT</code>).</p>
+<h3 id="payload-cuerpo-o-claims">Payload (Cuerpo o claims):</h3>
+<p>Datos que el token transporta, como <code>userId</code>, <code>role</code>, <code>exp</code> (expiración), entre otros.<br>
+<em>Importante: no almacenar información sensible aquí.</em></p>
+<h3 id="signature-firma">Signature (Firma):</h3>
+<p>Se genera a partir del header, payload y una clave secreta/privada.<br>
+Sirve para verificar que el token no fue manipulado.</p>
+<h3 id="claims">Claims:</h3>
+<p>Son las declaraciones dentro del payload.</p>
+<ul>
+<li><em>Registered claims:</em> estándar como <code>exp</code> (expira), <code>iat</code> (emitido en), <code>iss</code> (emisor).</li>
+<li><em>Custom claims:</em> definidos por el desarrollador (ejemplo: <code>role</code>, <code>permissions</code>).</li>
+</ul>
+<h3 id="token-stateless">Token stateless:</h3>
+<p>JWT es un mecanismo <strong>sin estado</strong>; no requiere guardar sesiones en el servidor.</p>
+<h3 id="secret-o-private-key">Secret o Private Key:</h3>
+<p>Clave usada para firmar y verificar el token. Puede ser simétrica (<code>HS256</code>) o asimétrica (<code>RS256</code>).</p>
+<h3 id="expiracion-exp">Expiración (<code>exp</code>):</h3>
+<p>Tiempo límite de validez del token. Control esencial para la seguridad.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar con JWT de forma más eficiente y segura, se recomienda:</p>
+<h3 id="librerias-principales">Librerías principales:</h3>
+<ul>
+<li><a href="https://www.npmjs.com/package/jsonwebtoken"><strong><code>jsonwebtoken</code></strong></a> (Node.js)<strong>:</strong><br>
+la más utilizada en entornos JavaScript.</li>
+<li><a href="https://www.npmjs.com/package/express-jwt"><strong><code>express-jwt</code></strong></a><strong>:</strong><br>
+middleware para integrar JWT fácilmente en Express.</li>
+<li><a href="http://www.passportjs.org/packages/passport-jwt/"><strong><code>passport-jwt</code></strong></a><strong>:</strong><br>
+estrategia JWT para el framework de autenticación Passport.</li>
+</ul>
+<h3 id="utilidades-de-depuracion">Utilidades de depuración:</h3>
+<ul>
+<li><a href="https://jwt.io/"><strong>jwt.io</strong></a><strong>:</strong> herramienta online para decodificar, verificar y generar tokens.</li>
+<li>Extensiones de navegador como <strong>JWT Debugger</strong>.</li>
+</ul>
+<h3 id="gestion-de-claves-y-secretos">Gestión de claves y secretos:</h3>
+<ul>
+<li><strong>dotenv:</strong> para manejar claves secretas en archivos <code>.env</code> sin exponerlas en el código.</li>
+<li><strong>Vault</strong> o <strong>AWS Secrets Manager:</strong> almacenamiento seguro de claves en producción.</li>
+</ul>
+<h3 id="buenas-practicas-en-integracion">Buenas prácticas en integración:</h3>
+<ul>
+<li>Uso de <strong>middlewares</strong> en Express u otros frameworks para validar tokens automáticamente.</li>
+<li><strong>Rotación de claves</strong> para mitigar riesgos.</li>
+<li>Configuración de <strong>tiempos de expiración cortos</strong> y uso de <strong>refresh tokens</strong>.</li>
+</ul>
+<pre><code class="language-javascript">// Ejemplo de middleware Express para validar JWT
+const jwt = require(&quot;jsonwebtoken&quot;);
+
+function authMiddleware(req, res, next) {
+  const token = req.headers[&quot;authorization&quot;]?.split(&quot; &quot;)[1];
+  if (!token) return res.status(401).json({ error: &quot;Token requerido&quot; });
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = decoded; // Se adjunta info del usuario al request
+    next();
+  } catch (err) {
+    return res.status(403).json({ error: &quot;Token inválido o expirado&quot; });
+  }
+}
+
+module.exports = authMiddleware;
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código comunes que se reutilizan con frecuencia:</p>
+<h3 id="generar-un-token-con-expiracion">Generar un token con expiración</h3>
+<pre><code class="language-javascript">const token = jwt.sign({ userId: 1 }, process.env.JWT_SECRET, {
+  expiresIn: &quot;1h&quot;,
+});
+</code></pre>
+<h3 id="verificar-y-decodificar-un-token">Verificar y decodificar un token</h3>
+<pre><code class="language-javascript">const decoded = jwt.verify(token, process.env.JWT_SECRET);
+</code></pre>
+<h3 id="decodificar-un-token-sin-verificar-la-firma-util-solo-para-debug">Decodificar un token sin verificar la firma (útil solo para debug)</h3>
+<pre><code class="language-javascript">const payload = jwt.decode(token);
+</code></pre>
+<h3 id="middleware-tipico-en-express">Middleware típico en Express</h3>
+<pre><code class="language-javascript">app.use((req, res, next) =&gt; {
+  const token = req.headers.authorization?.split(&quot; &quot;)[1];
+  if (!token) return res.status(401).send(&quot;Token requerido&quot;);
+
+  try {
+    req.user = jwt.verify(token, process.env.JWT_SECRET);
+    next();
+  } catch {
+    res.status(403).send(&quot;Token inválido o expirado&quot;);
+  }
+});
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="1-generar-un-token">1. Generar un token</h3>
+<pre><code class="language-javascript">jwt.sign(payload, secretOrPrivateKey, [options, callback]);
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-javascript">const token = jwt.sign({ id: 10 }, &quot;mi_secreto&quot;, { expiresIn: &quot;2h&quot; });
+</code></pre>
+<h3 id="2-verificar-un-token">2. Verificar un token</h3>
+<pre><code class="language-javascript">jwt.verify(token, secretOrPublicKey, [options, callback]);
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-javascript">try {
+  const decoded = jwt.verify(token, &quot;mi_secreto&quot;);
+  console.log(decoded);
+} catch (err) {
+  console.error(&quot;Token inválido&quot;);
+}
+</code></pre>
+<h3 id="3-decodificar-un-token-sin-validar-firma">3. Decodificar un token (sin validar firma)</h3>
+<pre><code class="language-javascript">jwt.decode(token, [options]);
+</code></pre>
+<p>Ejemplo:</p>
+<pre><code class="language-javascript">const data = jwt.decode(token);
+console.log(data); // Solo payload, no verifica seguridad
+</code></pre>
+<h3 id="4-opciones-mas-comunes-en-sign">4. Opciones más comunes en <code>sign</code></h3>
+<ul>
+<li><code>expiresIn</code>: define el tiempo de vida (<code>&quot;1h&quot;</code>, <code>&quot;7d&quot;</code>, <code>60</code> segundos).</li>
+<li><code>audience</code>: define quién debe usar el token.</li>
+<li><code>issuer</code>: quién emitió el token.</li>
+<li><code>subject</code>: a quién pertenece el token.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-javascript">const token = jwt.sign({ role: &quot;admin&quot; }, &quot;mi_secreto&quot;, {
+  expiresIn: &quot;30m&quot;,
+  issuer: &quot;miApp&quot;,
+});
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h3 id="basico">🟢 Básico</h3>
+<h3 id="1-que-es-un-json-web-token-jwt">1. ¿Qué es un JSON Web Token (JWT)?</h3>
+<p>Un JWT es un estándar abierto (RFC 7519) que define un formato compacto y auto-contenido para transmitir información de forma segura entre partes, usando una firma digital.</p>
+<h3 id="2-cuales-son-las-tres-partes-principales-de-un-jwt">2. ¿Cuáles son las tres partes principales de un JWT?</h3>
+<ul>
+<li><strong>Header:</strong><br>
+algoritmo y tipo de token.</li>
+<li><strong>Payload:</strong><br>
+datos o <em>claims</em>.</li>
+<li><strong>Signature:</strong><br>
+firma generada para verificar integridad y autenticidad.</li>
+</ul>
+<h3 id="3-que-diferencia-existe-entre-jwt-decode-y-jwt-verify">3. ¿Qué diferencia existe entre <code>jwt.decode()</code> y <code>jwt.verify()</code>?</h3>
+<ul>
+<li><code>jwt.decode()</code><br>
+solo lee el contenido del token, <strong>sin validar la firma ni la expiración</strong>.</li>
+<li><code>jwt.verify()</code><br>
+valida la firma y revisa los tiempos (<code>exp</code>, <code>iat</code>), garantizando que el token sea confiable.</li>
+</ul>
+<h3 id="4-que-es-un-claim-en-jwt">4. ¿Qué es un claim en JWT?</h3>
+<p>Un <strong>claim</strong> es un dato dentro del payload. Puede ser:</p>
+<ul>
+<li><strong>Registered claims:</strong> estándar (ejemplo: <code>exp</code>, <code>iat</code>, <code>sub</code>).</li>
+<li><strong>Public claims:</strong> definidos por terceros.</li>
+<li><strong>Custom claims:</strong> definidos por el desarrollador (ejemplo: <code>role</code>, <code>permissions</code>).</li>
+</ul>
+<h3 id="5-como-se-genera-un-token-en-node-js-usando-jsonwebtoken">5. ¿Cómo se genera un token en Node.js usando <code>jsonwebtoken</code>?</h3>
+<pre><code class="language-javascript">const jwt = require(&quot;jsonwebtoken&quot;);
+const token = jwt.sign({ userId: 1 }, &quot;mi_secreto&quot;, { expiresIn: &quot;1h&quot; });
+</code></pre>
+<hr>
+<h3 id="intermedio">🟡 Intermedio</h3>
+<h3 id="6-cual-es-la-diferencia-entre-algoritmos-de-firma-simetrica-y-asimetrica-en-jwt">6. ¿Cuál es la diferencia entre algoritmos de firma simétrica y asimétrica en JWT?</h3>
+<ul>
+<li><strong>Simétrica (HS256):</strong><br>
+usa la misma clave para firmar y verificar.</li>
+<li><strong>Asimétrica (RS256):</strong><br>
+usa una clave privada para firmar y una clave pública para verificar, lo que aumenta seguridad en sistemas distribuidos.</li>
+</ul>
+<h3 id="7-que-sucede-si-un-token-expira">7. ¿Qué sucede si un token expira?</h3>
+<p>El método <code>jwt.verify()</code> lanza un error (<code>TokenExpiredError</code>) y el servidor debe pedir al cliente que renueve el token (normalmente mediante un <em>refresh token</em>).</p>
+<h3 id="8-donde-se-recomienda-almacenar-un-jwt-en-una-aplicacion-web">8. ¿Dónde se recomienda almacenar un JWT en una aplicación web?</h3>
+<ul>
+<li>Lo más seguro es en <strong>cookies con httpOnly</strong> y <code>Secure</code>.</li>
+<li>Alternativas como <code>localStorage</code> son menos seguras frente a ataques XSS.</li>
+</ul>
+<h3 id="9-como-invalidar-un-jwt-antes-de-su-expiracion">9. ¿Cómo invalidar un JWT antes de su expiración?</h3>
+<p>JWT por sí mismo es <strong>stateless</strong>, no puede invalidarse. Para hacerlo se necesita:</p>
+<ul>
+<li><strong>Lista negra (blacklist)</strong> en el servidor.</li>
+<li><strong>Rotación de tokens</strong> (generar nuevos y revocar antiguos).</li>
+<li>Uso de <strong>refresh tokens</strong>.</li>
+</ul>
+<h3 id="10-que-es-el-expiresin-y-por-que-es-importante">10. ¿Qué es el <code>expiresIn</code> y por qué es importante?</h3>
+<p>Es la duración de validez del token. Importante porque:</p>
+<ul>
+<li>Reduce riesgos si el token es robado.</li>
+<li>Permite balancear seguridad y experiencia de usuario.<br>
+Ejemplo: <code>{ expiresIn: &quot;1h&quot; }</code>.</li>
+</ul>
+<hr>
+<h3 id="avanzado">🔴 Avanzado</h3>
+<h3 id="11-que-ventajas-ofrece-jwt-frente-a-las-sesiones-tradicionales-en-servidor">11. ¿Qué ventajas ofrece JWT frente a las sesiones tradicionales en servidor?</h3>
+<ul>
+<li>Escalabilidad (no requiere almacenar sesiones).</li>
+<li>Interoperabilidad entre sistemas.</li>
+<li>Menor carga en memoria del servidor.<br>
+Pero sacrifica la capacidad de invalidación inmediata.</li>
+</ul>
+<h3 id="12-que-problemas-de-seguridad-pueden-ocurrir-si-guardas-datos-sensibles-en-el-payload-de-un-jwt">12. ¿Qué problemas de seguridad pueden ocurrir si guardas datos sensibles en el payload de un JWT?</h3>
+<p>El payload no está cifrado, solo codificado en Base64.<br>
+Cualquiera que tenga el token puede leerlo, por lo tanto <strong>no deben incluirse contraseñas, tarjetas o datos privados</strong>.</p>
+<h3 id="13-que-es-el-ataque-alg-none-en-jwt">13. ¿Qué es el ataque “alg=none” en JWT?</h3>
+<p>Es una vulnerabilidad donde un atacante manipula el header para establecer <code>alg: none</code>, logrando que el servidor acepte el token sin validación de firma.</p>
+<blockquote>
+<p><strong>Solución:</strong> configurar librerías para aceptar solo algoritmos seguros (<code>HS256</code>, <code>RS256</code>).</p>
+</blockquote>
+<h3 id="14-como-se-maneja-la-autorizacion-basada-en-roles-con-jwt">14. ¿Cómo se maneja la autorización basada en roles con JWT?</h3>
+<ul>
+<li>Se agrega un <strong>claim</strong> en el payload, por ejemplo: <code>{ role: &quot;admin&quot; }</code>.</li>
+<li>En cada request, el middleware verifica el token y valida si el rol tiene permisos para acceder a la ruta.</li>
+</ul>
+<p>Ejemplo:</p>
+<pre><code class="language-javascript">if (req.user.role !== &quot;admin&quot;) return res.status(403).send(&quot;Acceso denegado&quot;);
+</code></pre>
+<h3 id="15-que-son-los-refresh-tokens-y-por-que-se-usan-con-jwt">15. ¿Qué son los Refresh Tokens y por qué se usan con JWT?</h3>
+<p>Un <strong>refresh token</strong> es un token de larga duración que sirve para <strong>obtener nuevos JWT de acceso</strong> sin que el usuario deba loguearse otra vez.<br>
+Se usan porque los JWT de acceso deben tener corta expiración por seguridad, y el refresh token permite renovar sin perder usabilidad.</p>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/jwt/">
+                jsonwebtoken
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/redux/">
+                Redux
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
