@@ -14,10 +14,6 @@ date: "2020-12-11"
 
 [temas](#temas)
 
-# Estructura <!--!  Estructura-->
-
-# {{title}}
-
 ## ¿Qué es {{title}}?
 
 Axios es una **librería basada en Promesas para realizar solicitudes HTTP** desde el navegador o Node.js.  
@@ -112,7 +108,7 @@ Es recomendable usar Axios cuando:
 
 # Temas {#temas#}
 
-- [inicio](#que-es-Axios)
+- [inicio](#que-es-axios)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)

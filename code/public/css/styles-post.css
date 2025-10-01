@@ -88,6 +88,10 @@ h1:first-of-type {
     }
   }
 
+  a[href="#temas"] {
+    display: none;
+    background-color: red;
+  }
   #temas {
     position: fixed;
     top: 4rem;
