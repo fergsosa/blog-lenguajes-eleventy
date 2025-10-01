@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redux</title>
+    <meta name="description" content="Ideas principales de Redux">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="redux">Redux</h1>
+<p><img src="https://placehold.co/784x396" alt="Redux"></p>
+<h2 id="inicio">Inicio</h2>
+<h2 id="que-es-redux">¿Qué es Redux?</h2>
+<p>Redux es una <strong>biblioteca de gestión de estado predecible</strong> para aplicaciones JavaScript.<br>
+Se basa en tres principios clave:</p>
+<ul>
+<li><strong>Un único store</strong>:<br>
+toda la información de la aplicación se centraliza en un único objeto de estado.</li>
+<li><strong>El estado es de solo lectura</strong>:<br>
+las modificaciones solo se realizan mediante acciones.</li>
+<li><strong>Los cambios se describen con funciones puras (reducers)</strong>:<br>
+la lógica de actualización se concentra en funciones deterministas.</li>
+</ul>
+<p>A diferencia de otros sistemas de manejo de estado como <strong>Context API</strong> o librerías reactivas, Redux se centra en la <strong>previsibilidad, trazabilidad y escalabilidad</strong> del flujo de datos.</p>
+<hr>
+<h3 id="1-para-que-se-usa">1. ¿Para qué se usa?</h3>
+<h4 id="redux-se-usa-para">Redux se usa para:</h4>
+<ul>
+<li><strong>Gestionar estados globales</strong><br>
+compartidos por múltiples componentes.</li>
+<li><strong>Sincronizar datos</strong><br>
+en aplicaciones grandes y complejas.</li>
+<li><strong>Depurar fácilmente</strong><br>
+gracias a su flujo predecible de datos.</li>
+<li><strong>Mantener historial de estados</strong><br>
+útil para funciones como deshacer/rehacer.</li>
+</ul>
+<h4 id="contextos-ideales">Contextos ideales:</h4>
+<ul>
+<li>Aplicaciones con muchos componentes que necesitan acceder al mismo estado.</li>
+<li>Casos donde el estado cambia con frecuencia y debe ser <strong>consistente y predecible</strong>.</li>
+</ul>
+<hr>
+<h3 id="2-que-puedo-construir-con-redux">2. ¿Qué puedo construir con Redux?</h3>
+<p>Con Redux se pueden construir:</p>
+<ul>
+<li><strong>Aplicaciones web de gran escala</strong><br>
+con React, Angular o Vue.</li>
+<li><strong>Dashboards complejos</strong><br>
+donde múltiples vistas dependen de la misma fuente de datos.</li>
+<li><strong>Aplicaciones móviles</strong><br>
+con React Native que requieran sincronización de estado.</li>
+<li><strong>Sistemas en tiempo real</strong><br>
+como chats o paneles colaborativos, siempre que se combine con middlewares adecuados.</li>
+</ul>
+<hr>
+<h3 id="3-cuando-es-mas-conveniente-usarlo">3. ¿Cuándo es más conveniente usarlo?</h3>
+<p>Es recomendable usar Redux cuando:</p>
+<ul>
+<li>El estado global es <strong>grande, complejo o compartido</strong>.</li>
+<li>Se necesita <strong>control detallado de cambios</strong> y trazabilidad.</li>
+<li>Hay múltiples interacciones simultáneas con el estado (ej. filtros, formularios, listas dinámicas).</li>
+<li>Se requiere trabajar con <strong>middlewares</strong> (ejemplo: <code>redux-thunk</code>, <code>redux-saga</code>) para manejar lógica asíncrona.</li>
+</ul>
+<p>Frente a otras opciones más simples como <strong>useState</strong> o <strong>Context API</strong>, Redux aporta <strong>estructura, escalabilidad y herramientas avanzadas de depuración</strong>.</p>
+<hr>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Dividir reducers</strong><br>
+en funciones pequeñas y específicas (<em>principio de separación de responsabilidades</em>).</li>
+<li><strong>Normalizar el estado</strong><br>
+para evitar duplicados y estructuras anidadas complicadas.</li>
+<li><strong>Usar Redux Toolkit (RTK):</strong><br>
+simplifica la sintaxis y evita código repetitivo.</li>
+<li><strong>Evitar lógica compleja en reducers:</strong><br>
+mantenerlos como funciones puras y simples.</li>
+<li><strong>Aplicar middlewares</strong><br>
+para manejar efectos secundarios (async, logging, etc.).</li>
+<li><strong>Seguir una convención clara de nombres</strong><br>
+en acciones y reducers.</li>
+<li><strong>Probar reducers y acciones</strong><br>
+para asegurar que sean predecibles y libres de efectos colaterales.</li>
+</ul>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Predecible y centralizado.</li>
+<li>Excelente depuración (Redux DevTools).</li>
+<li>Escalable para aplicaciones grandes.</li>
+<li>Integración con middlewares.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Curva de aprendizaje inicial.</li>
+<li>Verbosidad (aunque RTK la reduce).</li>
+<li>Puede ser excesivo para apps pequeñas.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Aplicaciones complejas con muchos estados compartidos.</li>
+<li>Cuando se requiere trazabilidad y depuración avanzada.</li>
+<li>Proyectos de largo plazo que necesitan escalabilidad.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>Aplicaciones pequeñas o con estados locales simples.</li>
+<li>Proyectos rápidos donde Context API o useState son suficientes.</li>
+<li>Casos en los que el manejo del estado no es un problema central.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-redux">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con Redux es importante comprender algunos conceptos y fundamentos que lo acompañan:</p>
+<h3 id="estado-state">Estado (State)</h3>
+<p>Es el objeto que representa los datos de la aplicación en un momento dado. Redux centraliza este estado en un único store.</p>
+<h3 id="acciones-actions">Acciones (Actions)</h3>
+<p>Son objetos simples que describen un evento o intención de cambio en el estado.</p>
+<blockquote>
+<p><strong>Ejemplo:</strong> <code>{ type: &quot;INCREMENT&quot; }</code></p>
+</blockquote>
+<h3 id="reducers">Reducers</h3>
+<p>Son funciones puras que reciben el estado actual y una acción, y devuelven un nuevo estado.</p>
+<blockquote>
+<p><strong>Ejemplo:</strong> <code>(state, action) =&gt; newState</code></p>
+</blockquote>
+<h3 id="store">Store</h3>
+<p>Es el contenedor central del estado de la aplicación. Se encarga de almacenar el estado y de notificar a los componentes cuando este cambia.</p>
+<h3 id="dispatch">Dispatch</h3>
+<p>Método que permite enviar acciones al store para que sean procesadas por los reducers.</p>
+<h3 id="suscripcion-subscribe">Suscripción (Subscribe)</h3>
+<p>Permite a los componentes escuchar los cambios en el estado y actualizarse en consecuencia.</p>
+<h3 id="inmutabilidad">Inmutabilidad</h3>
+<p>El estado nunca se modifica directamente; siempre se crea un nuevo estado.</p>
+<h3 id="middleware">Middleware</h3>
+<p>Funciones que interceptan las acciones antes de llegar al reducer, útiles para manejar lógica asíncrona o efectos secundarios.</p>
+<blockquote>
+<p><strong>Ejemplo:</strong> <code>redux-thunk</code>, <code>redux-saga</code>.</p>
+</blockquote>
+<h3 id="redux-toolkit-rtk">Redux Toolkit (RTK)</h3>
+<p>Una capa oficial de abstracción sobre Redux que simplifica la creación de stores, reducers y acciones con menos código repetitivo.</p>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Estas son las herramientas más utilizadas y recomendadas para trabajar eficientemente con Redux:</p>
+<h3 id="redux-toolkit-rtk-2">Redux Toolkit (RTK)</h3>
+<ul>
+<li>Simplifica la configuración del store.</li>
+<li>Incluye utilidades como <code>createSlice</code>, <code>createAsyncThunk</code> y <code>configureStore</code>.</li>
+<li>Evita la repetición de código.</li>
+</ul>
+<h3 id="redux-devtools">Redux DevTools</h3>
+<ul>
+<li>Extensión para navegadores que permite inspeccionar el estado, el historial de acciones y depurar de forma visual.</li>
+<li>Muy útil para <strong>time-travel debugging</strong> (viajar en el tiempo entre estados).</li>
+</ul>
+<h3 id="react-redux">React-Redux</h3>
+<ul>
+<li>Librería oficial que conecta Redux con React.</li>
+<li>Proporciona hooks como <code>useSelector</code> y <code>useDispatch</code> para interactuar con el store de manera sencilla.</li>
+</ul>
+<h3 id="redux-thunk">Redux Thunk</h3>
+<ul>
+<li>Middleware que permite manejar acciones asíncronas, como llamadas a APIs.</li>
+<li>Ejemplo típico: despachar una acción al iniciar una petición y otra al recibir la respuesta.</li>
+</ul>
+<h3 id="redux-saga">Redux Saga</h3>
+<ul>
+<li>Middleware avanzado basado en funciones generadoras.</li>
+<li>Ideal para manejar flujos asíncronos complejos.</li>
+</ul>
+<h3 id="reselect">Reselect</h3>
+<ul>
+<li>Biblioteca para crear <em>selectores memoizados</em>.</li>
+<li>Optimiza el acceso a porciones del estado evitando cálculos innecesarios.</li>
+</ul>
+<h3 id="immer-incluido-en-rtk">Immer (incluido en RTK)</h3>
+<ul>
+<li>Permite trabajar con estado inmutable de forma más sencilla.</li>
+<li>Internamente aplica inmutabilidad, aunque el código parezca mutar el estado.</li>
+</ul>
+<p>Ejemplo de configuración básica con <strong>Redux Toolkit</strong> y <strong>React-Redux</strong>:</p>
+<pre><code class="language-javascript">import { configureStore, createSlice } from &quot;@reduxjs/toolkit&quot;;
+import { Provider, useSelector, useDispatch } from &quot;react-redux&quot;;
+
+// Slice
+const counterSlice = createSlice({
+  name: &quot;counter&quot;,
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) =&gt; {
+      state.value += 1;
+    },
+    decrement: (state) =&gt; {
+      state.value -= 1;
+    },
+  },
+});
+
+// Store
+const store = configureStore({
+  reducer: { counter: counterSlice.reducer },
+});
+
+// Component Example
+function Counter() {
+  const value = useSelector((state) =&gt; state.counter.value);
+  const dispatch = useDispatch();
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Valor: {value}&lt;/p&gt;
+      &lt;button onClick={() =&gt; dispatch(counterSlice.actions.increment())}&gt;
+        +
+      &lt;/button&gt;
+      &lt;button onClick={() =&gt; dispatch(counterSlice.actions.decrement())}&gt;
+        -
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+// App Root
+function App() {
+  return (
+    &lt;Provider store={store}&gt;
+      &lt;Counter /&gt;
+    &lt;/Provider&gt;
+  );
+}
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos comunes al trabajar con Redux y React:</p>
+<h3 id="crear-slice-con-redux-toolkit">Crear slice con Redux Toolkit</h3>
+<pre><code class="language-javascript">const counterSlice = createSlice({
+  name: &quot;counter&quot;,
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state) =&gt; {
+      state.value += 1;
+    },
+    decrement: (state) =&gt; {
+      state.value -= 1;
+    },
+  },
+});
+
+// Exportar acciones
+export const { increment, decrement } = counterSlice.actions;
+
+// Exportar reducer
+export default counterSlice.reducer;
+</code></pre>
+<h3 id="configurar-store">Configurar store</h3>
+<pre><code class="language-javascript">const store = configureStore({
+  reducer: { counter: counterSlice.reducer },
+});
+</code></pre>
+<h3 id="usar-en-componente-con-react-redux">Usar en componente con React-Redux</h3>
+<pre><code class="language-javascript">const value = useSelector((state) =&gt; state.counter.value);
+const dispatch = useDispatch();
+
+&lt;button onClick={() =&gt; dispatch(increment())}&gt;+&lt;/button&gt;
+&lt;button onClick={() =&gt; dispatch(decrement())}&gt;-&lt;/button&gt;
+</code></pre>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="crear-store">Crear store</h3>
+<pre><code class="language-javascript">import { configureStore } from &quot;@reduxjs/toolkit&quot;;
+const store = configureStore({ reducer: rootReducer });
+</code></pre>
+<h3 id="definir-slice">Definir slice</h3>
+<pre><code class="language-javascript">import { createSlice } from &quot;@reduxjs/toolkit&quot;;
+const todoSlice = createSlice({
+  name: &quot;todos&quot;,
+  initialState: [],
+  reducers: {
+    addTodo: (state, action) =&gt; {
+      state.push(action.payload);
+    },
+  },
+});
+</code></pre>
+<h3 id="obtener-estado">Obtener estado</h3>
+<pre><code class="language-javascript">const todos = useSelector((state) =&gt; state.todos);
+</code></pre>
+<h3 id="despachar-accion">Despachar acción</h3>
+<pre><code class="language-javascript">dispatch(addTodo(&quot;Aprender Redux&quot;));
+</code></pre>
+<h3 id="suscribirse-a-cambios-del-store-js-puro">Suscribirse a cambios del store (JS puro)</h3>
+<pre><code class="language-javascript">store.subscribe(() =&gt; console.log(store.getState()));
+</code></pre>
+<h3 id="acciones-asincronas-con-thunk">Acciones asíncronas con Thunk</h3>
+<pre><code class="language-javascript">export const fetchData = () =&gt; async (dispatch) =&gt; {
+  const res = await fetch(&quot;/api/data&quot;);
+  const data = await res.json();
+  dispatch(setData(data));
+};
+</code></pre>
+<h3 id="combinacion-de-reducers">Combinación de reducers</h3>
+<pre><code class="language-javascript">import { combineReducers } from &quot;@reduxjs/toolkit&quot;;
+const rootReducer = combineReducers({
+  counter: counterReducer,
+  todos: todoReducer,
+});
+</code></pre>
+<h3 id="acceder-al-estado-global">Acceder al estado global</h3>
+<pre><code class="language-javascript">console.log(store.getState());
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-redux-y-cuales-son-sus-principios-fundamentales">1. ¿Qué es Redux y cuáles son sus principios fundamentales?</h3>
+<p>Redux es una biblioteca para manejar el estado de aplicaciones JavaScript de manera predecible. Sus principios son:</p>
+<ul>
+<li>Un <strong>único store</strong> centralizado.</li>
+<li>El <strong>estado es inmutable</strong> y solo se modifica mediante acciones.</li>
+<li>Los cambios se realizan con <strong>reducers</strong>, funciones puras que determinan el nuevo estado.</li>
+</ul>
+<h3 id="2-cual-es-la-diferencia-entre-estado-local-y-estado-global">2. ¿Cuál es la diferencia entre estado local y estado global?</h3>
+<p>El estado local se gestiona dentro de un componente (ej. <code>useState</code> en React) y no es compartido. El estado global, manejado con Redux, es accesible por cualquier componente conectado al store.</p>
+<h3 id="3-que-es-una-accion-en-redux">3. ¿Qué es una acción en Redux?</h3>
+<p>Una acción es un objeto JavaScript que describe un evento que quiere cambiar el estado. Siempre tiene una propiedad <code>type</code> y puede tener un <code>payload</code> con datos adicionales.</p>
+<pre><code class="language-javascript">{
+  type: &quot;INCREMENT&quot;;
+}
+</code></pre>
+<h3 id="4-que-es-un-reducer-y-como-funciona">4. ¿Qué es un reducer y cómo funciona?</h3>
+<p>Es una función pura que recibe el estado actual y una acción, y devuelve un nuevo estado. Nunca debe mutar directamente el estado.</p>
+<pre><code class="language-javascript">const reducer = (state = 0, action) =&gt; {
+  switch (action.type) {
+    case &quot;INCREMENT&quot;:
+      return state + 1;
+    default:
+      return state;
+  }
+};
+</code></pre>
+<h3 id="5-que-es-el-store-en-redux">5. ¿Qué es el store en Redux?</h3>
+<p>Es el contenedor central del estado de la aplicación. Se crea usando <code>createStore</code> o <code>configureStore</code> (Redux Toolkit) y expone métodos como <code>dispatch</code>, <code>getState</code> y <code>subscribe</code>.</p>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-como-se-despacha-una-accion-en-redux">6. ¿Cómo se despacha una acción en Redux?</h3>
+<p>Se utiliza <code>dispatch</code> para enviar una acción al store, que luego será procesada por los reducers.</p>
+<pre><code class="language-javascript">dispatch({ type: &quot;INCREMENT&quot; });
+</code></pre>
+<h3 id="7-que-es-redux-toolkit-rtk-y-por-que-se-recomienda">7. ¿Qué es Redux Toolkit (RTK) y por qué se recomienda?</h3>
+<p>Es una capa oficial que simplifica Redux: reduce la verbosidad, maneja la inmutabilidad con Immer, y facilita la creación de slices, reducers y acciones.</p>
+<h3 id="8-que-es-un-middleware-y-para-que-se-usa-en-redux">8. ¿Qué es un middleware y para qué se usa en Redux?</h3>
+<p>Es una función que intercepta acciones antes de llegar al reducer. Se usa para lógica asíncrona, logging, o modificar acciones. Ejemplos: <code>redux-thunk</code>, <code>redux-saga</code>.</p>
+<h3 id="9-que-son-selectores-y-por-que-son-utiles">9. ¿Qué son selectores y por qué son útiles?</h3>
+<p>Funciones que extraen porciones del estado de forma encapsulada. Con librerías como Reselect se pueden memoizar para mejorar el rendimiento.</p>
+<h3 id="10-como-manejarias-un-estado-asincrono-ej-peticion-a-api-en-redux">10. ¿Cómo manejarías un estado asíncrono (ej. petición a API) en Redux?</h3>
+<p>Usando middlewares como Thunk o Saga para despachar acciones antes y después de la petición.</p>
+<pre><code class="language-javascript">export const fetchData = () =&gt; async (dispatch) =&gt; {
+  const res = await fetch(&quot;/api/data&quot;);
+  const data = await res.json();
+  dispatch(setData(data));
+};
+</code></pre>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-que-es-la-inmutabilidad-en-redux-y-como-se-asegura">11. ¿Qué es la inmutabilidad en Redux y cómo se asegura?</h3>
+<p>Significa que nunca se modifica directamente el estado original. Se puede lograr usando spread operators, métodos que devuelven nuevos arrays/objetos, o Immer (incluido en RTK).</p>
+<h3 id="12-como-combinar-varios-reducers-en-redux">12. ¿Cómo combinar varios reducers en Redux?</h3>
+<p>Con <code>combineReducers</code>, se crean múltiples reducers especializados y se combinan en uno principal.</p>
+<pre><code class="language-javascript">const rootReducer = combineReducers({
+  counter: counterReducer,
+  todos: todoReducer,
+});
+</code></pre>
+<h3 id="13-que-es-el-time-travel-debugging-y-como-se-aplica-en-redux">13. ¿Qué es el time-travel debugging y cómo se aplica en Redux?</h3>
+<p>Funcionalidad que permite ir hacia adelante y atrás entre los estados anteriores usando Redux DevTools, útil para depuración y pruebas.</p>
+<h3 id="14-menciona-buenas-practicas-para-organizar-un-proyecto-con-redux">14. Menciona buenas prácticas para organizar un proyecto con Redux.</h3>
+<ul>
+<li>Dividir reducers por dominios o features.</li>
+<li>Normalizar el estado para evitar datos duplicados.</li>
+<li>Mantener reducers puros.</li>
+<li>Usar Redux Toolkit para reducir boilerplate.</li>
+<li>Documentar y nombrar acciones claramente.</li>
+</ul>
+<h3 id="15-cuando-no-conviene-usar-redux">15. ¿Cuándo NO conviene usar Redux?</h3>
+<ul>
+<li>Aplicaciones pequeñas o con poco estado compartido.</li>
+<li>Cuando <code>useState</code> o Context API son suficientes.</li>
+<li>Proyectos donde la complejidad de Redux agrega más carga que beneficio.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/redux/">
+                Redux
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
