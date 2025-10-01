@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zod</title>
+    <meta name="description" content="Ideas principales de Zod">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="zod">Zod</h1>
+<p><img src="https://placehold.co/784x396" alt="Zod"></p>
+<p>Zod es una librería de validación y definición de esquemas para <strong>TypeScript y JavaScript</strong>. Permite describir la forma de datos (objetos, arrays, strings, números, etc.) y validarlos de manera <strong>segura, tipada y declarativa</strong>.<br>
+A diferencia de otras alternativas, Zod no solo valida en tiempo de ejecución, sino que también <strong>infiera automáticamente los tipos de TypeScript</strong> a partir de los esquemas.</p>
+<hr>
+<h2 id="1-que-es-zod">1. ¿Qué es Zod?</h2>
+<ul>
+<li><strong>Zod</strong> es una librería centrada en la <strong>simplicidad y compatibilidad con TypeScript</strong>.</li>
+<li>No necesita un archivo de configuración externo ni compilación adicional.</li>
+<li>Genera automáticamente tipos de TypeScript a partir de los esquemas definidos.</li>
+<li>A diferencia de librerías como <code>Joi</code> o <code>Yup</code>, está diseñada desde cero con TypeScript en mente, reduciendo la fricción entre validación y tipado.</li>
+</ul>
+<h3 id="2-para-que-se-usa">2. ¿Para qué se usa?</h3>
+<p>Zod se usa principalmente para:</p>
+<ul>
+<li><strong>Validación de datos</strong> en formularios, APIs o entradas de usuario.</li>
+<li><strong>Definición de contratos</strong> en servicios backend y frontend.</li>
+<li><strong>Tipado automático</strong> en TypeScript para mantener consistencia entre runtime y compile-time.</li>
+</ul>
+<p>Se aplica mejor en contextos donde se requiere <strong>confiabilidad en los datos</strong> y donde se trabaja con <strong>TypeScript intensivamente</strong>.</p>
+<h3 id="3-que-puedo-construir-con-zod">3. ¿Qué puedo construir con Zod?</h3>
+<p>Con Zod se pueden construir:</p>
+<ul>
+<li><strong>Validadores para formularios web</strong> en React, Vue, Angular, etc.</li>
+<li><strong>Esquemas de validación para APIs REST o GraphQL</strong>.</li>
+<li><strong>Modelos de datos para aplicaciones de Node.js</strong>.</li>
+<li><strong>Validaciones de archivos JSON, configuraciones o respuestas de terceros</strong>.</li>
+</ul>
+<h3 id="4-cuando-es-mas-conveniente-usarlo">4. ¿Cuándo es más conveniente usarlo?</h3>
+<ul>
+<li>Cuando se trabaja con <strong>TypeScript</strong> y se busca una integración directa con los tipos.</li>
+<li>Cuando se necesita <strong>tipado automático sin duplicar código</strong> (definir validación y tipos en un solo paso).</li>
+<li>Cuando se requiere una <strong>API sencilla y declarativa</strong> sin dependencias pesadas.</li>
+<li>En proyectos donde se prioriza <strong>desarrollar más rápido con menos errores de tipado</strong>.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Centralizar esquemas</strong>: definir todos los esquemas en un módulo común para evitar duplicaciones.</li>
+<li><strong>Reutilizar validaciones</strong>: crear esquemas base y extenderlos según sea necesario (<code>.extend()</code>).</li>
+<li><strong>Validar siempre entradas externas</strong>: peticiones HTTP, archivos cargados o configuraciones.</li>
+<li><strong>Usar inferencias de tipos</strong> (<code>z.infer&lt;typeof esquema&gt;</code>) para evitar inconsistencias.</li>
+<li><strong>Componer esquemas complejos</strong> usando objetos anidados y uniones (<code>z.union</code>, <code>z.intersection</code>).</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Integración nativa con TypeScript.</li>
+<li>Sintaxis clara y declarativa.</li>
+<li>Evita duplicación de código entre validación y tipado.</li>
+<li>Ligero y sin dependencias pesadas.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Menos soporte de ecosistema comparado con librerías más antiguas como <code>Joi</code>.</li>
+<li>Algunas validaciones avanzadas requieren composición manual.</li>
+<li>Puede ser excesivo para proyectos muy pequeños en JavaScript puro.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>En proyectos TypeScript de mediana y gran escala.</li>
+<li>Para validar datos externos (APIs, formularios, configuraciones).</li>
+<li>Cuando se busca mantener consistencia entre <strong>tipado y validación</strong>.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>En proyectos pequeños sin TypeScript, donde validaciones simples bastan.</li>
+<li>Si ya existe una librería de validación consolidada en el stack del proyecto.</li>
+<li>En casos donde se necesita un ecosistema más amplio de plugins y soporte.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-Zod">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con Zod, conviene tener claros algunos conceptos básicos:</p>
+<h3 id="typescript">TypeScript:</h3>
+<p>Zod está diseñado para integrarse con TypeScript, generando tipos automáticamente a partir de esquemas. Conocer el tipado de TypeScript (interfaces, tipos, uniones, etc.) es fundamental.</p>
+<h3 id="esquemas">Esquemas:</h3>
+<p>Un esquema es una <strong>descripción declarativa de la forma de los datos</strong> (por ejemplo, un objeto con campos obligatorios o un string con un patrón específico).</p>
+<h3 id="inferencia-de-tipos">Inferencia de tipos:</h3>
+<p>Usando <code>z.infer&lt;typeof esquema&gt;</code>, Zod permite que TypeScript deduzca el tipo exacto del esquema sin tener que escribirlo manualmente.</p>
+<h3 id="validacion-en-tiempo-de-ejecucion">Validación en tiempo de ejecución:</h3>
+<p>Mientras que TypeScript solo valida en tiempo de compilación, Zod valida datos <strong>cuando el programa se ejecuta</strong>, asegurando que las entradas sean correctas.</p>
+<h3 id="composicion-de-esquemas">Composición de esquemas:</h3>
+<p>Zod permite combinar, extender o refinar esquemas para crear estructuras más complejas (objetos anidados, uniones, intersecciones, etc.).</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar con Zod de manera más productiva, se recomienda apoyarse en:</p>
+<h3 id="typescript-2">TypeScript</h3>
+<p>La integración nativa es el mayor valor de Zod.</p>
+<h3 id="react-hook-form">React Hook Form</h3>
+<p>Integración directa con Zod para validar formularios en React.</p>
+<h3 id="next-js-express-js">Next.js / Express.js</h3>
+<p>Usar Zod para validar parámetros de rutas, queries o cuerpos de solicitudes.</p>
+<h3 id="trpc">tRPC</h3>
+<p>Framework que combina Zod y TypeScript para construir APIs con tipado extremo de extremo.</p>
+<h3 id="prisma">Prisma</h3>
+<p>Aunque es un ORM, suele complementarse con Zod para validar datos antes de persistirlos.</p>
+<h3 id="vscode-zod-plugin-opcional">VSCode + Zod Plugin** (opcional)</h3>
+<p>Mejora la experiencia de autocompletado y resaltado de errores.</p>
+<blockquote>
+<p>⚡ Consejo: La combinación <strong>Zod + TypeScript + tRPC/React Hook Form</strong> es considerada una de las más poderosas para desarrollar aplicaciones seguras y con validación tipada extremo a extremo.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código comunes que se usan con frecuencia en Zod:</p>
+<pre><code class="language-bash">import { z } from &quot;zod&quot;;
+
+const nombre = z.string();                    # String básico
+const edad = z.number().min(18).max(65);      # Número con validación
+const activo = z.boolean();                   # Booleano
+const tags = z.array(z.string());             # Array de strings
+
+const usuario = z.object({                    # Objeto con propiedades
+  id: z.string().uuid(),
+  email: z.string().email(),
+  password: z.string().min(6),
+});
+
+usuario.parse({                               # Validación de datos
+  id: &quot;d290f1ee-6c54-4b01-90e6-d701748f0851&quot;,
+  email: &quot;ejemplo@mail.com&quot;,
+  password: &quot;123456&quot;,
+});
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<p>Lista de los métodos y funciones clave, con ejemplos cortos:</p>
+<pre><code class="language-bash">
+z.string().min(3).max(20);              # string: String entre 3 y 20 caracteres
+z.number().int().positive();            # number: Número entero positivo
+z.boolean();                            # boolean: true o false
+z.array(z.number()).nonempty();         # array: Array de números, no vacío
+
+z.object({                              # object:
+  nombre: z.string(),
+  edad: z.number().optional(),
+});
+
+z.union([z.string(), z.number()]);      # union: Acepta string o número
+z.enum([&quot;admin&quot;, &quot;user&quot;, &quot;guest&quot;]);     # enum: Solo esos valores
+
+z.string().optional();                  # optional: Puede ser string o undefined
+z.string().nullable();                  # nullable: Puede ser string o null
+
+esquema.parse(dato);                    # parse: Valida o lanza error
+esquema.safeParse(dato);                # safeParse: Devuelve { success, data/error }
+
+type Usuario = z.infer&lt;typeof usuario&gt;; # Inferencia de tipos (TypeScript)
+</code></pre>
+<blockquote>
+<p>✅ Con estos snippets y comandos ya podés cubrir <strong>80% de los casos comunes en Zod</strong> de manera rápida y segura.</p>
+</blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-zod-y-para-que-se-utiliza">1. ¿Qué es Zod y para qué se utiliza?</h3>
+<p>Zod es una librería de validación de datos para TypeScript y JavaScript que permite definir esquemas y validar datos de forma declarativa, garantizando consistencia entre tipos y runtime.</p>
+<h3 id="2-como-se-define-un-esquema-basico-de-un-string-obligatorio">2. ¿Cómo se define un esquema básico de un string obligatorio?</h3>
+<pre><code class="language-ts">const nombre = z.string();
+</code></pre>
+<h3 id="3-cual-es-la-diferencia-entre-parse-y-safeparse-en-zod">3. ¿Cuál es la diferencia entre <code>.parse()</code> y <code>.safeParse()</code> en Zod?</h3>
+<ul>
+<li><strong><code>.parse()</code></strong><br>
+valida y lanza un error si falla;</li>
+<li><strong><code>.safeParse()</code></strong><br>
+devuelve un objeto <code>{ success, data | error }</code> sin lanzar excepciones.</li>
+</ul>
+<h3 id="4-que-funcion-cumple-z-infer-typeof-esquema">4. ¿Qué función cumple <code>z.infer&lt;typeof esquema&gt;</code>?</h3>
+<p>Permite inferir automáticamente el tipo TypeScript a partir de un esquema Zod, evitando duplicar definiciones de tipo.</p>
+<h3 id="5-como-se-define-un-objeto-con-campos-obligatorios-y-opcionales">5. ¿Cómo se define un objeto con campos obligatorios y opcionales?</h3>
+<pre><code class="language-ts">const usuario = z.object({
+  nombre: z.string(),
+  edad: z.number().optional(),
+});
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-como-se-valida-un-array-de-strings-no-vacio">6. ¿Cómo se valida un array de strings no vacío?</h3>
+<pre><code class="language-ts">const tags = z.array(z.string()).nonempty();
+</code></pre>
+<h3 id="7-explica-la-diferencia-entre-optional-y-nullable">7. Explica la diferencia entre <code>.optional()</code> y <code>.nullable()</code>.</h3>
+<ul>
+<li><strong><code>.optional()</code></strong> permite <code>undefined</code>,</li>
+<li><strong><code>.nullable()</code></strong> permite <code>null</code>.</li>
+</ul>
+<p>Se pueden combinar si se desea aceptar ambos.</p>
+<h3 id="8-como-combinar-esquemas-usando-z-union-y-z-intersection">8. ¿Cómo combinar esquemas usando <code>z.union()</code> y <code>z.intersection()</code>?</h3>
+<pre><code class="language-ts">const esquemaUnion = z.union([z.string(), z.number()]);
+const esquemaInterseccion = z.intersection(
+  z.object({ a: z.string() }),
+  z.object({ b: z.number() })
+);
+</code></pre>
+<h3 id="9-que-son-las-refinements-y-para-que-sirven">9. ¿Qué son las <code>refinements</code> y para qué sirven?</h3>
+<p>Permiten agregar validaciones personalizadas a un esquema, por ejemplo:</p>
+<pre><code class="language-ts">z.string().refine((val) =&gt; val.length &gt; 5, {
+  message: &quot;Mínimo 6 caracteres&quot;,
+});
+</code></pre>
+<h3 id="10-como-extender-un-esquema-existente">10. ¿Cómo extender un esquema existente?</h3>
+<pre><code class="language-ts">const usuarioExtendido = usuario.extend({ email: z.string().email() });
+</code></pre>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-como-validar-tipos-literales-o-enums-con-zod">11. ¿Cómo validar tipos literales o enums con Zod?</h3>
+<pre><code class="language-ts">const rol = z.enum([&quot;admin&quot;, &quot;user&quot;, &quot;guest&quot;]);
+</code></pre>
+<h3 id="12-que-ventajas-ofrece-zod-frente-a-otras-librerias-como-joi-o-yup-en-proyectos-typescript">12. ¿Qué ventajas ofrece Zod frente a otras librerías como Joi o Yup en proyectos TypeScript?</h3>
+<p>Integración nativa con TypeScript, tipado automático, API declarativa y menos necesidad de duplicar tipos.</p>
+<h3 id="13-como-se-valida-datos-dinamicos-o-dependientes-de-otros-campos">13. ¿Cómo se valida datos dinámicos o dependientes de otros campos?</h3>
+<pre><code class="language-ts">z.object({ start: z.date(), end: z.date() }).refine(
+  (data) =&gt; data.end &gt; data.start,
+  { message: &quot;End debe ser mayor que Start&quot; }
+);
+</code></pre>
+<h3 id="14-se-puede-usar-zod-para-validar-respuestas-de-apis-externas-explica-como">14. ¿Se puede usar Zod para validar respuestas de APIs externas? Explica cómo.</h3>
+<p>Sí, creando un esquema que refleje la estructura esperada y usando <code>.parse()</code> o <code>.safeParse()</code> sobre la respuesta antes de procesarla.</p>
+<h3 id="15-menciona-buenas-practicas-al-usar-zod-en-proyectos-grandes">15. Menciona buenas prácticas al usar Zod en proyectos grandes.</h3>
+<ul>
+<li>Centralizar esquemas en módulos separados.</li>
+<li>Reutilizar y extender esquemas en lugar de duplicarlos.</li>
+<li>Validar siempre entradas externas.</li>
+<li>Usar inferencias de tipos para mantener consistencia entre runtime y TypeScript.</li>
+<li>Componer esquemas complejos con <code>union</code>, <code>intersection</code> o anidamientos de objetos.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

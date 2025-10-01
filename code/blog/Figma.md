@@ -71,25 +71,25 @@ Aunque Figma no es un entorno de programación como tal, sí requiere organizaci
 
 ## Resumen rápido
 
-#### Fortalezas principales:
+#### ✅ Fortalezas principales:
 
 - Colaboración en tiempo real
 - Multiplataforma y accesible en navegador
 - Gran ecosistema de plugins y recursos
 
-#### Debilidades principales:
+#### ⚠️ Debilidades principales:
 
 - Requiere conexión a internet para aprovechar todo su potencial
 - Limitaciones en la versión gratuita (archivos, historial)
 - No es un editor de código, solo de diseño y especificaciones
 
-#### Cuándo usarlo:
+#### 🛠️ Cuándo usarlo:
 
 - En proyectos con equipos distribuidos y colaboración constante
 - Cuando se necesita alinear diseño y programación rápidamente
 - Para crear prototipos y sistemas de diseño escalables
 
-#### Cuándo evitarlo:
+#### 🚫 Cuándo evitarlo:
 
 - Si se busca directamente generar código sin pasar por el diseño
 - En proyectos que no requieran prototipos visuales

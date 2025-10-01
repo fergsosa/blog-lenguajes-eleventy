@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios</title>
+    <meta name="description" content="Ideas principales de Axios">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="axios">Axios</h1>
+<p><img src="https://placehold.co/784x396" alt="Axios"></p>
+<p><a href="#temas">temas</a></p>
+<h1 id="estructura-estructura">Estructura <!--!  Estructura--></h1>
+<h1 id="axios-2">Axios</h1>
+<h2 id="que-es-axios">¿Qué es Axios?</h2>
+<p>Axios es una <strong>librería basada en Promesas para realizar solicitudes HTTP</strong> desde el navegador o Node.js.<br>
+A diferencia de usar directamente <code>fetch</code> (nativo en los navegadores), Axios proporciona una interfaz más <strong>amigable, concisa y robusta</strong>, con soporte integrado para:</p>
+<ul>
+<li><strong>Transformación automática de JSON</strong> (no se requiere <code>response.json()</code>).</li>
+<li><strong>Intercepción de peticiones y respuestas</strong>.</li>
+<li><strong>Cancelación de solicitudes</strong>.</li>
+<li><strong>Compatibilidad amplia</strong> con navegadores antiguos.</li>
+<li><strong>Configuraciones globales</strong> de headers y baseURL.</li>
+</ul>
+<h3 id="1-para-que-se-usa">1. ¿Para qué se usa?</h3>
+<p>Axios se utiliza para <strong>comunicar aplicaciones frontend con APIs</strong> o para hacer <strong>peticiones desde servidores Node.js a otros servicios externos</strong>.<br>
+Se aplica especialmente en:</p>
+<ul>
+<li><strong>Frontend web y móvil</strong><br>
+(React, Vue, Angular).</li>
+<li><strong>SSR (Server Side Rendering)</strong><br>
+con Node.js o frameworks como Next.js.</li>
+<li><strong>Integración con APIs externas</strong><br>
+(REST, GraphQL, microservicios).</li>
+<li><strong>Aplicaciones que requieren manejo avanzado de errores, autenticación o configuración global.</strong></li>
+</ul>
+<h3 id="2-que-puedo-construir-con-axios">2. ¿Qué puedo construir con Axios?</h3>
+<p>Con Axios puedes construir:</p>
+<ul>
+<li><strong>Conexiones a APIs REST</strong><br>
+para consumir datos en tu app.</li>
+<li><strong>Clientes HTTP personalizados</strong><br>
+con configuración de seguridad (tokens JWT, OAuth).</li>
+<li><strong>Integraciones de microservicios</strong><br>
+dentro de aplicaciones backend.</li>
+<li><strong>Dashboards y paneles de control</strong><br>
+que dependen de datos dinámicos.</li>
+<li><strong>Automatización de solicitudes a servicios externos</strong><br>
+(por ejemplo, bots que consultan APIs).</li>
+</ul>
+<h3 id="3-cuando-es-mas-conveniente-usarlo">3. ¿Cuándo es más conveniente usarlo?</h3>
+<p>Es recomendable usar Axios cuando:</p>
+<ul>
+<li>Necesitas <strong>interceptores</strong> para modificar headers antes de enviar peticiones.</li>
+<li>Requieres <strong>gestionar errores y respuestas</strong> de manera uniforme.</li>
+<li>Trabajas con <strong>cancelación de solicitudes</strong> (por ejemplo, en búsquedas en vivo).</li>
+<li>Quieres <strong>simplificar la sintaxis</strong> respecto a <code>fetch</code>.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Centralizar la configuración</strong><br>
+en un archivo común con <code>axios.create()</code>.</li>
+<li><strong>Usar interceptores</strong><br>
+para gestionar autenticación y logging.</li>
+<li><strong>Manejar errores globales</strong><br>
+para evitar repetición de código.</li>
+<li><strong>Cancelar solicitudes innecesarias</strong><br>
+en componentes que se desmontan.</li>
+<li><strong>Evitar hardcodear URLs</strong>;<br>
+usar variables de entorno (process.env.API_URL).</li>
+<li><strong>Separar la lógica de negocio de las llamadas HTTP</strong>,<br>
+creando servicios o utilidades específicas.</li>
+</ul>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Manejo de JSON automático.</li>
+<li>Interceptores de peticiones/respuestas.</li>
+<li>Cancelación de solicitudes.</li>
+<li>Sintaxis clara y concisa.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Peso adicional frente a fetch nativo.</li>
+<li>Dependencia externa (no estándar del navegador).</li>
+<li>Menor soporte a largo plazo que APIs nativas.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Cuando tu proyecto requiere configuración global, interceptores o manejo avanzado de errores.</li>
+<li>En apps grandes que consumen múltiples APIs.</li>
+<li>En entornos Node.js donde fetch puede no estar disponible.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>En proyectos pequeños donde fetch es suficiente.</li>
+<li>Cuando se busca minimizar dependencias externas.</li>
+<li>Si necesitas máxima compatibilidad con navegadores muy modernos (donde fetch ya es estándar).</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-Axios">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes o junto a Axios es recomendable conocer algunos <strong>conceptos clave</strong> que te ayudarán a sacarle mayor provecho:</p>
+<h3 id="http-y-sus-metodos">HTTP y sus métodos:</h3>
+<p><code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>PATCH</code>, <code>DELETE</code>.<br>
+<em>Axios simplifica su uso, pero es importante entender qué hace cada uno.</em></p>
+<h3 id="promesas-y-async-await">Promesas y <code>async/await</code>:</h3>
+<p>Axios trabaja con promesas, por lo que es fundamental comprender cómo manejarlas.</p>
+<h3 id="json-javascript-object-notation">JSON (JavaScript Object Notation):</h3>
+<p>Formato estándar de intercambio de datos entre cliente y servidor.</p>
+<h3 id="apis-restful">APIs RESTful:</h3>
+<p>Diseño de servicios web que utilizan métodos HTTP para la comunicación entre aplicaciones.</p>
+<h3 id="codigos-de-estado-http">Códigos de estado HTTP:</h3>
+<p>(200 éxito, 404 no encontrado, 500 error interno, etc.) para manejar respuestas adecuadas.</p>
+<h3 id="headers-http">Headers HTTP:</h3>
+<p>Información adicional enviada en las peticiones y respuestas (ej. autenticación, tipo de contenido).</p>
+<h3 id="manejo-de-errores-en-peticiones">Manejo de errores en peticiones:</h3>
+<p>Cómo capturar y tratar excepciones en caso de fallas de red o respuestas inválidas.</p>
+<h3 id="cancelacion-de-solicitudes">Cancelación de solicitudes:</h3>
+<p>Evitar llamadas innecesarias cuando el usuario cambia de vista o componente.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar de manera <strong>eficiente y profesional</strong> con Axios, estas son herramientas y recursos clave:</p>
+<h3 id="1-axios-create">1. <code>axios.create()</code>:</h3>
+<p>Permite crear una instancia personalizada con configuraciones predeterminadas como <code>baseURL</code> o <code>headers</code>.</p>
+<pre><code class="language-javascript">const api = axios.create({
+  baseURL: &quot;https://api.miservicio.com&quot;,
+  timeout: 5000,
+  headers: { Authorization: &quot;Bearer token123&quot; },
+});
+</code></pre>
+<h3 id="2-interceptors-interceptors-de-axios">2. Interceptors (Interceptors de Axios):</h3>
+<p>Middleware para modificar peticiones o respuestas antes de que lleguen al código principal. Útil para <strong>tokens de autenticación</strong>, logging o manejo centralizado de errores.</p>
+<pre><code class="language-javascript">api.interceptors.request.use((config) =&gt; {
+  console.log(&quot;Petición enviada:&quot;, config.url);
+  return config;
+});
+</code></pre>
+<h3 id="3-canceltoken-abortcontroller">3. CancelToken / AbortController:</h3>
+<p>Mecanismo para <strong>cancelar solicitudes</strong> en curso, muy útil en aplicaciones con búsquedas en vivo o componentes que se desmontan.</p>
+<h3 id="4-configuracion-global-defaults">4. Configuración Global (<code>defaults</code>):</h3>
+<p>Definir headers, baseURL y timeouts de forma global para no repetir en cada llamada.</p>
+<pre><code class="language-javascript">axios.defaults.baseURL = &quot;https://api.global.com&quot;;
+axios.defaults.headers.common[&quot;Authorization&quot;] = &quot;Bearer globalToken&quot;;
+</code></pre>
+<h3 id="5-manejo-de-errores-con-try-catch-y-error-response">5. Manejo de errores con <code>try/catch</code> y <code>error.response</code>:</h3>
+<p>Permite capturar respuestas erróneas y actuar según el estado devuelto.</p>
+<h3 id="6-integracion-con-frameworks-modernos">6. Integración con frameworks modernos:</h3>
+<ul>
+<li>React: consumo de APIs en hooks (<code>useEffect</code>) o contextos globales.</li>
+<li>Vue: uso dentro de <code>services</code> o Vuex.</li>
+<li>Node.js: llamadas a servicios externos desde el backend.</li>
+</ul>
+<h3 id="7-documentacion-oficial">7. Documentación oficial:</h3>
+<p><a href="https://axios-http.com">https://axios-http.com</a><br>
+Recurso clave para aprender funciones avanzadas, configuraciones y casos de uso.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="1-get">1. GET</h3>
+<h4 id="obtener-datos">Obtener datos</h4>
+<pre><code class="language-javascript">axios
+  .get(&quot;/users&quot;)
+  .then((res) =&gt; console.log(res.data))
+  .catch((err) =&gt; console.error(err));
+</code></pre>
+<h3 id="2-post">2. POST</h3>
+<h4 id="enviar-datos">Enviar datos</h4>
+<pre><code class="language-javascript">axios
+  .post(&quot;/users&quot;, { name: &quot;Juan&quot;, age: 25 })
+  .then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="3-put">3. PUT</h3>
+<h4 id="reemplazar-un-recurso">Reemplazar un recurso</h4>
+<pre><code class="language-javascript">axios
+  .put(&quot;/users/1&quot;, { name: &quot;Pedro&quot;, age: 30 })
+  .then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="4-patch">4. PATCH</h3>
+<h4 id="actualizar-parcialmente">Actualizar parcialmente</h4>
+<pre><code class="language-javascript">axios.patch(&quot;/users/1&quot;, { age: 31 }).then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="5-delete">5. DELETE</h3>
+<h4 id="eliminar-un-recurso">Eliminar un recurso</h4>
+<pre><code class="language-javascript">axios.delete(&quot;/users/1&quot;).then((res) =&gt; console.log(&quot;Usuario eliminado&quot;));
+</code></pre>
+<h3 id="6-configuracion-con-parametros">6. Configuración con parámetros</h3>
+<pre><code class="language-javascript">axios
+  .get(&quot;/users&quot;, { params: { page: 2, limit: 5 } })
+  .then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="7-headers-personalizados">7. Headers personalizados</h3>
+<pre><code class="language-javascript">axios.get(&quot;/profile&quot;, {
+  headers: { Authorization: &quot;Bearer token123&quot; },
+});
+</code></pre>
+<h3 id="8-instancia-personalizada-axios-create">8. Instancia personalizada (<code>axios.create</code>)</h3>
+<pre><code class="language-javascript">const api = axios.create({ baseURL: &quot;https://api.miapp.com&quot; });
+api.get(&quot;/status&quot;).then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="9-interceptor-de-peticiones">9. Interceptor de peticiones</h3>
+<pre><code class="language-javascript">axios.interceptors.request.use((config) =&gt; {
+  config.headers[&quot;Authorization&quot;] = &quot;Bearer token123&quot;;
+  return config;
+});
+</code></pre>
+<h3 id="10-manejo-de-errores">10. Manejo de errores</h3>
+<pre><code class="language-javascript">try {
+  const res = await axios.get(&quot;/users/99&quot;);
+} catch (err) {
+  console.error(err.response.status); // Ej: 404
+}
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-axios-y-para-que-se-utiliza">1. ¿Qué es Axios y para qué se utiliza?</h3>
+<p>Axios es una librería basada en Promesas para realizar solicitudes HTTP desde el navegador o Node.js. Se usa para <strong>consumir APIs REST</strong>, enviar y recibir datos en formatos como JSON.</p>
+<h3 id="2-en-que-se-diferencia-axios-de-fetch-nativo">2. ¿En qué se diferencia Axios de <code>fetch</code> nativo?</h3>
+<ul>
+<li>Axios convierte automáticamente las respuestas en JSON.</li>
+<li>Tiene soporte para <strong>interceptores</strong>, <strong>cancelación de solicitudes</strong> y <strong>timeouts</strong>.</li>
+<li><code>fetch</code> requiere más código manual para manejar errores y transformar respuestas.</li>
+</ul>
+<h3 id="3-como-se-realiza-una-peticion-get-basica-con-axios">3. ¿Cómo se realiza una petición GET básica con Axios?</h3>
+<pre><code class="language-javascript">axios
+  .get(&quot;/users&quot;)
+  .then((res) =&gt; console.log(res.data))
+  .catch((err) =&gt; console.error(err));
+</code></pre>
+<h3 id="4-como-se-envia-informacion-con-un-post-en-axios">4. ¿Cómo se envía información con un POST en Axios?</h3>
+<pre><code class="language-javascript">axios
+  .post(&quot;/users&quot;, { name: &quot;Ana&quot;, age: 28 })
+  .then((res) =&gt; console.log(res.data));
+</code></pre>
+<h3 id="5-que-tipo-de-datos-devuelve-axios-por-defecto-en-una-respuesta">5. ¿Qué tipo de datos devuelve Axios por defecto en una respuesta?</h3>
+<p>Devuelve un <strong>objeto de respuesta</strong> con varias propiedades:</p>
+<ul>
+<li><strong><code>data</code>:</strong><br>
+los datos de la respuesta.</li>
+<li><strong><code>status</code>:</strong><br>
+código de estado HTTP.</li>
+<li><strong><code>headers</code>:</strong><br>
+encabezados de la respuesta.</li>
+<li><strong><code>config</code>:</strong><br>
+configuración de la petición.</li>
+</ul>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-que-son-los-interceptores-en-axios">6. ¿Qué son los interceptores en Axios?</h3>
+<p>Son funciones que se ejecutan <strong>antes de enviar una petición o recibir una respuesta</strong>. Se usan para agregar tokens de autenticación, logs, manejo de errores global o modificar datos.</p>
+<pre><code class="language-javascript">axios.interceptors.request.use((config) =&gt; {
+  config.headers[&quot;Authorization&quot;] = &quot;Bearer token123&quot;;
+  return config;
+});
+</code></pre>
+<h3 id="7-como-se-configuran-headers-personalizados-en-axios">7. ¿Cómo se configuran headers personalizados en Axios?</h3>
+<pre><code class="language-javascript">axios.get(&quot;/profile&quot;, {
+  headers: { Authorization: &quot;Bearer token123&quot; },
+});
+</code></pre>
+<h3 id="8-que-ventaja-ofrece-axios-create">8. ¿Qué ventaja ofrece `axios.create(</h3>
+<p>Permite crear una <strong>instancia personalizada</strong> con configuración global (baseURL, headers, timeout), evitando repetir código en cada solicitud.</p>
+<h3 id="9-como-maneja-axios-los-errores">9. ¿Cómo maneja Axios los errores?</h3>
+<p>Con <code>try/catch</code> o <code>.catch()</code>. El error incluye información útil como <code>error.response</code>, <code>error.request</code> y <code>error.message</code>.</p>
+<pre><code class="language-javascript">try {
+  const res = await axios.get(&quot;/no-existe&quot;);
+} catch (err) {
+  console.error(err.response.status); // 404
+}
+</code></pre>
+<h3 id="10-como-enviar-parametros-en-una-peticion-get">10. ¿Cómo enviar parámetros en una petición GET?</h3>
+<pre><code class="language-javascript">axios.get(&quot;/users&quot;, { params: { page: 2, limit: 10 } });
+</code></pre>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-como-cancelar-una-peticion-en-axios">11. ¿Cómo cancelar una petición en Axios?</h3>
+<p>Mediante <code>AbortController</code> (versión moderna) o <code>CancelToken</code> (antigua).</p>
+<pre><code class="language-javascript">const controller = new AbortController();
+axios.get(&quot;/search&quot;, { signal: controller.signal });
+// Cancelar
+controller.abort();
+</code></pre>
+<h3 id="12-como-se-integra-axios-en-un-proyecto-con-react">12. ¿Cómo se integra Axios en un proyecto con React?</h3>
+<p>Se recomienda usarlo dentro de <code>useEffect</code> o crear servicios externos. Ejemplo:</p>
+<pre><code class="language-javascript">useEffect(() =&gt; {
+  axios.get(&quot;/users&quot;).then((res) =&gt; setUsers(res.data));
+}, []);
+</code></pre>
+<h3 id="13-que-es-el-timeout-en-axios-y-como-configurarlo">13. ¿Qué es el <code>timeout</code> en Axios y cómo configurarlo?</h3>
+<p>Es el tiempo máximo de espera para una respuesta antes de cancelar la petición.</p>
+<pre><code class="language-javascript">axios.get(&quot;/slow&quot;, { timeout: 5000 });
+</code></pre>
+<h3 id="14-como-manejar-multiples-peticiones-en-paralelo-con-axios">14. ¿Cómo manejar múltiples peticiones en paralelo con Axios?</h3>
+<p>Usando <code>Promise.all</code>.</p>
+<pre><code class="language-javascript">const [res1, res2] = await Promise.all([
+  axios.get(&quot;/users&quot;),
+  axios.get(&quot;/posts&quot;),
+]);
+</code></pre>
+<h3 id="15-que-buenas-practicas-se-recomiendan-al-usar-axios-en-proyectos-grandes">15. ¿Qué buenas prácticas se recomiendan al usar Axios en proyectos grandes?</h3>
+<ul>
+<li>Centralizar configuración con <code>axios.create()</code>.</li>
+<li>Usar interceptores para autenticación y logging.</li>
+<li>Manejar errores de forma global.</li>
+<li>Cancelar solicitudes innecesarias en componentes desmontados.</li>
+<li>No hardcodear URLs; usar variables de entorno.</li>
+</ul>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
