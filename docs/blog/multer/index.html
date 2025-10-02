@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multer</title>
+    <meta name="description" content="Ideas principales de Multer">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="multer">Multer</h1>
+<p><img src="https://placehold.co/784x396" alt="Multer"></p>
+<h2 id="que-es-multer">¿Qué es Multer?</h2>
+<p><strong>Multer</strong> es un middleware de Node.js para manejar <strong>multipart/form-data</strong>, que es principalmente usado para subir archivos desde formularios HTML.</p>
+<h4 id="diferencia-clave">Diferencia clave:</h4>
+<p>A diferencia de otros middlewares como <code>body-parser</code>, que solo parsean datos JSON o URL-encoded, Multer está especializado en manejar <strong>archivos binarios</strong> y combinarlos con datos de formularios.</p>
+<blockquote>
+<p>Funciona en conjunto con <strong>Express.js</strong>, integrándose fácilmente en rutas de API.</p>
+</blockquote>
+<h3 id="1-para-que-se-usa">1. ¿Para qué se usa?</h3>
+<p>Se usa principalmente para <strong>subida de archivos</strong> al servidor: imágenes, documentos, videos, etc.</p>
+<h4 id="contextos-ideales">Contextos ideales:</h4>
+<ul>
+<li>Aplicaciones web con formularios de subida de archivos.</li>
+<li>APIs que reciben archivos de clientes móviles o frontends.</li>
+<li>Proyectos donde se necesita procesar archivos antes de almacenarlos en un servicio externo (ej. AWS S3, Cloudinary).</li>
+</ul>
+<h4 id="permite-definir">Permite definir:</h4>
+<ul>
+<li><strong>Destino de almacenamiento</strong> (disco o memoria).</li>
+<li><strong>Nombre de archivo</strong> y <strong>estructura de carpetas</strong>.</li>
+<li><strong>Filtros de tipo de archivo</strong> y tamaño máximo.</li>
+</ul>
+<h3 id="2-que-puedo-construir-con-multer">2. ¿Qué puedo construir con Multer?</h3>
+<ul>
+<li><strong>Sistemas de gestión de archivos</strong>:<br>
+subir, renombrar, validar y almacenar archivos.</li>
+<li><strong>Plataformas de contenido</strong>:<br>
+blogs, redes sociales, portfolios con subida de imágenes y videos.</li>
+<li><strong>APIs RESTful</strong><br>
+que requieren recibir archivos junto con datos de formularios.</li>
+<li><strong>Integraciones con servicios en la nube</strong><br>
+para almacenamiento de archivos.</li>
+</ul>
+<h3 id="3-cuando-es-mas-conveniente-usarlo">3. ¿Cuándo es más conveniente usarlo?</h3>
+<h4 id="usalo-cuando">Úsalo cuando:</h4>
+<ul>
+<li>Necesites <strong>procesar archivos en el backend</strong> directamente desde formularios HTML.</li>
+<li>Busques una solución <strong>ligera y específica para Express</strong>.</li>
+<li>Requieras <strong>control sobre almacenamiento temporal o permanente</strong> de archivos antes de enviarlos a otro servicio.</li>
+</ul>
+<h4 id="alternativas-como-formidable-o-busboy-podrian-ser-mas-convenientes-si">Alternativas (como <code>formidable</code> o <code>busboy</code>) podrían ser más convenientes si:</h4>
+<ul>
+<li>Se busca <strong>mayor rendimiento</strong> en aplicaciones con subida masiva de archivos.</li>
+<li>Se necesita integración fuera de Express o control más bajo nivel del streaming de archivos.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Validar siempre</strong> los archivos subidos:
+<ul>
+<li>Tipo MIME</li>
+<li>Tamaño máximo permitido</li>
+</ul>
+</li>
+<li>Usar <strong>nombres únicos</strong> para evitar sobreescrituras:</li>
+</ul>
+<pre><code class="language-javascript">const storage = multer.diskStorage({
+  destination: (req, file, cb) =&gt; cb(null, &quot;uploads/&quot;),
+  filename: (req, file, cb) =&gt; cb(null, Date.now() + &quot;-&quot; + file.originalname),
+});
+</code></pre>
+<ul>
+<li>Manejar <strong>errores de subida</strong> de manera centralizada en middleware.</li>
+<li>Separar <strong>configuración de Multer</strong> del <strong>código de rutas</strong> para mantener limpio el proyecto.</li>
+<li>Considerar <strong>almacenamiento en memoria</strong> solo si vas a procesar archivos inmediatamente (ej. transformar imágenes antes de subir a la nube).</li>
+</ul>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Integración sencilla con Express.</li>
+<li>Manejo eficiente de archivos y datos de formularios.</li>
+<li>Configuración flexible de almacenamiento y filtros.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>No es ideal para cargas masivas o streaming de archivos de gran tamaño.</li>
+<li>Limitado a Node.js y Express.</li>
+<li>Almacenamiento en disco local puede no ser adecuado para producción en la nube.</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Subida de archivos desde formularios web.</li>
+<li>APIs REST que requieren recibir archivos de usuario.</li>
+<li>Procesamiento previo a almacenamiento en la nube.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>Aplicaciones con altos volúmenes de archivos grandes en tiempo real.</li>
+<li>Situaciones donde se necesita streaming avanzado de archivos sin pasar por el servidor.</li>
+<li>Proyectos fuera del ecosistema Express o Node.js.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-multer">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de trabajar con <strong>Multer</strong>, es importante conocer algunos conceptos clave que te ayudarán a entender su funcionamiento e integración:</p>
+<h3 id="1-express-js">1. Express.js:</h3>
+<p>Framework de Node.js que permite crear aplicaciones y APIs de manera sencilla. Multer funciona como un middleware dentro de Express.</p>
+<h3 id="2-middleware">2. Middleware:</h3>
+<p>Funciones que se ejecutan entre la petición (request) y la respuesta (response) en Express. Multer es uno de estos middlewares.</p>
+<h3 id="3-multipart-form-data">3. multipart/form-data:</h3>
+<p>Tipo de codificación usado en formularios HTML para enviar archivos al servidor.</p>
+<h3 id="4-request-y-response-req-res">4. Request y Response (req/res):</h3>
+<p>Objetos de Express que representan la petición del cliente y la respuesta del servidor.</p>
+<h3 id="5-almacenamiento-storage-engine">5. Almacenamiento (Storage Engine):</h3>
+<p>Configuración en Multer que define dónde y cómo se guardan los archivos subidos.</p>
+<h3 id="6-validacion-de-archivos">6. Validación de archivos:</h3>
+<p>Revisión de tipo MIME, tamaño y extensión antes de aceptar la subida.</p>
+<h3 id="7-errores-de-subida">7. Errores de subida:</h3>
+<p>Manejo de excepciones cuando un archivo excede los límites o no cumple con las reglas definidas.</p>
+<h3 id="8-integracion-con-servicios-externos">8. Integración con servicios externos:</h3>
+<p>Como Amazon S3, Cloudinary o Firebase, cuando no se quiere almacenar en el servidor.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<p>Para trabajar eficientemente con Multer, se recomienda combinarlo con ciertas herramientas y librerías:</p>
+<h3 id="node-js-express-js">Node.js + Express.js:</h3>
+<p>Entorno base para crear servidores y definir rutas donde se procesarán las subidas.</p>
+<h3 id="nodemon">Nodemon:</h3>
+<p>Para reiniciar automáticamente el servidor durante el desarrollo.</p>
+<h3 id="cloudinary-aws-s3-firebase-storage">Cloudinary / AWS S3 / Firebase Storage:</h3>
+<p>Servicios externos para almacenamiento en la nube de imágenes, videos o documentos.</p>
+<h3 id="sharp">Sharp:</h3>
+<p>Librería para procesar imágenes (cambio de tamaño, compresión, conversión de formatos).</p>
+<h3 id="dotenv">dotenv:</h3>
+<p>Manejo de variables de entorno para almacenar claves de acceso y configuraciones seguras.</p>
+<h3 id="joi-o-zod">Joi o Zod:</h3>
+<p>Librerías para validar datos de entrada junto con los archivos subidos.</p>
+<h3 id="helmet-y-cors">Helmet y cors:</h3>
+<p>Seguridad y control de accesos en aplicaciones Express que manejan archivos.</p>
+<h3 id="postman-o-thunder-client">Postman o Thunder Client:</h3>
+<p>Herramientas para probar rutas de subida de archivos de manera sencilla.</p>
+<h3 id="mongoose-sequelize">Mongoose / Sequelize:</h3>
+<p>Si se requiere asociar los archivos subidos con registros en bases de datos MongoDB o SQL.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código prácticos que suelen usarse con Multer:</p>
+<h3 id="1-configuracion-basica-de-multer">1. Configuración básica de Multer</h3>
+<pre><code class="language-javascript">const multer = require(&quot;multer&quot;);
+const upload = multer({ dest: &quot;uploads/&quot; });
+</code></pre>
+<h3 id="2-subir-un-solo-archivo">2. Subir un solo archivo</h3>
+<pre><code class="language-javascript">app.post(&quot;/upload&quot;, upload.single(&quot;archivo&quot;), (req, res) =&gt; {
+  res.send(&quot;Archivo subido correctamente&quot;);
+});
+</code></pre>
+<h3 id="3-subir-multiples-archivos-mismo-campo">3. Subir múltiples archivos (mismo campo)</h3>
+<pre><code class="language-javascript">app.post(&quot;/uploads&quot;, upload.array(&quot;imagenes&quot;, 5), (req, res) =&gt; {
+  res.send(&quot;Imágenes subidas correctamente&quot;);
+});
+</code></pre>
+<h3 id="4-subir-multiples-campos">4. Subir múltiples campos</h3>
+<pre><code class="language-javascript">app.post(
+  &quot;/profile&quot;,
+  upload.fields([
+    { name: &quot;avatar&quot;, maxCount: 1 },
+    { name: &quot;docs&quot;, maxCount: 3 },
+  ]),
+  (req, res) =&gt; {
+    res.send(&quot;Perfil con archivos subido&quot;);
+  }
+);
+</code></pre>
+<h3 id="5-almacenamiento-personalizado-con-nombres-unicos">5. Almacenamiento personalizado con nombres únicos</h3>
+<pre><code class="language-javascript">const storage = multer.diskStorage({
+  destination: (req, file, cb) =&gt; cb(null, &quot;uploads/&quot;),
+  filename: (req, file, cb) =&gt; cb(null, Date.now() + &quot;-&quot; + file.originalname),
+});
+const uploadCustom = multer({ storage });
+</code></pre>
+<hr>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="configuracion-basica-destino-directo-en-carpeta">Configuración básica (destino directo en carpeta):</h3>
+<pre><code class="language-javascript">const upload = multer({ dest: &quot;uploads/&quot; });
+</code></pre>
+<h3 id="subida-de-un-solo-archivo">Subida de un solo archivo:</h3>
+<pre><code class="language-javascript">upload.single(&quot;campoDelArchivo&quot;);
+</code></pre>
+<h3 id="subida-de-varios-archivos-mismo-campo">Subida de varios archivos (mismo campo):</h3>
+<pre><code class="language-javascript">upload.array(&quot;campo&quot;, maxCantidad);
+</code></pre>
+<h3 id="subida-de-varios-campos-diferentes">Subida de varios campos diferentes:</h3>
+<pre><code class="language-javascript">upload.fields([{ name: &quot;campo1&quot; }, { name: &quot;campo2&quot; }]);
+</code></pre>
+<h3 id="almacenamiento-en-disco-con-configuracion-personalizada">Almacenamiento en disco con configuración personalizada:</h3>
+<pre><code class="language-javascript">const storage = multer.diskStorage({
+  destination: (req, file, cb) =&gt; cb(null, &quot;uploads/&quot;),
+  filename: (req, file, cb) =&gt; cb(null, Date.now() + &quot;-&quot; + file.originalname),
+});
+const upload = multer({ storage });
+</code></pre>
+<h3 id="validacion-de-tipo-de-archivo-ejemplo-solo-imagenes">Validación de tipo de archivo (ejemplo: solo imágenes):</h3>
+<pre><code class="language-javascript">const upload = multer({
+  storage,
+  fileFilter: (req, file, cb) =&gt; {
+    if (file.mimetype.startsWith(&quot;image/&quot;)) cb(null, true);
+    else cb(new Error(&quot;Solo se permiten imágenes&quot;));
+  },
+});
+</code></pre>
+<h3 id="limite-de-tamano-maximo-ejemplo-2mb">Límite de tamaño máximo (ejemplo: 2MB):</h3>
+<pre><code class="language-javascript">const upload = multer({
+  storage,
+  limits: { fileSize: 2 * 1024 * 1024 },
+});
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-multer-y-para-que-se-utiliza-en-node-js">1. ¿Qué es Multer y para qué se utiliza en Node.js?</h3>
+<p>Multer es un middleware de Node.js que permite manejar <code>multipart/form-data</code>, principalmente usado para subir archivos desde formularios HTML a un servidor Express.</p>
+<h3 id="2-cual-es-la-diferencia-entre-upload-single-y-upload-array-en-multer">2. ¿Cuál es la diferencia entre <code>upload.single()</code> y <code>upload.array()</code> en Multer?</h3>
+<ul>
+<li><strong><code>upload.single(&quot;campo&quot;)</code></strong><br>
+permite subir un solo archivo de un campo específico, mientras que</li>
+<li><strong><code>upload.array(&quot;campo&quot;, max)</code></strong><br>
+permite subir múltiples archivos de un mismo campo, con un límite opcional.</li>
+</ul>
+<h3 id="3-que-tipos-de-almacenamiento-soporta-multer">3. ¿Qué tipos de almacenamiento soporta Multer?</h3>
+<p>Multer soporta almacenamiento en <strong>disco</strong> (<code>diskStorage</code>) y en <strong>memoria</strong> (<code>memoryStorage</code>), permitiendo guardar archivos en el servidor o procesarlos directamente en memoria.</p>
+<h3 id="4-como-validar-el-tipo-de-archivo-en-multer">4. ¿Cómo validar el tipo de archivo en Multer?</h3>
+<p>Usando la opción <code>fileFilter</code> en la configuración de Multer. Por ejemplo, para aceptar solo imágenes:</p>
+<pre><code class="language-javascript">fileFilter: (req, file, cb) =&gt; {
+  if (file.mimetype.startsWith(&quot;image/&quot;)) cb(null, true);
+  else cb(new Error(&quot;Solo imágenes&quot;));
+};
+</code></pre>
+<h3 id="5-como-limitar-el-tamano-maximo-de-los-archivos">5. ¿Cómo limitar el tamaño máximo de los archivos?</h3>
+<p>Usando la opción <code>limits</code>:</p>
+<pre><code class="language-javascript">limits: {
+  fileSize: 2 * 1024 * 1024;
+} // 2MB
+</code></pre>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-que-es-diskstorage-y-como-se-configura">6. ¿Qué es <code>diskStorage</code> y cómo se configura?</h3>
+<p><strong><code>diskStorage</code></strong> permite definir dónde se guardan los archivos y cómo se nombran:</p>
+<pre><code class="language-javascript">const storage = multer.diskStorage({
+  destination: (req, file, cb) =&gt; cb(null, &quot;uploads/&quot;),
+  filename: (req, file, cb) =&gt; cb(null, Date.now() + &quot;-&quot; + file.originalname),
+});
+</code></pre>
+<h3 id="7-cuando-es-recomendable-usar-memorystorage">7. ¿Cuándo es recomendable usar <code>memoryStorage</code>?</h3>
+<p>Cuando se necesita procesar los archivos en memoria antes de enviarlos a un servicio externo (por ejemplo, redimensionar imágenes antes de subir a la nube).</p>
+<h3 id="8-como-manejar-errores-de-multer-en-express">8. ¿Cómo manejar errores de Multer en Express?</h3>
+<p>Capturando errores en middleware o rutas:</p>
+<pre><code class="language-javascript">app.post(&quot;/upload&quot;, upload.single(&quot;archivo&quot;),
+  (req, res) =&gt; {...},
+  (err, req, res, next) =&gt; {res.status(400).send(err.message);
+});
+</code></pre>
+<h3 id="9-como-subir-multiples-campos-con-archivos-diferentes">9. ¿Cómo subir múltiples campos con archivos diferentes?</h3>
+<p>Usando <code>upload.fields()</code>:</p>
+<pre><code class="language-javascript">upload.fields([
+  { name: &quot;avatar&quot;, maxCount: 1 },
+  { name: &quot;docs&quot;, maxCount: 3 },
+]);
+</code></pre>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="10-se-puede-renombrar-archivos-automaticamente-en-multer-como">10. ¿Se puede renombrar archivos automáticamente en Multer? ¿Cómo?</h3>
+<p>Sí, dentro de <code>diskStorage</code> usando la función <code>filename</code>:</p>
+<pre><code class="language-javascript">filename: (req, file, cb) =&gt; cb(null, Date.now() + &quot;-&quot; + file.originalname);
+</code></pre>
+<h3 id="11-como-integrar-multer-con-servicios-en-la-nube">11. ¿Cómo integrar Multer con servicios en la nube?</h3>
+<p>Subiendo archivos a memoria (<code>memoryStorage</code>) y luego enviándolos a servicios como AWS S3, Cloudinary o Firebase Storage usando sus SDKs.</p>
+<h3 id="12-que-problemas-puede-causar-almacenar-archivos-grandes-en-disco-local">12. ¿Qué problemas puede causar almacenar archivos grandes en disco local?</h3>
+<p>Puede llenar rápidamente el almacenamiento del servidor, generar cuellos de botella en rendimiento y no ser escalable en entornos de producción.</p>
+<h3 id="13-como-combinar-multer-con-validacion-de-datos-de-formularios">13. ¿Cómo combinar Multer con validación de datos de formularios?</h3>
+<p>Usando librerías como <strong>Joi</strong> o <strong>Zod</strong> para validar los campos de texto, mientras Multer maneja los archivos.</p>
+<h3 id="14-que-consideraciones-de-seguridad-se-deben-tener-al-usar-multer">14. ¿Qué consideraciones de seguridad se deben tener al usar Multer?</h3>
+<p>Validar tipo de archivo y tamaño, no ejecutar archivos subidos, proteger rutas con autenticación, y evitar sobrescribir archivos existentes.</p>
+<h3 id="15-que-limitaciones-tiene-multer-frente-a-otros-manejadores-de-archivos-como-formidable-o-busboy">15. ¿Qué limitaciones tiene Multer frente a otros manejadores de archivos como Formidable o Busboy?</h3>
+<p>Multer es más simple y directo para Express, pero puede ser menos eficiente con cargas masivas de archivos grandes y no ofrece control avanzado de streaming de datos.</p>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bcrypt/">
+                Bcrypt
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/ci-dc/">
+                CI-DC
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/express-fileupload/">
+                express-fileupload
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/jwt/">
+                jsonwebtoken
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/multer/">
+                Multer
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/redux/">
+                Redux
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>
