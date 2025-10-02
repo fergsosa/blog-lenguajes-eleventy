@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bcrypt</title>
+    <meta name="description" content="Ideas principales de Bcrypt">
+    <link rel="icon" href="/blog-lenguajes-eleventy/img/icono.ico">
+    <link rel="stylesheet" href="/blog-lenguajes-eleventy/css/styles-post.css">
+  </head>
+  <body>
+    <header>
+  <nav class="navbar">
+  <div class="grir-parent">
+    <div class="grid-item">
+      <a href="/blog-lenguajes-eleventy/" class="logo"> FerBlog </a>
+      <div class="menu">
+          <a href="/blog-lenguajes-eleventy/">Inicio</a>
+          <a href="/blog-lenguajes-eleventy/blog">Blog</a>
+      </div>
+    </div>
+  </div>
+</nav>
+</header>
+    <main>
+      <h1 id="bcrypt">Bcrypt</h1>
+<p><img src="https://placehold.co/784x396" alt="Bcrypt"></p>
+<h2 id="que-es-bcrypt">¿Qué es Bcrypt?</h2>
+<p><strong>Bcrypt</strong> es una función de <em>hashing</em> diseñada para proteger contraseñas de manera segura.<br>
+Se diferencia de otros algoritmos como <strong>MD5</strong> o <strong>SHA-1</strong> porque:</p>
+<ul>
+<li><strong>Incluye un salt único</strong> por cada hash, evitando ataques de tablas rainbow.</li>
+<li><strong>Usa un factor de costo configurable (salt rounds)</strong> que ralentiza el proceso de cálculo, dificultando ataques de fuerza bruta.</li>
+<li>Está específicamente orientado a <strong>seguridad de contraseñas</strong>, no solo a verificación de integridad de datos.</li>
+</ul>
+<h3 id="1-para-que-se-usa">1. ¿Para qué se usa?</h3>
+<h4 id="bcrypt-se-utiliza-principalmente-para">Bcrypt se utiliza principalmente para:</h4>
+<ul>
+<li><strong>Almacenar contraseñas en bases de datos</strong> de forma segura.</li>
+<li><strong>Autenticación de usuarios</strong> en sistemas de login.</li>
+<li><strong>Protección de credenciales</strong> en aplicaciones web, móviles o APIs.</li>
+</ul>
+<h4 id="se-aplica-mejor-en">Se aplica mejor en:</h4>
+<ul>
+<li><strong>Aplicaciones con registro e inicio de sesión</strong>.</li>
+<li><strong>Sistemas con múltiples usuarios y roles</strong>.</li>
+<li><strong>Servicios que manejan datos sensibles</strong> y requieren evitar fugas de contraseñas.</li>
+</ul>
+<h3 id="2-que-puedo-construir-con-bcrypt">2. ¿Qué puedo construir con Bcrypt?</h3>
+<h4 id="con-bcrypt-puedes-implementar">Con Bcrypt puedes implementar:</h4>
+<ul>
+<li><strong>Módulos de autenticación</strong> seguros.</li>
+<li><strong>Gestión de usuarios</strong> en backends.</li>
+<li><strong>Mecanismos de verificación de credenciales</strong> en tiempo real.</li>
+</ul>
+<h3 id="3-cuando-es-mas-conveniente-usarlo">3. ¿Cuándo es más conveniente usarlo?</h3>
+<h4 id="es-recomendable-usar-bcrypt-cuando">Es recomendable usar Bcrypt cuando:</h4>
+<ul>
+<li><strong>La seguridad de contraseñas es crítica</strong>.</li>
+<li>Se requiere un <strong>balance entre seguridad y rendimiento</strong>.</li>
+<li>La aplicación <strong>maneja muchos usuarios</strong> y necesita resistencia frente a ataques comunes.</li>
+</ul>
+<h4 id="comparado-con-otras-opciones">Comparado con otras opciones:</h4>
+<ul>
+<li><strong>Argon2</strong> es más moderno y recomendado en entornos de máxima seguridad.</li>
+<li><strong>SHA-256</strong> y similares son más rápidos, pero <em>no son seguros para contraseñas</em>.</li>
+</ul>
+<h2 id="buenas-practicas-recomendadas">Buenas prácticas recomendadas</h2>
+<ul>
+<li><strong>Usar al menos 10 salt rounds</strong> (ajustar según capacidad del servidor).</li>
+<li><strong>Nunca guardar contraseñas en texto plano</strong>.</li>
+<li><strong>Mantener la lógica de hashing en utilidades independientes</strong>.</li>
+<li><strong>Combinar con otras medidas de seguridad</strong> como HTTPS, JWT, validación de inputs y limitación de intentos fallidos.</li>
+<li><strong>Actualizar la dificultad periódicamente</strong> según aumente la potencia del hardware disponible.</li>
+</ul>
+<hr>
+<h2 id="resumen-rapido">Resumen rápido</h2>
+<h4 id="fortalezas-principales">✅ Fortalezas principales:</h4>
+<ul>
+<li>Seguro frente a ataques de fuerza bruta y tablas rainbow.</li>
+<li>Configuración flexible mediante salt rounds.</li>
+<li>Ampliamente soportado en múltiples lenguajes y frameworks.</li>
+</ul>
+<h4 id="debilidades-principales">⚠️ Debilidades principales:</h4>
+<ul>
+<li>Más lento que otros algoritmos por diseño.</li>
+<li>No es el estándar más reciente (Argon2 lo supera en ciertos escenarios).</li>
+</ul>
+<h4 id="cuando-usarlo">🛠️ Cuándo usarlo:</h4>
+<ul>
+<li>Para proteger contraseñas en bases de datos.</li>
+<li>En sistemas de autenticación de usuarios.</li>
+<li>En aplicaciones donde la seguridad es prioritaria.</li>
+</ul>
+<h4 id="cuando-evitarlo">🚫 Cuándo evitarlo:</h4>
+<ul>
+<li>En proyectos que requieren velocidad extrema en el procesamiento.</li>
+<li>Cuando tu organización ya ha adoptado Argon2 como estándar.</li>
+</ul>
+<hr>
+<h1 id="temas">Temas</h1>
+<ul>
+<li><a href="#que-es-Bcrypt">inicio</a></li>
+<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#snippets-rapidos">Snippets rápidos</a></li>
+<li><a href="#comandos">Comandos</a></li>
+<li><a href="#conceptos-claves">Conceptos Claves</a></li>
+<li><a href="#otros-articulos">Otros artículos</a></li>
+</ul>
+<hr>
+<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
+<p>Antes de usar <strong>Bcrypt</strong>, es importante conocer algunos conceptos clave
+que se relacionan directamente con su funcionamiento:</p>
+<h3 id="hashing">Hashing</h3>
+<p>Proceso unidireccional que convierte un dato en una cadena de
+longitud fija. A diferencia de la encriptación, no se puede revertir
+al valor original.</p>
+<h3 id="salt">Salt</h3>
+<p>Valor aleatorio que se añade a la contraseña antes de generar el
+hash. Esto garantiza que dos contraseñas iguales no produzcan el
+mismo hash.</p>
+<h3 id="salt-rounds-factor-de-costo">Salt Rounds (factor de costo)</h3>
+<p>Número de veces que Bcrypt aplica el proceso de hashing. A mayor
+número, más seguro, pero también más lento el cálculo.</p>
+<h3 id="comparacion-de-hashes">Comparación de hashes</h3>
+<p>Proceso que permite verificar si una contraseña ingresada
+corresponde al hash almacenado.</p>
+<h3 id="fuerza-bruta">Fuerza bruta</h3>
+<p>Método de ataque donde un sistema prueba múltiples combinaciones
+posibles hasta encontrar la contraseña correcta. Bcrypt ayuda a
+mitigarlo al ser computacionalmente costoso.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
+<h3 id="1-node-js-con-la-libreria-bcrypt">1. Node.js con la librería <code>bcrypt</code></h3>
+<ul>
+<li>Permite integrar Bcrypt fácilmente en proyectos backend.</li>
+<li>Se instala con:</li>
+</ul>
+<pre><code class="language-bash">npm install bcrypt
+</code></pre>
+<ul>
+<li>Ejemplo básico:</li>
+</ul>
+<pre><code class="language-javascript">const bcrypt = require(&quot;bcrypt&quot;);
+const hash = await bcrypt.hash(&quot;miClave123&quot;, 10);
+</code></pre>
+<h3 id="2-libreria-bcryptjs-alternativa-en-javascript">2. Librería <code>bcryptjs</code> (alternativa en JavaScript)</h3>
+<ul>
+<li>Implementación pura en JavaScript, sin dependencias nativas.\</li>
+<li>Ideal para entornos donde <code>bcrypt</code> no compila bien.\</li>
+<li>Se instala con:</li>
+</ul>
+<pre><code class="language-bash">npm install bcryptjs
+</code></pre>
+<ul>
+<li>Ejemplo básico:</li>
+</ul>
+<pre><code class="language-javascript">const bcrypt = require(&quot;bcryptjs&quot;);
+const hash = await bcrypt.hash(&quot;miClave123&quot;, 10);
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="snippets-rapidos">Snippets rápidos</h1>
+<p>Fragmentos de código que puedes reutilizar frecuentemente con
+<strong>Bcrypt</strong>:</p>
+<h3 id="importar-libreria">Importar librería</h3>
+<pre><code class="language-javascript">const bcrypt = require(&quot;bcrypt&quot;);
+</code></pre>
+<h3 id="generar-hash">Generar hash</h3>
+<pre><code class="language-javascript">const hash = await bcrypt.hash(&quot;miClave123&quot;, 10);
+</code></pre>
+<h3 id="comparar-contrasena">Comparar contraseña</h3>
+<pre><code class="language-javascript">const isMatch = await bcrypt.compare(&quot;miClave123&quot;, hash);
+</code></pre>
+<h3 id="generar-salt-manualmente">Generar salt manualmente</h3>
+<pre><code class="language-javascript">const salt = await bcrypt.genSalt(12);
+const hash = await bcrypt.hash(&quot;otraClave456&quot;, salt);
+</code></pre>
+<h3 id="verificar-coincidencia">Verificar coincidencia</h3>
+<pre><code class="language-javascript">if (await bcrypt.compare(&quot;otraClave456&quot;, hash)) {
+  console.log(&quot;✅ Coinciden&quot;);
+} else {
+  console.log(&quot;❌ No coinciden&quot;);
+}
+</code></pre>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="comandos">Comandos</h1>
+<h3 id="1-generar-hash-con-numero-de-salt-rounds">1. <strong>Generar hash con número de salt rounds</strong></h3>
+<pre><code class="language-javascript">const hash = await bcrypt.hash(&quot;password&quot;, 10);
+</code></pre>
+<ul>
+<li><code>&quot;password&quot;</code><br>
+contraseña original.</li>
+<li><code>10</code><br>
+número de salt rounds (factor de costo).</li>
+</ul>
+<h3 id="2-generar-salt-y-luego-el-hash">2. <strong>Generar salt y luego el hash</strong></h3>
+<pre><code class="language-javascript">const salt = await bcrypt.genSalt(12);
+const hash = await bcrypt.hash(&quot;password&quot;, salt);
+</code></pre>
+<ul>
+<li><code>genSalt(12)</code> → crea un salt con un costo de 12.</li>
+<li>Se usa luego en <code>hash()</code>.</li>
+</ul>
+<h3 id="3-comparar-contrasena-con-hash-almacenado">3. <strong>Comparar contraseña con hash almacenado</strong></h3>
+<pre><code class="language-javascript">const isMatch = await bcrypt.compare(&quot;password&quot;, hash);
+</code></pre>
+<p>Devuelve <code>true</code> si coinciden, <code>false</code> si no.</p>
+<h3 id="4-version-sincrona-bloqueante-solo-si-es-necesario">4. <strong>Versión síncrona (bloqueante, solo si es necesario)</strong></h3>
+<pre><code class="language-javascript">const hash = bcrypt.hashSync(&quot;password&quot;, 10);
+const isMatch = bcrypt.compareSync(&quot;password&quot;, hash);
+</code></pre>
+<p>Útil en scripts pequeños o sin operaciones asíncronas.</p>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="conceptos-claves">Conceptos Claves</h1>
+<h2 id="basico">🟢 Básico</h2>
+<h3 id="1-que-es-bcrypt-y-para-que-se-utiliza">1. ¿Qué es Bcrypt y para qué se utiliza?</h3>
+<p>Bcrypt es una función de hashing diseñada específicamente para proteger
+contraseñas. Se utiliza en aplicaciones web, móviles y sistemas que
+requieren almacenamiento seguro de credenciales.</p>
+<h3 id="2-cual-es-la-diferencia-entre-hashing-y-encriptacion">2. ¿Cuál es la diferencia entre hashing y encriptación?</h3>
+<ul>
+<li><strong>Hashing:</strong><br>
+Es un proceso unidireccional, no reversible, ideal para
+almacenar contraseñas.</li>
+<li><strong>Encriptación:</strong><br>
+Es reversible, diseñada para recuperar el texto
+original mediante una clave.</li>
+</ul>
+<h3 id="3-que-son-los-salt-rounds-en-bcrypt">3. ¿Qué son los &quot;salt rounds&quot; en Bcrypt?</h3>
+<p>Son el número de iteraciones que el algoritmo aplica al hash. A mayor
+número, mayor seguridad, pero también más consumo de recursos y tiempo
+de procesamiento.</p>
+<h3 id="4-por-que-es-importante-usar-un-salt-en-el-hash">4. ¿Por qué es importante usar un &quot;salt&quot; en el hash?</h3>
+<p>El salt evita que contraseñas iguales produzcan el mismo hash, lo que
+protege contra ataques con tablas rainbow.</p>
+<h3 id="5-como-se-genera-un-hash-basico-con-bcrypt-en-node-js">5. ¿Cómo se genera un hash básico con Bcrypt en Node.js?</h3>
+<pre><code class="language-javascript">const bcrypt = require(&quot;bcrypt&quot;);
+const hash = await bcrypt.hash(&quot;password123&quot;, 10);
+</code></pre>
+<hr>
+<h2 id="intermedio">🟡 Intermedio</h2>
+<h3 id="6-como-se-compara-una-contrasena-con-su-hash-en-bcrypt">6. ¿Cómo se compara una contraseña con su hash en Bcrypt?</h3>
+<pre><code class="language-javascript">const isMatch = await bcrypt.compare(&quot;password123&quot;, hash);
+</code></pre>
+<p>Retorna <code>true</code> si coinciden, <code>false</code> en caso contrario.</p>
+<h3 id="7-que-pasa-si-se-usan-muy-pocos-salt-rounds-ej-1-o-2">7. ¿Qué pasa si se usan muy pocos salt rounds (ej. 1 o 2)?</h3>
+<p>El proceso de hashing se vuelve muy rápido y fácil de romper con ataques
+de fuerza bruta.</p>
+<h3 id="8-que-pasa-si-se-usan-demasiados-salt-rounds-ej-20">8. ¿Qué pasa si se usan demasiados salt rounds (ej. 20+)?</h3>
+<p>El hash se vuelve extremadamente seguro, pero también muy lento,
+afectando el rendimiento de la aplicación.</p>
+<h3 id="9-que-diferencia-hay-entre-bcrypt-y-bcryptjs">9. ¿Qué diferencia hay entre <code>bcrypt</code> y <code>bcryptjs</code>?</h3>
+<ul>
+<li><strong>bcrypt:</strong><br>
+Depende de compilaciones nativas, más rápido.</li>
+<li><strong>bcryptjs:</strong><br>
+Implementación pura en JavaScript, más portable pero
+algo más lenta.</li>
+</ul>
+<h3 id="10-por-que-nunca-se-deben-almacenar-contrasenas-en-texto-plano">10. ¿Por qué nunca se deben almacenar contraseñas en texto plano?</h3>
+<p>Porque si la base de datos es comprometida, las contraseñas quedan
+expuestas sin protección, generando un riesgo crítico de seguridad.</p>
+<hr>
+<h2 id="avanzado">🔴 Avanzado</h2>
+<h3 id="11-como-garantizar-que-un-sistema-con-bcrypt-siga-siendo-seguro-en-el-tiempo">11. ¿Cómo garantizar que un sistema con Bcrypt siga siendo seguro en el tiempo?</h3>
+<ul>
+<li>Aumentar periódicamente los salt rounds.\</li>
+<li>Usar prácticas seguras de gestión de credenciales.\</li>
+<li>Mantener librerías actualizadas.</li>
+</ul>
+<h3 id="12-que-sucede-si-se-genera-un-nuevo-hash-para-la-misma-contrasena">12. ¿Qué sucede si se genera un nuevo hash para la misma contraseña?</h3>
+<p>El hash será diferente porque el salt generado es único en cada ocasión.</p>
+<h3 id="13-como-combinar-bcrypt-con-otras-medidas-de-seguridad">13. ¿Cómo combinar Bcrypt con otras medidas de seguridad?</h3>
+<ul>
+<li>Usar HTTPS para transmitir credenciales.</li>
+<li>Implementar autenticación basada en tokens (ej. JWT).</li>
+<li>Limitar intentos de login (rate limiting).</li>
+</ul>
+<h3 id="14-cuando-conviene-usar-argon2-en-lugar-de-bcrypt">14. ¿Cuándo conviene usar Argon2 en lugar de Bcrypt?</h3>
+<p>Argon2 es más moderno y resistente a ataques de hardware especializado
+(como GPUs o ASICs). Conviene en entornos que requieren máxima
+seguridad.</p>
+<h3 id="15-cual-es-una-buena-practica-para-manejar-bcrypt-en-proyectos-grandes">15. ¿Cuál es una buena práctica para manejar Bcrypt en proyectos grandes?</h3>
+<p>Centralizar la lógica de hashing en un servicio o módulo de utilidades,
+evitando duplicar código y asegurando un control unificado sobre la
+configuración de seguridad.</p>
+<p><a href="#temas">🔼 temas</a></p>
+
+    </main>
+    <hr>
+    <aside>
+      <h2 id="otros-articulos">OTROS ARTÍCULOS</h2>
+      <div class="otros-articulos">
+        <ul>
+          <h4 id="lenguajes"> 💻 Lenguajes </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/HTML/">
+                HTML
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/JavaScript/">
+                JavaScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/TypeScript/">
+                TypeScript
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Markdown/">
+                Markdown
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="frameworks"> ⚛️ Frameworks  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/React/">
+                React
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Eleventy/">
+                Eleventy
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="backend"> 🌐 Backend  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Node/">
+                Node.js
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Express/">
+                Express
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="bases-de-datos"> 🗄️ Bases de Datos </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Base-de-Datos/">
+                Base de Datos
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MySQL/">
+                MySQL
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/MongoDB/">
+                MongoDB
+              </a>
+            </li>
+          
+        </ul>
+        <ul>
+          <h4 id="herramientas"> 🛠️ Herramientas  </h4>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bcrypt/">
+                Bcrypt
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Figma/">
+                Figma
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/axios/">
+                Axios
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/jwt/">
+                jsonwebtoken
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/redux/">
+                Redux
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/zod/">
+                Zod
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Git/">
+                Git
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/GitHub/">
+                GitHub
+              </a>
+            </li>
+          
+            <li>
+              <a href="/blog-lenguajes-eleventy/blog/Bash-Terminal/">
+                Terminal Bash
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+
+    </aside>
+    <footer>
+  <p>Diseño hecho ©2024 Fernando Sosa</p>
+</footer>
+    <script src="/blog-lenguajes-eleventy/js/main.js" type="module"></script>
+  </body>
+</html>

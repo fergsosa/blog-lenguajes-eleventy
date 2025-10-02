@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Redux
 # img: /img/portada/git.avif
-img: https://placehold.co/784x396
+# img: https://placehold.co/784x396
 description: Ideas principales de Redux
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
