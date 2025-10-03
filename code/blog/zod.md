@@ -1,8 +1,7 @@
 ---
 layout: layout-post.njk
 title: Zod
-# img: /img/portada/git.avif
-# img: https://placehold.co/784x396
+img: /img/portada/zod.avif
 description: Ideas principales de Zod
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
@@ -10,7 +9,7 @@ date: "2020-12-11"
 
 # {{title}}
 
-![{{title}}](https://placehold.co/784x396)
+![img]({{img}})
 
 Zod es una librería de validación y definición de esquemas para **TypeScript y JavaScript**. Permite describir la forma de datos (objetos, arrays, strings, números, etc.) y validarlos de manera **segura, tipada y declarativa**.  
 A diferencia de otras alternativas, Zod no solo valida en tiempo de ejecución, sino que también **infiera automáticamente los tipos de TypeScript** a partir de los esquemas.

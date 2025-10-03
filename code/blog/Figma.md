@@ -1,8 +1,7 @@
 ---
 layout: layout-post.njk
 title: Figma
-# img: /img/portada/git.avif
-# img: https://placehold.co/784x396
+img: /img/portada/figma.avif
 description: Ideas principales de Figma
 tags: ["blog", "herramientas"]
 date: "2020-12-11"

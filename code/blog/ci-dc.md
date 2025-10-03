@@ -1,8 +1,7 @@
 ---
 layout: layout-post.njk
 title: CI-DC
-# img: /img/portada/git.avif
-# img: https://placehold.co/784x396
+img: /img/portada/ci-dc.avif
 description: Ideas principales de CI-DC
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
@@ -10,7 +9,7 @@ date: "2020-12-11"
 
 # {{title}}
 
-![{{title}}](https://placehold.co/784x396)
+![img]({{img}})
 
 ## ¿Qué es {{title}}?
 

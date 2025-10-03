@@ -1,8 +1,7 @@
 ---
 layout: layout-post.njk
 title: Axios
-# img: /img/portada/git.avif
-# img: https://placehold.co/784x396
+img: /img/portada/axios.avif
 description: Ideas principales de Axios
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
@@ -10,7 +9,7 @@ date: "2020-12-11"
 
 # {{title}}
 
-![{{title}}](https://placehold.co/784x396)
+![img]({{img}})
 
 [temas](#temas)
 
