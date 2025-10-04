@@ -75,7 +75,7 @@ body {
 }
 
 a {
-  max-width: max-content;
+  /* max-width: max-content; */
   text-decoration: none;
   color: var(--text-link);
   /* transition: all 0.5s ease-out; */
