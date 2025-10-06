@@ -112,7 +112,7 @@ Fin
 <h1 id="temas">Temas</h1>
 <ul>
 <li><a href="#que-es-logica-de-programacion">inicio</a></li>
-<li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
+<li><a href="#conceptos-fundamentales">Conceptos Fundamentales</a></li>
 <li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
 <li><a href="#snippets-rapidos">Snippets rápidos</a></li>
 <li><a href="#comandos">Comandos</a></li>
@@ -120,40 +120,105 @@ Fin
 <li><a href="#otros-articulos">Otros artículos</a></li>
 </ul>
 <hr>
-<h1 id="conceptos-relacionados">Conceptos relacionados</h1>
-<p>Antes o junto al estudio de un lenguaje, es importante dominar los siguientes fundamentos:</p>
-<h3 id="algoritmo">Algoritmo:</h3>
-<p>Conjunto de pasos ordenados y finitos para resolver un problema.</p>
-<h3 id="pseudocodigo">Pseudocódigo:</h3>
-<p>Representación textual y simplificada de un algoritmo, sin necesidad de un lenguaje formal.</p>
-<h3 id="diagramas-de-flujo">Diagramas de flujo:</h3>
-<p>Representación gráfica de un proceso usando símbolos estandarizados (inicio, proceso, decisión, etc.).</p>
-<h3 id="estructuras-de-control">Estructuras de control:</h3>
-<table>
-<thead>
-<tr>
-<th>Estructura de control</th>
-<th>descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Secuencia</strong></td>
-<td>pasos lineales.</td>
-</tr>
-<tr>
-<td><strong>Condicionales (if, else)</strong></td>
-<td>toma de decisiones.</td>
-</tr>
-<tr>
-<td><strong>Bucles (for, while, do-while)</strong></td>
-<td>repetición de procesos.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="variables-y-constantes">Variables y constantes:</h3>
-<p>Espacios en memoria para almacenar valores temporales o fijos.</p>
-<h3 id="operadores">Operadores:</h3>
+<h1 id="conceptos-fundamentales">Conceptos Fundamentales</h1>
+<h2 id="programacion-y-programador">Programación y Programador</h2>
+<p><strong>Programación</strong> es el proceso de crear instrucciones que le dicen a una <strong>computadora</strong> cómo realizar una <strong>tarea específica</strong>. Estas instrucciones se escriben en un lenguaje que la computadora pueda entender, conocido como lenguaje de programación. La <strong>programación</strong> implica la resolución de problemas, el diseño de algoritmos y la traducción de esos algoritmos en un código que la máquina pueda ejecutar.</p>
+<p>Ser un <strong>programador</strong> significa ser la persona que diseña, escribe, prueba y mantiene el <strong>código</strong> que permite que los <strong>programas de computadora</strong> funcionen. Los <strong>programadores</strong> no solo crean soluciones técnicas, sino que también aplican lógica y pensamiento crítico para resolver problemas de manera eficiente, traduciendo ideas abstractas en instrucciones precisas que una computadora puede seguir</p>
+<h3 id="pensamiento-computacional">Pensamiento Computacional</h3>
+<p>Es un enfoque de <strong>resolución de problemas</strong> que implica <strong>descomponer</strong> un <strong>problema complejo</strong> en partes más pequeñas y manejables, identificar patrones, abstraer losaspectos esenciales, y desarrollar algoritmos o instrucciones paso a paso para resolverlo.
+Este tipo de <strong>pensamiento</strong> no se limita a la <strong>programación</strong>, sino que puede aplicarse en diversas áreas para analizar y abordar <strong>problemas</strong> de manera lógica y eficiente, similar acómo lo haría una <strong>computadora</strong>.</p>
+<ul>
+<li>Descomposición de problemas</li>
+<li>Identificación de patrones</li>
+<li>Enfoque en lo esencial (Abstracción)</li>
+<li>Desarrollo de algoritmos</li>
+<li>Análisis y mejora de soluciones (Evaluación)</li>
+</ul>
+<h3 id="que-es-un-patron">¿Qué es un patrón?</h3>
+<p>Un patrón es una repetición identificable y predecible de elementos o características en un conjunto de datos, situaciones o fenómenos.</p>
+<ul>
+<li><strong>Repetición:</strong><br>
+Los patrones son secuencias o características que se repiten de manera constante.</li>
+<li><strong>Discernibilidad:</strong><br>
+Los patrones pueden ser reconocidos y destacados dentro de un conjunto de datos o situaciones.</li>
+<li><strong>Predictibilidad:</strong><br>
+Los patrones permiten anticipar comportamientos o resultados futuros basados en observaciones anteriores.</li>
+<li><strong>Regularidad:</strong><br>
+Los patrones presentan una disposición consistente de sus elementos a lo largo del tiempo o del espacio.</li>
+<li><strong>Abstracción:</strong><br>
+Los patrones se pueden simplificar para representar información de forma más clara y manejable</li>
+</ul>
+<h3 id="que-es-un-algoritmo">¿Qué es un algoritmo?</h3>
+<p>Un algoritmo es un conjunto de instrucciones precisas y ordenadas que se siguen para realizar una tarea específica o resolver un problema.</p>
+<ul>
+<li><strong>Secuencia de pasos:</strong><br>
+Una serie lógica de pasos que deben seguirse en un orden específico para lograr un objetivo.</li>
+<li><strong>Precisión:</strong><br>
+Cada paso debe ser definido y comprensible para una ejecución precisa y consistente.</li>
+<li><strong>Finitud:</strong><br>
+Los algoritmos deben tener un número finito de pasos, terminando una vez alcanzado el objetivo o después de un número determinado de pasos.</li>
+<li><strong>Solución de problemas:</strong><br>
+Diseñados para resolver problemas específicos.</li>
+<li><strong>Eficiencia:</strong><br>
+Un buen algoritmo no solo logra el resultado deseado, sino que lo hace de manera eficiente, optimizando el uso de recursos como tiempo y memoria</li>
+</ul>
+<h2 id="analisis-de-un-problema">Analisis de un problema</h2>
+<p>Es el proceso de comprender completamente un <strong>problema</strong> antes de <strong>diseñar una solución</strong>. Implica descomponer el problema en partes más manejables, identificar sus causas subyacentes y establecer un enfoque claro para resolverlo de manera efectiva.</p>
+<ol>
+<li><strong><em>Identificar y comprender el problema</em></strong></li>
+<li><strong><em>Establecer objetivos claros</em></strong></li>
+<li><strong><em>Identificar requisitos y restricciones</em></strong></li>
+<li><strong><em>Analizar las causas subyacentes</em></strong></li>
+<li><strong><em>Explorar soluciones alternativas</em></strong></li>
+<li><strong><em>Establecer criterios de éxito</em></strong></li>
+</ol>
+<ul>
+<li>
+<p><strong>1. Identificar el problema</strong><br>
+Es fundamental entender en qué consiste exactamente el problema. Esto implica identificar todos los detalles relevantes, las entradas y salidas esperadas, así como cualquier restricción o limitación que pueda
+existir.</p>
+</li>
+<li>
+<p><strong>2. Establecer objetivos</strong><br>
+¿Cuál es el propósito final de resolver este problema? Definir claramente los objetivos ayuda a mantener el enfoque y a diseñar una solución efectiva que cumpla con las expectativas.</p>
+</li>
+<li>
+<p><strong>3. Requisitos y restricciones</strong><br>
+Es importante tener en cuenta las necesidades y expectativas de los usuarios o stakeholders involucrados en el problema. ¿Qué funciones o características son esenciales para ellos?</p>
+</li>
+<li>
+<p><strong>4. Causas subyacentes</strong><br>
+En ocasiones, un problema puede ser solo un síntoma de una causa subyacente más profunda. Identificar y abordar esta causa raíz es fundamental para evitar que el problema resurja en el futuro.</p>
+</li>
+<li>
+<p><strong>5. Soluciones alternativas</strong><br>
+Antes de comprometerse con una solución específica, es útil considerar diferentes enfoques y evaluar sus ventajas y desventajas. Esto puede ayudar a encontrar la mejor manera de abordar el problema.</p>
+</li>
+<li>
+<p><strong>6. Criterios de éxito</strong><br>
+Definir claramente lo que constituirá una solución exitosa es crucial para evaluar el progreso y el rendimiento del programa una vez implementado. Estos criterios pueden incluir medidas de rendimiento, calidad, eficiencia, etc</p>
+</li>
+</ul>
+<h2 id="estructuras-de-control">Estructuras de control</h2>
+<p>Las estructuras de control son un conjunto de instrucciones en un programa que permiten alterar el flujo de ejecución de las operaciones, es decir, dictan cómo y cuándo se deben ejecutar las distintas partes del código. Estas estructuras son fundamentales en la programación, ya que sin ellas, los programas seguirían una ejecución secuencial y lineal, sin poder realizar decisiones, repeticiones o desviaciones en el flujo del programa</p>
+<ul>
+<li>
+<h3 id="estructuras-condicionales">Estructuras Condicionales</h3>
+Las estructuras condicionales permiten que el programa tome decisiones y ejecute ciertas instrucciones solo si se cumplen ciertas condiciones. Esto se logra utilizando sentencias como if, else if (o elif en algunos lenguajes), y else.</li>
+<li>
+<h3 id="estructuras-de-iteracion">Estructuras de Iteración</h3>
+Los bucles son estructuras de control que permiten repetir una o varias instrucciones múltiples veces, hasta que se cumpla una condición específica. Existen varios tipos de bucles, siendo los más comunes while, for, y do-while</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<p>Son contenedores que almacenan datos que pueden cambiar a lo largo del programa. Se declaran, se les asignan valores y se utilizan para realizar operaciones.</p>
+<ul>
+<li>
+<h3 id="tipo-de-datos">Tipo de Datos</h3>
+<p>Definen la naturaleza de los valores que pueden ser manipulados en un programa. Los tipos más comunes incluyen enteros, decimales, cadenas de texto y booleanos.</p>
+</li>
+<li>
+<h3 id="operaciones">Operaciones</h3>
+<p>Permiten manipular y comparar los datos almacenados en variables para producir nuevos valores, tomar decisiones y controlar el flujo del programa</p>
 <table>
 <thead>
 <tr>
@@ -176,13 +241,136 @@ Fin
 </tr>
 </tbody>
 </table>
-<h3 id="funciones-procedimientos">Funciones/procedimientos:</h3>
-<p>Bloques de instrucciones que cumplen una tarea específica y reutilizable.</p>
-<h3 id="entrada-proceso-salida-e-p-s">Entrada/Proceso/Salida (E-P-S):</h3>
-<p>Patrón fundamental para diseñar programas.</p>
-<h3 id="depuracion">Depuración:</h3>
-<p>Técnica de identificar y corregir errores en un algoritmo o programa.</p>
-<p><a href="#temas">🔼 temas</a></p>
+</li>
+<li>
+<h3 id="funciones">Funciones</h3>
+<p>Las funciones o procedimientos son bloques de código que realizan una tarea específica y que pueden ser reutilizados a lo largo del programa. Su uso permite mejorar la organización, la legibilidad y la mantenibilidad del código.</p>
+</li>
+<li>
+<h3 id="modularidad">Modularidad</h3>
+<p>La modularidad se refiere a la práctica de dividir un programa en partes más pequeñas y manejables, llamadas módulos o funciones. Esto tiene varios beneficios</p>
+</li>
+</ul>
+<h2 id="estructura-de-datos">Estructura de Datos:</h2>
+<p>La Estructura de Datos en programación es una manera organizada y eficiente de almacenar, manipular y acceder a datos en una computadora. Las estructuras de datos permiten que los programas manejen grandes cantidades de información de manera eficiente y efectiva, facilitando operaciones como búsqueda, inserción, eliminación y modificación de datos</p>
+<ul>
+<li>
+<p><strong>Arreglos (Arrays):</strong><br>
+Colección de elementos del mismo tipo almacenados en ubicaciones de memoria contiguas. Permiten acceso rápido por índice.</p>
+</li>
+<li>
+<p><strong>Listas Enlazadas (Linked Lists):</strong><br>
+Una serie de nodos donde cada nodo contiene un dato y una referencia al siguiente nodo en la secuencia.</p>
+</li>
+<li>
+<p><strong>Pilas (Stacks):</strong><br>
+Colección de elementos que sigue el principio LIFO (Last In, First Out).</p>
+</li>
+<li>
+<p><strong>Colas (Queues):</strong><br>
+Colección de elementos que sigue el principio FIFO (First In, First Out).</p>
+</li>
+<li>
+<p><strong>Árboles (Trees):</strong><br>
+Estructura jerárquica donde cada nodo tiene un valor y referencia a uno o más nodos hijos. Un tipo común es el Árbol Binario.</p>
+</li>
+<li>
+<p><strong>Grafos (Graphs):</strong><br>
+Conjunto de nodos conectados por aristas (edges), útil para representar relaciones complejas entre datos.</p>
+</li>
+<li>
+<p><strong>Hash Tables:</strong><br>
+Estructura que almacena pares clave-valor, permitiendo un acceso rápido a los datos a través de una función hash</p>
+</li>
+</ul>
+<h2 id="paradigmas-de-programacion">Paradigmas de programación</h2>
+<p>Un paradigma de programación es un enfoque o estilo particular de programación que guía y estructura el desarrollo de software. Un paradigma define la manera en que los programadores conceptualizan y organizan los problemas que deben resolver, y dicta cómo se deben estructurar las soluciones en términos de lenguajes de programación y metodologías.</p>
+<ul>
+<li>
+<p><strong>Programación Imperativa:</strong><br>
+Enfocada en ejecutar instrucciones secuenciales que modifican el estado del
+programa.</p>
+</li>
+<li>
+<p><strong>Programación Orientada a Objetos (OOP):</strong><br>
+Organiza el software en objetos que encapsulan datos y
+comportamientos. <em>Ejemplos:</em> Java</p>
+</li>
+<li>
+<p><strong>Programación Funcional:</strong><br>
+Se basa en funciones puras, evitando el estado mutable y los efectos secundarios.</p>
+</li>
+<li>
+<p><strong>Programación Declarativa:</strong><br>
+El programador especifica qué se debe hacer, no cómo hacerlo. Ejemplos: SQL</p>
+</li>
+</ul>
+<h2 id="pseudocodigo">PseudoCódigo</h2>
+<p>El pseudocódigo es una forma de escribir algoritmos utilizando un lenguaje informal y cercano al lenguaje humano, sin seguir la sintaxis específica de ningún lenguaje de programación en particular. Es una herramienta útil para planificar y diseñar soluciones antes de implementarlas en un código real.</p>
+<ul>
+<li>
+<p><strong>Lenguaje informal:</strong><br>
+Utiliza un lenguaje que es fácil de entender, parecido al lenguaje natural.</p>
+</li>
+<li>
+<p><strong>Independiente de la sintaxis:</strong><br>
+No sigue las reglas de sintaxis de ningún lenguaje de programación específico.</p>
+</li>
+<li>
+<p><strong>Facilita la planificación:</strong><br>
+Ayuda a diseñar y organizar el algoritmo antes de escribir el código.</p>
+</li>
+<li>
+<p><strong>Accesible para todos:</strong><br>
+Puede ser entendido tanto por programadores como por personas sin conocimientos técnicos.</p>
+</li>
+<li>
+<p><strong>Estructuras lógicas:</strong><br>
+Emplea estructuras como condicionales, bucles y asignaciones de manera simple y directa.</p>
+</li>
+<li>
+<p><strong>Enfoque en la lógica:</strong><br>
+Se concentra en la lógica y secuencia de pasos más que en detalles técnicos</p>
+</li>
+</ul>
+<blockquote>
+<p>Representación textual y simplificada de un algoritmo, sin necesidad de un lenguaje formal.</p>
+</blockquote>
+<h2 id="diagramas-de-flujo">Diagramas de Flujo</h2>
+<p>Un diagrama de flujo es una representación gráfica de un
+proceso o algoritmo, donde se utilizan símbolos y flechas para
+mostrar la secuencia de pasos y la relación entre ellos. Es una
+herramienta visual que facilita la comprensión, el análisis y la
+comunicación de procesos complejos.</p>
+<ul>
+<li>
+<p><strong>Visualización clara:</strong><br>
+Representa procesos de manera visual, lo que facilita la comprensión.</p>
+</li>
+<li>
+<p><strong>Símbolos estándar:</strong><br>
+Usa símbolos estandarizados, como óvalos para inicio/fin, rectángulos para procesos, rombos para decisiones, y flechas para indicar el flujo.</p>
+</li>
+<li>
+<p><strong>Secuencia de pasos:</strong><br>
+Muestra el orden en que se deben realizar los pasos de un proceso.</p>
+</li>
+<li>
+<p><strong>Identificación de problemas:</strong><br>
+Ayuda a identificar cuellos de botella, redundancias y otros problemas en un proceso.</p>
+</li>
+<li>
+<p><strong>Facilita la comunicación:</strong><br>
+Es útil para explicar procesos a personas de diferentes niveles de conocimiento.</p>
+</li>
+<li>
+<p><strong>Aplicaciones variadas:</strong><br>
+Se usa en diferentes campos, como programación, ingeniería, administración y más.</p>
+</li>
+</ul>
+<blockquote>
+<p>Representación gráfica de un proceso usando símbolos estandarizados (inicio, proceso, decisión, etc.).</p>
+</blockquote>
 <hr>
 <h1 id="herramientas-recomendadas">Herramientas recomendadas</h1>
 <p>Aunque la lógica puede practicarse con papel y lápiz, existen herramientas que facilitan su aprendizaje y práctica:</p>
@@ -292,7 +480,7 @@ FinPara
    contador = contador + 1
 FinMientras
 </code></pre>
-<h3 id="funciones-procedimientos-2">Funciones/Procedimientos</h3>
+<h3 id="funciones-procedimientos">Funciones/Procedimientos</h3>
 <p>reutilizan bloques de lógica.</p>
 <pre><code class="language-plaintext">Procedimiento Saludar()
    Escribir &quot;Hola!&quot;

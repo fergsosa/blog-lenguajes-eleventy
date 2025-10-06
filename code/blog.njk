@@ -4,6 +4,13 @@ title: Página de Contacto
 description: Meta descripción de la página de contacto
 ---
 
+<section class="">
+<h1> 💻 blog </h1>
+  {% for post in collections.blog  %}
+    <p>{{ post.data.title }}</p>
+  {% endfor %}
+</section>
+
 <section class="blog c-visible">
 <h1> 💻 Lenguajes y Sintaxis </h1>
   {% for post in collections.lenguajes  %}

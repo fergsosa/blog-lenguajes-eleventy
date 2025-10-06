@@ -106,7 +106,7 @@ Fin
 # Temas {#temas#}
 
 - [inicio](#que-es-logica-de-programacion)
-- [Conceptos relacionados](#conceptos-relacionados)
+- [Conceptos Fundamentales](#conceptos-fundamentales)
 - [Herramientas recomendadas](#herramientas-recomendadas)
 - [Snippets rápidos](#snippets-rapidos)
 - [Comandos](#comandos)
@@ -115,55 +115,194 @@ Fin
 
 ---
 
-# Conceptos relacionados
+# Conceptos Fundamentales
 
-Antes o junto al estudio de un lenguaje, es importante dominar los siguientes fundamentos:
+## Programación y Programador
 
-### Algoritmo:
+**Programación** es el proceso de crear instrucciones que le dicen a una **computadora** cómo realizar una **tarea específica**. Estas instrucciones se escriben en un lenguaje que la computadora pueda entender, conocido como lenguaje de programación. La **programación** implica la resolución de problemas, el diseño de algoritmos y la traducción de esos algoritmos en un código que la máquina pueda ejecutar.
 
-Conjunto de pasos ordenados y finitos para resolver un problema.
+Ser un **programador** significa ser la persona que diseña, escribe, prueba y mantiene el **código** que permite que los **programas de computadora** funcionen. Los **programadores** no solo crean soluciones técnicas, sino que también aplican lógica y pensamiento crítico para resolver problemas de manera eficiente, traduciendo ideas abstractas en instrucciones precisas que una computadora puede seguir
 
-### Pseudocódigo:
+### Pensamiento Computacional
 
-Representación textual y simplificada de un algoritmo, sin necesidad de un lenguaje formal.
+Es un enfoque de **resolución de problemas** que implica **descomponer** un **problema complejo** en partes más pequeñas y manejables, identificar patrones, abstraer losaspectos esenciales, y desarrollar algoritmos o instrucciones paso a paso para resolverlo.
+Este tipo de **pensamiento** no se limita a la **programación**, sino que puede aplicarse en diversas áreas para analizar y abordar **problemas** de manera lógica y eficiente, similar acómo lo haría una **computadora**.
 
-### Diagramas de flujo:
+- Descomposición de problemas
+- Identificación de patrones
+- Enfoque en lo esencial (Abstracción)
+- Desarrollo de algoritmos
+- Análisis y mejora de soluciones (Evaluación)
 
-Representación gráfica de un proceso usando símbolos estandarizados (inicio, proceso, decisión, etc.).
+### ¿Qué es un patrón?
 
-### Estructuras de control:
+Un patrón es una repetición identificable y predecible de elementos o características en un conjunto de datos, situaciones o fenómenos.
 
-| Estructura de control             | descripción             |
-| --------------------------------- | ----------------------- |
-| **Secuencia**                     | pasos lineales.         |
-| **Condicionales (if, else)**      | toma de decisiones.     |
-| **Bucles (for, while, do-while)** | repetición de procesos. |
+- **Repetición:**\
+  Los patrones son secuencias o características que se repiten de manera constante.
+- **Discernibilidad:**\
+  Los patrones pueden ser reconocidos y destacados dentro de un conjunto de datos o situaciones.
+- **Predictibilidad:**\
+  Los patrones permiten anticipar comportamientos o resultados futuros basados en observaciones anteriores.
+- **Regularidad:**\
+  Los patrones presentan una disposición consistente de sus elementos a lo largo del tiempo o del espacio.
+- **Abstracción:**\
+  Los patrones se pueden simplificar para representar información de forma más clara y manejable
 
-### Variables y constantes:
+### ¿Qué es un algoritmo?
 
-Espacios en memoria para almacenar valores temporales o fijos.
+Un algoritmo es un conjunto de instrucciones precisas y ordenadas que se siguen para realizar una tarea específica o resolver un problema.
 
-### Operadores:
+- **Secuencia de pasos:**\
+  Una serie lógica de pasos que deben seguirse en un orden específico para lograr un objetivo.
+- **Precisión:**\
+  Cada paso debe ser definido y comprensible para una ejecución precisa y consistente.
+- **Finitud:**\
+  Los algoritmos deben tener un número finito de pasos, terminando una vez alcanzado el objetivo o después de un número determinado de pasos.
+- **Solución de problemas:**\
+  Diseñados para resolver problemas específicos.
+- **Eficiencia:**\
+  Un buen algoritmo no solo logra el resultado deseado, sino que lo hace de manera eficiente, optimizando el uso de recursos como tiempo y memoria
 
-|  operadores  | símbolos               |
-| :----------: | ---------------------- |
-| Aritméticos  | (+, -, \*, /, %)       |
-| Relacionales | (>, <, ==, !=, >=, <=) |
-|   Lógicos    | (AND, OR, NOT)         |
+## Analisis de un problema
 
-### Funciones/procedimientos:
+Es el proceso de comprender completamente un **problema** antes de **diseñar una solución**. Implica descomponer el problema en partes más manejables, identificar sus causas subyacentes y establecer un enfoque claro para resolverlo de manera efectiva.
 
-Bloques de instrucciones que cumplen una tarea específica y reutilizable.
+1. **_Identificar y comprender el problema_**
+2. **_Establecer objetivos claros_**
+3. **_Identificar requisitos y restricciones_**
+4. **_Analizar las causas subyacentes_**
+5. **_Explorar soluciones alternativas_**
+6. **_Establecer criterios de éxito_**
 
-### Entrada/Proceso/Salida (E-P-S):
+- **1. Identificar el problema**\
+  Es fundamental entender en qué consiste exactamente el problema. Esto implica identificar todos los detalles relevantes, las entradas y salidas esperadas, así como cualquier restricción o limitación que pueda
+  existir.
+- **2. Establecer objetivos**\
+  ¿Cuál es el propósito final de resolver este problema? Definir claramente los objetivos ayuda a mantener el enfoque y a diseñar una solución efectiva que cumpla con las expectativas.
+- **3. Requisitos y restricciones**\
+  Es importante tener en cuenta las necesidades y expectativas de los usuarios o stakeholders involucrados en el problema. ¿Qué funciones o características son esenciales para ellos?
+- **4. Causas subyacentes**\
+  En ocasiones, un problema puede ser solo un síntoma de una causa subyacente más profunda. Identificar y abordar esta causa raíz es fundamental para evitar que el problema resurja en el futuro.
+- **5. Soluciones alternativas**\
+  Antes de comprometerse con una solución específica, es útil considerar diferentes enfoques y evaluar sus ventajas y desventajas. Esto puede ayudar a encontrar la mejor manera de abordar el problema.
 
-Patrón fundamental para diseñar programas.
+- **6. Criterios de éxito**\
+  Definir claramente lo que constituirá una solución exitosa es crucial para evaluar el progreso y el rendimiento del programa una vez implementado. Estos criterios pueden incluir medidas de rendimiento, calidad, eficiencia, etc
 
-### Depuración:
+## Estructuras de control
 
-Técnica de identificar y corregir errores en un algoritmo o programa.
+Las estructuras de control son un conjunto de instrucciones en un programa que permiten alterar el flujo de ejecución de las operaciones, es decir, dictan cómo y cuándo se deben ejecutar las distintas partes del código. Estas estructuras son fundamentales en la programación, ya que sin ellas, los programas seguirían una ejecución secuencial y lineal, sin poder realizar decisiones, repeticiones o desviaciones en el flujo del programa
 
-[🔼 temas](#temas)
+- ### Estructuras Condicionales
+  Las estructuras condicionales permiten que el programa tome decisiones y ejecute ciertas instrucciones solo si se cumplen ciertas condiciones. Esto se logra utilizando sentencias como if, else if (o elif en algunos lenguajes), y else.
+- ### Estructuras de Iteración
+  Los bucles son estructuras de control que permiten repetir una o varias instrucciones múltiples veces, hasta que se cumpla una condición específica. Existen varios tipos de bucles, siendo los más comunes while, for, y do-while
+
+## Variables
+
+Son contenedores que almacenan datos que pueden cambiar a lo largo del programa. Se declaran, se les asignan valores y se utilizan para realizar operaciones.
+
+- ### Tipo de Datos
+
+  Definen la naturaleza de los valores que pueden ser manipulados en un programa. Los tipos más comunes incluyen enteros, decimales, cadenas de texto y booleanos.
+
+- ### Operaciones
+
+  Permiten manipular y comparar los datos almacenados en variables para producir nuevos valores, tomar decisiones y controlar el flujo del programa
+
+  |  operadores  | símbolos               |
+  | :----------: | ---------------------- |
+  | Aritméticos  | (+, -, \*, /, %)       |
+  | Relacionales | (>, <, ==, !=, >=, <=) |
+  |   Lógicos    | (AND, OR, NOT)         |
+
+- ### Funciones
+
+  Las funciones o procedimientos son bloques de código que realizan una tarea específica y que pueden ser reutilizados a lo largo del programa. Su uso permite mejorar la organización, la legibilidad y la mantenibilidad del código.
+
+- ### Modularidad
+  La modularidad se refiere a la práctica de dividir un programa en partes más pequeñas y manejables, llamadas módulos o funciones. Esto tiene varios beneficios
+
+## Estructura de Datos:
+
+La Estructura de Datos en programación es una manera organizada y eficiente de almacenar, manipular y acceder a datos en una computadora. Las estructuras de datos permiten que los programas manejen grandes cantidades de información de manera eficiente y efectiva, facilitando operaciones como búsqueda, inserción, eliminación y modificación de datos
+
+- **Arreglos (Arrays):**\
+  Colección de elementos del mismo tipo almacenados en ubicaciones de memoria contiguas. Permiten acceso rápido por índice.
+- **Listas Enlazadas (Linked Lists):**\
+  Una serie de nodos donde cada nodo contiene un dato y una referencia al siguiente nodo en la secuencia.
+- **Pilas (Stacks):**\
+  Colección de elementos que sigue el principio LIFO (Last In, First Out).
+- **Colas (Queues):**\
+  Colección de elementos que sigue el principio FIFO (First In, First Out).
+- **Árboles (Trees):**\
+  Estructura jerárquica donde cada nodo tiene un valor y referencia a uno o más nodos hijos. Un tipo común es el Árbol Binario.
+- **Grafos (Graphs):**\
+  Conjunto de nodos conectados por aristas (edges), útil para representar relaciones complejas entre datos.
+
+- **Hash Tables:**\
+  Estructura que almacena pares clave-valor, permitiendo un acceso rápido a los datos a través de una función hash
+
+## Paradigmas de programación
+
+Un paradigma de programación es un enfoque o estilo particular de programación que guía y estructura el desarrollo de software. Un paradigma define la manera en que los programadores conceptualizan y organizan los problemas que deben resolver, y dicta cómo se deben estructurar las soluciones en términos de lenguajes de programación y metodologías.
+
+- **Programación Imperativa:**\
+  Enfocada en ejecutar instrucciones secuenciales que modifican el estado del
+  programa.
+- **Programación Orientada a Objetos (OOP):**\
+  Organiza el software en objetos que encapsulan datos y
+  comportamientos. _Ejemplos:_ Java
+- **Programación Funcional:**\
+  Se basa en funciones puras, evitando el estado mutable y los efectos secundarios.
+
+- **Programación Declarativa:**\
+  El programador especifica qué se debe hacer, no cómo hacerlo. Ejemplos: SQL
+
+## PseudoCódigo
+
+El pseudocódigo es una forma de escribir algoritmos utilizando un lenguaje informal y cercano al lenguaje humano, sin seguir la sintaxis específica de ningún lenguaje de programación en particular. Es una herramienta útil para planificar y diseñar soluciones antes de implementarlas en un código real.
+
+- **Lenguaje informal:**\
+  Utiliza un lenguaje que es fácil de entender, parecido al lenguaje natural.
+- **Independiente de la sintaxis:**\
+  No sigue las reglas de sintaxis de ningún lenguaje de programación específico.
+- **Facilita la planificación:**\
+  Ayuda a diseñar y organizar el algoritmo antes de escribir el código.
+- **Accesible para todos:**\
+  Puede ser entendido tanto por programadores como por personas sin conocimientos técnicos.
+- **Estructuras lógicas:**\
+  Emplea estructuras como condicionales, bucles y asignaciones de manera simple y directa.
+
+- **Enfoque en la lógica:**\
+  Se concentra en la lógica y secuencia de pasos más que en detalles técnicos
+
+> Representación textual y simplificada de un algoritmo, sin necesidad de un lenguaje formal.
+
+## Diagramas de Flujo
+
+Un diagrama de flujo es una representación gráfica de un
+proceso o algoritmo, donde se utilizan símbolos y flechas para
+mostrar la secuencia de pasos y la relación entre ellos. Es una
+herramienta visual que facilita la comprensión, el análisis y la
+comunicación de procesos complejos.
+
+- **Visualización clara:**\
+  Representa procesos de manera visual, lo que facilita la comprensión.
+- **Símbolos estándar:**\
+  Usa símbolos estandarizados, como óvalos para inicio/fin, rectángulos para procesos, rombos para decisiones, y flechas para indicar el flujo.
+- **Secuencia de pasos:**\
+  Muestra el orden en que se deben realizar los pasos de un proceso.
+- **Identificación de problemas:**\
+  Ayuda a identificar cuellos de botella, redundancias y otros problemas en un proceso.
+- **Facilita la comunicación:**\
+  Es útil para explicar procesos a personas de diferentes niveles de conocimiento.
+
+- **Aplicaciones variadas:**\
+  Se usa en diferentes campos, como programación, ingeniería, administración y más.
+
+> Representación gráfica de un proceso usando símbolos estandarizados (inicio, proceso, decisión, etc.).
 
 ---
 
