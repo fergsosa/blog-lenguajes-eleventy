@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Base de Datos
 img: /img/portada/base_de_datos.avif
-description: Almacén datos, consulta eficiente.
+description: Almacena y organiza información estructurada.
 tags: ["blog", "bases_de_datos"]
 date: "2024-08-01"
 ---

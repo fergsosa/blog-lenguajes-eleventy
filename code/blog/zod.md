@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Zod
 img: /img/portada/zod.avif
-description: Ideas principales de Zod
+description: Valida y tipa datos de entrada.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Markdown
 img: /img/portada/markdown.avif
-description: Texto ligero, formato rápido.
+description: Formatea texto con sintaxis ligera.
 tags: ["blog", "lenguajes"]
 date: "2023-07-01"
 ---

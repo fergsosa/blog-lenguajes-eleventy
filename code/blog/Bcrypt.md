@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Bcrypt
 img: /img/portada/bcrypt.avif
-description: Ideas principales de Bcrypt
+description: Cifra contraseñas mediante hashing seguro.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

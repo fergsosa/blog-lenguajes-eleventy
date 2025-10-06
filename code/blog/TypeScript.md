@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: TypeScript
 img: /img/portada/typescript.avif
-description: JavaScript tipado, mayor seguridad.
+description: JavaScript con tipado estático opcional.
 tags: ["blog", "lenguajes"]
 date: "2023-06-02"
 ---

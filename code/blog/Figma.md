@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Figma
 img: /img/portada/figma.avif
-description: Ideas principales de Figma
+description: Diseña interfaces y prototipos colaborativos.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

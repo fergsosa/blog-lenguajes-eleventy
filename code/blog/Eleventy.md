@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Eleventy
 img: /img/portada/eleventy.avif
-description: Generador estático, sitios web rápidos.
+description: Generador rápido de sitios estáticos.
 tags: ["blog", "frameworks"]
 date: "2024-02-22"
 ---

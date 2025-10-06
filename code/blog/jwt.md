@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: jsonwebtoken
 img: /img/portada/jsonwebtoken.avif
-description: Ideas principales de jsonwebtoken
+description: Genera y valida tokens de autenticación.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

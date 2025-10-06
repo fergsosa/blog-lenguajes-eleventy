@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: MongoDB
 img: /img/portada/mongodb.avif
-description: Base no relacional, documentos.
+description: Base de datos NoSQL orientada a documentos.
 tags: ["blog", "bases_de_datos"]
 date: "2024-09-01"
 ---

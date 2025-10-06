@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Axios
 img: /img/portada/axios.avif
-description: Ideas principales de Axios
+description: Cliente HTTP para peticiones en JavaScript
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

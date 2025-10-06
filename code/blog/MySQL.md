@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: MySQL
 img: /img/portada/mysql.avif
-description: Base de datos relacional, consultas SQL.
+description: Sistema relacional de gestión de datos.
 tags: ["blog", "bases_de_datos"]
 date: "2024-08-02"
 ---

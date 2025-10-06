@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Git
 img: /img/portada/git.avif
-description: Control versiones, historial código.
+description: Controla versiones y historial de proyectos de código.
 tags: ["blog", "herramientas"]
 date: "2023-07-01"
 ---

@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Redux
 img: /img/portada/redux.avif
-description: Ideas principales de Redux
+description: Gestiona el estado global de aplicaciones.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

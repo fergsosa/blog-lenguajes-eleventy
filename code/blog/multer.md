@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Multer
 img: /img/portada/multer.avif
-description: Ideas principales de Multer
+description: Maneja archivos en solicitudes multipart/form-data.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

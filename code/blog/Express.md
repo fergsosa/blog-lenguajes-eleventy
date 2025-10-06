@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Express
 img: /img/portada/express.avif
-description: Framework NodeJS, APIs rápidas.
+description: Framework NodeJS para servidores y APIs rápidas.
 tags: ["blog", "backend"]
 date: "2024-07-02"
 ---

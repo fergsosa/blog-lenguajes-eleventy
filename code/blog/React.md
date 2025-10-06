@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: React
 img: /img/portada/react.avif
-description: Librería para interfaces de usuario.
+description: Librería para crear interfaces dinámicas con componentes.
 tags: ["blog", "frameworks"]
 date: "2023-10-01"
 ---

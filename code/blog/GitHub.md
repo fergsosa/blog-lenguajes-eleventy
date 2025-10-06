@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: GitHub
 img: /img/portada/github.avif
-description: Repositorios remotos, colaboración código.
+description: Aloja y colabora en repositorios Git.
 tags: ["blog", "herramientas"]
 date: "2023-07-02"
 ---

@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: HTML
 img: /img/portada/html.avif
-description: Estructura web, contenido semántico.
+description: Estructura contenido en páginas web.
 tags: ["blog", "lenguajes"]
 date: "2023-03-01"
 ---

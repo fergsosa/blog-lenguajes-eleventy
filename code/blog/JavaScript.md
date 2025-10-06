@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: JavaScript
 img: /img/portada/javascript.avif
-description: Lenguaje dinámico, interacción web.
+description: Lenguaje para lógica en aplicaciones web.
 tags: ["blog", "lenguajes"]
 date: "2023-06-01"
 ---

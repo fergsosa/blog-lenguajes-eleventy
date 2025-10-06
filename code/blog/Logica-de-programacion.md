@@ -1,8 +1,8 @@
 ---
 layout: layout-post.njk
-title: Logica de programación
+title: Lógica de programación
 img: /img/portada/logica-de-programacion.avif
-description: Ideas principales de Logica de programación
+description: Base del razonamiento algorítmico estructurado.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

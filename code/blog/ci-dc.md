@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: CI-DC
 img: /img/portada/ci-dc.avif
-description: Ideas principales de CI-DC
+description: Automatiza integración y despliegue continuo.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---

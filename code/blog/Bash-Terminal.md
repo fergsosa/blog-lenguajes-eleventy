@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: Terminal Bash
 img: /img/portada/terminal-bash.avif
-description: Línea comandos, administración sistema.
+description: Ejecuta comandos en entorno Unix.
 tags: ["blog", "herramientas"]
 date: "2024-05-01"
 ---
