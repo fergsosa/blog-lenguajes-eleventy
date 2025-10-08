@@ -17,29 +17,40 @@ function getGitChanges() {
 
 rl.question("Mensaje del commit: ", (mensaje) => {
   try {
-    console.log("\n🧹 Limpiando...");
+    console.log("\n1️⃣ npm run clean");
     run("npm run clean");
 
-    console.log("\n🏗️ Compilando...");
+    console.log("\n2️⃣ npm run build");
     run("npm run build");
 
     const cambios = getGitChanges();
 
     if (!cambios) {
-      console.log("\n⚠️ El build no generó cambios. Nada que commitear.");
+      console.log(
+        "\n⚠️ BuilD: El build no generó cambios. Nada que commitear."
+      );
       process.exit(0);
     }
 
-    console.log("\n📦 Añadiendo cambios...");
+    console.log("\n3️⃣ git add .");
     run("git add .");
 
-    console.log("\n📝 Haciendo commit...");
+    console.log("\n4️⃣ git commit -m MENSAJE");
     run(`git commit -m "${mensaje}"`);
 
-    console.log("\n🚀 Subiendo cambios...");
+    console.log("\n5️⃣ npm run build");
     run("git push");
 
-    console.log("\n✅ Todo listo!");
+    console.log(`\n
+    ✅ Despliegue completado con éxito!
+    ----------------------------------
+    ✓ CLEAN:    Archivos de construcción eliminados.
+    ✓ BUILD:    Proyecto compilado correctamente.
+    ✓ ADD:      Cambios añadidos a staging.
+    ✓ COMMIT:   Commit realizado.
+    ✓ PUSH:     Cambios subidos al repositorio remoto.
+    ----------------------------------
+    `);
   } catch (error) {
     console.error("\n❌ Error:", error.message);
   } finally {
