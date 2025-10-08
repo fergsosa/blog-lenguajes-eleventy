@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: Multer
 img: /img/portada/multer.avif
 description: Maneja archivos en solicitudes multipart/form-data.
-tags: ["blog", "herramientas"]
+tags: ["blog", "herramienta_back"]
 date: "2020-12-11"
 ---
 

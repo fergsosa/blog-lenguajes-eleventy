@@ -147,3 +147,140 @@
     }
   }
 }
+
+/* ********** --- ********** */
+
+.blog-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-gap: 10px;
+  max-width: 1080px;
+  margin: 1rem auto;
+  margin-top: 5rem;
+
+  h1:first-of-type {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .box-blog {
+    a {
+      display: flex;
+      border: 1px solid #373737;
+      /* border: 1px solid #090909; */
+      border-radius: 1rem;
+      color: var(--text-first);
+      background-color: var(--bg-card);
+      box-shadow: 3px 3px 9px #0004;
+
+      content-visibility: auto;
+
+      img {
+        border-radius: 1rem 0 0 1rem;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .box-info {
+        width: 100%;
+
+        .text {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h3 {
+            font-size: var(--step-16);
+            margin: 0;
+          }
+          p {
+            font-size: var(--step-12);
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+  .box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 10px;
+    width: 100%;
+    grid-column: 1 / 3;
+    height: min-content;
+
+    a {
+      img {
+        max-width: 100px;
+      }
+
+      .box-info {
+        padding: 10px;
+        p {
+          margin: 0.5rem 0 0 0;
+          font-size: 16px;
+        }
+
+        .text {
+          h3 {
+            font-size: var(--step-16);
+          }
+          p {
+            font-size: var(--step-12);
+          }
+        }
+      }
+    }
+  }
+  .box-herr {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+
+    h4:first-of-type {
+      text-align: center;
+      margin: 0 0 0.5rem 0;
+    }
+
+    a {
+      img {
+        width: 60px;
+      }
+
+      .box-info {
+        padding: 5px 10px;
+
+        p {
+          margin: 0.1rem 0 0 0;
+          font-size: var(--step-13);
+          font-size: 14px;
+        }
+
+        .text {
+          h3 {
+            font-size: var(--step-16);
+          }
+          p {
+            font-size: var(--step-12);
+          }
+        }
+      }
+    }
+  }
+
+  @media (width < 900px) {
+    /* background-color: red; */
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 3rem;
+
+    .box {
+      grid-column: 1 / 2;
+    }
+  }
+  @media (width < 650px) {
+    /* background-color: blue; */
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+}

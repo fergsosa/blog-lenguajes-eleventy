@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: Bcrypt
 img: /img/portada/bcrypt.avif
 description: Cifra contraseñas mediante hashing seguro.
-tags: ["blog", "herramientas"]
+tags: ["blog",   "herramienta_back"]
 date: "2020-12-11"
 ---
 

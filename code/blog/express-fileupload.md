@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: express-fileupload
 img: /img/portada/express-fileupload.avif
 description: Middleware para subir archivos fácilmente.
-tags: ["blog", "herramientas"]
+tags: ["blog",   "herramienta_back"]
 date: "2020-12-11"
 ---
 

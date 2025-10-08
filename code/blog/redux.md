@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: Redux
 img: /img/portada/redux.avif
 description: Gestiona el estado global de aplicaciones.
-tags: ["blog", "herramientas"]
+tags: ["blog",   "herramienta_front"]
 date: "2020-12-11"
 ---
 

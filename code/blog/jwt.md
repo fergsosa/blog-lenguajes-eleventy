@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: jsonwebtoken
 img: /img/portada/jsonwebtoken.avif
 description: Genera y valida tokens de autenticación.
-tags: ["blog", "herramientas"]
+tags: ["blog",   "herramienta_back"]
 date: "2020-12-11"
 ---
 

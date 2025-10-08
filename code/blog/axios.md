@@ -3,7 +3,7 @@ layout: layout-post.njk
 title: Axios
 img: /img/portada/axios.avif
 description: Cliente HTTP para peticiones en JavaScript
-tags: ["blog", "herramientas"]
+tags: ["blog", "herramienta_front"]
 date: "2020-12-11"
 ---
 

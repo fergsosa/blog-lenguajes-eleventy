@@ -26,7 +26,101 @@ description: Meta descripción de la página de contacto
   {% endfor %}
 </section>
 
-<section class="blog c-visible">
+<section class="blog-2 c-visible">
+<h1> ⚛️ Frontend y Frameworks </h1>
+  <div class="box-blog box">
+  {% for post in collections.frameworks  %}
+    <a href="{{ post.url }}"  >
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
+      <div class="box-blog box-info">
+        <div class="text">
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.date }}</p>
+        </div>
+        <p>{{ post.data.description }}</p>
+      </div>
+
+    </a>
+  {% endfor %}
+  </div>
+  <div class="box-blog box-herr">
+    <h4>Herramientas Frontend</h4>
+    {% for post in collections.herramienta_front  %}
+      <a href="{{ post.url }}"  >
+        {% if post.data.img %}
+          <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+              loading="lazy" decoding="async"/>
+        {% else %}
+          <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+        {% endif %}
+
+        <div class="box-info">
+          <div class="text">
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.data.date }}</p>
+          </div>
+          <p>{{ post.data.description }}</p>
+        </div>
+
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="blog-2 c-visible">
+<h1> 🌐 Backend y Servidores </h1>
+  <div class="box-blog box">
+  {% for post in collections.backend  %}
+    <a href="{{ post.url }}"  >
+      {% if post.data.img %}
+        <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+            loading="lazy" decoding="async"/>
+      {% else %}
+        <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+      {% endif %}
+
+      <div class="box-blog box-info">
+        <div class="text">
+          <h3>{{ post.data.title }}</h3>
+          <p>{{ post.data.date }}</p>
+        </div>
+        <p>{{ post.data.description }}</p>
+      </div>
+
+    </a>
+  {% endfor %}
+  </div>
+  <div class="box-blog box-herr">
+    <h4>Herramientas Backend</h4>
+    {% for post in collections.herramienta_back  %}
+      <a href="{{ post.url }}"  >
+        {% if post.data.img %}
+          <img src="{{ post.data.img }}" alt="{{ post.data.title }}" 
+              loading="lazy" decoding="async"/>
+        {% else %}
+          <img src="/img/portada/no-img-dark.avif" alt="NO tiene img {{ post.data.title }}">
+        {% endif %}
+
+        <div class="box-info">
+          <div class="text">
+            <h3>{{ post.data.title }}</h3>
+            <p>{{ post.data.date }}</p>
+          </div>
+          <p>{{ post.data.description }}</p>
+        </div>
+
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{# <section class="blog c-visible">
 <h1> ⚛️ Frontend y Frameworks </h1>
   {% for post in collections.frameworks  %}
     <a href="{{ post.url }}"  >
@@ -70,7 +164,7 @@ description: Meta descripción de la página de contacto
 
     </a>
   {% endfor %}
-</section>
+</section> #}
 
 <section class="blog c-visible">
 <h1> 🗄️ Bases de Datos </h1>
