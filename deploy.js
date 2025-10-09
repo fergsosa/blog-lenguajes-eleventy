@@ -43,13 +43,13 @@ rl.question("Mensaje del commit: ", (mensaje) => {
 
     console.log(`\n
 ✅ Despliegue completado con éxito!
-----------------------------------
-✓ CLEAN:    Archivos de construcción eliminados.
-✓ BUILD:    Proyecto compilado correctamente.
-✓ ADD:      Cambios añadidos a staging.
-✓ COMMIT:   Commit realizado.
-✓ PUSH:     Cambios subidos al repositorio remoto.
-----------------------------------
+----------- --------------------------------------
+✓ CLEAN:   Archivos de construcción eliminados.
+✓ BUILD:   Proyecto compilado correctamente.
+✓ ADD:     Cambios añadidos a staging.
+✓ COMMIT:  Commit realizado.
+✓ PUSH:    Cambios subidos al repositorio remoto.
+----------- --------------------------------------
     `);
   } catch (error) {
     console.error("\n❌ Error:", error.message);
