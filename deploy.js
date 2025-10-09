@@ -38,7 +38,7 @@ rl.question("Mensaje del commit: ", (mensaje) => {
     console.log("\n4️⃣  git commit -m MENSAJE");
     run(`git commit -m "${mensaje}"`);
 
-    console.log("\n5️⃣  npm run build");
+    console.log("\n5️⃣  git push");
     run("git push");
 
     console.log(`\n
