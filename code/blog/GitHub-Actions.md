@@ -2,7 +2,7 @@
 layout: layout-post.njk
 title: GitHub Actions
 img: /img/portada/github-actions.avif
-description: Ideas principales de GitHub Actions
+description: Una automatización de flujo de trabajo continua e integrada.
 tags: ["blog", "herramientas"]
 date: "2020-12-11"
 ---
