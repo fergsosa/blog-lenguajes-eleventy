@@ -305,45 +305,45 @@ Permiten gestionar despliegues controlados por entorno (staging, producción, et
 
 # Estructura básica
 
-Estructura básica de un archivo de GitHub Action (`.yml`)\*\*
+Estructura básica de un archivo de GitHub Action (`.yml`)
 
 ```bash
 # 🔻nombre del workflow (identificador general)
-name:     # "Identifica el flujo"
+name:       # "Identifica el flujo"
 
 
 # 🔻 Eventos que activan el workflow
-on:          # "Dispara la acción"
-  push:      # "Evento de push"
+on:         # "Dispara la acción"
+  push:     # "Evento de push"
     branches: ["main"]  # "Solo se ejecuta en main"
 
 
 # 🔻conjunto de tareas a ejecutar
-jobs:     # "Define los trabajos"
+jobs:       # "Define los trabajos"
 
   # 🔻nombre del job
-  build:  # "Etiqueta del trabajo"
+  build:    # "Etiqueta del trabajo"
 
     # 🔻Sistema del runner
     runs-on: ubuntu-latest
 
     # 🔻lista de pasos
-    steps: # "Secuencia de comandos"
+    steps:  # "Secuencia de comandos"
 
-      - name: Checkout código
+      - name: Checkout código     # Nombre de paso
         uses: actions/checkout@v4 # Clona el repositorio
 
       - name: Instalar dependencias
-        run: npm install     # Ejecuta comandos
+        run: npm install          # Ejecuta comandos
 
       - name: Ejecutar tests
-        run: npm test        # Prueba el proyecto
+        run: npm test             # Prueba el proyecto
 
       - name: Subir artefactos
         uses: actions/upload-artifact@v4
-        with:                # Define configuraciones
+        with:                     # Define configuraciones
           name: build
-          path: dist/        # Guarda resultados
+          path: dist/             # Guarda resultados
 ```
 
 #### 🧩 Resumen rápido:

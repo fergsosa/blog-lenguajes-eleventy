@@ -368,43 +368,43 @@ y mantener versiones actualizadas de las dependencias.</li>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="estructura-basica">Estructura básica</h1>
-<p>Estructura básica de un archivo de GitHub Action (<code>.yml</code>)**</p>
+<p>Estructura básica de un archivo de GitHub Action (<code>.yml</code>)</p>
 <pre><code class="language-bash"># 🔻nombre del workflow (identificador general)
-name:     # &quot;Identifica el flujo&quot;
+name:       # &quot;Identifica el flujo&quot;
 
 
 # 🔻 Eventos que activan el workflow
-on:          # &quot;Dispara la acción&quot;
-  push:      # &quot;Evento de push&quot;
+on:         # &quot;Dispara la acción&quot;
+  push:     # &quot;Evento de push&quot;
     branches: [&quot;main&quot;]  # &quot;Solo se ejecuta en main&quot;
 
 
 # 🔻conjunto de tareas a ejecutar
-jobs:     # &quot;Define los trabajos&quot;
+jobs:       # &quot;Define los trabajos&quot;
 
   # 🔻nombre del job
-  build:  # &quot;Etiqueta del trabajo&quot;
+  build:    # &quot;Etiqueta del trabajo&quot;
 
     # 🔻Sistema del runner
     runs-on: ubuntu-latest
 
     # 🔻lista de pasos
-    steps: # &quot;Secuencia de comandos&quot;
+    steps:  # &quot;Secuencia de comandos&quot;
 
-      - name: Checkout código
+      - name: Checkout código     # Nombre de paso
         uses: actions/checkout@v4 # Clona el repositorio
 
       - name: Instalar dependencias
-        run: npm install     # Ejecuta comandos
+        run: npm install          # Ejecuta comandos
 
       - name: Ejecutar tests
-        run: npm test        # Prueba el proyecto
+        run: npm test             # Prueba el proyecto
 
       - name: Subir artefactos
         uses: actions/upload-artifact@v4
-        with:                # Define configuraciones
+        with:                     # Define configuraciones
           name: build
-          path: dist/        # Guarda resultados
+          path: dist/             # Guarda resultados
 </code></pre>
 <h4 id="resumen-rapido-2">🧩 Resumen rápido:</h4>
 <table>
