@@ -109,6 +109,8 @@ Usar GitHub Actions es más conveniente cuando:
 - [inicio](#que-es-github-actions)
 - [Conceptos relacionados](#conceptos-relacionados)
 - [Herramientas recomendadas](#herramientas-recomendadas)
+- [Variables más utilizadas](#variables-mas-utilizadas)
+- [Estructura básica](#estructura-basica)
 - [Comandos](#comandos)
 - [Conceptos Claves](#conceptos-claves)
 - [Otros artículos](#otros-articulos)
@@ -212,6 +214,151 @@ Para extender la automatización e integrar GitHub Actions con otros sistemas.
 Permiten gestionar despliegues controlados por entorno (staging, producción, etc.).
 
 > Esta referencia técnica te proporciona los fundamentos y herramientas esenciales para **entender, crear y mantener** flujos de trabajo eficientes en GitHub Actions.
+
+[🔼 temas](#temas)
+
+---
+
+# Variables más utilizadas
+
+### Top 10 en la práctica
+
+{% raw %}
+
+```bash
+1.  ${{ github.repository }}    # Repositorio actual completo
+2.  ${{ github.ref_name }}      # Rama o etiqueta
+3.  ${{ github.sha }}           # Commit ID único
+4.  ${{ github.actor }}         # Iniciador del flujo
+5.  ${{ github.event_name }}    # Evento que activó
+6.  ${{ github.workflow }}      # Nombre del archivo
+7.  ${{ github.run_number }}    # Número de ejecución
+8.  ${{ runner.os }}            # Sistema operativo runner
+9.  ${{ GITHUB_WORKSPACE }}     # Directorio de trabajo
+10. ${{ job.status }}           # Estado de la tarea
+```
+
+{% endraw %}
+
+---
+
+### Contexto del repositorio
+
+| Variable            | Descripción                                                            |
+| ------------------- | ---------------------------------------------------------------------- |
+| `github.repository` | Nombre completo del repositorio (`usuario/repositorio`).               |
+| `github.ref`        | Referencia del evento (por ejemplo: `refs/heads/main`).                |
+| `github.sha`        | Hash del commit actual que disparó el workflow.                        |
+| `github.actor`      | Usuario que ejecutó la acción (quien hizo el push, PR, etc.).          |
+| `github.event_name` | Tipo de evento que disparó el workflow (`push`, `pull_request`, etc.). |
+| `github.workflow`   | Nombre del workflow que se está ejecutando.                            |
+| `github.run_id`     | ID único del flujo actual.                                             |
+| `github.run_number` | Número incremental del run (útil para versiones automáticas).          |
+
+### Contexto del job y pasos
+
+| Variable                    | Descripción                                                 |
+| --------------------------- | ----------------------------------------------------------- |
+| `job.status`                | Estado del job (`success`, `failure`, `cancelled`).         |
+| `steps.<id>.outputs.<name>` | Accede a la salida (`output`) de un paso anterior.          |
+| `runner.os`                 | Sistema operativo del runner (`Linux`, `Windows`, `macOS`). |
+| `runner.arch`               | Arquitectura del runner (`X64`, `ARM`, etc.).               |
+| `runner.name`               | Nombre del runner asignado.                                 |
+
+### Entorno y rutas
+
+| Variable             | Descripción                                                               |
+| -------------------- | ------------------------------------------------------------------------- |
+| `GITHUB_WORKSPACE`   | Ruta del directorio donde se clona el repositorio.                        |
+| `GITHUB_ACTION_PATH` | Ruta del action actual (si es un action personalizado).                   |
+| `GITHUB_PATH`        | Archivo donde puedes añadir rutas al `$PATH`.                             |
+| `GITHUB_ENV`         | Archivo donde puedes definir variables de entorno para pasos posteriores. |
+
+### Branch y tags
+
+| Variable          | Descripción                                              |
+| ----------------- | -------------------------------------------------------- |
+| `github.head_ref` | Branch fuente de un `pull_request`.                      |
+| `github.base_ref` | Branch destino de un `pull_request`.                     |
+| `github.ref_name` | Nombre limpio de la referencia (`main`, `v1.0.0`, etc.). |
+| `github.ref_type` | Tipo de referencia (`branch` o `tag`).                   |
+
+### Salidas y resultados
+
+| Variable                        | Descripción                                 |
+| ------------------------------- | ------------------------------------------- |
+| `outputs.<name>`                | Salida definida por un job o step.          |
+| `needs.<job_id>.outputs.<name>` | Accede a la salida de otro job dependiente. |
+
+### Variables útiles de entorno
+
+| Variable | Descripción                                       |
+| -------- | ------------------------------------------------- |
+| `CI`     | Siempre se establece en `true` en GitHub Actions. |
+| `HOME`   | Directorio home del runner.                       |
+| `PATH`   | Variable PATH estándar del sistema.               |
+| `PWD`    | Directorio actual de trabajo.                     |
+
+[🔼 temas](#temas)
+
+---
+
+# Estructura básica
+
+Estructura básica de un archivo de GitHub Action (`.yml`)\*\*
+
+```bash
+# 🔻nombre del workflow (identificador general)
+name:     # "Identifica el flujo"
+
+
+# 🔻 Eventos que activan el workflow
+on:          # "Dispara la acción"
+  push:      # "Evento de push"
+    branches: ["main"]  # "Solo se ejecuta en main"
+
+
+# 🔻conjunto de tareas a ejecutar
+jobs:     # "Define los trabajos"
+
+  # 🔻nombre del job
+  build:  # "Etiqueta del trabajo"
+
+    # 🔻Sistema del runner
+    runs-on: ubuntu-latest
+
+    # 🔻lista de pasos
+    steps: # "Secuencia de comandos"
+
+      - name: Checkout código
+        uses: actions/checkout@v4 # Clona el repositorio
+
+      - name: Instalar dependencias
+        run: npm install     # Ejecuta comandos
+
+      - name: Ejecutar tests
+        run: npm test        # Prueba el proyecto
+
+      - name: Subir artefactos
+        uses: actions/upload-artifact@v4
+        with:                # Define configuraciones
+          name: build
+          path: dist/        # Guarda resultados
+```
+
+#### 🧩 Resumen rápido:
+
+| Elemento  | Ejemplo                   | Función (3 palabras)   |
+| --------- | ------------------------- | ---------------------- |
+| `name`    | `CI Pipeline`             | Identifica el flujo    |
+| `on`      | `push`, `pull_request`    | Dispara la acción      |
+| `jobs`    | `build`, `test`, `deploy` | Define los trabajos    |
+| `runs-on` | `ubuntu-latest`           | Sistema del runner     |
+| `steps`   | lista de pasos            | Secuencia de comandos  |
+| `uses`    | `actions/checkout@v4`     | Usa acción externa     |
+| `run`     | `npm install`             | Ejecuta comandos       |
+| `with`    | parámetros opcionales     | Define configuraciones |
+| `env`     | variables globales        | Configura entorno      |
 
 [🔼 temas](#temas)
 

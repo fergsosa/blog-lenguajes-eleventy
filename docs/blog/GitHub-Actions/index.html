@@ -117,6 +117,8 @@ y mantener versiones actualizadas de las dependencias.</li>
 <li><a href="#que-es-github-actions">inicio</a></li>
 <li><a href="#conceptos-relacionados">Conceptos relacionados</a></li>
 <li><a href="#herramientas-recomendadas">Herramientas recomendadas</a></li>
+<li><a href="#variables-mas-utilizadas">Variables más utilizadas</a></li>
+<li><a href="#estructura-basica">Estructura básica</a></li>
 <li><a href="#comandos">Comandos</a></li>
 <li><a href="#conceptos-claves">Conceptos Claves</a></li>
 <li><a href="#otros-articulos">Otros artículos</a></li>
@@ -173,6 +175,294 @@ y mantener versiones actualizadas de las dependencias.</li>
 <blockquote>
 <p>Esta referencia técnica te proporciona los fundamentos y herramientas esenciales para <strong>entender, crear y mantener</strong> flujos de trabajo eficientes en GitHub Actions.</p>
 </blockquote>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="variables-mas-utilizadas">Variables más utilizadas</h1>
+<h3 id="top-10-en-la-practica">Top 10 en la práctica</h3>
+<pre><code class="language-bash">1.  ${{ github.repository }}    # Repositorio actual completo
+2.  ${{ github.ref_name }}      # Rama o etiqueta
+3.  ${{ github.sha }}           # Commit ID único
+4.  ${{ github.actor }}         # Iniciador del flujo
+5.  ${{ github.event_name }}    # Evento que activó
+6.  ${{ github.workflow }}      # Nombre del archivo
+7.  ${{ github.run_number }}    # Número de ejecución
+8.  ${{ runner.os }}            # Sistema operativo runner
+9.  ${{ GITHUB_WORKSPACE }}     # Directorio de trabajo
+10. ${{ job.status }}           # Estado de la tarea
+</code></pre>
+<hr>
+<h3 id="contexto-del-repositorio">Contexto del repositorio</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>github.repository</code></td>
+<td>Nombre completo del repositorio (<code>usuario/repositorio</code>).</td>
+</tr>
+<tr>
+<td><code>github.ref</code></td>
+<td>Referencia del evento (por ejemplo: <code>refs/heads/main</code>).</td>
+</tr>
+<tr>
+<td><code>github.sha</code></td>
+<td>Hash del commit actual que disparó el workflow.</td>
+</tr>
+<tr>
+<td><code>github.actor</code></td>
+<td>Usuario que ejecutó la acción (quien hizo el push, PR, etc.).</td>
+</tr>
+<tr>
+<td><code>github.event_name</code></td>
+<td>Tipo de evento que disparó el workflow (<code>push</code>, <code>pull_request</code>, etc.).</td>
+</tr>
+<tr>
+<td><code>github.workflow</code></td>
+<td>Nombre del workflow que se está ejecutando.</td>
+</tr>
+<tr>
+<td><code>github.run_id</code></td>
+<td>ID único del flujo actual.</td>
+</tr>
+<tr>
+<td><code>github.run_number</code></td>
+<td>Número incremental del run (útil para versiones automáticas).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="contexto-del-job-y-pasos">Contexto del job y pasos</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>job.status</code></td>
+<td>Estado del job (<code>success</code>, <code>failure</code>, <code>cancelled</code>).</td>
+</tr>
+<tr>
+<td><code>steps.&lt;id&gt;.outputs.&lt;name&gt;</code></td>
+<td>Accede a la salida (<code>output</code>) de un paso anterior.</td>
+</tr>
+<tr>
+<td><code>runner.os</code></td>
+<td>Sistema operativo del runner (<code>Linux</code>, <code>Windows</code>, <code>macOS</code>).</td>
+</tr>
+<tr>
+<td><code>runner.arch</code></td>
+<td>Arquitectura del runner (<code>X64</code>, <code>ARM</code>, etc.).</td>
+</tr>
+<tr>
+<td><code>runner.name</code></td>
+<td>Nombre del runner asignado.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="entorno-y-rutas">Entorno y rutas</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GITHUB_WORKSPACE</code></td>
+<td>Ruta del directorio donde se clona el repositorio.</td>
+</tr>
+<tr>
+<td><code>GITHUB_ACTION_PATH</code></td>
+<td>Ruta del action actual (si es un action personalizado).</td>
+</tr>
+<tr>
+<td><code>GITHUB_PATH</code></td>
+<td>Archivo donde puedes añadir rutas al <code>$PATH</code>.</td>
+</tr>
+<tr>
+<td><code>GITHUB_ENV</code></td>
+<td>Archivo donde puedes definir variables de entorno para pasos posteriores.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="branch-y-tags">Branch y tags</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>github.head_ref</code></td>
+<td>Branch fuente de un <code>pull_request</code>.</td>
+</tr>
+<tr>
+<td><code>github.base_ref</code></td>
+<td>Branch destino de un <code>pull_request</code>.</td>
+</tr>
+<tr>
+<td><code>github.ref_name</code></td>
+<td>Nombre limpio de la referencia (<code>main</code>, <code>v1.0.0</code>, etc.).</td>
+</tr>
+<tr>
+<td><code>github.ref_type</code></td>
+<td>Tipo de referencia (<code>branch</code> o <code>tag</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="salidas-y-resultados">Salidas y resultados</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>outputs.&lt;name&gt;</code></td>
+<td>Salida definida por un job o step.</td>
+</tr>
+<tr>
+<td><code>needs.&lt;job_id&gt;.outputs.&lt;name&gt;</code></td>
+<td>Accede a la salida de otro job dependiente.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variables-utiles-de-entorno">Variables útiles de entorno</h3>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CI</code></td>
+<td>Siempre se establece en <code>true</code> en GitHub Actions.</td>
+</tr>
+<tr>
+<td><code>HOME</code></td>
+<td>Directorio home del runner.</td>
+</tr>
+<tr>
+<td><code>PATH</code></td>
+<td>Variable PATH estándar del sistema.</td>
+</tr>
+<tr>
+<td><code>PWD</code></td>
+<td>Directorio actual de trabajo.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#temas">🔼 temas</a></p>
+<hr>
+<h1 id="estructura-basica">Estructura básica</h1>
+<p>Estructura básica de un archivo de GitHub Action (<code>.yml</code>)**</p>
+<pre><code class="language-bash"># 🔻nombre del workflow (identificador general)
+name:     # &quot;Identifica el flujo&quot;
+
+
+# 🔻 Eventos que activan el workflow
+on:          # &quot;Dispara la acción&quot;
+  push:      # &quot;Evento de push&quot;
+    branches: [&quot;main&quot;]  # &quot;Solo se ejecuta en main&quot;
+
+
+# 🔻conjunto de tareas a ejecutar
+jobs:     # &quot;Define los trabajos&quot;
+
+  # 🔻nombre del job
+  build:  # &quot;Etiqueta del trabajo&quot;
+
+    # 🔻Sistema del runner
+    runs-on: ubuntu-latest
+
+    # 🔻lista de pasos
+    steps: # &quot;Secuencia de comandos&quot;
+
+      - name: Checkout código
+        uses: actions/checkout@v4 # Clona el repositorio
+
+      - name: Instalar dependencias
+        run: npm install     # Ejecuta comandos
+
+      - name: Ejecutar tests
+        run: npm test        # Prueba el proyecto
+
+      - name: Subir artefactos
+        uses: actions/upload-artifact@v4
+        with:                # Define configuraciones
+          name: build
+          path: dist/        # Guarda resultados
+</code></pre>
+<h4 id="resumen-rapido-2">🧩 Resumen rápido:</h4>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Ejemplo</th>
+<th>Función (3 palabras)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td><code>CI Pipeline</code></td>
+<td>Identifica el flujo</td>
+</tr>
+<tr>
+<td><code>on</code></td>
+<td><code>push</code>, <code>pull_request</code></td>
+<td>Dispara la acción</td>
+</tr>
+<tr>
+<td><code>jobs</code></td>
+<td><code>build</code>, <code>test</code>, <code>deploy</code></td>
+<td>Define los trabajos</td>
+</tr>
+<tr>
+<td><code>runs-on</code></td>
+<td><code>ubuntu-latest</code></td>
+<td>Sistema del runner</td>
+</tr>
+<tr>
+<td><code>steps</code></td>
+<td>lista de pasos</td>
+<td>Secuencia de comandos</td>
+</tr>
+<tr>
+<td><code>uses</code></td>
+<td><code>actions/checkout@v4</code></td>
+<td>Usa acción externa</td>
+</tr>
+<tr>
+<td><code>run</code></td>
+<td><code>npm install</code></td>
+<td>Ejecuta comandos</td>
+</tr>
+<tr>
+<td><code>with</code></td>
+<td>parámetros opcionales</td>
+<td>Define configuraciones</td>
+</tr>
+<tr>
+<td><code>env</code></td>
+<td>variables globales</td>
+<td>Configura entorno</td>
+</tr>
+</tbody>
+</table>
 <p><a href="#temas">🔼 temas</a></p>
 <hr>
 <h1 id="comandos">Comandos</h1>
