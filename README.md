@@ -1,50 +1,129 @@
-# _Minimalist Starter Project Eleventy 3 + Github Pages_
+# 📝 Blog Lenguajes Eleventy
 
-Este repositorio es un _starter project_ para gestionar y desplegar el desarrollo de proyectos _web_ minimalistas con [_**Eleventy 3**_](https://www.11ty.dev/) y _**Github Pages**_.
+> Guía práctica y técnica sobre **lenguajes, frameworks y herramientas de desarrollo**, construida con **Eleventy (11ty)** — un generador de sitios estáticos rápido, simple y flexible.
 
-## Instrucciones
+---
 
-1. Clona este repositorio.
+## 🚀 Descripción del Proyecto
+
+**Blog Lenguajes Eleventy** es un sitio web estático creado con **[Eleventy](https://www.11ty.dev/)**, un _Static Site Generator (SSG)_ que prioriza la simplicidad y la velocidad.
+
+El objetivo del proyecto es documentar, de forma organizada, los principales conceptos que voy aprendiendo sobre distintas áreas del desarrollo web:
+
+- 💻 **Lenguajes y Sintaxis**
+- ⚙️ **Frontend y Frameworks**
+- 🧠 **Backend y APIs**
+- 🗄️ **Bases de Datos**
+- 🧰 **Herramientas de Desarrollo**
+
+Cada nota funciona como una **mini-guía completa** que cubre tanto teoría como práctica, ideal para repasar o preparar entrevistas técnicas.
+
+---
+
+## 🎯 Objetivo General
+
+Crear un **repositorio de conocimiento** que ayude a:
+
+- Entender qué es y para qué sirve cada tecnología.
+- Conocer buenas prácticas y casos de uso.
+- Tener a mano comandos, snippets y configuraciones.
+- Practicar entrevistas técnicas de manera progresiva.
+
+---
+
+## 🧩 Estructura de Cada Nota
+
+Cada artículo o guía está dividido en **3 partes complementarias**:
+
+### 1. Introducción
+
+- Qué es y para qué sirve
+- Cuándo usarlo o evitarlo
+- Buenas prácticas recomendadas
+
+### 2. Referencia Técnica
+
+- Herramientas o dependencias clave
+- Códigos esenciales y snippets útiles
+- Comandos principales
+
+### 3. Entrevistas
+
+- 15 preguntas técnicas con respuestas
+- Desde nivel **básico a avanzado**
+
+🧠 **Objetivo:** servir como una guía completa para **aprender, usar y dominar** cualquier tecnología.
+
+---
+
+## 🏗️ Estructura del Proyecto
+
+```bash
+blog-lenguajes-eleventy/
+├── code/
+│   ├── _data/               # Datos globales del sitio (configuración, variables, etc.)
+│   ├── _include/            # Componentes y layouts de Nunjucks
+│   │   └── layout-page.njk  # Layout base para las páginas
+│   ├── blog/
+│   │   └── notas.md         # Notas y artículos del blog
+│   └── public/              # Archivos estáticos
+│       ├── css/             # Estilos del sitio
+│       ├── img/             # Imágenes
+│       └── js/              # Scripts
+└── .eleventy.js             # Configuración principal de Eleventy
+```
+
+## ⚙️ Tecnologías Utilizadas
+
+| Herramienta                                        | Propósito                                  |
+| -------------------------------------------------- | ------------------------------------------ |
+| [Eleventy (@11ty/eleventy)](https://www.11ty.dev/) | Generador de sitio estático                |
+| [Nunjucks](https://mozilla.github.io/nunjucks/)    | Motor de plantillas                        |
+| HTML / CSS / JS                                    | Estructura, estilos y funcionalidad básica |
+| Markdown (.md)                                     | Creación de notas y artículos              |
+
+---
+
+## 🧰 Instalación y Uso
+
+1. **Clonar el repositorio**
+
    ```bash
-   git clone https://github.com/jonmircha/starter-project-eleventy-github-pages.git
+   git clone https://github.com/tuusuario/blog-lenguajes-eleventy.git
+   cd blog-lenguajes-eleventy
    ```
-1. Instala las dependencias.
+
+2. **Instalar dependencias**
+
    ```bash
    npm install
    ```
-1. Iniciar el ambiente de desarrollo.
+
+3. **Ejecutar el entorno local**
+
    ```bash
-   npm start
+   npx @11ty/eleventy --serve
    ```
-1. Edita **`_data/metadata.js`** con la información de tu proyecto.
-   ```js
-   export default {
-     siteUrl: "https://example.com",
-     pathPrefix: "/nombre-repositorio/",
-     language: "es",
-     title: "Eleventy 3 & Github Pages Starter Project",
-     description:
-       "Este es un starter project para gestionar y desplegar proyectos web minimalistas con Eleventy 3 y Github Pages.",
-   };
-   ```
-1. Comienza a crear el contenido de tu proyecto web.
-1. Cuando termines de desarrollar tu proyecto, limpia la carpeta docs y ejecuta el despliegue:
+
+   El sitio se abrirá en [http://localhost:8080](http://localhost:8080)
+
+4. **Generar versión de producción**
+
    ```bash
-   npm run clean
-   npm run build
+   npx @11ty/eleventy
    ```
-1. Crea un repositorio en tu cuenta de _GitHub_.
-1. Vincula la carpeta local con el repositorio remoto.
-1. Modifica la propiedad **`pathPrefix`** con el nombre del repositorio de _GitHub_ en el archivo **`_data/metadata.js`**.
-1. Sube el contenido a _GitHub_.
-1. Asegura que el repositorio tenga activado _**GitHub Pages**_ en la rama _**main**_, para desplegar la carpeta _**docs**_.
-   ![Configurando GitHub Pages](./code/public/img/configurar-github-pages.png)
-1. ¡Listo! Lo haz logrado. Felíz despliegue 🥳 🦡🎈.
 
-[Aquí](https://jonmircha.github.io/starter-project-eleventy-github-pages/) puedes ver la demo de este _starter project_.
+   Los archivos estáticos se generarán en la carpeta `_site/`.
 
-Para más información revisa la sección [Acerca](https://jonmircha.github.io/starter-project-eleventy-github-pages/acerca) de la demo.
+---
 
-Tambien puedes ver mi Curso de _Eleventy_ en _YouTube_, da clic a la siguiente imagen. 👇🏻
+## 🏷️ Licencia
 
-[![Curso Eleventy](./code/public/img/curso-youtube-eleventy.png)](https://www.youtube.com/watch?v=yCF9l4_E5rI)
+Este proyecto se distribuye bajo la licencia **MIT**.
+Podés usarlo, modificarlo y compartirlo libremente mencionando la fuente.
+
+## ✨ Autor
+
+**Fernando Sosa**
+📘 Blog personal: _Lenguajes, frameworks y herramientas para desarrolladores_
+💡 “Aprender, practicar y compartir — una nota a la vez.”
